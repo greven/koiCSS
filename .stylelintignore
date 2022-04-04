@@ -1,0 +1,5 @@
+# Development
+_dev/
+
+# Normalize
+scss/reset/_normalize.scss
