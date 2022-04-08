@@ -1,0 +1,17 @@
+/// Koi Unit helper functions
+/// =========================
+
+@use 'sass:math';
+
+/// Convert a value in pixels (px) to rem.
+///
+/// @param {number (unitless)} $value-in-pixel -
+///   The value to be converted to rem.
+/// @param {integer (unitless)} $base-font-size [16] -
+///   Optional base font size, defaults to 16.
+/// @return {number} `$value-in-pixel` in rem.
+///
+@function rem($value-in-px, $base-font-size: 16) {
+  $size: math.div($value-in-px, $base-font-size);
+  @return #{$size}rem;
+}

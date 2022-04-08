@@ -1,0 +1,41 @@
+/// Koi API Functions
+/// =================
+
+@use 'sass:map';
+@use 'sass:meta';
+@use 'error';
+@use '../config' as *;
+
+$_fallback-shade: map.get($config, settings, fallback-color-shade);
+
+// Get a value from the theme
+@function theme($keys...) {
+  @if map.get($theme, $keys...) {
+    @return map.get($theme, $keys...);
+  } @else {
+    @error error.theme-keys($keys...);
+  }
+}
+
+// type can be `value` (default) sass variable value or `var` css variable
+@function color($name, $shade: $_fallback-shade, $alpha: 1, $type: value) {
+  @if $type == value {
+    @if is-theme-color($name, $shade) {
+      @return theme(colors, $name, $shade);
+    } @else if is-theme-color($name) {
+      @return theme(colors, $name);
+    } @else {
+      @error error.color($name, $shade);
+    }
+  } @else {
+    // TODO: implement color var return
+    @return 'var(--custom-prop-color-value-here)';
+  }
+}
+
+@function is-theme-color($keys...) {
+  $colors: map.get($theme, colors);
+  $value: map.get($colors, $keys...);
+
+  @return map.has-key($colors, $keys...) and (meta.type-of($value) == color);
+}

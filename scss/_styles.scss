@@ -1,0 +1,6 @@
+/// Koi Styles output
+/// =================
+
+@use 'core/generators' as *;
+
+@include generate-custom-props();

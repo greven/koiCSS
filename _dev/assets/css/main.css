@@ -266,10 +266,23 @@ summary {
   display: list-item;
 }
 
-html {
+body {
   background-color: #00f;
 }
 
+:root {
+  --var-custom-prop: 6969;
+}
+
 body {
-  padding: 5rem;
+  margin: 1.5rem;
+  padding: 2rem;
+  color: #cbd5e1;
+  background-color: #1e293b;
+  border: 2px solid #f5f;
+  border-radius: 8px;
+}
+
+a {
+  color: #059669;
 }

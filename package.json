@@ -2,29 +2,37 @@
   "name": "koicss",
   "version": "0.1.0",
   "description": "Kind of CSS framework made with koi!",
-  "main": "./dist/koi.min.css",
+  "main": "./scss/koi.scss",
+  "style": "./dist/koi.min.css",
+  "files": [
+    "dist/*.css",
+    "sass/**/*.scss"
+  ],
   "keywords": [
     "css",
     "sass",
-    "css-framework",
-    "sass-framework"
+    "css-framework"
   ],
+  "repository": "https://github.com/greven/koiCSS",
   "author": "Nuno <mail@nuno.site> Freire",
   "license": "MIT",
   "scripts": {
     "browser-sync": "browser-sync start --server --startPath \"_dev/index.html\" --files \"**/*\" --directory --no-notify --no-open",
-    "build:dev": "sass --load-path=node_modules --load-path=scss --style=expanded --no-source-map _dev/assets/scss:_dev/assets/css && npm run postcss:dev",
-    "build:sass:min": "sass --load-path=node_modules --style=compressed --no-source-map scss/koi.scss:css/koi.min.css",
-    "build:sass": "sass --load-path=node_modules --style=expanded --no-source-map scss/koi.scss:css/koi.css",
-    "build": "npm run clean && concurrently npm:build:* && npm run postcss:prod",
+    "build:dev": "sass -I node_modules -I scss --no-source-map _dev/assets/scss:_dev/assets/css && npm run postcss:dev",
+    "build:sass:min": "sass -I node_modules -s compressed --no-source-map scss/koi.scss:dist/koi.min.css",
+    "build:sass": "sass -I node_modules --no-source-map scss/koi.scss:dist/koi.css",
+    "build": "npm run clean && concurrently npm:build:sass npm:build:sass:min && npm run postcss:prod",
     "clean": "rm -rf ./css",
     "dev": "concurrently npm:watch:dev npm:browser-sync",
     "lint:fix": "stylelint scss/**/*.scss --fix",
     "lint": "stylelint scss/**/*.scss",
-    "postcss:prod": "postcss css/*.css -u autoprefixer --replace --no-map",
+    "postwatch:dev": "npm run postcss:dev",
     "postcss:dev": "postcss _dev/assets/css/*.css -c _dev/postcss.config.js --replace --no-map",
+    "postcss:prod": "postcss dist/*.css -u autoprefixer --replace --no-map",
+    "prebuild": "npm run lint:fix",
     "start": "npm run dev",
-    "watch:dev": "npm run build:dev -- --watch --update"
+    "watch:dev": "sass -I node_modules -I scss --no-source-map _dev/assets/scss:_dev/assets/css --watch --update",
+    "watch": "npm run build:sass -- --watch --update"
   },
   "dependencies": {
     "modern-normalize": "^1.1.0"

@@ -1,0 +1,7 @@
+@use 'koi' with (
+  $theme: (
+    colors: (
+      primary: #059669,
+    ),
+  )
+);

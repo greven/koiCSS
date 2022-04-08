@@ -1,0 +1,12 @@
+@use 'sass:map';
+@use '../config' as *;
+
+$ignore-keys: map.get($config, ignore-keys);
+
+// Generate CSS custom props from theme values
+@mixin generate-custom-props($exclude: $ignore-keys) {
+  :root {
+    // TODO: Call map-to-vars from internal on theme keys
+    --var-custom-prop: 6969;
+  }
+}

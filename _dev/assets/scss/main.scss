@@ -1,5 +1,16 @@
+@use 'sass:map';
+@forward 'config';
 @use 'koi';
 
 body {
-  padding: 5rem;
+  margin: koi.rem(24);
+  padding: koi.theme(spacing, 32);
+  color: koi.color(gray, 300);
+  background-color: koi.color(gray, 800);
+  border: 2px solid koi.color(secondary);
+  border-radius: 8px;
+}
+
+a {
+  color: koi.color(primary);
 }
