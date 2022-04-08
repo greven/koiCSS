@@ -1,0 +1,8 @@
+@use 'sass:map';
+@use 'generators' as *;
+
+@include generate-custom-props();
+
+body {
+  background-color: #00f;
+}
