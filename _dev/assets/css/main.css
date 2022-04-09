@@ -267,36 +267,50 @@ summary {
 }
 
 /* Remove default margin */
-body,
+blockquote,
+dl,
+dd,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-p,
+hr,
 figure,
-blockquote,
-dl,
-dd {
+p,
+pre {
   margin: 0;
 }
 
 /* Avoid text overflow */
-p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  overflow-wrap: break-word;
+}
+
+/* Unstyle headers */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  overflow-wrap: break-word;
+  font-size: inherit;
+  font-weight: inherit;
 }
 
 /* Remove list styles on ul, ol elements with a list role */
 ul[role=list],
 ol[role=list] {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* Core root defaults */
@@ -318,11 +332,15 @@ a:not([class]) {
 
 /* Improve media */
 img,
-picture,
+svg,
 video,
-canvas {
-  max-width: 100%;
+canvas,
+audio,
+iframe,
+embed,
+object {
   display: block;
+  max-width: 100%;
 }
 
 /* Remove built-in form typography styles */
@@ -358,18 +376,29 @@ body {
 
 body {
   color: #cbd5e1;
-  background-color: #1e293b;
+  background-color: #0f172a;
   padding: 3rem;
 }
 
 a {
-  color: #059669;
+  color: #0cf;
 }
 
 .wrapper {
-  margin: 1.5rem;
+  margin-top: 1.5rem;
   padding: 2rem;
-  background-color: #475569;
-  border: 2px solid #f5f;
+  background-color: #1e293b;
+  border: 2px solid yellow;
   border-radius: 8px;
+}
+.wrapper:hover {
+  border-color: #0cf;
+  transition: all linear 400ms;
+}
+.wrapper button {
+  margin-top: 1rem;
+}
+
+.lists {
+  margin-top: 0.75rem;
 }

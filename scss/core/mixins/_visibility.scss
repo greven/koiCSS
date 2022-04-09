@@ -1,0 +1,23 @@
+// Visually hides an element
+@mixin visually-hidden {
+  position: absolute;
+  border: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+// Removes the visually-hidden styles
+@mixin not-visually-hidden {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: unset;
+  white-space: unset;
+  clip: unset;
+  overflow: unset;
+}

@@ -1,40 +1,51 @@
 /// Styles reset
-/// -----------------------------------------------------------
-/// Source: https://www.joshwcomeau.com/css/custom-css-reset
-/// Source: https://piccalil.li/blog/a-modern-css-reset
-/// ===========================================================
+/// ============
 
 /* Remove default margin */
-body,
+blockquote,
+dl,
+dd,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-p,
+hr,
 figure,
-blockquote,
-dl,
-dd {
+p,
+pre {
   margin: 0;
 }
 
 /* Avoid text overflow */
-p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  overflow-wrap: break-word;
+}
+
+/* Unstyle headers */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  overflow-wrap: break-word;
+  font-size: inherit;
+  font-weight: inherit;
 }
 
 /* Remove list styles on ul, ol elements with a list role */
 ul[role='list'],
 ol[role='list'] {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* Core root defaults */
@@ -56,11 +67,15 @@ a:not([class]) {
 
 /* Improve media */
 img,
-picture,
+svg,
 video,
-canvas {
-  max-width: 100%;
+canvas,
+audio,
+iframe,
+embed,
+object {
   display: block;
+  max-width: 100%;
 }
 
 /* Remove built-in form typography styles */
