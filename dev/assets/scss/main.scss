@@ -1,3 +1,9 @@
+// @use 'koi-config';
+// @use 'koi-core' as koi;
+// @use 'koi-base';
+// @use 'koi-components';
+// @use 'koi-utilities';
+
 @use 'sass:map';
 @forward 'config';
 @use 'koi';
@@ -11,7 +17,7 @@ body {
 }
 
 h1 {
-  font-family: koi.font-family(heading);
+  font-family: koi.font-family(sans);
 }
 
 a {

@@ -1,5 +1,6 @@
-@use '../core';
+@use '../core' as *;
+@use '../reset';
 
 body {
-  background-color: #ccc;
+  background-color: #fff;
 }

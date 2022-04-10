@@ -367,7 +367,7 @@ select {
   }
 }
 body {
-  background-color: #ccc;
+  background-color: #fff;
 }
 
 /*! purgecss start ignore */
@@ -532,6 +532,27 @@ body {
   background-color: #dc2626;
 }
 
+.btn {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  color: #334155;
+  display: inline-flex;
+  font-weight: 500;
+  padding-block: 0.25rem;
+  padding-inline: 0.5rem;
+}
+.btn:hover {
+  background-color: #f8fafc;
+}
+.btn:focus {
+  outline: none;
+}
+
 body {
   color: #f1f5f9;
   background-color: #0f172a;
@@ -542,7 +563,7 @@ body {
 }
 
 h1 {
-  font-family: "Lato", sans-serif;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 a {
