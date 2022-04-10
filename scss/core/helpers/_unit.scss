@@ -1,13 +1,15 @@
 /// Koi Unit helper functions
 /// =========================
 
+@use 'sass:map';
 @use 'sass:math';
+@use 'sass:meta';
 
 /// Convert a value in pixels (px) to rem.
 ///
 /// @param {number (unitless)} $value-in-pixel -
 ///   The value to be converted to rem.
-/// @param {integer (unitless)} $base-font-size [16] -
+/// @param {integer (unitless)} $base-font-size -
 ///   Optional base font size, defaults to 16.
 ///
 /// @return {number} `$value-in-pixel` in rem.
@@ -15,4 +17,20 @@
 @function rem($value-in-px, $base-font-size: 16) {
   $size: math.div($value-in-px, $base-font-size);
   @return #{$size}rem;
+}
+
+/// Strip unit from value.
+///
+/// @param {number}
+///
+/// @return {number (unitless)}
+///
+@function strip-unit($value) {
+  @if meta.type-of($value) != 'number' {
+    @error "Invalid `#{meta.type-of($value)}` type. Choose a number type instead.";
+  } @else if meta.type-of($value) == 'number' and not math.is-unitless($value) {
+    @return math.div($value, ($value * 0 + 1));
+  }
+
+  @return $value;
 }

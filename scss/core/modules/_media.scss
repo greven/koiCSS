@@ -3,6 +3,10 @@
 @use '../api' as *;
 @use '../helpers' as *;
 
+// --------------------------------
+//   FUNCTIONS
+// --------------------------------
+
 /// Return a breakpoint value from the theme
 ///
 /// @param {string} $screen
@@ -11,6 +15,22 @@
 ///
 @function bp($screen) {
   @return theme(screens, $screen);
+}
+
+// --------------------------------
+//   MIXINS
+// --------------------------------
+
+/// Apply content from a specific breakpoint forward
+///
+/// @param {string} $breakpoint
+///
+/// @content - a min-width media query
+///
+@mixin mq($breakpoint, $media-type: screen) {
+  @include mq-from($breakpoint, $media-type) {
+    @content;
+  }
 }
 
 /// Apply content from a specific breakpoint forward

@@ -1,3 +1,26 @@
-@forward 'config';
+@use 'sass:map';
 @forward 'theme';
 @forward 'tokens';
+
+$config: () !default;
+$default-config: (
+  prefix: 'koi',
+  base-font-size: 16,
+  utilities: (
+    enabled: true,
+    ignore-keys: (),
+  ),
+  fallbacks: (
+    colors: 600,
+    duration: normal,
+    font-size: md,
+    font-weight: normal,
+    layer: base,
+    leading: normal,
+    radius: md,
+    shadow: md,
+    tracking: normal,
+  ),
+);
+
+$config: map.deep-merge($default-config, $config);

@@ -6,6 +6,12 @@ body {
   color: koi.color(gray, 100);
   background-color: koi.color(gray, 900);
   padding: koi.spacing(32);
+  font-family: koi.font-family(sans);
+  @include koi.font-size();
+}
+
+h1 {
+  font-family: koi.font-family(heading);
 }
 
 a {
@@ -32,10 +38,14 @@ a {
   margin-top: koi.rem(12);
 }
 
+.text {
+  line-height: koi.leading(relaxed);
+}
+
 .box {
   width: 64px;
   height: 64px;
-  margin: 24px;
+  margin-top: 24px;
   background-color: koi.color(primary);
   color: koi.color(gray, 900);
   display: flex;
@@ -43,7 +53,7 @@ a {
   align-items: center;
   box-shadow: koi.shadow();
 
-  @include koi.mq-from(md) {
+  @include koi.mq(md) {
     background-color: koi.color(secondary);
   }
 }

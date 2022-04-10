@@ -1,0 +1,43 @@
+@use 'sass:list';
+@use '../api' as *;
+
+// TODO: @mixin fluid-type
+
+// --------------------------------
+//   FUNCTIONS
+// --------------------------------
+
+@function font-family($font-family: config(fallbacks, font-family)) {
+  @return theme(font-family, $font-family);
+}
+
+@function font-size($font-size: config(fallbacks, font-size)) {
+  @return list.nth(theme(font-size, $font-size), 1);
+}
+
+@function font-weight($font-weight: config(fallbacks, font-weight)) {
+  @return theme(font-weight, $font-weight);
+}
+
+@function leading($leading: config(fallbacks, leading)) {
+  @return theme(leading, $leading);
+}
+
+@function tracking($tracking: config(fallbacks, tracking)) {
+  @return theme(tracking, $tracking);
+}
+
+// Font-size default leading
+@function font-default-leading($font-size) {
+  @return list.nth(theme(font-size, $font-size), 2);
+}
+
+// --------------------------------
+//   MIXINS
+// --------------------------------
+
+// Font-size with default line-height
+@mixin font-size($font-size: config(fallbacks, font-size)) {
+  font-size: font-size($font-size);
+  line-height: font-default-leading($font-size);
+}
