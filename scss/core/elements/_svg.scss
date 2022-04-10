@@ -1,0 +1,12 @@
+@use 'sass:math';
+@use '../helpers' as *;
+
+/// Encodes an SVG as data URI, replacing invalid characters
+///
+/// @param {string} $svg
+///
+/// @return {string}
+///
+@function url-encode($svg) {
+  @return url('data:image/svg+xml;charset=utf8,#{str-escape($svg)}');
+}

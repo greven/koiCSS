@@ -4,7 +4,7 @@
 @use 'sass:map';
 @use 'tokens' as *;
 
-$_default-theme: (
+$default-theme: (
   colors: (
     primary: #0cf,
     secondary: #f5f,
@@ -12,4 +12,4 @@ $_default-theme: (
 );
 
 $theme: () !default;
-$theme: map.deep-merge(map.deep-merge($tokens, $_default-theme), $theme);
+$theme: map.deep-merge(map.deep-merge($tokens, $default-theme), $theme);

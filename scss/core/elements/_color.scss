@@ -1,0 +1,19 @@
+/// Color
+/// =====
+
+@use 'sass:map';
+@use '../api' as *;
+
+// TODO: implement color var return
+@function color($name, $shade: config(fallbacks, colors), $alpha: 1, $type: value) {
+  @if $type == value {
+    @if is-theme-color($name, $shade) {
+      @return theme(colors, $name, $shade);
+    } @else if is-theme-color($name) {
+      @return theme(colors, $name);
+    }
+  } @else if $type == var {
+    // TODO: implement color var return
+    @return 'var(--custom-prop-color-value-here)';
+  }
+}

@@ -1,0 +1,43 @@
+@use 'sass:string';
+
+$escaping-characters: (
+  ('"', "'"),
+  ('<', '%3C'),
+  ('>', '%3E'),
+  ('(', '%28'),
+  (')', '%29'),
+  ('#', '%23'),
+  ('&', '%26')
+) !default;
+
+// Replace search string in string with a given replace string
+//
+// @param {string} $string
+// @param {string} $search
+// @param {string} $replace
+//
+// @return {string}
+//
+@function replace($string, $search, $replace: '') {
+  $index: string.index($string, $search);
+
+  @if $index {
+    @return string.slice($string, 1, $index - 1) + $replace +
+      replace(string.slice($string, $index + string.length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+/// Escape a str replacing invalid characters
+///
+/// @param {string} $str
+///
+/// @return {string}
+///
+@function escape($str) {
+  @each $char, $encoded in $escaping-characters {
+    $str: str-replace($str, $char, $encoded);
+  }
+  @return $str;
+}

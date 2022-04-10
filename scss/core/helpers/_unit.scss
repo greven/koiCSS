@@ -9,6 +9,7 @@
 ///   The value to be converted to rem.
 /// @param {integer (unitless)} $base-font-size [16] -
 ///   Optional base font size, defaults to 16.
+///
 /// @return {number} `$value-in-pixel` in rem.
 ///
 @function rem($value-in-px, $base-font-size: 16) {

@@ -3,7 +3,7 @@
 @use 'koi';
 
 body {
-  color: koi.color(gray, 300);
+  color: koi.color(gray, 100);
   background-color: koi.color(gray, 900);
   padding: koi.theme(spacing, 48);
 }
@@ -15,7 +15,6 @@ a {
 .wrapper {
   margin-top: koi.rem(24);
   padding: koi.theme(spacing, 32);
-  background-color: koi.color(gray, 800);
   border: 2px solid koi.color(secondary);
   border-radius: 8px;
 
@@ -25,11 +24,26 @@ a {
   }
 
   button {
-    // @include koi.visually-hidden();
     margin-top: 1rem;
   }
 }
 
 .lists {
   margin-top: koi.rem(12);
+}
+
+.box {
+  width: 64px;
+  height: 64px;
+  margin: 24px;
+  background-color: koi.color(primary);
+  color: koi.color(gray, 900);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: koi.shadow();
+
+  @include koi.mq-from(md) {
+    background-color: koi.color(secondary);
+  }
 }

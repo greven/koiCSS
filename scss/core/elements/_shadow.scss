@@ -1,0 +1,11 @@
+@use '../api' as *;
+
+/// Return a shadow value from the theme
+///
+/// @param {string} $shadow
+///
+/// @return {any} `$shadow-value`.
+///
+@function shadow($shadow: config(fallbacks, shadow)) {
+  @return theme(shadow, $shadow);
+}

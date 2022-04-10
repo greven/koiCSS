@@ -1,7 +1,5 @@
 @use 'sass:map';
-@use 'generators' as *;
-
-@include generate-custom-props();
+@use 'animations';
 
 body {
   background-color: #00f;

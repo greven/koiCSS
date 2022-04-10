@@ -1,0 +1,75 @@
+@use 'sass:map';
+@use 'sass:list';
+@use '../api' as *;
+@use '../helpers' as *;
+
+/// Return a breakpoint value from the theme
+///
+/// @param {string} $screen
+///
+/// @return {number} `$breakpoint-in-pixel`.
+///
+@function bp($screen) {
+  @return theme(screens, $screen);
+}
+
+/// Apply content from a specific breakpoint forward
+///
+/// @param {string} $breakpoint
+///
+/// @content - a min-width media query
+///
+@mixin mq-from($breakpoint, $media-type: screen) {
+  @media #{$media-type} and (min-width: bp($breakpoint)) {
+    @content;
+  }
+}
+
+/// Apply content until a specific breakpoint is reached
+///
+/// @param {string} $breakpoint
+///
+/// @content - a max-width media query
+///
+@mixin mq-to($breakpoint, $media-type: screen) {
+  @media #{$media-type} and (max-width: bp($breakpoint)) {
+    @content;
+  }
+}
+
+/// Apply content between breakpoints
+///
+/// @param {string} $from - screen breakpoint from
+/// @param {string} $to  - screen breakpoint to
+///
+/// @content - a min-width and max-width media query
+///
+@mixin mq-between($from, $to, $media-type: screen) {
+  @media #{$media-type} and (min-width: bp($from)) and (max-width: bp($to)) {
+    @content;
+  }
+}
+
+/// Apply content within the length of a specific breakpoint
+///
+/// @param {string} $breakpoint
+///
+/// @content - a min-width and/or max-width media query
+///
+@mixin mq-at($breakpoint, $media-type: screen) {
+  $keys: map.keys(theme(screens));
+  $length: list.length(theme(screens));
+  $index: list.index($keys, $breakpoint);
+
+  @if $length > $index {
+    $next-breakpoint: list.nth($keys, ($index + 1));
+
+    @include mq-between($breakpoint, $next-breakpoint, $media-type) {
+      @content;
+    }
+  } @else {
+    @include mq-from($breakpoint, $media-type) {
+      @content;
+    }
+  }
+}

@@ -1,12 +1,20 @@
 @use 'sass:map';
 
 $config: () !default;
-
 $default-config: (
-  fallback-color-shade: 600,
   prefix: 'koi',
   ignore-keys: (),
   utilities: true,
+  fallbacks: (
+    colors: 600,
+    font-size: md,
+    font-weight: normal,
+    leading: normal,
+    tracking: normal,
+    radius: md,
+    shadow: md,
+    duration: normal,
+  ),
 );
 
 $config: map.deep-merge($default-config, $config);
