@@ -367,7 +367,7 @@ select {
   }
 }
 body {
-  background-color: white;
+  background-color: #fff;
 }
 
 /*! purgecss start ignore */
