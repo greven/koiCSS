@@ -1,0 +1,11 @@
+@use '../api' as *;
+
+/// Return a spacing value from the theme
+///
+/// @param {string} $spacing
+///
+/// @return {any} `$spacing-value`.
+///
+@function spacing($spacing: config(fallbacks, spacing)) {
+  @return theme(spacing, $spacing);
+}

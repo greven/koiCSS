@@ -5,7 +5,7 @@
 body {
   color: koi.color(gray, 100);
   background-color: koi.color(gray, 900);
-  padding: koi.theme(spacing, 48);
+  padding: koi.spacing(32);
 }
 
 a {

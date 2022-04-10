@@ -3,8 +3,10 @@
 $config: () !default;
 $default-config: (
   prefix: 'koi',
-  ignore-keys: (),
-  utilities: true,
+  utilities: (
+    enable: true,
+    ignore-keys: (),
+  ),
   fallbacks: (
     colors: 600,
     font-size: md,
