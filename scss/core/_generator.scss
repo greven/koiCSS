@@ -1,0 +1,10 @@
+@use 'modules/color' as *;
+
+// TODO: Utilities generator
+// TODO: CSS Custom Properties generator
+
+@mixin utilities() {
+  .bg-red-400 {
+    background-color: color(red, 600);
+  }
+}

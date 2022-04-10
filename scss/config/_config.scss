@@ -4,7 +4,7 @@ $config: () !default;
 $default-config: (
   prefix: 'koi',
   utilities: (
-    enable: true,
+    enabled: true,
     ignore-keys: (),
   ),
   fallbacks: (

@@ -1,1 +1,8 @@
 @forward 'base';
+@use '../core' as *;
+
+@include keyframes;
+
+@if config(utilities, enabled) {
+  @include gen-utilities();
+}

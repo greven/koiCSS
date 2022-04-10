@@ -1,8 +1,5 @@
-@use 'sass:map';
 @use '../core';
 
-@include core.keyframes;
-
 body {
-  background-color: #00f;
+  background-color: white;
 }

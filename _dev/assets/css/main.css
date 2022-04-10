@@ -320,9 +320,9 @@ html:focus-within {
 
 /* Body defaults */
 body {
-  min-height: 100vh;
-  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+  min-height: 100vh;
 }
 
 /* A elements that don't have a class get default styles */
@@ -362,10 +362,14 @@ select {
 *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }
+body {
+  background-color: white;
+}
+
 /*! purgecss start ignore */
 @keyframes fade-in {
   to {
@@ -524,8 +528,8 @@ select {
   }
 }
 /*! purgecss end ignore */
-body {
-  background-color: #00f;
+.bg-red-400 {
+  background-color: #dc2626;
 }
 
 body {
