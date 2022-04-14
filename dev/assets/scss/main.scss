@@ -62,9 +62,9 @@ a {
   border-radius: koi.radius(lg);
   transition: all 400ms linear;
 
-  @each $n, $grad in koi.$gradients {
-    &--#{$n} {
-      @include koi.gradient($n);
+  @for $i from 1 through 10 {
+    &--#{$i} {
+      @include koi.gradient($i, linear);
     }
   }
 }

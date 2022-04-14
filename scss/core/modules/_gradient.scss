@@ -3,92 +3,35 @@
 // --------------------------------
 
 @use 'sass:map';
-
-// TODO: Maybe split the colors from the gradient css function so we can pass things in the function like linear, conic, from, to, etc. So building a more complex, more useful gradient function that can be consumed as is or in the utility mixin
-
-// TODO: Also reduce the number of gradients, 20 is too much....maybe cut the ones too similar
-
-$gradient-colors: (
-  1: (
-    #79f1a4 10%,
-    #0e5cad 100%,
-  ),
-  2: (
-    #4158d0 0%,
-    #c850c0 46%,
-    #ffcc70 100%,
-  ),
-  3: (
-    #fee140 0%,
-    #fa709a 100%,
-  ),
-  4: (
-    #21d4fd 0%,
-    #b721ff 100%,
-  ),
-  5: (
-    #f4d03f 0%,
-    #16a085 100%,
-  ),
-  6: (
-    #ff3cac 0%,
-    #784ba0 50%,
-    #2b86c5 100%,
-  ),
-  7: (
-    #1f005c,
-    #5b0060,
-    #870160,
-    #ac255e,
-    #ca485c,
-    #e16b5c,
-    #f39060,
-    #ffb56b,
-  ),
-  8: (
-    #00f5a0,
-    #00d9f5,
-  ),
-  9: (
-    #f0ff00 10%,
-    #58cffb 100%,
-  ),
-  10: (
-    #ffd3a5 10%,
-    #fd6585 100%,
-  ),
-);
-
-$gradients: (
-  1: linear-gradient(135deg, #79f1a4 10%, #0e5cad 100%),
-  2: linear-gradient(43deg, #4158d0 0%, #c850c0 46%, #ffcc70 100%),
-  3: linear-gradient(90deg, #fee140 0%, #fa709a 100%),
-  4: linear-gradient(19deg, #21d4fd 0%, #b721ff 100%),
-  5: linear-gradient(132deg, #f4d03f 0%, #16a085 100%),
-  6: linear-gradient(225deg, #ff3cac 0%, #784ba0 50%, #2b86c5 100%),
-  7: linear-gradient(to bottom right, #1f005c, #5b0060, #870160, #ac255e, #ca485c, #e16b5c, #f39060, #ffb56b),
-  8: linear-gradient(to bottom right, #00f5a0, #00d9f5),
-  9: linear-gradient(135deg, #f0ff00 10%, #58cffb 100%),
-  10: linear-gradient(135deg, #ffd3a5 10%, #fd6585 100%),
-);
+@use '../api' as *;
 
 // --------------------------------
 //   FUNCTIONS
 // --------------------------------
 
-@function gradient($grad-number: 1) {
-  @if map.has-key($gradients, $grad-number) {
-    @return map.get($gradients, $grad-number);
-  }
+@function gradient-color($grad-color: 1) {
+  @return theme(gradients, $grad-color, colors);
 }
 
 // --------------------------------
 //   MIXINS
 // --------------------------------
 
-@mixin gradient($grad-number: 1, $fallback-color: null) {
+@mixin gradient($grad-color: 1, $type: linear, $direction: null, $fallback-color: null) {
   @if $fallback-color {
     background-color: $fallback-color;
   }
-  background-image: gradient($grad-number);
+
+  $colors: gradient-color($grad-color);
+  @if not $direction {
+    $direction: theme(gradients, $grad-color, direction);
+  }
+
+  @if $type == linear {
+    background-image: linear-gradient($direction, $colors);
+  } @else if $type == radial {
+    background-image: radial-gradient($colors);
+  } @else if $type == conic {
+    background-image: conic-gradient($colors);
+  }
 }

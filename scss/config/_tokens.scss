@@ -78,6 +78,87 @@ $colors: (
   ),
 );
 
+$gradients: (
+  1: (
+    colors: (
+      #79f1a4 10%,
+      #0e5cad 100%,
+    ),
+    direction: 135deg,
+  ),
+  2: (
+    colors: (
+      #4158d0 0%,
+      #c850c0 46%,
+      #ffcc70 100%,
+    ),
+    direction: 43deg,
+  ),
+  3: (
+    colors: (
+      #fee140 0%,
+      #fa709a 100%,
+    ),
+    direction: 90deg,
+  ),
+  4: (
+    colors: (
+      #21d4fd 0%,
+      #b721ff 100%,
+    ),
+    direction: 19deg,
+  ),
+  5: (
+    colors: (
+      #f4d03f 0%,
+      #16a085 100%,
+    ),
+    direction: 132deg,
+  ),
+  6: (
+    colors: (
+      #ff3cac 0%,
+      #784ba0 50%,
+      #2b86c5 100%,
+    ),
+    direction: 225deg,
+  ),
+  7: (
+    colors: (
+      #1f005c,
+      #5b0060,
+      #870160,
+      #ac255e,
+      #ca485c,
+      #e16b5c,
+      #f39060,
+      #ffb56b,
+    ),
+    direction: to bottom right,
+  ),
+  8: (
+    colors: (
+      #00f5a0,
+      #00d9f5,
+    ),
+    direction: to bottom right,
+  ),
+  9: (
+    colors: (
+      #f0ff00 10%,
+      #58cffb 100%,
+    ),
+    direction: 135deg,
+  ),
+  10: (
+    colors: (
+      #ffd3a5 10%,
+      #fd6585 100%,
+    ),
+    direction: 135deg,
+  ),
+);
+
 $spacing: (
   0: rem(0),
   1: rem(1),
@@ -389,6 +470,7 @@ $blur: (
 $tokens: (
   screens: $screens,
   colors: $colors,
+  gradients: $gradients,
   spacing: $spacing,
   font-family: $font-family,
   font-size: $font-size,
