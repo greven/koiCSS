@@ -9,8 +9,8 @@
 @use 'koi';
 
 body {
-  color: koi.color(gray, 100);
-  background-color: koi.color(gray, 900);
+  color: koi.color(gray, 1);
+  background-color: koi.color(gray, 9);
   padding: koi.spacing(32);
   font-family: koi.font-family(sans);
   @include koi.font-size();
@@ -49,17 +49,28 @@ a {
 }
 
 .box {
-  width: 64px;
-  height: 64px;
+  width: koi.spacing(160);
+  height: koi.spacing(160);
+  color: koi.color(gray, 8);
   margin-top: 24px;
-  background-color: koi.color(primary);
-  color: koi.color(gray, 900);
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: koi.font-size(lg);
+  font-weight: koi.font-weight(medium);
   box-shadow: koi.shadow();
+  border-radius: koi.radius(lg);
+  transition: all 400ms linear;
 
-  @include koi.mq(md) {
-    background-color: koi.color(secondary);
+  @each $n, $grad in koi.$gradients {
+    &--#{$n} {
+      @include koi.gradient($n);
+    }
   }
+}
+
+.box-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
 }

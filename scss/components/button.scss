@@ -3,18 +3,18 @@
 .btn {
   @include font-size(sm);
   align-items: center;
-  background-color: #fff;
-  border: 1px solid color(gray, 300);
+  background-color: color(gray, 1);
+  border: 1px solid color(gray, 2);
   border-radius: radius(md);
   box-shadow: shadow();
-  color: color(gray, 700);
+  color: color(gray, 7);
   display: inline-flex;
   font-weight: font-weight(medium);
   padding-block: spacing(4);
   padding-inline: spacing(8);
 
   &:hover {
-    background-color: color(gray, 50);
+    background-color: color(gray, 5);
   }
 
   &:focus {

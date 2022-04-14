@@ -536,8 +536,8 @@ body {
   font-size: 0.875rem;
   line-height: 1.25rem;
   align-items: center;
-  background-color: #fff;
-  border: 1px solid #cbd5e1;
+  background-color: #f1f5f9;
+  border: 1px solid #e2e8f0;
   border-radius: 0.25rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   color: #334155;
@@ -547,7 +547,7 @@ body {
   padding-inline: 0.5rem;
 }
 .btn:hover {
-  background-color: #f8fafc;
+  background-color: #64748b;
 }
 .btn:focus {
   outline: none;
@@ -593,18 +593,52 @@ a {
 }
 
 .box {
-  width: 64px;
-  height: 64px;
+  width: 10rem;
+  height: 10rem;
+  color: #1e293b;
   margin-top: 24px;
-  background-color: #0cf;
-  color: #0f172a;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1.125rem;
+  font-weight: 500;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-radius: 0.375rem;
+  transition: all 400ms linear;
 }
-@media screen and (min-width: 768px) {
-  .box {
-    background-color: yellow;
-  }
+.box--1 {
+  background-image: linear-gradient(135deg, #79f1a4 10%, #0e5cad 100%);
+}
+.box--2 {
+  background-image: linear-gradient(43deg, #4158d0 0%, #c850c0 46%, #ffcc70 100%);
+}
+.box--3 {
+  background-image: linear-gradient(90deg, #fee140 0%, #fa709a 100%);
+}
+.box--4 {
+  background-image: linear-gradient(19deg, #21d4fd 0%, #b721ff 100%);
+}
+.box--5 {
+  background-image: linear-gradient(132deg, #f4d03f 0%, #16a085 100%);
+}
+.box--6 {
+  background-image: linear-gradient(225deg, #ff3cac 0%, #784ba0 50%, #2b86c5 100%);
+}
+.box--7 {
+  background-image: linear-gradient(to bottom right, #1f005c, #5b0060, #870160, #ac255e, #ca485c, #e16b5c, #f39060, #ffb56b);
+}
+.box--8 {
+  background-image: linear-gradient(to bottom right, #00f5a0, #00d9f5);
+}
+.box--9 {
+  background-image: linear-gradient(135deg, #f0ff00 10%, #58cffb 100%);
+}
+.box--10 {
+  background-image: linear-gradient(135deg, #ffd3a5 10%, #fd6585 100%);
+}
+
+.box-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
 }
