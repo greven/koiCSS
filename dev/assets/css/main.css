@@ -607,13 +607,13 @@ a {
   transition: all 400ms linear;
 }
 .box--1 {
-  background-image: linear-gradient(135deg, #79f1a4 10%, #0e5cad 100%);
+  background-image: linear-gradient(to right, #43cea2, #185a9d);
 }
 .box--2 {
-  background-image: linear-gradient(43deg, #4158d0 0%, #c850c0 46%, #ffcc70 100%);
+  background-image: linear-gradient(225deg, #fe047c 10%, #ffae02 100%);
 }
 .box--3 {
-  background-image: linear-gradient(90deg, #fee140 0%, #fa709a 100%);
+  background-image: linear-gradient(45deg, #fbda61 0%, #ff5acd 100%);
 }
 .box--4 {
   background-image: linear-gradient(19deg, #21d4fd 0%, #b721ff 100%);
@@ -628,17 +628,32 @@ a {
   background-image: linear-gradient(to bottom right, #1f005c, #5b0060, #870160, #ac255e, #ca485c, #e16b5c, #f39060, #ffb56b);
 }
 .box--8 {
-  background-image: linear-gradient(to bottom right, #00f5a0, #00d9f5);
-}
-.box--9 {
   background-image: linear-gradient(135deg, #f0ff00 10%, #58cffb 100%);
 }
-.box--10 {
+.box--9 {
   background-image: linear-gradient(135deg, #ffd3a5 10%, #fd6585 100%);
+}
+.box--10 {
+  background-image: linear-gradient(45deg, #0093e9 0%, #80d0c7 100%);
+}
+.box--11 {
+  background-image: linear-gradient(to right, #89216b, #da4453);
+}
+.box--12 {
+  background-image: linear-gradient(to right, #8e2de2, #4a00e0);
+}
+.box--13 {
+  background-image: linear-gradient(to bottom right, #00f5a0, #00d9f5);
+}
+.box--14 {
+  background-image: linear-gradient(43deg, #4158d0 0%, #c850c0 46%, #ffcc70 100%);
+}
+.box--15 {
+  background-image: linear-gradient(90deg, #fad961 0%, #f76b1c 100%);
 }
 
 .box-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
 }

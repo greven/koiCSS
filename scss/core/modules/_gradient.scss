@@ -9,29 +9,17 @@
 //   FUNCTIONS
 // --------------------------------
 
-@function gradient-color($grad-color: 1) {
-  @return theme(gradients, $grad-color, colors);
+@function gradient($grad) {
+  @return theme(gradients, $grad);
 }
 
 // --------------------------------
 //   MIXINS
 // --------------------------------
 
-@mixin gradient($grad-color: 1, $type: linear, $direction: null, $fallback-color: null) {
+@mixin gradient($grad, $fallback-color: null) {
   @if $fallback-color {
     background-color: $fallback-color;
   }
-
-  $colors: gradient-color($grad-color);
-  @if not $direction {
-    $direction: theme(gradients, $grad-color, direction);
-  }
-
-  @if $type == linear {
-    background-image: linear-gradient($direction, $colors);
-  } @else if $type == radial {
-    background-image: radial-gradient($colors);
-  } @else if $type == conic {
-    background-image: conic-gradient($colors);
-  }
+  background-image: gradient($grad);
 }

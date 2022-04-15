@@ -79,84 +79,21 @@ $colors: (
 );
 
 $gradients: (
-  1: (
-    colors: (
-      #79f1a4 10%,
-      #0e5cad 100%,
-    ),
-    direction: 135deg,
-  ),
-  2: (
-    colors: (
-      #4158d0 0%,
-      #c850c0 46%,
-      #ffcc70 100%,
-    ),
-    direction: 43deg,
-  ),
-  3: (
-    colors: (
-      #fee140 0%,
-      #fa709a 100%,
-    ),
-    direction: 90deg,
-  ),
-  4: (
-    colors: (
-      #21d4fd 0%,
-      #b721ff 100%,
-    ),
-    direction: 19deg,
-  ),
-  5: (
-    colors: (
-      #f4d03f 0%,
-      #16a085 100%,
-    ),
-    direction: 132deg,
-  ),
-  6: (
-    colors: (
-      #ff3cac 0%,
-      #784ba0 50%,
-      #2b86c5 100%,
-    ),
-    direction: 225deg,
-  ),
-  7: (
-    colors: (
-      #1f005c,
-      #5b0060,
-      #870160,
-      #ac255e,
-      #ca485c,
-      #e16b5c,
-      #f39060,
-      #ffb56b,
-    ),
-    direction: to bottom right,
-  ),
-  8: (
-    colors: (
-      #00f5a0,
-      #00d9f5,
-    ),
-    direction: to bottom right,
-  ),
-  9: (
-    colors: (
-      #f0ff00 10%,
-      #58cffb 100%,
-    ),
-    direction: 135deg,
-  ),
-  10: (
-    colors: (
-      #ffd3a5 10%,
-      #fd6585 100%,
-    ),
-    direction: 135deg,
-  ),
+  1: linear-gradient(to right, #43cea2, #185a9d),
+  2: linear-gradient(225deg, #fe047c 10%, #ffae02 100%),
+  3: linear-gradient(45deg, #fbda61 0%, #ff5acd 100%),
+  4: linear-gradient(19deg, #21d4fd 0%, #b721ff 100%),
+  5: linear-gradient(132deg, #f4d03f 0%, #16a085 100%),
+  6: linear-gradient(225deg, #ff3cac 0%, #784ba0 50%, #2b86c5 100%),
+  7: linear-gradient(to bottom right, #1f005c, #5b0060, #870160, #ac255e, #ca485c, #e16b5c, #f39060, #ffb56b),
+  8: linear-gradient(135deg, #f0ff00 10%, #58cffb 100%),
+  9: linear-gradient(135deg, #ffd3a5 10%, #fd6585 100%),
+  10: linear-gradient(45deg, #0093e9 0%, #80d0c7 100%),
+  11: linear-gradient(to right, #89216b, #da4453),
+  12: linear-gradient(to right, #8e2de2, #4a00e0),
+  13: linear-gradient(to bottom right, #00f5a0, #00d9f5),
+  14: linear-gradient(43deg, #4158d0 0%, #c850c0 46%, #ffcc70 100%),
+  15: linear-gradient(90deg, #fad961 0%, #f76b1c 100%),
 );
 
 $spacing: (
