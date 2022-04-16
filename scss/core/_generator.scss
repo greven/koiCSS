@@ -1,10 +1,14 @@
+// ------------------------------------------------
+//   Generators (Utilities and CSS Custom Props)
+// ------------------------------------------------
+
 @use 'modules/color' as *;
 
 // TODO: Utilities generator
 // TODO: CSS Custom Properties generator
 
-@mixin utilities() {
-  .bg-red-400 {
-    background-color: color(red, 6);
-  }
-}
+// @mixin utilities() {
+//   .bg-red-400 {
+//     background-color: color(red, 6);
+//   }
+// }

@@ -1,3 +1,7 @@
+// --------------------------------
+//   Border
+// --------------------------------
+
 @use '../api' as *;
 
 @function radius($radius: config(fallbacks, radius)) {

@@ -1,0 +1,28 @@
+// --------------------------------
+//   Media Styles
+// --------------------------------
+
+@use '../core' as *;
+
+// Output
+@mixin styles {
+  img {
+    height: auto;
+    user-select: none;
+  }
+
+  iframe {
+    height: 100%;
+    width: 100%;
+  }
+
+  figure {
+    margin-left: 0;
+    margin-right: 0;
+
+    figcaption {
+      margin-top: space(8);
+      text-align: center;
+    }
+  }
+}

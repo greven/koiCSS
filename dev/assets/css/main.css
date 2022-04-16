@@ -475,8 +475,8 @@ body {
 }
 @keyframes ping {
   75%, 100% {
-    transform: scale(2);
     opacity: 0;
+    transform: scale(2);
   }
 }
 @keyframes blink {
@@ -494,12 +494,12 @@ body {
 }
 @keyframes bounce {
   0%, 100% {
-    transform: translateY(-25%);
     animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    transform: translateY(-25%);
   }
   50% {
-    transform: translateY(0);
     animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    transform: translateY(0);
   }
 }
 @keyframes pulse {
@@ -528,8 +528,23 @@ body {
   }
 }
 /*! purgecss end ignore */
-.bg-red-400 {
-  background-color: #dc2626;
+img {
+  height: auto;
+  user-select: none;
+}
+
+iframe {
+  height: 100%;
+  width: 100%;
+}
+
+figure {
+  margin-left: 0;
+  margin-right: 0;
+}
+figure figcaption {
+  margin-top: space(8);
+  text-align: center;
 }
 
 .btn {

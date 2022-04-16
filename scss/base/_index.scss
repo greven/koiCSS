@@ -1,8 +1,6 @@
 @forward 'base';
-@use '../core' as *;
+@use 'animation';
+@use 'media';
 
-@include keyframes;
-
-@if config(utilities, enabled) {
-  @include gen-utilities();
-}
+@include animation.styles;
+@include media.styles;

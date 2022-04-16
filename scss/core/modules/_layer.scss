@@ -1,3 +1,7 @@
+// --------------------------------
+//   Layer / Z-Index
+// --------------------------------
+
 @use '../api' as *;
 
 @function layer($layer: config(fallbacks, layer)) {
