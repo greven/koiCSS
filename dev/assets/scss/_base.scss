@@ -1,0 +1,76 @@
+@use 'sass:map';
+@use 'sass:list';
+
+@forward 'config';
+@use 'koi';
+
+@include koi.base();
+
+// Your base styles
+
+body {
+  color: koi.color(gray, 1);
+  background-color: koi.color(gray, 9);
+  padding: koi.spacing(32);
+  font-family: koi.font-family(sans);
+  @include koi.font-size();
+}
+
+h1 {
+  font-family: koi.font-family(sans);
+}
+
+a {
+  color: koi.color(primary);
+}
+
+.wrapper {
+  margin-top: koi.rem(24);
+  padding: koi.theme(spacing, 32);
+  border: 2px solid koi.color(secondary);
+  border-radius: 8px;
+
+  &:hover {
+    border-color: koi.color(primary);
+    transition: all linear 400ms;
+  }
+
+  button {
+    margin-top: 1rem;
+  }
+}
+
+.lists {
+  margin-top: koi.rem(12);
+}
+
+.text {
+  line-height: koi.leading(relaxed);
+}
+
+.box {
+  width: koi.spacing(160);
+  height: koi.spacing(160);
+  color: koi.color(gray, 8);
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: koi.font-size(lg);
+  font-weight: koi.font-weight(medium);
+  box-shadow: koi.shadow();
+  border-radius: koi.radius(lg);
+  transition: all 400ms linear;
+
+  @for $i from 1 through list.length(koi.theme(gradients)) {
+    &--#{$i} {
+      @include koi.gradient($i);
+    }
+  }
+}
+
+.box-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+}

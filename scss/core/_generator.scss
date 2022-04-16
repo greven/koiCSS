@@ -1,14 +1,56 @@
-// ------------------------------------------------
-//   Generators (Utilities and CSS Custom Props)
-// ------------------------------------------------
+// --------------------------------
+//   Generators
+// --------------------------------
 
-@use 'modules/color' as *;
+//   Utility Classes and CSS Custom Properties
 
-// TODO: Utilities generator
-// TODO: CSS Custom Properties generator
+@use 'sass:map';
+@use 'sass:list';
+@use 'sass:meta';
+@use 'sass:string';
+@use 'helpers' as *;
+@use 'api' as *;
 
-// @mixin utilities() {
-//   .bg-red-400 {
-//     background-color: color(red, 6);
-//   }
+@mixin create-utility($utility, $responsive: false) {
+  $prefix: config(utilities, prefix);
+  $glue: config(utilities, glue);
+
+  $values: map.get($utility, values);
+
+  // If the values are a list or string, convert it into a map
+  @if meta.type-of($values) == 'string' or meta.type-of(list.nth($values, 1)) != 'list' {
+    $values: list.zip($values, $values);
+  }
+
+  @each $key, $value in $values {
+    $properties: map.get($utility, property);
+
+    $property-class: if(map.has-key($utility, class), map.get($utility, class), list.nth($properties, 1));
+    $property-class: if($property-class == null, '', $property-class);
+    $property-class: str-escape($property-class);
+
+    $property-class-modifier: if($key, if($property-class == '', '', '-') + $key, '');
+    $property-class-modifier: str-escape($property-class-modifier);
+
+    @if $value != null {
+      @if meta.type-of($value) == 'string' {
+        $value: string.unquote($value);
+      }
+
+      @each $property in $properties {
+        .#{$prefix + $property-class + $property-class-modifier} {
+          #{$property}: $value;
+        }
+      }
+    }
+  }
+}
+
+@mixin generate-utilities($utilities) {
+  @each $key, $utility in $utilities {
+    @include create-utility($utility);
+  }
+}
+
+// @mixin generate-css-vars() {
 // }

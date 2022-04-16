@@ -2,5 +2,7 @@
 @use 'animation';
 @use 'media';
 
-@include animation.styles;
-@include media.styles;
+@mixin base {
+  @include animation.styles;
+  @include media.styles;
+}

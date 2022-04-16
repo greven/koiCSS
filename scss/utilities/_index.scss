@@ -1,6 +1,7 @@
-@forward 'layout';
-@forward 'visibility';
+@use 'layout';
+@use 'visibility';
+@use '../core' as *;
 
-// @if config(utilities, enabled) {
-// @include gen-utilities();
-// }
+@mixin utilities {
+  @include layout.utilities();
+}

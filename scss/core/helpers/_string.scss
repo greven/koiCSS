@@ -2,17 +2,39 @@
 //   String helpers
 // --------------------------------
 
+@use 'sass:list';
 @use 'sass:string';
 
-$escaping-characters: (
-  ('"', "'"),
-  ('<', '%3C'),
-  ('>', '%3E'),
-  ('(', '%28'),
-  (')', '%29'),
-  ('#', '%23'),
-  ('&', '%26')
-) !default;
+$escape-characters: (
+  '!',
+  '#',
+  '$',
+  '%',
+  '&',
+  "'",
+  '(',
+  ')',
+  '*',
+  '+',
+  ',',
+  '.',
+  '/',
+  ':',
+  ';',
+  '<',
+  '=',
+  '>',
+  '?',
+  '@',
+  '[',
+  ']',
+  '^',
+  '`',
+  '{',
+  '|',
+  '}',
+  '~'
+);
 
 // Replace search string in string with a given replace string
 //
@@ -33,15 +55,15 @@ $escaping-characters: (
   @return $string;
 }
 
-/// Escape a str replacing invalid characters
+/// Escape chars in a given string.
 ///
 /// @param {string} $str
 ///
-/// @return {string}
+/// @return {string} - escaped string
 ///
 @function escape($str) {
-  @each $char, $encoded in $escaping-characters {
-    $str: str-replace($str, $char, $encoded);
+  @each $char in $escape-characters {
+    $str: replace($str, $char, '\\'+ $char);
   }
   @return $str;
 }

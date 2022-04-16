@@ -1,1 +1,5 @@
-@forward 'button';
+@use 'button';
+
+@mixin components {
+  @include button.styles();
+}

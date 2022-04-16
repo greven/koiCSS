@@ -4,24 +4,30 @@
 
 @use '../core' as *;
 
-.btn {
-  @include font-size(sm);
-  align-items: center;
-  background-color: color(gray, 1);
-  border: 1px solid color(gray, 2);
-  border-radius: radius(md);
-  box-shadow: shadow();
-  color: color(gray, 7);
-  display: inline-flex;
-  font-weight: font-weight(medium);
-  padding-block: spacing(4);
-  padding-inline: spacing(8);
+@mixin button {
+  .btn {
+    @include font-size(sm);
+    align-items: center;
+    background-color: color(gray, 1);
+    border: 1px solid color(gray, 2);
+    border-radius: radius(md);
+    box-shadow: shadow();
+    color: color(gray, 7);
+    display: inline-flex;
+    font-weight: font-weight(medium);
+    padding-block: spacing(4);
+    padding-inline: spacing(8);
 
-  &:hover {
-    background-color: color(gray, 5);
-  }
+    &:hover {
+      background-color: color(gray, 5);
+    }
 
-  &:focus {
-    outline: none;
+    &:focus {
+      outline: none;
+    }
   }
+}
+
+@mixin styles {
+  @include button;
 }

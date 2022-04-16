@@ -1,6 +1,32 @@
 // --------------------------------
-//   Layout
+//   Layout Utilities
 // --------------------------------
+
+@use '../core' as *;
 
 // TODO: Stack; container; display; floats; clear (see others in tailwind, etc).
 // Also: https://1linelayouts.glitch.me/ (centered, etc).
+
+$utility-classes: (
+  'display': (
+    property: display,
+    responsive: true,
+    class: null,
+    values: (
+      inline: inline,
+      inline-block: inline-block,
+      block: block,
+      grid: grid,
+      flex: flex,
+      inline-flex: inline-flex,
+      table: table,
+      table-row: table-row,
+      table-cell: table-cell,
+      hidden: none,
+    ),
+  ),
+);
+
+@mixin utilities {
+  @include generate-utilities($utility-classes);
+}

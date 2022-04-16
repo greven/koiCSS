@@ -1,27 +1,15 @@
 // --------------------------------
-//   Visibility
+//   Visibility Utilities
 // --------------------------------
 
-// Visually hides an element
-@mixin visually-hidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
+@use '../core/modules/visibility';
 
-// Removes the visually-hidden styles
-@mixin not-visually-hidden {
-  clip: unset;
-  height: auto;
-  margin: unset;
-  overflow: unset;
-  position: static;
-  white-space: unset;
-  width: auto;
+@mixin utilities {
+  .sr-only {
+    @include visibility.visually-hidden();
+  }
+
+  .not-sr-only {
+    @include visibility.not-visually-hidden();
+  }
 }
