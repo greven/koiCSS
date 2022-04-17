@@ -5,38 +5,8 @@
 @use 'sass:list';
 @use 'sass:string';
 
-$escape-characters: (
-  '!',
-  '#',
-  '$',
-  '%',
-  '&',
-  "'",
-  '(',
-  ')',
-  '*',
-  '+',
-  ',',
-  '.',
-  '/',
-  ':',
-  ';',
-  '<',
-  '=',
-  '>',
-  '?',
-  '@',
-  '[',
-  ']',
-  '^',
-  '`',
-  '{',
-  '|',
-  '}',
-  '~'
-);
-
-// Replace search string in string with a given replace string
+// Recursevelu replace search string in string
+// with a given replace string.
 //
 // @param {string} $string
 // @param {string} $search
@@ -55,15 +25,74 @@ $escape-characters: (
   @return $string;
 }
 
+@function replace_at($string, $replace, $index) {
+  @if $index and string.length($string) == 1 {
+    @return $replace;
+  } @else {
+    @return string.slice($string, 1, $index - 1) + $replace + string.slice($string, $index + 1);
+  }
+}
+
 /// Escape chars in a given string.
 ///
-/// @param {string} $str
+/// @param {string} $string
 ///
 /// @return {string} - escaped string
 ///
-@function escape($str) {
-  @each $char in $escape-characters {
-    $str: replace($str, $char, '\\'+ $char);
+@function escape($string) {
+  $symbols: (
+    '!',
+    '#',
+    '$',
+    '%',
+    '&',
+    "'",
+    '(',
+    ')',
+    '*',
+    '+',
+    ',',
+    '.',
+    '/',
+    ':',
+    ';',
+    '<',
+    '=',
+    '>',
+    '?',
+    '@',
+    '[',
+    ']',
+    '^',
+    '`',
+    '{',
+    '|',
+    '}',
+    '~'
+  );
+
+  $number-chars: ('\0030', '\0031', '\0032', '\0033', '\0034', '\0035', '\0036', '\0037', '\0038', '\0039');
+
+  $number-chars-escaped: ('\\30 ', '\\31 ', '\\32 ', '\\33 ', '\\34 ', '\\35 ', '\\36 ', '\\37 ', '\\38 ', '\\39 ');
+
+  $string: string.quote(#{$string});
+  $first-char: string.slice($string, 1, 1);
+
+  $result: '';
+  @for $i from 1 through string.length($string) {
+    $char: string.slice($string, $i, $i);
+
+    // If first char is a number
+    @if $i == 1 and list.index($number-chars, $first-char) {
+      $index-of-number: list.index($number-chars, $char);
+      $result: $result + list.nth($number-chars-escaped, $index-of-number);
+      // If char is a symbol
+    } @else if list.index($symbols, $char) {
+      $result: $result + '\\'+ $char;
+    } @else {
+      $result: $result + $char;
+    }
   }
-  @return $str;
+
+  @return $result;
 }

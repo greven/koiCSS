@@ -2,6 +2,9 @@
 //   Generators
 // --------------------------------
 
+// TODO: Add css-vars to utility generator
+// TODO: Add generate-css-vars
+
 //   Utility Classes and CSS Custom Properties
 
 @use 'sass:map';
@@ -9,12 +12,11 @@
 @use 'sass:meta';
 @use 'sass:string';
 @use 'helpers' as *;
+@use 'modules/media-query' as mq;
 @use 'api' as *;
 
-@mixin create-utility($utility, $responsive: false) {
-  $prefix: config(utilities, prefix);
+@mixin utility-class($utility, $breakpoint: null) {
   $glue: config(utilities, glue);
-
   $values: map.get($utility, values);
 
   // If the values are a list or string, convert it into a map
@@ -26,20 +28,30 @@
     $properties: map.get($utility, property);
 
     $property-class: if(map.has-key($utility, class), map.get($utility, class), list.nth($properties, 1));
-    $property-class: if($property-class == null, '', $property-class);
+    $property-class: if($property-class == null, $key, $property-class);
     $property-class: str-escape($property-class);
-
-    $property-class-modifier: if($key, if($property-class == '', '', '-') + $key, '');
-    $property-class-modifier: str-escape($property-class-modifier);
 
     @if $value != null {
       @if meta.type-of($value) == 'string' {
         $value: string.unquote($value);
       }
 
+      $prefix: '';
+      @if $breakpoint {
+        $prefix: if(mq.min($breakpoint) == null, '', str-escape(#{'' + $breakpoint + $glue}));
+      }
+
       @each $property in $properties {
-        .#{$prefix + $property-class + $property-class-modifier} {
-          #{$property}: $value;
+        @if $property and $value {
+          @if $breakpoint {
+            .#{$prefix + $property-class} {
+              #{$property}: $value;
+            }
+          } @else {
+            .#{$prefix + $property-class} {
+              #{$property}: $value;
+            }
+          }
         }
       }
     }
@@ -47,8 +59,20 @@
 }
 
 @mixin generate-utilities($utilities) {
+  // Generate standard utilities first
   @each $key, $utility in $utilities {
-    @include create-utility($utility);
+    @include utility-class($utility);
+  }
+
+  // Maybe generate responsive utilities
+  @each $breakpoint, $-value in theme(screens) {
+    @include mq.from($breakpoint) {
+      @each $key, $utility in $utilities {
+        @if map.get($utility, responsive) {
+          @include utility-class($utility, $breakpoint);
+        }
+      }
+    }
   }
 }
 

@@ -7,8 +7,7 @@ $default-config: (
   prefix: 'koi',
   base-font-size: 16,
   utilities: (
-    prefix: '',
-    glue: '\\:',
+    glue: ':',
   ),
   fallbacks: (
     colors: 6,

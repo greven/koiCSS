@@ -21,6 +21,20 @@
   @return theme(screens, $screen);
 }
 
+// Minimum breakpoint width
+@function min($key) {
+  $min: bp($key);
+
+  @return if($min != 0, $min, null);
+}
+
+// Maximum breakpoint width
+@function max($key) {
+  $max: bp($key);
+
+  @return if($max and $max > 0, $max - 0.02, null);
+}
+
 // --------------------------------
 //   MIXINS
 // --------------------------------
@@ -32,7 +46,7 @@
 /// @content - a min-width media query
 ///
 @mixin mq($breakpoint, $media-type: screen) {
-  @include mq-from($breakpoint, $media-type) {
+  @include from($breakpoint, $media-type) {
     @content;
   }
 }
@@ -43,7 +57,7 @@
 ///
 /// @content - a min-width media query
 ///
-@mixin mq-from($breakpoint, $media-type: screen) {
+@mixin from($breakpoint, $media-type: screen) {
   @media #{$media-type} and (min-width: bp($breakpoint)) {
     @content;
   }
@@ -55,7 +69,7 @@
 ///
 /// @content - a max-width media query
 ///
-@mixin mq-to($breakpoint, $media-type: screen) {
+@mixin to($breakpoint, $media-type: screen) {
   @media #{$media-type} and (max-width: bp($breakpoint)) {
     @content;
   }
@@ -68,7 +82,7 @@
 ///
 /// @content - a min-width and max-width media query
 ///
-@mixin mq-between($from, $to, $media-type: screen) {
+@mixin between($from, $to, $media-type: screen) {
   @media #{$media-type} and (min-width: bp($from)) and (max-width: bp($to)) {
     @content;
   }
@@ -80,7 +94,7 @@
 ///
 /// @content - a min-width and/or max-width media query
 ///
-@mixin mq-at($breakpoint, $media-type: screen) {
+@mixin at($breakpoint, $media-type: screen) {
   $keys: map.keys(theme(screens));
   $length: list.length(theme(screens));
   $index: list.index($keys, $breakpoint);
@@ -88,11 +102,11 @@
   @if $length > $index {
     $next-breakpoint: list.nth($keys, ($index + 1));
 
-    @include mq-between($breakpoint, $next-breakpoint, $media-type) {
+    @include between($breakpoint, $next-breakpoint, $media-type) {
       @content;
     }
   } @else {
-    @include mq-from($breakpoint, $media-type) {
+    @include from($breakpoint, $media-type) {
       @content;
     }
   }
