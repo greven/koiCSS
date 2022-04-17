@@ -7,3 +7,7 @@
 @function layer($layer: config(fallbacks, layer)) {
   @return theme(layer, $layer);
 }
+
+@mixin layer($layer: config(fallbacks, layer)) {
+  z-index: layer($layer);
+}

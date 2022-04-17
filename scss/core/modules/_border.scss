@@ -7,3 +7,7 @@
 @function radius($radius: config(fallbacks, radius)) {
   @return theme(radius, $radius);
 }
+
+@mixin radius($radius: config(fallbacks, radius)) {
+  border-radius: radius($radius);
+}

@@ -16,6 +16,10 @@
   @return map-get-key($theme, $fallback, $keys...);
 }
 
+@function theme-has-key($keys...) {
+  @return map.has-key($theme, $keys...);
+}
+
 @function is-theme-color($keys...) {
   $colors: map.get($theme, colors);
   $value: map.get($colors, $keys...);

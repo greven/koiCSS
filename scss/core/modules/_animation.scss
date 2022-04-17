@@ -2,8 +2,6 @@
 //   Animation
 // --------------------------------
 
-// TODO: Add more animations from https://open-props.style/#animations
-
 @use 'sass:map';
 @use '../api' as *;
 
@@ -27,71 +25,4 @@
   @if $play-state {
     animation-play-state: $play-state;
   }
-}
-
-/// Spin animation
-///
-/// @param {number} $duration
-///
-@mixin spin($duration: 1s, $iteration-count: infinite) {
-  @include animation($name: spin, $duration: $duration, $timing-function: linear, $iteration-count: $iteration-count);
-}
-
-/// Ping animation
-///
-/// @param {number} $duration
-///
-@mixin ping($duration: 1s, $iteration-count: infinite) {
-  @include animation(
-    $name: ping,
-    $duration: $duration,
-    $timing-function: theme(timing, ease-out),
-    $iteration-count: $iteration-count
-  );
-}
-
-/// Pulse animation
-///
-/// @param {number} $duration
-///
-@mixin pulse($duration: 2s, $iteration-count: infinite) {
-  @include animation(
-    $name: pulse,
-    $duration: $duration,
-    $timing-function: cubic-bezier(0.4, 0, 0.6, 1),
-    $iteration-count: $iteration-count
-  );
-}
-
-/// Bounce animation
-///
-/// @param {number} $duration
-///
-@mixin bounce($duration: 1s, $iteration-count: infinite) {
-  @include animation($name: bounce, $duration: $duration, $iteration-count: $iteration-count);
-}
-
-/// Fade-in animation
-///
-/// @param {number} $duration
-///
-@mixin fade-in($duration: theme(duration, slower)) {
-  @include animation($name: fade-in, $duration: $duration, $timing-function: theme(timing, ease-in));
-}
-
-/// Fade-out animation
-///
-/// @param {number} $duration
-///
-@mixin fade-out($duration: theme(duration, slower)) {
-  @include animation($name: fade-out, $duration: $duration, $timing-function: theme(timing, ease-in));
-}
-
-/// Ring animation
-///
-/// @param {number} $duration
-///
-@mixin ring($duration: theme(duration, slower)) {
-  transform-origin: top center;
-  @include animation($name: ring, $duration: $duration);
 }

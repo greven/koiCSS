@@ -6,14 +6,14 @@
 
 @include koi.base();
 
-// Your base styles
+// << Insert your base styles here >>
 
 body {
+  @include koi.font-size();
   color: koi.color(gray, 1);
   background-color: koi.color(gray, 9);
-  padding: koi.spacing(32);
+  padding: koi.spacing(24, 24);
   font-family: koi.font-family(sans);
-  @include koi.font-size();
 }
 
 h1 {

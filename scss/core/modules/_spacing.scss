@@ -2,15 +2,121 @@
 //   Spacing
 // --------------------------------
 
+@use 'sass:map';
+@use 'sass:list';
 @use '../api' as *;
 
-// TODO: Allow multiple values
-/// Return a spacing value from the theme
+/// Return a spacing value(s) from the theme
 ///
-/// @param {string} $spacing
+/// @param {string} $key - spacing key
+/// @param {string} $keys - spacing keys
 ///
 /// @return {any} `$spacing-value`.
 ///
-@function spacing($spacing: config(fallbacks, spacing)) {
-  @return theme(spacing, $spacing);
+@function spacing($key, $keys...) {
+  $result: ();
+  @if theme-has-key(spacing, $key) {
+    $result: theme(spacing, $key);
+  }
+
+  @each $key in $keys {
+    @if theme-has-key(spacing, $key) {
+      $value: theme(spacing, $key);
+      $result: list.append($result, $value);
+    }
+  }
+
+  @return $result;
+}
+
+// Margin
+
+@mixin margin($key, $keys...) {
+  margin: spacing($key, $keys...);
+}
+
+@mixin margin-inline($key, $keys...) {
+  margin-inline: spacing($key, $keys...);
+}
+
+@mixin margin-inline-start($key) {
+  margin-inline-start: spacing($key);
+}
+
+@mixin margin-inline-end($key) {
+  margin-inline-end: spacing($key);
+}
+
+@mixin margin-block($key, $keys...) {
+  margin-block: spacing($key, $keys...);
+}
+
+@mixin margin-block-start($key) {
+  margin-block-start: spacing($key);
+}
+
+@mixin margin-block-end($key) {
+  margin-block-end: spacing($key);
+}
+
+@mixin margin-top($key) {
+  margin: spacing($key);
+}
+
+@mixin margin-bottom($key) {
+  margin-bottom: spacing($key);
+}
+
+@mixin margin-left($key) {
+  margin-left: spacing($key);
+}
+
+@mixin margin-right($key) {
+  margin-right: spacing($key);
+}
+
+// Padding
+
+@mixin padding($key, $keys...) {
+  padding: spacing($key, $keys...);
+}
+
+@mixin padding-inline($key, $keys...) {
+  padding-inline: spacing($key, $keys...);
+}
+
+@mixin padding-inline-start($key) {
+  padding-inline-start: spacing($key);
+}
+
+@mixin padding-inline-end($key) {
+  padding-inline-end: spacing($key);
+}
+
+@mixin padding-block($key, $keys...) {
+  padding-block: spacing($key, $keys...);
+}
+
+@mixin padding-block-start($key) {
+  padding-block-start: spacing($key);
+}
+
+@mixin padding-block-end($key) {
+  padding-block-end: spacing($key);
+}
+
+@mixin padding-top($key) {
+  padding: spacing($key);
+}
+
+@mixin padding-bottom($key) {
+  padding-bottom: spacing($key);
+}
+
+@mixin padding-left($key) {
+  padding-left: spacing($key);
+}
+
+@mixin padding-right($key) {
+  padding-right: spacing($key);
 }

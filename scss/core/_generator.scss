@@ -1,10 +1,7 @@
 // --------------------------------
 //   Generators
 // --------------------------------
-
-// TODO: Add generate-css-vars
-
-//   Utility Classes and CSS Custom Properties
+// Utility Classes and CSS Custom Properties
 
 @use 'sass:map';
 @use 'sass:list';
@@ -80,5 +77,9 @@
   }
 }
 
-// @mixin generate-css-vars() {
-// }
+@mixin generate-css-vars() {
+  :where(html) {
+    // TODO: Create a css-property function
+    --prefix-property: 69;
+  }
+}

@@ -13,3 +13,7 @@
 @function shadow($shadow: config(fallbacks, shadow)) {
   @return theme(shadow, $shadow);
 }
+
+@mixin shadow($shadow: config(fallbacks, shadow)) {
+  box-shadow: shadow($shadow);
+}
