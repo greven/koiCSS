@@ -2,7 +2,6 @@
 //   Generators
 // --------------------------------
 
-// TODO: Add css-vars to utility generator
 // TODO: Add generate-css-vars
 
 //   Utility Classes and CSS Custom Properties
@@ -11,12 +10,14 @@
 @use 'sass:list';
 @use 'sass:meta';
 @use 'sass:string';
-@use 'helpers' as *;
 @use 'modules/media-query' as mq;
+@use 'helpers' as *;
 @use 'api' as *;
 
+/* stylelint-disable max-nesting-depth */
 @mixin utility-class($utility, $breakpoint: null) {
-  $glue: config(utilities, glue);
+  $prefix: config(prefix) + '-';
+  $util-glue: config(utility-glue);
   $values: map.get($utility, values);
 
   // If the values are a list or string, convert it into a map
@@ -31,32 +32,35 @@
     $property-class: if($property-class == null, $key, $property-class);
     $property-class: str-escape($property-class);
 
+    $local-vars: map-get($utility, local-vars);
+
     @if $value != null {
       @if meta.type-of($value) == 'string' {
         $value: string.unquote($value);
       }
 
-      $prefix: '';
+      $infix: '';
       @if $breakpoint {
-        $prefix: if(mq.min($breakpoint) == null, '', str-escape(#{'' + $breakpoint + $glue}));
+        $infix: if(mq.min($breakpoint) == null, '', str-escape(#{'' + $breakpoint + $util-glue}));
       }
 
       @each $property in $properties {
         @if $property and $value {
-          @if $breakpoint {
-            .#{$prefix + $property-class} {
-              #{$property}: $value;
+          .#{$infix + $property-class} {
+            @if $local-vars {
+              @each $local-var, $variable in $local-vars {
+                --#{$prefix}#{$local-var}: #{$variable};
+              }
             }
-          } @else {
-            .#{$prefix + $property-class} {
-              #{$property}: $value;
-            }
+
+            #{$property}: $value;
           }
         }
       }
     }
   }
 }
+/* stylelint-enable */
 
 @mixin generate-utilities($utilities) {
   // Generate standard utilities first

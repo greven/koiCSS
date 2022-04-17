@@ -6,9 +6,7 @@ $config: () !default;
 $default-config: (
   prefix: 'koi',
   base-font-size: 16,
-  utilities: (
-    glue: ':',
-  ),
+  utility-glue: ':',
   fallbacks: (
     colors: 6,
     duration: normal,
