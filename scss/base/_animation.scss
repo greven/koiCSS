@@ -4,7 +4,7 @@
 
 @use '../core' as *;
 
-$css-custom-property: --animation;
+$css-custom-property: animation;
 
 // --------------------------------
 //   Styles
@@ -23,7 +23,7 @@ $css-custom-property: --animation;
 // TODO: generate the property using  helper so we can add prefix, etc
 @mixin vars {
   :where(html) {
-    --animation-blink: blink 1s infinite;
-    --animation-bounce: bounce 1s infinite;
+    #{css-var-name($css-custom-property, blink)}: blink 1s infinite;
+    #{css-var-name($css-custom-property, bounce)}: bounce 1s infinite;
   }
 }

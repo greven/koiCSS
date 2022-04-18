@@ -84,6 +84,12 @@
 //   CSS Custom Properties (vars)
 // --------------------------------
 
+// Returns the css custom property name given the property and key
+@function css-var-name($property, $key) {
+  $prefix: if(config(prefix) == '', '', '#{config(prefix)}-');
+  @return '--#{$prefix}#{$property}-#{$key}';
+}
+
 @mixin generate-css-vars() {
   :where(html) {
     // TODO: Create a css-property function

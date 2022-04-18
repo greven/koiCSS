@@ -373,8 +373,8 @@ body {
 }
 
 :where(html) {
-  --animation-blink: blink 1s infinite;
-  --animation-bounce: bounce 1s infinite;
+  --koi-animation-blink: blink 1s infinite;
+  --koi-animation-bounce: bounce 1s infinite;
 }
 
 :where(html) {
