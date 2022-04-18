@@ -1,10 +1,16 @@
 @forward 'base';
 @use 'animation';
+@use 'duration';
 @use 'media';
+@use 'shadow';
+@use 'timing';
 
 @mixin base {
   @include animation.vars;
-  @include animation.styles;
+  @include duration.vars;
+  @include shadow.vars;
+  @include timing.vars;
 
+  @include animation.styles;
   @include media.styles;
 }

@@ -1,0 +1,17 @@
+// ------------------------------------
+//   Duration (Animation & Transition)
+// ------------------------------------
+
+@use '../api' as *;
+
+@function duration($duration: config(fallbacks, duration)) {
+  @return theme(duration, $duration);
+}
+
+@mixin animation-duration($duration: config(fallbacks, duration)) {
+  animation-duration: duration($duration);
+}
+
+@mixin transition-duration($duration: config(fallbacks, duration)) {
+  transition-duration: duration($duration);
+}

@@ -4,26 +4,24 @@
 
 @use '../core' as *;
 
-$css-custom-property: animation;
+$custom-prop: animation;
 
 // --------------------------------
 //   Styles
 // --------------------------------
 
 @mixin styles {
-  :where(html) {
-    @include generate-keyframes;
-  }
+  @include generate-keyframes;
 }
 
 // --------------------------------
 //   CSS Custom Properties
 // --------------------------------
 
-// TODO: generate the property using  helper so we can add prefix, etc
+// TODO: Add rest of animations
 @mixin vars {
-  :where(html) {
-    #{css-var-name($css-custom-property, blink)}: blink 1s infinite;
-    #{css-var-name($css-custom-property, bounce)}: bounce 1s infinite;
+  :root {
+    #{css-var-name($custom-prop, blink)}: blink 1s infinite;
+    #{css-var-name($custom-prop, bounce)}: bounce 1s infinite;
   }
 }

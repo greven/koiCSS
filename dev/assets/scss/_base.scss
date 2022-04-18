@@ -11,7 +11,7 @@
 body {
   @include koi.font-size();
   color: koi.color(gray, 1);
-  background-color: koi.color(gray, 9);
+  background-color: koi.color(gray, 5);
   padding: koi.spacing(24, 24);
   font-family: koi.font-family(sans);
 }
@@ -29,6 +29,7 @@ a {
   padding: koi.theme(spacing, 32);
   border: 2px solid koi.color(secondary);
   border-radius: 8px;
+  box-shadow: var(--koi-shadow-lg);
 
   &:hover {
     border-color: koi.color(primary);

@@ -1,0 +1,15 @@
+// --------------------------------
+//   Duration Styles
+// --------------------------------
+
+@use '../core' as *;
+
+$custom-prop: duration;
+
+// --------------------------------
+//   CSS Custom Properties
+// --------------------------------
+
+@mixin vars {
+  @include generate-css-vars($custom-prop, theme(duration));
+}

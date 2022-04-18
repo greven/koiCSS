@@ -1,0 +1,15 @@
+// --------------------------------
+//   Timing Styles
+// --------------------------------
+
+@use '../core' as *;
+
+$custom-prop: timing;
+
+// --------------------------------
+//   CSS Custom Properties
+// --------------------------------
+
+@mixin vars {
+  @include generate-css-vars($custom-prop, theme(timing));
+}
