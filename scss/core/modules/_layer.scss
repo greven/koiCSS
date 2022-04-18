@@ -4,9 +4,17 @@
 
 @use '../api' as *;
 
+// --------------------------------
+//   Functions
+// --------------------------------
+
 @function layer($layer: config(fallbacks, layer)) {
   @return theme(layer, $layer);
 }
+
+// --------------------------------
+//   Mixins
+// --------------------------------
 
 @mixin layer($layer: config(fallbacks, layer)) {
   z-index: layer($layer);

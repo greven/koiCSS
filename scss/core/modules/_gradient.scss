@@ -6,7 +6,7 @@
 @use '../api' as *;
 
 // --------------------------------
-//   FUNCTIONS
+//   Functions
 // --------------------------------
 
 @function gradient($grad) {
@@ -14,7 +14,7 @@
 }
 
 // --------------------------------
-//   MIXINS
+//   Mixins
 // --------------------------------
 
 @mixin gradient($grad, $fallback-color: null) {

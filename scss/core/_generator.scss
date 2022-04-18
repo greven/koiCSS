@@ -1,7 +1,6 @@
 // --------------------------------
 //   Generators
 // --------------------------------
-// Utility Classes and CSS Custom Properties
 
 @use 'sass:map';
 @use 'sass:list';
@@ -10,6 +9,10 @@
 @use 'modules/media-query' as mq;
 @use 'helpers' as *;
 @use 'api' as *;
+
+// --------------------------------
+//   Utilities
+// --------------------------------
 
 /* stylelint-disable max-nesting-depth */
 @mixin utility-class($utility, $breakpoint: null) {
@@ -77,9 +80,33 @@
   }
 }
 
+// --------------------------------
+//   CSS Custom Properties (vars)
+// --------------------------------
+
 @mixin generate-css-vars() {
   :where(html) {
     // TODO: Create a css-property function
     --prefix-property: 69;
   }
+}
+
+// --------------------------------
+//   Keyframes
+// --------------------------------
+
+@mixin generate-keyframes() {
+  /*! purgecss start ignore */
+  @each $keyframe-key, $keyframe-value in theme(keyframes) {
+    @keyframes #{$keyframe-key} {
+      @each $keyframe-timestamp, $keyframe-property in $keyframe-value {
+        #{$keyframe-timestamp} {
+          @each $keyframe-transform-property, $keyframe-property-value in $keyframe-property {
+            #{$keyframe-transform-property}: #{$keyframe-property-value};
+          }
+        }
+      }
+    }
+  }
+  /*! purgecss end ignore */
 }

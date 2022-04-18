@@ -47,30 +47,3 @@ a {
 .text {
   line-height: koi.leading(relaxed);
 }
-
-.box {
-  width: koi.spacing(160);
-  height: koi.spacing(160);
-  color: koi.color(gray, 8);
-  margin-top: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: koi.font-size(lg);
-  font-weight: koi.font-weight(medium);
-  box-shadow: koi.shadow();
-  border-radius: koi.radius(lg);
-  transition: all 400ms linear;
-
-  @for $i from 1 through list.length(koi.theme(gradients)) {
-    &--#{$i} {
-      @include koi.gradient($i);
-    }
-  }
-}
-
-.box-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1.5rem;
-}

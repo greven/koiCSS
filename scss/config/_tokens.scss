@@ -426,6 +426,25 @@ $layer: (
   uber: 4815162342,
 );
 
+$aspect: (
+  box: 1,
+  landscape: math.div(4, 3),
+  portrait: math.div(3, 4),
+  widescreen: math.div(16, 9),
+  ultrawide: math.div(18, 5),
+  golden: 1.618,
+);
+
+$blur: (
+  2xs: 4px,
+  xs: 8px,
+  sm: 12px,
+  md: 16px,
+  lg: 24px,
+  xl: 32px,
+  2xl: 48px,
+);
+
 $duration: (
   // Semantic
   ultra-fast: 25ms,
@@ -465,23 +484,84 @@ $timing: (
   ease-in-out: cubic-bezier(0.4, 0, 0.2, 1),
 );
 
-$aspect: (
-  box: 1,
-  landscape: math.div(4, 3),
-  portrait: math.div(3, 4),
-  widescreen: math.div(16, 9),
-  ultrawide: math.div(18, 5),
-  golden: 1.618,
-);
-
-$blur: (
-  2xs: 4px,
-  xs: 8px,
-  sm: 12px,
-  md: 16px,
-  lg: 24px,
-  xl: 32px,
-  2xl: 48px,
+$keyframes: (
+  blink: (
+    (0%, 100%):
+      (
+        opacity: 1,
+      ),
+    50%: (
+      opacity: 0.5,
+    ),
+  ),
+  bounce: (
+    (0%, 100%):
+      (
+        animation-timing-function: cubic-bezier(0.8, 0, 1, 1),
+        transform: translateY(-25%),
+      ),
+    (50%):
+      (
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1),
+        transform: translateY(0),
+      ),
+  ),
+  fade-in: (
+    to: (
+      opacity: 1,
+    ),
+  ),
+  fade-out: (
+    to: (
+      opacity: 0,
+    ),
+  ),
+  float: (
+    50%: (
+      transform: translateY(-25%),
+    ),
+  ),
+  ping: (
+    (75%, 100%):
+      (
+        opacity: 0,
+        transform: scale(2),
+      ),
+  ),
+  pulse: (
+    (0%, 100%):
+      (
+        opacity: 1,
+      ),
+    50%: (
+      opacity: 0.5,
+    ),
+  ),
+  spin: (
+    from: (
+      transform: rotate(0deg),
+    ),
+    to: (
+      transform: rotate(360deg),
+    ),
+  ),
+  ring: (
+    20%: (
+      transform: rotate3d(0, 0, 1, 15deg),
+    ),
+    40%: (
+      transform: rotate3d(0, 0, 1, -10deg),
+    ),
+    60%: (
+      transform: rotate3d(0, 0, 1, 5deg),
+    ),
+    80%: (
+      transform: rotate3d(0, 0, 1, -5deg),
+    ),
+    to: (
+      transform: rotate3d(0, 0, 1, 0deg),
+    ),
+  ),
 );
 
 // --------------------------------
@@ -501,8 +581,9 @@ $tokens: (
   opacity: $opacity,
   shadow: $shadow,
   layer: $layer,
-  duration: $duration,
-  timing: $timing,
   aspect: $aspect,
   blur: $blur,
+  duration: $duration,
+  timing: $timing,
+  keyframes: $keyframes,
 );
