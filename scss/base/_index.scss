@@ -3,6 +3,8 @@
 @use 'media';
 
 @mixin base {
+  @include animation.vars;
   @include animation.styles;
+
   @include media.styles;
 }

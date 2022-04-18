@@ -372,6 +372,10 @@ body {
   background-color: #fff;
 }
 
+:where(html) {
+  --animation-fade-in: fade-in 0.5s var(--ease-3);
+}
+
 /*! purgecss start ignore */
 @keyframes fade-in {
   to {
