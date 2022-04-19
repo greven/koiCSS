@@ -9,6 +9,16 @@
 //   FUNCTIONS
 // --------------------------------
 
+// TODO: Add a font API function, font, that groups calls other font helpers
+// TODO: Example: font(sm), font(medium), font(sans)
+/*
+.element {
+  font-family: font(sans);
+  font-size: font(xl);
+  font-weight: font(bold);
+}
+*/
+
 @function font-family($font-family: config(fallbacks, font-family)) {
   @return theme(font-family, $font-family);
 }

@@ -16,6 +16,8 @@
 
 @use '../api' as *;
 
+// TODO: How to do negative sizes?
+
 @function size($size) {
   @return theme(sizes, $size);
 }

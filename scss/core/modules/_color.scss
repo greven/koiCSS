@@ -5,6 +5,7 @@
 @use 'sass:map';
 @use '../api' as *;
 
+// TODO: Replace color with fill
 // TODO: implement color var return
 @function color($name, $shade: config(fallbacks, colors), $alpha: 1, $type: value) {
   @if $type == value {

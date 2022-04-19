@@ -21,6 +21,11 @@
   @return theme(screens, $screen);
 }
 
+// Alias to bp function
+@function screen($screen) {
+  @return bp($screen);
+}
+
 // Minimum breakpoint width
 @function min($key) {
   $min: bp($key);
