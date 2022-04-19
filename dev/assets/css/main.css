@@ -378,8 +378,15 @@ body {
 }
 
 :root {
-  --animation-blink: blink 1s infinite;
-  --animation-bounce: bounce 1s infinite;
+  --animation-blink: blink 1s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+  --animation-bounce: bounce 2s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+  --animation-fade-in: fade-in 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  --animation-fade-out: fade-out 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  --animation-float: float 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  --animation-ping: ping 3s cubic-bezier(0, 0, 0.2, 1) infinite;
+  --animation-pulse: pulse 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+  --animation-spin: spin 2s linear infinite;
+  --animation-ring: ring 500ms linear infinite;
 }
 
 :root {
@@ -430,6 +437,7 @@ body {
   --timing-ease-in: cubic-bezier(0.4, 0, 1, 1);
   --timing-ease-out: cubic-bezier(0, 0, 0.2, 1);
   --timing-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --timing-ease-elastic: cubic-bezier(0.5, 1, 0.75, 1.25);
 }
 
 /*! purgecss start ignore */
@@ -560,6 +568,7 @@ a {
 }
 .wrapper:hover {
   border-color: #0cf;
+  background-color: #eff6ff;
   transition: all linear 400ms;
 }
 .wrapper button {
@@ -578,18 +587,18 @@ a {
   font-size: 0.875rem;
   line-height: 1.25rem;
   align-items: center;
-  background-color: #f1f5f9;
-  border: 1px solid #e2e8f0;
+  background-color: color(gray, 1);
+  border: 1px solid color(gray, 2);
   border-radius: 0.25rem;
   box-shadow: 0 4px 6px -1px rgba(0 0 0 / 0.1), 0 2px 4px -1px rgba(0 0 0 / 0.06);
-  color: #334155;
+  color: color(gray, 7);
   display: inline-flex;
   font-weight: 500;
   padding-block: 0.25rem;
   padding-inline: 0.5rem;
 }
 .btn:hover {
-  background-color: #64748b;
+  background-color: color(gray, 5);
 }
 .btn:focus {
   outline: none;

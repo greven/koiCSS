@@ -6,9 +6,8 @@
 @use 'config' as *;
 @use 'theme' as *;
 
-// TODO: Replace color with fill
 // TODO: implement color var return
-@function color($name, $shade: config(fallbacks, colors), $alpha: 1, $type: value) {
+@function fill($name, $shade: config(fallbacks, colors), $alpha: 1, $type: value) {
   @if $type == value {
     @if is-theme-color($name, $shade) {
       @return theme(colors, $name, $shade);

@@ -7,6 +7,98 @@
 $custom-prop: animation;
 
 // --------------------------------
+//   Mixins
+// --------------------------------
+
+/// Blink animation
+///
+/// @param {number} $duration
+///
+@mixin animation-blink($duration: 1s, $iteration-count: infinite) {
+  @include animation($name: blink, $duration: $duration, $iteration-count: $iteration-count);
+}
+
+/// Bounce animation
+///
+/// @param {number} $duration
+///
+@mixin animation-bounce($duration: 1s, $iteration-count: infinite) {
+  @include animation($name: bounce, $duration: $duration, $iteration-count: $iteration-count);
+}
+
+/// Fade-in animation
+///
+/// @param {number} $duration
+///
+@mixin animation-fade-in($duration: theme(duration, slower)) {
+  @include animation($name: fade-in, $duration: $duration, $timing-function: theme(timing, ease-in));
+}
+
+/// Fade-out animation
+///
+/// @param {number} $duration
+///
+@mixin animation-fade-out($duration: theme(duration, slower)) {
+  @include animation($name: fade-out, $duration: $duration, $timing-function: theme(timing, ease-in));
+}
+
+/// Float animation
+///
+/// @param {number} $duration
+///
+@mixin animation-float($duration: 1s, $iteration-count: infinite) {
+  @include animation(
+    $name: float,
+    $duration: $duration,
+    $timing-function: theme(timing, ease),
+    $iteration-count: $iteration-count
+  );
+}
+
+/// Ping animation
+///
+/// @param {number} $duration
+///
+@mixin animation-ping($duration: 1s, $iteration-count: infinite) {
+  @include animation(
+    $name: ping,
+    $duration: $duration,
+    $timing-function: theme(timing, ease-out),
+    $iteration-count: $iteration-count
+  );
+}
+
+/// Pulse animation
+///
+/// @param {number} $duration
+///
+@mixin animation-pulse($duration: 2s, $iteration-count: infinite) {
+  @include animation(
+    $name: pulse,
+    $duration: $duration,
+    $timing-function: cubic-bezier(0.4, 0, 0.6, 1),
+    $iteration-count: $iteration-count
+  );
+}
+
+/// Spin animation
+///
+/// @param {number} $duration
+///
+@mixin animation-spin($duration: 1s, $iteration-count: infinite) {
+  @include animation($name: spin, $duration: $duration, $timing-function: linear, $iteration-count: $iteration-count);
+}
+
+/// Ring animation
+///
+/// @param {number} $duration
+///
+@mixin animation-ring($duration: theme(duration, slower)) {
+  @include animation($name: ring, $duration: $duration);
+  transform-origin: top center;
+}
+
+// --------------------------------
 //   Styles
 // --------------------------------
 
@@ -18,10 +110,16 @@ $custom-prop: animation;
 //   CSS Custom Properties
 // --------------------------------
 
-// TODO: Add rest of animations
 @mixin vars {
   :root {
-    #{css-var-name($custom-prop, blink)}: blink 1s infinite;
-    #{css-var-name($custom-prop, bounce)}: bounce 1s infinite;
+    #{css-var-name($custom-prop, blink)}: blink 1s timing(ease) infinite;
+    #{css-var-name($custom-prop, bounce)}: bounce 2s timing(ease) infinite;
+    #{css-var-name($custom-prop, fade-in)}: fade-in 0.5s timing(ease);
+    #{css-var-name($custom-prop, fade-out)}: fade-out 0.5s timing(ease);
+    #{css-var-name($custom-prop, float)}: float 3s timing(ease-in-out) infinite;
+    #{css-var-name($custom-prop, ping)}: ping 3s timing(ease-out) infinite;
+    #{css-var-name($custom-prop, pulse)}: pulse 2s timing(ease-out) infinite;
+    #{css-var-name($custom-prop, spin)}: spin 2s timing(linear) infinite;
+    #{css-var-name($custom-prop, ring)}: ring 500ms timing(linear) infinite;
   }
 }

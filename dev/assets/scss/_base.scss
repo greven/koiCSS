@@ -10,8 +10,8 @@
 
 body {
   @include koi.font-size();
-  // color: koi.color(gray, 1);
-  background-color: koi.color(gray, 0);
+  // color: koi.fill(gray, 1);
+  background-color: koi.fill(gray, 0);
   padding: koi.spacing(24, 24);
   font-family: koi.font-family(sans);
 }
@@ -21,21 +21,22 @@ h1 {
 }
 
 a {
-  color: koi.color(primary);
+  color: koi.fill(primary);
 }
 
 .wrapper {
   margin-top: koi.rem(24);
   padding: koi.theme(spacing, 32);
-  background-color: koi.color(gray, 1);
-  border: 2px solid koi.color(gray);
+  background-color: koi.fill(gray, 1);
+  border: 2px solid koi.fill(gray);
   border-radius: 8px;
   @include koi.shadow(sm);
   // box-shadow: koi.shadow(md);
   // box-shadow: var(--koi-shadow-md);
 
   &:hover {
-    border-color: koi.color(primary);
+    border-color: koi.fill(primary);
+    background-color: koi.fill(blue, 0);
     transition: all linear 400ms;
   }
 

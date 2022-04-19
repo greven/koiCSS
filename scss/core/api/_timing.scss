@@ -1,0 +1,18 @@
+// ------------------------------------
+//   Timing (Animation & Transition)
+// ------------------------------------
+
+@use 'config' as *;
+@use 'theme' as *;
+
+@function timing($timing: config(fallbacks, timing)) {
+  @return theme(timing, $timing);
+}
+
+@mixin animation-timing($timing: config(fallbacks, timing)) {
+  animation-timing: timing($timing);
+}
+
+@mixin transition-timing($timing: config(fallbacks, timing)) {
+  transition-timing: timing($timing);
+}
