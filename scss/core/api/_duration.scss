@@ -2,7 +2,8 @@
 //   Duration (Animation & Transition)
 // ------------------------------------
 
-@use '../api' as *;
+@use 'config' as *;
+@use 'theme' as *;
 
 @function duration($duration: config(fallbacks, duration)) {
   @return theme(duration, $duration);

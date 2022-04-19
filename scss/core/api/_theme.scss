@@ -4,10 +4,10 @@
 
 @use 'sass:map';
 @use 'sass:list';
-@use 'sass:string';
 @use 'sass:meta';
-@use 'helpers' as *;
-@use '../config' as *;
+
+@use '../helpers' as *;
+@use '../../config' as *;
 
 // Get a value from the theme
 @function theme($keys...) {
@@ -25,13 +25,4 @@
   $value: map.get($colors, $keys...);
 
   @return map.has-key($colors, $keys...) and (meta.type-of($value) == color);
-}
-
-// Get a config value
-@function config($keys...) {
-  @if map.has-key($config, $keys...) {
-    @return map.get($config, $keys...);
-  } @else {
-    @error "Keys #{list.slash($keys...)} doesn't exist in the config map!";
-  }
 }

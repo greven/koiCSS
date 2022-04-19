@@ -2,7 +2,8 @@
 //   Border
 // --------------------------------
 
-@use '../api' as *;
+@use 'config' as *;
+@use 'theme' as *;
 
 @function radius($radius: config(fallbacks, radius)) {
   @return theme(radius, $radius);

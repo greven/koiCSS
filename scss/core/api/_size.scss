@@ -14,7 +14,7 @@
 // --size-fluid-9: clamp(15rem, 30vw, 20rem);
 // --size-fluid-10: clamp(20rem, 40vw, 30rem);
 
-@use '../api' as *;
+@use 'theme' as *;
 
 // TODO: How to do negative sizes?
 

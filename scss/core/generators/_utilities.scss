@@ -1,20 +1,17 @@
 // --------------------------------
-//   Generators
+//   Utilities Generator
 // --------------------------------
 
 @use 'sass:map';
 @use 'sass:list';
 @use 'sass:meta';
 @use 'sass:string';
-@use 'modules/media-query' as mq;
-@use 'helpers' as *;
-@use 'api' as *;
 
-// --------------------------------
-//   Utilities
-// --------------------------------
+@use '../api/config' as *;
+@use '../api/media-query' as mq;
+@use '../api/theme' as *;
+@use '../helpers' as *;
 
-/* stylelint-disable max-nesting-depth */
 @mixin utility-class($utility, $breakpoint: null) {
   $prefix: config(prefix) + '-';
   $util-glue: config(utility-glue);
@@ -60,7 +57,6 @@
     }
   }
 }
-/* stylelint-enable */
 
 @mixin generate-utilities($utilities) {
   // Generate standard utilities first
@@ -79,47 +75,3 @@
     }
   }
 }
-
-// --------------------------------
-//   CSS Custom Properties (vars)
-// --------------------------------
-
-// Returns the css custom property name given the property and key
-@function css-var-name($property, $key) {
-  $prefix: if(config(prefix) == '', '', '#{config(prefix)}-');
-  @return '--#{$prefix}#{$property}-#{$key}';
-}
-
-// Generate CSS vars from map.
-@mixin generate-css-vars($property, $map: ()) {
-  :root {
-    @each $key, $value in $map {
-      $value: if(meta.type-of($value) == 'string', string.unquote($value), $value);
-      #{css-var-name($property, $key)}: $value;
-    }
-  }
-}
-
-// --------------------------------
-//   Keyframes
-// --------------------------------
-
-/* stylelint-disable max-nesting-depth */
-@mixin generate-keyframes() {
-  /*! purgecss start ignore */
-  @each $keyframe-key, $keyframe-value in theme(keyframes) {
-    :root {
-      @keyframes #{$keyframe-key} {
-        @each $keyframe-timestamp, $keyframe-property in $keyframe-value {
-          #{$keyframe-timestamp} {
-            @each $keyframe-transform-property, $keyframe-property-value in $keyframe-property {
-              #{$keyframe-transform-property}: #{$keyframe-property-value};
-            }
-          }
-        }
-      }
-    }
-  }
-  /*! purgecss end ignore */
-}
-/* stylelint-enable */

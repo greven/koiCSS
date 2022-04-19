@@ -3,7 +3,8 @@
 // --------------------------------
 
 @use 'sass:map';
-@use '../api' as *;
+@use 'config' as *;
+@use 'theme' as *;
 
 // TODO: Replace color with fill
 // TODO: implement color var return

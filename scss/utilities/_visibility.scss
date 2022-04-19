@@ -2,7 +2,7 @@
 //   Visibility Utilities
 // --------------------------------
 
-@use '../core/modules/visibility';
+@use '../core/api/visibility';
 
 @mixin utilities {
   .sr-only {

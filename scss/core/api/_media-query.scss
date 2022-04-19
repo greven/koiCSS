@@ -4,7 +4,8 @@
 
 @use 'sass:map';
 @use 'sass:list';
-@use '../api' as *;
+
+@use 'theme' as *;
 @use '../helpers' as *;
 
 // --------------------------------

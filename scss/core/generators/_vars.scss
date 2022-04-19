@@ -1,0 +1,24 @@
+// ------------------------------------
+//   CSS Custom Props Generator (vars)
+// ------------------------------------
+
+@use 'sass:meta';
+@use 'sass:string';
+
+@use '../api/config' as *;
+
+// Returns the css custom property name given the property and key
+@function css-var-name($property, $key) {
+  $prefix: if(config(prefix) == '', '', '#{config(prefix)}-');
+  @return '--#{$prefix}#{$property}-#{$key}';
+}
+
+// Generate CSS vars from map.
+@mixin generate-css-vars($property, $map: ()) {
+  :root {
+    @each $key, $value in $map {
+      $value: if(meta.type-of($value) == 'string', string.unquote($value), $value);
+      #{css-var-name($property, $key)}: $value;
+    }
+  }
+}

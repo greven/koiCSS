@@ -6,3 +6,6 @@ _dev/
 
 # Normalize
 scss/reset/_normalize.scss
+
+# Generators
+scss/core/generators/

@@ -3,7 +3,9 @@
 // --------------------------------
 
 @use 'sass:list';
-@use '../api' as *;
+
+@use 'config' as *;
+@use 'theme' as *;
 
 // --------------------------------
 //   FUNCTIONS

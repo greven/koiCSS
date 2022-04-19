@@ -1,6 +1,5 @@
 @use 'layout';
 @use 'visibility';
-@use '../core' as *;
 
 @mixin utilities {
   @include layout.utilities();

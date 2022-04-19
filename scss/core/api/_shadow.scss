@@ -2,7 +2,8 @@
 //   Shadows
 // --------------------------------
 
-@use '../api' as *;
+@use 'config' as *;
+@use 'theme' as *;
 
 /// Return a shadow value from the theme
 ///
