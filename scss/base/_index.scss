@@ -1,6 +1,7 @@
 @forward 'base';
 @forward 'animation';
 @use 'animation';
+@use 'color';
 @use 'duration';
 @use 'media';
 @use 'shadow';
@@ -8,6 +9,7 @@
 
 @mixin base {
   @include animation.vars;
+  @include color.vars;
   @include duration.vars;
   @include shadow.vars;
   @include timing.vars;

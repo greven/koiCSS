@@ -6,11 +6,13 @@
 @use 'sass:string';
 
 @use '../api/config' as *;
+@use '../helpers' as *;
 
 // Returns the css custom property name given the property and key
-@function css-var-name($property, $key) {
+@function css-var-name($property, $key, $sufix: null) {
   $prefix: if(config(prefix) == '', '', '#{config(prefix)}-');
-  @return '--#{$prefix}#{$property}-#{$key}';
+  $sufix: if($sufix, '-#{$sufix}', '');
+  @return '--#{$prefix}#{$property}#{$sufix}-#{$key}';
 }
 
 // Generate CSS vars from map.
@@ -19,6 +21,22 @@
     @each $key, $value in $map {
       $value: if(meta.type-of($value) == 'string', string.unquote($value), $value);
       #{css-var-name($property, $key)}: $value;
+    }
+  }
+}
+
+@mixin generate-css-color-vars($property, $colors-map: ()) {
+  @each $color, $value in $colors-map {
+    :root {
+      @if meta.type-of($value) == color {
+        #{css-var-name($property, $color)}: $value;
+        #{css-var-name($property, $color, 'hsl')}: to-hsl($value);
+      } @else {
+        @each $shade, $shade-value in $value {
+          #{css-var-name($property, '#{$color}-#{$shade}')}: $shade-value;
+          #{css-var-name($property, '#{$color}-#{$shade}', 'hsl')}: to-hsl($shade-value);
+        }
+      }
     }
   }
 }

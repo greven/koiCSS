@@ -1,0 +1,15 @@
+// --------------------------------
+//   Color Styles
+// --------------------------------
+
+@use '../core' as *;
+
+$custom-prop: color;
+
+// --------------------------------
+//   CSS Custom Properties
+// --------------------------------
+
+@mixin vars {
+  @include generate-css-color-vars($custom-prop, theme(colors));
+}

@@ -10,9 +10,9 @@
 
 @function fill($name, $shade: config(fallbacks, colors), $alpha: 1) {
   @if is-theme-color($name, $shade) {
-    @return to-hsl(theme(colors, $name, $shade));
+    @return rgb(theme(colors, $name, $shade), $alpha);
   } @else if is-theme-color($name) {
-    @return to-hsl(theme(colors, $name));
+    @return rgb(theme(colors, $name), $alpha);
   }
 }
 

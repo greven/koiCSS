@@ -17,8 +17,9 @@ body {
 }
 
 h1 {
-  font-family: koi.font-family(serif);
   @include koi.text-size(4xl);
+  font-family: koi.font-family(serif);
+  color: hsl(var(--color-hsl-primary));
 }
 
 a {
@@ -26,12 +27,12 @@ a {
 }
 
 .wrapper {
+  @include koi.shadow(sm);
   margin-top: koi.rem(24);
   padding: koi.theme(spacing, 32);
   background-color: koi.fill(gray, 8);
   border: 2px solid koi.fill(gray);
   border-radius: 8px;
-  @include koi.shadow(sm);
 
   &:hover {
     border-color: koi.fill(primary);

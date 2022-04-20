@@ -390,6 +390,131 @@ body {
 }
 
 :root {
+  --color-secondary: yellow;
+  --color-hsl-secondary: 60deg, 100%, 50%;
+}
+
+:root {
+  --color-primary: #0cf;
+  --color-hsl-primary: 192deg, 100%, 50%;
+}
+
+:root {
+  --color-gray-0: #f8fafc;
+  --color-hsl-gray-0: 210deg, 40%, 98.0392156863%;
+  --color-gray-1: #f1f5f9;
+  --color-hsl-gray-1: 210deg, 40%, 96.0784313725%;
+  --color-gray-2: #e2e8f0;
+  --color-hsl-gray-2: 214.2857142857deg, 31.8181818182%, 91.3725490196%;
+  --color-gray-3: #cbd5e1;
+  --color-hsl-gray-3: 212.7272727273deg, 26.8292682927%, 83.9215686275%;
+  --color-gray-4: #94a3b8;
+  --color-hsl-gray-4: 215deg, 20.2247191011%, 65.0980392157%;
+  --color-gray-5: #64748b;
+  --color-hsl-gray-5: 215.3846153846deg, 16.3179916318%, 46.862745098%;
+  --color-gray-6: #475569;
+  --color-hsl-gray-6: 215.2941176471deg, 19.3181818182%, 34.5098039216%;
+  --color-gray-7: #334155;
+  --color-hsl-gray-7: 215.2941176471deg, 25%, 26.6666666667%;
+  --color-gray-8: #1e293b;
+  --color-hsl-gray-8: 217.2413793103deg, 32.5842696629%, 17.4509803922%;
+  --color-gray-9: #0f172a;
+  --color-hsl-gray-9: 222.2222222222deg, 47.3684210526%, 11.1764705882%;
+}
+
+:root {
+  --color-red-0: #fef2f2;
+  --color-hsl-red-0: 0deg, 85.7142857143%, 97.2549019608%;
+  --color-red-1: #fee2e2;
+  --color-hsl-red-1: 0deg, 93.3333333333%, 94.1176470588%;
+  --color-red-2: #fecaca;
+  --color-hsl-red-2: 0deg, 96.2962962963%, 89.4117647059%;
+  --color-red-3: #fca5a5;
+  --color-hsl-red-3: 0deg, 93.5483870968%, 81.7647058824%;
+  --color-red-4: #f87171;
+  --color-hsl-red-4: 0deg, 90.6040268456%, 70.7843137255%;
+  --color-red-5: #ef4444;
+  --color-hsl-red-5: 0deg, 84.236453202%, 60.1960784314%;
+  --color-red-6: #dc2626;
+  --color-hsl-red-6: 0deg, 72.2222222222%, 50.5882352941%;
+  --color-red-7: #b91c1c;
+  --color-hsl-red-7: 0deg, 73.7089201878%, 41.7647058824%;
+  --color-red-8: #991b1b;
+  --color-hsl-red-8: 0deg, 70%, 35.2941176471%;
+  --color-red-9: #7f1d1d;
+  --color-hsl-red-9: 0deg, 62.8205128205%, 30.5882352941%;
+}
+
+:root {
+  --color-yellow-0: #fefce8;
+  --color-hsl-yellow-0: 54.5454545455deg, 91.6666666667%, 95.2941176471%;
+  --color-yellow-1: #fef9c3;
+  --color-hsl-yellow-1: 54.9152542373deg, 96.7213114754%, 88.0392156863%;
+  --color-yellow-2: #fef08a;
+  --color-hsl-yellow-2: 52.7586206897deg, 98.3050847458%, 76.862745098%;
+  --color-yellow-3: #fde047;
+  --color-hsl-yellow-3: 50.4395604396deg, 97.8494623656%, 63.5294117647%;
+  --color-yellow-4: #facc15;
+  --color-hsl-yellow-4: 47.9475982533deg, 95.8158995816%, 53.137254902%;
+  --color-yellow-5: #eab308;
+  --color-hsl-yellow-5: 45.3982300885deg, 93.3884297521%, 47.4509803922%;
+  --color-yellow-6: #ca8a04;
+  --color-hsl-yellow-6: 40.6060606061deg, 96.1165048544%, 40.3921568627%;
+  --color-yellow-7: #a16207;
+  --color-hsl-yellow-7: 35.4545454545deg, 91.6666666667%, 32.9411764706%;
+  --color-yellow-8: #854d0e;
+  --color-hsl-yellow-8: 31.7647058824deg, 80.9523809524%, 28.8235294118%;
+  --color-yellow-9: #713f12;
+  --color-hsl-yellow-9: 28.4210526316deg, 72.5190839695%, 25.6862745098%;
+}
+
+:root {
+  --color-green-0: #f0fdf4;
+  --color-hsl-green-0: 138.4615384615deg, 76.4705882353%, 96.6666666667%;
+  --color-green-1: #dcfce7;
+  --color-hsl-green-1: 140.625deg, 84.2105263158%, 92.5490196078%;
+  --color-green-2: #bbf7d0;
+  --color-hsl-green-2: 141deg, 78.9473684211%, 85.0980392157%;
+  --color-green-3: #86efac;
+  --color-hsl-green-3: 141.7142857143deg, 76.6423357664%, 73.137254902%;
+  --color-green-4: #4ade80;
+  --color-hsl-green-4: 141.8918918919deg, 69.1588785047%, 58.0392156863%;
+  --color-green-5: #22c55e;
+  --color-hsl-green-5: 142.0858895706deg, 70.5627705628%, 45.2941176471%;
+  --color-green-6: #16a34a;
+  --color-hsl-green-6: 142.1276595745deg, 76.2162162162%, 36.2745098039%;
+  --color-green-7: #15803d;
+  --color-hsl-green-7: 142.4299065421deg, 71.8120805369%, 29.2156862745%;
+  --color-green-8: #166534;
+  --color-hsl-green-8: 142.7848101266deg, 64.2276422764%, 24.1176470588%;
+  --color-green-9: #14532d;
+  --color-hsl-green-9: 143.8095238095deg, 61.1650485437%, 20.1960784314%;
+}
+
+:root {
+  --color-blue-0: #eff6ff;
+  --color-hsl-blue-0: 213.75deg, 100%, 96.862745098%;
+  --color-blue-1: #dbeafe;
+  --color-hsl-blue-1: 214.2857142857deg, 94.5945945946%, 92.7450980392%;
+  --color-blue-2: #bfdbfe;
+  --color-hsl-blue-2: 213.3333333333deg, 96.9230769231%, 87.2549019608%;
+  --color-blue-3: #93c5fd;
+  --color-hsl-blue-3: 211.6981132075deg, 96.3636363636%, 78.431372549%;
+  --color-blue-4: #60a5fa;
+  --color-hsl-blue-4: 213.1168831169deg, 93.9024390244%, 67.8431372549%;
+  --color-blue-5: #3b82f6;
+  --color-hsl-blue-5: 217.2192513369deg, 91.2195121951%, 59.8039215686%;
+  --color-blue-6: #2563eb;
+  --color-hsl-blue-6: 221.2121212121deg, 83.1932773109%, 53.3333333333%;
+  --color-blue-7: #1d4ed8;
+  --color-hsl-blue-7: 224.2780748663deg, 76.3265306122%, 48.0392156863%;
+  --color-blue-8: #1e40af;
+  --color-hsl-blue-8: 225.9310344828deg, 70.7317073171%, 40.1960784314%;
+  --color-blue-9: #1e3a8a;
+  --color-hsl-blue-9: 224.4444444444deg, 64.2857142857%, 32.9411764706%;
+}
+
+:root {
   --duration-ultra-fast: 25ms;
   --duration-super-fast: 50ms;
   --duration-fastest: 75ms;
@@ -544,33 +669,34 @@ figure figcaption {
 
 body {
   font-size: 1rem;
-  color: hsl(210deg, 40%, 96.0784313725%);
-  background-color: hsl(222.2222222222deg, 47.3684210526%, 11.1764705882%);
+  color: #f1f5f9;
+  background-color: #0f172a;
   padding: 1.5rem 1.5rem;
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 h1 {
-  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   font-size: 2.25rem;
   line-height: 2.5rem;
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  color: hsl(var(--color-hsl-primary));
 }
 
 a {
-  color: hsl(192deg, 100%, 50%);
+  color: #00ccff;
 }
 
 .wrapper {
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   margin-top: 1.5rem;
   padding: 2rem;
-  background-color: hsl(217.2413793103deg, 32.5842696629%, 17.4509803922%);
-  border: 2px solid hsl(215.2941176471deg, 19.3181818182%, 34.5098039216%);
+  background-color: #1e293b;
+  border: 2px solid #475569;
   border-radius: 8px;
-  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
 }
 .wrapper:hover {
-  border-color: hsl(192deg, 100%, 50%);
-  background-color: hsl(215.2941176471deg, 25%, 26.6666666667%);
+  border-color: #00ccff;
+  background-color: #334155;
   transition: all linear 400ms;
 }
 .wrapper button {
