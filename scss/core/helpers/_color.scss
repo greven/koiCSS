@@ -4,3 +4,8 @@
 @function to-hsl($color) {
   @return color.hue($color), color.saturation($color), color.lightness($color);
 }
+
+// Convert color to rgb: red, green, blue
+@function to-rgb($color) {
+  @return color.red($color) color.green($color) color.blue($color);
+}
