@@ -7,5 +7,5 @@
 
 // Convert color to rgb: red, green, blue
 @function to-rgb($color) {
-  @return color.red($color) color.green($color) color.blue($color);
+  @return color.red($color), color.green($color), color.blue($color);
 }

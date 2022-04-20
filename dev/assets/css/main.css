@@ -389,14 +389,23 @@ body {
   --animation-ring: ring 500ms linear infinite;
 }
 
+/*! purgecss start ignore */
 :root {
   --color-secondary: yellow;
   --color-hsl-secondary: 60deg, 100%, 50%;
+}
+:root .accent-secondary {
+  --color-accent: yellow;
+  --color-hsl-accent: 60deg, 100%, 50%;
 }
 
 :root {
   --color-primary: #0cf;
   --color-hsl-primary: 192deg, 100%, 50%;
+}
+:root .accent-primary {
+  --color-accent: #0cf;
+  --color-hsl-accent: 192deg, 100%, 50%;
 }
 
 :root {
@@ -421,6 +430,28 @@ body {
   --color-gray-9: #0f172a;
   --color-hsl-gray-9: 222.2222222222deg, 47.3684210526%, 11.1764705882%;
 }
+:root .accent-gray {
+  --color-accent-0: #f8fafc;
+  --color-hsl-accent-0: 210deg, 40%, 98.0392156863%;
+  --color-accent-1: #f1f5f9;
+  --color-hsl-accent-1: 210deg, 40%, 96.0784313725%;
+  --color-accent-2: #e2e8f0;
+  --color-hsl-accent-2: 214.2857142857deg, 31.8181818182%, 91.3725490196%;
+  --color-accent-3: #cbd5e1;
+  --color-hsl-accent-3: 212.7272727273deg, 26.8292682927%, 83.9215686275%;
+  --color-accent-4: #94a3b8;
+  --color-hsl-accent-4: 215deg, 20.2247191011%, 65.0980392157%;
+  --color-accent-5: #64748b;
+  --color-hsl-accent-5: 215.3846153846deg, 16.3179916318%, 46.862745098%;
+  --color-accent-6: #475569;
+  --color-hsl-accent-6: 215.2941176471deg, 19.3181818182%, 34.5098039216%;
+  --color-accent-7: #334155;
+  --color-hsl-accent-7: 215.2941176471deg, 25%, 26.6666666667%;
+  --color-accent-8: #1e293b;
+  --color-hsl-accent-8: 217.2413793103deg, 32.5842696629%, 17.4509803922%;
+  --color-accent-9: #0f172a;
+  --color-hsl-accent-9: 222.2222222222deg, 47.3684210526%, 11.1764705882%;
+}
 
 :root {
   --color-red-0: #fef2f2;
@@ -443,6 +474,28 @@ body {
   --color-hsl-red-8: 0deg, 70%, 35.2941176471%;
   --color-red-9: #7f1d1d;
   --color-hsl-red-9: 0deg, 62.8205128205%, 30.5882352941%;
+}
+:root .accent-red {
+  --color-accent-0: #fef2f2;
+  --color-hsl-accent-0: 0deg, 85.7142857143%, 97.2549019608%;
+  --color-accent-1: #fee2e2;
+  --color-hsl-accent-1: 0deg, 93.3333333333%, 94.1176470588%;
+  --color-accent-2: #fecaca;
+  --color-hsl-accent-2: 0deg, 96.2962962963%, 89.4117647059%;
+  --color-accent-3: #fca5a5;
+  --color-hsl-accent-3: 0deg, 93.5483870968%, 81.7647058824%;
+  --color-accent-4: #f87171;
+  --color-hsl-accent-4: 0deg, 90.6040268456%, 70.7843137255%;
+  --color-accent-5: #ef4444;
+  --color-hsl-accent-5: 0deg, 84.236453202%, 60.1960784314%;
+  --color-accent-6: #dc2626;
+  --color-hsl-accent-6: 0deg, 72.2222222222%, 50.5882352941%;
+  --color-accent-7: #b91c1c;
+  --color-hsl-accent-7: 0deg, 73.7089201878%, 41.7647058824%;
+  --color-accent-8: #991b1b;
+  --color-hsl-accent-8: 0deg, 70%, 35.2941176471%;
+  --color-accent-9: #7f1d1d;
+  --color-hsl-accent-9: 0deg, 62.8205128205%, 30.5882352941%;
 }
 
 :root {
@@ -467,6 +520,28 @@ body {
   --color-yellow-9: #713f12;
   --color-hsl-yellow-9: 28.4210526316deg, 72.5190839695%, 25.6862745098%;
 }
+:root .accent-yellow {
+  --color-accent-0: #fefce8;
+  --color-hsl-accent-0: 54.5454545455deg, 91.6666666667%, 95.2941176471%;
+  --color-accent-1: #fef9c3;
+  --color-hsl-accent-1: 54.9152542373deg, 96.7213114754%, 88.0392156863%;
+  --color-accent-2: #fef08a;
+  --color-hsl-accent-2: 52.7586206897deg, 98.3050847458%, 76.862745098%;
+  --color-accent-3: #fde047;
+  --color-hsl-accent-3: 50.4395604396deg, 97.8494623656%, 63.5294117647%;
+  --color-accent-4: #facc15;
+  --color-hsl-accent-4: 47.9475982533deg, 95.8158995816%, 53.137254902%;
+  --color-accent-5: #eab308;
+  --color-hsl-accent-5: 45.3982300885deg, 93.3884297521%, 47.4509803922%;
+  --color-accent-6: #ca8a04;
+  --color-hsl-accent-6: 40.6060606061deg, 96.1165048544%, 40.3921568627%;
+  --color-accent-7: #a16207;
+  --color-hsl-accent-7: 35.4545454545deg, 91.6666666667%, 32.9411764706%;
+  --color-accent-8: #854d0e;
+  --color-hsl-accent-8: 31.7647058824deg, 80.9523809524%, 28.8235294118%;
+  --color-accent-9: #713f12;
+  --color-hsl-accent-9: 28.4210526316deg, 72.5190839695%, 25.6862745098%;
+}
 
 :root {
   --color-green-0: #f0fdf4;
@@ -489,6 +564,28 @@ body {
   --color-hsl-green-8: 142.7848101266deg, 64.2276422764%, 24.1176470588%;
   --color-green-9: #14532d;
   --color-hsl-green-9: 143.8095238095deg, 61.1650485437%, 20.1960784314%;
+}
+:root .accent-green {
+  --color-accent-0: #f0fdf4;
+  --color-hsl-accent-0: 138.4615384615deg, 76.4705882353%, 96.6666666667%;
+  --color-accent-1: #dcfce7;
+  --color-hsl-accent-1: 140.625deg, 84.2105263158%, 92.5490196078%;
+  --color-accent-2: #bbf7d0;
+  --color-hsl-accent-2: 141deg, 78.9473684211%, 85.0980392157%;
+  --color-accent-3: #86efac;
+  --color-hsl-accent-3: 141.7142857143deg, 76.6423357664%, 73.137254902%;
+  --color-accent-4: #4ade80;
+  --color-hsl-accent-4: 141.8918918919deg, 69.1588785047%, 58.0392156863%;
+  --color-accent-5: #22c55e;
+  --color-hsl-accent-5: 142.0858895706deg, 70.5627705628%, 45.2941176471%;
+  --color-accent-6: #16a34a;
+  --color-hsl-accent-6: 142.1276595745deg, 76.2162162162%, 36.2745098039%;
+  --color-accent-7: #15803d;
+  --color-hsl-accent-7: 142.4299065421deg, 71.8120805369%, 29.2156862745%;
+  --color-accent-8: #166534;
+  --color-hsl-accent-8: 142.7848101266deg, 64.2276422764%, 24.1176470588%;
+  --color-accent-9: #14532d;
+  --color-hsl-accent-9: 143.8095238095deg, 61.1650485437%, 20.1960784314%;
 }
 
 :root {
@@ -513,7 +610,30 @@ body {
   --color-blue-9: #1e3a8a;
   --color-hsl-blue-9: 224.4444444444deg, 64.2857142857%, 32.9411764706%;
 }
+:root .accent-blue {
+  --color-accent-0: #eff6ff;
+  --color-hsl-accent-0: 213.75deg, 100%, 96.862745098%;
+  --color-accent-1: #dbeafe;
+  --color-hsl-accent-1: 214.2857142857deg, 94.5945945946%, 92.7450980392%;
+  --color-accent-2: #bfdbfe;
+  --color-hsl-accent-2: 213.3333333333deg, 96.9230769231%, 87.2549019608%;
+  --color-accent-3: #93c5fd;
+  --color-hsl-accent-3: 211.6981132075deg, 96.3636363636%, 78.431372549%;
+  --color-accent-4: #60a5fa;
+  --color-hsl-accent-4: 213.1168831169deg, 93.9024390244%, 67.8431372549%;
+  --color-accent-5: #3b82f6;
+  --color-hsl-accent-5: 217.2192513369deg, 91.2195121951%, 59.8039215686%;
+  --color-accent-6: #2563eb;
+  --color-hsl-accent-6: 221.2121212121deg, 83.1932773109%, 53.3333333333%;
+  --color-accent-7: #1d4ed8;
+  --color-hsl-accent-7: 224.2780748663deg, 76.3265306122%, 48.0392156863%;
+  --color-accent-8: #1e40af;
+  --color-hsl-accent-8: 225.9310344828deg, 70.7317073171%, 40.1960784314%;
+  --color-accent-9: #1e3a8a;
+  --color-hsl-accent-9: 224.4444444444deg, 64.2857142857%, 32.9411764706%;
+}
 
+/*! purgecss end ignore */
 :root {
   --duration-ultra-fast: 25ms;
   --duration-super-fast: 50ms;
@@ -679,7 +799,7 @@ h1 {
   font-size: 2.25rem;
   line-height: 2.5rem;
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  color: hsl(var(--color-hsl-primary));
+  color: #1e40af;
 }
 
 a {

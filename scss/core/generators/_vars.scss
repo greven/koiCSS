@@ -26,6 +26,7 @@
 }
 
 @mixin generate-css-color-vars($property, $colors-map: ()) {
+  /*! purgecss start ignore */
   @each $color, $value in $colors-map {
     :root {
       @if meta.type-of($value) == color {
@@ -37,6 +38,20 @@
           #{css-var-name($property, '#{$color}-#{$shade}', 'hsl')}: to-hsl($shade-value);
         }
       }
+
+      // Accent
+      .accent-#{'' + $color} {
+        @if meta.type-of($value) == color {
+          #{css-var-name($property, accent)}: $value;
+          #{css-var-name($property, accent, 'hsl')}: to-hsl($value);
+        } @else {
+          @each $shade, $shade-value in $value {
+            #{css-var-name($property, 'accent-#{$shade}')}: $shade-value;
+            #{css-var-name($property, 'accent-#{$shade}', 'hsl')}: to-hsl($shade-value);
+          }
+        }
+      }
     }
   }
+  /*! purgecss end ignore */
 }

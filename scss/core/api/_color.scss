@@ -17,5 +17,5 @@
 }
 
 @function accent($shade: config(fallbacks, colors), $alpha: 1) {
-  @return hsl(var(--color-accent-#{$shade}), $alpha);
+  @return hsl(var(--color-hsl-accent-#{$shade}), $alpha);
 }

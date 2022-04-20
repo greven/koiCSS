@@ -19,7 +19,11 @@ body {
 h1 {
   @include koi.text-size(4xl);
   font-family: koi.font-family(serif);
-  color: hsl(var(--color-hsl-primary));
+  color: koi.fill(blue, 8);
+  // color: koi.fill(blue, 8, 0.5);
+  // color: koi.accent(5);
+  // color: var(--color-accent-8);
+  // color: hsl(var(--color-hsl-accent-8));
 }
 
 a {
