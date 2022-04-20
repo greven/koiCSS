@@ -21,6 +21,19 @@
 }
 */
 
+// Get font-family, font-size or font-weight theme values
+@function font($key) {
+  @if theme-has-key(font-family, $key) {
+    @return theme(font-family, $key);
+  } @else if theme-has-key(font-size, $key) {
+    @return theme(font-size, $key);
+  } @else if theme-has-key(font-weight, $key) {
+    @return theme(font-weight, $key);
+  } @else {
+    @error "[#{$key}] does not exist in the theme!";
+  }
+}
+
 @function font-family($font-family: config(fallbacks, font-family)) {
   @return theme(font-family, $font-family);
 }
@@ -37,12 +50,22 @@
   @return theme(leading, $leading);
 }
 
+// Leading alias
+@function line-height($leading: config(fallbacks, leading)) {
+  @return theme(leading, $leading);
+}
+
 @function tracking($tracking: config(fallbacks, tracking)) {
   @return theme(tracking, $tracking);
 }
 
+// Tracking alias
+@function letter-spacing($tracking: config(fallbacks, tracking)) {
+  @return theme(tracking, $tracking);
+}
+
 // Font-size default leading (line-height)
-@function font-default-leading($font-size) {
+@function text-leading($font-size) {
   @return list.nth(theme(font-size, $font-size), 2);
 }
 
@@ -55,8 +78,8 @@
   font-size: font-size($font-size);
 }
 
-// Font-size with default line-height
+// Font-size with default leading (line-height)
 @mixin text-size($font-size: config(fallbacks, font-size)) {
   font-size: font-size($font-size);
-  line-height: font-default-leading($font-size);
+  line-height: text-leading($font-size);
 }

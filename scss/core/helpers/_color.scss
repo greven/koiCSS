@@ -1,0 +1,5 @@
+@use 'sass:color';
+
+@function to-hsl($color) {
+  @return hsl(color.hue($color), color.saturation($color), color.lightness($color), color.alpha($color));
+}
