@@ -8,18 +8,8 @@
 @use 'theme' as *;
 
 // --------------------------------
-//   FUNCTIONS
+//   Functions
 // --------------------------------
-
-// TODO: Add a font API function, font, that groups calls other font helpers
-// TODO: Example: font(sm), font(medium), font(sans)
-/*
-.element {
-  font-family: font(sans);
-  font-size: font(xl);
-  font-weight: font(bold);
-}
-*/
 
 // Get font-family, font-size or font-weight theme values
 @function font($key) {
@@ -70,7 +60,7 @@
 }
 
 // --------------------------------
-//   MIXINS
+//   Mixins
 // --------------------------------
 
 // Font-size with default line-height

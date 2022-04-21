@@ -13,10 +13,20 @@
   @return theme(layer, $layer);
 }
 
+// Alias
+@function z-index($layer: config(fallbacks, layer)) {
+  @return layer($layer);
+}
+
 // --------------------------------
 //   Mixins
 // --------------------------------
 
 @mixin layer($layer: config(fallbacks, layer)) {
+  z-index: layer($layer);
+}
+
+// Alias
+@mixin z-index($layer: config(fallbacks, layer)) {
   z-index: layer($layer);
 }
