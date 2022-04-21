@@ -6,6 +6,7 @@ $config: () !default;
 $default-config: (
   prefix: '',
   base-font-size: 16,
+  use-reset-styles: true,
   utility-glue: ':',
   fallbacks: (
     colors: 6,

@@ -5,6 +5,10 @@
 @use 'config' as *;
 @use 'theme' as *;
 
+// --------------------------------
+//   Functions
+// --------------------------------
+
 /// Return a shadow value from the theme
 ///
 /// @param {string} $shadow
@@ -14,6 +18,10 @@
 @function shadow($shadow: config(fallbacks, shadow)) {
   @return theme(shadow, $shadow);
 }
+
+// --------------------------------
+//   Mixins
+// --------------------------------
 
 @mixin shadow($shadow: config(fallbacks, shadow)) {
   box-shadow: shadow($shadow);

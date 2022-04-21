@@ -7,6 +7,23 @@
 
 @use 'theme' as *;
 
+// --------------------------------
+//   Values
+// --------------------------------
+
+// Negative spacing (needed for negative margins)
+$negative-spacing: () !default;
+@each $key, $value in theme(spacing) {
+  $map: ();
+  $map: map.merge($map, (n#{$key}: -$value));
+  $negative-spacing: map.merge($negative-spacing, $map);
+}
+@debug $negative-spacing;
+
+// --------------------------------
+//   Functions
+// --------------------------------
+
 /// Return a spacing value(s) from the theme
 ///
 /// @param {string} $key - spacing key
@@ -16,19 +33,37 @@
 ///
 @function spacing($key, $keys...) {
   $result: ();
-  @if theme-has-key(spacing, $key) {
+  @if $key == 0 {
+    $result: 0;
+  } @else if theme-has-key(spacing, $key) {
     $result: theme(spacing, $key);
+  } @else if map.has-key($negative-spacing, $key) {
+    $result: map.get($negative-spacing, $key);
+  } @else {
+    @error "Key [#{$key}] is not a valid theme spacing.";
   }
 
   @each $key in $keys {
-    @if theme-has-key(spacing, $key) {
+    @if $key == 0 {
+      $value: 0;
+      $result: list.append($result, $value);
+    } @else if theme-has-key(spacing, $key) {
       $value: theme(spacing, $key);
       $result: list.append($result, $value);
+    } @else if map.has-key($negative-spacing, $key) {
+      $value: map.get($negative-spacing, $key);
+      $result: list.append($result, $value);
+    } @else {
+      @error "Key(s) [#{$keys}] are not valid theme spacings.";
     }
   }
 
   @return $result;
 }
+
+// --------------------------------
+//   Mixins
+// --------------------------------
 
 // Margin
 

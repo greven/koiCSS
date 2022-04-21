@@ -2,6 +2,8 @@
 //   Size
 // --------------------------------
 
+@use 'theme' as *;
+
 // TODO: Include fluid sizes?
 // --size-fluid-1: clamp(.5rem, 1vw, 1rem);
 // --size-fluid-2: clamp(1rem, 2vw, 1.5rem);
@@ -14,13 +16,17 @@
 // --size-fluid-9: clamp(15rem, 30vw, 20rem);
 // --size-fluid-10: clamp(20rem, 40vw, 30rem);
 
-@use 'theme' as *;
-
-// TODO: How to do negative sizes?
+// --------------------------------
+//   Functions
+// --------------------------------
 
 @function size($size) {
   @return theme(sizes, $size);
 }
+
+// --------------------------------
+//   Mixins
+// --------------------------------
 
 @mixin width($size) {
   width: size($size);

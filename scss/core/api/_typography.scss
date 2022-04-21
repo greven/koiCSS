@@ -11,19 +11,6 @@
 //   Functions
 // --------------------------------
 
-// Get font-family, font-size or font-weight theme values
-@function font($key) {
-  @if theme-has-key(font-family, $key) {
-    @return theme(font-family, $key);
-  } @else if theme-has-key(font-size, $key) {
-    @return theme(font-size, $key);
-  } @else if theme-has-key(font-weight, $key) {
-    @return theme(font-weight, $key);
-  } @else {
-    @error "[#{$key}] does not exist in the theme!";
-  }
-}
-
 @function font-family($font-family: config(fallbacks, font-family)) {
   @return theme(font-family, $font-family);
 }
@@ -34,6 +21,19 @@
 
 @function font-weight($font-weight: config(fallbacks, font-weight)) {
   @return theme(font-weight, $font-weight);
+}
+
+// Get font-family, font-size or font-weight theme values
+@function font($key) {
+  @if theme-has-key(font-family, $key) {
+    @return font-family($key);
+  } @else if theme-has-key(font-size, $key) {
+    @return font-size($key);
+  } @else if theme-has-key(font-weight, $key) {
+    @return font-weight($key);
+  } @else {
+    @error "[#{$key}] does not exist in the theme!";
+  }
 }
 
 @function leading($leading: config(fallbacks, leading)) {

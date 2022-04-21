@@ -5,9 +5,17 @@
 @use 'config' as *;
 @use 'theme' as *;
 
+// --------------------------------
+//   Functions
+// --------------------------------
+
 @function duration($duration: config(fallbacks, duration)) {
   @return theme(duration, $duration);
 }
+
+// --------------------------------
+//   Mixins
+// --------------------------------
 
 @mixin animation-duration($duration: config(fallbacks, duration)) {
   animation-duration: duration($duration);

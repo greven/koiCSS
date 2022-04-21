@@ -9,6 +9,10 @@
 @use '../helpers' as *;
 @use '../../config' as *;
 
+// --------------------------------
+//   Functions
+// --------------------------------
+
 // Get a value from the theme
 @function theme($keys...) {
   $property: list.nth($keys, 1);

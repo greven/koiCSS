@@ -4,6 +4,14 @@
 
 @use 'sass:map';
 @use 'theme' as *;
+@use 'config' as *;
+
+// --------------------------------
+//   Values
+// --------------------------------
+
+$-default-duration: theme(duration, config(fallbacks, duration));
+$-default-timing-function: theme(timing, config(fallbacks, timing));
 
 // --------------------------------
 //   Mixins
@@ -11,22 +19,24 @@
 
 @mixin animation(
   $name,
-  $duration: theme(duration, normal),
-  $timing-function: theme(timing, ease),
+  $duration: $-default-duration,
+  $timing-function: $-default-timing-function,
   $delay: 0s,
   $iteration-count: 1,
   $direction: normal,
   $fill-mode: none,
   $play-state: null
 ) {
-  animation-name: $name;
-  animation-duration: $duration;
-  animation-timing-function: $timing-function;
-  animation-delay: $delay;
-  animation-iteration-count: $iteration-count;
-  animation-direction: $direction;
-  animation-fill-mode: $fill-mode;
-  @if $play-state {
-    animation-play-state: $play-state;
+  @include media.prefers-reduced-motion(null) {
+    animation-name: $name;
+    animation-duration: $duration;
+    animation-timing-function: $timing-function;
+    animation-delay: $delay;
+    animation-iteration-count: $iteration-count;
+    animation-direction: $direction;
+    animation-fill-mode: $fill-mode;
+    @if $play-state {
+      animation-play-state: $play-state;
+    }
   }
 }

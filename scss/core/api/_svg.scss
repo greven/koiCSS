@@ -16,6 +16,10 @@ $escape-characters: (
   ('&', '%26')
 ) !default;
 
+// --------------------------------
+//   Functions
+// --------------------------------
+
 /// Escape a string, replacing invalid characters.
 ///
 /// @param {string} $str

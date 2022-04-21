@@ -8,6 +8,10 @@
 @use 'config' as *;
 @use 'theme' as *;
 
+// --------------------------------
+//   Functions
+// --------------------------------
+
 @function fill($name, $shade: config(fallbacks, colors), $alpha: 1) {
   @if is-theme-color($name, $shade) {
     @return hsl(var(--color-hsl-#{$name}-#{$shade}), $alpha);

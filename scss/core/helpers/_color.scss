@@ -9,3 +9,64 @@
 @function to-rgb($color) {
   @return color.red($color), color.green($color), color.blue($color);
 }
+
+// Accessibility
+
+// Get the relative luminance of the hex color.
+// http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
+@function get-luminance($hex-color) {
+  $RsRGB: math.div(color.red($hex-color), 255);
+  $GsRGB: math.div(color.green($hex-color), 255);
+  $BsRGB: math.div(color.blue($hex-color), 255);
+
+  $R: 0;
+  @if $RsRGB <= 0.03928 {
+    $R: math.div($RsRGB, 12.92);
+  } @else {
+    $R: math.pow(math.div(($RsRGB + 0.055), 1.055), 2.4);
+  }
+
+  $G: 0;
+  @if $GsRGB <= 0.03928 {
+    $G: math.div($GsRGB, 12.92);
+  } @else {
+    $G: math.pow(math.div(($GsRGB + 0.055), 1.055), 2.4);
+  }
+
+  $B: 0;
+  @if $BsRGB <= 0.03928 {
+    $B: math.div($BsRGB, 12.92);
+  } @else {
+    $B: math.pow(math.div(($BsRGB + 0.055), 1.055), 2.4);
+  }
+
+  @return (0.2126 * $R) + (0.7152 * $G) + (0.0722 * $B);
+}
+
+// Analyze the 2 colors and returns the color contrast defined by (WCAG Version 2)
+@function readability($color1, $color2) {
+  @return math.div(
+    (math.max(get-luminance($color1), get-luminance($color2)) + 0.05),
+    (math.min(get-luminance($color1), get-luminance($color2)) + 0.05)
+  );
+}
+
+// Checks if a color meets the Web Content Accessibility following
+// the WCAG (Version 2.0) guidelines for constract ratio.
+
+// The 'level' arg can be either 'AA' or 'AAA', it defaults to 'AA'.
+// The 'size' arg can be either 'large' or 'small', it defaults to 'small'.
+@function is-accessible($fg-color, $bg-color, $level: 'AA', $size: 'small') {
+  $readability: readability($fg-color, $bg-color);
+
+  @if $level + $size == 'AAsmall' or $level + $size == 'AAAlarge' {
+    @return $readability >= 4.5;
+  } @else {
+    @if $level + $size == 'AAlarge' {
+      @return $readability >= 3;
+    }
+    @if $level + $size == 'AAAsmall' {
+      @return $readability >= 7;
+    }
+  }
+}

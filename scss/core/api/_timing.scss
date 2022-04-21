@@ -5,9 +5,17 @@
 @use 'config' as *;
 @use 'theme' as *;
 
+// --------------------------------
+//   Functions
+// --------------------------------
+
 @function timing($timing: config(fallbacks, timing)) {
   @return theme(timing, $timing);
 }
+
+// --------------------------------
+//   Mixins
+// --------------------------------
 
 @mixin animation-timing($timing: config(fallbacks, timing)) {
   animation-timing: timing($timing);
