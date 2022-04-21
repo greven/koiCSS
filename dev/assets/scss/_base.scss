@@ -35,7 +35,7 @@ a {
   padding: koi.theme(spacing, 32);
   background-color: koi.fill(gray, 8);
   border: 2px solid koi.fill(gray);
-  border-radius: 8px;
+  border-radius: koi.radius();
   @include koi.shadow(sm);
 
   &:hover {
@@ -55,4 +55,14 @@ a {
 
 .text {
   line-height: koi.leading(relaxed);
+}
+
+.loaders {
+  @include koi.loader-ring;
+
+  & > * + * {
+    width: 32px;
+    height: 32px;
+    color: #fff;
+  }
 }
