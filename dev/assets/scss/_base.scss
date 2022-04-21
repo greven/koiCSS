@@ -20,6 +20,7 @@ h1 {
   @include koi.text-size(4xl);
   font-family: koi.font-family(serif);
   color: koi.fill(primary);
+  margin: koi.spacing(32);
   // color: koi.fill(blue, 3);
   // color: koi.fill(blue, 8, 0.5);
   // color: koi.accent(5);

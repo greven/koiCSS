@@ -45,7 +45,14 @@
 //   MIXINS
 // --------------------------------
 
+@mixin query($query, $media-type: screen) {
+  @media #{$media-type} and #{$query} {
+    @content;
+  }
+}
+
 /// Apply content from a specific breakpoint forward
+/// This query is mobile first (from min-width).
 ///
 /// @param {string} $breakpoint
 ///
@@ -113,6 +120,110 @@
     }
   } @else {
     @include from($breakpoint, $media-type) {
+      @content;
+    }
+  }
+}
+
+@mixin not($query, $media-type: screen) {
+  @media not #{$media-type} and #{$query} {
+    @content;
+  }
+}
+
+@mixin orientation($value: landscape, $media-type: screen) {
+  @media #{$media-type} and (orientation: $value) {
+    @content;
+  }
+}
+
+@mixin resolution($value, $media-type: screen) {
+  @media #{$media-type} and (resolution: $value) {
+    @content;
+  }
+}
+
+@mixin min-resolution($value, $media-type: screen) {
+  @media #{$media-type} and (min-resolution: $value) {
+    @content;
+  }
+}
+
+@mixin max-resolution($value, $media-type: screen) {
+  @media #{$media-type} and (max-resolution: $value) {
+    @content;
+  }
+}
+
+@mixin aspect-ratio($value, $media-type: screen) {
+  @media #{$media-type} and (aspect-ratio: $value) {
+    @content;
+  }
+}
+
+@mixin min-aspect-ratio($value, $media-type: screen) {
+  @media #{$media-type} and (min-aspect-ratio: $value) {
+    @content;
+  }
+}
+
+@mixin max-aspect-ratio($value, $media-type: screen) {
+  @media #{$media-type} and (max-aspect-ratio: $value) {
+    @content;
+  }
+}
+
+@mixin prefers-reduced-motion($bool: true) {
+  $query: '(prefers-reduced-motion: reduce)';
+
+  @if $bool {
+    @include query($query) {
+      @content;
+    }
+  } @else {
+    @include not($query) {
+      @content;
+    }
+  }
+}
+
+@mixin prefers-high-contrast($bool: true) {
+  $query: '(prefers-contrast: high)';
+
+  @if $bool {
+    @include query($query) {
+      @content;
+    }
+  } @else {
+    @include not($query) {
+      @content;
+    }
+  }
+}
+
+@mixin prefers-low-contrast($bool: true) {
+  $query: '(prefers-contrast: low)';
+
+  @if $bool {
+    @include query($query) {
+      @content;
+    }
+  } @else {
+    @include not($query) {
+      @content;
+    }
+  }
+}
+
+@mixin prefers-reduced-transparency($bool: true) {
+  $query: '(prefers-reduced-transparency: reduce)';
+
+  @if $bool {
+    @include query($query) {
+      @content;
+    }
+  } @else {
+    @include not($query) {
       @content;
     }
   }

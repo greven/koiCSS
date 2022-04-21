@@ -793,6 +793,7 @@ h1 {
   line-height: 2.5rem;
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   color: hsl(var(--color-hsl-primary), 1);
+  margin: 2rem;
 }
 
 a {
