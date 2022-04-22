@@ -18,7 +18,6 @@ $negative-spacing: () !default;
   $map: map.merge($map, (n#{$key}: -$value));
   $negative-spacing: map.merge($negative-spacing, $map);
 }
-@debug $negative-spacing;
 
 // --------------------------------
 //   Functions

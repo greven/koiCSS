@@ -45,8 +45,8 @@
 //   MIXINS
 // --------------------------------
 
-@mixin query($query, $media-type: screen) {
-  @media #{$media-type} and #{$query} {
+@mixin query($query, $type: screen) {
+  @media #{$type} and #{$query} {
     @content;
   }
 }
@@ -58,8 +58,8 @@
 ///
 /// @content - a min-width media query
 ///
-@mixin mq($breakpoint, $media-type: screen) {
-  @include from($breakpoint, $media-type) {
+@mixin mq($breakpoint, $type: screen) {
+  @include from($breakpoint, $type) {
     @content;
   }
 }
@@ -70,8 +70,8 @@
 ///
 /// @content - a min-width media query
 ///
-@mixin from($breakpoint, $media-type: screen) {
-  @media #{$media-type} and (min-width: bp($breakpoint)) {
+@mixin from($breakpoint, $type: screen) {
+  @media #{$type} and (min-width: bp($breakpoint)) {
     @content;
   }
 }
@@ -82,8 +82,8 @@
 ///
 /// @content - a max-width media query
 ///
-@mixin to($breakpoint, $media-type: screen) {
-  @media #{$media-type} and (max-width: bp($breakpoint)) {
+@mixin to($breakpoint, $type: screen) {
+  @media #{$type} and (max-width: bp($breakpoint)) {
     @content;
   }
 }
@@ -95,8 +95,8 @@
 ///
 /// @content - a min-width and max-width media query
 ///
-@mixin between($from, $to, $media-type: screen) {
-  @media #{$media-type} and (min-width: bp($from)) and (max-width: bp($to)) {
+@mixin between($from, $to, $type: screen) {
+  @media #{$type} and (min-width: bp($from)) and (max-width: bp($to)) {
     @content;
   }
 }
@@ -107,7 +107,7 @@
 ///
 /// @content - a min-width and/or max-width media query
 ///
-@mixin at($breakpoint, $media-type: screen) {
+@mixin at($breakpoint, $type: screen) {
   $keys: map.keys(theme(screens));
   $length: list.length(theme(screens));
   $index: list.index($keys, $breakpoint);
@@ -115,60 +115,60 @@
   @if $length > $index {
     $next-breakpoint: list.nth($keys, ($index + 1));
 
-    @include between($breakpoint, $next-breakpoint, $media-type) {
+    @include between($breakpoint, $next-breakpoint, $type) {
       @content;
     }
   } @else {
-    @include from($breakpoint, $media-type) {
+    @include from($breakpoint, $type) {
       @content;
     }
   }
 }
 
-@mixin not($query, $media-type: screen) {
-  @media not #{$media-type} and #{$query} {
+@mixin not($query, $type: screen) {
+  @media not #{$type} and #{$query} {
     @content;
   }
 }
 
-@mixin orientation($value: landscape, $media-type: screen) {
-  @media #{$media-type} and (orientation: $value) {
+@mixin orientation($value: landscape, $type: screen) {
+  @media #{$type} and (orientation: $value) {
     @content;
   }
 }
 
-@mixin resolution($value, $media-type: screen) {
-  @media #{$media-type} and (resolution: $value) {
+@mixin resolution($value, $type: screen) {
+  @media #{$type} and (resolution: $value) {
     @content;
   }
 }
 
-@mixin min-resolution($value, $media-type: screen) {
-  @media #{$media-type} and (min-resolution: $value) {
+@mixin min-resolution($value, $type: screen) {
+  @media #{$type} and (min-resolution: $value) {
     @content;
   }
 }
 
-@mixin max-resolution($value, $media-type: screen) {
-  @media #{$media-type} and (max-resolution: $value) {
+@mixin max-resolution($value, $type: screen) {
+  @media #{$type} and (max-resolution: $value) {
     @content;
   }
 }
 
-@mixin aspect-ratio($value, $media-type: screen) {
-  @media #{$media-type} and (aspect-ratio: $value) {
+@mixin aspect-ratio($value, $type: screen) {
+  @media #{$type} and (aspect-ratio: $value) {
     @content;
   }
 }
 
-@mixin min-aspect-ratio($value, $media-type: screen) {
-  @media #{$media-type} and (min-aspect-ratio: $value) {
+@mixin min-aspect-ratio($value, $type: screen) {
+  @media #{$type} and (min-aspect-ratio: $value) {
     @content;
   }
 }
 
-@mixin max-aspect-ratio($value, $media-type: screen) {
-  @media #{$media-type} and (max-aspect-ratio: $value) {
+@mixin max-aspect-ratio($value, $type: screen) {
+  @media #{$type} and (max-aspect-ratio: $value) {
     @content;
   }
 }
