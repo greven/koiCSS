@@ -5,16 +5,18 @@
 @use 'config' as *;
 @use 'theme' as *;
 
+$-default-layer: config(fallbacks, layer);
+
 // --------------------------------
 //   Functions
 // --------------------------------
 
-@function layer($layer: config(fallbacks, layer)) {
+@function layer($layer: $-default-layer) {
   @return theme(layer, $layer);
 }
 
 // Alias
-@function z-index($layer: config(fallbacks, layer)) {
+@function z-index($layer: $-default-layer) {
   @return layer($layer);
 }
 
@@ -22,11 +24,11 @@
 //   Mixins
 // --------------------------------
 
-@mixin layer($layer: config(fallbacks, layer)) {
+@mixin layer($layer: $-default-layer) {
   z-index: layer($layer);
 }
 
 // Alias
-@mixin z-index($layer: config(fallbacks, layer)) {
+@mixin z-index($layer: $-default-layer) {
   z-index: layer($layer);
 }

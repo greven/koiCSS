@@ -121,10 +121,10 @@ html[data-theme=dark] :root {
 }
 
 body {
+  background-color: var(--surface-4);
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
   font-weight: 400;
-  background-color: var(--surface-4);
 }
 
 :root {
@@ -611,13 +611,13 @@ a {
 }
 
 .loader-1 {
-  width: 48px;
-  height: 48px;
-  display: inline-block;
+  animation: loader-1-rotate 1s linear infinite;
   border: 4px solid #fff;
   border-bottom-color: transparent;
   border-radius: 50%;
-  animation: loader-1-rotate 1s linear infinite;
+  display: inline-block;
+  height: 48px;
+  width: 48px;
 }
 @keyframes loader-1-rotate {
   0% {
@@ -629,14 +629,14 @@ a {
 }
 
 .loader-2 {
-  height: 48px;
-  width: 48px;
-  display: inline-block;
-  box-sizing: border-box;
+  animation: loader-2-rotate 1s linear infinite;
   border: 4px solid #fff;
   border-bottom-color: var(--color-accent-6);
   border-radius: 50%;
-  animation: loader-2-rotate 1s linear infinite;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 48px;
+  width: 48px;
 }
 @keyframes loader-2-rotate {
   0% {
@@ -648,18 +648,18 @@ a {
 }
 
 .loader-3 {
-  width: 48px;
+  animation: loader-3-rotate 1s linear infinite;
+  border-radius: 50%;
   height: 48px;
   position: relative;
-  border-radius: 50%;
-  animation: loader-3-rotate 1s linear infinite;
+  width: 48px;
 }
 .loader-3::before, .loader-3::after {
-  content: "";
   animation: loader-3-prixClipFix 2s linear infinite;
   border: 4px solid #fff;
   border-radius: 50%;
   box-sizing: border-box;
+  content: "";
   inset: 0;
   position: absolute;
 }
@@ -688,27 +688,27 @@ a {
 }
 
 .loader-4 {
-  width: 48px;
-  height: 48px;
-  display: inline-block;
-  position: relative;
-  box-sizing: border-box;
+  animation: loader-4-rotate 1s linear infinite;
   border: 3px solid #fff;
   border-radius: 50%;
-  animation: loader-4-rotate 1s linear infinite;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 48px;
+  position: relative;
+  width: 48px;
 }
 .loader-4::after {
-  content: "";
-  width: 40px;
-  height: 40px;
-  box-sizing: border-box;
-  position: absolute;
-  left: 50%;
-  top: 50%;
   border: 3px solid transparent;
   border-bottom-color: var(--color-accent-6);
   border-radius: 50%;
+  box-sizing: border-box;
+  content: "";
+  height: 40px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
   transform: translate(-50%, -50%);
+  width: 40px;
 }
 @keyframes loader-4-rotate {
   0% {
@@ -720,27 +720,27 @@ a {
 }
 
 .loader-5 {
-  width: 48px;
-  height: 48px;
-  display: inline-block;
-  box-sizing: border-box;
-  position: relative;
+  animation: loader-5-rotate 1s linear infinite;
   border: 3px solid #fff;
   border-radius: 50%;
-  animation: loader-5-rotate 1s linear infinite;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 48px;
+  position: relative;
+  width: 48px;
 }
 .loader-5::after {
-  content: "";
-  width: 56px;
-  height: 56px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  box-sizing: border-box;
   border: 3px solid transparent;
   border-bottom-color: var(--color-accent-6);
   border-radius: 50%;
+  box-sizing: border-box;
+  content: "";
+  height: 56px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
   transform: translate(-50%, -50%);
+  width: 56px;
 }
 @keyframes loader-5-rotate {
   0% {
@@ -752,27 +752,27 @@ a {
 }
 
 .loader-6 {
-  width: 48px;
-  height: 48px;
-  position: relative;
-  display: inline-block;
-  box-sizing: border-box;
   animation: loader-6-rotate 1s linear infinite;
   border: 3px solid #fff;
   border-radius: 50%;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 48px;
+  position: relative;
+  width: 48px;
 }
 .loader-6::after {
-  content: "";
-  width: 40px;
-  height: 40px;
-  box-sizing: border-box;
-  position: absolute;
-  border-radius: 50%;
-  left: 50%;
-  top: 50%;
   border: 3px solid transparent;
   border-color: #f00 transparent;
+  border-radius: 50%;
+  box-sizing: border-box;
+  content: "";
+  height: 40px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
   transform: translate(-50%, -50%);
+  width: 40px;
 }
 @keyframes loader-6-rotate {
   0% {
@@ -784,27 +784,27 @@ a {
 }
 
 .loader-7 {
-  width: 48px;
-  height: 48px;
-  display: inline-block;
-  box-sizing: border-box;
-  position: relative;
+  animation: loader-7-rotate 1s linear infinite;
   border: 3px solid #fff;
   border-radius: 50%;
-  animation: loader-7-rotate 1s linear infinite;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 48px;
+  position: relative;
+  width: 48px;
 }
 .loader-7::after {
-  content: "";
-  height: 56px;
-  width: 56px;
-  box-sizing: border-box;
-  position: absolute;
-  top: 50%;
-  left: 50%;
   border: 3px solid transparent;
   border-color: #ff0 transparent;
   border-radius: 50%;
+  box-sizing: border-box;
+  content: "";
+  height: 56px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
   transform: translate(-50%, -50%);
+  width: 56px;
 }
 @keyframes loader-7-rotate {
   0% {
@@ -822,16 +822,16 @@ a {
   width: 48px;
 }
 .loader-8::after, .loader-8::before {
-  content: "";
-  width: 48px;
-  height: 48px;
-  box-sizing: border-box;
-  position: absolute;
-  left: 0;
-  top: 0;
+  animation: loader-8-anim 2s linear infinite;
   border: 2px solid #fff;
   border-radius: 50%;
-  animation: loader-8-anim 2s linear infinite;
+  box-sizing: border-box;
+  content: "";
+  height: 48px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 48px;
 }
 .loader-8::after {
   animation-delay: 1s;

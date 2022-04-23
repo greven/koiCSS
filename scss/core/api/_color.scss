@@ -2,17 +2,17 @@
 //   Color
 // --------------------------------
 
-@use 'sass:map';
-
 @use '../helpers' as *;
 @use 'config' as *;
 @use 'theme' as *;
+
+$-default-shade: config(fallbacks, colors);
 
 // --------------------------------
 //   Functions
 // --------------------------------
 
-@function fill($name, $shade: config(fallbacks, colors), $alpha: 1) {
+@function fill($name, $shade: $-default-shade, $alpha: 1) {
   @if is-theme-color($name, $shade) {
     @return hsl(var(--color-hsl-#{$name}-#{$shade}), $alpha);
   } @else if is-theme-color($name) {
@@ -20,6 +20,6 @@
   }
 }
 
-@function accent($shade: config(fallbacks, colors), $alpha: 1) {
+@function accent($shade: $-default-shade, $alpha: 1) {
   @return hsl(var(--color-hsl-accent-#{$shade}), $alpha);
 }

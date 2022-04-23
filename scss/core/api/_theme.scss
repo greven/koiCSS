@@ -8,7 +8,8 @@
 @use 'sass:selector';
 
 @use '../helpers' as *;
-@use '../../config' as *;
+@use '../../theme' as *;
+@use 'config' as *;
 
 // --------------------------------
 //   Functions
@@ -17,7 +18,7 @@
 // Get a value from the theme
 @function theme($keys...) {
   $property: list.nth($keys, 1);
-  $fallback: map.get($config, fallbacks, $property);
+  $fallback: config(fallbacks, $property);
   @return map-get-key($theme, $fallback, $keys...);
 }
 

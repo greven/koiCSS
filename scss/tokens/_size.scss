@@ -4,7 +4,7 @@
 
 @use 'sass:map';
 
-@use '../../core/helpers/unit' as *;
+@use '../core/helpers/unit' as *;
 
 // Spacing (marging, padding)
 $spacing: (

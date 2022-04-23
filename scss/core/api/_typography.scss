@@ -2,24 +2,35 @@
 //   Typography
 // --------------------------------
 
+@use 'sass:map';
 @use 'sass:list';
 
 @use 'config' as *;
 @use 'theme' as *;
 
 // --------------------------------
+//   Values
+// --------------------------------
+
+$-default-font-family: config(fallbacks, font-family);
+$-default-font-size: config(fallbacks, font-size);
+$-default-font-weight: config(fallbacks, font-weight);
+$-default-leading: config(fallbacks, leading);
+$-default-tracking: config(fallbacks, tracking);
+
+// --------------------------------
 //   Functions
 // --------------------------------
 
-@function font-family($font-family: config(fallbacks, font-family)) {
+@function font-family($font-family: $-default-font-family) {
   @return theme(font-family, $font-family);
 }
 
-@function font-size($font-size: config(fallbacks, font-size)) {
+@function font-size($font-size: $-default-font-size) {
   @return list.nth(theme(font-size, $font-size), 1);
 }
 
-@function font-weight($font-weight: config(fallbacks, font-weight)) {
+@function font-weight($font-weight: $-default-font-weight) {
   @return theme(font-weight, $font-weight);
 }
 
@@ -36,21 +47,21 @@
   }
 }
 
-@function leading($leading: config(fallbacks, leading)) {
+@function leading($leading: $-default-leading) {
   @return theme(leading, $leading);
 }
 
 // Leading alias
-@function line-height($leading: config(fallbacks, leading)) {
+@function line-height($leading: $-default-leading) {
   @return theme(leading, $leading);
 }
 
-@function tracking($tracking: config(fallbacks, tracking)) {
+@function tracking($tracking: $-default-tracking) {
   @return theme(tracking, $tracking);
 }
 
 // Tracking alias
-@function letter-spacing($tracking: config(fallbacks, tracking)) {
+@function letter-spacing($tracking: $-default-tracking) {
   @return theme(tracking, $tracking);
 }
 
@@ -64,12 +75,12 @@
 // --------------------------------
 
 // Font-size with default line-height
-@mixin font-size($font-size: config(fallbacks, font-size)) {
+@mixin font-size($font-size: $-default-font-size) {
   font-size: font-size($font-size);
 }
 
 // Font-size with default leading (line-height)
-@mixin text-size($font-size: config(fallbacks, font-size)) {
+@mixin text-size($font-size: $-default-font-size) {
   font-size: font-size($font-size);
   line-height: text-leading($font-size);
 }

@@ -1,6 +1,10 @@
+// -------------------------------------
+//   Theming colors
+// ------------------------------------
+
 @use 'sass:map';
 
-@use 'tokens' as *;
+@use '../tokens' as *;
 
 // Light and dark theme colors
 $theme-colors: (
@@ -25,20 +29,3 @@ $theme-colors: (
     text-4: map.get($tokens, colors, gray, 3),
   ),
 );
-
-$theme: () !default;
-$theme: map.deep-merge($theme-colors, $theme);
-$theme: map.deep-merge($tokens, $theme);
-
-// --------------------------------
-//   Mixins
-// --------------------------------
-
-// Outputs color scheme aware theme vars
-@mixin theming-vars($color-scheme: light) {
-  :root {
-    @each $key, $value in map.get($theme, $color-scheme) {
-      --#{$key}: $value;
-    }
-  }
-}

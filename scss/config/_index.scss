@@ -1,25 +1,6 @@
 @use 'sass:map';
 
-@forward 'theme';
+@use 'defaults';
 
 $config: () !default;
-$default-config: (
-  prefix: '',
-  base-font-size: 16,
-  use-reset-styles: true,
-  utility-glue: ':',
-  fallbacks: (
-    colors: 6,
-    duration: normal,
-    font-size: md,
-    font-weight: normal,
-    layer: base,
-    leading: normal,
-    radius: md,
-    shadow: md,
-    timing: ease,
-    tracking: normal,
-  ),
-);
-
-$config: map.deep-merge($default-config, $config);
+$config: map.deep-merge(defaults.$config, $config);

@@ -5,11 +5,13 @@
 @use 'config' as *;
 @use 'theme' as *;
 
+$-default-duration: config(fallbacks, duration);
+
 // --------------------------------
 //   Functions
 // --------------------------------
 
-@function duration($duration: config(fallbacks, duration)) {
+@function duration($duration: $-default-duration) {
   @return theme(duration, $duration);
 }
 
@@ -17,10 +19,10 @@
 //   Mixins
 // --------------------------------
 
-@mixin animation-duration($duration: config(fallbacks, duration)) {
+@mixin animation-duration($duration: $-default-duration) {
   animation-duration: duration($duration);
 }
 
-@mixin transition-duration($duration: config(fallbacks, duration)) {
+@mixin transition-duration($duration: $-default-duration) {
   transition-duration: duration($duration);
 }

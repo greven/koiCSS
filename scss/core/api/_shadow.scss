@@ -2,8 +2,12 @@
 //   Shadows
 // --------------------------------
 
+@use 'sass:map';
+
 @use 'config' as *;
 @use 'theme' as *;
+
+$-default-shadow: config(fallbacks, shadow);
 
 // --------------------------------
 //   Functions
@@ -15,7 +19,7 @@
 ///
 /// @return {any} `$shadow-value`.
 ///
-@function shadow($shadow: config(fallbacks, shadow)) {
+@function shadow($shadow: $-default-shadow) {
   @return theme(shadow, $shadow);
 }
 
@@ -23,6 +27,6 @@
 //   Mixins
 // --------------------------------
 
-@mixin shadow($shadow: config(fallbacks, shadow)) {
+@mixin shadow($shadow: $-default-shadow) {
   box-shadow: shadow($shadow);
 }

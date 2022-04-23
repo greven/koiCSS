@@ -5,13 +5,13 @@
 @use 'config' as *;
 @use 'theme' as *;
 
-$default-radius: config(fallbacks, radius);
+$-default-radius: config(fallbacks, radius);
 
 // --------------------------------
 //   Functions
 // --------------------------------
 
-@function radius($radius: $default-radius) {
+@function radius($radius: $-default-radius) {
   @return theme(radius, $radius);
 }
 
@@ -19,26 +19,26 @@ $default-radius: config(fallbacks, radius);
 //   Mixins
 // --------------------------------
 
-@mixin rounded($radius: $default-radius) {
+@mixin rounded($radius: $-default-radius) {
   border-radius: radius($radius);
 }
 
-@mixin rounded-top($radius: $default-radius) {
+@mixin rounded-top($radius: $-default-radius) {
   border-top-left-radius: radius($radius);
   border-top-right-radius: radius($radius);
 }
 
-@mixin rounded-bottom($radius: $default-radius) {
+@mixin rounded-bottom($radius: $-default-radius) {
   border-bottom-left-radius: radius($radius);
   border-bottom-right-radius: radius($radius);
 }
 
-@mixin rounded-left($radius: $default-radius) {
+@mixin rounded-left($radius: $-default-radius) {
   border-top-left-radius: radius($radius);
   border-bottom-left-radius: radius($radius);
 }
 
-@mixin rounded-right($radius: $default-radius) {
+@mixin rounded-right($radius: $-default-radius) {
   border-top-right-radius: radius($radius);
   border-bottom-right-radius: radius($radius);
 }
