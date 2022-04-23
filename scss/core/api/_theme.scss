@@ -5,6 +5,7 @@
 @use 'sass:map';
 @use 'sass:list';
 @use 'sass:meta';
+@use 'sass:selector';
 
 @use '../helpers' as *;
 @use '../../config' as *;
@@ -29,4 +30,32 @@
   $value: map.get($colors, $keys...);
 
   @return map.has-key($colors, $keys...) and (meta.type-of($value) == color);
+}
+
+// --------------------------------
+//   Mixins
+// --------------------------------
+
+// Matches data-theme="light" or data-theme="auto"
+@mixin light() {
+  @media (prefers-color-scheme: light) {
+    @at-root #{selector.nest(':root:not([data-theme=light]):not([data-theme=dark])', &)} {
+      @content;
+    }
+  }
+  @at-root #{selector.nest(':root[data-theme=light]', &)} {
+    @content;
+  }
+}
+
+// Matches data-theme="dark" or data-theme="auto"
+@mixin dark() {
+  @media (prefers-color-scheme: dark) {
+    @at-root #{selector.nest(':root:not([data-theme=light]):not([data-theme=dark])', &)} {
+      @content;
+    }
+  }
+  @at-root #{selector.nest(':root[data-theme=dark]', &)} {
+    @content;
+  }
 }

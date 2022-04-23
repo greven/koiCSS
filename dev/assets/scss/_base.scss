@@ -9,16 +9,16 @@
 // << Insert your base styles here >>
 
 body {
-  font-family: koi.font(sans);
-  background-color: koi.fill(gray, 9);
-  color: koi.fill(gray, 1);
+  color: var(--text-1);
+  background-color: var(--surface-1);
   padding: koi.spacing(24, 24);
 }
 
 h1 {
   @include koi.text-size(4xl);
   font-family: koi.font-family(serif);
-  color: koi.fill(primary);
+  color: koi.accent(6);
+  // color: koi.fill(primary);
   // color: koi.fill(blue, 3);
   // color: koi.fill(blue, 8, 0.5);
   // color: koi.accent(5);
@@ -27,21 +27,23 @@ h1 {
 }
 
 a {
-  color: koi.fill(primary);
+  color: koi.accent(6);
+  // color: koi.fill(primary);
 }
 
 .wrapper {
   margin-top: koi.rem(24);
   padding: koi.theme(spacing, 32);
-  background-color: koi.fill(gray, 8);
   border: 2px solid koi.fill(gray);
   border-radius: koi.radius();
   @include koi.shadow(sm);
+  // background-color: koi.fill(gray, 8);
 
   &:hover {
-    border-color: koi.fill(primary);
-    background-color: koi.fill(gray, 7);
+    border-color: koi.accent(6);
+    background-color: koi.accent(0);
     @include koi.transition-colors(koi.theme(duration, slow));
+    // border-color: koi.fill(primary);
   }
 
   button {
@@ -51,6 +53,14 @@ a {
 
 .lists {
   margin-top: koi.rem(12);
+}
+
+.loaders {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background-color: koi.fill(gray, 8);
+  border-color: koi.accent(6);
 }
 
 .text {
@@ -91,10 +101,4 @@ a {
 
 .loader-9 {
   @include koi.loader-9($size: 10px);
-}
-
-.loaders {
-  display: flex;
-  align-items: center;
-  gap: 24px;
 }

@@ -2,6 +2,7 @@
 //   Base Styles
 // --------------------------------
 
+@use '../config' as *;
 @use '../core' as *;
 @use '../reset';
 
@@ -9,12 +10,21 @@
   @include reset.styles();
 }
 
+html {
+  @include theming-vars(light);
+}
+
+html[data-theme='dark'] {
+  @include theming-vars(dark);
+}
+
 ::selection {
   background: var(--color-accent-5);
-  color: #fff;
+  color: var(--text-1);
 }
 
 body {
+  background-color: var(--surface-4);
   font-family: font(sans);
   font-size: font(md);
   font-weight: font(normal);

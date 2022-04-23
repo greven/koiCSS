@@ -1,6 +1,6 @@
 @use 'sass:map';
+
 @forward 'theme';
-@forward 'tokens';
 
 $config: () !default;
 $default-config: (

@@ -93,15 +93,38 @@ select {
     transition-duration: 0.01ms !important;
   }
 }
+html :root {
+  --surface-1: $value;
+  --surface-2: $value;
+  --surface-3: $value;
+  --surface-4: $value;
+  --text-1: $value;
+  --text-2: $value;
+  --text-3: $value;
+  --text-4: $value;
+}
+
+html[data-theme=dark] :root {
+  --surface-1: $value;
+  --surface-2: $value;
+  --surface-3: $value;
+  --surface-4: $value;
+  --text-1: $value;
+  --text-2: $value;
+  --text-3: $value;
+  --text-4: $value;
+}
+
 ::selection {
   background: var(--color-accent-5);
-  color: #fff;
+  color: var(--text-1);
 }
 
 body {
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
   font-weight: 400;
+  background-color: var(--surface-4);
 }
 
 :root {
@@ -118,21 +141,39 @@ body {
 
 /*! purgecss start ignore */
 :root {
-  --color-secondary: yellow;
-  --color-hsl-secondary: 60deg, 100%, 50%;
+  --color-primary: #00ffcc;
+  --color-hsl-primary: 168deg, 100%, 50%;
 }
-:root .accent-secondary {
-  --color-accent: yellow;
-  --color-hsl-accent: 60deg, 100%, 50%;
+:root .accent-primary {
+  --color-accent: #00ffcc;
+  --color-hsl-accent: 168deg, 100%, 50%;
 }
 
 :root {
-  --color-primary: #0cf;
-  --color-hsl-primary: 192deg, 100%, 50%;
+  --color-secondary: #ff33e4;
+  --color-hsl-secondary: 307.9411764706deg, 100%, 60%;
 }
-:root .accent-primary {
-  --color-accent: #0cf;
-  --color-hsl-accent: 192deg, 100%, 50%;
+:root .accent-secondary {
+  --color-accent: #ff33e4;
+  --color-hsl-accent: 307.9411764706deg, 100%, 60%;
+}
+
+:root {
+  --color-white: #fff;
+  --color-hsl-white: 0deg, 0%, 100%;
+}
+:root .accent-white {
+  --color-accent: #fff;
+  --color-hsl-accent: 0deg, 0%, 100%;
+}
+
+:root {
+  --color-black: #000;
+  --color-hsl-black: 0deg, 0%, 0%;
+}
+:root .accent-black {
+  --color-accent: #000;
+  --color-hsl-accent: 0deg, 0%, 0%;
 }
 
 :root {
@@ -515,9 +556,8 @@ figure figcaption {
 }
 
 body {
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  background-color: hsl(var(--color-hsl-gray-9), 1);
-  color: hsl(var(--color-hsl-gray-1), 1);
+  color: var(--text-1);
+  background-color: var(--surface-1);
   padding: 1.5rem 1.5rem;
 }
 
@@ -525,24 +565,23 @@ h1 {
   font-size: 2.25rem;
   line-height: 2.5rem;
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  color: hsl(var(--color-hsl-primary), 1);
+  color: hsl(var(--color-hsl-accent-6), 1);
 }
 
 a {
-  color: hsl(var(--color-hsl-primary), 1);
+  color: hsl(var(--color-hsl-accent-6), 1);
 }
 
 .wrapper {
   margin-top: 1.5rem;
   padding: 2rem;
-  background-color: hsl(var(--color-hsl-gray-8), 1);
   border: 2px solid hsl(var(--color-hsl-gray-6), 1);
   border-radius: 0.25rem;
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
 }
 .wrapper:hover {
-  border-color: hsl(var(--color-hsl-primary), 1);
-  background-color: hsl(var(--color-hsl-gray-7), 1);
+  border-color: hsl(var(--color-hsl-accent-6), 1);
+  background-color: hsl(var(--color-hsl-accent-0), 1);
 }
 @media not screen and (prefers-reduced-motion: reduce) {
   .wrapper:hover {
@@ -559,18 +598,26 @@ a {
   margin-top: 0.75rem;
 }
 
+.loaders {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background-color: hsl(var(--color-hsl-gray-8), 1);
+  border-color: hsl(var(--color-hsl-accent-6), 1);
+}
+
 .text {
   line-height: 1.625;
 }
 
 .loader-1 {
-  animation: loader-1-rotate 1s linear infinite;
+  width: 48px;
+  height: 48px;
+  display: inline-block;
   border: 4px solid #fff;
   border-bottom-color: transparent;
   border-radius: 50%;
-  display: inline-block;
-  height: 48px;
-  width: 48px;
+  animation: loader-1-rotate 1s linear infinite;
 }
 @keyframes loader-1-rotate {
   0% {
@@ -582,14 +629,14 @@ a {
 }
 
 .loader-2 {
-  animation: loader-2-rotate 1s linear infinite;
+  height: 48px;
+  width: 48px;
+  display: inline-block;
+  box-sizing: border-box;
   border: 4px solid #fff;
   border-bottom-color: var(--color-accent-6);
   border-radius: 50%;
-  box-sizing: border-box;
-  display: inline-block;
-  height: 48px;
-  width: 48px;
+  animation: loader-2-rotate 1s linear infinite;
 }
 @keyframes loader-2-rotate {
   0% {
@@ -601,18 +648,18 @@ a {
 }
 
 .loader-3 {
-  animation: loader-3-rotate 1s linear infinite;
-  border-radius: 50%;
+  width: 48px;
   height: 48px;
   position: relative;
-  width: 48px;
+  border-radius: 50%;
+  animation: loader-3-rotate 1s linear infinite;
 }
 .loader-3::before, .loader-3::after {
+  content: "";
   animation: loader-3-prixClipFix 2s linear infinite;
   border: 4px solid #fff;
   border-radius: 50%;
   box-sizing: border-box;
-  content: "";
   inset: 0;
   position: absolute;
 }
@@ -641,27 +688,27 @@ a {
 }
 
 .loader-4 {
-  animation: loader-4-rotate 1s linear infinite;
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
   border: 3px solid #fff;
   border-radius: 50%;
-  box-sizing: border-box;
-  display: inline-block;
-  height: 48px;
-  position: relative;
-  width: 48px;
+  animation: loader-4-rotate 1s linear infinite;
 }
 .loader-4::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 50%;
   border: 3px solid transparent;
   border-bottom-color: var(--color-accent-6);
   border-radius: 50%;
-  box-sizing: border-box;
-  content: "";
-  height: 40px;
-  left: 50%;
-  position: absolute;
-  top: 50%;
   transform: translate(-50%, -50%);
-  width: 40px;
 }
 @keyframes loader-4-rotate {
   0% {
@@ -673,27 +720,27 @@ a {
 }
 
 .loader-5 {
-  animation: loader-5-rotate 1s linear infinite;
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  box-sizing: border-box;
+  position: relative;
   border: 3px solid #fff;
   border-radius: 50%;
-  box-sizing: border-box;
-  display: inline-block;
-  height: 48px;
-  position: relative;
-  width: 48px;
+  animation: loader-5-rotate 1s linear infinite;
 }
 .loader-5::after {
+  content: "";
+  width: 56px;
+  height: 56px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  box-sizing: border-box;
   border: 3px solid transparent;
   border-bottom-color: var(--color-accent-6);
   border-radius: 50%;
-  box-sizing: border-box;
-  content: "";
-  height: 56px;
-  left: 50%;
-  position: absolute;
-  top: 50%;
   transform: translate(-50%, -50%);
-  width: 56px;
 }
 @keyframes loader-5-rotate {
   0% {
@@ -705,27 +752,27 @@ a {
 }
 
 .loader-6 {
+  width: 48px;
+  height: 48px;
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
   animation: loader-6-rotate 1s linear infinite;
   border: 3px solid #fff;
   border-radius: 50%;
-  box-sizing: border-box;
-  display: inline-block;
-  height: 48px;
-  position: relative;
-  width: 48px;
 }
 .loader-6::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+  position: absolute;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
   border: 3px solid transparent;
   border-color: #f00 transparent;
-  border-radius: 50%;
-  box-sizing: border-box;
-  content: "";
-  height: 40px;
-  left: 50%;
-  position: absolute;
-  top: 50%;
   transform: translate(-50%, -50%);
-  width: 40px;
 }
 @keyframes loader-6-rotate {
   0% {
@@ -737,27 +784,27 @@ a {
 }
 
 .loader-7 {
-  animation: loader-7-rotate 1s linear infinite;
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  box-sizing: border-box;
+  position: relative;
   border: 3px solid #fff;
   border-radius: 50%;
-  box-sizing: border-box;
-  display: inline-block;
-  height: 48px;
-  position: relative;
-  width: 48px;
+  animation: loader-7-rotate 1s linear infinite;
 }
 .loader-7::after {
+  content: "";
+  height: 56px;
+  width: 56px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
   border: 3px solid transparent;
   border-color: #ff0 transparent;
   border-radius: 50%;
-  box-sizing: border-box;
-  content: "";
-  height: 56px;
-  left: 50%;
-  position: absolute;
-  top: 50%;
   transform: translate(-50%, -50%);
-  width: 56px;
 }
 @keyframes loader-7-rotate {
   0% {
@@ -775,16 +822,16 @@ a {
   width: 48px;
 }
 .loader-8::after, .loader-8::before {
-  animation: loader-8-anim 2s linear infinite;
+  content: "";
+  width: 48px;
+  height: 48px;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
   border: 2px solid #fff;
   border-radius: 50%;
-  box-sizing: border-box;
-  content: "";
-  height: 48px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 48px;
+  animation: loader-8-anim 2s linear infinite;
 }
 .loader-8::after {
   animation-delay: 1s;
@@ -824,12 +871,6 @@ a {
   100% {
     box-shadow: -30px 6px, -10px -6px, 10px 6px;
   }
-}
-
-.loaders {
-  display: flex;
-  align-items: center;
-  gap: 24px;
 }
 
 .btn {

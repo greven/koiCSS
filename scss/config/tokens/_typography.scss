@@ -1,0 +1,145 @@
+// --------------------------------
+//   Typography
+// --------------------------------
+
+@use '../../core/helpers/unit' as *;
+
+$font-family: (
+  sans: (
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    'Noto Sans',
+    sans-serif,
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol',
+    'Noto Color Emoji',
+  ),
+  serif: (
+    ui-serif,
+    Georgia,
+    Cambria,
+    'Times New Roman',
+    Times,
+    serif,
+  ),
+  mono: (
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    'Liberation Mono',
+    'Courier New',
+    monospace,
+  ),
+) !default;
+
+// Font size with default line-height
+$font-size: (
+  2xs: (
+    rem(10),
+    rem(12),
+  ),
+  xs: (
+    rem(12),
+    rem(16),
+  ),
+  sm: (
+    rem(14),
+    rem(20),
+  ),
+  md: (
+    rem(16),
+    rem(24),
+  ),
+  lg: (
+    rem(18),
+    rem(28),
+  ),
+  xl: (
+    rem(20),
+    rem(28),
+  ),
+  2xl: (
+    rem(24),
+    rem(32),
+  ),
+  3xl: (
+    rem(30),
+    rem(36),
+  ),
+  4xl: (
+    rem(36),
+    rem(40),
+  ),
+  5xl: (
+    rem(48),
+    1,
+  ),
+  6xl: (
+    rem(60),
+    1,
+  ),
+  7xl: (
+    rem(72),
+    1,
+  ),
+  8xl: (
+    rem(96),
+    1,
+  ),
+  9xl: (
+    rem(128),
+    1,
+  ),
+) !default;
+
+$font-weight: (
+  thin: 100,
+  extralight: 200,
+  light: 300,
+  normal: 400,
+  medium: 500,
+  semibold: 600,
+  bold: 700,
+  extrabold: 800,
+  black: 900,
+) !default;
+
+// Line Height
+$leading: (
+  1: rem(8),
+  2: rem(10),
+  3: rem(12),
+  4: rem(16),
+  5: rem(20),
+  6: rem(24),
+  7: rem(28),
+  8: rem(32),
+  9: rem(36),
+  10: rem(40),
+  none: 1,
+  tight: 1.25,
+  snug: 1.375,
+  normal: 1.5,
+  relaxed: 1.625,
+  loose: 2,
+) !default;
+
+// Letter Spacing
+$tracking: (
+  tightest: -0.08em,
+  tighter: -0.05em,
+  tight: -0.025em,
+  normal: 0,
+  wide: 0.025em,
+  wider: 0.05em,
+  widest: 0.1em,
+) !default;

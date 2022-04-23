@@ -173,6 +173,12 @@
   }
 }
 
+@mixin preferes-color-scheme($color-scheme: light) {
+  @media (prefers-color-scheme: $color-scheme) {
+    @content;
+  }
+}
+
 @mixin prefers-reduced-motion($bool: true) {
   $query: '(prefers-reduced-motion: reduce)';
 

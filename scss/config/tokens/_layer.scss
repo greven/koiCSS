@@ -1,0 +1,20 @@
+// --------------------------------
+//   Layer (z-index)
+// --------------------------------
+
+$layer: (
+  hidden: -100,
+  lower: -2,
+  below: -1,
+  base: 0,
+  above: 1,
+  higher: 2,
+  sticky: 100,
+  fixed: 200,
+  dropdown: 300,
+  overlay: 400,
+  modal: 500,
+  popover: 600,
+  tooltip: 700,
+  uber: 4815162342,
+) !default;

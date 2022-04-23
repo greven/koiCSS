@@ -1,0 +1,17 @@
+// --------------------------------
+//   Border
+// --------------------------------
+
+@use '../../core/helpers/unit' as *;
+
+$radius: (
+  xs: rem(2),
+  sm: rem(3),
+  md: rem(4),
+  lg: rem(6),
+  xl: rem(8),
+  2xl: rem(12),
+  3xl: rem(16),
+  4xl: rem(24),
+  full: 9999px,
+) !default;
