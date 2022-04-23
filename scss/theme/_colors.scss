@@ -28,4 +28,4 @@ $theme-colors: (
     text-3: map.get($tokens, colors, gray, 2),
     text-4: map.get($tokens, colors, gray, 3),
   ),
-);
+) !default;

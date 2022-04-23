@@ -4,12 +4,14 @@
 
 @use '../core' as *;
 
-$custom-prop: timing;
+$custom-prop-name: timing;
 
 // --------------------------------
 //   CSS Custom Properties
 // --------------------------------
 
 @mixin vars {
-  @include generate-css-vars($custom-prop, theme(timing));
+  :root {
+    @include generate-css-vars(theme(timing), $custom-prop-name);
+  }
 }

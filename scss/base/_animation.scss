@@ -4,7 +4,7 @@
 
 @use '../core' as *;
 
-$custom-prop: animation;
+$custom-prop-name: animation;
 
 // --------------------------------
 //   Mixins
@@ -112,14 +112,14 @@ $custom-prop: animation;
 
 @mixin vars {
   :root {
-    #{css-var-name($custom-prop, blink)}: blink 1s timing(ease) infinite;
-    #{css-var-name($custom-prop, bounce)}: bounce 2s timing(ease) infinite;
-    #{css-var-name($custom-prop, fade-in)}: fade-in 0.5s timing(ease);
-    #{css-var-name($custom-prop, fade-out)}: fade-out 0.5s timing(ease);
-    #{css-var-name($custom-prop, float)}: float 3s timing(ease-in-out) infinite;
-    #{css-var-name($custom-prop, ping)}: ping 3s timing(ease-out) infinite;
-    #{css-var-name($custom-prop, pulse)}: pulse 2s timing(ease-out) infinite;
-    #{css-var-name($custom-prop, spin)}: spin 2s timing(linear) infinite;
-    #{css-var-name($custom-prop, ring)}: ring 500ms timing(linear) infinite;
+    #{css-var-name($custom-prop-name, blink)}: blink 1s timing(ease) infinite;
+    #{css-var-name($custom-prop-name, bounce)}: bounce 2s timing(ease) infinite;
+    #{css-var-name($custom-prop-name, fade-in)}: fade-in 0.5s timing(ease);
+    #{css-var-name($custom-prop-name, fade-out)}: fade-out 0.5s timing(ease);
+    #{css-var-name($custom-prop-name, float)}: float 3s timing(ease-in-out) infinite;
+    #{css-var-name($custom-prop-name, ping)}: ping 3s timing(ease-out) infinite;
+    #{css-var-name($custom-prop-name, pulse)}: pulse 2s timing(ease-out) infinite;
+    #{css-var-name($custom-prop-name, spin)}: spin 2s timing(linear) infinite;
+    #{css-var-name($custom-prop-name, ring)}: ring 500ms timing(linear) infinite;
   }
 }

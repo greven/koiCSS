@@ -7,16 +7,9 @@
 @use '../theme' as *;
 @use '../reset';
 
+// Reset
 @if config(use-reset-styles) {
   @include reset.styles();
-}
-
-html {
-  @include theming-vars(light);
-}
-
-html[data-theme='dark'] {
-  @include theming-vars(dark);
 }
 
 ::selection {
@@ -24,8 +17,12 @@ html[data-theme='dark'] {
   color: var(--text-1);
 }
 
+// Theming
+@if config(use-theming) {
+  @include theming-vars;
+}
+
 body {
-  background-color: var(--surface-4);
   font-family: font(sans);
   font-size: font(md);
   font-weight: font(normal);

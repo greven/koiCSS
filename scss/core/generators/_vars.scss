@@ -8,49 +8,67 @@
 @use '../api/config' as *;
 @use '../helpers' as *;
 
+// --------------------------------
+//   Functions
+// --------------------------------
+
 // Returns the css custom property name given the property and key
-@function css-var-name($property, $key, $sufix: null) {
+@function css-var-name($property, $key, $suffix: null) {
   $prefix: if(config(prefix) == '', '', '#{config(prefix)}-');
-  $sufix: if($sufix, '-#{$sufix}', '');
-  @return '--#{$prefix}#{$property}#{$sufix}-#{$key}';
+  $suffix: if($suffix, '-#{$suffix}', '');
+  $key: if($property and $key, '-#{$key}', $key);
+  @return '--#{$prefix}#{$property}#{$suffix}#{$key}';
 }
 
+// --------------------------------
+//   Mixins
+// --------------------------------
+
 // Generate CSS vars from map.
-@mixin generate-css-vars($property, $map: ()) {
-  :root {
-    @each $key, $value in $map {
-      $value: if(meta.type-of($value) == 'string', string.unquote($value), $value);
-      #{css-var-name($property, $key)}: $value;
-    }
+@mixin generate-css-vars($map: (), $property: null) {
+  @each $key, $value in $map {
+    $value: if(meta.type-of($value) == 'string', string.unquote($value), $value);
+    #{css-var-name($property, $key)}: $value;
   }
 }
 
-@mixin generate-css-color-vars($property, $colors-map: ()) {
+@mixin generate-css-color-vars($colors-map: (), $property: null, $suffix: null) {
+  $suffix-hsl: if($suffix, '#{$suffix}-hsl', hsl);
+
   /*! purgecss start ignore */
   @each $color, $value in $colors-map {
-    :root {
+    @if meta.type-of($value) == color {
+      #{css-var-name($property, $color, $suffix)}: $value;
+      #{css-var-name($property, $color, $suffix-hsl)}: to-hsl($value);
+    } @else {
+      @each $shade, $shade-value in $value {
+        #{css-var-name($property, '#{$color}-#{$shade}')}: $shade-value;
+        #{css-var-name($property, '#{$color}-#{$shade}', $suffix-hsl)}: to-hsl($shade-value);
+      }
+    }
+
+    // Accent
+    .accent-#{'' + $color} {
       @if meta.type-of($value) == color {
-        #{css-var-name($property, $color)}: $value;
-        #{css-var-name($property, $color, 'hsl')}: to-hsl($value);
+        #{css-var-name($property, accent)}: $value;
+        #{css-var-name($property, accent, hsl)}: to-hsl($value);
       } @else {
         @each $shade, $shade-value in $value {
-          #{css-var-name($property, '#{$color}-#{$shade}')}: $shade-value;
-          #{css-var-name($property, '#{$color}-#{$shade}', 'hsl')}: to-hsl($shade-value);
+          #{css-var-name($property, 'accent-#{$shade}')}: $shade-value;
+          #{css-var-name($property, 'accent-#{$shade}', hsl)}: to-hsl($shade-value);
         }
       }
+    }
+  }
+  /*! purgecss end ignore */
+}
 
-      // Accent
-      .accent-#{'' + $color} {
-        @if meta.type-of($value) == color {
-          #{css-var-name($property, accent)}: $value;
-          #{css-var-name($property, accent, 'hsl')}: to-hsl($value);
-        } @else {
-          @each $shade, $shade-value in $value {
-            #{css-var-name($property, 'accent-#{$shade}')}: $shade-value;
-            #{css-var-name($property, 'accent-#{$shade}', 'hsl')}: to-hsl($shade-value);
-          }
-        }
-      }
+@mixin generate-color-schemes-css-vars($map: (), $color-scheme: null) {
+  /*! purgecss start ignore */
+  @each $property, $value in $map {
+    @if meta.type-of($value) == color {
+      #{css-var-name($property, $color-scheme)}: $value;
+      #{css-var-name($property, $color-scheme, hsl)}: to-hsl($value);
     }
   }
   /*! purgecss end ignore */
