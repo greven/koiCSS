@@ -138,7 +138,6 @@ html {
 }
 
 :root {
-  color-scheme: light;
   /*! purgecss start ignore */
   --surface-1: #f8fafc;
   --surface-1-hsl: 210deg, 40%, 98.0392156863%;
@@ -157,11 +156,11 @@ html {
   --text-4: #475569;
   --text-4-hsl: 215.2941176471deg, 19.3181818182%, 34.5098039216%;
   /*! purgecss end ignore */
+  color-scheme: light;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    color-scheme: light;
     /*! purgecss start ignore */
     --surface-1: #f8fafc;
     --surface-1-hsl: 210deg, 40%, 98.0392156863%;
@@ -180,11 +179,11 @@ html {
     --text-4: #475569;
     --text-4-hsl: 215.2941176471deg, 19.3181818182%, 34.5098039216%;
     /*! purgecss end ignore */
+    color-scheme: light;
   }
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    color-scheme: dark;
     /*! purgecss start ignore */
     --surface-1: #0f172a;
     --surface-1-hsl: 222.2222222222deg, 47.3684210526%, 11.1764705882%;
@@ -203,11 +202,11 @@ html {
     --text-4: #cbd5e1;
     --text-4-hsl: 212.7272727273deg, 26.8292682927%, 83.9215686275%;
     /*! purgecss end ignore */
+    color-scheme: dark;
   }
 }
 [color-scheme=light],
 [data-theme=light] {
-  color-scheme: light;
   /*! purgecss start ignore */
   --surface-1: #f8fafc;
   --surface-1-hsl: 210deg, 40%, 98.0392156863%;
@@ -226,11 +225,11 @@ html {
   --text-4: #475569;
   --text-4-hsl: 215.2941176471deg, 19.3181818182%, 34.5098039216%;
   /*! purgecss end ignore */
+  color-scheme: light;
 }
 
 [color-scheme=dark],
 [data-theme=dark] {
-  color-scheme: dark;
   /*! purgecss start ignore */
   --surface-1: #0f172a;
   --surface-1-hsl: 222.2222222222deg, 47.3684210526%, 11.1764705882%;
@@ -249,6 +248,7 @@ html {
   --text-4: #cbd5e1;
   --text-4-hsl: 212.7272727273deg, 26.8292682927%, 83.9215686275%;
   /*! purgecss end ignore */
+  color-scheme: dark;
 }
 
 body {

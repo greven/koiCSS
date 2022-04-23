@@ -25,33 +25,33 @@ $theme: map.deep-merge($tokens, $theme);
   }
 
   :root {
-    color-scheme: light;
     @include generate-color-schemes-css-vars(map.get($theme-colors, light));
+    color-scheme: light;
   }
 
   @media (prefers-color-scheme: light) {
     :root {
-      color-scheme: light;
       @include generate-color-schemes-css-vars(map.get($theme-colors, light));
+      color-scheme: light;
     }
   }
 
   @media (prefers-color-scheme: dark) {
     :root {
-      color-scheme: dark;
       @include generate-color-schemes-css-vars(map.get($theme-colors, dark));
+      color-scheme: dark;
     }
   }
 
   [color-scheme='light'],
   [data-theme='light'] {
-    color-scheme: light;
     @include generate-color-schemes-css-vars(map.get($theme-colors, light));
+    color-scheme: light;
   }
 
   [color-scheme='dark'],
   [data-theme='dark'] {
-    color-scheme: dark;
     @include generate-color-schemes-css-vars(map.get($theme-colors, dark));
+    color-scheme: dark;
   }
 }
