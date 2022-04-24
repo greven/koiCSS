@@ -5,7 +5,7 @@
 @use '../config' as *;
 @use '../core' as *;
 @use '../theme' as *;
-@use '../reset';
+@use 'reset';
 
 // Reset
 @if config(use-reset-styles) {

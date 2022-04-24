@@ -5,7 +5,7 @@
 @use 'sass:map';
 
 @use '../core/generators/vars' as *;
-@use '../tokens' as *;
+@use 'tokens' as *;
 @use 'colors' as *;
 
 $theme: () !default;

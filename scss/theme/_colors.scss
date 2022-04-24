@@ -4,7 +4,7 @@
 
 @use 'sass:map';
 
-@use '../tokens' as *;
+@use 'tokens' as *;
 
 // Light and dark theme colors
 $theme-colors: (
