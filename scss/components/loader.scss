@@ -5,7 +5,7 @@
 
 @use 'sass:math';
 
-@mixin loader-1($size: 48px, $color: #fff, $thickness: 4px, $duration: 1s) {
+@mixin loader-1($size: 48px, $color: #fff, $thickness: 4px, $duration: 0.5s) {
   animation: loader-1-rotate $duration linear infinite;
   border: $thickness solid $color;
   border-bottom-color: transparent;
