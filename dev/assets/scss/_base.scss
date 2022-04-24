@@ -56,10 +56,10 @@ a {
   // background-color: koi.fill(gray, 8);
 
   &:hover {
-    border-color: koi.accent(6);
+    // border-color: koi.accent(6);
     // background-color: koi.fill(gray, 1);
-    background-color: var(--surface-2);
-    @include koi.transition-colors(koi.theme(duration, slow));
+    // background-color: var(--surface-2);
+    // @include koi.transition-colors(koi.theme(duration, slow));
     // border-color: koi.fill(primary);
 
     // @include koi.dark {

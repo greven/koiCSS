@@ -12,14 +12,14 @@
   @include reset.styles();
 }
 
-::selection {
-  background: var(--color-accent-5);
-  color: var(--text-1);
-}
-
 // Theming
 @if config(use-theming) {
   @include theming-vars;
+}
+
+::selection {
+  background: var(--color-accent-5);
+  color: var(--text-1);
 }
 
 body {

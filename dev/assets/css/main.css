@@ -93,11 +93,6 @@ select {
     transition-duration: 0.01ms !important;
   }
 }
-::selection {
-  background: var(--color-accent-5);
-  color: var(--text-1);
-}
-
 html {
   /*! purgecss start ignore */
   --surface-1-light: #f8fafc;
@@ -249,6 +244,11 @@ html {
   --text-4-hsl: 212.7272727273deg, 26.8292682927%, 83.9215686275%;
   /*! purgecss end ignore */
   color-scheme: dark;
+}
+
+::selection {
+  background: var(--color-accent-5);
+  color: var(--text-1);
 }
 
 body {
@@ -685,18 +685,6 @@ a {
   border-radius: 0.25rem;
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
 }
-.wrapper:hover {
-  border-color: hsl(var(--color-hsl-accent-6), 1);
-  background-color: var(--surface-2);
-}
-@media not screen and (prefers-reduced-motion: reduce) {
-  .wrapper:hover {
-    transition-property: background-color, border-color, color, fill, stroke;
-    transition-duration: 300ms;
-    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
-  }
-}
-
 .loaders {
   display: flex;
   align-items: center;
