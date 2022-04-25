@@ -16,10 +16,10 @@
 ///
 /// @param {string} $screen
 ///
-/// @return {number} `$breakpoint-in-pixel`.
+/// @return {number|null} `$breakpoint-in-pixel` or null.
 ///
 @function bp($screen) {
-  @return theme(screens, $screen);
+  @return map.get(theme(screens), $screen);
 }
 
 // Alias to bp function
@@ -71,7 +71,8 @@
 /// @content - a min-width media query
 ///
 @mixin from($breakpoint, $type: screen) {
-  @media #{$type} and (min-width: bp($breakpoint)) {
+  $breakpoint: if(bp($breakpoint), bp($breakpoint), $breakpoint);
+  @media #{$type} and (min-width: $breakpoint) {
     @content;
   }
 }
@@ -83,7 +84,8 @@
 /// @content - a max-width media query
 ///
 @mixin to($breakpoint, $type: screen) {
-  @media #{$type} and (max-width: bp($breakpoint)) {
+  $breakpoint: if(bp($breakpoint), bp($breakpoint), $breakpoint);
+  @media #{$type} and (max-width: $breakpoint) {
     @content;
   }
 }
@@ -96,7 +98,10 @@
 /// @content - a min-width and max-width media query
 ///
 @mixin between($from, $to, $type: screen) {
-  @media #{$type} and (min-width: bp($from)) and (max-width: bp($to)) {
+  $from: if(bp($from), bp($from), $from);
+  $to: if(bp($to), bp($to), $to);
+
+  @media #{$type} and (min-width: $from) and (max-width: $to) {
     @content;
   }
 }

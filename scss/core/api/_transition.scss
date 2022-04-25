@@ -6,7 +6,7 @@
 
 @use 'config' as *;
 @use 'theme' as *;
-@use 'media-query' as media;
+@use 'media-query' as mq;
 
 // --------------------------------
 //   Values
@@ -38,7 +38,7 @@ $-default-properties: (
   $timing-function: $-default-timing-function,
   $delay: null
 ) {
-  @include media.prefers-reduced-motion(null) {
+  @include mq.prefers-reduced-motion(null) {
     transition-property: var(--koi-transition-property, $property);
     transition-duration: var(--koi-transition-duration, $duration);
     transition-timing-function: var(--koi-transition-timing-function, $timing-function);

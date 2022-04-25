@@ -7,9 +7,16 @@ $config: (
   use-theming: true,
   use-reset-styles: true,
   use-default-styles: true,
-  spacer: 1rem,
   base-font-size: 16,
+  spacer: 1rem,
   utility-glue: ':',
+  responsive: (
+    padding: (
+      value: 5%,
+      min: 0.75rem,
+      max: 1.5rem,
+    ),
+  ),
   fallbacks: (
     colors: 6,
     duration: normal,

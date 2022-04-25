@@ -5,6 +5,7 @@
 @use 'sass:map';
 @use 'sass:list';
 
+@use 'config' as *;
 @use 'theme' as *;
 
 // --------------------------------
@@ -154,4 +155,30 @@ $negative-spacing: () !default;
 
 @mixin padding-right($key) {
   padding-right: spacing($key);
+}
+
+// Responsive Padding
+
+@mixin responsive-padding {
+  $value: config(responsive, padding, value);
+  $min: config(responsive, padding, min);
+  $max: config(responsive, padding, max);
+
+  padding: clamp(var(--koi-padding-min, $min), var(--koi-padding-value, $value), var(--koi-padding-max, $max));
+}
+
+@mixin responsive-padding-inline {
+  $value: config(responsive, padding, value);
+  $min: config(responsive, padding, min);
+  $max: config(responsive, padding, max);
+
+  padding-inline: clamp(var(--koi-padding-min, $min), var(--koi-padding-value, $value), var(--koi-padding-max, $max));
+}
+
+@mixin responsive-padding-block {
+  $value: config(responsive, padding, value);
+  $min: config(responsive, padding, min);
+  $max: config(responsive, padding, max);
+
+  padding-block: clamp(var(--koi-padding-min, $min), var(--koi-padding-value, $value), var(--koi-padding-max, $max));
 }

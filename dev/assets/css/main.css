@@ -818,7 +818,67 @@ figure figcaption {
 body {
   color: var(--text-1);
   background-color: var(--surface-1);
-  padding: 1.5rem 1.5rem;
+}
+@media screen and (min-width: 0) {
+  body {
+    width: 100%;
+    /* Set the max-width of the element to match the
+      min-width of the current breakpoint */
+    /* Center the element */
+    margin-left: auto;
+    margin-right: auto;
+    /* Add padding to the container, either by value, by
+      theme token or using responsive padding as fallback */
+    padding-inline: clamp(var(--koi-padding-min, 0.75rem), var(--koi-padding-value, 5%), var(--koi-padding-max, 1.5rem));
+  }
+}
+@media screen and (min-width: 1024px) {
+  body {
+    width: 100%;
+    /* Set the max-width of the element to match the
+      min-width of the current breakpoint */
+    /* Center the element */
+    margin-left: auto;
+    margin-right: auto;
+    /* Add padding to the container, either by value, by
+      theme token or using responsive padding as fallback */
+    padding-inline: clamp(var(--koi-padding-min, 0.75rem), var(--koi-padding-value, 5%), var(--koi-padding-max, 1.5rem));
+  }
+}
+@media screen and (min-width: 1024px) and (min-width: 240px) {
+  body {
+    max-width: 240px;
+  }
+}
+@media screen and (min-width: 1024px) and (min-width: 360px) {
+  body {
+    max-width: 360px;
+  }
+}
+@media screen and (min-width: 1024px) and (min-width: 480px) {
+  body {
+    max-width: 480px;
+  }
+}
+@media screen and (min-width: 1024px) and (min-width: 768px) {
+  body {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1024px) and (min-width: 1024px) {
+  body {
+    max-width: 1024px;
+  }
+}
+@media screen and (min-width: 1024px) and (min-width: 1440px) {
+  body {
+    max-width: 1440px;
+  }
+}
+@media screen and (min-width: 1024px) and (min-width: 1920px) {
+  body {
+    max-width: 1920px;
+  }
 }
 
 h1 {
@@ -834,7 +894,6 @@ a {
 
 .wrapper {
   margin-top: 1rem;
-  padding: 2rem;
   border: 2px solid hsl(var(--color-hsl-gray-6), 1);
   border-radius: 0.25rem;
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
@@ -865,7 +924,8 @@ a {
 .box {
   width: 82px;
   height: 82px;
-  background-color: hsl(var(--color-hsl-accent-7), 1);
+  color: hsl(var(--color-hsl-white), 1);
+  background-color: hsl(var(--color-hsl-accent-6), 1);
   border-radius: 0.25rem;
 }
 @media not screen and (prefers-reduced-motion: reduce) {
@@ -876,6 +936,17 @@ a {
     transition-delay: var(--koi-transition-delay, );
   }
 }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .box {
+    color: hsl(var(--color-hsl-black), 1);
+    background-color: hsl(var(--color-hsl-accent-7), 1);
+  }
+}
+:root[data-theme=dark] .box, :root[color-scheme=dark] .box {
+  color: hsl(var(--color-hsl-black), 1);
+  background-color: hsl(var(--color-hsl-accent-7), 1);
+}
+
 .box:hover {
   background-color: hsl(var(--color-hsl-green-6), 1);
   transform: translateY(-15%) scale(1.05);

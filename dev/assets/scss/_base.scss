@@ -26,9 +26,11 @@
 // }
 
 body {
+  @include koi.container($from: 0, $padding: true, $center: true, $max-width: false);
+  @include koi.container($from: lg, $padding: true, $center: true);
   color: var(--text-1);
   background-color: var(--surface-1);
-  padding: koi.spacing(24, 24);
+  // padding: koi.spacing(24, 24);
 }
 
 h1 {
@@ -51,7 +53,7 @@ a {
   margin-top: koi.spacing(md);
   // margin-top: koi.rem(48);
   // margin-top: koi.spacing(48);
-  padding: koi.theme(spacing, 32);
+  // padding: koi.theme(spacing, 32);
   border: 2px solid koi.fill(gray);
   border-radius: koi.radius();
   @include koi.shadow(sm);
@@ -94,9 +96,15 @@ a {
   // --koi-transition-duration: 2s;
   width: 82px;
   height: 82px;
-  background-color: koi.accent(7);
+  color: koi.fill(white);
+  background-color: koi.accent(6);
   @include koi.rounded(md);
   @include koi.transition((transform, background-color));
+
+  @include koi.dark {
+    color: koi.fill(black);
+    background-color: koi.accent(7);
+  }
 
   &:hover {
     background-color: koi.fill(green, 6);
