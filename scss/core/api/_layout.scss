@@ -6,12 +6,49 @@
 @use 'sass:meta';
 
 @use 'theme' as *;
+@use 'border' as *;
 @use 'spacing' as *;
+@use 'shadow' as *;
 @use 'media-query' as mq;
 
 // -------------------------------------
 //   Mixins
 // -------------------------------------
+
+@mixin box($color: null, $bg-color: null, $padding: null, $rounded: null, $shadow: null) {
+  color: $color;
+  background-color: $bg-color;
+
+  /* Add padding to the element, either by value, by
+    theme token or using responsive padding as fallback */
+  @if $padding {
+    @if theme-has-key(spacing, $padding) {
+      padding-left: theme(spacing, $padding);
+      padding-right: theme(spacing, $padding);
+    } @else if meta.type-of($padding) == number {
+      padding-left: $padding;
+      padding-right: $padding;
+    } @else {
+      @include responsive-padding;
+    }
+  }
+
+  @if $rounded {
+    @if theme-has-key(radius, $rounded) {
+      @include rounded($rounded);
+    } @else {
+      border-radius: $rounded;
+    }
+  }
+
+  @if $shadow {
+    @if theme-has-key(shadow, $shadow) {
+      @include shadow($shadow);
+    } @else {
+      border-radius: $rounded;
+    }
+  }
+}
 
 @mixin container($from: 0, $padding: null, $center: false, $max-width: true) {
   $from_width: if(mq.bp($from), mq.bp($from), $from);

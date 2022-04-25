@@ -1,0 +1,31 @@
+// --------------------------------
+//   Internal helpers
+// --------------------------------
+
+@use 'sass:string';
+
+@use '../api/config' as *;
+
+@function css-var-prefix($prefix: config(prefix)) {
+  $prefix: if($prefix == '', '', '#{$prefix}-');
+  @return $prefix;
+}
+
+// Returns the css custom property name given the property and key
+@function css-var-name($property, $key: null, $suffix: null) {
+  $prefix: css-var-prefix();
+  $suffix: if($suffix, '-#{$suffix}', '');
+  $key: if($property and $key, '-#{$key}', $key);
+
+  @return '--#{$prefix}#{$property}#{$suffix}#{$key}';
+}
+
+// Output a CSS var with the given name prefixed
+@function css-var($name, $fallback: null) {
+  $var-name: string.unquote(css-var-name($name));
+
+  @if $fallback {
+    @return var($var-name, $fallback);
+  }
+  @return var($var-name);
+}

@@ -328,7 +328,7 @@ html {
 }
 
 ::selection {
-  background: var(--color-accent-5);
+  background: hsl(var(--color-hsl-accent-5), 1);
   color: var(--text-1);
 }
 
@@ -893,6 +893,7 @@ a {
 }
 
 .wrapper {
+  padding: clamp(var(--koi-padding-min, 0.75rem), var(--koi-padding-value, 5%), var(--koi-padding-max, 1.5rem));
   margin-top: 1rem;
   border: 2px solid hsl(var(--color-hsl-gray-6), 1);
   border-radius: 0.25rem;
@@ -952,6 +953,16 @@ a {
   transform: translateY(-15%) scale(1.05);
 }
 
+.is-box {
+  background-color: hsl(var(--color-hsl-blue-2), 1);
+  /* Add padding to the element, either by value, by
+    theme token or using responsive padding as fallback */
+  padding: clamp(var(--koi-padding-min, 0.75rem), var(--koi-padding-value, 5%), var(--koi-padding-max, 1.5rem));
+  border-radius: 0.375rem;
+  box-shadow: 0 10px 15px -3px rgba(0 0 0 / 0.1), 0 4px 6px -2px rgba(0 0 0 / 0.05);
+  margin-block: 1rem;
+}
+
 .btn {
   font-size: 0.875rem;
   align-items: center;
@@ -970,6 +981,10 @@ a {
 }
 .btn:focus {
   outline: none;
+}
+
+.card {
+  --koi-img-ratio: 3/2;
 }
 
 .loader-1 {
@@ -993,7 +1008,7 @@ a {
 .loader-2 {
   animation: loader-2-rotate 1s linear infinite;
   border: 4px solid #fff;
-  border-bottom-color: var(--color-accent-6);
+  border-bottom-color: hsl(var(--color-hsl-accent-6), 1);
   border-radius: 50%;
   box-sizing: border-box;
   display: inline-block;
@@ -1026,7 +1041,7 @@ a {
   position: absolute;
 }
 .loader-3::after {
-  border-color: var(--color-accent-6);
+  border-color: hsl(var(--color-hsl-accent-6), 1);
   transform: rotate3d(90, 90, 0, 180deg);
 }
 @keyframes loader-3-rotate {
@@ -1061,7 +1076,7 @@ a {
 }
 .loader-4::after {
   border: 3px solid transparent;
-  border-bottom-color: var(--color-accent-6);
+  border-bottom-color: hsl(var(--color-hsl-accent-6), 1);
   border-radius: 50%;
   box-sizing: border-box;
   content: "";
@@ -1093,7 +1108,7 @@ a {
 }
 .loader-5::after {
   border: 3px solid transparent;
-  border-bottom-color: var(--color-accent-6);
+  border-bottom-color: hsl(var(--color-hsl-accent-6), 1);
   border-radius: 50%;
   box-sizing: border-box;
   content: "";

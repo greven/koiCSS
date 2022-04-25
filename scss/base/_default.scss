@@ -1,13 +1,11 @@
 @use '../core' as *;
+@use '../core/helpers/internal' as *;
 
 @mixin styles {
-  // Text selection
   ::selection {
-    background: var(--color-accent-5);
-    color: var(--text-1);
+    background: accent(5);
+    color: css-var(text-1);
   }
-
-  // Tags
 
   sub,
   sup {
@@ -31,7 +29,6 @@
   }
 
   // Forms
-
   [type='date'],
   [type='datetime'],
   [type='datetime-local'],

@@ -50,6 +50,7 @@ a {
 }
 
 .wrapper {
+  @include koi.responsive-padding;
   margin-top: koi.spacing(md);
   // margin-top: koi.rem(48);
   // margin-top: koi.spacing(48);
@@ -110,4 +111,9 @@ a {
     background-color: koi.fill(green, 6);
     transform: translateY(-15%) scale(1.05);
   }
+}
+
+.is-box {
+  @include koi.box($bg-color: koi.fill(blue, 2), $padding: true, $rounded: lg, $shadow: lg);
+  @include koi.margin-block(md);
 }

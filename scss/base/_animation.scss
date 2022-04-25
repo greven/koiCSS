@@ -3,6 +3,7 @@
 // --------------------------------
 
 @use '../core' as *;
+@use '../core/helpers/internal' as *;
 
 $custom-prop-name: animation;
 

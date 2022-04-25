@@ -1,9 +1,12 @@
 // --------------------------------
 //   Loaders / Spinners
 // --------------------------------
+
 // Source: https://github.com/vineethtrv/css-loader
 
 @use 'sass:math';
+
+@use '../core' as *;
 
 @mixin loader-1($size: 48px, $color: #fff, $thickness: 4px, $duration: 0.5s) {
   animation: loader-1-rotate $duration linear infinite;
@@ -25,7 +28,7 @@
   }
 }
 
-@mixin loader-2($size: 48px, $color: #fff, $accent: var(--color-accent-6), $thickness: 4px, $duration: 1s) {
+@mixin loader-2($size: 48px, $color: #fff, $accent: accent(6), $thickness: 4px, $duration: 1s) {
   animation: loader-2-rotate $duration linear infinite;
   border: $thickness solid $color;
   border-bottom-color: $accent;
@@ -46,7 +49,7 @@
   }
 }
 
-@mixin loader-3($size: 48px, $color: #fff, $accent: var(--color-accent-6), $thickness: 4px, $duration: 1s) {
+@mixin loader-3($size: 48px, $color: #fff, $accent: accent(6), $thickness: 4px, $duration: 1s) {
   animation: loader-3-rotate $duration linear infinite;
   border-radius: 50%;
   height: $size;
@@ -95,7 +98,7 @@
   }
 }
 
-@mixin loader-4($size: 48px, $color: #fff, $accent: var(--color-accent-6), $thickness: 3px, $duration: 1s) {
+@mixin loader-4($size: 48px, $color: #fff, $accent: accent(6), $thickness: 3px, $duration: 1s) {
   animation: loader-4-rotate $duration linear infinite;
   border: $thickness solid $color;
   border-radius: 50%;
@@ -130,7 +133,7 @@
   }
 }
 
-@mixin loader-5($size: 48px, $color: #fff, $accent: var(--color-accent-6), $thickness: 3px, $duration: 1s) {
+@mixin loader-5($size: 48px, $color: #fff, $accent: accent(6), $thickness: 3px, $duration: 1s) {
   animation: loader-5-rotate $duration linear infinite;
   border: $thickness solid $color;
   border-radius: 50%;
@@ -165,7 +168,7 @@
   }
 }
 
-@mixin loader-6($size: 48px, $color: #fff, $accent: var(--color-accent-6), $thickness: 3px, $duration: 1s) {
+@mixin loader-6($size: 48px, $color: #fff, $accent: accent(6), $thickness: 3px, $duration: 1s) {
   animation: loader-6-rotate $duration linear infinite;
   border: $thickness solid $color;
   border-radius: 50%;
@@ -200,7 +203,7 @@
   }
 }
 
-@mixin loader-7($size: 48px, $color: #fff, $accent: var(--color-accent-6), $thickness: 3px, $duration: 1s) {
+@mixin loader-7($size: 48px, $color: #fff, $accent: accent(6), $thickness: 3px, $duration: 1s) {
   animation: loader-7-rotate $duration linear infinite;
   border: $thickness solid $color;
   border-radius: 50%;

@@ -5,20 +5,8 @@
 @use 'sass:meta';
 @use 'sass:string';
 
-@use '../api/config' as *;
-@use '../helpers' as *;
-
-// --------------------------------
-//   Functions
-// --------------------------------
-
-// Returns the css custom property name given the property and key
-@function css-var-name($property, $key, $suffix: null) {
-  $prefix: if(config(prefix) == '', '', '#{config(prefix)}-');
-  $suffix: if($suffix, '-#{$suffix}', '');
-  $key: if($property and $key, '-#{$key}', $key);
-  @return '--#{$prefix}#{$property}#{$suffix}#{$key}';
-}
+@use '../helpers/internal' as *;
+@use '../helpers/color' as *;
 
 // --------------------------------
 //   Mixins

@@ -1,6 +1,8 @@
 @forward 'loader';
 @use 'button';
+@use 'card';
 
 @mixin components {
   @include button.styles();
+  @include card.styles();
 }
