@@ -7,6 +7,7 @@
 @use 'theme' as *;
 
 $-default-shade: config(fallbacks, colors);
+$-default-accent: config(fallbacks, accent);
 
 // --------------------------------
 //   Functions
@@ -21,5 +22,6 @@ $-default-shade: config(fallbacks, colors);
 }
 
 @function accent($shade: $-default-shade, $alpha: 1) {
-  @return hsl(var(--color-hsl-accent-#{$shade}), $alpha);
+  $fallback-accent: rgba(theme(colors, $-default-accent, $shade), $alpha);
+  @return hsl(var(--color-hsl-accent-#{$shade}, to-hsl($fallback-accent)), $alpha);
 }

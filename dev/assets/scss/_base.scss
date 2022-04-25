@@ -36,7 +36,7 @@ body {
 h1 {
   @include koi.text-size(4xl);
   font-family: koi.font-family(serif);
-  color: koi.accent(6);
+  color: koi.accent(4);
   //   // color: koi.fill(primary);
   //   // color: koi.fill(blue, 3);
   //   // color: koi.fill(blue, 8, 0.5);
@@ -46,7 +46,7 @@ h1 {
 }
 
 a {
-  color: koi.accent(6);
+  color: koi.accent(4);
 }
 
 .wrapper {
@@ -61,7 +61,7 @@ a {
   // background-color: koi.fill(gray, 8);
 
   &:hover {
-    border-color: koi.accent(6);
+    border-color: koi.accent(5);
     // background-color: koi.fill(gray, 1);
     // background-color: var(--surface-2);
     // @include koi.transition-colors(koi.theme(duration, slow));
@@ -78,7 +78,7 @@ a {
   align-items: center;
   gap: 24px;
   background-color: koi.fill(gray, 9);
-  border-color: koi.accent(6);
+  border-color: koi.accent(5);
 
   &:hover {
     background-color: koi.fill(gray, 8);
@@ -98,13 +98,13 @@ a {
   width: 82px;
   height: 82px;
   color: koi.fill(white);
-  background-color: koi.accent(6);
+  background-color: koi.accent(5);
   @include koi.rounded(md);
   @include koi.transition((transform, background-color));
 
   @include koi.dark {
     color: koi.fill(black);
-    background-color: koi.accent(7);
+    background-color: koi.accent(6);
   }
 
   &:hover {
@@ -116,4 +116,8 @@ a {
 .is-box {
   @include koi.box($bg-color: koi.fill(blue, 2), $padding: true, $rounded: lg, $shadow: lg);
   @include koi.margin-block(md);
+
+  @include koi.dark {
+    background-color: koi.accent(9);
+  }
 }
