@@ -34,7 +34,7 @@ $utility-classes: (
     place-content: center;
   }
 
-  /* Heap / Stacked elements
+  /* Heap: Stacked elements
   Credits: https://smolcss.dev/#smol-stack-layout */
   @include create-responsive-utility(heap) {
     display: grid;
