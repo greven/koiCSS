@@ -1,6 +1,9 @@
 // Your custom KoiCSS overwrites
 
 @use 'koi' with (
+  $config: (
+    spacer: 1rem,
+  ),
   $theme: (
     colors: (
       primary: #00ffcc,

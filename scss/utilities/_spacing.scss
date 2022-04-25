@@ -4,8 +4,7 @@
 
 @use '../core' as *;
 
-// TODO: Stack; container; display; floats; clear (see others in tailwind, etc).
-// Also: https://1linelayouts.glitch.me/ (centered, etc).
+// TODO: space-x-4, space-y-8, mt-4, etc...
 
 @mixin utilities {
   // @include generate-utility();

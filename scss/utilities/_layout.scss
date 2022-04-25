@@ -3,9 +3,7 @@
 // --------------------------------
 
 @use '../core/generators' as *;
-
-// TODO: Stack; container; display; floats; clear (see others in tailwind, etc).
-// Also: https://1linelayouts.glitch.me/ (centered, etc).
+@use '../core' as *;
 
 $utility-classes: (
   'display': (
@@ -29,4 +27,87 @@ $utility-classes: (
 
 @mixin utilities {
   @include generate-utilities($utility-classes);
+
+  // Centered content using grid place-content
+  @include create-responsive-utility(centered) {
+    display: grid;
+    place-content: center;
+  }
+
+  /* Heap / Stacked elements
+  Credits: https://smolcss.dev/#smol-stack-layout */
+  @include create-responsive-utility(heap) {
+    display: grid;
+    grid-template-areas: 'stack';
+
+    & > * {
+      grid-area: stack;
+    }
+  }
+
+  @include create-responsive-utility(stack-x) {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    & > * {
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+
+    & > * + * {
+      margin-left: var(--space, spacing(md));
+      margin-right: 0;
+    }
+  }
+
+  @include create-responsive-utility(stack-x-reverse) {
+    align-items: center;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+
+    & > * {
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+
+    & > * + * {
+      margin-left: 0;
+      margin-right: var(--space, spacing(md));
+    }
+  }
+
+  @include create-responsive-utility(stack-y) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    & > * {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    & > * + * {
+      margin-bottom: 0;
+      margin-top: var(--space, spacing(md));
+    }
+  }
+
+  @include create-responsive-utility(stack-y-reverse) {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+
+    & > * {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    & > * + * {
+      margin-bottom: var(--space, spacing(md));
+      margin-top: 0;
+    }
+  }
 }

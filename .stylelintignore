@@ -9,3 +9,6 @@ scss/reset/_normalize.scss
 
 # Generators
 scss/core/generators/
+
+# Utilities
+scss/utilities

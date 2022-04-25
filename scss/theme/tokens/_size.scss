@@ -4,10 +4,13 @@
 
 @use 'sass:map';
 
+@use '../../config' as *;
 @use '../../core/helpers/unit' as *;
 
-// Spacing (marging, padding)
-$spacing: (
+$spacer: map.get($config, spacer);
+
+// Base spacing system
+$-spacing-scale: (
   1: rem(1),
   2: rem(2),
   4: rem(4),
@@ -43,19 +46,27 @@ $spacing: (
   384: rem(384),
   448: rem(448),
   512: rem(512),
-  576: rem(576),
-  640: rem(640),
-  768: rem(768),
-  896: rem(896),
-  1024: rem(1024),
-  1152: rem(1152),
-  1280: rem(1280),
-  1536: rem(1536),
-) !default;
+);
+
+// Spacing (marging, padding)
+$spacing: map.merge(
+  $-spacing-scale,
+  (
+    2xs: $spacer * 0.125,
+    xs: $spacer * 0.25,
+    sm: $spacer * 0.5,
+    md: $spacer,
+    lg: $spacer * 1.5,
+    xl: $spacer * 3,
+    2xl: $spacer * 4,
+    3xl: $spacer * 5,
+    4xl: $spacer * 10,
+  )
+);
 
 // Sizes (width, height...)
 $sizes: map.merge(
-  $spacing,
+  $-spacing-scale,
   (
     '1/2': 50%,
     '1/3': 33.333333%,

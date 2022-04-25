@@ -48,7 +48,9 @@ a {
 }
 
 .wrapper {
-  margin-top: koi.rem(24);
+  margin-top: koi.spacing(md);
+  // margin-top: koi.rem(48);
+  // margin-top: koi.spacing(48);
   padding: koi.theme(spacing, 32);
   border: 2px solid koi.fill(gray);
   border-radius: koi.radius();
@@ -56,7 +58,7 @@ a {
   // background-color: koi.fill(gray, 8);
 
   &:hover {
-    // border-color: koi.accent(6);
+    border-color: koi.accent(6);
     // background-color: koi.fill(gray, 1);
     // background-color: var(--surface-2);
     // @include koi.transition-colors(koi.theme(duration, slow));
@@ -82,4 +84,15 @@ a {
 
 .text {
   line-height: koi.leading(relaxed);
+}
+
+.the-stack {
+  --space: 1.5rem;
+}
+
+.box {
+  width: 82px;
+  height: 82px;
+  background-color: #20b2aa;
+  @include koi.rounded(md);
 }

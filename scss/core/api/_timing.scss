@@ -5,11 +5,13 @@
 @use 'config' as *;
 @use 'theme' as *;
 
+$-default-timing: config(fallbacks, timing);
+
 // --------------------------------
 //   Functions
 // --------------------------------
 
-@function timing($timing: config(fallbacks, timing)) {
+@function timing($timing: $-default-timing) {
   @return theme(timing, $timing);
 }
 
@@ -17,10 +19,10 @@
 //   Mixins
 // --------------------------------
 
-@mixin animation-timing($timing: config(fallbacks, timing)) {
+@mixin animation-timing($timing: $-default-timing) {
   animation-timing: timing($timing);
 }
 
-@mixin transition-timing($timing: config(fallbacks, timing)) {
+@mixin transition-timing($timing: $-default-timing) {
   transition-timing: timing($timing);
 }

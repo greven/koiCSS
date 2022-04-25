@@ -45,7 +45,7 @@
     }
   }
 
-  @at-root #{selector-nest(':root[data-theme=#{$color-scheme}], :root[color-scheme=#{$color-scheme}]', &)} {
+  @at-root #{selector.nest(':root[data-theme=#{$color-scheme}], :root[color-scheme=#{$color-scheme}]', &)} {
     @content;
   }
 }
