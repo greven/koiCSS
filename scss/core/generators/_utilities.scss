@@ -12,29 +12,8 @@
 @use '../api/theme' as *;
 @use '../helpers' as *;
 
-// Create a single responsive utility
-@mixin create-responsive-utility($class) {
-  $class: str-escape($class);
-  $util-glue: config(utility-glue);
-  $breakpoints: theme(screens);
-
-  .#{$class} {
-    @content;
-  }
-
-  @each $breakpoint, $-value in $breakpoints {
-    $infix: str-escape(#{'' + $breakpoint + $util-glue});
-
-    @include mq.from($breakpoint) {
-      .#{$infix + $class} {
-        @content;
-      }
-    }
-  }
-}
-
 // Create multiple utilities from an utility map.
-@mixin utility-class($utility-map, $breakpoint: null) {
+@mixin -utility-class($utility-map, $breakpoint: null) {
   $prefix: config(prefix) + '-';
   $util-glue: config(utility-glue);
   $values: map.get($utility-map, values);
@@ -84,7 +63,7 @@
 @mixin generate-utilities($utilities) {
   // Generate standard utilities first
   @each $key, $utility in $utilities {
-    @include utility-class($utility);
+    @include -utility-class($utility);
   }
 
   // Maybe generate responsive utilities
@@ -92,8 +71,30 @@
     @include mq.from($breakpoint) {
       @each $key, $utility in $utilities {
         @if map.get($utility, responsive) {
-          @include utility-class($utility, $breakpoint);
+          @include -utility-class($utility, $breakpoint);
         }
+      }
+    }
+  }
+}
+
+// Create a single responsive utility
+@mixin create-responsive-utility($class) {
+  $class: str-escape($class);
+  $util-glue: config(utility-glue);
+
+  // Create standard utility first
+  .#{$class} {
+    @content;
+  }
+
+  // Create responsive modifiers
+  @each $breakpoint, $-value in theme(screens) {
+    $infix: str-escape(#{'' + $breakpoint + $util-glue});
+
+    @include mq.from($breakpoint) {
+      .#{$infix + $class} {
+        @content;
       }
     }
   }
