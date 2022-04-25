@@ -33,29 +33,17 @@ $-default-properties: (
 // --------------------------------
 
 @mixin transition(
-  $property: null,
+  $property: transform,
   $duration: $-default-duration,
   $timing-function: $-default-timing-function,
   $delay: null
 ) {
   @include media.prefers-reduced-motion(null) {
-    @if $property {
-      transition-property: $property;
-    }
-    @if $duration {
-      transition-duration: $duration;
-    }
-    @if $timing-function {
-      transition-timing-function: $timing-function;
-    }
-    @if $delay {
-      transition-delay: $delay;
-    }
+    transition-property: var(--koi-transition-property, $property);
+    transition-duration: var(--koi-transition-duration, $duration);
+    transition-timing-function: var(--koi-transition-timing-function, $timing-function);
+    transition-delay: var(--koi-transition-delay, $delay);
   }
-}
-
-@mixin transition-default($duration: $-default-duration, $timing-function: $-default-timing-function, $delay: null) {
-  @include transition($default-properties, $duration, $timing-function, $delay);
 }
 
 @mixin transition-all($duration: $-default-duration, $timing-function: $-default-timing-function, $delay: null) {

@@ -5,12 +5,20 @@
   box-sizing: border-box;
 }
 
-/* Remove default margin */
+/* Remove default margin, padding and border */
 * {
+  border: 0 solid transparent;
   margin: 0;
+  padding: 0;
 }
 
-/* Core root defaults */
+/* Core root defaults
+[1] - prevent iOS font size change
+*/
+html {
+  text-size-adjust: 100%;
+}
+
 html:focus-within {
   scroll-behavior: smooth;
 }
@@ -20,6 +28,7 @@ body {
   -webkit-font-smoothing: antialiased;
   line-height: 1.5;
   min-height: 100vh;
+  text-rendering: optimizeSpeed;
 }
 
 /* Avoid text overflow */
@@ -75,7 +84,79 @@ input,
 button,
 textarea,
 select {
+  color: inherit;
   font: inherit;
+  line-height: inherit;
+}
+
+/* Reset text input styles */
+[type=date],
+[type=datetime],
+[type=datetime-local],
+[type=email],
+[type=month],
+[type=number],
+[type=password],
+[type=search],
+[type=tel],
+[type=text],
+[type=time],
+[type=url],
+[type=week],
+textarea,
+select {
+  appearance: none;
+  appearance: none;
+  appearance: none;
+  width: 100%;
+}
+[type=date]:focus,
+[type=datetime]:focus,
+[type=datetime-local]:focus,
+[type=email]:focus,
+[type=month]:focus,
+[type=number]:focus,
+[type=password]:focus,
+[type=search]:focus,
+[type=tel]:focus,
+[type=text]:focus,
+[type=time]:focus,
+[type=url]:focus,
+[type=week]:focus,
+textarea:focus,
+select:focus {
+  outline: 0;
+}
+
+/* Reset checkbox and radio styles */
+[type=checkbox],
+[type=radio] {
+  appearance: none;
+  appearance: none;
+  appearance: none;
+}
+[type=checkbox]:focus,
+[type=radio]:focus {
+  outline: 0;
+}
+
+/* Reset firefox placeholder opacity */
+::-moz-placeholder {
+  opacity: 1;
+}
+
+/* Collapse table */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Unstyle anchors */
+a {
+  color: inherit;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: inherit;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
@@ -95,61 +176,61 @@ select {
 }
 html {
   /*! purgecss start ignore */
-  --surface-1-light: #f8fafc;
-  --surface-1-hsl-light: 210deg, 40%, 98.0392156863%;
+  --surface-1-light: #fafafa;
+  --surface-1-hsl-light: 0deg, 0%, 98.0392156863%;
   --surface-2-light: #fff;
   --surface-2-hsl-light: 0deg, 0%, 100%;
-  --surface-3-light: #f1f5f9;
-  --surface-3-hsl-light: 210deg, 40%, 96.0784313725%;
-  --surface-4-light: #e2e8f0;
-  --surface-4-hsl-light: 214.2857142857deg, 31.8181818182%, 91.3725490196%;
-  --text-1-light: #0f172a;
-  --text-1-hsl-light: 222.2222222222deg, 47.3684210526%, 11.1764705882%;
-  --text-2-light: #1e293b;
-  --text-2-hsl-light: 217.2413793103deg, 32.5842696629%, 17.4509803922%;
-  --text-3-light: #334155;
-  --text-3-hsl-light: 215.2941176471deg, 25%, 26.6666666667%;
-  --text-4-light: #475569;
-  --text-4-hsl-light: 215.2941176471deg, 19.3181818182%, 34.5098039216%;
+  --surface-3-light: #f5f5f5;
+  --surface-3-hsl-light: 0deg, 0%, 96.0784313725%;
+  --surface-4-light: #e5e5e5;
+  --surface-4-hsl-light: 0deg, 0%, 89.8039215686%;
+  --text-1-light: #171717;
+  --text-1-hsl-light: 0deg, 0%, 9.0196078431%;
+  --text-2-light: #262626;
+  --text-2-hsl-light: 0deg, 0%, 14.9019607843%;
+  --text-3-light: #404040;
+  --text-3-hsl-light: 0deg, 0%, 25.0980392157%;
+  --text-4-light: #525252;
+  --text-4-hsl-light: 0deg, 0%, 32.1568627451%;
   /*! purgecss end ignore */
   /*! purgecss start ignore */
-  --surface-1-dark: #0f172a;
-  --surface-1-hsl-dark: 222.2222222222deg, 47.3684210526%, 11.1764705882%;
-  --surface-2-dark: #1e293b;
-  --surface-2-hsl-dark: 217.2413793103deg, 32.5842696629%, 17.4509803922%;
-  --surface-3-dark: #334155;
-  --surface-3-hsl-dark: 215.2941176471deg, 25%, 26.6666666667%;
-  --surface-4-dark: #475569;
-  --surface-4-hsl-dark: 215.2941176471deg, 19.3181818182%, 34.5098039216%;
-  --text-1-dark: #f8fafc;
-  --text-1-hsl-dark: 210deg, 40%, 98.0392156863%;
-  --text-2-dark: #f1f5f9;
-  --text-2-hsl-dark: 210deg, 40%, 96.0784313725%;
-  --text-3-dark: #e2e8f0;
-  --text-3-hsl-dark: 214.2857142857deg, 31.8181818182%, 91.3725490196%;
-  --text-4-dark: #cbd5e1;
-  --text-4-hsl-dark: 212.7272727273deg, 26.8292682927%, 83.9215686275%;
+  --surface-1-dark: #171717;
+  --surface-1-hsl-dark: 0deg, 0%, 9.0196078431%;
+  --surface-2-dark: #262626;
+  --surface-2-hsl-dark: 0deg, 0%, 14.9019607843%;
+  --surface-3-dark: #404040;
+  --surface-3-hsl-dark: 0deg, 0%, 25.0980392157%;
+  --surface-4-dark: #525252;
+  --surface-4-hsl-dark: 0deg, 0%, 32.1568627451%;
+  --text-1-dark: #fafafa;
+  --text-1-hsl-dark: 0deg, 0%, 98.0392156863%;
+  --text-2-dark: #f5f5f5;
+  --text-2-hsl-dark: 0deg, 0%, 96.0784313725%;
+  --text-3-dark: #e5e5e5;
+  --text-3-hsl-dark: 0deg, 0%, 89.8039215686%;
+  --text-4-dark: #d4d4d4;
+  --text-4-hsl-dark: 0deg, 0%, 83.137254902%;
   /*! purgecss end ignore */
 }
 
 :root {
   /*! purgecss start ignore */
-  --surface-1: #f8fafc;
-  --surface-1-hsl: 210deg, 40%, 98.0392156863%;
+  --surface-1: #fafafa;
+  --surface-1-hsl: 0deg, 0%, 98.0392156863%;
   --surface-2: #fff;
   --surface-2-hsl: 0deg, 0%, 100%;
-  --surface-3: #f1f5f9;
-  --surface-3-hsl: 210deg, 40%, 96.0784313725%;
-  --surface-4: #e2e8f0;
-  --surface-4-hsl: 214.2857142857deg, 31.8181818182%, 91.3725490196%;
-  --text-1: #0f172a;
-  --text-1-hsl: 222.2222222222deg, 47.3684210526%, 11.1764705882%;
-  --text-2: #1e293b;
-  --text-2-hsl: 217.2413793103deg, 32.5842696629%, 17.4509803922%;
-  --text-3: #334155;
-  --text-3-hsl: 215.2941176471deg, 25%, 26.6666666667%;
-  --text-4: #475569;
-  --text-4-hsl: 215.2941176471deg, 19.3181818182%, 34.5098039216%;
+  --surface-3: #f5f5f5;
+  --surface-3-hsl: 0deg, 0%, 96.0784313725%;
+  --surface-4: #e5e5e5;
+  --surface-4-hsl: 0deg, 0%, 89.8039215686%;
+  --text-1: #171717;
+  --text-1-hsl: 0deg, 0%, 9.0196078431%;
+  --text-2: #262626;
+  --text-2-hsl: 0deg, 0%, 14.9019607843%;
+  --text-3: #404040;
+  --text-3-hsl: 0deg, 0%, 25.0980392157%;
+  --text-4: #525252;
+  --text-4-hsl: 0deg, 0%, 32.1568627451%;
   /*! purgecss end ignore */
   color-scheme: light;
 }
@@ -157,22 +238,22 @@ html {
 @media (prefers-color-scheme: light) {
   :root {
     /*! purgecss start ignore */
-    --surface-1: #f8fafc;
-    --surface-1-hsl: 210deg, 40%, 98.0392156863%;
+    --surface-1: #fafafa;
+    --surface-1-hsl: 0deg, 0%, 98.0392156863%;
     --surface-2: #fff;
     --surface-2-hsl: 0deg, 0%, 100%;
-    --surface-3: #f1f5f9;
-    --surface-3-hsl: 210deg, 40%, 96.0784313725%;
-    --surface-4: #e2e8f0;
-    --surface-4-hsl: 214.2857142857deg, 31.8181818182%, 91.3725490196%;
-    --text-1: #0f172a;
-    --text-1-hsl: 222.2222222222deg, 47.3684210526%, 11.1764705882%;
-    --text-2: #1e293b;
-    --text-2-hsl: 217.2413793103deg, 32.5842696629%, 17.4509803922%;
-    --text-3: #334155;
-    --text-3-hsl: 215.2941176471deg, 25%, 26.6666666667%;
-    --text-4: #475569;
-    --text-4-hsl: 215.2941176471deg, 19.3181818182%, 34.5098039216%;
+    --surface-3: #f5f5f5;
+    --surface-3-hsl: 0deg, 0%, 96.0784313725%;
+    --surface-4: #e5e5e5;
+    --surface-4-hsl: 0deg, 0%, 89.8039215686%;
+    --text-1: #171717;
+    --text-1-hsl: 0deg, 0%, 9.0196078431%;
+    --text-2: #262626;
+    --text-2-hsl: 0deg, 0%, 14.9019607843%;
+    --text-3: #404040;
+    --text-3-hsl: 0deg, 0%, 25.0980392157%;
+    --text-4: #525252;
+    --text-4-hsl: 0deg, 0%, 32.1568627451%;
     /*! purgecss end ignore */
     color-scheme: light;
   }
@@ -180,22 +261,22 @@ html {
 @media (prefers-color-scheme: dark) {
   :root {
     /*! purgecss start ignore */
-    --surface-1: #0f172a;
-    --surface-1-hsl: 222.2222222222deg, 47.3684210526%, 11.1764705882%;
-    --surface-2: #1e293b;
-    --surface-2-hsl: 217.2413793103deg, 32.5842696629%, 17.4509803922%;
-    --surface-3: #334155;
-    --surface-3-hsl: 215.2941176471deg, 25%, 26.6666666667%;
-    --surface-4: #475569;
-    --surface-4-hsl: 215.2941176471deg, 19.3181818182%, 34.5098039216%;
-    --text-1: #f8fafc;
-    --text-1-hsl: 210deg, 40%, 98.0392156863%;
-    --text-2: #f1f5f9;
-    --text-2-hsl: 210deg, 40%, 96.0784313725%;
-    --text-3: #e2e8f0;
-    --text-3-hsl: 214.2857142857deg, 31.8181818182%, 91.3725490196%;
-    --text-4: #cbd5e1;
-    --text-4-hsl: 212.7272727273deg, 26.8292682927%, 83.9215686275%;
+    --surface-1: #171717;
+    --surface-1-hsl: 0deg, 0%, 9.0196078431%;
+    --surface-2: #262626;
+    --surface-2-hsl: 0deg, 0%, 14.9019607843%;
+    --surface-3: #404040;
+    --surface-3-hsl: 0deg, 0%, 25.0980392157%;
+    --surface-4: #525252;
+    --surface-4-hsl: 0deg, 0%, 32.1568627451%;
+    --text-1: #fafafa;
+    --text-1-hsl: 0deg, 0%, 98.0392156863%;
+    --text-2: #f5f5f5;
+    --text-2-hsl: 0deg, 0%, 96.0784313725%;
+    --text-3: #e5e5e5;
+    --text-3-hsl: 0deg, 0%, 89.8039215686%;
+    --text-4: #d4d4d4;
+    --text-4-hsl: 0deg, 0%, 83.137254902%;
     /*! purgecss end ignore */
     color-scheme: dark;
   }
@@ -203,22 +284,22 @@ html {
 [color-scheme=light],
 [data-theme=light] {
   /*! purgecss start ignore */
-  --surface-1: #f8fafc;
-  --surface-1-hsl: 210deg, 40%, 98.0392156863%;
+  --surface-1: #fafafa;
+  --surface-1-hsl: 0deg, 0%, 98.0392156863%;
   --surface-2: #fff;
   --surface-2-hsl: 0deg, 0%, 100%;
-  --surface-3: #f1f5f9;
-  --surface-3-hsl: 210deg, 40%, 96.0784313725%;
-  --surface-4: #e2e8f0;
-  --surface-4-hsl: 214.2857142857deg, 31.8181818182%, 91.3725490196%;
-  --text-1: #0f172a;
-  --text-1-hsl: 222.2222222222deg, 47.3684210526%, 11.1764705882%;
-  --text-2: #1e293b;
-  --text-2-hsl: 217.2413793103deg, 32.5842696629%, 17.4509803922%;
-  --text-3: #334155;
-  --text-3-hsl: 215.2941176471deg, 25%, 26.6666666667%;
-  --text-4: #475569;
-  --text-4-hsl: 215.2941176471deg, 19.3181818182%, 34.5098039216%;
+  --surface-3: #f5f5f5;
+  --surface-3-hsl: 0deg, 0%, 96.0784313725%;
+  --surface-4: #e5e5e5;
+  --surface-4-hsl: 0deg, 0%, 89.8039215686%;
+  --text-1: #171717;
+  --text-1-hsl: 0deg, 0%, 9.0196078431%;
+  --text-2: #262626;
+  --text-2-hsl: 0deg, 0%, 14.9019607843%;
+  --text-3: #404040;
+  --text-3-hsl: 0deg, 0%, 25.0980392157%;
+  --text-4: #525252;
+  --text-4-hsl: 0deg, 0%, 32.1568627451%;
   /*! purgecss end ignore */
   color-scheme: light;
 }
@@ -226,22 +307,22 @@ html {
 [color-scheme=dark],
 [data-theme=dark] {
   /*! purgecss start ignore */
-  --surface-1: #0f172a;
-  --surface-1-hsl: 222.2222222222deg, 47.3684210526%, 11.1764705882%;
-  --surface-2: #1e293b;
-  --surface-2-hsl: 217.2413793103deg, 32.5842696629%, 17.4509803922%;
-  --surface-3: #334155;
-  --surface-3-hsl: 215.2941176471deg, 25%, 26.6666666667%;
-  --surface-4: #475569;
-  --surface-4-hsl: 215.2941176471deg, 19.3181818182%, 34.5098039216%;
-  --text-1: #f8fafc;
-  --text-1-hsl: 210deg, 40%, 98.0392156863%;
-  --text-2: #f1f5f9;
-  --text-2-hsl: 210deg, 40%, 96.0784313725%;
-  --text-3: #e2e8f0;
-  --text-3-hsl: 214.2857142857deg, 31.8181818182%, 91.3725490196%;
-  --text-4: #cbd5e1;
-  --text-4-hsl: 212.7272727273deg, 26.8292682927%, 83.9215686275%;
+  --surface-1: #171717;
+  --surface-1-hsl: 0deg, 0%, 9.0196078431%;
+  --surface-2: #262626;
+  --surface-2-hsl: 0deg, 0%, 14.9019607843%;
+  --surface-3: #404040;
+  --surface-3-hsl: 0deg, 0%, 25.0980392157%;
+  --surface-4: #525252;
+  --surface-4-hsl: 0deg, 0%, 32.1568627451%;
+  --text-1: #fafafa;
+  --text-1-hsl: 0deg, 0%, 98.0392156863%;
+  --text-2: #f5f5f5;
+  --text-2-hsl: 0deg, 0%, 96.0784313725%;
+  --text-3: #e5e5e5;
+  --text-3-hsl: 0deg, 0%, 89.8039215686%;
+  --text-4: #d4d4d4;
+  --text-4-hsl: 0deg, 0%, 83.137254902%;
   /*! purgecss end ignore */
   color-scheme: dark;
 }
@@ -249,6 +330,79 @@ html {
 ::selection {
   background: var(--color-accent-5);
   color: var(--text-1);
+}
+
+sub,
+sup {
+  font-size: 0.75em;
+  position: relative;
+}
+
+sub {
+  bottom: -0.25em;
+  left: 0.25em;
+}
+
+sup {
+  left: 0.25em;
+  top: -0.5em;
+}
+
+pre,
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+[type=date],
+[type=datetime],
+[type=datetime-local],
+[type=email],
+[type=month],
+[type=number],
+[type=password],
+[type=search],
+[type=tel],
+[type=text],
+[type=time],
+[type=url],
+[type=week],
+textarea,
+select {
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 0.5em 0.75em;
+}
+
+[type=checkbox],
+[type=radio] {
+  height: 1em;
+  width: 1em;
+}
+[type=checkbox]:checked,
+[type=radio]:checked {
+  background-color: currentColor;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-color: transparent;
+}
+
+[type=checkbox]:checked {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
+}
+
+[type=radio] {
+  border-radius: 9999px;
+}
+[type=radio]:checked {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='white'/%3e%3c/svg%3e");
+}
+
+select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+  background-position: right 0.75em center;
+  background-repeat: no-repeat;
+  background-size: 16px 12px;
 }
 
 body {
@@ -279,26 +433,26 @@ body {
   --color-hsl-white: 0deg, 0%, 100%;
   --color-black: #000;
   --color-hsl-black: 0deg, 0%, 0%;
-  --color-gray-0: #f8fafc;
-  --color-hsl-gray-0: 210deg, 40%, 98.0392156863%;
-  --color-gray-1: #f1f5f9;
-  --color-hsl-gray-1: 210deg, 40%, 96.0784313725%;
-  --color-gray-2: #e2e8f0;
-  --color-hsl-gray-2: 214.2857142857deg, 31.8181818182%, 91.3725490196%;
-  --color-gray-3: #cbd5e1;
-  --color-hsl-gray-3: 212.7272727273deg, 26.8292682927%, 83.9215686275%;
-  --color-gray-4: #94a3b8;
-  --color-hsl-gray-4: 215deg, 20.2247191011%, 65.0980392157%;
-  --color-gray-5: #64748b;
-  --color-hsl-gray-5: 215.3846153846deg, 16.3179916318%, 46.862745098%;
-  --color-gray-6: #475569;
-  --color-hsl-gray-6: 215.2941176471deg, 19.3181818182%, 34.5098039216%;
-  --color-gray-7: #334155;
-  --color-hsl-gray-7: 215.2941176471deg, 25%, 26.6666666667%;
-  --color-gray-8: #1e293b;
-  --color-hsl-gray-8: 217.2413793103deg, 32.5842696629%, 17.4509803922%;
-  --color-gray-9: #0f172a;
-  --color-hsl-gray-9: 222.2222222222deg, 47.3684210526%, 11.1764705882%;
+  --color-gray-0: #fafafa;
+  --color-hsl-gray-0: 0deg, 0%, 98.0392156863%;
+  --color-gray-1: #f5f5f5;
+  --color-hsl-gray-1: 0deg, 0%, 96.0784313725%;
+  --color-gray-2: #e5e5e5;
+  --color-hsl-gray-2: 0deg, 0%, 89.8039215686%;
+  --color-gray-3: #d4d4d4;
+  --color-hsl-gray-3: 0deg, 0%, 83.137254902%;
+  --color-gray-4: #a3a3a3;
+  --color-hsl-gray-4: 0deg, 0%, 63.9215686275%;
+  --color-gray-5: #737373;
+  --color-hsl-gray-5: 0deg, 0%, 45.0980392157%;
+  --color-gray-6: #525252;
+  --color-hsl-gray-6: 0deg, 0%, 32.1568627451%;
+  --color-gray-7: #404040;
+  --color-hsl-gray-7: 0deg, 0%, 25.0980392157%;
+  --color-gray-8: #262626;
+  --color-hsl-gray-8: 0deg, 0%, 14.9019607843%;
+  --color-gray-9: #171717;
+  --color-hsl-gray-9: 0deg, 0%, 9.0196078431%;
   --color-red-0: #fef2f2;
   --color-hsl-red-0: 0deg, 85.7142857143%, 97.2549019608%;
   --color-red-1: #fee2e2;
@@ -398,26 +552,26 @@ body {
   --color-hsl-accent: 0deg, 0%, 0%;
 }
 :root .accent-gray {
-  --color-accent-0: #f8fafc;
-  --color-hsl-accent-0: 210deg, 40%, 98.0392156863%;
-  --color-accent-1: #f1f5f9;
-  --color-hsl-accent-1: 210deg, 40%, 96.0784313725%;
-  --color-accent-2: #e2e8f0;
-  --color-hsl-accent-2: 214.2857142857deg, 31.8181818182%, 91.3725490196%;
-  --color-accent-3: #cbd5e1;
-  --color-hsl-accent-3: 212.7272727273deg, 26.8292682927%, 83.9215686275%;
-  --color-accent-4: #94a3b8;
-  --color-hsl-accent-4: 215deg, 20.2247191011%, 65.0980392157%;
-  --color-accent-5: #64748b;
-  --color-hsl-accent-5: 215.3846153846deg, 16.3179916318%, 46.862745098%;
-  --color-accent-6: #475569;
-  --color-hsl-accent-6: 215.2941176471deg, 19.3181818182%, 34.5098039216%;
-  --color-accent-7: #334155;
-  --color-hsl-accent-7: 215.2941176471deg, 25%, 26.6666666667%;
-  --color-accent-8: #1e293b;
-  --color-hsl-accent-8: 217.2413793103deg, 32.5842696629%, 17.4509803922%;
-  --color-accent-9: #0f172a;
-  --color-hsl-accent-9: 222.2222222222deg, 47.3684210526%, 11.1764705882%;
+  --color-accent-0: #fafafa;
+  --color-hsl-accent-0: 0deg, 0%, 98.0392156863%;
+  --color-accent-1: #f5f5f5;
+  --color-hsl-accent-1: 0deg, 0%, 96.0784313725%;
+  --color-accent-2: #e5e5e5;
+  --color-hsl-accent-2: 0deg, 0%, 89.8039215686%;
+  --color-accent-3: #d4d4d4;
+  --color-hsl-accent-3: 0deg, 0%, 83.137254902%;
+  --color-accent-4: #a3a3a3;
+  --color-hsl-accent-4: 0deg, 0%, 63.9215686275%;
+  --color-accent-5: #737373;
+  --color-hsl-accent-5: 0deg, 0%, 45.0980392157%;
+  --color-accent-6: #525252;
+  --color-hsl-accent-6: 0deg, 0%, 32.1568627451%;
+  --color-accent-7: #404040;
+  --color-hsl-accent-7: 0deg, 0%, 25.0980392157%;
+  --color-accent-8: #262626;
+  --color-hsl-accent-8: 0deg, 0%, 14.9019607843%;
+  --color-accent-9: #171717;
+  --color-hsl-accent-9: 0deg, 0%, 9.0196078431%;
 }
 :root .accent-red {
   --color-accent-0: #fef2f2;
@@ -538,7 +692,7 @@ body {
 }
 
 :root {
-  --shadow-xs: 0 1px 2px 0 rgba(0 0 0 /0.05);
+  --shadow-xs: 0 1px 2px 0 rgba(0 0 0 / 0.05);
   --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --shadow-md: 0 4px 6px -1px rgba(0 0 0 / 0.1), 0 2px 4px -1px rgba(0 0 0 / 0.06);
   --shadow-lg: 0 10px 15px -3px rgba(0 0 0 / 0.1), 0 4px 6px -2px rgba(0 0 0 / 0.05);
@@ -705,14 +859,26 @@ a {
 }
 
 .the-stack {
-  --space: 1.5rem;
+  --koi-spacer: 1.5rem;
 }
 
 .box {
   width: 82px;
   height: 82px;
-  background-color: #20b2aa;
+  background-color: hsl(var(--color-hsl-accent-7), 1);
   border-radius: 0.25rem;
+}
+@media not screen and (prefers-reduced-motion: reduce) {
+  .box {
+    transition-property: var(--koi-transition-property, transform, background-color);
+    transition-duration: var(--koi-transition-duration, 200ms);
+    transition-timing-function: var(--koi-transition-timing-function, cubic-bezier(0.25, 0.1, 0.25, 1));
+    transition-delay: var(--koi-transition-delay, );
+  }
+}
+.box:hover {
+  background-color: hsl(var(--color-hsl-green-6), 1);
+  transform: translateY(-15%) scale(1.05);
 }
 
 .btn {
@@ -1372,7 +1538,7 @@ a {
     place-content: center;
   }
 }
-/* Heap / Stacked elements
+/* Heap: Stacked elements
 Credits: https://smolcss.dev/#smol-stack-layout */
 .heap {
   display: grid;
@@ -1456,7 +1622,7 @@ Credits: https://smolcss.dev/#smol-stack-layout */
   margin-top: 0;
 }
 .stack-x > * + * {
-  margin-left: var(--space, 1rem);
+  margin-left: var(--koi-spacer, 1rem);
   margin-right: 0;
 }
 
@@ -1472,7 +1638,7 @@ Credits: https://smolcss.dev/#smol-stack-layout */
     margin-top: 0;
   }
   .\32 xs\:stack-x > * + * {
-    margin-left: var(--space, 1rem);
+    margin-left: var(--koi-spacer, 1rem);
     margin-right: 0;
   }
 }
@@ -1488,7 +1654,7 @@ Credits: https://smolcss.dev/#smol-stack-layout */
     margin-top: 0;
   }
   .xs\:stack-x > * + * {
-    margin-left: var(--space, 1rem);
+    margin-left: var(--koi-spacer, 1rem);
     margin-right: 0;
   }
 }
@@ -1504,7 +1670,7 @@ Credits: https://smolcss.dev/#smol-stack-layout */
     margin-top: 0;
   }
   .sm\:stack-x > * + * {
-    margin-left: var(--space, 1rem);
+    margin-left: var(--koi-spacer, 1rem);
     margin-right: 0;
   }
 }
@@ -1520,7 +1686,7 @@ Credits: https://smolcss.dev/#smol-stack-layout */
     margin-top: 0;
   }
   .md\:stack-x > * + * {
-    margin-left: var(--space, 1rem);
+    margin-left: var(--koi-spacer, 1rem);
     margin-right: 0;
   }
 }
@@ -1536,7 +1702,7 @@ Credits: https://smolcss.dev/#smol-stack-layout */
     margin-top: 0;
   }
   .lg\:stack-x > * + * {
-    margin-left: var(--space, 1rem);
+    margin-left: var(--koi-spacer, 1rem);
     margin-right: 0;
   }
 }
@@ -1552,7 +1718,7 @@ Credits: https://smolcss.dev/#smol-stack-layout */
     margin-top: 0;
   }
   .xl\:stack-x > * + * {
-    margin-left: var(--space, 1rem);
+    margin-left: var(--koi-spacer, 1rem);
     margin-right: 0;
   }
 }
@@ -1568,7 +1734,7 @@ Credits: https://smolcss.dev/#smol-stack-layout */
     margin-top: 0;
   }
   .\32 xl\:stack-x > * + * {
-    margin-left: var(--space, 1rem);
+    margin-left: var(--koi-spacer, 1rem);
     margin-right: 0;
   }
 }
@@ -1584,7 +1750,7 @@ Credits: https://smolcss.dev/#smol-stack-layout */
 }
 .stack-x-reverse > * + * {
   margin-left: 0;
-  margin-right: var(--space, 1rem);
+  margin-right: var(--koi-spacer, 1rem);
 }
 
 @media screen and (min-width: 240px) {
@@ -1600,7 +1766,7 @@ Credits: https://smolcss.dev/#smol-stack-layout */
   }
   .\32 xs\:stack-x-reverse > * + * {
     margin-left: 0;
-    margin-right: var(--space, 1rem);
+    margin-right: var(--koi-spacer, 1rem);
   }
 }
 @media screen and (min-width: 360px) {
@@ -1616,7 +1782,7 @@ Credits: https://smolcss.dev/#smol-stack-layout */
   }
   .xs\:stack-x-reverse > * + * {
     margin-left: 0;
-    margin-right: var(--space, 1rem);
+    margin-right: var(--koi-spacer, 1rem);
   }
 }
 @media screen and (min-width: 480px) {
@@ -1632,7 +1798,7 @@ Credits: https://smolcss.dev/#smol-stack-layout */
   }
   .sm\:stack-x-reverse > * + * {
     margin-left: 0;
-    margin-right: var(--space, 1rem);
+    margin-right: var(--koi-spacer, 1rem);
   }
 }
 @media screen and (min-width: 768px) {
@@ -1648,7 +1814,7 @@ Credits: https://smolcss.dev/#smol-stack-layout */
   }
   .md\:stack-x-reverse > * + * {
     margin-left: 0;
-    margin-right: var(--space, 1rem);
+    margin-right: var(--koi-spacer, 1rem);
   }
 }
 @media screen and (min-width: 1024px) {
@@ -1664,7 +1830,7 @@ Credits: https://smolcss.dev/#smol-stack-layout */
   }
   .lg\:stack-x-reverse > * + * {
     margin-left: 0;
-    margin-right: var(--space, 1rem);
+    margin-right: var(--koi-spacer, 1rem);
   }
 }
 @media screen and (min-width: 1440px) {
@@ -1680,7 +1846,7 @@ Credits: https://smolcss.dev/#smol-stack-layout */
   }
   .xl\:stack-x-reverse > * + * {
     margin-left: 0;
-    margin-right: var(--space, 1rem);
+    margin-right: var(--koi-spacer, 1rem);
   }
 }
 @media screen and (min-width: 1920px) {
@@ -1696,7 +1862,7 @@ Credits: https://smolcss.dev/#smol-stack-layout */
   }
   .\32 xl\:stack-x-reverse > * + * {
     margin-left: 0;
-    margin-right: var(--space, 1rem);
+    margin-right: var(--koi-spacer, 1rem);
   }
 }
 .stack-y {
@@ -1710,7 +1876,7 @@ Credits: https://smolcss.dev/#smol-stack-layout */
 }
 .stack-y > * + * {
   margin-bottom: 0;
-  margin-top: var(--space, 1rem);
+  margin-top: var(--koi-spacer, 1rem);
 }
 
 @media screen and (min-width: 240px) {
@@ -1725,7 +1891,7 @@ Credits: https://smolcss.dev/#smol-stack-layout */
   }
   .\32 xs\:stack-y > * + * {
     margin-bottom: 0;
-    margin-top: var(--space, 1rem);
+    margin-top: var(--koi-spacer, 1rem);
   }
 }
 @media screen and (min-width: 360px) {
@@ -1740,7 +1906,7 @@ Credits: https://smolcss.dev/#smol-stack-layout */
   }
   .xs\:stack-y > * + * {
     margin-bottom: 0;
-    margin-top: var(--space, 1rem);
+    margin-top: var(--koi-spacer, 1rem);
   }
 }
 @media screen and (min-width: 480px) {
@@ -1755,7 +1921,7 @@ Credits: https://smolcss.dev/#smol-stack-layout */
   }
   .sm\:stack-y > * + * {
     margin-bottom: 0;
-    margin-top: var(--space, 1rem);
+    margin-top: var(--koi-spacer, 1rem);
   }
 }
 @media screen and (min-width: 768px) {
@@ -1770,7 +1936,7 @@ Credits: https://smolcss.dev/#smol-stack-layout */
   }
   .md\:stack-y > * + * {
     margin-bottom: 0;
-    margin-top: var(--space, 1rem);
+    margin-top: var(--koi-spacer, 1rem);
   }
 }
 @media screen and (min-width: 1024px) {
@@ -1785,7 +1951,7 @@ Credits: https://smolcss.dev/#smol-stack-layout */
   }
   .lg\:stack-y > * + * {
     margin-bottom: 0;
-    margin-top: var(--space, 1rem);
+    margin-top: var(--koi-spacer, 1rem);
   }
 }
 @media screen and (min-width: 1440px) {
@@ -1800,7 +1966,7 @@ Credits: https://smolcss.dev/#smol-stack-layout */
   }
   .xl\:stack-y > * + * {
     margin-bottom: 0;
-    margin-top: var(--space, 1rem);
+    margin-top: var(--koi-spacer, 1rem);
   }
 }
 @media screen and (min-width: 1920px) {
@@ -1815,7 +1981,7 @@ Credits: https://smolcss.dev/#smol-stack-layout */
   }
   .\32 xl\:stack-y > * + * {
     margin-bottom: 0;
-    margin-top: var(--space, 1rem);
+    margin-top: var(--koi-spacer, 1rem);
   }
 }
 .stack-y-reverse {
@@ -1828,7 +1994,7 @@ Credits: https://smolcss.dev/#smol-stack-layout */
   margin-right: 0;
 }
 .stack-y-reverse > * + * {
-  margin-bottom: var(--space, 1rem);
+  margin-bottom: var(--koi-spacer, 1rem);
   margin-top: 0;
 }
 
@@ -1843,7 +2009,7 @@ Credits: https://smolcss.dev/#smol-stack-layout */
     margin-right: 0;
   }
   .\32 xs\:stack-y-reverse > * + * {
-    margin-bottom: var(--space, 1rem);
+    margin-bottom: var(--koi-spacer, 1rem);
     margin-top: 0;
   }
 }
@@ -1858,7 +2024,7 @@ Credits: https://smolcss.dev/#smol-stack-layout */
     margin-right: 0;
   }
   .xs\:stack-y-reverse > * + * {
-    margin-bottom: var(--space, 1rem);
+    margin-bottom: var(--koi-spacer, 1rem);
     margin-top: 0;
   }
 }
@@ -1873,7 +2039,7 @@ Credits: https://smolcss.dev/#smol-stack-layout */
     margin-right: 0;
   }
   .sm\:stack-y-reverse > * + * {
-    margin-bottom: var(--space, 1rem);
+    margin-bottom: var(--koi-spacer, 1rem);
     margin-top: 0;
   }
 }
@@ -1888,7 +2054,7 @@ Credits: https://smolcss.dev/#smol-stack-layout */
     margin-right: 0;
   }
   .md\:stack-y-reverse > * + * {
-    margin-bottom: var(--space, 1rem);
+    margin-bottom: var(--koi-spacer, 1rem);
     margin-top: 0;
   }
 }
@@ -1903,7 +2069,7 @@ Credits: https://smolcss.dev/#smol-stack-layout */
     margin-right: 0;
   }
   .lg\:stack-y-reverse > * + * {
-    margin-bottom: var(--space, 1rem);
+    margin-bottom: var(--koi-spacer, 1rem);
     margin-top: 0;
   }
 }
@@ -1918,7 +2084,7 @@ Credits: https://smolcss.dev/#smol-stack-layout */
     margin-right: 0;
   }
   .xl\:stack-y-reverse > * + * {
-    margin-bottom: var(--space, 1rem);
+    margin-bottom: var(--koi-spacer, 1rem);
     margin-top: 0;
   }
 }
@@ -1933,7 +2099,7 @@ Credits: https://smolcss.dev/#smol-stack-layout */
     margin-right: 0;
   }
   .\32 xl\:stack-y-reverse > * + * {
-    margin-bottom: var(--space, 1rem);
+    margin-bottom: var(--koi-spacer, 1rem);
     margin-top: 0;
   }
 }

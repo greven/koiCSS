@@ -10,12 +10,20 @@
     box-sizing: border-box;
   }
 
-  /* Remove default margin */
+  /* Remove default margin, padding and border */
   * {
+    border: 0 solid transparent;
     margin: 0;
+    padding: 0;
   }
 
-  /* Core root defaults */
+  /* Core root defaults
+  [1] - prevent iOS font size change
+  */
+  html {
+    text-size-adjust: 100%; // [1]
+  }
+
   html:focus-within {
     scroll-behavior: smooth;
   }
@@ -25,6 +33,7 @@
     -webkit-font-smoothing: antialiased;
     line-height: 1.5;
     min-height: 100vh;
+    text-rendering: optimizeSpeed;
   }
 
   /* Avoid text overflow */
@@ -80,7 +89,66 @@
   button,
   textarea,
   select {
+    color: inherit;
     font: inherit;
+    line-height: inherit;
+  }
+
+  /* Reset text input styles */
+  [type='date'],
+  [type='datetime'],
+  [type='datetime-local'],
+  [type='email'],
+  [type='month'],
+  [type='number'],
+  [type='password'],
+  [type='search'],
+  [type='tel'],
+  [type='text'],
+  [type='time'],
+  [type='url'],
+  [type='week'],
+  textarea,
+  select {
+    appearance: none;
+    appearance: none;
+    appearance: none;
+    width: 100%;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  /* Reset checkbox and radio styles */
+  [type='checkbox'],
+  [type='radio'] {
+    appearance: none;
+    appearance: none;
+    appearance: none;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  /* Reset firefox placeholder opacity */
+  ::-moz-placeholder {
+    opacity: 1;
+  }
+
+  /* Collapse table */
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  /* Unstyle anchors */
+  a {
+    color: inherit;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    text-decoration: inherit;
   }
 
   /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */

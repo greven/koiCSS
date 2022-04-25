@@ -57,7 +57,7 @@ $utility-classes: (
     }
 
     & > * + * {
-      margin-left: var(--space, spacing(md));
+      margin-left: var(--koi-spacer, spacing(md));
       margin-right: 0;
     }
   }
@@ -75,7 +75,7 @@ $utility-classes: (
 
     & > * + * {
       margin-left: 0;
-      margin-right: var(--space, spacing(md));
+      margin-right: var(--koi-spacer, spacing(md));
     }
   }
 
@@ -91,7 +91,7 @@ $utility-classes: (
 
     & > * + * {
       margin-bottom: 0;
-      margin-top: var(--space, spacing(md));
+      margin-top: var(--koi-spacer, spacing(md));
     }
   }
 
@@ -106,8 +106,10 @@ $utility-classes: (
     }
 
     & > * + * {
-      margin-bottom: var(--space, spacing(md));
+      margin-bottom: var(--koi-spacer, spacing(md));
       margin-top: 0;
     }
   }
+
+  // TODO: Container?
 }

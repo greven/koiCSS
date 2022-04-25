@@ -6,6 +6,7 @@
 @use '../core' as *;
 @use '../theme' as *;
 @use 'reset';
+@use 'default';
 
 // Reset
 @if config(use-reset-styles) {
@@ -17,9 +18,9 @@
   @include theming-vars;
 }
 
-::selection {
-  background: var(--color-accent-5);
-  color: var(--text-1);
+// Default styles
+@if config(use-default-styles) {
+  @include default.styles();
 }
 
 body {

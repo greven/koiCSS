@@ -87,12 +87,19 @@ a {
 }
 
 .the-stack {
-  --space: 1.5rem;
+  --koi-spacer: 1.5rem;
 }
 
 .box {
+  // --koi-transition-duration: 2s;
   width: 82px;
   height: 82px;
-  background-color: #20b2aa;
+  background-color: koi.accent(7);
   @include koi.rounded(md);
+  @include koi.transition((transform, background-color));
+
+  &:hover {
+    background-color: koi.fill(green, 6);
+    transform: translateY(-15%) scale(1.05);
+  }
 }
