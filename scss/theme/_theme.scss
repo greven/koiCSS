@@ -42,15 +42,15 @@ $theme: map.deep-merge($default-theme, $theme);
 
     @media (prefers-color-scheme: $color-scheme) {
       :root {
-        color-scheme: $color-scheme;
         @include generate-color-schemes-css-vars(map.get($color-schemes, $color-scheme), $color-scheme);
+        color-scheme: $color-scheme;
       }
     }
 
     [color-scheme='$color-scheme'],
     [data-theme='$color-scheme'] {
-      color-scheme: $color-scheme;
       @include generate-color-schemes-css-vars(map.get($color-schemes, $color-scheme), $color-scheme);
+      color-scheme: $color-scheme;
     }
   }
 }
