@@ -28,17 +28,19 @@
 body {
   @include koi.container($padding: true, $center: true);
   @include koi.responsive-margin-block;
-  color: var(--text-1);
-  background-color: var(--surface-1);
+  background-color: koi.color(surface, 1);
+  // color: koi.color(text, 1);
+
+  @debug koi.color(surface, 1);
 }
 
 h1 {
   @include koi.text-size(4xl);
   font-family: koi.font-family(serif);
   color: koi.accent(5);
-  //   // color: koi.fill(primary);
-  //   // color: koi.fill(blue, 3);
-  //   // color: koi.fill(blue, 8, 0.5);
+  //   // color: koi.color(primary);
+  //   // color: koi.color(blue, 3);
+  //   // color: koi.color(blue, 8, 0.5);
   //   // color: koi.accent(5);
   //   // color: var(--color-accent-8);
   //   // color: hsl(var(--color-hsl-accent-8));
@@ -48,75 +50,75 @@ a {
   color: koi.accent(5);
 }
 
-.wrapper {
-  @include koi.responsive-padding;
-  margin-top: koi.spacing(md);
-  // margin-top: koi.rem(48);
-  // margin-top: koi.spacing(48);
-  // padding: koi.theme(spacing, 32);
-  border: 2px solid koi.fill(gray);
-  border-radius: koi.radius();
-  @include koi.shadow(sm);
-  // background-color: koi.fill(gray, 8);
+// .wrapper {
+// @include koi.responsive-padding;
+// margin-top: koi.spacing(md);
+// margin-top: koi.rem(48);
+// margin-top: koi.spacing(48);
+// padding: koi.theme(spacing, 32);
+// border: 2px solid koi.color(gray);
+// border-radius: koi.radius();
+// @include koi.shadow(sm);
+// background-color: koi.color(gray, 8);
 
-  &:hover {
-    border-color: koi.accent(5);
-    // background-color: koi.fill(gray, 1);
-    // background-color: var(--surface-2);
-    // @include koi.transition-colors(koi.theme(duration, slow));
-    // border-color: koi.fill(primary);
+// &:hover {
+// border-color: koi.accent(5);
+// background-color: koi.color(gray, 1);
+// background-color: var(--surface-2);
+// @include koi.transition-colors(koi.theme(duration, slow));
+// border-color: koi.color(primary);
 
-    // @include koi.dark {
-    //   background-color: koi.fill(gray, 8);
-    // }
-  }
-}
+// @include koi.dark {
+//   background-color: koi.color(gray, 8);
+// }
+// }
+// }
 
-.loaders {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  background-color: koi.fill(gray, 9);
-  border-color: koi.accent(5);
+// .loaders {
+//   display: flex;
+//   align-items: center;
+//   gap: 24px;
+//   background-color: koi.color(gray, 9);
+//   border-color: koi.accent(5);
 
-  &:hover {
-    background-color: koi.fill(gray, 8);
-  }
-}
+//   &:hover {
+//     background-color: koi.color(gray, 8);
+//   }
+// }
 
-.text {
-  line-height: koi.leading(relaxed);
-}
+// .text {
+//   line-height: koi.leading(relaxed);
+// }
 
-.the-stack {
-  --koi-spacer: 1.5rem;
-}
+// .the-stack {
+//   --koi-spacer: 1.5rem;
+// }
 
-.box {
-  // --koi-transition-duration: 2s;
-  width: 82px;
-  height: 82px;
-  color: koi.fill(white);
-  background-color: koi.accent(5);
-  @include koi.rounded(md);
-  @include koi.transition((transform, background-color));
+// .box {
+//   // --koi-transition-duration: 2s;
+//   width: 82px;
+//   height: 82px;
+//   color: koi.color(white);
+//   background-color: koi.accent(5);
+//   @include koi.rounded(md);
+//   @include koi.transition((transform, background-color));
 
-  @include koi.dark {
-    color: koi.fill(black);
-    background-color: koi.accent(6);
-  }
+//   @include koi.dark {
+//     color: koi.color(black);
+//     background-color: koi.accent(6);
+//   }
 
-  &:hover {
-    background-color: koi.fill(green, 6);
-    transform: translateY(-15%) scale(1.05);
-  }
-}
+//   &:hover {
+//     background-color: koi.color(green, 6);
+//     transform: translateY(-15%) scale(1.05);
+//   }
+// }
 
-.is-box {
-  @include koi.box($bg-color: koi.fill(blue, 2), $padding: true, $rounded: lg, $shadow: lg);
-  @include koi.margin-block(md);
+// .is-box {
+//   @include koi.box($bg-color: koi.color(blue, 2), $padding: true, $rounded: lg, $shadow: lg);
+//   @include koi.margin-block(md);
 
-  @include koi.dark {
-    background-color: koi.accent(9);
-  }
-}
+//   @include koi.dark {
+//     background-color: koi.accent(9);
+//   }
+// }

@@ -93,23 +93,3 @@
     }
   }
 }
-
-// Set the absolute position value of all four edges
-@mixin inset($value) {
-  top: $value;
-  right: $value;
-  bottom: $value;
-  left: $value;
-}
-
-// Set the absolute position value of left and right
-@mixin inset-x($value) {
-  right: $value;
-  left: $value;
-}
-
-// Set the absolute position value of top and bottom
-@mixin inset-y($value) {
-  top: $value;
-  bottom: $value;
-}

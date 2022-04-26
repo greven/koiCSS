@@ -2,7 +2,8 @@
 //   Color
 // --------------------------------
 
-@use '../helpers' as *;
+@use '../helpers/color' as *;
+@use '../helpers/internal' as *;
 @use 'config' as *;
 @use 'theme' as *;
 
@@ -13,15 +14,17 @@ $-default-accent: config(fallbacks, accent);
 //   Functions
 // --------------------------------
 
-@function fill($name, $shade: $-default-shade, $alpha: 1) {
-  @if is-theme-color($name, $shade) {
-    @return hsl(var(--color-hsl-#{$name}-#{$shade}), $alpha);
+@function color($name, $shade: $-default-shade, $alpha: 1) {
+  @if is-scheme-color($name, $shade) {
+    @return hsl(css-var(#{$name}-#{$shade}), $alpha);
+  } @else if is-theme-color($name, $shade) {
+    @return hsl(css-var(color-#{$name}-#{$shade}), $alpha);
   } @else if is-theme-color($name) {
-    @return hsl(var(--color-hsl-#{$name}), $alpha);
+    @return hsl(css-var(color-#{$name}), $alpha);
   }
 }
 
 @function accent($shade: $-default-shade, $alpha: 1) {
   $fallback-accent: rgba(theme(colors, $-default-accent, $shade), $alpha);
-  @return hsl(var(--color-hsl-accent-#{$shade}, to-hsl($fallback-accent)), $alpha);
+  @return hsl(css-var(color-accent-#{$shade}, to-hsl($fallback-accent)), $alpha);
 }

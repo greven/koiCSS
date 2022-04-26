@@ -33,12 +33,23 @@
   @return map.has-key($colors, $keys...) and (meta.type-of($value) == color);
 }
 
+@function is-scheme-color($keys...) {
+  $color-schemes: theme(color-schemes);
+
+  @each $color-scheme, $values in $color-schemes {
+    @if map.has-key($values, $keys...) {
+      @return true;
+    }
+  }
+  @return false;
+}
+
 // --------------------------------
 //   Mixins
 // --------------------------------
 
 // Match color scheme
-@mixin match-color-scheme($color-scheme: light) {
+@mixin color-scheme($color-scheme: light) {
   @media (prefers-color-scheme: $color-scheme) {
     @at-root #{selector.nest(':root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark])', &)} {
       @content;
@@ -52,14 +63,14 @@
 
 // Matches data-theme="light" or data-theme="auto"
 @mixin light() {
-  @include match-color-scheme(light) {
+  @include color-scheme(light) {
     @content;
   }
 }
 
 // Matches data-theme="dark" or data-theme="auto"
 @mixin dark() {
-  @include match-color-scheme(dark) {
+  @include color-scheme(dark) {
     @content;
   }
 }

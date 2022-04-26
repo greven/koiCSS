@@ -6,12 +6,13 @@
 
 @use '../api/config' as *;
 
+/* Return the prefix of the css vars if configured */
 @function css-var-prefix($prefix: config(prefix)) {
   $prefix: if($prefix == '', '', '#{$prefix}-');
   @return $prefix;
 }
 
-// Returns the css custom property name given the property and key
+/* Returns the css custom property name given the property and key */
 @function css-var-name($property, $key: null, $suffix: null) {
   $prefix: css-var-prefix();
   $suffix: if($suffix, '-#{$suffix}', '');
@@ -20,7 +21,8 @@
   @return '--#{$prefix}#{$property}#{$suffix}#{$key}';
 }
 
-// Output a CSS var with the given name prefixed
+/* Output a CSS var with the given name prefixed
+  if configured. Allows passing the css var fallback. */
 @function css-var($name, $fallback: null) {
   $var-name: string.unquote(css-var-name($name));
 
