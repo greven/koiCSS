@@ -35,21 +35,21 @@ $theme: map.deep-merge($default-theme, $theme);
   @include default-theme($color-schemes-map);
 
   @each $color-scheme, $color in $color-schemes-map {
-    // Color schemes
+    // Generate color scheme colors (dark, light, ...)
     html {
       @include generate-color-schemes-css-vars($color, $color-scheme);
     }
 
     @media (prefers-color-scheme: $color-scheme) {
       :root {
-        @include generate-color-schemes-css-vars(map.get($color-schemes, $color-scheme), $color-scheme);
+        @include generate-color-schemes-css-vars(map.get($color-schemes, $color-scheme));
         color-scheme: $color-scheme;
       }
     }
 
-    [color-scheme='$color-scheme'],
-    [data-theme='$color-scheme'] {
-      @include generate-color-schemes-css-vars(map.get($color-schemes, $color-scheme), $color-scheme);
+    [color-scheme='#{$color-scheme}'],
+    [data-theme='#{$color-scheme}'] {
+      @include generate-color-schemes-css-vars(map.get($color-schemes, $color-scheme));
       color-scheme: $color-scheme;
     }
   }

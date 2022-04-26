@@ -10,8 +10,7 @@
 $color-schemes: (
   light: (
     surface: (
-      // 1: map.get($tokens, colors, gray, 0),
-      1: map.get($tokens, colors, primary, 2),
+      1: map.get($tokens, colors, gray, 0),
       2: map.get($tokens, colors, white),
       3: map.get($tokens, colors, gray, 1),
       4: map.get($tokens, colors, gray, 2),
@@ -27,8 +26,7 @@ $color-schemes: (
   ),
   dark: (
     surface: (
-      // 1: map.get($tokens, colors, gray, 9),
-      1: map.get($tokens, colors, blue, 2),
+      1: map.get($tokens, colors, gray, 9),
       2: map.get($tokens, colors, gray, 8),
       3: map.get($tokens, colors, gray, 7),
       4: map.get($tokens, colors, gray, 6),
