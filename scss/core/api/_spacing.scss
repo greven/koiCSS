@@ -61,6 +61,14 @@ $negative-spacing: () !default;
   @return $result;
 }
 
+@function responsive-spacing(
+  $value: config(responsive, padding, value),
+  $min: config(responsive, padding, min),
+  $max: config(responsive, padding, max)
+) {
+  @return clamp(var(--koi-spacing-min, $min), var(--koi-spacing-value, $value), var(--koi-spacing-max, $max));
+}
+
 // --------------------------------
 //   Mixins
 // --------------------------------
@@ -109,6 +117,20 @@ $negative-spacing: () !default;
 
 @mixin margin-right($key) {
   margin-right: spacing($key);
+}
+
+// Responsive Margin
+
+@mixin responsive-margin {
+  margin: responsive-spacing();
+}
+
+@mixin responsive-margin-inline {
+  margin-inline: responsive-spacing();
+}
+
+@mixin responsive-margin-block {
+  margin-block: responsive-spacing();
 }
 
 // Padding
@@ -160,25 +182,13 @@ $negative-spacing: () !default;
 // Responsive Padding
 
 @mixin responsive-padding {
-  $value: config(responsive, padding, value);
-  $min: config(responsive, padding, min);
-  $max: config(responsive, padding, max);
-
-  padding: clamp(var(--koi-padding-min, $min), var(--koi-padding-value, $value), var(--koi-padding-max, $max));
+  padding: responsive-spacing();
 }
 
 @mixin responsive-padding-inline {
-  $value: config(responsive, padding, value);
-  $min: config(responsive, padding, min);
-  $max: config(responsive, padding, max);
-
-  padding-inline: clamp(var(--koi-padding-min, $min), var(--koi-padding-value, $value), var(--koi-padding-max, $max));
+  padding-inline: responsive-spacing();
 }
 
 @mixin responsive-padding-block {
-  $value: config(responsive, padding, value);
-  $min: config(responsive, padding, min);
-  $max: config(responsive, padding, max);
-
-  padding-block: clamp(var(--koi-padding-min, $min), var(--koi-padding-value, $value), var(--koi-padding-max, $max));
+  padding-block: responsive-spacing();
 }

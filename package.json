@@ -32,7 +32,7 @@
     "prebuild": "npm run lint:fix",
     "prestart": "cp scripts/pre-commit .git/hooks/ && chmod +x .git/hooks/pre-commit",
     "start": "npm run dev",
-    "watch:dev": "sass -I node_modules -I scss --no-source-map dev/assets/scss:dev/assets/css --watch --update",
+    "watch:dev": "sass -I node_modules -I scss --no-source-map dev/assets/scss:dev/assets/css --color --watch --update",
     "watch": "npm run build:sass -- --watch --update"
   },
   "devDependencies": {

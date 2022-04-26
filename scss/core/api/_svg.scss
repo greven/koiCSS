@@ -39,6 +39,6 @@ $escape-characters: (
 ///
 /// @return {string}
 ///
-@function url-encode($svg) {
+@function svg-encode($svg) {
   @return url('data:image/svg+xml;charset=utf8,#{escape($svg)}');
 }

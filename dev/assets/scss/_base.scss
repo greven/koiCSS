@@ -26,17 +26,16 @@
 // }
 
 body {
-  @include koi.container($from: 0, $padding: true, $center: true, $max-width: false);
-  @include koi.container($from: lg, $padding: true, $center: true);
+  @include koi.container($padding: true, $center: true);
+  @include koi.responsive-margin-block;
   color: var(--text-1);
   background-color: var(--surface-1);
-  // padding: koi.spacing(24, 24);
 }
 
 h1 {
   @include koi.text-size(4xl);
   font-family: koi.font-family(serif);
-  color: koi.accent(4);
+  color: koi.accent(5);
   //   // color: koi.fill(primary);
   //   // color: koi.fill(blue, 3);
   //   // color: koi.fill(blue, 8, 0.5);
@@ -46,7 +45,7 @@ h1 {
 }
 
 a {
-  color: koi.accent(4);
+  color: koi.accent(5);
 }
 
 .wrapper {

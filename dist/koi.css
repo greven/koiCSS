@@ -1,288 +1,38 @@
-/*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
-/*
-Document
-========
-*/
-/**
-Use a better box model (opinionated).
-*/
+/* Basic box element with theme defaults that can be composed with other utilities.
+  Based on https://smolcss.dev/#smol-unbreakable-boxes */
+/* Better box model */
 *,
-::before,
-::after {
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-/**
-Use a more readable tab size (opinionated).
-*/
-html {
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-     tab-size: 4;
+/* Remove default margin, padding and border */
+* {
+  border: 0 solid transparent;
+  margin: 0;
+  padding: 0;
 }
 
-/**
-1. Correct the line height in all browsers.
-2. Prevent adjustments of font size after orientation changes in iOS.
+/* Core root defaults
+[1] - prevent iOS font size change
 */
 html {
-  line-height: 1.15;
-  /* 1 */
   -webkit-text-size-adjust: 100%;
-  /* 2 */
+     -moz-text-size-adjust: 100%;
+          text-size-adjust: 100%;
 }
 
-/*
-Sections
-========
-*/
-/**
-Remove the margin in all browsers.
-*/
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Body defaults */
 body {
-  margin: 0;
-}
-
-/**
-Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
-*/
-body {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-}
-
-/*
-Grouping content
-================
-*/
-/**
-1. Add the correct height in Firefox.
-2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
-*/
-hr {
-  height: 0;
-  /* 1 */
-  color: inherit;
-  /* 2 */
-}
-
-/*
-Text-level semantics
-====================
-*/
-/**
-Add the correct text decoration in Chrome, Edge, and Safari.
-*/
-abbr[title] {
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
-}
-
-/**
-Add the correct font weight in Edge and Safari.
-*/
-b,
-strong {
-  font-weight: bolder;
-}
-
-/**
-1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
-2. Correct the odd 'em' font sizing in all browsers.
-*/
-code,
-kbd,
-samp,
-pre {
-  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
-}
-
-/**
-Add the correct font size in all browsers.
-*/
-small {
-  font-size: 80%;
-}
-
-/**
-Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
-*/
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-sup {
-  top: -0.5em;
-}
-
-/*
-Tabular data
-============
-*/
-/**
-1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
-2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
-*/
-table {
-  text-indent: 0;
-  /* 1 */
-  border-color: inherit;
-  /* 2 */
-}
-
-/*
-Forms
-=====
-*/
-/**
-1. Change the font styles in all browsers.
-2. Remove the margin in Firefox and Safari.
-*/
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 1 */
-  line-height: 1.15;
-  /* 1 */
-  margin: 0;
-  /* 2 */
-}
-
-/**
-Remove the inheritance of text transform in Edge and Firefox.
-1. Remove the inheritance of text transform in Firefox.
-*/
-button,
-select {
-  /* 1 */
-  text-transform: none;
-}
-
-/**
-Correct the inability to style clickable types in iOS and Safari.
-*/
-button,
-[type=button],
-[type=reset],
-[type=submit] {
-  -webkit-appearance: button;
-}
-
-/**
-Remove the inner border and padding in Firefox.
-*/
-::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
-/**
-Restore the focus styles unset by the previous rule.
-*/
-:-moz-focusring {
-  outline: 1px dotted ButtonText;
-}
-
-/**
-Remove the additional ':invalid' styles in Firefox.
-See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737
-*/
-:-moz-ui-invalid {
-  box-shadow: none;
-}
-
-/**
-Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
-*/
-legend {
-  padding: 0;
-}
-
-/**
-Add the correct vertical alignment in Chrome and Firefox.
-*/
-progress {
-  vertical-align: baseline;
-}
-
-/**
-Correct the cursor style of increment and decrement buttons in Safari.
-*/
-::-webkit-inner-spin-button,
-::-webkit-outer-spin-button {
-  height: auto;
-}
-
-/**
-1. Correct the odd appearance in Chrome and Safari.
-2. Correct the outline style in Safari.
-*/
-[type=search] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  outline-offset: -2px;
-  /* 2 */
-}
-
-/**
-Remove the inner padding in Chrome and Safari on macOS.
-*/
-::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-/**
-1. Correct the inability to style clickable types in iOS and Safari.
-2. Change font properties to 'inherit' in Safari.
-*/
-::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  /* 1 */
-  font: inherit;
-  /* 2 */
-}
-
-/*
-Interactive
-===========
-*/
-/*
-Add the correct display in Chrome and Safari.
-*/
-summary {
-  display: list-item;
-}
-
-/* Remove default margin */
-blockquote,
-dl,
-dd,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-hr,
-figure,
-p,
-pre {
-  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
 }
 
 /* Avoid text overflow */
@@ -315,18 +65,6 @@ ol[role=list] {
   padding: 0;
 }
 
-/* Core root defaults */
-html:focus-within {
-  scroll-behavior: smooth;
-}
-
-/* Body defaults */
-body {
-  -webkit-font-smoothing: antialiased;
-  line-height: 1.5;
-  min-height: 100vh;
-}
-
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   -webkit-text-decoration-skip: ink;
@@ -351,7 +89,83 @@ input,
 button,
 textarea,
 select {
+  color: inherit;
   font: inherit;
+  line-height: inherit;
+}
+
+/* Reset text input styles */
+[type=date],
+[type=datetime],
+[type=datetime-local],
+[type=email],
+[type=month],
+[type=number],
+[type=password],
+[type=search],
+[type=tel],
+[type=text],
+[type=time],
+[type=url],
+[type=week],
+textarea,
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  appearance: none;
+  appearance: none;
+  width: 100%;
+}
+[type=date]:focus,
+[type=datetime]:focus,
+[type=datetime-local]:focus,
+[type=email]:focus,
+[type=month]:focus,
+[type=number]:focus,
+[type=password]:focus,
+[type=search]:focus,
+[type=tel]:focus,
+[type=text]:focus,
+[type=time]:focus,
+[type=url]:focus,
+[type=week]:focus,
+textarea:focus,
+select:focus {
+  outline: 0;
+}
+
+/* Reset checkbox and radio styles */
+[type=checkbox],
+[type=radio] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  appearance: none;
+  appearance: none;
+}
+[type=checkbox]:focus,
+[type=radio]:focus {
+  outline: 0;
+}
+
+/* Reset firefox placeholder opacity */
+::-moz-placeholder {
+  opacity: 1;
+}
+
+/* Collapse table */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Unstyle anchors */
+a {
+  color: inherit;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: inherit;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
@@ -371,6 +185,244 @@ select {
     transition-duration: 0.01ms !important;
   }
 }
+html {
+  /*! purgecss start ignore */
+  --surface-1-light: #fafafa;
+  --surface-1-hsl-light: 0deg, 0%, 98.0392156863%;
+  --surface-2-light: #fff;
+  --surface-2-hsl-light: 0deg, 0%, 100%;
+  --surface-3-light: #f5f5f5;
+  --surface-3-hsl-light: 0deg, 0%, 96.0784313725%;
+  --surface-4-light: #e5e5e5;
+  --surface-4-hsl-light: 0deg, 0%, 89.8039215686%;
+  --text-1-light: #171717;
+  --text-1-hsl-light: 0deg, 0%, 9.0196078431%;
+  --text-2-light: #262626;
+  --text-2-hsl-light: 0deg, 0%, 14.9019607843%;
+  --text-3-light: #404040;
+  --text-3-hsl-light: 0deg, 0%, 25.0980392157%;
+  --text-4-light: #525252;
+  --text-4-hsl-light: 0deg, 0%, 32.1568627451%;
+  /*! purgecss end ignore */
+  /*! purgecss start ignore */
+  --surface-1-dark: #171717;
+  --surface-1-hsl-dark: 0deg, 0%, 9.0196078431%;
+  --surface-2-dark: #262626;
+  --surface-2-hsl-dark: 0deg, 0%, 14.9019607843%;
+  --surface-3-dark: #404040;
+  --surface-3-hsl-dark: 0deg, 0%, 25.0980392157%;
+  --surface-4-dark: #525252;
+  --surface-4-hsl-dark: 0deg, 0%, 32.1568627451%;
+  --text-1-dark: #fafafa;
+  --text-1-hsl-dark: 0deg, 0%, 98.0392156863%;
+  --text-2-dark: #f5f5f5;
+  --text-2-hsl-dark: 0deg, 0%, 96.0784313725%;
+  --text-3-dark: #e5e5e5;
+  --text-3-hsl-dark: 0deg, 0%, 89.8039215686%;
+  --text-4-dark: #d4d4d4;
+  --text-4-hsl-dark: 0deg, 0%, 83.137254902%;
+  /*! purgecss end ignore */
+}
+
+:root {
+  /*! purgecss start ignore */
+  --surface-1: #fafafa;
+  --surface-1-hsl: 0deg, 0%, 98.0392156863%;
+  --surface-2: #fff;
+  --surface-2-hsl: 0deg, 0%, 100%;
+  --surface-3: #f5f5f5;
+  --surface-3-hsl: 0deg, 0%, 96.0784313725%;
+  --surface-4: #e5e5e5;
+  --surface-4-hsl: 0deg, 0%, 89.8039215686%;
+  --text-1: #171717;
+  --text-1-hsl: 0deg, 0%, 9.0196078431%;
+  --text-2: #262626;
+  --text-2-hsl: 0deg, 0%, 14.9019607843%;
+  --text-3: #404040;
+  --text-3-hsl: 0deg, 0%, 25.0980392157%;
+  --text-4: #525252;
+  --text-4-hsl: 0deg, 0%, 32.1568627451%;
+  /*! purgecss end ignore */
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    /*! purgecss start ignore */
+    --surface-1: #fafafa;
+    --surface-1-hsl: 0deg, 0%, 98.0392156863%;
+    --surface-2: #fff;
+    --surface-2-hsl: 0deg, 0%, 100%;
+    --surface-3: #f5f5f5;
+    --surface-3-hsl: 0deg, 0%, 96.0784313725%;
+    --surface-4: #e5e5e5;
+    --surface-4-hsl: 0deg, 0%, 89.8039215686%;
+    --text-1: #171717;
+    --text-1-hsl: 0deg, 0%, 9.0196078431%;
+    --text-2: #262626;
+    --text-2-hsl: 0deg, 0%, 14.9019607843%;
+    --text-3: #404040;
+    --text-3-hsl: 0deg, 0%, 25.0980392157%;
+    --text-4: #525252;
+    --text-4-hsl: 0deg, 0%, 32.1568627451%;
+    /*! purgecss end ignore */
+    color-scheme: light;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    /*! purgecss start ignore */
+    --surface-1: #171717;
+    --surface-1-hsl: 0deg, 0%, 9.0196078431%;
+    --surface-2: #262626;
+    --surface-2-hsl: 0deg, 0%, 14.9019607843%;
+    --surface-3: #404040;
+    --surface-3-hsl: 0deg, 0%, 25.0980392157%;
+    --surface-4: #525252;
+    --surface-4-hsl: 0deg, 0%, 32.1568627451%;
+    --text-1: #fafafa;
+    --text-1-hsl: 0deg, 0%, 98.0392156863%;
+    --text-2: #f5f5f5;
+    --text-2-hsl: 0deg, 0%, 96.0784313725%;
+    --text-3: #e5e5e5;
+    --text-3-hsl: 0deg, 0%, 89.8039215686%;
+    --text-4: #d4d4d4;
+    --text-4-hsl: 0deg, 0%, 83.137254902%;
+    /*! purgecss end ignore */
+    color-scheme: dark;
+  }
+}
+[color-scheme=light],
+[data-theme=light] {
+  /*! purgecss start ignore */
+  --surface-1: #fafafa;
+  --surface-1-hsl: 0deg, 0%, 98.0392156863%;
+  --surface-2: #fff;
+  --surface-2-hsl: 0deg, 0%, 100%;
+  --surface-3: #f5f5f5;
+  --surface-3-hsl: 0deg, 0%, 96.0784313725%;
+  --surface-4: #e5e5e5;
+  --surface-4-hsl: 0deg, 0%, 89.8039215686%;
+  --text-1: #171717;
+  --text-1-hsl: 0deg, 0%, 9.0196078431%;
+  --text-2: #262626;
+  --text-2-hsl: 0deg, 0%, 14.9019607843%;
+  --text-3: #404040;
+  --text-3-hsl: 0deg, 0%, 25.0980392157%;
+  --text-4: #525252;
+  --text-4-hsl: 0deg, 0%, 32.1568627451%;
+  /*! purgecss end ignore */
+  color-scheme: light;
+}
+
+[color-scheme=dark],
+[data-theme=dark] {
+  /*! purgecss start ignore */
+  --surface-1: #171717;
+  --surface-1-hsl: 0deg, 0%, 9.0196078431%;
+  --surface-2: #262626;
+  --surface-2-hsl: 0deg, 0%, 14.9019607843%;
+  --surface-3: #404040;
+  --surface-3-hsl: 0deg, 0%, 25.0980392157%;
+  --surface-4: #525252;
+  --surface-4-hsl: 0deg, 0%, 32.1568627451%;
+  --text-1: #fafafa;
+  --text-1-hsl: 0deg, 0%, 98.0392156863%;
+  --text-2: #f5f5f5;
+  --text-2-hsl: 0deg, 0%, 96.0784313725%;
+  --text-3: #e5e5e5;
+  --text-3-hsl: 0deg, 0%, 89.8039215686%;
+  --text-4: #d4d4d4;
+  --text-4-hsl: 0deg, 0%, 83.137254902%;
+  /*! purgecss end ignore */
+  color-scheme: dark;
+}
+
+::-moz-selection {
+  background: hsl(var(--color-hsl-accent-5, 167.8651685393deg, 87.2549019608%, 40%), 1);
+  color: #fff;
+}
+
+::selection {
+  background: hsl(var(--color-hsl-accent-5, 167.8651685393deg, 87.2549019608%, 40%), 1);
+  color: #fff;
+}
+
+sub,
+sup {
+  font-size: 0.75em;
+  position: relative;
+}
+
+sub {
+  bottom: -0.25em;
+  left: 0.25em;
+}
+
+sup {
+  left: 0.25em;
+  top: -0.5em;
+}
+
+pre,
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+[type=date],
+[type=datetime],
+[type=datetime-local],
+[type=email],
+[type=month],
+[type=number],
+[type=password],
+[type=search],
+[type=tel],
+[type=text],
+[type=time],
+[type=url],
+[type=week],
+textarea,
+select {
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 0.5em 0.75em;
+}
+
+[type=checkbox],
+[type=radio] {
+  height: 1em;
+  width: 1em;
+}
+[type=checkbox]:checked,
+[type=radio]:checked {
+  background-color: currentColor;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-color: transparent;
+}
+
+[type=checkbox]:checked {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
+}
+
+[type=radio] {
+  border-radius: 9999px;
+}
+[type=radio]:checked {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='white'/%3e%3c/svg%3e");
+}
+
+select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+  background-position: right 0.75em center;
+  background-repeat: no-repeat;
+  background-size: 16px 12px;
+}
+
 body {
-  background-color: #fff;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
 }

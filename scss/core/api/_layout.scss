@@ -57,11 +57,31 @@
   }
 }
 
-@mixin container($from: 0, $padding: null, $center: false, $max-width: true) {
+@mixin container($from: xl, $padding: null, $center: false, $max-width: true) {
+  width: 100%;
+
+  /* Center the element */
+  @if $center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Add padding to the container, either by value, by
+      theme token or using responsive padding as fallback */
+  @if $padding {
+    @if theme-has-key(spacing, $padding) {
+      padding-left: theme(spacing, $padding);
+      padding-right: theme(spacing, $padding);
+    } @else if meta.type-of($padding) == number {
+      padding-left: $padding;
+      padding-right: $padding;
+    } @else {
+      @include responsive-padding-inline;
+    }
+  }
+
   $from_width: if(mq.bp($from), mq.bp($from), $from);
   @include mq.from($from_width) {
-    width: 100%;
-
     /* Set the max-width of the element to match the
       min-width of the current breakpoint */
     @if $max-width {
@@ -69,26 +89,6 @@
         @include mq.from($breakpoint) {
           max-width: $width;
         }
-      }
-    }
-
-    /* Center the element */
-    @if $center {
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    /* Add padding to the container, either by value, by
-      theme token or using responsive padding as fallback */
-    @if $padding {
-      @if theme-has-key(spacing, $padding) {
-        padding-left: theme(spacing, $padding);
-        padding-right: theme(spacing, $padding);
-      } @else if meta.type-of($padding) == number {
-        padding-left: $padding;
-        padding-right: $padding;
-      } @else {
-        @include responsive-padding-inline;
       }
     }
   }
