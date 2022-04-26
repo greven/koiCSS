@@ -80,48 +80,27 @@ $negative-spacing: () !default;
 }
 
 @mixin margin-inline($key, $keys...) {
-  margin-left: spacing($key, $keys...);
-  margin-right: spacing($key, $keys...);
-
-  @supports (margin-block: 0) {
-    margin-inline: spacing($key, $keys...);
-  }
+  margin-inline: spacing($key, $keys...);
 }
 
 @mixin margin-inline-start($key) {
-  margin-left: spacing($key);
-  @supports (margin-block: 0) {
-    margin-inline-start: spacing($key);
-  }
+  margin-inline-start: spacing($key);
 }
 
 @mixin margin-inline-end($key) {
-  margin-right: spacing($key);
-  @supports (margin-block: 0) {
-    margin-inline-end: spacing($key);
-  }
+  margin-inline-end: spacing($key);
 }
 
 @mixin margin-block($key, $keys...) {
-  margin-top: spacing($key, $keys...);
-  margin-bottom: spacing($key, $keys...);
-  @supports (margin-block: 0) {
-    margin-block: spacing($key, $keys...);
-  }
+  margin-block: spacing($key, $keys...);
 }
 
 @mixin margin-block-start($key) {
-  margin-top: spacing($key);
-  @supports (margin-block: 0) {
-    margin-block-start: spacing($key);
-  }
+  margin-block-start: spacing($key);
 }
 
 @mixin margin-block-end($key) {
-  margin-bottom: spacing($key);
-  @supports (margin-block: 0) {
-    margin-block-end: spacing($key);
-  }
+  margin-block-end: spacing($key);
 }
 
 @mixin margin-top($key) {
@@ -147,19 +126,11 @@ $negative-spacing: () !default;
 }
 
 @mixin responsive-margin-inline {
-  margin-left: responsive-spacing();
-  margin-right: responsive-spacing();
-  @supports (margin-block: 0) {
-    margin-inline: responsive-spacing();
-  }
+  margin-inline: responsive-spacing();
 }
 
 @mixin responsive-margin-block {
-  margin-top: responsive-spacing();
-  margin-bottom: responsive-spacing();
-  @supports (margin-block: 0) {
-    margin-block: responsive-spacing();
-  }
+  margin-block: responsive-spacing();
 }
 
 // Padding
@@ -169,47 +140,27 @@ $negative-spacing: () !default;
 }
 
 @mixin padding-inline($key, $keys...) {
-  padding-left: spacing($key, $keys...);
-  padding-right: spacing($key, $keys...);
-  @supports (margin-block: 0) {
-    padding-inline: spacing($key, $keys...);
-  }
+  padding-inline: spacing($key, $keys...);
 }
 
 @mixin padding-inline-start($key) {
-  padding-left: spacing($key);
-  @supports (margin-block: 0) {
-    padding-inline-start: spacing($key);
-  }
+  padding-inline-start: spacing($key);
 }
 
 @mixin padding-inline-end($key) {
-  padding-right: spacing($key);
-  @supports (margin-block: 0) {
-    padding-inline-end: spacing($key);
-  }
+  padding-inline-end: spacing($key);
 }
 
 @mixin padding-block($key, $keys...) {
-  padding-top: spacing($key, $keys...);
-  padding-bottom: spacing($key, $keys...);
-  @supports (margin-block: 0) {
-    padding-block: spacing($key, $keys...);
-  }
+  padding-block: spacing($key, $keys...);
 }
 
 @mixin padding-block-start($key) {
-  padding-top: spacing($key);
-  @supports (margin-block: 0) {
-    padding-block-start: spacing($key);
-  }
+  padding-block-start: spacing($key);
 }
 
 @mixin padding-block-end($key) {
-  padding-bottom: spacing($key);
-  @supports (margin-block: 0) {
-    padding-block-end: spacing($key);
-  }
+  padding-block-end: spacing($key);
 }
 
 @mixin padding-top($key) {
@@ -235,17 +186,9 @@ $negative-spacing: () !default;
 }
 
 @mixin responsive-padding-inline {
-  padding-left: responsive-spacing();
-  padding-right: responsive-spacing();
-  @supports (margin-block: 0) {
-    padding-inline: responsive-spacing();
-  }
+  padding-inline: responsive-spacing();
 }
 
 @mixin responsive-padding-block {
-  padding-top: responsive-spacing();
-  padding-bottom: responsive-spacing();
-  @supports (margin-block: 0) {
-    padding-block: responsive-spacing();
-  }
+  padding-block: responsive-spacing();
 }

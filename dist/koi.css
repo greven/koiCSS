@@ -1,3 +1,7 @@
+/* Return the prefix of the css vars if configured */
+/* Returns the css custom property name given the property and key */
+/* Output a CSS var with the given name prefixed
+  if configured. Allows passing the css var fallback. */
 /* Basic box element with theme defaults that can be composed with other utilities.
   Based on https://smolcss.dev/#smol-unbreakable-boxes */
 /* Better box model */
@@ -18,9 +22,7 @@
 [1] - prevent iOS font size change
 */
 html {
-  -webkit-text-size-adjust: 100%;
-     -moz-text-size-adjust: 100%;
-          text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 html:focus-within {
@@ -67,8 +69,7 @@ ol[role=list] {
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-  -webkit-text-decoration-skip: ink;
-          text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
 }
 
 /* Improve media */
@@ -110,9 +111,7 @@ select {
 [type=week],
 textarea,
 select {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   appearance: none;
   appearance: none;
   width: 100%;
@@ -138,9 +137,7 @@ select:focus {
 /* Reset checkbox and radio styles */
 [type=checkbox],
 [type=radio] {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   appearance: none;
   appearance: none;
 }
@@ -177,174 +174,127 @@ a {
   *,
 *::before,
 *::after {
-    -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
-    -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
   }
 }
 html {
   /*! purgecss start ignore */
-  --surface-1-light: #fafafa;
-  --surface-1-hsl-light: 0deg, 0%, 98.0392156863%;
-  --surface-2-light: #fff;
-  --surface-2-hsl-light: 0deg, 0%, 100%;
-  --surface-3-light: #f5f5f5;
-  --surface-3-hsl-light: 0deg, 0%, 96.0784313725%;
-  --surface-4-light: #e5e5e5;
-  --surface-4-hsl-light: 0deg, 0%, 89.8039215686%;
-  --text-1-light: #171717;
-  --text-1-hsl-light: 0deg, 0%, 9.0196078431%;
-  --text-2-light: #262626;
-  --text-2-hsl-light: 0deg, 0%, 14.9019607843%;
-  --text-3-light: #404040;
-  --text-3-hsl-light: 0deg, 0%, 25.0980392157%;
-  --text-4-light: #525252;
-  --text-4-hsl-light: 0deg, 0%, 32.1568627451%;
-  /*! purgecss end ignore */
-  /*! purgecss start ignore */
-  --surface-1-dark: #171717;
-  --surface-1-hsl-dark: 0deg, 0%, 9.0196078431%;
-  --surface-2-dark: #262626;
-  --surface-2-hsl-dark: 0deg, 0%, 14.9019607843%;
-  --surface-3-dark: #404040;
-  --surface-3-hsl-dark: 0deg, 0%, 25.0980392157%;
-  --surface-4-dark: #525252;
-  --surface-4-hsl-dark: 0deg, 0%, 32.1568627451%;
-  --text-1-dark: #fafafa;
-  --text-1-hsl-dark: 0deg, 0%, 98.0392156863%;
-  --text-2-dark: #f5f5f5;
-  --text-2-hsl-dark: 0deg, 0%, 96.0784313725%;
-  --text-3-dark: #e5e5e5;
-  --text-3-hsl-dark: 0deg, 0%, 89.8039215686%;
-  --text-4-dark: #d4d4d4;
-  --text-4-hsl-dark: 0deg, 0%, 83.137254902%;
+  --surface-1: 162.7722772277deg, 90.990990991%, 78.2352941176%;
+  --surface-2: 0deg, 0%, 100%;
+  --surface-3: 0deg, 0%, 96.0784313725%;
+  --surface-4: 0deg, 0%, 89.8039215686%;
+  --surface-5: 0deg, 0%, 83.137254902%;
+  --text-1: 0deg, 0%, 9.0196078431%;
+  --text-2: 0deg, 0%, 14.9019607843%;
+  --text-3: 0deg, 0%, 25.0980392157%;
+  --text-4: 0deg, 0%, 32.1568627451%;
+  --text-5: 0deg, 0%, 45.0980392157%;
   /*! purgecss end ignore */
 }
 
-:root {
+html {
   /*! purgecss start ignore */
-  --surface-1: #fafafa;
-  --surface-1-hsl: 0deg, 0%, 98.0392156863%;
-  --surface-2: #fff;
-  --surface-2-hsl: 0deg, 0%, 100%;
-  --surface-3: #f5f5f5;
-  --surface-3-hsl: 0deg, 0%, 96.0784313725%;
-  --surface-4: #e5e5e5;
-  --surface-4-hsl: 0deg, 0%, 89.8039215686%;
-  --text-1: #171717;
-  --text-1-hsl: 0deg, 0%, 9.0196078431%;
-  --text-2: #262626;
-  --text-2-hsl: 0deg, 0%, 14.9019607843%;
-  --text-3: #404040;
-  --text-3-hsl: 0deg, 0%, 25.0980392157%;
-  --text-4: #525252;
-  --text-4-hsl: 0deg, 0%, 32.1568627451%;
+  --surface-1-light: 162.7722772277deg, 90.990990991%, 78.2352941176%;
+  --surface-2-light: 0deg, 0%, 100%;
+  --surface-3-light: 0deg, 0%, 96.0784313725%;
+  --surface-4-light: 0deg, 0%, 89.8039215686%;
+  --surface-5-light: 0deg, 0%, 83.137254902%;
+  --text-1-light: 0deg, 0%, 9.0196078431%;
+  --text-2-light: 0deg, 0%, 14.9019607843%;
+  --text-3-light: 0deg, 0%, 25.0980392157%;
+  --text-4-light: 0deg, 0%, 32.1568627451%;
+  --text-5-light: 0deg, 0%, 45.0980392157%;
   /*! purgecss end ignore */
-  color-scheme: light;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     /*! purgecss start ignore */
-    --surface-1: #fafafa;
-    --surface-1-hsl: 0deg, 0%, 98.0392156863%;
-    --surface-2: #fff;
-    --surface-2-hsl: 0deg, 0%, 100%;
-    --surface-3: #f5f5f5;
-    --surface-3-hsl: 0deg, 0%, 96.0784313725%;
-    --surface-4: #e5e5e5;
-    --surface-4-hsl: 0deg, 0%, 89.8039215686%;
-    --text-1: #171717;
-    --text-1-hsl: 0deg, 0%, 9.0196078431%;
-    --text-2: #262626;
-    --text-2-hsl: 0deg, 0%, 14.9019607843%;
-    --text-3: #404040;
-    --text-3-hsl: 0deg, 0%, 25.0980392157%;
-    --text-4: #525252;
-    --text-4-hsl: 0deg, 0%, 32.1568627451%;
+    --surface-1-light: 162.7722772277deg, 90.990990991%, 78.2352941176%;
+    --surface-2-light: 0deg, 0%, 100%;
+    --surface-3-light: 0deg, 0%, 96.0784313725%;
+    --surface-4-light: 0deg, 0%, 89.8039215686%;
+    --surface-5-light: 0deg, 0%, 83.137254902%;
+    --text-1-light: 0deg, 0%, 9.0196078431%;
+    --text-2-light: 0deg, 0%, 14.9019607843%;
+    --text-3-light: 0deg, 0%, 25.0980392157%;
+    --text-4-light: 0deg, 0%, 32.1568627451%;
+    --text-5-light: 0deg, 0%, 45.0980392157%;
     /*! purgecss end ignore */
     color-scheme: light;
   }
 }
-@media (prefers-color-scheme: dark) {
-  :root {
-    /*! purgecss start ignore */
-    --surface-1: #171717;
-    --surface-1-hsl: 0deg, 0%, 9.0196078431%;
-    --surface-2: #262626;
-    --surface-2-hsl: 0deg, 0%, 14.9019607843%;
-    --surface-3: #404040;
-    --surface-3-hsl: 0deg, 0%, 25.0980392157%;
-    --surface-4: #525252;
-    --surface-4-hsl: 0deg, 0%, 32.1568627451%;
-    --text-1: #fafafa;
-    --text-1-hsl: 0deg, 0%, 98.0392156863%;
-    --text-2: #f5f5f5;
-    --text-2-hsl: 0deg, 0%, 96.0784313725%;
-    --text-3: #e5e5e5;
-    --text-3-hsl: 0deg, 0%, 89.8039215686%;
-    --text-4: #d4d4d4;
-    --text-4-hsl: 0deg, 0%, 83.137254902%;
-    /*! purgecss end ignore */
-    color-scheme: dark;
-  }
-}
-[color-scheme=light],
-[data-theme=light] {
+[color-scheme="$color-scheme"],
+[data-theme="$color-scheme"] {
   /*! purgecss start ignore */
-  --surface-1: #fafafa;
-  --surface-1-hsl: 0deg, 0%, 98.0392156863%;
-  --surface-2: #fff;
-  --surface-2-hsl: 0deg, 0%, 100%;
-  --surface-3: #f5f5f5;
-  --surface-3-hsl: 0deg, 0%, 96.0784313725%;
-  --surface-4: #e5e5e5;
-  --surface-4-hsl: 0deg, 0%, 89.8039215686%;
-  --text-1: #171717;
-  --text-1-hsl: 0deg, 0%, 9.0196078431%;
-  --text-2: #262626;
-  --text-2-hsl: 0deg, 0%, 14.9019607843%;
-  --text-3: #404040;
-  --text-3-hsl: 0deg, 0%, 25.0980392157%;
-  --text-4: #525252;
-  --text-4-hsl: 0deg, 0%, 32.1568627451%;
+  --surface-1-light: 162.7722772277deg, 90.990990991%, 78.2352941176%;
+  --surface-2-light: 0deg, 0%, 100%;
+  --surface-3-light: 0deg, 0%, 96.0784313725%;
+  --surface-4-light: 0deg, 0%, 89.8039215686%;
+  --surface-5-light: 0deg, 0%, 83.137254902%;
+  --text-1-light: 0deg, 0%, 9.0196078431%;
+  --text-2-light: 0deg, 0%, 14.9019607843%;
+  --text-3-light: 0deg, 0%, 25.0980392157%;
+  --text-4-light: 0deg, 0%, 32.1568627451%;
+  --text-5-light: 0deg, 0%, 45.0980392157%;
   /*! purgecss end ignore */
   color-scheme: light;
 }
 
-[color-scheme=dark],
-[data-theme=dark] {
+html {
   /*! purgecss start ignore */
-  --surface-1: #171717;
-  --surface-1-hsl: 0deg, 0%, 9.0196078431%;
-  --surface-2: #262626;
-  --surface-2-hsl: 0deg, 0%, 14.9019607843%;
-  --surface-3: #404040;
-  --surface-3-hsl: 0deg, 0%, 25.0980392157%;
-  --surface-4: #525252;
-  --surface-4-hsl: 0deg, 0%, 32.1568627451%;
-  --text-1: #fafafa;
-  --text-1-hsl: 0deg, 0%, 98.0392156863%;
-  --text-2: #f5f5f5;
-  --text-2-hsl: 0deg, 0%, 96.0784313725%;
-  --text-3: #e5e5e5;
-  --text-3-hsl: 0deg, 0%, 89.8039215686%;
-  --text-4: #d4d4d4;
-  --text-4-hsl: 0deg, 0%, 83.137254902%;
+  --surface-1-dark: 213.3333333333deg, 96.9230769231%, 87.2549019608%;
+  --surface-2-dark: 0deg, 0%, 14.9019607843%;
+  --surface-3-dark: 0deg, 0%, 25.0980392157%;
+  --surface-4-dark: 0deg, 0%, 32.1568627451%;
+  --surface-5-dark: 0deg, 0%, 45.0980392157%;
+  --text-1-dark: 0deg, 0%, 98.0392156863%;
+  --text-2-dark: 0deg, 0%, 96.0784313725%;
+  --text-3-dark: 0deg, 0%, 89.8039215686%;
+  --text-4-dark: 0deg, 0%, 83.137254902%;
+  --text-5-dark: 0deg, 0%, 63.9215686275%;
+  /*! purgecss end ignore */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /*! purgecss start ignore */
+    --surface-1-dark: 213.3333333333deg, 96.9230769231%, 87.2549019608%;
+    --surface-2-dark: 0deg, 0%, 14.9019607843%;
+    --surface-3-dark: 0deg, 0%, 25.0980392157%;
+    --surface-4-dark: 0deg, 0%, 32.1568627451%;
+    --surface-5-dark: 0deg, 0%, 45.0980392157%;
+    --text-1-dark: 0deg, 0%, 98.0392156863%;
+    --text-2-dark: 0deg, 0%, 96.0784313725%;
+    --text-3-dark: 0deg, 0%, 89.8039215686%;
+    --text-4-dark: 0deg, 0%, 83.137254902%;
+    --text-5-dark: 0deg, 0%, 63.9215686275%;
+    /*! purgecss end ignore */
+    color-scheme: dark;
+  }
+}
+[color-scheme="$color-scheme"],
+[data-theme="$color-scheme"] {
+  /*! purgecss start ignore */
+  --surface-1-dark: 213.3333333333deg, 96.9230769231%, 87.2549019608%;
+  --surface-2-dark: 0deg, 0%, 14.9019607843%;
+  --surface-3-dark: 0deg, 0%, 25.0980392157%;
+  --surface-4-dark: 0deg, 0%, 32.1568627451%;
+  --surface-5-dark: 0deg, 0%, 45.0980392157%;
+  --text-1-dark: 0deg, 0%, 98.0392156863%;
+  --text-2-dark: 0deg, 0%, 96.0784313725%;
+  --text-3-dark: 0deg, 0%, 89.8039215686%;
+  --text-4-dark: 0deg, 0%, 83.137254902%;
+  --text-5-dark: 0deg, 0%, 63.9215686275%;
   /*! purgecss end ignore */
   color-scheme: dark;
 }
 
-::-moz-selection {
-  background: hsl(var(--color-hsl-accent-5, 167.8651685393deg, 87.2549019608%, 40%), 1);
-  color: #fff;
-}
-
 ::selection {
-  background: hsl(var(--color-hsl-accent-5, 167.8651685393deg, 87.2549019608%, 40%), 1);
+  background: hsl(var(--color-accent-5, 167.8651685393deg, 87.2549019608%, 40%), 1);
   color: #fff;
 }
 
@@ -404,18 +354,18 @@ select {
 }
 
 [type=checkbox]:checked {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3E%3C/svg%3E");
 }
 
 [type=radio] {
   border-radius: 9999px;
 }
 [type=radio]:checked {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='white'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='3'/%3E%3C/svg%3E");
 }
 
 select {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 16 16'%3E%3Cpath stroke='%23737373' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6' /%3E%3C/svg%3E");
   background-position: right 0.75em center;
   background-repeat: no-repeat;
   background-size: 16px 12px;

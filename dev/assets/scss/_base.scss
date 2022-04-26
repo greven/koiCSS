@@ -30,8 +30,6 @@ body {
   @include koi.responsive-margin-block;
   background-color: koi.color(surface, 1);
   // color: koi.color(text, 1);
-
-  @debug koi.color(surface, 1);
 }
 
 h1 {
