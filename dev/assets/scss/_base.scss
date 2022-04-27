@@ -48,29 +48,31 @@ a {
   color: koi.accent(5);
 }
 
-// .wrapper {
-// @include koi.responsive-padding;
-// margin-top: koi.spacing(md);
-// margin-top: koi.rem(48);
-// margin-top: koi.spacing(48);
-// padding: koi.theme(spacing, 32);
-// border: 2px solid koi.color(gray);
-// border-radius: koi.radius();
-// @include koi.shadow(sm);
-// background-color: koi.color(gray, 8);
+.wrapper {
+  @include koi.box($padding: true, $rounded: lg, $shadow: md);
+  @include koi.responsive-margin-block;
+  border: 2px solid koi.color(gray);
+  // @include koi.responsive-padding;
+  // margin-top: koi.spacing(md);
+  // margin-top: koi.rem(48);
+  // margin-top: koi.spacing(48);
+  // padding: koi.theme(spacing, 32);
+  // border-radius: koi.radius();
+  // @include koi.shadow(sm);
+  // background-color: koi.color(gray, 8);
 
-// &:hover {
-// border-color: koi.accent(5);
-// background-color: koi.color(gray, 1);
-// background-color: var(--surface-2);
-// @include koi.transition-colors(koi.theme(duration, slow));
-// border-color: koi.color(primary);
+  &:hover {
+    border-color: koi.accent(5);
+    // background-color: koi.color(gray, 1);
+    // background-color: var(--surface-2);
+    // @include koi.transition-colors(koi.theme(duration, slow));
+    // border-color: koi.color(primary);
 
-// @include koi.dark {
-//   background-color: koi.color(gray, 8);
-// }
-// }
-// }
+    // @include koi.dark {
+    //   background-color: koi.color(gray, 8);
+    // }
+  }
+}
 
 // .loaders {
 //   display: flex;

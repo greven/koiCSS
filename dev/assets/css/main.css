@@ -756,6 +756,22 @@ a {
   color: hsl(var(--color-accent-5, 167.8651685393deg, 87.2549019608%, 40%), 1);
 }
 
+.wrapper {
+  word-break: break-word;
+  hyphens: auto;
+  width: 100%;
+  /* Add padding to the element, either by value, by
+    theme token or using responsive padding as fallback */
+  padding: clamp(var(--koi-spacing-min, 0.75rem), var(--koi-spacing-value, 5%), var(--koi-spacing-max, 1.5rem));
+  border-radius: 0.375rem;
+  box-shadow: 0 4px 6px -1px rgba(0 0 0 / 0.1), 0 2px 4px -1px rgba(0 0 0 / 0.06);
+  margin-block: clamp(var(--koi-spacing-min, 0.75rem), var(--koi-spacing-value, 5%), var(--koi-spacing-max, 1.5rem));
+  border: 2px solid hsl(var(--color-gray-6), 1);
+}
+.wrapper:hover {
+  border-color: hsl(var(--color-accent-5, 167.8651685393deg, 87.2549019608%, 40%), 1);
+}
+
 .btn {
   font-size: 0.875rem;
   align-items: center;
