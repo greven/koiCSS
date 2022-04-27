@@ -2,6 +2,10 @@
 /* Returns the css custom property name given the property and key */
 /* Output a CSS var with the given name prefixed
   if configured. Allows passing the css var fallback. */
+/* Get a value from the theme using
+  fallbacks definied in the config */
+/* Checks if keys is a valid scheme color
+  (theme -> color-schemes) */
 /* Basic box element with theme defaults that can be composed with other utilities.
   Based on https://smolcss.dev/#smol-unbreakable-boxes */
 /* Better box model */
