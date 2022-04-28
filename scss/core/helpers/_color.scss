@@ -1,13 +1,28 @@
 @use 'sass:color';
+@use 'sass:meta';
 
-// Convert color to hsl: hue, saturation, lightness
-@function to-hsl($color) {
-  @return color.hue($color), color.saturation($color), color.lightness($color);
+// Convert color to hsl
+@function to-hsl($color, $alpha: 1) {
+  @if type-of($color) == 'color' {
+    @return hsla(color.hue($color), color.saturation($color), color.lightness($color), $alpha);
+  } @else if type-of(hsl($color)) == 'color' {
+    $color: hsl($color);
+    @return hsla(color.hue($color), color.saturation($color), color.lightness($color), $alpha);
+  } @else {
+    @error "#{$color} is not a valid color object!";
+  }
 }
 
-// Convert color to rgb: red, green, blue
-@function to-rgb($color) {
-  @return color.red($color), color.green($color), color.blue($color);
+// Convert color to rgb
+@function to-rgb($color, $alpha: 1) {
+  @if type-of($color) == 'color' {
+    @return rgba(color.red($color), color.green($color), color.blue($color), $alpha);
+  } @else if type-of(rgb($color)) == 'color' {
+    $color: rgb($color);
+    @return rgba(color.red($color), color.green($color), color.blue($color), $alpha);
+  } @else {
+    @error "#{$color} is not a valid color object!";
+  }
 }
 
 // Accessibility

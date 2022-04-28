@@ -23,7 +23,7 @@
 @mixin generate-css-color-vars($colors-map: (), $property: null, $suffix: null) {
   /*! purgecss start ignore */
   @each $color, $value in $colors-map {
-    @if meta.type-of($value) == color {
+    @if meta.type-of($value) == 'color' {
       #{css-var-name($property, $color, $suffix)}: to-hsl($value);
     } @else {
       @each $shade, $shade-value in $value {
@@ -33,7 +33,7 @@
 
     // Accent
     .accent-#{'' + $color} {
-      @if meta.type-of($value) == color {
+      @if meta.type-of($value) == 'color' {
         #{css-var-name(accent, $suffix)}: to-hsl($value);
       } @else {
         @each $shade, $shade-value in $value {
@@ -48,11 +48,11 @@
 @mixin generate-color-scheme-css-vars($colors-map: (), $color-scheme: null) {
   /*! purgecss start ignore */
   @each $color, $value in $colors-map {
-    @if meta.type-of($value) == color {
-      #{css-var-name($color, 'clr', $color-scheme)}: to-hsl($value);
+    @if meta.type-of($value) == 'color' {
+      #{css-var-name(c-#{$color}, $color-scheme)}: to-hsl($value);
     } @else {
       @each $shade, $shade-value in $value {
-        #{css-var-name('#{$color}#{$shade}', 'clr', $color-scheme)}: to-hsl($shade-value);
+        #{css-var-name('c-#{$color}-#{$shade}', $color-scheme)}: to-hsl($shade-value);
       }
     }
   }

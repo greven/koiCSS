@@ -16,21 +16,21 @@ $-default-accent: config(fallbacks, accent);
 
 @function color($name, $shade: $-default-shade, $alpha: 1) {
   @if is-scheme-color($name, $shade) {
-    @return hsl(css-var(#{$name}-#{$shade}-clr), $alpha);
+    // @return hsl(css-var(c-#{$name}-#{$shade}), $alpha);
+    @return css-var(c-#{$name}-#{$shade});
   } @else if is-scheme-color($name) {
-    @return hsl(css-var(#{$name}-clr), $alpha);
+    // @return hsl(css-var(c-#{$name}), $alpha);
+    @return css-var(c-#{$name});
   } @else if is-theme-color($name, $shade) {
-    @return hsl(css-var(clr-#{$name}-#{$shade}), $alpha);
+    @return to-hsl(theme(colors, $name, $shade), $alpha);
   } @else if is-theme-color($name) {
-    @return hsl(css-var(clr-#{$name}), $alpha);
+    @return to-hsl(theme(colors, $name), $alpha);
   } @else {
     @error "Color #{$name}-#{$shade} not found in theme.";
   }
 }
 
 @function accent($shade: $-default-shade, $alpha: 1) {
-  $fallback-accent: rgba(theme(colors, $-default-accent, $shade), $alpha);
-  @return hsl(css-var(accent-#{$shade}, to-hsl($fallback-accent)), $alpha);
-  // @debug color('accent', $shade);
-  // @return #289;
+  $fallback-accent: to-hsl(theme(colors, $-default-accent, $shade), $alpha);
+  @return css-var(accent-#{$shade}, $fallback-accent);
 }

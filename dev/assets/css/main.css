@@ -3,7 +3,7 @@
 /* Output a CSS var with the given name prefixed
   if configured. Allows passing the css var fallback. */
 /* The CSS variables can be access as name-color,
-  example: var(--surface-1-color). */
+  example: var(--bg-1-color). */
 /* Get a value from the theme using
   fallbacks definied in the config */
 /* Checks if keys is a valid scheme color
@@ -188,53 +188,53 @@ a {
 }
 html {
   /*! purgecss start ignore */
-  --surface1-clr: 0deg, 0%, 98.0392156863%;
-  --surface2-clr: 0deg, 0%, 100%;
-  --surface3-clr: 0deg, 0%, 96.0784313725%;
-  --surface4-clr: 0deg, 0%, 89.8039215686%;
-  --text1-clr: 0deg, 0%, 9.0196078431%;
-  --text2-clr: 0deg, 0%, 14.9019607843%;
-  --text3-clr: 0deg, 0%, 25.0980392157%;
-  --text4-clr: 0deg, 0%, 32.1568627451%;
-  --code-bg-clr: 0deg, 0%, 9.0196078431%;
-  --code-text-clr: 0deg, 0%, 96.0784313725%;
-  --quote-text-clr: 0deg, 0%, 14.9019607843%;
-  --quote-border-clr: 0deg, 72.2222222222%, 50.5882352941%;
+  --c-surface-1: hsl(0deg, 0%, 98.0392156863%);
+  --c-surface-2: hsl(0deg, 0%, 100%);
+  --c-surface-3: hsl(0deg, 0%, 96.0784313725%);
+  --c-surface-4: hsl(0deg, 0%, 90.1960784314%);
+  --c-text-1: hsl(0deg, 0%, 9.0196078431%);
+  --c-text-2: hsl(0deg, 0%, 14.9019607843%);
+  --c-text-3: hsl(0deg, 0%, 25.0980392157%);
+  --c-text-4: hsl(0deg, 0%, 32.1568627451%);
+  --c-code-bg: hsl(0deg, 0%, 9.0196078431%);
+  --c-code-text: hsl(0deg, 0%, 96.0784313725%);
+  --c-quote-text: hsl(0deg, 0%, 14.9019607843%);
+  --c-quote-border: hsl(0deg, 72%, 50.9803921569%);
   /*! purgecss end ignore */
 }
 
 html {
   /*! purgecss start ignore */
-  --surface1-clr-light: 0deg, 0%, 98.0392156863%;
-  --surface2-clr-light: 0deg, 0%, 100%;
-  --surface3-clr-light: 0deg, 0%, 96.0784313725%;
-  --surface4-clr-light: 0deg, 0%, 89.8039215686%;
-  --text1-clr-light: 0deg, 0%, 9.0196078431%;
-  --text2-clr-light: 0deg, 0%, 14.9019607843%;
-  --text3-clr-light: 0deg, 0%, 25.0980392157%;
-  --text4-clr-light: 0deg, 0%, 32.1568627451%;
-  --code-bg-clr-light: 0deg, 0%, 9.0196078431%;
-  --code-text-clr-light: 0deg, 0%, 96.0784313725%;
-  --quote-text-clr-light: 0deg, 0%, 14.9019607843%;
-  --quote-border-clr-light: 0deg, 72.2222222222%, 50.5882352941%;
+  --c-surface-1-light: hsl(0deg, 0%, 98.0392156863%);
+  --c-surface-2-light: hsl(0deg, 0%, 100%);
+  --c-surface-3-light: hsl(0deg, 0%, 96.0784313725%);
+  --c-surface-4-light: hsl(0deg, 0%, 90.1960784314%);
+  --c-text-1-light: hsl(0deg, 0%, 9.0196078431%);
+  --c-text-2-light: hsl(0deg, 0%, 14.9019607843%);
+  --c-text-3-light: hsl(0deg, 0%, 25.0980392157%);
+  --c-text-4-light: hsl(0deg, 0%, 32.1568627451%);
+  --c-code-bg-light: hsl(0deg, 0%, 9.0196078431%);
+  --c-code-text-light: hsl(0deg, 0%, 96.0784313725%);
+  --c-quote-text-light: hsl(0deg, 0%, 14.9019607843%);
+  --c-quote-border-light: hsl(0deg, 72%, 50.9803921569%);
   /*! purgecss end ignore */
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     /*! purgecss start ignore */
-    --surface1-clr: 0deg, 0%, 98.0392156863%;
-    --surface2-clr: 0deg, 0%, 100%;
-    --surface3-clr: 0deg, 0%, 96.0784313725%;
-    --surface4-clr: 0deg, 0%, 89.8039215686%;
-    --text1-clr: 0deg, 0%, 9.0196078431%;
-    --text2-clr: 0deg, 0%, 14.9019607843%;
-    --text3-clr: 0deg, 0%, 25.0980392157%;
-    --text4-clr: 0deg, 0%, 32.1568627451%;
-    --code-bg-clr: 0deg, 0%, 9.0196078431%;
-    --code-text-clr: 0deg, 0%, 96.0784313725%;
-    --quote-text-clr: 0deg, 0%, 14.9019607843%;
-    --quote-border-clr: 0deg, 72.2222222222%, 50.5882352941%;
+    --c-surface-1: hsl(0deg, 0%, 98.0392156863%);
+    --c-surface-2: hsl(0deg, 0%, 100%);
+    --c-surface-3: hsl(0deg, 0%, 96.0784313725%);
+    --c-surface-4: hsl(0deg, 0%, 90.1960784314%);
+    --c-text-1: hsl(0deg, 0%, 9.0196078431%);
+    --c-text-2: hsl(0deg, 0%, 14.9019607843%);
+    --c-text-3: hsl(0deg, 0%, 25.0980392157%);
+    --c-text-4: hsl(0deg, 0%, 32.1568627451%);
+    --c-code-bg: hsl(0deg, 0%, 9.0196078431%);
+    --c-code-text: hsl(0deg, 0%, 96.0784313725%);
+    --c-quote-text: hsl(0deg, 0%, 14.9019607843%);
+    --c-quote-border: hsl(0deg, 72%, 50.9803921569%);
     /*! purgecss end ignore */
     color-scheme: light;
   }
@@ -242,54 +242,54 @@ html {
 [color-scheme=light],
 [data-theme=light] {
   /*! purgecss start ignore */
-  --surface1-clr: 0deg, 0%, 98.0392156863%;
-  --surface2-clr: 0deg, 0%, 100%;
-  --surface3-clr: 0deg, 0%, 96.0784313725%;
-  --surface4-clr: 0deg, 0%, 89.8039215686%;
-  --text1-clr: 0deg, 0%, 9.0196078431%;
-  --text2-clr: 0deg, 0%, 14.9019607843%;
-  --text3-clr: 0deg, 0%, 25.0980392157%;
-  --text4-clr: 0deg, 0%, 32.1568627451%;
-  --code-bg-clr: 0deg, 0%, 9.0196078431%;
-  --code-text-clr: 0deg, 0%, 96.0784313725%;
-  --quote-text-clr: 0deg, 0%, 14.9019607843%;
-  --quote-border-clr: 0deg, 72.2222222222%, 50.5882352941%;
+  --c-surface-1: hsl(0deg, 0%, 98.0392156863%);
+  --c-surface-2: hsl(0deg, 0%, 100%);
+  --c-surface-3: hsl(0deg, 0%, 96.0784313725%);
+  --c-surface-4: hsl(0deg, 0%, 90.1960784314%);
+  --c-text-1: hsl(0deg, 0%, 9.0196078431%);
+  --c-text-2: hsl(0deg, 0%, 14.9019607843%);
+  --c-text-3: hsl(0deg, 0%, 25.0980392157%);
+  --c-text-4: hsl(0deg, 0%, 32.1568627451%);
+  --c-code-bg: hsl(0deg, 0%, 9.0196078431%);
+  --c-code-text: hsl(0deg, 0%, 96.0784313725%);
+  --c-quote-text: hsl(0deg, 0%, 14.9019607843%);
+  --c-quote-border: hsl(0deg, 72%, 50.9803921569%);
   /*! purgecss end ignore */
   color-scheme: light;
 }
 
 html {
   /*! purgecss start ignore */
-  --surface1-clr-dark: 0deg, 0%, 9.0196078431%;
-  --surface2-clr-dark: 0deg, 0%, 14.9019607843%;
-  --surface3-clr-dark: 0deg, 0%, 25.0980392157%;
-  --surface4-clr-dark: 0deg, 0%, 32.1568627451%;
-  --text1-clr-dark: 0deg, 0%, 98.0392156863%;
-  --text2-clr-dark: 0deg, 0%, 96.0784313725%;
-  --text3-clr-dark: 0deg, 0%, 89.8039215686%;
-  --text4-clr-dark: 0deg, 0%, 83.137254902%;
-  --code-bg-clr-dark: 0deg, 0%, 0%;
-  --code-text-clr-dark: 0deg, 0%, 96.0784313725%;
-  --quote-text-clr-dark: 0deg, 0%, 96.0784313725%;
-  --quote-border-clr-dark: 0deg, 72.2222222222%, 50.5882352941%;
+  --c-surface-1-dark: hsl(0deg, 0%, 9.0196078431%);
+  --c-surface-2-dark: hsl(0deg, 0%, 14.9019607843%);
+  --c-surface-3-dark: hsl(0deg, 0%, 25.0980392157%);
+  --c-surface-4-dark: hsl(0deg, 0%, 32.1568627451%);
+  --c-text-1-dark: hsl(0deg, 0%, 98.0392156863%);
+  --c-text-2-dark: hsl(0deg, 0%, 96.0784313725%);
+  --c-text-3-dark: hsl(0deg, 0%, 90.1960784314%);
+  --c-text-4-dark: hsl(0deg, 0%, 83.137254902%);
+  --c-code-bg-dark: hsl(0deg, 0%, 0%);
+  --c-code-text-dark: hsl(0deg, 0%, 96.0784313725%);
+  --c-quote-text-dark: hsl(0deg, 0%, 96.0784313725%);
+  --c-quote-border-dark: hsl(0deg, 72%, 50.9803921569%);
   /*! purgecss end ignore */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     /*! purgecss start ignore */
-    --surface1-clr: 0deg, 0%, 9.0196078431%;
-    --surface2-clr: 0deg, 0%, 14.9019607843%;
-    --surface3-clr: 0deg, 0%, 25.0980392157%;
-    --surface4-clr: 0deg, 0%, 32.1568627451%;
-    --text1-clr: 0deg, 0%, 98.0392156863%;
-    --text2-clr: 0deg, 0%, 96.0784313725%;
-    --text3-clr: 0deg, 0%, 89.8039215686%;
-    --text4-clr: 0deg, 0%, 83.137254902%;
-    --code-bg-clr: 0deg, 0%, 0%;
-    --code-text-clr: 0deg, 0%, 96.0784313725%;
-    --quote-text-clr: 0deg, 0%, 96.0784313725%;
-    --quote-border-clr: 0deg, 72.2222222222%, 50.5882352941%;
+    --c-surface-1: hsl(0deg, 0%, 9.0196078431%);
+    --c-surface-2: hsl(0deg, 0%, 14.9019607843%);
+    --c-surface-3: hsl(0deg, 0%, 25.0980392157%);
+    --c-surface-4: hsl(0deg, 0%, 32.1568627451%);
+    --c-text-1: hsl(0deg, 0%, 98.0392156863%);
+    --c-text-2: hsl(0deg, 0%, 96.0784313725%);
+    --c-text-3: hsl(0deg, 0%, 90.1960784314%);
+    --c-text-4: hsl(0deg, 0%, 83.137254902%);
+    --c-code-bg: hsl(0deg, 0%, 0%);
+    --c-code-text: hsl(0deg, 0%, 96.0784313725%);
+    --c-quote-text: hsl(0deg, 0%, 96.0784313725%);
+    --c-quote-border: hsl(0deg, 72%, 50.9803921569%);
     /*! purgecss end ignore */
     color-scheme: dark;
   }
@@ -297,24 +297,24 @@ html {
 [color-scheme=dark],
 [data-theme=dark] {
   /*! purgecss start ignore */
-  --surface1-clr: 0deg, 0%, 9.0196078431%;
-  --surface2-clr: 0deg, 0%, 14.9019607843%;
-  --surface3-clr: 0deg, 0%, 25.0980392157%;
-  --surface4-clr: 0deg, 0%, 32.1568627451%;
-  --text1-clr: 0deg, 0%, 98.0392156863%;
-  --text2-clr: 0deg, 0%, 96.0784313725%;
-  --text3-clr: 0deg, 0%, 89.8039215686%;
-  --text4-clr: 0deg, 0%, 83.137254902%;
-  --code-bg-clr: 0deg, 0%, 0%;
-  --code-text-clr: 0deg, 0%, 96.0784313725%;
-  --quote-text-clr: 0deg, 0%, 96.0784313725%;
-  --quote-border-clr: 0deg, 72.2222222222%, 50.5882352941%;
+  --c-surface-1: hsl(0deg, 0%, 9.0196078431%);
+  --c-surface-2: hsl(0deg, 0%, 14.9019607843%);
+  --c-surface-3: hsl(0deg, 0%, 25.0980392157%);
+  --c-surface-4: hsl(0deg, 0%, 32.1568627451%);
+  --c-text-1: hsl(0deg, 0%, 98.0392156863%);
+  --c-text-2: hsl(0deg, 0%, 96.0784313725%);
+  --c-text-3: hsl(0deg, 0%, 90.1960784314%);
+  --c-text-4: hsl(0deg, 0%, 83.137254902%);
+  --c-code-bg: hsl(0deg, 0%, 0%);
+  --c-code-text: hsl(0deg, 0%, 96.0784313725%);
+  --c-quote-text: hsl(0deg, 0%, 96.0784313725%);
+  --c-quote-border: hsl(0deg, 72%, 50.9803921569%);
   /*! purgecss end ignore */
   color-scheme: dark;
 }
 
 ::selection {
-  background: hsl(var(--accent-5, 167.8651685393deg, 87.2549019608%, 40%), 1);
+  background: var(--accent-5, hsl(167.8651685393deg, 87.2549019608%, 40%));
   color: #fff;
 }
 
@@ -343,8 +343,8 @@ sup {
 pre {
   padding: clamp(var(--koi-spacing-min, 0.75rem), var(--koi-spacing-value, 5%), var(--koi-spacing-max, 1.5rem));
   border-radius: 0.25rem;
-  background-color: hsl(var(--code-bg-clr), 1);
-  color: hsl(var(--code-text-clr), 1);
+  background-color: var(--c-code-bg);
+  color: var(--c-code-text);
   overflow-x: auto;
 }
 
@@ -355,9 +355,9 @@ code {
 }
 
 blockquote {
-  border-left-color: hsl(var(--quote-border-clr), 1);
+  border-left-color: var(--c-quote-border);
   border-left-width: 0.25rem;
-  color: hsl(var(--quote-text-clr), 1);
+  color: var(--c-quote-text);
   font-style: italic;
   font-weight: 500;
   margin-bottom: 1.6em;
@@ -376,8 +376,8 @@ blockquote p:last-of-type::after {
 }
 
 a {
-  border-bottom: 1px solid hsl(var(--accent-5, 167.8651685393deg, 87.2549019608%, 40%), 1);
-  color: hsl(var(--text-1-clr), 1);
+  border-bottom: 1px solid var(--accent-5, hsl(167.8651685393deg, 87.2549019608%, 40%));
+  color: var(--c-text-1);
   font-weight: 500;
   text-decoration: none;
   transition: all 50ms linear;
@@ -452,147 +452,147 @@ select {
 
 :root {
   /*! purgecss start ignore */
-  --c-white: 0deg, 0%, 100%;
-  --c-black: 0deg, 0%, 0%;
-  --c-primary-0: 160deg, 88.2352941176%, 96.6666666667%;
-  --c-primary-1: 161.1764705882deg, 92.7272727273%, 89.2156862745%;
-  --c-primary-2: 162.7722772277deg, 90.990990991%, 78.2352941176%;
-  --c-primary-3: 165deg, 83.5164835165%, 64.3137254902%;
-  --c-primary-4: 166.9273743017deg, 71.3147410359%, 49.2156862745%;
-  --c-primary-5: 167.8651685393deg, 87.2549019608%, 40%;
-  --c-primary-6: 169.2413793103deg, 90.0621118012%, 31.568627451%;
-  --c-primary-7: 169.7297297297deg, 83.4586466165%, 26.0784313725%;
-  --c-primary-8: 170.6024096386deg, 74.7747747748%, 21.7647058824%;
-  --c-primary-9: 170.4761904762deg, 64.9484536082%, 19.0196078431%;
-  --c-gray-0: 0deg, 0%, 98.0392156863%;
-  --c-gray-1: 0deg, 0%, 96.0784313725%;
-  --c-gray-2: 0deg, 0%, 89.8039215686%;
-  --c-gray-3: 0deg, 0%, 83.137254902%;
-  --c-gray-4: 0deg, 0%, 63.9215686275%;
-  --c-gray-5: 0deg, 0%, 45.0980392157%;
-  --c-gray-6: 0deg, 0%, 32.1568627451%;
-  --c-gray-7: 0deg, 0%, 25.0980392157%;
-  --c-gray-8: 0deg, 0%, 14.9019607843%;
-  --c-gray-9: 0deg, 0%, 9.0196078431%;
-  --c-red-0: 0deg, 85.7142857143%, 97.2549019608%;
-  --c-red-1: 0deg, 93.3333333333%, 94.1176470588%;
-  --c-red-2: 0deg, 96.2962962963%, 89.4117647059%;
-  --c-red-3: 0deg, 93.5483870968%, 81.7647058824%;
-  --c-red-4: 0deg, 90.6040268456%, 70.7843137255%;
-  --c-red-5: 0deg, 84.236453202%, 60.1960784314%;
-  --c-red-6: 0deg, 72.2222222222%, 50.5882352941%;
-  --c-red-7: 0deg, 73.7089201878%, 41.7647058824%;
-  --c-red-8: 0deg, 70%, 35.2941176471%;
-  --c-red-9: 0deg, 62.8205128205%, 30.5882352941%;
-  --c-yellow-0: 54.5454545455deg, 91.6666666667%, 95.2941176471%;
-  --c-yellow-1: 54.9152542373deg, 96.7213114754%, 88.0392156863%;
-  --c-yellow-2: 52.7586206897deg, 98.3050847458%, 76.862745098%;
-  --c-yellow-3: 50.4395604396deg, 97.8494623656%, 63.5294117647%;
-  --c-yellow-4: 47.9475982533deg, 95.8158995816%, 53.137254902%;
-  --c-yellow-5: 45.3982300885deg, 93.3884297521%, 47.4509803922%;
-  --c-yellow-6: 40.6060606061deg, 96.1165048544%, 40.3921568627%;
-  --c-yellow-7: 35.4545454545deg, 91.6666666667%, 32.9411764706%;
-  --c-yellow-8: 31.7647058824deg, 80.9523809524%, 28.8235294118%;
-  --c-yellow-9: 28.4210526316deg, 72.5190839695%, 25.6862745098%;
-  --c-green-0: 138.4615384615deg, 76.4705882353%, 96.6666666667%;
-  --c-green-1: 140.625deg, 84.2105263158%, 92.5490196078%;
-  --c-green-2: 141deg, 78.9473684211%, 85.0980392157%;
-  --c-green-3: 141.7142857143deg, 76.6423357664%, 73.137254902%;
-  --c-green-4: 141.8918918919deg, 69.1588785047%, 58.0392156863%;
-  --c-green-5: 142.0858895706deg, 70.5627705628%, 45.2941176471%;
-  --c-green-6: 142.1276595745deg, 76.2162162162%, 36.2745098039%;
-  --c-green-7: 142.4299065421deg, 71.8120805369%, 29.2156862745%;
-  --c-green-8: 142.7848101266deg, 64.2276422764%, 24.1176470588%;
-  --c-green-9: 143.8095238095deg, 61.1650485437%, 20.1960784314%;
-  --c-blue-0: 213.75deg, 100%, 96.862745098%;
-  --c-blue-1: 214.2857142857deg, 94.5945945946%, 92.7450980392%;
-  --c-blue-2: 213.3333333333deg, 96.9230769231%, 87.2549019608%;
-  --c-blue-3: 211.6981132075deg, 96.3636363636%, 78.431372549%;
-  --c-blue-4: 213.1168831169deg, 93.9024390244%, 67.8431372549%;
-  --c-blue-5: 217.2192513369deg, 91.2195121951%, 59.8039215686%;
-  --c-blue-6: 221.2121212121deg, 83.1932773109%, 53.3333333333%;
-  --c-blue-7: 224.2780748663deg, 76.3265306122%, 48.0392156863%;
-  --c-blue-8: 225.9310344828deg, 70.7317073171%, 40.1960784314%;
-  --c-blue-9: 224.4444444444deg, 64.2857142857%, 32.9411764706%;
+  --c-white: hsl(0deg, 0%, 100%);
+  --c-black: hsl(0deg, 0%, 0%);
+  --c-primary-0: hsl(160deg, 100%, 97.0588235294%);
+  --c-primary-1: hsl(161.5384615385deg, 92.8571428571%, 89.0196078431%);
+  --c-primary-2: hsl(162.9411764706deg, 91.0714285714%, 78.0392156863%);
+  --c-primary-3: hsl(165.1948051948deg, 83.6956521739%, 63.9215686275%);
+  --c-primary-4: hsl(166.8539325843deg, 71.2%, 49.0196078431%);
+  --c-primary-5: hsl(167.8651685393deg, 87.2549019608%, 40%);
+  --c-primary-6: hsl(168.9795918367deg, 90.1840490798%, 31.9607843137%);
+  --c-primary-7: hsl(170.1818181818deg, 83.3333333333%, 25.8823529412%);
+  --c-primary-8: hsl(171.4285714286deg, 75%, 21.9607843137%);
+  --c-primary-9: hsl(169.5238095238deg, 64.9484536082%, 19.0196078431%);
+  --c-gray-0: hsl(0deg, 0%, 98.0392156863%);
+  --c-gray-1: hsl(0deg, 0%, 96.0784313725%);
+  --c-gray-2: hsl(0deg, 0%, 90.1960784314%);
+  --c-gray-3: hsl(0deg, 0%, 83.137254902%);
+  --c-gray-4: hsl(0deg, 0%, 63.9215686275%);
+  --c-gray-5: hsl(0deg, 0%, 45.0980392157%);
+  --c-gray-6: hsl(0deg, 0%, 32.1568627451%);
+  --c-gray-7: hsl(0deg, 0%, 25.0980392157%);
+  --c-gray-8: hsl(0deg, 0%, 14.9019607843%);
+  --c-gray-9: hsl(0deg, 0%, 9.0196078431%);
+  --c-red-0: hsl(0deg, 86.6666666667%, 97.0588235294%);
+  --c-red-1: hsl(0deg, 93.5483870968%, 93.9215686275%);
+  --c-red-2: hsl(0deg, 96.4285714286%, 89.0196078431%);
+  --c-red-3: hsl(0deg, 93.4782608696%, 81.9607843137%);
+  --c-red-4: hsl(0deg, 90.5405405405%, 70.9803921569%);
+  --c-red-5: hsl(0deg, 84.3137254902%, 60%);
+  --c-red-6: hsl(0deg, 72%, 50.9803921569%);
+  --c-red-7: hsl(0deg, 73.8317757009%, 41.9607843137%);
+  --c-red-8: hsl(0deg, 69.8324022346%, 35.0980392157%);
+  --c-red-9: hsl(0deg, 63.2911392405%, 30.9803921569%);
+  --c-yellow-0: hsl(54.7826086957deg, 92%, 95.0980392157%);
+  --c-yellow-1: hsl(54.9152542373deg, 96.7213114754%, 88.0392156863%);
+  --c-yellow-2: hsl(52.6956521739deg, 98.2905982906%, 77.0588235294%);
+  --c-yellow-3: hsl(50deg, 97.8260869565%, 63.9215686275%);
+  --c-yellow-4: hsl(48deg, 95.8333333333%, 52.9411764706%);
+  --c-yellow-5: hsl(44.8deg, 90.3614457831%, 83.7254901961%);
+  --c-yellow-6: hsl(41.0204081633deg, 96.0784313725%, 40%);
+  --c-yellow-7: hsl(34.8387096774deg, 91.7159763314%, 33.137254902%);
+  --c-yellow-8: hsl(32deg, 81.0810810811%, 29.0196078431%);
+  --c-yellow-9: hsl(27.8350515464deg, 72.9323308271%, 26.0784313725%);
+  --c-green-0: hsl(133.3333333333deg, 60%, 97.0588235294%);
+  --c-green-1: hsl(142deg, 83.3333333333%, 92.9411764706%);
+  --c-green-2: hsl(141deg, 78.9473684211%, 85.0980392157%);
+  --c-green-3: hsl(142.0754716981deg, 76.8115942029%, 72.9411764706%);
+  --c-green-4: hsl(141.8918918919deg, 69.1588785047%, 58.0392156863%);
+  --c-green-5: hsl(142.0858895706deg, 71.1790393013%, 44.9019607843%);
+  --c-green-6: hsl(141.8571428571deg, 76.0869565217%, 36.0784313725%);
+  --c-green-7: hsl(142.0754716981deg, 71.6216216216%, 29.0196078431%);
+  --c-green-8: hsl(143.0769230769deg, 63.9344262295%, 23.9215686275%);
+  --c-green-9: hsl(144.1935483871deg, 60.7843137255%, 20%);
+  --c-blue-0: hsl(216deg, 100%, 97.0588235294%);
+  --c-blue-1: hsl(213.5294117647deg, 94.4444444444%, 92.9411764706%);
+  --c-blue-2: hsl(212.8125deg, 96.9696969697%, 87.0588235294%);
+  --c-blue-3: hsl(212.2222222222deg, 96.4285714286%, 78.0392156863%);
+  --c-blue-4: hsl(212.9411764706deg, 93.8650306748%, 68.0392156863%);
+  --c-blue-5: hsl(217.0967741935deg, 91.1764705882%, 60%);
+  --c-blue-6: hsl(221.0050251256deg, 83.2635983264%, 53.137254902%);
+  --c-blue-7: hsl(223.8709677419deg, 76.2295081967%, 47.8431372549%);
+  --c-blue-8: hsl(226.25deg, 70.5882352941%, 40%);
+  --c-blue-9: hsl(223.8888888889deg, 64.2857142857%, 32.9411764706%);
   /*! purgecss end ignore */
 }
 :root .accent-white {
-  --accent: 0deg, 0%, 100%;
+  --accent: hsl(0deg, 0%, 100%);
 }
 :root .accent-black {
-  --accent: 0deg, 0%, 0%;
+  --accent: hsl(0deg, 0%, 0%);
 }
 :root .accent-primary {
-  --accent-0: 160deg, 88.2352941176%, 96.6666666667%;
-  --accent-1: 161.1764705882deg, 92.7272727273%, 89.2156862745%;
-  --accent-2: 162.7722772277deg, 90.990990991%, 78.2352941176%;
-  --accent-3: 165deg, 83.5164835165%, 64.3137254902%;
-  --accent-4: 166.9273743017deg, 71.3147410359%, 49.2156862745%;
-  --accent-5: 167.8651685393deg, 87.2549019608%, 40%;
-  --accent-6: 169.2413793103deg, 90.0621118012%, 31.568627451%;
-  --accent-7: 169.7297297297deg, 83.4586466165%, 26.0784313725%;
-  --accent-8: 170.6024096386deg, 74.7747747748%, 21.7647058824%;
-  --accent-9: 170.4761904762deg, 64.9484536082%, 19.0196078431%;
+  --accent-0: hsl(160deg, 100%, 97.0588235294%);
+  --accent-1: hsl(161.5384615385deg, 92.8571428571%, 89.0196078431%);
+  --accent-2: hsl(162.9411764706deg, 91.0714285714%, 78.0392156863%);
+  --accent-3: hsl(165.1948051948deg, 83.6956521739%, 63.9215686275%);
+  --accent-4: hsl(166.8539325843deg, 71.2%, 49.0196078431%);
+  --accent-5: hsl(167.8651685393deg, 87.2549019608%, 40%);
+  --accent-6: hsl(168.9795918367deg, 90.1840490798%, 31.9607843137%);
+  --accent-7: hsl(170.1818181818deg, 83.3333333333%, 25.8823529412%);
+  --accent-8: hsl(171.4285714286deg, 75%, 21.9607843137%);
+  --accent-9: hsl(169.5238095238deg, 64.9484536082%, 19.0196078431%);
 }
 :root .accent-gray {
-  --accent-0: 0deg, 0%, 98.0392156863%;
-  --accent-1: 0deg, 0%, 96.0784313725%;
-  --accent-2: 0deg, 0%, 89.8039215686%;
-  --accent-3: 0deg, 0%, 83.137254902%;
-  --accent-4: 0deg, 0%, 63.9215686275%;
-  --accent-5: 0deg, 0%, 45.0980392157%;
-  --accent-6: 0deg, 0%, 32.1568627451%;
-  --accent-7: 0deg, 0%, 25.0980392157%;
-  --accent-8: 0deg, 0%, 14.9019607843%;
-  --accent-9: 0deg, 0%, 9.0196078431%;
+  --accent-0: hsl(0deg, 0%, 98.0392156863%);
+  --accent-1: hsl(0deg, 0%, 96.0784313725%);
+  --accent-2: hsl(0deg, 0%, 90.1960784314%);
+  --accent-3: hsl(0deg, 0%, 83.137254902%);
+  --accent-4: hsl(0deg, 0%, 63.9215686275%);
+  --accent-5: hsl(0deg, 0%, 45.0980392157%);
+  --accent-6: hsl(0deg, 0%, 32.1568627451%);
+  --accent-7: hsl(0deg, 0%, 25.0980392157%);
+  --accent-8: hsl(0deg, 0%, 14.9019607843%);
+  --accent-9: hsl(0deg, 0%, 9.0196078431%);
 }
 :root .accent-red {
-  --accent-0: 0deg, 85.7142857143%, 97.2549019608%;
-  --accent-1: 0deg, 93.3333333333%, 94.1176470588%;
-  --accent-2: 0deg, 96.2962962963%, 89.4117647059%;
-  --accent-3: 0deg, 93.5483870968%, 81.7647058824%;
-  --accent-4: 0deg, 90.6040268456%, 70.7843137255%;
-  --accent-5: 0deg, 84.236453202%, 60.1960784314%;
-  --accent-6: 0deg, 72.2222222222%, 50.5882352941%;
-  --accent-7: 0deg, 73.7089201878%, 41.7647058824%;
-  --accent-8: 0deg, 70%, 35.2941176471%;
-  --accent-9: 0deg, 62.8205128205%, 30.5882352941%;
+  --accent-0: hsl(0deg, 86.6666666667%, 97.0588235294%);
+  --accent-1: hsl(0deg, 93.5483870968%, 93.9215686275%);
+  --accent-2: hsl(0deg, 96.4285714286%, 89.0196078431%);
+  --accent-3: hsl(0deg, 93.4782608696%, 81.9607843137%);
+  --accent-4: hsl(0deg, 90.5405405405%, 70.9803921569%);
+  --accent-5: hsl(0deg, 84.3137254902%, 60%);
+  --accent-6: hsl(0deg, 72%, 50.9803921569%);
+  --accent-7: hsl(0deg, 73.8317757009%, 41.9607843137%);
+  --accent-8: hsl(0deg, 69.8324022346%, 35.0980392157%);
+  --accent-9: hsl(0deg, 63.2911392405%, 30.9803921569%);
 }
 :root .accent-yellow {
-  --accent-0: 54.5454545455deg, 91.6666666667%, 95.2941176471%;
-  --accent-1: 54.9152542373deg, 96.7213114754%, 88.0392156863%;
-  --accent-2: 52.7586206897deg, 98.3050847458%, 76.862745098%;
-  --accent-3: 50.4395604396deg, 97.8494623656%, 63.5294117647%;
-  --accent-4: 47.9475982533deg, 95.8158995816%, 53.137254902%;
-  --accent-5: 45.3982300885deg, 93.3884297521%, 47.4509803922%;
-  --accent-6: 40.6060606061deg, 96.1165048544%, 40.3921568627%;
-  --accent-7: 35.4545454545deg, 91.6666666667%, 32.9411764706%;
-  --accent-8: 31.7647058824deg, 80.9523809524%, 28.8235294118%;
-  --accent-9: 28.4210526316deg, 72.5190839695%, 25.6862745098%;
+  --accent-0: hsl(54.7826086957deg, 92%, 95.0980392157%);
+  --accent-1: hsl(54.9152542373deg, 96.7213114754%, 88.0392156863%);
+  --accent-2: hsl(52.6956521739deg, 98.2905982906%, 77.0588235294%);
+  --accent-3: hsl(50deg, 97.8260869565%, 63.9215686275%);
+  --accent-4: hsl(48deg, 95.8333333333%, 52.9411764706%);
+  --accent-5: hsl(44.8deg, 90.3614457831%, 83.7254901961%);
+  --accent-6: hsl(41.0204081633deg, 96.0784313725%, 40%);
+  --accent-7: hsl(34.8387096774deg, 91.7159763314%, 33.137254902%);
+  --accent-8: hsl(32deg, 81.0810810811%, 29.0196078431%);
+  --accent-9: hsl(27.8350515464deg, 72.9323308271%, 26.0784313725%);
 }
 :root .accent-green {
-  --accent-0: 138.4615384615deg, 76.4705882353%, 96.6666666667%;
-  --accent-1: 140.625deg, 84.2105263158%, 92.5490196078%;
-  --accent-2: 141deg, 78.9473684211%, 85.0980392157%;
-  --accent-3: 141.7142857143deg, 76.6423357664%, 73.137254902%;
-  --accent-4: 141.8918918919deg, 69.1588785047%, 58.0392156863%;
-  --accent-5: 142.0858895706deg, 70.5627705628%, 45.2941176471%;
-  --accent-6: 142.1276595745deg, 76.2162162162%, 36.2745098039%;
-  --accent-7: 142.4299065421deg, 71.8120805369%, 29.2156862745%;
-  --accent-8: 142.7848101266deg, 64.2276422764%, 24.1176470588%;
-  --accent-9: 143.8095238095deg, 61.1650485437%, 20.1960784314%;
+  --accent-0: hsl(133.3333333333deg, 60%, 97.0588235294%);
+  --accent-1: hsl(142deg, 83.3333333333%, 92.9411764706%);
+  --accent-2: hsl(141deg, 78.9473684211%, 85.0980392157%);
+  --accent-3: hsl(142.0754716981deg, 76.8115942029%, 72.9411764706%);
+  --accent-4: hsl(141.8918918919deg, 69.1588785047%, 58.0392156863%);
+  --accent-5: hsl(142.0858895706deg, 71.1790393013%, 44.9019607843%);
+  --accent-6: hsl(141.8571428571deg, 76.0869565217%, 36.0784313725%);
+  --accent-7: hsl(142.0754716981deg, 71.6216216216%, 29.0196078431%);
+  --accent-8: hsl(143.0769230769deg, 63.9344262295%, 23.9215686275%);
+  --accent-9: hsl(144.1935483871deg, 60.7843137255%, 20%);
 }
 :root .accent-blue {
-  --accent-0: 213.75deg, 100%, 96.862745098%;
-  --accent-1: 214.2857142857deg, 94.5945945946%, 92.7450980392%;
-  --accent-2: 213.3333333333deg, 96.9230769231%, 87.2549019608%;
-  --accent-3: 211.6981132075deg, 96.3636363636%, 78.431372549%;
-  --accent-4: 213.1168831169deg, 93.9024390244%, 67.8431372549%;
-  --accent-5: 217.2192513369deg, 91.2195121951%, 59.8039215686%;
-  --accent-6: 221.2121212121deg, 83.1932773109%, 53.3333333333%;
-  --accent-7: 224.2780748663deg, 76.3265306122%, 48.0392156863%;
-  --accent-8: 225.9310344828deg, 70.7317073171%, 40.1960784314%;
-  --accent-9: 224.4444444444deg, 64.2857142857%, 32.9411764706%;
+  --accent-0: hsl(216deg, 100%, 97.0588235294%);
+  --accent-1: hsl(213.5294117647deg, 94.4444444444%, 92.9411764706%);
+  --accent-2: hsl(212.8125deg, 96.9696969697%, 87.0588235294%);
+  --accent-3: hsl(212.2222222222deg, 96.4285714286%, 78.0392156863%);
+  --accent-4: hsl(212.9411764706deg, 93.8650306748%, 68.0392156863%);
+  --accent-5: hsl(217.0967741935deg, 91.1764705882%, 60%);
+  --accent-6: hsl(221.0050251256deg, 83.2635983264%, 53.137254902%);
+  --accent-7: hsl(223.8709677419deg, 76.2295081967%, 47.8431372549%);
+  --accent-8: hsl(226.25deg, 70.5882352941%, 40%);
+  --accent-9: hsl(223.8888888889deg, 64.2857142857%, 32.9411764706%);
 }
 
 :root {
@@ -757,8 +757,8 @@ body {
       theme token or using responsive padding as fallback */
   padding-inline: clamp(var(--koi-spacing-min, 0.75rem), var(--koi-spacing-value, 5%), var(--koi-spacing-max, 1.5rem));
   margin-block: clamp(var(--koi-spacing-min, 0.75rem), var(--koi-spacing-value, 5%), var(--koi-spacing-max, 1.5rem));
-  background-color: hsl(var(--surface-1-clr), 1);
-  color: hsl(var(--text-1-clr), 1);
+  background-color: var(--c-surface-1);
+  color: var(--c-text-1);
 }
 @media screen and (min-width: 1440px) {
   body {
@@ -806,7 +806,7 @@ h1 {
   font-size: 2.25rem;
   line-height: 2.5rem;
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  color: hsl(var(--accent-5, 167.8651685393deg, 87.2549019608%, 40%), 1);
+  color: var(--accent-5, hsl(167.8651685393deg, 87.2549019608%, 40%));
 }
 
 .wrapper {
@@ -819,28 +819,29 @@ h1 {
   border-radius: 0.25rem;
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   margin-block: clamp(var(--koi-spacing-min, 0.75rem), var(--koi-spacing-value, 5%), var(--koi-spacing-max, 1.5rem));
-  background-color: hsl(var(--surface-2-clr), 1);
-  border: 2px solid hsl(var(--clr-gray-6), 1);
+  background-color: var(--c-surface-2);
+  border: 2px solid hsl(0deg, 0%, 32.1568627451%);
 }
 .wrapper:hover {
-  border-color: hsl(var(--accent-5, 167.8651685393deg, 87.2549019608%, 40%), 1);
+  background-color: var(--c-surface-3);
+  border-color: var(--accent-5, hsl(167.8651685393deg, 87.2549019608%, 40%));
 }
 
 .btn {
   font-size: 0.875rem;
   align-items: center;
-  background-color: hsl(var(--clr-gray-1), 1);
-  border: 1px solid hsl(var(--clr-gray-2), 1);
+  background-color: hsl(0deg, 0%, 96.0784313725%);
+  border: 1px solid hsl(0deg, 0%, 90.1960784314%);
   border-radius: 0.25rem;
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-  color: hsl(var(--clr-gray-7), 1);
+  color: hsl(0deg, 0%, 25.0980392157%);
   display: inline-flex;
   font-weight: 500;
   padding-block: 0.25rem;
   padding-inline: 0.5rem;
 }
 .btn:hover {
-  background-color: hsl(var(--clr-gray-5), 1);
+  background-color: hsl(0deg, 0%, 45.0980392157%);
 }
 .btn:focus {
   outline: none;
@@ -871,7 +872,7 @@ h1 {
 .loader-2 {
   animation: loader-2-rotate 1s linear infinite;
   border: 4px solid #fff;
-  border-bottom-color: hsl(var(--accent-6, 169.2413793103deg, 90.0621118012%, 31.568627451%), 1);
+  border-bottom-color: var(--accent-6, hsl(168.9795918367deg, 90.1840490798%, 31.9607843137%));
   border-radius: 50%;
   box-sizing: border-box;
   display: inline-block;
@@ -904,7 +905,7 @@ h1 {
   position: absolute;
 }
 .loader-3::after {
-  border-color: hsl(var(--accent-6, 169.2413793103deg, 90.0621118012%, 31.568627451%), 1);
+  border-color: var(--accent-6, hsl(168.9795918367deg, 90.1840490798%, 31.9607843137%));
   transform: rotate3d(90, 90, 0, 180deg);
 }
 @keyframes loader-3-rotate {
@@ -939,7 +940,7 @@ h1 {
 }
 .loader-4::after {
   border: 3px solid transparent;
-  border-bottom-color: hsl(var(--accent-6, 169.2413793103deg, 90.0621118012%, 31.568627451%), 1);
+  border-bottom-color: var(--accent-6, hsl(168.9795918367deg, 90.1840490798%, 31.9607843137%));
   border-radius: 50%;
   box-sizing: border-box;
   content: "";
@@ -971,7 +972,7 @@ h1 {
 }
 .loader-5::after {
   border: 3px solid transparent;
-  border-bottom-color: hsl(var(--accent-6, 169.2413793103deg, 90.0621118012%, 31.568627451%), 1);
+  border-bottom-color: var(--accent-6, hsl(168.9795918367deg, 90.1840490798%, 31.9607843137%));
   border-radius: 50%;
   box-sizing: border-box;
   content: "";
