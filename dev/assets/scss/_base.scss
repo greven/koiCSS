@@ -22,7 +22,7 @@
 // [color-scheme='olive'],
 // [data-theme='olive'] {
 //   color-scheme: olive;
-//   @include koi.generate-color-schemes-css-vars($olive);
+//   @include koi.generate-color-scheme-css-vars($olive);
 // }
 
 body {
@@ -44,13 +44,10 @@ h1 {
   //   // color: hsl(var(--color-hsl-accent-8));
 }
 
-a {
-  color: koi.accent(5);
-}
-
 .wrapper {
-  @include koi.box($padding: true, $rounded: lg, $shadow: md);
+  @include koi.box($padding: true, $rounded: true, $shadow: true);
   @include koi.responsive-margin-block;
+  background-color: koi.color(surface, 2);
   border: 2px solid koi.color(gray);
   // @include koi.responsive-padding;
   // margin-top: koi.spacing(md);

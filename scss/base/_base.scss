@@ -3,7 +3,6 @@
 // --------------------------------
 
 @use '../config' as *;
-@use '../core' as *;
 @use '../theme' as *;
 @use 'reset';
 @use 'default';
@@ -21,10 +20,4 @@
 // Default styles
 @if config(use-default-styles) {
   @include default.styles();
-}
-
-body {
-  font-family: font(sans);
-  font-size: font(md);
-  font-weight: font(normal);
 }

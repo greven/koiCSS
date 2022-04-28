@@ -43,6 +43,8 @@
   @if $rounded {
     @if theme-has-key(radius, $rounded) {
       @include rounded($rounded);
+    } @else if meta.type-of($rounded) == bool {
+      @include rounded();
     } @else {
       border-radius: $rounded;
     }
@@ -51,8 +53,10 @@
   @if $shadow {
     @if theme-has-key(shadow, $shadow) {
       @include shadow($shadow);
+    } @else if meta.type-of($shadow) == bool {
+      @include shadow();
     } @else {
-      border-radius: $rounded;
+      box-shadow: $shadow;
     }
   }
 }

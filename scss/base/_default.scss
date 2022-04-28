@@ -6,6 +6,12 @@
     color: #fff;
   }
 
+  body {
+    font-family: font(sans);
+    font-size: font(md);
+    font-weight: font(normal);
+  }
+
   sub,
   sup {
     font-size: 0.75em;
@@ -22,9 +28,58 @@
     top: -0.5em;
   }
 
+  pre {
+    @include responsive-padding;
+    @include rounded;
+    background-color: color(code-bg);
+    color: color(code-text);
+    overflow-x: auto;
+  }
+
   pre,
   code {
     font-family: font(mono);
+    font-size: font(sm);
+  }
+
+  blockquote {
+    border-left-color: color(quote-border);
+    border-left-width: 0.25rem;
+    color: color(quote-text);
+    font-style: italic;
+    font-weight: font(medium);
+    margin-bottom: 1.6em;
+    margin-top: 1.6em;
+    padding-left: 1em;
+
+    p {
+      margin-bottom: 1.25em;
+      margin-top: 1.25em;
+    }
+
+    p:first-of-type {
+      &::before {
+        content: open-quote;
+      }
+    }
+
+    p:last-of-type {
+      &::after {
+        content: close-quote;
+      }
+    }
+  }
+
+  a {
+    border-bottom: 1px solid accent(5);
+    color: color(text, 1);
+    font-weight: font(medium);
+    text-decoration: none;
+    transition: all 50ms linear;
+
+    &:hover {
+      border-bottom-width: 2px;
+    }
   }
 
   // Forms

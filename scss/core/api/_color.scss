@@ -16,15 +16,21 @@ $-default-accent: config(fallbacks, accent);
 
 @function color($name, $shade: $-default-shade, $alpha: 1) {
   @if is-scheme-color($name, $shade) {
-    @return hsl(css-var(#{$name}-#{$shade}), $alpha);
+    @return hsl(css-var(#{$name}-#{$shade}-clr), $alpha);
+  } @else if is-scheme-color($name) {
+    @return hsl(css-var(#{$name}-clr), $alpha);
   } @else if is-theme-color($name, $shade) {
-    @return hsl(css-var(color-#{$name}-#{$shade}), $alpha);
+    @return hsl(css-var(clr-#{$name}-#{$shade}), $alpha);
   } @else if is-theme-color($name) {
-    @return hsl(css-var(color-#{$name}), $alpha);
+    @return hsl(css-var(clr-#{$name}), $alpha);
+  } @else {
+    @error "Color #{$name}-#{$shade} not found in theme.";
   }
 }
 
 @function accent($shade: $-default-shade, $alpha: 1) {
   $fallback-accent: rgba(theme(colors, $-default-accent, $shade), $alpha);
-  @return hsl(css-var(color-accent-#{$shade}, to-hsl($fallback-accent)), $alpha);
+  @return hsl(css-var(accent-#{$shade}, to-hsl($fallback-accent)), $alpha);
+  // @debug color('accent', $shade);
+  // @return #289;
 }
