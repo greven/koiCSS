@@ -30,7 +30,6 @@
     "postcss:dev": "postcss dev/assets/css/*.css -c dev/postcss.config.js --replace --no-map",
     "postcss:prod": "postcss dev/assets/css/*.css -c postcss.config.js --replace --no-map",
     "prebuild": "npm run lint:fix",
-    "prestart": "cp scripts/pre-commit .git/hooks/ && chmod +x .git/hooks/pre-commit",
     "prepare": "husky install",
     "start": "npm run dev",
     "watch:dev": "sass -I node_modules -I scss --no-source-map dev/assets/scss:dev/assets/css --color --watch --update",
