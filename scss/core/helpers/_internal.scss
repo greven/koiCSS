@@ -3,8 +3,13 @@
 // --------------------------------
 
 @use 'sass:string';
+@use 'sass:meta';
 
 @use '../api/config' as *;
+
+// --------------------------------
+//   Functions
+// --------------------------------
 
 // CSS Vars
 
@@ -18,18 +23,28 @@
 @function css-var-name($name, $key: null, $suffix: null) {
   $prefix: css-var-prefix();
   $suffix: if($suffix, '-#{$suffix}', '');
-  $key: if($name and $key, '-#{$key}', '');
+  $key: if($name and $key, '-#{$key}', $key);
 
   @return '--#{$prefix}#{$name}#{$key}#{$suffix}';
 }
 
-/* Output a CSS var with the given name prefixed
-  if configured. Allows passing the css var fallback. */
+/* A wrapper for var(), for consuming a CSS custom
+  property with the given name prefixed if configured.
+  Example: css-var(c-green-5) -> var(--koi-c-green-5) */
 @function css-var($name, $fallback: null) {
   $var-name: string.unquote(css-var-name($name));
-
   @if $fallback {
     @return var($var-name, $fallback);
   }
   @return var($var-name);
+}
+
+// --------------------------------
+//   Mixins
+// --------------------------------
+
+// Output a CSS custom property (CSS var)
+@mixin css-var($property, $key, $value) {
+  $value: if(meta.type-of($value) == 'string', string.unquote($value), $value);
+  #{css-var-name($property, $key)}: $value;
 }

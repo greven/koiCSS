@@ -1,9 +1,12 @@
 /* Return the prefix of the css vars if configured */
 /* Returns the css custom property */
-/* Output a CSS var with the given name prefixed
-  if configured. Allows passing the css var fallback. */
+/* A wrapper for var(), for consuming a CSS custom
+  property with the given name prefixed if configured.
+  Example: css-var(c-green-5) -> var(--koi-c-green-5) */
 /* Get the color hasl values / parts.
   Example: hsl(182deg, 50%, 25%) -> 182deg 50% 25%. */
+/* Generate CSS custom properties (vars) from theme property map.
+  Example:  @include generate-css-vars(theme(shadow), shadow); */
 /* The CSS variables can be access as name-color,
   example: var(--bg-1-color). */
 /* Get a value from the theme using
@@ -441,15 +444,15 @@ select {
 }
 
 :root {
-  --animation-blink: blink 1s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
-  --animation-bounce: bounce 2s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
-  --animation-fade-in: fade-in 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
-  --animation-fade-out: fade-out 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
-  --animation-float: float 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-  --animation-ping: ping 3s cubic-bezier(0, 0, 0.2, 1) infinite;
-  --animation-pulse: pulse 2s cubic-bezier(0, 0, 0.2, 1) infinite;
-  --animation-spin: spin 2s linear infinite;
-  --animation-ring: ring 500ms linear infinite;
+  --anim-blink: blink 1s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+  --anim-bounce: bounce 2s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+  --anim-fade-in: fade-in 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  --anim-fade-out: fade-out 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  --anim-float: float 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  --anim-ping: ping 3s cubic-bezier(0, 0, 0.2, 1) infinite;
+  --anim-pulse: pulse 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+  --anim-spin: spin 2s linear infinite;
+  --anim-ring: ring 500ms linear infinite;
 }
 
 :root {
@@ -640,12 +643,12 @@ select {
 }
 
 :root {
-  ---linear: linear;
-  ---ease: cubic-bezier(0.25, 0.1, 0.25, 1);
-  ---ease-in: cubic-bezier(0.4, 0, 1, 1);
-  ---ease-out: cubic-bezier(0, 0, 0.2, 1);
-  ---ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
-  ---ease-elastic: cubic-bezier(0.5, 1, 0.75, 1.25);
+  --linear: linear;
+  --ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-elastic: cubic-bezier(0.5, 1, 0.75, 1.25);
 }
 
 /*! purgecss start ignore */

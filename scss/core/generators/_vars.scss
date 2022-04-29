@@ -12,11 +12,11 @@
 //   Mixins
 // --------------------------------
 
-// Generate CSS vars from map.
+/* Generate CSS custom properties (vars) from theme property map.
+  Example:  @include generate-css-vars(theme(shadow), shadow); */
 @mixin generate-css-vars($map: (), $property: null) {
   @each $key, $value in $map {
-    $value: if(meta.type-of($value) == 'string', string.unquote($value), $value);
-    #{css-var-name($property, $key)}: $value;
+    @include css-var($property, $key, $value);
   }
 }
 
