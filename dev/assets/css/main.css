@@ -1,5 +1,3 @@
-/* Get the color hasl values / parts.
-  Example: hsl(182deg, 50%, 25%) -> 182deg 50% 25%. */
 /* Return the prefix of the css vars if configured */
 /* Returns the css custom property */
 /* A wrapper for var() that prefixes the custom property
@@ -193,53 +191,53 @@ a {
 }
 html {
   /*! purgecss start ignore */
-  --c-surface-1: hsl(0deg, 0%, 98.0392156863%);
-  --c-surface-2: hsl(0deg, 0%, 100%);
-  --c-surface-3: hsl(0deg, 0%, 96.0784313725%);
-  --c-surface-4: hsl(0deg, 0%, 90.1960784314%);
-  --c-text-1: hsl(0deg, 0%, 9.0196078431%);
-  --c-text-2: hsl(0deg, 0%, 14.9019607843%);
-  --c-text-3: hsl(0deg, 0%, 25.0980392157%);
-  --c-text-4: hsl(0deg, 0%, 32.1568627451%);
-  --c-code-bg: hsl(0deg, 0%, 9.0196078431%);
-  --c-code-text: hsl(0deg, 0%, 96.0784313725%);
-  --c-quote-text: hsl(0deg, 0%, 14.9019607843%);
-  --c-quote-border: hsl(0deg, 72%, 50.9803921569%);
+  --c-surface-1: #fafafa;
+  --c-surface-2: #ffffff;
+  --c-surface-3: #f5f5f5;
+  --c-surface-4: #e6e6e6;
+  --c-text-1: #171717;
+  --c-text-2: #262626;
+  --c-text-3: #404040;
+  --c-text-4: #525252;
+  --c-code-bg: #171717;
+  --c-code-text: #f5f5f5;
+  --c-quote-text: #262626;
+  --c-quote-border: #dc2828;
   /*! purgecss end ignore */
 }
 
 html {
   /*! purgecss start ignore */
-  --c-surface-light-1: hsl(0deg, 0%, 98.0392156863%);
-  --c-surface-light-2: hsl(0deg, 0%, 100%);
-  --c-surface-light-3: hsl(0deg, 0%, 96.0784313725%);
-  --c-surface-light-4: hsl(0deg, 0%, 90.1960784314%);
-  --c-text-light-1: hsl(0deg, 0%, 9.0196078431%);
-  --c-text-light-2: hsl(0deg, 0%, 14.9019607843%);
-  --c-text-light-3: hsl(0deg, 0%, 25.0980392157%);
-  --c-text-light-4: hsl(0deg, 0%, 32.1568627451%);
-  --c-code-bg-light: hsl(0deg, 0%, 9.0196078431%);
-  --c-code-text-light: hsl(0deg, 0%, 96.0784313725%);
-  --c-quote-text-light: hsl(0deg, 0%, 14.9019607843%);
-  --c-quote-border-light: hsl(0deg, 72%, 50.9803921569%);
+  --c-surface-light-1: #fafafa;
+  --c-surface-light-2: #ffffff;
+  --c-surface-light-3: #f5f5f5;
+  --c-surface-light-4: #e6e6e6;
+  --c-text-light-1: #171717;
+  --c-text-light-2: #262626;
+  --c-text-light-3: #404040;
+  --c-text-light-4: #525252;
+  --c-code-bg-light: #171717;
+  --c-code-text-light: #f5f5f5;
+  --c-quote-text-light: #262626;
+  --c-quote-border-light: #dc2828;
   /*! purgecss end ignore */
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     /*! purgecss start ignore */
-    --c-surface-1: hsl(0deg, 0%, 98.0392156863%);
-    --c-surface-2: hsl(0deg, 0%, 100%);
-    --c-surface-3: hsl(0deg, 0%, 96.0784313725%);
-    --c-surface-4: hsl(0deg, 0%, 90.1960784314%);
-    --c-text-1: hsl(0deg, 0%, 9.0196078431%);
-    --c-text-2: hsl(0deg, 0%, 14.9019607843%);
-    --c-text-3: hsl(0deg, 0%, 25.0980392157%);
-    --c-text-4: hsl(0deg, 0%, 32.1568627451%);
-    --c-code-bg: hsl(0deg, 0%, 9.0196078431%);
-    --c-code-text: hsl(0deg, 0%, 96.0784313725%);
-    --c-quote-text: hsl(0deg, 0%, 14.9019607843%);
-    --c-quote-border: hsl(0deg, 72%, 50.9803921569%);
+    --c-surface-1: #fafafa;
+    --c-surface-2: #ffffff;
+    --c-surface-3: #f5f5f5;
+    --c-surface-4: #e6e6e6;
+    --c-text-1: #171717;
+    --c-text-2: #262626;
+    --c-text-3: #404040;
+    --c-text-4: #525252;
+    --c-code-bg: #171717;
+    --c-code-text: #f5f5f5;
+    --c-quote-text: #262626;
+    --c-quote-border: #dc2828;
     /*! purgecss end ignore */
     color-scheme: light;
   }
@@ -247,54 +245,54 @@ html {
 [color-scheme=light],
 [data-theme=light] {
   /*! purgecss start ignore */
-  --c-surface-1: hsl(0deg, 0%, 98.0392156863%);
-  --c-surface-2: hsl(0deg, 0%, 100%);
-  --c-surface-3: hsl(0deg, 0%, 96.0784313725%);
-  --c-surface-4: hsl(0deg, 0%, 90.1960784314%);
-  --c-text-1: hsl(0deg, 0%, 9.0196078431%);
-  --c-text-2: hsl(0deg, 0%, 14.9019607843%);
-  --c-text-3: hsl(0deg, 0%, 25.0980392157%);
-  --c-text-4: hsl(0deg, 0%, 32.1568627451%);
-  --c-code-bg: hsl(0deg, 0%, 9.0196078431%);
-  --c-code-text: hsl(0deg, 0%, 96.0784313725%);
-  --c-quote-text: hsl(0deg, 0%, 14.9019607843%);
-  --c-quote-border: hsl(0deg, 72%, 50.9803921569%);
+  --c-surface-1: #fafafa;
+  --c-surface-2: #ffffff;
+  --c-surface-3: #f5f5f5;
+  --c-surface-4: #e6e6e6;
+  --c-text-1: #171717;
+  --c-text-2: #262626;
+  --c-text-3: #404040;
+  --c-text-4: #525252;
+  --c-code-bg: #171717;
+  --c-code-text: #f5f5f5;
+  --c-quote-text: #262626;
+  --c-quote-border: #dc2828;
   /*! purgecss end ignore */
   color-scheme: light;
 }
 
 html {
   /*! purgecss start ignore */
-  --c-surface-dark-1: hsl(0deg, 0%, 9.0196078431%);
-  --c-surface-dark-2: hsl(0deg, 0%, 14.9019607843%);
-  --c-surface-dark-3: hsl(0deg, 0%, 25.0980392157%);
-  --c-surface-dark-4: hsl(0deg, 0%, 32.1568627451%);
-  --c-text-dark-1: hsl(0deg, 0%, 98.0392156863%);
-  --c-text-dark-2: hsl(0deg, 0%, 96.0784313725%);
-  --c-text-dark-3: hsl(0deg, 0%, 90.1960784314%);
-  --c-text-dark-4: hsl(0deg, 0%, 83.137254902%);
-  --c-code-bg-dark: hsl(0deg, 0%, 0%);
-  --c-code-text-dark: hsl(0deg, 0%, 96.0784313725%);
-  --c-quote-text-dark: hsl(0deg, 0%, 96.0784313725%);
-  --c-quote-border-dark: hsl(0deg, 72%, 50.9803921569%);
+  --c-surface-dark-1: #171717;
+  --c-surface-dark-2: #262626;
+  --c-surface-dark-3: #404040;
+  --c-surface-dark-4: #525252;
+  --c-text-dark-1: #fafafa;
+  --c-text-dark-2: #f5f5f5;
+  --c-text-dark-3: #e6e6e6;
+  --c-text-dark-4: #d4d4d4;
+  --c-code-bg-dark: #000000;
+  --c-code-text-dark: #f5f5f5;
+  --c-quote-text-dark: #f5f5f5;
+  --c-quote-border-dark: #dc2828;
   /*! purgecss end ignore */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     /*! purgecss start ignore */
-    --c-surface-1: hsl(0deg, 0%, 9.0196078431%);
-    --c-surface-2: hsl(0deg, 0%, 14.9019607843%);
-    --c-surface-3: hsl(0deg, 0%, 25.0980392157%);
-    --c-surface-4: hsl(0deg, 0%, 32.1568627451%);
-    --c-text-1: hsl(0deg, 0%, 98.0392156863%);
-    --c-text-2: hsl(0deg, 0%, 96.0784313725%);
-    --c-text-3: hsl(0deg, 0%, 90.1960784314%);
-    --c-text-4: hsl(0deg, 0%, 83.137254902%);
-    --c-code-bg: hsl(0deg, 0%, 0%);
-    --c-code-text: hsl(0deg, 0%, 96.0784313725%);
-    --c-quote-text: hsl(0deg, 0%, 96.0784313725%);
-    --c-quote-border: hsl(0deg, 72%, 50.9803921569%);
+    --c-surface-1: #171717;
+    --c-surface-2: #262626;
+    --c-surface-3: #404040;
+    --c-surface-4: #525252;
+    --c-text-1: #fafafa;
+    --c-text-2: #f5f5f5;
+    --c-text-3: #e6e6e6;
+    --c-text-4: #d4d4d4;
+    --c-code-bg: #000000;
+    --c-code-text: #f5f5f5;
+    --c-quote-text: #f5f5f5;
+    --c-quote-border: #dc2828;
     /*! purgecss end ignore */
     color-scheme: dark;
   }
@@ -302,24 +300,24 @@ html {
 [color-scheme=dark],
 [data-theme=dark] {
   /*! purgecss start ignore */
-  --c-surface-1: hsl(0deg, 0%, 9.0196078431%);
-  --c-surface-2: hsl(0deg, 0%, 14.9019607843%);
-  --c-surface-3: hsl(0deg, 0%, 25.0980392157%);
-  --c-surface-4: hsl(0deg, 0%, 32.1568627451%);
-  --c-text-1: hsl(0deg, 0%, 98.0392156863%);
-  --c-text-2: hsl(0deg, 0%, 96.0784313725%);
-  --c-text-3: hsl(0deg, 0%, 90.1960784314%);
-  --c-text-4: hsl(0deg, 0%, 83.137254902%);
-  --c-code-bg: hsl(0deg, 0%, 0%);
-  --c-code-text: hsl(0deg, 0%, 96.0784313725%);
-  --c-quote-text: hsl(0deg, 0%, 96.0784313725%);
-  --c-quote-border: hsl(0deg, 72%, 50.9803921569%);
+  --c-surface-1: #171717;
+  --c-surface-2: #262626;
+  --c-surface-3: #404040;
+  --c-surface-4: #525252;
+  --c-text-1: #fafafa;
+  --c-text-2: #f5f5f5;
+  --c-text-3: #e6e6e6;
+  --c-text-4: #d4d4d4;
+  --c-code-bg: #000000;
+  --c-code-text: #f5f5f5;
+  --c-quote-text: #f5f5f5;
+  --c-quote-border: #dc2828;
   /*! purgecss end ignore */
   color-scheme: dark;
 }
 
 ::selection {
-  background: var(--accent-5, hsl(167.8651685393deg, 87.2549019608%, 40%));
+  background: var(--accent-5, #0dbf9b);
   color: #fff;
 }
 
@@ -381,7 +379,7 @@ blockquote p:last-of-type::after {
 }
 
 a {
-  border-bottom: 1px solid var(--accent-5, hsl(167.8651685393deg, 87.2549019608%, 40%));
+  border-bottom: 1px solid var(--accent-5, #0dbf9b);
   color: var(--c-text-1);
   font-weight: 500;
   text-decoration: none;
@@ -457,147 +455,147 @@ select {
 
 :root {
   /*! purgecss start ignore */
-  --c-white: hsl(0deg, 0%, 100%);
-  --c-black: hsl(0deg, 0%, 0%);
-  --c-primary-0: hsl(160deg, 100%, 97.0588235294%);
-  --c-primary-1: hsl(161.5384615385deg, 92.8571428571%, 89.0196078431%);
-  --c-primary-2: hsl(162.9411764706deg, 91.0714285714%, 78.0392156863%);
-  --c-primary-3: hsl(165.1948051948deg, 83.6956521739%, 63.9215686275%);
-  --c-primary-4: hsl(166.8539325843deg, 71.2%, 49.0196078431%);
-  --c-primary-5: hsl(167.8651685393deg, 87.2549019608%, 40%);
-  --c-primary-6: hsl(168.9795918367deg, 90.1840490798%, 31.9607843137%);
-  --c-primary-7: hsl(170.1818181818deg, 83.3333333333%, 25.8823529412%);
-  --c-primary-8: hsl(171.4285714286deg, 75%, 21.9607843137%);
-  --c-primary-9: hsl(169.5238095238deg, 64.9484536082%, 19.0196078431%);
-  --c-gray-0: hsl(0deg, 0%, 98.0392156863%);
-  --c-gray-1: hsl(0deg, 0%, 96.0784313725%);
-  --c-gray-2: hsl(0deg, 0%, 90.1960784314%);
-  --c-gray-3: hsl(0deg, 0%, 83.137254902%);
-  --c-gray-4: hsl(0deg, 0%, 63.9215686275%);
-  --c-gray-5: hsl(0deg, 0%, 45.0980392157%);
-  --c-gray-6: hsl(0deg, 0%, 32.1568627451%);
-  --c-gray-7: hsl(0deg, 0%, 25.0980392157%);
-  --c-gray-8: hsl(0deg, 0%, 14.9019607843%);
-  --c-gray-9: hsl(0deg, 0%, 9.0196078431%);
-  --c-red-0: hsl(0deg, 86.6666666667%, 97.0588235294%);
-  --c-red-1: hsl(0deg, 93.5483870968%, 93.9215686275%);
-  --c-red-2: hsl(0deg, 96.4285714286%, 89.0196078431%);
-  --c-red-3: hsl(0deg, 93.4782608696%, 81.9607843137%);
-  --c-red-4: hsl(0deg, 90.5405405405%, 70.9803921569%);
-  --c-red-5: hsl(0deg, 84.3137254902%, 60%);
-  --c-red-6: hsl(0deg, 72%, 50.9803921569%);
-  --c-red-7: hsl(0deg, 73.8317757009%, 41.9607843137%);
-  --c-red-8: hsl(0deg, 69.8324022346%, 35.0980392157%);
-  --c-red-9: hsl(0deg, 63.2911392405%, 30.9803921569%);
-  --c-yellow-0: hsl(54.7826086957deg, 92%, 95.0980392157%);
-  --c-yellow-1: hsl(54.9152542373deg, 96.7213114754%, 88.0392156863%);
-  --c-yellow-2: hsl(52.6956521739deg, 98.2905982906%, 77.0588235294%);
-  --c-yellow-3: hsl(50deg, 97.8260869565%, 63.9215686275%);
-  --c-yellow-4: hsl(48deg, 95.8333333333%, 52.9411764706%);
-  --c-yellow-5: hsl(44.8deg, 90.3614457831%, 83.7254901961%);
-  --c-yellow-6: hsl(41.0204081633deg, 96.0784313725%, 40%);
-  --c-yellow-7: hsl(34.8387096774deg, 91.7159763314%, 33.137254902%);
-  --c-yellow-8: hsl(32deg, 81.0810810811%, 29.0196078431%);
-  --c-yellow-9: hsl(27.8350515464deg, 72.9323308271%, 26.0784313725%);
-  --c-green-0: hsl(133.3333333333deg, 60%, 97.0588235294%);
-  --c-green-1: hsl(142deg, 83.3333333333%, 92.9411764706%);
-  --c-green-2: hsl(141deg, 78.9473684211%, 85.0980392157%);
-  --c-green-3: hsl(142.0754716981deg, 76.8115942029%, 72.9411764706%);
-  --c-green-4: hsl(141.8918918919deg, 69.1588785047%, 58.0392156863%);
-  --c-green-5: hsl(142.0858895706deg, 71.1790393013%, 44.9019607843%);
-  --c-green-6: hsl(141.8571428571deg, 76.0869565217%, 36.0784313725%);
-  --c-green-7: hsl(142.0754716981deg, 71.6216216216%, 29.0196078431%);
-  --c-green-8: hsl(143.0769230769deg, 63.9344262295%, 23.9215686275%);
-  --c-green-9: hsl(144.1935483871deg, 60.7843137255%, 20%);
-  --c-blue-0: hsl(216deg, 100%, 97.0588235294%);
-  --c-blue-1: hsl(213.5294117647deg, 94.4444444444%, 92.9411764706%);
-  --c-blue-2: hsl(212.8125deg, 96.9696969697%, 87.0588235294%);
-  --c-blue-3: hsl(212.2222222222deg, 96.4285714286%, 78.0392156863%);
-  --c-blue-4: hsl(212.9411764706deg, 93.8650306748%, 68.0392156863%);
-  --c-blue-5: hsl(217.0967741935deg, 91.1764705882%, 60%);
-  --c-blue-6: hsl(221.0050251256deg, 83.2635983264%, 53.137254902%);
-  --c-blue-7: hsl(223.8709677419deg, 76.2295081967%, 47.8431372549%);
-  --c-blue-8: hsl(226.25deg, 70.5882352941%, 40%);
-  --c-blue-9: hsl(223.8888888889deg, 64.2857142857%, 32.9411764706%);
+  --c-white: #ffffff;
+  --c-black: #000000;
+  --c-primary-0: #f0fffa;
+  --c-primary-1: #c9fded;
+  --c-primary-2: #94fadd;
+  --c-primary-3: #56f0ca;
+  --c-primary-4: #24d6af;
+  --c-primary-5: #0dbf9b;
+  --c-primary-6: #089b80;
+  --c-primary-7: #0b7967;
+  --c-primary-8: #0e6256;
+  --c-primary-9: #115045;
+  --c-gray-0: #fafafa;
+  --c-gray-1: #f5f5f5;
+  --c-gray-2: #e6e6e6;
+  --c-gray-3: #d4d4d4;
+  --c-gray-4: #a3a3a3;
+  --c-gray-5: #737373;
+  --c-gray-6: #525252;
+  --c-gray-7: #404040;
+  --c-gray-8: #262626;
+  --c-gray-9: #171717;
+  --c-red-0: #fef1f1;
+  --c-red-1: #fee1e1;
+  --c-red-2: #fec8c8;
+  --c-red-3: #fca6a6;
+  --c-red-4: #f87272;
+  --c-red-5: #ef4343;
+  --c-red-6: #dc2828;
+  --c-red-7: #ba1c1c;
+  --c-red-8: #981b1b;
+  --c-red-9: #811d1d;
+  --c-yellow-0: #fefce7;
+  --c-yellow-1: #fef9c3;
+  --c-yellow-2: #fef08b;
+  --c-yellow-3: #fddf49;
+  --c-yellow-4: #facc14;
+  --c-yellow-5: #fbe8b0;
+  --c-yellow-6: #c88a04;
+  --c-yellow-7: #a26107;
+  --c-yellow-8: #864e0e;
+  --c-yellow-9: #733f12;
+  --c-green-0: #f3fcf5;
+  --c-green-1: #defce9;
+  --c-green-2: #bbf7d0;
+  --c-green-3: #85efac;
+  --c-green-4: #4ade80;
+  --c-green-5: #21c45d;
+  --c-green-6: #16a249;
+  --c-green-7: #157f3c;
+  --c-green-8: #166434;
+  --c-green-9: #14522d;
+  --c-blue-0: #f0f6ff;
+  --c-blue-1: #dcebfe;
+  --c-blue-2: #bedbfe;
+  --c-blue-3: #91c3fd;
+  --c-blue-4: #61a6fa;
+  --c-blue-5: #3c83f6;
+  --c-blue-6: #2463eb;
+  --c-blue-7: #1d4fd7;
+  --c-blue-8: #1e3fae;
+  --c-blue-9: #1e3b8a;
   /*! purgecss end ignore */
 }
 :root .accent-white {
-  --accent: hsl(0deg, 0%, 100%);
+  --accent: #ffffff;
 }
 :root .accent-black {
-  --accent: hsl(0deg, 0%, 0%);
+  --accent: #000000;
 }
 :root .accent-primary {
-  --accent-0: hsl(160deg, 100%, 97.0588235294%);
-  --accent-1: hsl(161.5384615385deg, 92.8571428571%, 89.0196078431%);
-  --accent-2: hsl(162.9411764706deg, 91.0714285714%, 78.0392156863%);
-  --accent-3: hsl(165.1948051948deg, 83.6956521739%, 63.9215686275%);
-  --accent-4: hsl(166.8539325843deg, 71.2%, 49.0196078431%);
-  --accent-5: hsl(167.8651685393deg, 87.2549019608%, 40%);
-  --accent-6: hsl(168.9795918367deg, 90.1840490798%, 31.9607843137%);
-  --accent-7: hsl(170.1818181818deg, 83.3333333333%, 25.8823529412%);
-  --accent-8: hsl(171.4285714286deg, 75%, 21.9607843137%);
-  --accent-9: hsl(169.5238095238deg, 64.9484536082%, 19.0196078431%);
+  --accent-0: #f0fffa;
+  --accent-1: #c9fded;
+  --accent-2: #94fadd;
+  --accent-3: #56f0ca;
+  --accent-4: #24d6af;
+  --accent-5: #0dbf9b;
+  --accent-6: #089b80;
+  --accent-7: #0b7967;
+  --accent-8: #0e6256;
+  --accent-9: #115045;
 }
 :root .accent-gray {
-  --accent-0: hsl(0deg, 0%, 98.0392156863%);
-  --accent-1: hsl(0deg, 0%, 96.0784313725%);
-  --accent-2: hsl(0deg, 0%, 90.1960784314%);
-  --accent-3: hsl(0deg, 0%, 83.137254902%);
-  --accent-4: hsl(0deg, 0%, 63.9215686275%);
-  --accent-5: hsl(0deg, 0%, 45.0980392157%);
-  --accent-6: hsl(0deg, 0%, 32.1568627451%);
-  --accent-7: hsl(0deg, 0%, 25.0980392157%);
-  --accent-8: hsl(0deg, 0%, 14.9019607843%);
-  --accent-9: hsl(0deg, 0%, 9.0196078431%);
+  --accent-0: #fafafa;
+  --accent-1: #f5f5f5;
+  --accent-2: #e6e6e6;
+  --accent-3: #d4d4d4;
+  --accent-4: #a3a3a3;
+  --accent-5: #737373;
+  --accent-6: #525252;
+  --accent-7: #404040;
+  --accent-8: #262626;
+  --accent-9: #171717;
 }
 :root .accent-red {
-  --accent-0: hsl(0deg, 86.6666666667%, 97.0588235294%);
-  --accent-1: hsl(0deg, 93.5483870968%, 93.9215686275%);
-  --accent-2: hsl(0deg, 96.4285714286%, 89.0196078431%);
-  --accent-3: hsl(0deg, 93.4782608696%, 81.9607843137%);
-  --accent-4: hsl(0deg, 90.5405405405%, 70.9803921569%);
-  --accent-5: hsl(0deg, 84.3137254902%, 60%);
-  --accent-6: hsl(0deg, 72%, 50.9803921569%);
-  --accent-7: hsl(0deg, 73.8317757009%, 41.9607843137%);
-  --accent-8: hsl(0deg, 69.8324022346%, 35.0980392157%);
-  --accent-9: hsl(0deg, 63.2911392405%, 30.9803921569%);
+  --accent-0: #fef1f1;
+  --accent-1: #fee1e1;
+  --accent-2: #fec8c8;
+  --accent-3: #fca6a6;
+  --accent-4: #f87272;
+  --accent-5: #ef4343;
+  --accent-6: #dc2828;
+  --accent-7: #ba1c1c;
+  --accent-8: #981b1b;
+  --accent-9: #811d1d;
 }
 :root .accent-yellow {
-  --accent-0: hsl(54.7826086957deg, 92%, 95.0980392157%);
-  --accent-1: hsl(54.9152542373deg, 96.7213114754%, 88.0392156863%);
-  --accent-2: hsl(52.6956521739deg, 98.2905982906%, 77.0588235294%);
-  --accent-3: hsl(50deg, 97.8260869565%, 63.9215686275%);
-  --accent-4: hsl(48deg, 95.8333333333%, 52.9411764706%);
-  --accent-5: hsl(44.8deg, 90.3614457831%, 83.7254901961%);
-  --accent-6: hsl(41.0204081633deg, 96.0784313725%, 40%);
-  --accent-7: hsl(34.8387096774deg, 91.7159763314%, 33.137254902%);
-  --accent-8: hsl(32deg, 81.0810810811%, 29.0196078431%);
-  --accent-9: hsl(27.8350515464deg, 72.9323308271%, 26.0784313725%);
+  --accent-0: #fefce7;
+  --accent-1: #fef9c3;
+  --accent-2: #fef08b;
+  --accent-3: #fddf49;
+  --accent-4: #facc14;
+  --accent-5: #fbe8b0;
+  --accent-6: #c88a04;
+  --accent-7: #a26107;
+  --accent-8: #864e0e;
+  --accent-9: #733f12;
 }
 :root .accent-green {
-  --accent-0: hsl(133.3333333333deg, 60%, 97.0588235294%);
-  --accent-1: hsl(142deg, 83.3333333333%, 92.9411764706%);
-  --accent-2: hsl(141deg, 78.9473684211%, 85.0980392157%);
-  --accent-3: hsl(142.0754716981deg, 76.8115942029%, 72.9411764706%);
-  --accent-4: hsl(141.8918918919deg, 69.1588785047%, 58.0392156863%);
-  --accent-5: hsl(142.0858895706deg, 71.1790393013%, 44.9019607843%);
-  --accent-6: hsl(141.8571428571deg, 76.0869565217%, 36.0784313725%);
-  --accent-7: hsl(142.0754716981deg, 71.6216216216%, 29.0196078431%);
-  --accent-8: hsl(143.0769230769deg, 63.9344262295%, 23.9215686275%);
-  --accent-9: hsl(144.1935483871deg, 60.7843137255%, 20%);
+  --accent-0: #f3fcf5;
+  --accent-1: #defce9;
+  --accent-2: #bbf7d0;
+  --accent-3: #85efac;
+  --accent-4: #4ade80;
+  --accent-5: #21c45d;
+  --accent-6: #16a249;
+  --accent-7: #157f3c;
+  --accent-8: #166434;
+  --accent-9: #14522d;
 }
 :root .accent-blue {
-  --accent-0: hsl(216deg, 100%, 97.0588235294%);
-  --accent-1: hsl(213.5294117647deg, 94.4444444444%, 92.9411764706%);
-  --accent-2: hsl(212.8125deg, 96.9696969697%, 87.0588235294%);
-  --accent-3: hsl(212.2222222222deg, 96.4285714286%, 78.0392156863%);
-  --accent-4: hsl(212.9411764706deg, 93.8650306748%, 68.0392156863%);
-  --accent-5: hsl(217.0967741935deg, 91.1764705882%, 60%);
-  --accent-6: hsl(221.0050251256deg, 83.2635983264%, 53.137254902%);
-  --accent-7: hsl(223.8709677419deg, 76.2295081967%, 47.8431372549%);
-  --accent-8: hsl(226.25deg, 70.5882352941%, 40%);
-  --accent-9: hsl(223.8888888889deg, 64.2857142857%, 32.9411764706%);
+  --accent-0: #f0f6ff;
+  --accent-1: #dcebfe;
+  --accent-2: #bedbfe;
+  --accent-3: #91c3fd;
+  --accent-4: #61a6fa;
+  --accent-5: #3c83f6;
+  --accent-6: #2463eb;
+  --accent-7: #1d4fd7;
+  --accent-8: #1e3fae;
+  --accent-9: #1e3b8a;
 }
 
 :root {
@@ -817,7 +815,7 @@ h1 {
   font-size: 2.25rem;
   line-height: 2.5rem;
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  color: var(--accent-5, hsl(167.8651685393deg, 87.2549019608%, 40%));
+  color: #2463eb;
 }
 
 .wrapper {
@@ -831,28 +829,28 @@ h1 {
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   margin-block: clamp(var(--koi-spacing-min, 0.75rem), var(--koi-spacing-value, 5%), var(--koi-spacing-max, 1.5rem));
   background-color: var(--c-surface-2);
-  border: 2px solid hsl(0deg, 0%, 32.1568627451%);
+  border: 2px solid #525252;
 }
 .wrapper:hover {
   background-color: var(--c-surface-3);
-  border-color: var(--accent-5, hsl(167.8651685393deg, 87.2549019608%, 40%));
+  border-color: var(--accent-5, #0dbf9b);
 }
 
 .btn {
   font-size: 0.875rem;
   align-items: center;
-  background-color: hsl(0deg, 0%, 96.0784313725%);
-  border: 1px solid hsl(0deg, 0%, 90.1960784314%);
+  background-color: whitesmoke;
+  border: 1px solid #e6e6e6;
   border-radius: 0.25rem;
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-  color: hsl(0deg, 0%, 25.0980392157%);
+  color: #404040;
   display: inline-flex;
   font-weight: 500;
   padding-block: 0.25rem;
   padding-inline: 0.5rem;
 }
 .btn:hover {
-  background-color: hsl(0deg, 0%, 45.0980392157%);
+  background-color: #737373;
 }
 .btn:focus {
   outline: none;
@@ -883,7 +881,7 @@ h1 {
 .loader-2 {
   animation: loader-2-rotate 1s linear infinite;
   border: 4px solid #fff;
-  border-bottom-color: var(--accent-6, hsl(168.9795918367deg, 90.1840490798%, 31.9607843137%));
+  border-bottom-color: var(--accent-6, #089b80);
   border-radius: 50%;
   box-sizing: border-box;
   display: inline-block;
@@ -916,7 +914,7 @@ h1 {
   position: absolute;
 }
 .loader-3::after {
-  border-color: var(--accent-6, hsl(168.9795918367deg, 90.1840490798%, 31.9607843137%));
+  border-color: var(--accent-6, #089b80);
   transform: rotate3d(90, 90, 0, 180deg);
 }
 @keyframes loader-3-rotate {
@@ -951,7 +949,7 @@ h1 {
 }
 .loader-4::after {
   border: 3px solid transparent;
-  border-bottom-color: var(--accent-6, hsl(168.9795918367deg, 90.1840490798%, 31.9607843137%));
+  border-bottom-color: var(--accent-6, #089b80);
   border-radius: 50%;
   box-sizing: border-box;
   content: "";
@@ -983,7 +981,7 @@ h1 {
 }
 .loader-5::after {
   border: 3px solid transparent;
-  border-bottom-color: var(--accent-6, hsl(168.9795918367deg, 90.1840490798%, 31.9607843137%));
+  border-bottom-color: var(--accent-6, #089b80);
   border-radius: 50%;
   box-sizing: border-box;
   content: "";

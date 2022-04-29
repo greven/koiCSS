@@ -18,7 +18,8 @@ body {
 h1 {
   @include koi.text-size(4xl);
   font-family: koi.font-family(serif);
-  color: koi.accent(5);
+  // color: koi.accent(5);
+  color: koi.color(blue, 6);
 }
 
 .wrapper {
