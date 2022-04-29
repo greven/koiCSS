@@ -13,6 +13,16 @@
   }
 }
 
+/* Get the color hasl values / parts.
+  Example: hsl(182deg, 50%, 25%) -> 182deg 50% 25%. */
+@function hsl-values($color) {
+  @if type-of($color) == 'color' {
+    @return color.hue($color) color.saturation($color) color.lightness($color);
+  } @else {
+    @error "#{$color} is not a valid color object!";
+  }
+}
+
 // Convert color to rgb
 @function to-rgb($color, $alpha: 1) {
   @if type-of($color) == 'color' {

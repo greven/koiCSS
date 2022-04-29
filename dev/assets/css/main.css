@@ -2,6 +2,8 @@
 /* Returns the css custom property */
 /* Output a CSS var with the given name prefixed
   if configured. Allows passing the css var fallback. */
+/* Get the color hasl values / parts.
+  Example: hsl(182deg, 50%, 25%) -> 182deg 50% 25%. */
 /* The CSS variables can be access as name-color,
   example: var(--bg-1-color). */
 /* Get a value from the theme using

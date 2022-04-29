@@ -14,6 +14,11 @@ $-default-accent: config(fallbacks, accent);
 //   Functions
 // --------------------------------
 
+// TODO: How to add alpha to hsl with a css var??
+
+// @debug to-hsl(theme(colors, red, 5));
+// @debug hsl-values(theme(colors, red, 5));
+
 @function color($name, $shade: $-default-shade, $alpha: 1) {
   @if is-scheme-color($name, $shade) {
     // @return hsl(css-var(c-#{$name}-#{$shade}), $alpha);
