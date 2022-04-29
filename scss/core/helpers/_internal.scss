@@ -15,25 +15,25 @@
 // CSS Vars
 
 /* Return the prefix of the css vars if configured */
-@function css-var-prefix($prefix: config(prefix)) {
+@function -css-var-prefix($prefix: config(prefix)) {
   $prefix: if($prefix == '', '', '#{$prefix}-');
   @return $prefix;
 }
 
 /* Returns the css custom property */
-@function css-var-name($name, $key: null, $suffix: null) {
-  $prefix: css-var-prefix();
+@function -css-var-name($name, $key: null, $suffix: null) {
+  $prefix: -css-var-prefix();
   $suffix: if($suffix, '-#{$suffix}', '');
   $key: if($name and $key, '-#{$key}', $key);
 
   @return '--#{$prefix}#{$name}#{$key}#{$suffix}';
 }
 
-/* A wrapper for var(), for consuming a CSS custom
-  property with the given name prefixed if configured.
+/* A wrapper for var() that prefixes the custom property
+  name if configured.
   Example: css-var(c-green-5) -> var(--koi-c-green-5) */
 @function css-var($name, $fallback: null) {
-  $var-name: string.unquote(css-var-name($name));
+  $var-name: string.unquote(-css-var-name($name));
   @if $fallback {
     @return var($var-name, $fallback);
   }
@@ -45,19 +45,19 @@
 // --------------------------------
 
 // Output a CSS custom property (CSS var)
-@mixin css-var($property, $key, $value) {
+@mixin custom-property($property, $key, $value) {
   $value: if(meta.type-of($value) == 'string', string.unquote($value), $value);
-  #{css-var-name($property, $key)}: $value;
+  #{-css-var-name($property, $key)}: $value;
 }
 
 // Output a CSS custom property (CSS var) color
-@mixin css-color-var($property, $value, $color: null, $suffix: null) {
+@mixin color-custom-property($property, $value, $color: null, $suffix: null) {
   @if meta.type-of($value) == 'color' {
-    #{css-var-name($property, $color, $suffix)}: to-hsl($value);
+    #{-css-var-name($property, $color, $suffix)}: to-hsl($value);
   } @else {
     @each $shade, $shade-value in $value {
       $key: if($color and $shade, '#{$color}-#{$shade}', $shade);
-      #{css-var-name($property, $key, $suffix)}: to-hsl($shade-value);
+      #{-css-var-name($property, $key, $suffix)}: to-hsl($shade-value);
     }
   }
 }
