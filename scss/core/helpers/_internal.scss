@@ -6,6 +6,7 @@
 @use 'sass:meta';
 
 @use '../api/config' as *;
+@use 'color' as *;
 
 // --------------------------------
 //   Functions
@@ -47,4 +48,16 @@
 @mixin css-var($property, $key, $value) {
   $value: if(meta.type-of($value) == 'string', string.unquote($value), $value);
   #{css-var-name($property, $key)}: $value;
+}
+
+// Output a CSS custom property (CSS var) color
+@mixin css-color-var($property, $value, $color: null, $suffix: null) {
+  @if meta.type-of($value) == 'color' {
+    #{css-var-name($property, $color, $suffix)}: to-hsl($value);
+  } @else {
+    @each $shade, $shade-value in $value {
+      $key: if($color and $shade, '#{$color}-#{$shade}', $shade);
+      #{css-var-name($property, $key, $suffix)}: to-hsl($shade-value);
+    }
+  }
 }

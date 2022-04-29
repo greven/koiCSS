@@ -1,10 +1,10 @@
+/* Get the color hasl values / parts.
+  Example: hsl(182deg, 50%, 25%) -> 182deg 50% 25%. */
 /* Return the prefix of the css vars if configured */
 /* Returns the css custom property */
 /* A wrapper for var(), for consuming a CSS custom
   property with the given name prefixed if configured.
   Example: css-var(c-green-5) -> var(--koi-c-green-5) */
-/* Get the color hasl values / parts.
-  Example: hsl(182deg, 50%, 25%) -> 182deg 50% 25%. */
 /* Generate CSS custom properties (vars) from theme property map.
   Example:  @include generate-css-vars(theme(shadow), shadow); */
 /* The CSS variables can be access as name-color,

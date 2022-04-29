@@ -23,23 +23,11 @@
 @mixin generate-css-color-vars($colors-map: (), $property: null, $suffix: null) {
   /*! purgecss start ignore */
   @each $color, $value in $colors-map {
-    @if meta.type-of($value) == 'color' {
-      #{css-var-name($property, $color, $suffix)}: to-hsl($value);
-    } @else {
-      @each $shade, $shade-value in $value {
-        #{css-var-name($property, '#{$color}-#{$shade}', $suffix)}: to-hsl($shade-value);
-      }
-    }
+    @include css-color-var($property, $value, $color, $suffix);
 
-    // Accent
+    // Accent color
     .accent-#{'' + $color} {
-      @if meta.type-of($value) == 'color' {
-        #{css-var-name(accent, $suffix)}: to-hsl($value);
-      } @else {
-        @each $shade, $shade-value in $value {
-          #{css-var-name('accent-#{$shade}', $suffix)}: to-hsl($shade-value);
-        }
-      }
+      @include css-color-var(accent, $value, $suffix: $suffix);
     }
   }
   /*! purgecss end ignore */
