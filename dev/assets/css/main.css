@@ -210,14 +210,14 @@ html {
 
 html {
   /*! purgecss start ignore */
-  --c-surface-1-light: hsl(0deg, 0%, 98.0392156863%);
-  --c-surface-2-light: hsl(0deg, 0%, 100%);
-  --c-surface-3-light: hsl(0deg, 0%, 96.0784313725%);
-  --c-surface-4-light: hsl(0deg, 0%, 90.1960784314%);
-  --c-text-1-light: hsl(0deg, 0%, 9.0196078431%);
-  --c-text-2-light: hsl(0deg, 0%, 14.9019607843%);
-  --c-text-3-light: hsl(0deg, 0%, 25.0980392157%);
-  --c-text-4-light: hsl(0deg, 0%, 32.1568627451%);
+  --c-surface-light-1: hsl(0deg, 0%, 98.0392156863%);
+  --c-surface-light-2: hsl(0deg, 0%, 100%);
+  --c-surface-light-3: hsl(0deg, 0%, 96.0784313725%);
+  --c-surface-light-4: hsl(0deg, 0%, 90.1960784314%);
+  --c-text-light-1: hsl(0deg, 0%, 9.0196078431%);
+  --c-text-light-2: hsl(0deg, 0%, 14.9019607843%);
+  --c-text-light-3: hsl(0deg, 0%, 25.0980392157%);
+  --c-text-light-4: hsl(0deg, 0%, 32.1568627451%);
   --c-code-bg-light: hsl(0deg, 0%, 9.0196078431%);
   --c-code-text-light: hsl(0deg, 0%, 96.0784313725%);
   --c-quote-text-light: hsl(0deg, 0%, 14.9019607843%);
@@ -265,14 +265,14 @@ html {
 
 html {
   /*! purgecss start ignore */
-  --c-surface-1-dark: hsl(0deg, 0%, 9.0196078431%);
-  --c-surface-2-dark: hsl(0deg, 0%, 14.9019607843%);
-  --c-surface-3-dark: hsl(0deg, 0%, 25.0980392157%);
-  --c-surface-4-dark: hsl(0deg, 0%, 32.1568627451%);
-  --c-text-1-dark: hsl(0deg, 0%, 98.0392156863%);
-  --c-text-2-dark: hsl(0deg, 0%, 96.0784313725%);
-  --c-text-3-dark: hsl(0deg, 0%, 90.1960784314%);
-  --c-text-4-dark: hsl(0deg, 0%, 83.137254902%);
+  --c-surface-dark-1: hsl(0deg, 0%, 9.0196078431%);
+  --c-surface-dark-2: hsl(0deg, 0%, 14.9019607843%);
+  --c-surface-dark-3: hsl(0deg, 0%, 25.0980392157%);
+  --c-surface-dark-4: hsl(0deg, 0%, 32.1568627451%);
+  --c-text-dark-1: hsl(0deg, 0%, 98.0392156863%);
+  --c-text-dark-2: hsl(0deg, 0%, 96.0784313725%);
+  --c-text-dark-3: hsl(0deg, 0%, 90.1960784314%);
+  --c-text-dark-4: hsl(0deg, 0%, 83.137254902%);
   --c-code-bg-dark: hsl(0deg, 0%, 0%);
   --c-code-text-dark: hsl(0deg, 0%, 96.0784313725%);
   --c-quote-text-dark: hsl(0deg, 0%, 96.0784313725%);
@@ -601,6 +601,7 @@ select {
 }
 
 :root {
+  /*! purgecss start ignore */
   --duration-ultra-fast: 25ms;
   --duration-super-fast: 50ms;
   --duration-fastest: 75ms;
@@ -627,9 +628,11 @@ select {
   --duration-500: 500ms;
   --duration-700: 700ms;
   --duration-1000: 1000ms;
+  /*! purgecss end ignore */
 }
 
 :root {
+  /*! purgecss start ignore */
   --shadow-xs: 0 1px 2px 0 rgba(0 0 0 / 0.05);
   --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --shadow-md: 0 4px 6px -1px rgba(0 0 0 / 0.1), 0 2px 4px -1px rgba(0 0 0 / 0.06);
@@ -640,15 +643,18 @@ select {
   --shadow-outline: 0 0 0 3px rgba(66 153 225 / 0.5);
   --shadow-solid: 0 0 0 2px currentColor;
   --shadow-none: 0 0 #0000;
+  /*! purgecss end ignore */
 }
 
 :root {
+  /*! purgecss start ignore */
   --linear: linear;
   --ease: cubic-bezier(0.25, 0.1, 0.25, 1);
   --ease-in: cubic-bezier(0.4, 0, 1, 1);
   --ease-out: cubic-bezier(0, 0, 0.2, 1);
   --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
   --ease-elastic: cubic-bezier(0.5, 1, 0.75, 1.25);
+  /*! purgecss end ignore */
 }
 
 /*! purgecss start ignore */

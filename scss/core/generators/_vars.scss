@@ -15,9 +15,11 @@
 /* Generate CSS custom properties (vars) from theme property map.
   Example:  @include generate-css-vars(theme(shadow), shadow); */
 @mixin generate-css-vars($map: (), $property: null) {
+  /*! purgecss start ignore */
   @each $key, $value in $map {
     @include css-var($property, $key, $value);
   }
+  /*! purgecss end ignore */
 }
 
 @mixin generate-css-color-vars($colors-map: (), $property: null, $suffix: null) {
@@ -25,7 +27,7 @@
   @each $color, $value in $colors-map {
     @include css-color-var($property, $value, $color, $suffix);
 
-    // Accent color
+    // Accent colors
     .accent-#{'' + $color} {
       @include css-color-var(accent, $value, $suffix: $suffix);
     }
@@ -33,16 +35,10 @@
   /*! purgecss end ignore */
 }
 
-@mixin generate-color-scheme-css-vars($colors-map: (), $color-scheme: null) {
+@mixin generate-color-scheme-css-vars($colors-map: (), $color-scheme: null, $suffix: null) {
   /*! purgecss start ignore */
   @each $color, $value in $colors-map {
-    @if meta.type-of($value) == 'color' {
-      #{css-var-name(c-#{$color}, $color-scheme)}: to-hsl($value);
-    } @else {
-      @each $shade, $shade-value in $value {
-        #{css-var-name('c-#{$color}-#{$shade}', $color-scheme)}: to-hsl($shade-value);
-      }
-    }
+    @include css-color-var(c-#{$color}, $value, $color-scheme, $suffix: $suffix);
   }
   /*! purgecss end ignore */
 }
