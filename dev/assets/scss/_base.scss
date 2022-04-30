@@ -1,5 +1,6 @@
 @use 'sass:map';
 @use 'sass:list';
+@use 'sass:color';
 
 @forward 'config';
 @use 'koi';
@@ -18,8 +19,7 @@ body {
 h1 {
   @include koi.text-size(4xl);
   font-family: koi.font-family(serif);
-  // color: koi.accent(5);
-  color: koi.color(blue, 6);
+  color: koi.accent(5);
 }
 
 .wrapper {

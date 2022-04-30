@@ -2,11 +2,11 @@
 /* Returns the css custom property */
 /* A wrapper for var() that prefixes the custom property
   name if configured.
-  Example: css-var(c-green-5) -> var(--koi-c-green-5) */
+  Example: css-var(--c-green-5) -> var(--koi-c-green-5) */
 /* Generate CSS custom properties (vars) from theme property map.
   Example:  @include generate-css-vars(theme(shadow), shadow); */
-/* The CSS variables can be access as name-color,
-  example: var(--bg-1-color). */
+/* The Color scheme specific CSS variables can be
+  access as: var(--c-surface-1). */
 /* Get a value from the theme using
   fallbacks definied in the config */
 /* Checks if keys is a valid scheme color
@@ -202,7 +202,7 @@ html {
   --c-code-bg: #171717;
   --c-code-text: #f5f5f5;
   --c-quote-text: #262626;
-  --c-quote-border: #dc2828;
+  --c-quote-border: #089b80;
   /*! purgecss end ignore */
 }
 
@@ -219,7 +219,7 @@ html {
   --c-code-bg-light: #171717;
   --c-code-text-light: #f5f5f5;
   --c-quote-text-light: #262626;
-  --c-quote-border-light: #dc2828;
+  --c-quote-border-light: #089b80;
   /*! purgecss end ignore */
 }
 
@@ -237,7 +237,7 @@ html {
     --c-code-bg: #171717;
     --c-code-text: #f5f5f5;
     --c-quote-text: #262626;
-    --c-quote-border: #dc2828;
+    --c-quote-border: #089b80;
     /*! purgecss end ignore */
     color-scheme: light;
   }
@@ -256,7 +256,7 @@ html {
   --c-code-bg: #171717;
   --c-code-text: #f5f5f5;
   --c-quote-text: #262626;
-  --c-quote-border: #dc2828;
+  --c-quote-border: #089b80;
   /*! purgecss end ignore */
   color-scheme: light;
 }
@@ -815,7 +815,7 @@ h1 {
   font-size: 2.25rem;
   line-height: 2.5rem;
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  color: #2463eb;
+  color: var(--accent-5, #0dbf9b);
 }
 
 .wrapper {
@@ -839,7 +839,7 @@ h1 {
 .btn {
   font-size: 0.875rem;
   align-items: center;
-  background-color: whitesmoke;
+  background-color: #f5f5f5;
   border: 1px solid #e6e6e6;
   border-radius: 0.25rem;
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);

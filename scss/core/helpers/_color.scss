@@ -6,6 +6,10 @@
 @use 'sass:math';
 @use 'sass:meta';
 
+// --------------------------------
+//   Functions
+// --------------------------------
+
 // Convert color to hsl
 @function to-hsl($color, $alpha: 1) {
   @if type-of($color) == 'color' {

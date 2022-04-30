@@ -13,21 +13,21 @@ $-default-accent: config(fallbacks, accent);
 //   Functions
 // --------------------------------
 
-@function color($name, $shade: $-default-shade, $alpha: 1) {
+@function color($name, $shade: $-default-shade) {
   @if is-scheme-color($name, $shade) {
     @return css-var(c-#{$name}-#{$shade});
   } @else if is-scheme-color($name) {
     @return css-var(c-#{$name});
   } @else if is-theme-color($name, $shade) {
-    @return rgba(theme(colors, $name, $shade), $alpha);
+    @return theme(colors, $name, $shade);
   } @else if is-theme-color($name) {
-    @return rgba(theme(colors, $name), $alpha);
+    @return theme(colors, $name);
   } @else {
     @error "Color #{$name}-#{$shade} not found in theme.";
   }
 }
 
-@function accent($shade: $-default-shade, $alpha: 1) {
-  $fallback-accent: rgba(theme(colors, $-default-accent, $shade), $alpha);
+@function accent($shade: $-default-shade) {
+  $fallback-accent: theme(colors, $-default-accent, $shade);
   @return css-var(accent-#{$shade}, $fallback-accent);
 }

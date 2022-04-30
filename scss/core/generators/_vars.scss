@@ -14,7 +14,7 @@
 @mixin generate-css-vars($map: (), $property: null) {
   /*! purgecss start ignore */
   @each $key, $value in $map {
-    @include custom-property($property, $key, $value);
+    @include custom-prop($property, $key, $value);
   }
   /*! purgecss end ignore */
 }
@@ -22,11 +22,11 @@
 @mixin generate-css-color-vars($colors-map: (), $property: null, $suffix: null) {
   /*! purgecss start ignore */
   @each $color, $value in $colors-map {
-    @include color-custom-property($property, $value, $color, $suffix);
+    @include color-custom-prop($property, $color, $value, $suffix);
 
     // Accent colors
     .accent-#{'' + $color} {
-      @include color-custom-property(accent, $value, $suffix: $suffix);
+      @include color-custom-prop(accent, null, $value, $suffix: $suffix);
     }
   }
   /*! purgecss end ignore */
@@ -35,7 +35,8 @@
 @mixin generate-color-scheme-css-vars($colors-map: (), $color-scheme: null, $suffix: null) {
   /*! purgecss start ignore */
   @each $color, $value in $colors-map {
-    @include color-custom-property(c-#{$color}, $value, $color-scheme, $suffix);
+    @include color-custom-prop(c-#{$color}, $color-scheme, $value, $suffix);
+    // @include hsl-color-custom-prop(c-#{$color}, $color-scheme, $value, $suffix);
   }
   /*! purgecss end ignore */
 }

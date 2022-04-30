@@ -113,14 +113,14 @@ $custom-prop-name: anim;
 
 @mixin vars {
   :root {
-    @include custom-property($custom-prop-name, blink, (blink 1s timing(ease) infinite));
-    @include custom-property($custom-prop-name, bounce, (bounce 2s timing(ease) infinite));
-    @include custom-property($custom-prop-name, fade-in, (fade-in 0.5s timing(ease)));
-    @include custom-property($custom-prop-name, fade-out, (fade-out 0.5s timing(ease)));
-    @include custom-property($custom-prop-name, float, (float 3s timing(ease-in-out) infinite));
-    @include custom-property($custom-prop-name, ping, (ping 3s timing(ease-out) infinite));
-    @include custom-property($custom-prop-name, pulse, (pulse 2s timing(ease-out) infinite));
-    @include custom-property($custom-prop-name, spin, (spin 2s timing(linear) infinite));
-    @include custom-property($custom-prop-name, ring, (ring 500ms timing(linear) infinite));
+    @include custom-prop($custom-prop-name, blink, (blink 1s timing(ease) infinite));
+    @include custom-prop($custom-prop-name, bounce, (bounce 2s timing(ease) infinite));
+    @include custom-prop($custom-prop-name, fade-in, (fade-in 0.5s timing(ease)));
+    @include custom-prop($custom-prop-name, fade-out, (fade-out 0.5s timing(ease)));
+    @include custom-prop($custom-prop-name, float, (float 3s timing(ease-in-out) infinite));
+    @include custom-prop($custom-prop-name, ping, (ping 3s timing(ease-out) infinite));
+    @include custom-prop($custom-prop-name, pulse, (pulse 2s timing(ease-out) infinite));
+    @include custom-prop($custom-prop-name, spin, (spin 2s timing(linear) infinite));
+    @include custom-prop($custom-prop-name, ring, (ring 500ms timing(linear) infinite));
   }
 }
