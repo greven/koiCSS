@@ -45,6 +45,6 @@ $color-schemes: (
     code-bg: map.get($tokens, colors, black),
     code-text: map.get($tokens, colors, gray, 1),
     quote-text: map.get($tokens, colors, gray, 1),
-    quote-border: map.get($tokens, colors, red, 6),
+    quote-border: map.get($tokens, colors, primary, 6),
   ),
 ) !default;

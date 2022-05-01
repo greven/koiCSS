@@ -26,7 +26,7 @@
 
     // Accent colors
     .accent-#{'' + $color} {
-      @include color-custom-prop(accent, null, $value, $suffix: $suffix);
+      @include hsl-color-custom-prop(accent, null, $value, $suffix: $suffix);
     }
   }
   /*! purgecss end ignore */

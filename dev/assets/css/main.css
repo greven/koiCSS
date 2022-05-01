@@ -1,5 +1,9 @@
 /* Split a string by delimiter
   Example: split('1--2--3', '--') -> "1" "2" "3" */
+/* Convert an hexadecimal number to a decimal number
+  Source: KittyGiraudel - SassyJSON */
+/* Parse an hex string into an rgb color
+  Source: KittyGiraudel - SassyJSON */
 /* Return the prefix of the css vars if configured */
 /* Returns the css custom property */
 /* A wrapper for var() that prefixes the custom property
@@ -453,9 +457,9 @@ html {
   --c-quote-text-dark-s: 0%;
   --c-quote-text-dark-l: 96.0784313725%;
   --c-quote-text-dark: hsl(var(--c-quote-text-dark-h), var(--c-quote-text-dark-s), var(--c-quote-text-dark-l));
-  --c-quote-border-dark-h: 0deg;
-  --c-quote-border-dark-s: 72%;
-  --c-quote-border-dark-l: 50.9803921569%;
+  --c-quote-border-dark-h: 168.9795918367deg;
+  --c-quote-border-dark-s: 90.1840490798%;
+  --c-quote-border-dark-l: 31.9607843137%;
   --c-quote-border-dark: hsl(var(--c-quote-border-dark-h), var(--c-quote-border-dark-s), var(--c-quote-border-dark-l));
   /*! purgecss end ignore */
 }
@@ -507,9 +511,9 @@ html {
     --c-quote-text-s: 0%;
     --c-quote-text-l: 96.0784313725%;
     --c-quote-text: hsl(var(--c-quote-text-h), var(--c-quote-text-s), var(--c-quote-text-l));
-    --c-quote-border-h: 0deg;
-    --c-quote-border-s: 72%;
-    --c-quote-border-l: 50.9803921569%;
+    --c-quote-border-h: 168.9795918367deg;
+    --c-quote-border-s: 90.1840490798%;
+    --c-quote-border-l: 31.9607843137%;
     --c-quote-border: hsl(var(--c-quote-border-h), var(--c-quote-border-s), var(--c-quote-border-l));
     /*! purgecss end ignore */
     color-scheme: dark;
@@ -562,9 +566,9 @@ html {
   --c-quote-text-s: 0%;
   --c-quote-text-l: 96.0784313725%;
   --c-quote-text: hsl(var(--c-quote-text-h), var(--c-quote-text-s), var(--c-quote-text-l));
-  --c-quote-border-h: 0deg;
-  --c-quote-border-s: 72%;
-  --c-quote-border-l: 50.9803921569%;
+  --c-quote-border-h: 168.9795918367deg;
+  --c-quote-border-s: 90.1840490798%;
+  --c-quote-border-l: 31.9607843137%;
   --c-quote-border: hsl(var(--c-quote-border-h), var(--c-quote-border-s), var(--c-quote-border-l));
   /*! purgecss end ignore */
   color-scheme: dark;
@@ -774,82 +778,268 @@ select {
   /*! purgecss end ignore */
 }
 :root .accent-white {
-  --accent: #ffffff;
+  --accent-h: 0deg;
+  --accent-s: 0%;
+  --accent-l: 100%;
+  --accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
 }
 :root .accent-black {
-  --accent: #000000;
+  --accent-h: 0deg;
+  --accent-s: 0%;
+  --accent-l: 0%;
+  --accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
 }
 :root .accent-primary {
-  --accent-0: #f0fffa;
-  --accent-1: #c9fded;
-  --accent-2: #94fadd;
-  --accent-3: #56f0ca;
-  --accent-4: #24d6af;
-  --accent-5: #0dbf9b;
-  --accent-6: #089b80;
-  --accent-7: #0b7967;
-  --accent-8: #0e6256;
-  --accent-9: #115045;
+  --accent-0-h: 160deg;
+  --accent-0-s: 100%;
+  --accent-0-l: 97.0588235294%;
+  --accent-0: hsl(var(--accent-0-h), var(--accent-0-s), var(--accent-0-l));
+  --accent-1-h: 161.5384615385deg;
+  --accent-1-s: 92.8571428571%;
+  --accent-1-l: 89.0196078431%;
+  --accent-1: hsl(var(--accent-1-h), var(--accent-1-s), var(--accent-1-l));
+  --accent-2-h: 162.9411764706deg;
+  --accent-2-s: 91.0714285714%;
+  --accent-2-l: 78.0392156863%;
+  --accent-2: hsl(var(--accent-2-h), var(--accent-2-s), var(--accent-2-l));
+  --accent-3-h: 165.1948051948deg;
+  --accent-3-s: 83.6956521739%;
+  --accent-3-l: 63.9215686275%;
+  --accent-3: hsl(var(--accent-3-h), var(--accent-3-s), var(--accent-3-l));
+  --accent-4-h: 166.8539325843deg;
+  --accent-4-s: 71.2%;
+  --accent-4-l: 49.0196078431%;
+  --accent-4: hsl(var(--accent-4-h), var(--accent-4-s), var(--accent-4-l));
+  --accent-5-h: 167.8651685393deg;
+  --accent-5-s: 87.2549019608%;
+  --accent-5-l: 40%;
+  --accent-5: hsl(var(--accent-5-h), var(--accent-5-s), var(--accent-5-l));
+  --accent-6-h: 168.9795918367deg;
+  --accent-6-s: 90.1840490798%;
+  --accent-6-l: 31.9607843137%;
+  --accent-6: hsl(var(--accent-6-h), var(--accent-6-s), var(--accent-6-l));
+  --accent-7-h: 170.1818181818deg;
+  --accent-7-s: 83.3333333333%;
+  --accent-7-l: 25.8823529412%;
+  --accent-7: hsl(var(--accent-7-h), var(--accent-7-s), var(--accent-7-l));
+  --accent-8-h: 171.4285714286deg;
+  --accent-8-s: 75%;
+  --accent-8-l: 21.9607843137%;
+  --accent-8: hsl(var(--accent-8-h), var(--accent-8-s), var(--accent-8-l));
+  --accent-9-h: 169.5238095238deg;
+  --accent-9-s: 64.9484536082%;
+  --accent-9-l: 19.0196078431%;
+  --accent-9: hsl(var(--accent-9-h), var(--accent-9-s), var(--accent-9-l));
 }
 :root .accent-gray {
-  --accent-0: #fafafa;
-  --accent-1: #f5f5f5;
-  --accent-2: #e6e6e6;
-  --accent-3: #d4d4d4;
-  --accent-4: #a3a3a3;
-  --accent-5: #737373;
-  --accent-6: #525252;
-  --accent-7: #404040;
-  --accent-8: #262626;
-  --accent-9: #171717;
+  --accent-0-h: 0deg;
+  --accent-0-s: 0%;
+  --accent-0-l: 98.0392156863%;
+  --accent-0: hsl(var(--accent-0-h), var(--accent-0-s), var(--accent-0-l));
+  --accent-1-h: 0deg;
+  --accent-1-s: 0%;
+  --accent-1-l: 96.0784313725%;
+  --accent-1: hsl(var(--accent-1-h), var(--accent-1-s), var(--accent-1-l));
+  --accent-2-h: 0deg;
+  --accent-2-s: 0%;
+  --accent-2-l: 90.1960784314%;
+  --accent-2: hsl(var(--accent-2-h), var(--accent-2-s), var(--accent-2-l));
+  --accent-3-h: 0deg;
+  --accent-3-s: 0%;
+  --accent-3-l: 83.137254902%;
+  --accent-3: hsl(var(--accent-3-h), var(--accent-3-s), var(--accent-3-l));
+  --accent-4-h: 0deg;
+  --accent-4-s: 0%;
+  --accent-4-l: 63.9215686275%;
+  --accent-4: hsl(var(--accent-4-h), var(--accent-4-s), var(--accent-4-l));
+  --accent-5-h: 0deg;
+  --accent-5-s: 0%;
+  --accent-5-l: 45.0980392157%;
+  --accent-5: hsl(var(--accent-5-h), var(--accent-5-s), var(--accent-5-l));
+  --accent-6-h: 0deg;
+  --accent-6-s: 0%;
+  --accent-6-l: 32.1568627451%;
+  --accent-6: hsl(var(--accent-6-h), var(--accent-6-s), var(--accent-6-l));
+  --accent-7-h: 0deg;
+  --accent-7-s: 0%;
+  --accent-7-l: 25.0980392157%;
+  --accent-7: hsl(var(--accent-7-h), var(--accent-7-s), var(--accent-7-l));
+  --accent-8-h: 0deg;
+  --accent-8-s: 0%;
+  --accent-8-l: 14.9019607843%;
+  --accent-8: hsl(var(--accent-8-h), var(--accent-8-s), var(--accent-8-l));
+  --accent-9-h: 0deg;
+  --accent-9-s: 0%;
+  --accent-9-l: 9.0196078431%;
+  --accent-9: hsl(var(--accent-9-h), var(--accent-9-s), var(--accent-9-l));
 }
 :root .accent-red {
-  --accent-0: #fef1f1;
-  --accent-1: #fee1e1;
-  --accent-2: #fec8c8;
-  --accent-3: #fca6a6;
-  --accent-4: #f87272;
-  --accent-5: #ef4343;
-  --accent-6: #dc2828;
-  --accent-7: #ba1c1c;
-  --accent-8: #981b1b;
-  --accent-9: #811d1d;
+  --accent-0-h: 0deg;
+  --accent-0-s: 86.6666666667%;
+  --accent-0-l: 97.0588235294%;
+  --accent-0: hsl(var(--accent-0-h), var(--accent-0-s), var(--accent-0-l));
+  --accent-1-h: 0deg;
+  --accent-1-s: 93.5483870968%;
+  --accent-1-l: 93.9215686275%;
+  --accent-1: hsl(var(--accent-1-h), var(--accent-1-s), var(--accent-1-l));
+  --accent-2-h: 0deg;
+  --accent-2-s: 96.4285714286%;
+  --accent-2-l: 89.0196078431%;
+  --accent-2: hsl(var(--accent-2-h), var(--accent-2-s), var(--accent-2-l));
+  --accent-3-h: 0deg;
+  --accent-3-s: 93.4782608696%;
+  --accent-3-l: 81.9607843137%;
+  --accent-3: hsl(var(--accent-3-h), var(--accent-3-s), var(--accent-3-l));
+  --accent-4-h: 0deg;
+  --accent-4-s: 90.5405405405%;
+  --accent-4-l: 70.9803921569%;
+  --accent-4: hsl(var(--accent-4-h), var(--accent-4-s), var(--accent-4-l));
+  --accent-5-h: 0deg;
+  --accent-5-s: 84.3137254902%;
+  --accent-5-l: 60%;
+  --accent-5: hsl(var(--accent-5-h), var(--accent-5-s), var(--accent-5-l));
+  --accent-6-h: 0deg;
+  --accent-6-s: 72%;
+  --accent-6-l: 50.9803921569%;
+  --accent-6: hsl(var(--accent-6-h), var(--accent-6-s), var(--accent-6-l));
+  --accent-7-h: 0deg;
+  --accent-7-s: 73.8317757009%;
+  --accent-7-l: 41.9607843137%;
+  --accent-7: hsl(var(--accent-7-h), var(--accent-7-s), var(--accent-7-l));
+  --accent-8-h: 0deg;
+  --accent-8-s: 69.8324022346%;
+  --accent-8-l: 35.0980392157%;
+  --accent-8: hsl(var(--accent-8-h), var(--accent-8-s), var(--accent-8-l));
+  --accent-9-h: 0deg;
+  --accent-9-s: 63.2911392405%;
+  --accent-9-l: 30.9803921569%;
+  --accent-9: hsl(var(--accent-9-h), var(--accent-9-s), var(--accent-9-l));
 }
 :root .accent-yellow {
-  --accent-0: #fefce7;
-  --accent-1: #fef9c3;
-  --accent-2: #fef08b;
-  --accent-3: #fddf49;
-  --accent-4: #facc14;
-  --accent-5: #fbe8b0;
-  --accent-6: #c88a04;
-  --accent-7: #a26107;
-  --accent-8: #864e0e;
-  --accent-9: #733f12;
+  --accent-0-h: 54.7826086957deg;
+  --accent-0-s: 92%;
+  --accent-0-l: 95.0980392157%;
+  --accent-0: hsl(var(--accent-0-h), var(--accent-0-s), var(--accent-0-l));
+  --accent-1-h: 54.9152542373deg;
+  --accent-1-s: 96.7213114754%;
+  --accent-1-l: 88.0392156863%;
+  --accent-1: hsl(var(--accent-1-h), var(--accent-1-s), var(--accent-1-l));
+  --accent-2-h: 52.6956521739deg;
+  --accent-2-s: 98.2905982906%;
+  --accent-2-l: 77.0588235294%;
+  --accent-2: hsl(var(--accent-2-h), var(--accent-2-s), var(--accent-2-l));
+  --accent-3-h: 50deg;
+  --accent-3-s: 97.8260869565%;
+  --accent-3-l: 63.9215686275%;
+  --accent-3: hsl(var(--accent-3-h), var(--accent-3-s), var(--accent-3-l));
+  --accent-4-h: 48deg;
+  --accent-4-s: 95.8333333333%;
+  --accent-4-l: 52.9411764706%;
+  --accent-4: hsl(var(--accent-4-h), var(--accent-4-s), var(--accent-4-l));
+  --accent-5-h: 44.8deg;
+  --accent-5-s: 90.3614457831%;
+  --accent-5-l: 83.7254901961%;
+  --accent-5: hsl(var(--accent-5-h), var(--accent-5-s), var(--accent-5-l));
+  --accent-6-h: 41.0204081633deg;
+  --accent-6-s: 96.0784313725%;
+  --accent-6-l: 40%;
+  --accent-6: hsl(var(--accent-6-h), var(--accent-6-s), var(--accent-6-l));
+  --accent-7-h: 34.8387096774deg;
+  --accent-7-s: 91.7159763314%;
+  --accent-7-l: 33.137254902%;
+  --accent-7: hsl(var(--accent-7-h), var(--accent-7-s), var(--accent-7-l));
+  --accent-8-h: 32deg;
+  --accent-8-s: 81.0810810811%;
+  --accent-8-l: 29.0196078431%;
+  --accent-8: hsl(var(--accent-8-h), var(--accent-8-s), var(--accent-8-l));
+  --accent-9-h: 27.8350515464deg;
+  --accent-9-s: 72.9323308271%;
+  --accent-9-l: 26.0784313725%;
+  --accent-9: hsl(var(--accent-9-h), var(--accent-9-s), var(--accent-9-l));
 }
 :root .accent-green {
-  --accent-0: #f3fcf5;
-  --accent-1: #defce9;
-  --accent-2: #bbf7d0;
-  --accent-3: #85efac;
-  --accent-4: #4ade80;
-  --accent-5: #21c45d;
-  --accent-6: #16a249;
-  --accent-7: #157f3c;
-  --accent-8: #166434;
-  --accent-9: #14522d;
+  --accent-0-h: 133.3333333333deg;
+  --accent-0-s: 60%;
+  --accent-0-l: 97.0588235294%;
+  --accent-0: hsl(var(--accent-0-h), var(--accent-0-s), var(--accent-0-l));
+  --accent-1-h: 142deg;
+  --accent-1-s: 83.3333333333%;
+  --accent-1-l: 92.9411764706%;
+  --accent-1: hsl(var(--accent-1-h), var(--accent-1-s), var(--accent-1-l));
+  --accent-2-h: 141deg;
+  --accent-2-s: 78.9473684211%;
+  --accent-2-l: 85.0980392157%;
+  --accent-2: hsl(var(--accent-2-h), var(--accent-2-s), var(--accent-2-l));
+  --accent-3-h: 142.0754716981deg;
+  --accent-3-s: 76.8115942029%;
+  --accent-3-l: 72.9411764706%;
+  --accent-3: hsl(var(--accent-3-h), var(--accent-3-s), var(--accent-3-l));
+  --accent-4-h: 141.8918918919deg;
+  --accent-4-s: 69.1588785047%;
+  --accent-4-l: 58.0392156863%;
+  --accent-4: hsl(var(--accent-4-h), var(--accent-4-s), var(--accent-4-l));
+  --accent-5-h: 142.0858895706deg;
+  --accent-5-s: 71.1790393013%;
+  --accent-5-l: 44.9019607843%;
+  --accent-5: hsl(var(--accent-5-h), var(--accent-5-s), var(--accent-5-l));
+  --accent-6-h: 141.8571428571deg;
+  --accent-6-s: 76.0869565217%;
+  --accent-6-l: 36.0784313725%;
+  --accent-6: hsl(var(--accent-6-h), var(--accent-6-s), var(--accent-6-l));
+  --accent-7-h: 142.0754716981deg;
+  --accent-7-s: 71.6216216216%;
+  --accent-7-l: 29.0196078431%;
+  --accent-7: hsl(var(--accent-7-h), var(--accent-7-s), var(--accent-7-l));
+  --accent-8-h: 143.0769230769deg;
+  --accent-8-s: 63.9344262295%;
+  --accent-8-l: 23.9215686275%;
+  --accent-8: hsl(var(--accent-8-h), var(--accent-8-s), var(--accent-8-l));
+  --accent-9-h: 144.1935483871deg;
+  --accent-9-s: 60.7843137255%;
+  --accent-9-l: 20%;
+  --accent-9: hsl(var(--accent-9-h), var(--accent-9-s), var(--accent-9-l));
 }
 :root .accent-blue {
-  --accent-0: #f0f6ff;
-  --accent-1: #dcebfe;
-  --accent-2: #bedbfe;
-  --accent-3: #91c3fd;
-  --accent-4: #61a6fa;
-  --accent-5: #3c83f6;
-  --accent-6: #2463eb;
-  --accent-7: #1d4fd7;
-  --accent-8: #1e3fae;
-  --accent-9: #1e3b8a;
+  --accent-0-h: 216deg;
+  --accent-0-s: 100%;
+  --accent-0-l: 97.0588235294%;
+  --accent-0: hsl(var(--accent-0-h), var(--accent-0-s), var(--accent-0-l));
+  --accent-1-h: 213.5294117647deg;
+  --accent-1-s: 94.4444444444%;
+  --accent-1-l: 92.9411764706%;
+  --accent-1: hsl(var(--accent-1-h), var(--accent-1-s), var(--accent-1-l));
+  --accent-2-h: 212.8125deg;
+  --accent-2-s: 96.9696969697%;
+  --accent-2-l: 87.0588235294%;
+  --accent-2: hsl(var(--accent-2-h), var(--accent-2-s), var(--accent-2-l));
+  --accent-3-h: 212.2222222222deg;
+  --accent-3-s: 96.4285714286%;
+  --accent-3-l: 78.0392156863%;
+  --accent-3: hsl(var(--accent-3-h), var(--accent-3-s), var(--accent-3-l));
+  --accent-4-h: 212.9411764706deg;
+  --accent-4-s: 93.8650306748%;
+  --accent-4-l: 68.0392156863%;
+  --accent-4: hsl(var(--accent-4-h), var(--accent-4-s), var(--accent-4-l));
+  --accent-5-h: 217.0967741935deg;
+  --accent-5-s: 91.1764705882%;
+  --accent-5-l: 60%;
+  --accent-5: hsl(var(--accent-5-h), var(--accent-5-s), var(--accent-5-l));
+  --accent-6-h: 221.0050251256deg;
+  --accent-6-s: 83.2635983264%;
+  --accent-6-l: 53.137254902%;
+  --accent-6: hsl(var(--accent-6-h), var(--accent-6-s), var(--accent-6-l));
+  --accent-7-h: 223.8709677419deg;
+  --accent-7-s: 76.2295081967%;
+  --accent-7-l: 47.8431372549%;
+  --accent-7: hsl(var(--accent-7-h), var(--accent-7-s), var(--accent-7-l));
+  --accent-8-h: 226.25deg;
+  --accent-8-s: 70.5882352941%;
+  --accent-8-l: 40%;
+  --accent-8: hsl(var(--accent-8-h), var(--accent-8-s), var(--accent-8-l));
+  --accent-9-h: 223.8888888889deg;
+  --accent-9-s: 64.2857142857%;
+  --accent-9-l: 32.9411764706%;
+  --accent-9: hsl(var(--accent-9-h), var(--accent-9-s), var(--accent-9-l));
 }
 
 :root {

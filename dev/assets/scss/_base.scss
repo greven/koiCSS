@@ -20,9 +20,7 @@ h1 {
   @include koi.text-size(4xl);
   font-family: koi.font-family(serif);
   color: koi.accent(5);
-  // color: koi.change-alpha(koi.color(text, 4), 1);
-  // color: koi.change-alpha(koi.color(blue, 5), 0.25);
-  // color: koi.change-alpha(koi.accent(5), 0.25);
+  // color: koi.change-alpha(koi.accent(5), 1);
 }
 
 .wrapper {

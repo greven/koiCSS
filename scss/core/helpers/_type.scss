@@ -1,0 +1,9 @@
+// --------------------------------
+//   Type helpers
+// --------------------------------
+
+@use 'sass:meta';
+
+@function to-bool($value) {
+  @return not(not $value or $value == '' or $value == 0 or $value == ());
+}
