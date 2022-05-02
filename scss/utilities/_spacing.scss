@@ -5,8 +5,177 @@
 @use '../core/generators' as *;
 @use '../core' as *;
 
-$utility-classes: ();
+$utility-classes: (
+  'margin': (
+    property: margin,
+    class: m,
+    responsive: true,
+    values:
+      map-merge(
+        theme(spacing),
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  'margin-x': (
+    property: margin-right margin-left,
+    class: mx,
+    responsive: true,
+    values:
+      map-merge(
+        theme(spacing),
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  'margin-y': (
+    property: margin-top margin-bottom,
+    class: my,
+    responsive: true,
+    values:
+      map-merge(
+        theme(spacing),
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  'margin-top': (
+    property: margin-top,
+    class: mt,
+    responsive: true,
+    values:
+      map-merge(
+        theme(spacing),
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  'margin-right': (
+    property: margin-right,
+    class: mr,
+    responsive: true,
+    values:
+      map-merge(
+        theme(spacing),
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  'margin-bottom': (
+    property: margin-bottom,
+    class: mb,
+    responsive: true,
+    values:
+      map-merge(
+        theme(spacing),
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  'margin-left': (
+    property: margin-left,
+    class: ml,
+    responsive: true,
+    values:
+      map-merge(
+        theme(spacing),
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  '-margin': (
+    property: margin,
+    class: -m,
+    responsive: true,
+    values: $negative-spacing,
+  ),
+  '-margin-x': (
+    property: margin-right margin-left,
+    class: -mx,
+    responsive: true,
+    values: $negative-spacing,
+  ),
+  '-margin-y': (
+    property: margin-top margin-bottom,
+    class: -my,
+    responsive: true,
+    values: $negative-spacing,
+  ),
+  '-margin-top': (
+    property: margin-top,
+    class: -mt,
+    responsive: true,
+    values: $negative-spacing,
+  ),
+  '-margin-right': (
+    property: margin-right,
+    class: -mr,
+    responsive: true,
+    values: $negative-spacing,
+  ),
+  '-margin-bottom': (
+    property: margin-bottom,
+    class: -mb,
+    responsive: true,
+    values: $negative-spacing,
+  ),
+  '-margin-left': (
+    property: margin-left,
+    class: -ml,
+    responsive: true,
+    values: $negative-spacing,
+  ),
+  'padding': (
+    property: padding,
+    class: p,
+    responsive: true,
+    values: theme(spacing),
+  ),
+  'padding-x': (
+    property: padding-right padding-left,
+    class: px,
+    responsive: true,
+    values: theme(spacing),
+  ),
+  'padding-y': (
+    property: padding-top padding-bottom,
+    class: py,
+    responsive: true,
+    values: theme(spacing),
+  ),
+  'padding-top': (
+    property: padding-top,
+    class: pt,
+    responsive: true,
+    values: theme(spacing),
+  ),
+  'padding-right': (
+    property: padding-right,
+    class: pr,
+    responsive: true,
+    values: theme(spacing),
+  ),
+  'padding-bottom': (
+    property: padding-bottom,
+    class: pb,
+    responsive: true,
+    values: theme(spacing),
+  ),
+  'padding-left': (
+    property: padding-left,
+    class: pl,
+    responsive: true,
+    values: theme(spacing),
+  ),
+);
 
 @mixin utilities {
-  // @include generate-utility();
+  @include generate-utilities($utility-classes);
 }

@@ -4,5 +4,6 @@
 
 @mixin utilities {
   @include layout.utilities();
+  @include spacing.utilities();
   @include visibility.utilities();
 }
