@@ -18,22 +18,23 @@
   "license": "MIT",
   "scripts": {
     "build:dev": "sass -I node_modules -I scss --no-source-map dev/assets/scss:dev/assets/css && npm run postcss:dev",
-    "build:sass:min": "sass -I node_modules -s compressed --no-source-map scss/koi.scss:dist/koi.min.css",
-    "build:sass": "sass -I node_modules --no-source-map scss/koi.scss:dist/koi.css",
-    "build": "npm run clean && concurrently npm:build:sass npm:build:sass:min && npm run postcss:prod",
+    "build:styles:min": "sass -I node_modules -s compressed --no-source-map scss/koi-styles.scss:dist/koi.min.css",
+    "build:styles": "sass -I node_modules --no-source-map scss/koi-styles.scss:dist/koi.css",
+    "build": "npm run clean && concurrently npm:build:styles npm:build:styles:min && concurrently npm:postcss:prod*",
     "clean": "rm -rf ./css",
     "dev": "concurrently npm:watch:dev npm:serve",
     "lint:fix": "stylelint scss/**/*.scss --fix",
     "lint": "stylelint scss/**/*.scss",
     "postwatch:dev": "npm run postcss:dev",
     "postcss:dev": "postcss dev/assets/css/*.css -c dev/postcss.config.js --replace --no-map",
-    "postcss:prod": "postcss dev/assets/css/*.css -c postcss.config.js --replace --no-map",
+    "postcss:prod": "postcss dist/koi.css -u autoprefixer --replace --no-map",
+    "postcss:prod:min": "postcss dist/koi.min.css -u autoprefixer -u cssnano --replace --no-map",
     "prebuild": "npm run lint:fix",
     "prepare": "husky install",
     "serve": "live-server ./dev --no-browser",
     "start": "npm run dev",
     "watch:dev": "sass -I node_modules -I scss --no-source-map dev/assets/scss:dev/assets/css --color --watch --update",
-    "watch": "npm run build:sass -- --watch --update"
+    "watch": "npm run build:styles -- --watch --update"
   },
   "devDependencies": {
     "@compodoc/live-server": "^1.2.3",

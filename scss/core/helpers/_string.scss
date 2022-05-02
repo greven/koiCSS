@@ -33,8 +33,8 @@
   }
 }
 
-/* Split a string by delimiter
-  Example: split('1--2--3', '--') -> "1" "2" "3" */
+// Split a string by delimiter
+// Example: split('1--2--3', '--') -> "1" "2" "3"
 @function split($string, $delimiter: ',', $trim: true) {
   @if not $delimiter or string.length($string) == 0 or $delimiter == '' {
     @return $string;

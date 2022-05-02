@@ -23,6 +23,8 @@ $theme: map.deep-merge($default-theme, $theme);
 //   Mixins
 // --------------------------------
 
+// Color Schemes
+
 @mixin default-theme($color-schemes-map, $color-scheme: config(default-color-scheme)) {
   html {
     $color-scheme: light;
@@ -31,7 +33,7 @@ $theme: map.deep-merge($default-theme, $theme);
 }
 
 // Output color vars for each color-scheme
-@mixin create-themes($color-schemes-map) {
+@mixin create-themes($color-schemes-map: $color-schemes) {
   @include default-theme($color-schemes-map);
 
   @each $color-scheme, $color in $color-schemes-map {
@@ -42,20 +44,15 @@ $theme: map.deep-merge($default-theme, $theme);
 
     @media (prefers-color-scheme: $color-scheme) {
       :root {
-        @include generate-color-scheme-css-vars(map.get($color-schemes, $color-scheme));
+        @include generate-color-scheme-css-vars(map.get($color-schemes-map, $color-scheme));
         color-scheme: $color-scheme;
       }
     }
 
     [color-scheme='#{$color-scheme}'],
     [data-theme='#{$color-scheme}'] {
-      @include generate-color-scheme-css-vars(map.get($color-schemes, $color-scheme));
+      @include generate-color-scheme-css-vars(map.get($color-schemes-map, $color-scheme));
       color-scheme: $color-scheme;
     }
   }
-}
-
-// Outputs color schemes (light dark, ...)
-@mixin theming-vars {
-  @include create-themes($color-schemes);
 }

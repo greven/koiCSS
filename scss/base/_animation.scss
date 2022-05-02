@@ -15,7 +15,7 @@ $custom-prop-name: anim;
 ///
 /// @param {number} $duration
 ///
-@mixin animation-blink($duration: 1s, $iteration-count: infinite) {
+@mixin blink($duration: 1s, $iteration-count: infinite) {
   @include animation($name: blink, $duration: $duration, $iteration-count: $iteration-count);
 }
 
@@ -23,7 +23,7 @@ $custom-prop-name: anim;
 ///
 /// @param {number} $duration
 ///
-@mixin animation-bounce($duration: 1s, $iteration-count: infinite) {
+@mixin bounce($duration: 1s, $iteration-count: infinite) {
   @include animation($name: bounce, $duration: $duration, $iteration-count: $iteration-count);
 }
 
@@ -31,7 +31,7 @@ $custom-prop-name: anim;
 ///
 /// @param {number} $duration
 ///
-@mixin animation-fade-in($duration: theme(duration, slower)) {
+@mixin fade-in($duration: theme(duration, slower)) {
   @include animation($name: fade-in, $duration: $duration, $timing-function: theme(timing, ease-in));
 }
 
@@ -39,7 +39,7 @@ $custom-prop-name: anim;
 ///
 /// @param {number} $duration
 ///
-@mixin animation-fade-out($duration: theme(duration, slower)) {
+@mixin fade-out($duration: theme(duration, slower)) {
   @include animation($name: fade-out, $duration: $duration, $timing-function: theme(timing, ease-in));
 }
 
@@ -47,7 +47,7 @@ $custom-prop-name: anim;
 ///
 /// @param {number} $duration
 ///
-@mixin animation-float($duration: 1s, $iteration-count: infinite) {
+@mixin float($duration: 1s, $iteration-count: infinite) {
   @include animation(
     $name: float,
     $duration: $duration,
@@ -60,7 +60,7 @@ $custom-prop-name: anim;
 ///
 /// @param {number} $duration
 ///
-@mixin animation-ping($duration: 1s, $iteration-count: infinite) {
+@mixin ping($duration: 1s, $iteration-count: infinite) {
   @include animation(
     $name: ping,
     $duration: $duration,
@@ -73,7 +73,7 @@ $custom-prop-name: anim;
 ///
 /// @param {number} $duration
 ///
-@mixin animation-pulse($duration: 2s, $iteration-count: infinite) {
+@mixin pulse($duration: 2s, $iteration-count: infinite) {
   @include animation(
     $name: pulse,
     $duration: $duration,
@@ -86,7 +86,7 @@ $custom-prop-name: anim;
 ///
 /// @param {number} $duration
 ///
-@mixin animation-spin($duration: 1s, $iteration-count: infinite) {
+@mixin spin($duration: 1s, $iteration-count: infinite) {
   @include animation($name: spin, $duration: $duration, $timing-function: linear, $iteration-count: $iteration-count);
 }
 
@@ -94,7 +94,7 @@ $custom-prop-name: anim;
 ///
 /// @param {number} $duration
 ///
-@mixin animation-ring($duration: theme(duration, slower)) {
+@mixin ring($duration: theme(duration, slower)) {
   @include animation($name: ring, $duration: $duration);
   transform-origin: top center;
 }

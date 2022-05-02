@@ -15,8 +15,8 @@
 //   Functions
 // --------------------------------
 
-/* Get a value from the theme using
-  fallbacks definied in the config */
+// Get a value from the theme using
+// fallbacks definied in the config
 @function theme($keys...) {
   $property: list.nth($keys, 1);
   $fallback: config(fallbacks, $property);
@@ -35,8 +35,8 @@
   @return map.has-key($colors, $keys...) and (meta.type-of($value) == color);
 }
 
-/* Checks if keys is a valid scheme color
-  (theme -> color-schemes) */
+// Checks if keys is a valid scheme color
+// (theme -> color-schemes)
 @function is-scheme-color($keys...) {
   $color-schemes: theme(color-schemes);
 

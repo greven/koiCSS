@@ -1,19 +1,7 @@
-@forward 'base';
-@forward 'animation';
-@use 'animation';
-@use 'color';
-@use 'duration';
-@use 'media';
-@use 'shadow';
-@use 'timing';
+@forward 'animation' as animation-*;
+
+@use 'base';
 
 @mixin base {
-  @include animation.vars;
-  @include color.vars;
-  @include duration.vars;
-  @include shadow.vars;
-  @include timing.vars;
-
-  @include animation.styles;
-  @include media.styles;
+  @include base.styles();
 }

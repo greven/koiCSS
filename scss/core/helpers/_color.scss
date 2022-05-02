@@ -32,8 +32,8 @@
   }
 }
 
-/* Convert an hexadecimal number to a decimal number
-  Source: KittyGiraudel - SassyJSON */
+// Convert an hexadecimal number to a decimal number
+// Source: KittyGiraudel - SassyJSON
 @function hex-to-dec($string) {
   $hex: '0' '1' '2' '3' '4' '5' '6' '7' '8' '9' 'a' 'b' 'c' 'd' 'e' 'f';
   $string: string.to-lower-case($string);
@@ -49,8 +49,8 @@
   @return $dec;
 }
 
-/* Parse an hex string into an rgb color
-  Source: KittyGiraudel - SassyJSON */
+// Parse an hex string into an rgb color
+// Source: KittyGiraudel - SassyJSON
 @function hex-str-to-rgb($string) {
   $hex: '0' '1' '2' '3' '4' '5' '6' '7' '8' '9' 'a' 'b' 'c' 'd' 'e' 'f';
   $string-lower: string.to-lower-case($string);

@@ -16,13 +16,13 @@
 
 // CSS Vars
 
-/* Return the prefix of the css vars if configured */
+// Return the prefix of the css vars if configured
 @function -css-var-prefix($prefix: config(prefix)) {
   $prefix: if($prefix == '', '', '#{$prefix}-');
   @return $prefix;
 }
 
-/* Returns the css custom property */
+// Returns the css custom property
 @function -css-var-name($name, $key: null, $suffix: null) {
   $prefix: -css-var-prefix();
   $suffix: if($suffix, '-#{$suffix}', '');
@@ -31,9 +31,8 @@
   @return '--#{$prefix}#{$name}#{$key}#{$suffix}';
 }
 
-/* A wrapper for var() that prefixes the custom property
-  name if configured.
-  Example: css-var(--c-green-5) -> var(--koi-c-green-5) */
+// A wrapper for var() that prefixes the custom property name if configured.
+// Example: css-var(--c-green-5) -> var(--koi-c-green-5)
 @function css-var($name, $fallback: null) {
   $name: replace($name, '--', '');
   $var-name: string.unquote(-css-var-name($name));

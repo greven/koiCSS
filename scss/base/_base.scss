@@ -2,22 +2,33 @@
 //   Base Styles
 // --------------------------------
 
-@use '../config' as *;
-@use '../theme' as *;
+@use '../core' as *;
 @use 'reset';
 @use 'default';
+@use 'animation';
+@use 'color';
+@use 'duration';
+@use 'media';
+@use 'shadow';
+@use 'timing';
 
-// Reset
-@if config(use-reset-styles) {
-  @include reset.styles();
-}
+@mixin styles {
+  // Reset
+  @if config(use-reset-styles) {
+    @include reset.styles();
+  }
 
-// Theming
-@if config(use-theming) {
-  @include theming-vars;
-}
+  // Default styles
+  @if config(use-default-styles) {
+    @include default.styles();
+  }
 
-// Default styles
-@if config(use-default-styles) {
-  @include default.styles();
+  @include animation.vars;
+  @include color.vars;
+  @include duration.vars;
+  @include shadow.vars;
+  @include timing.vars;
+
+  @include animation.styles;
+  @include media.styles;
 }

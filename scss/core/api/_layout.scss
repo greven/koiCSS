@@ -15,8 +15,9 @@
 //   Mixins
 // -------------------------------------
 
-/* Basic box element with theme defaults that can be composed with other utilities.
-  Based on https://smolcss.dev/#smol-unbreakable-boxes */
+// Basic box element with theme defaults that
+// can be composed with other utilities.
+// Based on https://smolcss.dev/#smol-unbreakable-boxes */
 @mixin box($max-width: 100%, $color: null, $bg-color: null, $padding: null, $rounded: null, $shadow: null) {
   background-color: $bg-color;
   color: $color;
@@ -26,8 +27,9 @@
   @if $max-width {
     width: $max-width;
   }
-  /* Add padding to the element, either by value, by
-    theme token or using responsive padding as fallback */
+
+  // Add padding to the element, either by value, by
+  // theme token or using responsive padding as fallback
   @if $padding {
     @if theme-has-key(spacing, $padding) {
       padding-left: theme(spacing, $padding);
@@ -70,8 +72,8 @@
     margin-right: auto;
   }
 
-  /* Add padding to the container, either by value, by
-      theme token or using responsive padding as fallback */
+  // Add padding to the container, either by value, by
+  // theme token or using responsive padding as fallback
   @if $padding {
     @if theme-has-key(spacing, $padding) {
       padding-left: theme(spacing, $padding);
@@ -86,8 +88,8 @@
 
   $from_width: if(mq.bp($from), mq.bp($from), $from);
   @include mq.from($from_width) {
-    /* Set the max-width of the element to match the
-      min-width of the current breakpoint */
+    // Set the max-width of the element to match the
+    // min-width of the current breakpoint
     @if $max-width {
       @each $breakpoint, $width in theme(screens) {
         @include mq.from($breakpoint) {
