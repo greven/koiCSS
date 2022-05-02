@@ -2,9 +2,10 @@
 //   Spacing Utilities
 // --------------------------------
 
+@use '../core/generators' as *;
 @use '../core' as *;
 
-// TODO: space-x-4, space-y-8, mt-4, etc...
+$utility-classes: ();
 
 @mixin utilities {
   // @include generate-utility();

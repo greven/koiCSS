@@ -23,6 +23,59 @@ $utility-classes: (
       hidden: none,
     ),
   ),
+  // 'position': (
+  //   property: position,
+  //   class: null,
+  //   responsive: true,
+  //   values: static relative absolute fixed sticky,
+  // ),
+  // 'float': (
+  //   property: float,
+  //   responsive: true,
+  //   values: left right none,
+  // ),
+  // 'clear': (
+  //   property: clear,
+  //   responsive: true,
+  //   values: left right both none,
+  // ),
+  // 'object-fit': (
+  //   property: object-fit,
+  //   class: object,
+  //   responsive: true,
+  //   values: contain cover fill none scale-down,
+  // ),
+  // 'object-position': (
+  //   property: object-position,
+  //   class: object,
+  //   responsive: true,
+  //   values: bottom center left left-bottom left-top right right-bottom right-top top,
+  // ),
+  // 'overflow': (
+  //   property: overflow,
+  //   class: overflow,
+  //   responsive: true,
+  //   values: auto hidden visible scroll,
+  // ),
+  // 'overflow-x': (
+  //   property: overflow,
+  //   class: overflow-x,
+  //   responsive: true,
+  //   values: auto hidden visible scroll,
+  // ),
+  // 'overflow-y': (
+  //   property: overflow,
+  //   class: overflow-y,
+  //   responsive: true,
+  //   values: auto hidden visible scroll,
+  // ),
+  'inset':
+    (
+      property: top right bottom left,
+      class: inset,
+      responsive: true,
+      values: theme(spacing),
+    ),
 );
 
 @mixin utilities {
@@ -109,5 +162,9 @@ $utility-classes: (
       margin-bottom: var(--koi-spacer, spacing(md));
       margin-top: 0;
     }
+  }
+
+  @include create-responsive-utility(container) {
+    @include container(0px);
   }
 }

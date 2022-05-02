@@ -11,8 +11,8 @@
 // << Insert your base styles here >>
 
 body {
-  @include koi.container($padding: true, $center: true);
-  @include koi.responsive-margin-block;
+  // @include koi.container($padding: true, $center: true);
+  // @include koi.responsive-margin-block;
   background-color: koi.color(surface, 1);
   color: koi.color(text, 1);
 }

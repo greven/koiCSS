@@ -1181,49 +1181,8 @@ figure figcaption {
 }
 
 body {
-  width: 100%;
-  /* Center the element */
-  margin-left: auto;
-  margin-right: auto;
-  padding-inline: clamp(var(--koi-spacing-min, 0.75rem), var(--koi-spacing-value, 5%), var(--koi-spacing-max, 1.5rem));
-  margin-block: clamp(var(--koi-spacing-min, 0.75rem), var(--koi-spacing-value, 5%), var(--koi-spacing-max, 1.5rem));
   background-color: var(--c-surface-1);
   color: var(--c-text-1);
-}
-@media screen and (min-width: 1440px) and (min-width: 240px) {
-  body {
-    max-width: 240px;
-  }
-}
-@media screen and (min-width: 1440px) and (min-width: 360px) {
-  body {
-    max-width: 360px;
-  }
-}
-@media screen and (min-width: 1440px) and (min-width: 480px) {
-  body {
-    max-width: 480px;
-  }
-}
-@media screen and (min-width: 1440px) and (min-width: 768px) {
-  body {
-    max-width: 768px;
-  }
-}
-@media screen and (min-width: 1440px) and (min-width: 1024px) {
-  body {
-    max-width: 1024px;
-  }
-}
-@media screen and (min-width: 1440px) and (min-width: 1440px) {
-  body {
-    max-width: 1440px;
-  }
-}
-@media screen and (min-width: 1440px) and (min-width: 1920px) {
-  body {
-    max-width: 1920px;
-  }
 }
 
 h1 {
@@ -1576,6 +1535,314 @@ h1 {
   display: none;
 }
 
+.inset-1 {
+  top: 0.0625rem;
+  right: 0.0625rem;
+  bottom: 0.0625rem;
+  left: 0.0625rem;
+}
+
+.inset-2 {
+  top: 0.125rem;
+  right: 0.125rem;
+  bottom: 0.125rem;
+  left: 0.125rem;
+}
+
+.inset-4 {
+  top: 0.25rem;
+  right: 0.25rem;
+  bottom: 0.25rem;
+  left: 0.25rem;
+}
+
+.inset-6 {
+  top: 0.375rem;
+  right: 0.375rem;
+  bottom: 0.375rem;
+  left: 0.375rem;
+}
+
+.inset-8 {
+  top: 0.5rem;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  left: 0.5rem;
+}
+
+.inset-10 {
+  top: 0.625rem;
+  right: 0.625rem;
+  bottom: 0.625rem;
+  left: 0.625rem;
+}
+
+.inset-12 {
+  top: 0.75rem;
+  right: 0.75rem;
+  bottom: 0.75rem;
+  left: 0.75rem;
+}
+
+.inset-14 {
+  top: 0.875rem;
+  right: 0.875rem;
+  bottom: 0.875rem;
+  left: 0.875rem;
+}
+
+.inset-16 {
+  top: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+.inset-20 {
+  top: 1.25rem;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  left: 1.25rem;
+}
+
+.inset-24 {
+  top: 1.5rem;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  left: 1.5rem;
+}
+
+.inset-28 {
+  top: 1.75rem;
+  right: 1.75rem;
+  bottom: 1.75rem;
+  left: 1.75rem;
+}
+
+.inset-32 {
+  top: 2rem;
+  right: 2rem;
+  bottom: 2rem;
+  left: 2rem;
+}
+
+.inset-36 {
+  top: 2.25rem;
+  right: 2.25rem;
+  bottom: 2.25rem;
+  left: 2.25rem;
+}
+
+.inset-40 {
+  top: 2.5rem;
+  right: 2.5rem;
+  bottom: 2.5rem;
+  left: 2.5rem;
+}
+
+.inset-44 {
+  top: 2.75rem;
+  right: 2.75rem;
+  bottom: 2.75rem;
+  left: 2.75rem;
+}
+
+.inset-48 {
+  top: 3rem;
+  right: 3rem;
+  bottom: 3rem;
+  left: 3rem;
+}
+
+.inset-56 {
+  top: 3.5rem;
+  right: 3.5rem;
+  bottom: 3.5rem;
+  left: 3.5rem;
+}
+
+.inset-64 {
+  top: 4rem;
+  right: 4rem;
+  bottom: 4rem;
+  left: 4rem;
+}
+
+.inset-80 {
+  top: 5rem;
+  right: 5rem;
+  bottom: 5rem;
+  left: 5rem;
+}
+
+.inset-96 {
+  top: 6rem;
+  right: 6rem;
+  bottom: 6rem;
+  left: 6rem;
+}
+
+.inset-112 {
+  top: 7rem;
+  right: 7rem;
+  bottom: 7rem;
+  left: 7rem;
+}
+
+.inset-128 {
+  top: 8rem;
+  right: 8rem;
+  bottom: 8rem;
+  left: 8rem;
+}
+
+.inset-144 {
+  top: 9rem;
+  right: 9rem;
+  bottom: 9rem;
+  left: 9rem;
+}
+
+.inset-160 {
+  top: 10rem;
+  right: 10rem;
+  bottom: 10rem;
+  left: 10rem;
+}
+
+.inset-176 {
+  top: 11rem;
+  right: 11rem;
+  bottom: 11rem;
+  left: 11rem;
+}
+
+.inset-192 {
+  top: 12rem;
+  right: 12rem;
+  bottom: 12rem;
+  left: 12rem;
+}
+
+.inset-208 {
+  top: 13rem;
+  right: 13rem;
+  bottom: 13rem;
+  left: 13rem;
+}
+
+.inset-224 {
+  top: 14rem;
+  right: 14rem;
+  bottom: 14rem;
+  left: 14rem;
+}
+
+.inset-256 {
+  top: 16rem;
+  right: 16rem;
+  bottom: 16rem;
+  left: 16rem;
+}
+
+.inset-288 {
+  top: 18rem;
+  right: 18rem;
+  bottom: 18rem;
+  left: 18rem;
+}
+
+.inset-320 {
+  top: 20rem;
+  right: 20rem;
+  bottom: 20rem;
+  left: 20rem;
+}
+
+.inset-384 {
+  top: 24rem;
+  right: 24rem;
+  bottom: 24rem;
+  left: 24rem;
+}
+
+.inset-448 {
+  top: 28rem;
+  right: 28rem;
+  bottom: 28rem;
+  left: 28rem;
+}
+
+.inset-512 {
+  top: 32rem;
+  right: 32rem;
+  bottom: 32rem;
+  left: 32rem;
+}
+
+.inset-2xs {
+  top: 0.125rem;
+  right: 0.125rem;
+  bottom: 0.125rem;
+  left: 0.125rem;
+}
+
+.inset-xs {
+  top: 0.25rem;
+  right: 0.25rem;
+  bottom: 0.25rem;
+  left: 0.25rem;
+}
+
+.inset-sm {
+  top: 0.5rem;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  left: 0.5rem;
+}
+
+.inset-md {
+  top: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+.inset-lg {
+  top: 1.5rem;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  left: 1.5rem;
+}
+
+.inset-xl {
+  top: 3rem;
+  right: 3rem;
+  bottom: 3rem;
+  left: 3rem;
+}
+
+.inset-2xl {
+  top: 4rem;
+  right: 4rem;
+  bottom: 4rem;
+  left: 4rem;
+}
+
+.inset-3xl {
+  top: 5rem;
+  right: 5rem;
+  bottom: 5rem;
+  left: 5rem;
+}
+
+.inset-4xl {
+  top: 10rem;
+  right: 10rem;
+  bottom: 10rem;
+  left: 10rem;
+}
+
 @media screen and (min-width: 240px) {
   .\32 xs\:inline {
     display: inline;
@@ -1615,6 +1882,314 @@ h1 {
 
   .\32 xs\:hidden {
     display: none;
+  }
+
+  .\32 xs\:inset-1 {
+    top: 0.0625rem;
+    right: 0.0625rem;
+    bottom: 0.0625rem;
+    left: 0.0625rem;
+  }
+
+  .\32 xs\:inset-2 {
+    top: 0.125rem;
+    right: 0.125rem;
+    bottom: 0.125rem;
+    left: 0.125rem;
+  }
+
+  .\32 xs\:inset-4 {
+    top: 0.25rem;
+    right: 0.25rem;
+    bottom: 0.25rem;
+    left: 0.25rem;
+  }
+
+  .\32 xs\:inset-6 {
+    top: 0.375rem;
+    right: 0.375rem;
+    bottom: 0.375rem;
+    left: 0.375rem;
+  }
+
+  .\32 xs\:inset-8 {
+    top: 0.5rem;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    left: 0.5rem;
+  }
+
+  .\32 xs\:inset-10 {
+    top: 0.625rem;
+    right: 0.625rem;
+    bottom: 0.625rem;
+    left: 0.625rem;
+  }
+
+  .\32 xs\:inset-12 {
+    top: 0.75rem;
+    right: 0.75rem;
+    bottom: 0.75rem;
+    left: 0.75rem;
+  }
+
+  .\32 xs\:inset-14 {
+    top: 0.875rem;
+    right: 0.875rem;
+    bottom: 0.875rem;
+    left: 0.875rem;
+  }
+
+  .\32 xs\:inset-16 {
+    top: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+  }
+
+  .\32 xs\:inset-20 {
+    top: 1.25rem;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    left: 1.25rem;
+  }
+
+  .\32 xs\:inset-24 {
+    top: 1.5rem;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    left: 1.5rem;
+  }
+
+  .\32 xs\:inset-28 {
+    top: 1.75rem;
+    right: 1.75rem;
+    bottom: 1.75rem;
+    left: 1.75rem;
+  }
+
+  .\32 xs\:inset-32 {
+    top: 2rem;
+    right: 2rem;
+    bottom: 2rem;
+    left: 2rem;
+  }
+
+  .\32 xs\:inset-36 {
+    top: 2.25rem;
+    right: 2.25rem;
+    bottom: 2.25rem;
+    left: 2.25rem;
+  }
+
+  .\32 xs\:inset-40 {
+    top: 2.5rem;
+    right: 2.5rem;
+    bottom: 2.5rem;
+    left: 2.5rem;
+  }
+
+  .\32 xs\:inset-44 {
+    top: 2.75rem;
+    right: 2.75rem;
+    bottom: 2.75rem;
+    left: 2.75rem;
+  }
+
+  .\32 xs\:inset-48 {
+    top: 3rem;
+    right: 3rem;
+    bottom: 3rem;
+    left: 3rem;
+  }
+
+  .\32 xs\:inset-56 {
+    top: 3.5rem;
+    right: 3.5rem;
+    bottom: 3.5rem;
+    left: 3.5rem;
+  }
+
+  .\32 xs\:inset-64 {
+    top: 4rem;
+    right: 4rem;
+    bottom: 4rem;
+    left: 4rem;
+  }
+
+  .\32 xs\:inset-80 {
+    top: 5rem;
+    right: 5rem;
+    bottom: 5rem;
+    left: 5rem;
+  }
+
+  .\32 xs\:inset-96 {
+    top: 6rem;
+    right: 6rem;
+    bottom: 6rem;
+    left: 6rem;
+  }
+
+  .\32 xs\:inset-112 {
+    top: 7rem;
+    right: 7rem;
+    bottom: 7rem;
+    left: 7rem;
+  }
+
+  .\32 xs\:inset-128 {
+    top: 8rem;
+    right: 8rem;
+    bottom: 8rem;
+    left: 8rem;
+  }
+
+  .\32 xs\:inset-144 {
+    top: 9rem;
+    right: 9rem;
+    bottom: 9rem;
+    left: 9rem;
+  }
+
+  .\32 xs\:inset-160 {
+    top: 10rem;
+    right: 10rem;
+    bottom: 10rem;
+    left: 10rem;
+  }
+
+  .\32 xs\:inset-176 {
+    top: 11rem;
+    right: 11rem;
+    bottom: 11rem;
+    left: 11rem;
+  }
+
+  .\32 xs\:inset-192 {
+    top: 12rem;
+    right: 12rem;
+    bottom: 12rem;
+    left: 12rem;
+  }
+
+  .\32 xs\:inset-208 {
+    top: 13rem;
+    right: 13rem;
+    bottom: 13rem;
+    left: 13rem;
+  }
+
+  .\32 xs\:inset-224 {
+    top: 14rem;
+    right: 14rem;
+    bottom: 14rem;
+    left: 14rem;
+  }
+
+  .\32 xs\:inset-256 {
+    top: 16rem;
+    right: 16rem;
+    bottom: 16rem;
+    left: 16rem;
+  }
+
+  .\32 xs\:inset-288 {
+    top: 18rem;
+    right: 18rem;
+    bottom: 18rem;
+    left: 18rem;
+  }
+
+  .\32 xs\:inset-320 {
+    top: 20rem;
+    right: 20rem;
+    bottom: 20rem;
+    left: 20rem;
+  }
+
+  .\32 xs\:inset-384 {
+    top: 24rem;
+    right: 24rem;
+    bottom: 24rem;
+    left: 24rem;
+  }
+
+  .\32 xs\:inset-448 {
+    top: 28rem;
+    right: 28rem;
+    bottom: 28rem;
+    left: 28rem;
+  }
+
+  .\32 xs\:inset-512 {
+    top: 32rem;
+    right: 32rem;
+    bottom: 32rem;
+    left: 32rem;
+  }
+
+  .\32 xs\:inset-2xs {
+    top: 0.125rem;
+    right: 0.125rem;
+    bottom: 0.125rem;
+    left: 0.125rem;
+  }
+
+  .\32 xs\:inset-xs {
+    top: 0.25rem;
+    right: 0.25rem;
+    bottom: 0.25rem;
+    left: 0.25rem;
+  }
+
+  .\32 xs\:inset-sm {
+    top: 0.5rem;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    left: 0.5rem;
+  }
+
+  .\32 xs\:inset-md {
+    top: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+  }
+
+  .\32 xs\:inset-lg {
+    top: 1.5rem;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    left: 1.5rem;
+  }
+
+  .\32 xs\:inset-xl {
+    top: 3rem;
+    right: 3rem;
+    bottom: 3rem;
+    left: 3rem;
+  }
+
+  .\32 xs\:inset-2xl {
+    top: 4rem;
+    right: 4rem;
+    bottom: 4rem;
+    left: 4rem;
+  }
+
+  .\32 xs\:inset-3xl {
+    top: 5rem;
+    right: 5rem;
+    bottom: 5rem;
+    left: 5rem;
+  }
+
+  .\32 xs\:inset-4xl {
+    top: 10rem;
+    right: 10rem;
+    bottom: 10rem;
+    left: 10rem;
   }
 }
 @media screen and (min-width: 360px) {
@@ -1657,6 +2232,314 @@ h1 {
   .xs\:hidden {
     display: none;
   }
+
+  .xs\:inset-1 {
+    top: 0.0625rem;
+    right: 0.0625rem;
+    bottom: 0.0625rem;
+    left: 0.0625rem;
+  }
+
+  .xs\:inset-2 {
+    top: 0.125rem;
+    right: 0.125rem;
+    bottom: 0.125rem;
+    left: 0.125rem;
+  }
+
+  .xs\:inset-4 {
+    top: 0.25rem;
+    right: 0.25rem;
+    bottom: 0.25rem;
+    left: 0.25rem;
+  }
+
+  .xs\:inset-6 {
+    top: 0.375rem;
+    right: 0.375rem;
+    bottom: 0.375rem;
+    left: 0.375rem;
+  }
+
+  .xs\:inset-8 {
+    top: 0.5rem;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    left: 0.5rem;
+  }
+
+  .xs\:inset-10 {
+    top: 0.625rem;
+    right: 0.625rem;
+    bottom: 0.625rem;
+    left: 0.625rem;
+  }
+
+  .xs\:inset-12 {
+    top: 0.75rem;
+    right: 0.75rem;
+    bottom: 0.75rem;
+    left: 0.75rem;
+  }
+
+  .xs\:inset-14 {
+    top: 0.875rem;
+    right: 0.875rem;
+    bottom: 0.875rem;
+    left: 0.875rem;
+  }
+
+  .xs\:inset-16 {
+    top: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+  }
+
+  .xs\:inset-20 {
+    top: 1.25rem;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    left: 1.25rem;
+  }
+
+  .xs\:inset-24 {
+    top: 1.5rem;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    left: 1.5rem;
+  }
+
+  .xs\:inset-28 {
+    top: 1.75rem;
+    right: 1.75rem;
+    bottom: 1.75rem;
+    left: 1.75rem;
+  }
+
+  .xs\:inset-32 {
+    top: 2rem;
+    right: 2rem;
+    bottom: 2rem;
+    left: 2rem;
+  }
+
+  .xs\:inset-36 {
+    top: 2.25rem;
+    right: 2.25rem;
+    bottom: 2.25rem;
+    left: 2.25rem;
+  }
+
+  .xs\:inset-40 {
+    top: 2.5rem;
+    right: 2.5rem;
+    bottom: 2.5rem;
+    left: 2.5rem;
+  }
+
+  .xs\:inset-44 {
+    top: 2.75rem;
+    right: 2.75rem;
+    bottom: 2.75rem;
+    left: 2.75rem;
+  }
+
+  .xs\:inset-48 {
+    top: 3rem;
+    right: 3rem;
+    bottom: 3rem;
+    left: 3rem;
+  }
+
+  .xs\:inset-56 {
+    top: 3.5rem;
+    right: 3.5rem;
+    bottom: 3.5rem;
+    left: 3.5rem;
+  }
+
+  .xs\:inset-64 {
+    top: 4rem;
+    right: 4rem;
+    bottom: 4rem;
+    left: 4rem;
+  }
+
+  .xs\:inset-80 {
+    top: 5rem;
+    right: 5rem;
+    bottom: 5rem;
+    left: 5rem;
+  }
+
+  .xs\:inset-96 {
+    top: 6rem;
+    right: 6rem;
+    bottom: 6rem;
+    left: 6rem;
+  }
+
+  .xs\:inset-112 {
+    top: 7rem;
+    right: 7rem;
+    bottom: 7rem;
+    left: 7rem;
+  }
+
+  .xs\:inset-128 {
+    top: 8rem;
+    right: 8rem;
+    bottom: 8rem;
+    left: 8rem;
+  }
+
+  .xs\:inset-144 {
+    top: 9rem;
+    right: 9rem;
+    bottom: 9rem;
+    left: 9rem;
+  }
+
+  .xs\:inset-160 {
+    top: 10rem;
+    right: 10rem;
+    bottom: 10rem;
+    left: 10rem;
+  }
+
+  .xs\:inset-176 {
+    top: 11rem;
+    right: 11rem;
+    bottom: 11rem;
+    left: 11rem;
+  }
+
+  .xs\:inset-192 {
+    top: 12rem;
+    right: 12rem;
+    bottom: 12rem;
+    left: 12rem;
+  }
+
+  .xs\:inset-208 {
+    top: 13rem;
+    right: 13rem;
+    bottom: 13rem;
+    left: 13rem;
+  }
+
+  .xs\:inset-224 {
+    top: 14rem;
+    right: 14rem;
+    bottom: 14rem;
+    left: 14rem;
+  }
+
+  .xs\:inset-256 {
+    top: 16rem;
+    right: 16rem;
+    bottom: 16rem;
+    left: 16rem;
+  }
+
+  .xs\:inset-288 {
+    top: 18rem;
+    right: 18rem;
+    bottom: 18rem;
+    left: 18rem;
+  }
+
+  .xs\:inset-320 {
+    top: 20rem;
+    right: 20rem;
+    bottom: 20rem;
+    left: 20rem;
+  }
+
+  .xs\:inset-384 {
+    top: 24rem;
+    right: 24rem;
+    bottom: 24rem;
+    left: 24rem;
+  }
+
+  .xs\:inset-448 {
+    top: 28rem;
+    right: 28rem;
+    bottom: 28rem;
+    left: 28rem;
+  }
+
+  .xs\:inset-512 {
+    top: 32rem;
+    right: 32rem;
+    bottom: 32rem;
+    left: 32rem;
+  }
+
+  .xs\:inset-2xs {
+    top: 0.125rem;
+    right: 0.125rem;
+    bottom: 0.125rem;
+    left: 0.125rem;
+  }
+
+  .xs\:inset-xs {
+    top: 0.25rem;
+    right: 0.25rem;
+    bottom: 0.25rem;
+    left: 0.25rem;
+  }
+
+  .xs\:inset-sm {
+    top: 0.5rem;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    left: 0.5rem;
+  }
+
+  .xs\:inset-md {
+    top: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+  }
+
+  .xs\:inset-lg {
+    top: 1.5rem;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    left: 1.5rem;
+  }
+
+  .xs\:inset-xl {
+    top: 3rem;
+    right: 3rem;
+    bottom: 3rem;
+    left: 3rem;
+  }
+
+  .xs\:inset-2xl {
+    top: 4rem;
+    right: 4rem;
+    bottom: 4rem;
+    left: 4rem;
+  }
+
+  .xs\:inset-3xl {
+    top: 5rem;
+    right: 5rem;
+    bottom: 5rem;
+    left: 5rem;
+  }
+
+  .xs\:inset-4xl {
+    top: 10rem;
+    right: 10rem;
+    bottom: 10rem;
+    left: 10rem;
+  }
 }
 @media screen and (min-width: 480px) {
   .sm\:inline {
@@ -1697,6 +2580,314 @@ h1 {
 
   .sm\:hidden {
     display: none;
+  }
+
+  .sm\:inset-1 {
+    top: 0.0625rem;
+    right: 0.0625rem;
+    bottom: 0.0625rem;
+    left: 0.0625rem;
+  }
+
+  .sm\:inset-2 {
+    top: 0.125rem;
+    right: 0.125rem;
+    bottom: 0.125rem;
+    left: 0.125rem;
+  }
+
+  .sm\:inset-4 {
+    top: 0.25rem;
+    right: 0.25rem;
+    bottom: 0.25rem;
+    left: 0.25rem;
+  }
+
+  .sm\:inset-6 {
+    top: 0.375rem;
+    right: 0.375rem;
+    bottom: 0.375rem;
+    left: 0.375rem;
+  }
+
+  .sm\:inset-8 {
+    top: 0.5rem;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    left: 0.5rem;
+  }
+
+  .sm\:inset-10 {
+    top: 0.625rem;
+    right: 0.625rem;
+    bottom: 0.625rem;
+    left: 0.625rem;
+  }
+
+  .sm\:inset-12 {
+    top: 0.75rem;
+    right: 0.75rem;
+    bottom: 0.75rem;
+    left: 0.75rem;
+  }
+
+  .sm\:inset-14 {
+    top: 0.875rem;
+    right: 0.875rem;
+    bottom: 0.875rem;
+    left: 0.875rem;
+  }
+
+  .sm\:inset-16 {
+    top: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+  }
+
+  .sm\:inset-20 {
+    top: 1.25rem;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    left: 1.25rem;
+  }
+
+  .sm\:inset-24 {
+    top: 1.5rem;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    left: 1.5rem;
+  }
+
+  .sm\:inset-28 {
+    top: 1.75rem;
+    right: 1.75rem;
+    bottom: 1.75rem;
+    left: 1.75rem;
+  }
+
+  .sm\:inset-32 {
+    top: 2rem;
+    right: 2rem;
+    bottom: 2rem;
+    left: 2rem;
+  }
+
+  .sm\:inset-36 {
+    top: 2.25rem;
+    right: 2.25rem;
+    bottom: 2.25rem;
+    left: 2.25rem;
+  }
+
+  .sm\:inset-40 {
+    top: 2.5rem;
+    right: 2.5rem;
+    bottom: 2.5rem;
+    left: 2.5rem;
+  }
+
+  .sm\:inset-44 {
+    top: 2.75rem;
+    right: 2.75rem;
+    bottom: 2.75rem;
+    left: 2.75rem;
+  }
+
+  .sm\:inset-48 {
+    top: 3rem;
+    right: 3rem;
+    bottom: 3rem;
+    left: 3rem;
+  }
+
+  .sm\:inset-56 {
+    top: 3.5rem;
+    right: 3.5rem;
+    bottom: 3.5rem;
+    left: 3.5rem;
+  }
+
+  .sm\:inset-64 {
+    top: 4rem;
+    right: 4rem;
+    bottom: 4rem;
+    left: 4rem;
+  }
+
+  .sm\:inset-80 {
+    top: 5rem;
+    right: 5rem;
+    bottom: 5rem;
+    left: 5rem;
+  }
+
+  .sm\:inset-96 {
+    top: 6rem;
+    right: 6rem;
+    bottom: 6rem;
+    left: 6rem;
+  }
+
+  .sm\:inset-112 {
+    top: 7rem;
+    right: 7rem;
+    bottom: 7rem;
+    left: 7rem;
+  }
+
+  .sm\:inset-128 {
+    top: 8rem;
+    right: 8rem;
+    bottom: 8rem;
+    left: 8rem;
+  }
+
+  .sm\:inset-144 {
+    top: 9rem;
+    right: 9rem;
+    bottom: 9rem;
+    left: 9rem;
+  }
+
+  .sm\:inset-160 {
+    top: 10rem;
+    right: 10rem;
+    bottom: 10rem;
+    left: 10rem;
+  }
+
+  .sm\:inset-176 {
+    top: 11rem;
+    right: 11rem;
+    bottom: 11rem;
+    left: 11rem;
+  }
+
+  .sm\:inset-192 {
+    top: 12rem;
+    right: 12rem;
+    bottom: 12rem;
+    left: 12rem;
+  }
+
+  .sm\:inset-208 {
+    top: 13rem;
+    right: 13rem;
+    bottom: 13rem;
+    left: 13rem;
+  }
+
+  .sm\:inset-224 {
+    top: 14rem;
+    right: 14rem;
+    bottom: 14rem;
+    left: 14rem;
+  }
+
+  .sm\:inset-256 {
+    top: 16rem;
+    right: 16rem;
+    bottom: 16rem;
+    left: 16rem;
+  }
+
+  .sm\:inset-288 {
+    top: 18rem;
+    right: 18rem;
+    bottom: 18rem;
+    left: 18rem;
+  }
+
+  .sm\:inset-320 {
+    top: 20rem;
+    right: 20rem;
+    bottom: 20rem;
+    left: 20rem;
+  }
+
+  .sm\:inset-384 {
+    top: 24rem;
+    right: 24rem;
+    bottom: 24rem;
+    left: 24rem;
+  }
+
+  .sm\:inset-448 {
+    top: 28rem;
+    right: 28rem;
+    bottom: 28rem;
+    left: 28rem;
+  }
+
+  .sm\:inset-512 {
+    top: 32rem;
+    right: 32rem;
+    bottom: 32rem;
+    left: 32rem;
+  }
+
+  .sm\:inset-2xs {
+    top: 0.125rem;
+    right: 0.125rem;
+    bottom: 0.125rem;
+    left: 0.125rem;
+  }
+
+  .sm\:inset-xs {
+    top: 0.25rem;
+    right: 0.25rem;
+    bottom: 0.25rem;
+    left: 0.25rem;
+  }
+
+  .sm\:inset-sm {
+    top: 0.5rem;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    left: 0.5rem;
+  }
+
+  .sm\:inset-md {
+    top: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+  }
+
+  .sm\:inset-lg {
+    top: 1.5rem;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    left: 1.5rem;
+  }
+
+  .sm\:inset-xl {
+    top: 3rem;
+    right: 3rem;
+    bottom: 3rem;
+    left: 3rem;
+  }
+
+  .sm\:inset-2xl {
+    top: 4rem;
+    right: 4rem;
+    bottom: 4rem;
+    left: 4rem;
+  }
+
+  .sm\:inset-3xl {
+    top: 5rem;
+    right: 5rem;
+    bottom: 5rem;
+    left: 5rem;
+  }
+
+  .sm\:inset-4xl {
+    top: 10rem;
+    right: 10rem;
+    bottom: 10rem;
+    left: 10rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1739,6 +2930,314 @@ h1 {
   .md\:hidden {
     display: none;
   }
+
+  .md\:inset-1 {
+    top: 0.0625rem;
+    right: 0.0625rem;
+    bottom: 0.0625rem;
+    left: 0.0625rem;
+  }
+
+  .md\:inset-2 {
+    top: 0.125rem;
+    right: 0.125rem;
+    bottom: 0.125rem;
+    left: 0.125rem;
+  }
+
+  .md\:inset-4 {
+    top: 0.25rem;
+    right: 0.25rem;
+    bottom: 0.25rem;
+    left: 0.25rem;
+  }
+
+  .md\:inset-6 {
+    top: 0.375rem;
+    right: 0.375rem;
+    bottom: 0.375rem;
+    left: 0.375rem;
+  }
+
+  .md\:inset-8 {
+    top: 0.5rem;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    left: 0.5rem;
+  }
+
+  .md\:inset-10 {
+    top: 0.625rem;
+    right: 0.625rem;
+    bottom: 0.625rem;
+    left: 0.625rem;
+  }
+
+  .md\:inset-12 {
+    top: 0.75rem;
+    right: 0.75rem;
+    bottom: 0.75rem;
+    left: 0.75rem;
+  }
+
+  .md\:inset-14 {
+    top: 0.875rem;
+    right: 0.875rem;
+    bottom: 0.875rem;
+    left: 0.875rem;
+  }
+
+  .md\:inset-16 {
+    top: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+  }
+
+  .md\:inset-20 {
+    top: 1.25rem;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    left: 1.25rem;
+  }
+
+  .md\:inset-24 {
+    top: 1.5rem;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    left: 1.5rem;
+  }
+
+  .md\:inset-28 {
+    top: 1.75rem;
+    right: 1.75rem;
+    bottom: 1.75rem;
+    left: 1.75rem;
+  }
+
+  .md\:inset-32 {
+    top: 2rem;
+    right: 2rem;
+    bottom: 2rem;
+    left: 2rem;
+  }
+
+  .md\:inset-36 {
+    top: 2.25rem;
+    right: 2.25rem;
+    bottom: 2.25rem;
+    left: 2.25rem;
+  }
+
+  .md\:inset-40 {
+    top: 2.5rem;
+    right: 2.5rem;
+    bottom: 2.5rem;
+    left: 2.5rem;
+  }
+
+  .md\:inset-44 {
+    top: 2.75rem;
+    right: 2.75rem;
+    bottom: 2.75rem;
+    left: 2.75rem;
+  }
+
+  .md\:inset-48 {
+    top: 3rem;
+    right: 3rem;
+    bottom: 3rem;
+    left: 3rem;
+  }
+
+  .md\:inset-56 {
+    top: 3.5rem;
+    right: 3.5rem;
+    bottom: 3.5rem;
+    left: 3.5rem;
+  }
+
+  .md\:inset-64 {
+    top: 4rem;
+    right: 4rem;
+    bottom: 4rem;
+    left: 4rem;
+  }
+
+  .md\:inset-80 {
+    top: 5rem;
+    right: 5rem;
+    bottom: 5rem;
+    left: 5rem;
+  }
+
+  .md\:inset-96 {
+    top: 6rem;
+    right: 6rem;
+    bottom: 6rem;
+    left: 6rem;
+  }
+
+  .md\:inset-112 {
+    top: 7rem;
+    right: 7rem;
+    bottom: 7rem;
+    left: 7rem;
+  }
+
+  .md\:inset-128 {
+    top: 8rem;
+    right: 8rem;
+    bottom: 8rem;
+    left: 8rem;
+  }
+
+  .md\:inset-144 {
+    top: 9rem;
+    right: 9rem;
+    bottom: 9rem;
+    left: 9rem;
+  }
+
+  .md\:inset-160 {
+    top: 10rem;
+    right: 10rem;
+    bottom: 10rem;
+    left: 10rem;
+  }
+
+  .md\:inset-176 {
+    top: 11rem;
+    right: 11rem;
+    bottom: 11rem;
+    left: 11rem;
+  }
+
+  .md\:inset-192 {
+    top: 12rem;
+    right: 12rem;
+    bottom: 12rem;
+    left: 12rem;
+  }
+
+  .md\:inset-208 {
+    top: 13rem;
+    right: 13rem;
+    bottom: 13rem;
+    left: 13rem;
+  }
+
+  .md\:inset-224 {
+    top: 14rem;
+    right: 14rem;
+    bottom: 14rem;
+    left: 14rem;
+  }
+
+  .md\:inset-256 {
+    top: 16rem;
+    right: 16rem;
+    bottom: 16rem;
+    left: 16rem;
+  }
+
+  .md\:inset-288 {
+    top: 18rem;
+    right: 18rem;
+    bottom: 18rem;
+    left: 18rem;
+  }
+
+  .md\:inset-320 {
+    top: 20rem;
+    right: 20rem;
+    bottom: 20rem;
+    left: 20rem;
+  }
+
+  .md\:inset-384 {
+    top: 24rem;
+    right: 24rem;
+    bottom: 24rem;
+    left: 24rem;
+  }
+
+  .md\:inset-448 {
+    top: 28rem;
+    right: 28rem;
+    bottom: 28rem;
+    left: 28rem;
+  }
+
+  .md\:inset-512 {
+    top: 32rem;
+    right: 32rem;
+    bottom: 32rem;
+    left: 32rem;
+  }
+
+  .md\:inset-2xs {
+    top: 0.125rem;
+    right: 0.125rem;
+    bottom: 0.125rem;
+    left: 0.125rem;
+  }
+
+  .md\:inset-xs {
+    top: 0.25rem;
+    right: 0.25rem;
+    bottom: 0.25rem;
+    left: 0.25rem;
+  }
+
+  .md\:inset-sm {
+    top: 0.5rem;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    left: 0.5rem;
+  }
+
+  .md\:inset-md {
+    top: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+  }
+
+  .md\:inset-lg {
+    top: 1.5rem;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    left: 1.5rem;
+  }
+
+  .md\:inset-xl {
+    top: 3rem;
+    right: 3rem;
+    bottom: 3rem;
+    left: 3rem;
+  }
+
+  .md\:inset-2xl {
+    top: 4rem;
+    right: 4rem;
+    bottom: 4rem;
+    left: 4rem;
+  }
+
+  .md\:inset-3xl {
+    top: 5rem;
+    right: 5rem;
+    bottom: 5rem;
+    left: 5rem;
+  }
+
+  .md\:inset-4xl {
+    top: 10rem;
+    right: 10rem;
+    bottom: 10rem;
+    left: 10rem;
+  }
 }
 @media screen and (min-width: 1024px) {
   .lg\:inline {
@@ -1779,6 +3278,314 @@ h1 {
 
   .lg\:hidden {
     display: none;
+  }
+
+  .lg\:inset-1 {
+    top: 0.0625rem;
+    right: 0.0625rem;
+    bottom: 0.0625rem;
+    left: 0.0625rem;
+  }
+
+  .lg\:inset-2 {
+    top: 0.125rem;
+    right: 0.125rem;
+    bottom: 0.125rem;
+    left: 0.125rem;
+  }
+
+  .lg\:inset-4 {
+    top: 0.25rem;
+    right: 0.25rem;
+    bottom: 0.25rem;
+    left: 0.25rem;
+  }
+
+  .lg\:inset-6 {
+    top: 0.375rem;
+    right: 0.375rem;
+    bottom: 0.375rem;
+    left: 0.375rem;
+  }
+
+  .lg\:inset-8 {
+    top: 0.5rem;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    left: 0.5rem;
+  }
+
+  .lg\:inset-10 {
+    top: 0.625rem;
+    right: 0.625rem;
+    bottom: 0.625rem;
+    left: 0.625rem;
+  }
+
+  .lg\:inset-12 {
+    top: 0.75rem;
+    right: 0.75rem;
+    bottom: 0.75rem;
+    left: 0.75rem;
+  }
+
+  .lg\:inset-14 {
+    top: 0.875rem;
+    right: 0.875rem;
+    bottom: 0.875rem;
+    left: 0.875rem;
+  }
+
+  .lg\:inset-16 {
+    top: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+  }
+
+  .lg\:inset-20 {
+    top: 1.25rem;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    left: 1.25rem;
+  }
+
+  .lg\:inset-24 {
+    top: 1.5rem;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    left: 1.5rem;
+  }
+
+  .lg\:inset-28 {
+    top: 1.75rem;
+    right: 1.75rem;
+    bottom: 1.75rem;
+    left: 1.75rem;
+  }
+
+  .lg\:inset-32 {
+    top: 2rem;
+    right: 2rem;
+    bottom: 2rem;
+    left: 2rem;
+  }
+
+  .lg\:inset-36 {
+    top: 2.25rem;
+    right: 2.25rem;
+    bottom: 2.25rem;
+    left: 2.25rem;
+  }
+
+  .lg\:inset-40 {
+    top: 2.5rem;
+    right: 2.5rem;
+    bottom: 2.5rem;
+    left: 2.5rem;
+  }
+
+  .lg\:inset-44 {
+    top: 2.75rem;
+    right: 2.75rem;
+    bottom: 2.75rem;
+    left: 2.75rem;
+  }
+
+  .lg\:inset-48 {
+    top: 3rem;
+    right: 3rem;
+    bottom: 3rem;
+    left: 3rem;
+  }
+
+  .lg\:inset-56 {
+    top: 3.5rem;
+    right: 3.5rem;
+    bottom: 3.5rem;
+    left: 3.5rem;
+  }
+
+  .lg\:inset-64 {
+    top: 4rem;
+    right: 4rem;
+    bottom: 4rem;
+    left: 4rem;
+  }
+
+  .lg\:inset-80 {
+    top: 5rem;
+    right: 5rem;
+    bottom: 5rem;
+    left: 5rem;
+  }
+
+  .lg\:inset-96 {
+    top: 6rem;
+    right: 6rem;
+    bottom: 6rem;
+    left: 6rem;
+  }
+
+  .lg\:inset-112 {
+    top: 7rem;
+    right: 7rem;
+    bottom: 7rem;
+    left: 7rem;
+  }
+
+  .lg\:inset-128 {
+    top: 8rem;
+    right: 8rem;
+    bottom: 8rem;
+    left: 8rem;
+  }
+
+  .lg\:inset-144 {
+    top: 9rem;
+    right: 9rem;
+    bottom: 9rem;
+    left: 9rem;
+  }
+
+  .lg\:inset-160 {
+    top: 10rem;
+    right: 10rem;
+    bottom: 10rem;
+    left: 10rem;
+  }
+
+  .lg\:inset-176 {
+    top: 11rem;
+    right: 11rem;
+    bottom: 11rem;
+    left: 11rem;
+  }
+
+  .lg\:inset-192 {
+    top: 12rem;
+    right: 12rem;
+    bottom: 12rem;
+    left: 12rem;
+  }
+
+  .lg\:inset-208 {
+    top: 13rem;
+    right: 13rem;
+    bottom: 13rem;
+    left: 13rem;
+  }
+
+  .lg\:inset-224 {
+    top: 14rem;
+    right: 14rem;
+    bottom: 14rem;
+    left: 14rem;
+  }
+
+  .lg\:inset-256 {
+    top: 16rem;
+    right: 16rem;
+    bottom: 16rem;
+    left: 16rem;
+  }
+
+  .lg\:inset-288 {
+    top: 18rem;
+    right: 18rem;
+    bottom: 18rem;
+    left: 18rem;
+  }
+
+  .lg\:inset-320 {
+    top: 20rem;
+    right: 20rem;
+    bottom: 20rem;
+    left: 20rem;
+  }
+
+  .lg\:inset-384 {
+    top: 24rem;
+    right: 24rem;
+    bottom: 24rem;
+    left: 24rem;
+  }
+
+  .lg\:inset-448 {
+    top: 28rem;
+    right: 28rem;
+    bottom: 28rem;
+    left: 28rem;
+  }
+
+  .lg\:inset-512 {
+    top: 32rem;
+    right: 32rem;
+    bottom: 32rem;
+    left: 32rem;
+  }
+
+  .lg\:inset-2xs {
+    top: 0.125rem;
+    right: 0.125rem;
+    bottom: 0.125rem;
+    left: 0.125rem;
+  }
+
+  .lg\:inset-xs {
+    top: 0.25rem;
+    right: 0.25rem;
+    bottom: 0.25rem;
+    left: 0.25rem;
+  }
+
+  .lg\:inset-sm {
+    top: 0.5rem;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    left: 0.5rem;
+  }
+
+  .lg\:inset-md {
+    top: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+  }
+
+  .lg\:inset-lg {
+    top: 1.5rem;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    left: 1.5rem;
+  }
+
+  .lg\:inset-xl {
+    top: 3rem;
+    right: 3rem;
+    bottom: 3rem;
+    left: 3rem;
+  }
+
+  .lg\:inset-2xl {
+    top: 4rem;
+    right: 4rem;
+    bottom: 4rem;
+    left: 4rem;
+  }
+
+  .lg\:inset-3xl {
+    top: 5rem;
+    right: 5rem;
+    bottom: 5rem;
+    left: 5rem;
+  }
+
+  .lg\:inset-4xl {
+    top: 10rem;
+    right: 10rem;
+    bottom: 10rem;
+    left: 10rem;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -1821,6 +3628,314 @@ h1 {
   .xl\:hidden {
     display: none;
   }
+
+  .xl\:inset-1 {
+    top: 0.0625rem;
+    right: 0.0625rem;
+    bottom: 0.0625rem;
+    left: 0.0625rem;
+  }
+
+  .xl\:inset-2 {
+    top: 0.125rem;
+    right: 0.125rem;
+    bottom: 0.125rem;
+    left: 0.125rem;
+  }
+
+  .xl\:inset-4 {
+    top: 0.25rem;
+    right: 0.25rem;
+    bottom: 0.25rem;
+    left: 0.25rem;
+  }
+
+  .xl\:inset-6 {
+    top: 0.375rem;
+    right: 0.375rem;
+    bottom: 0.375rem;
+    left: 0.375rem;
+  }
+
+  .xl\:inset-8 {
+    top: 0.5rem;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    left: 0.5rem;
+  }
+
+  .xl\:inset-10 {
+    top: 0.625rem;
+    right: 0.625rem;
+    bottom: 0.625rem;
+    left: 0.625rem;
+  }
+
+  .xl\:inset-12 {
+    top: 0.75rem;
+    right: 0.75rem;
+    bottom: 0.75rem;
+    left: 0.75rem;
+  }
+
+  .xl\:inset-14 {
+    top: 0.875rem;
+    right: 0.875rem;
+    bottom: 0.875rem;
+    left: 0.875rem;
+  }
+
+  .xl\:inset-16 {
+    top: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+  }
+
+  .xl\:inset-20 {
+    top: 1.25rem;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    left: 1.25rem;
+  }
+
+  .xl\:inset-24 {
+    top: 1.5rem;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    left: 1.5rem;
+  }
+
+  .xl\:inset-28 {
+    top: 1.75rem;
+    right: 1.75rem;
+    bottom: 1.75rem;
+    left: 1.75rem;
+  }
+
+  .xl\:inset-32 {
+    top: 2rem;
+    right: 2rem;
+    bottom: 2rem;
+    left: 2rem;
+  }
+
+  .xl\:inset-36 {
+    top: 2.25rem;
+    right: 2.25rem;
+    bottom: 2.25rem;
+    left: 2.25rem;
+  }
+
+  .xl\:inset-40 {
+    top: 2.5rem;
+    right: 2.5rem;
+    bottom: 2.5rem;
+    left: 2.5rem;
+  }
+
+  .xl\:inset-44 {
+    top: 2.75rem;
+    right: 2.75rem;
+    bottom: 2.75rem;
+    left: 2.75rem;
+  }
+
+  .xl\:inset-48 {
+    top: 3rem;
+    right: 3rem;
+    bottom: 3rem;
+    left: 3rem;
+  }
+
+  .xl\:inset-56 {
+    top: 3.5rem;
+    right: 3.5rem;
+    bottom: 3.5rem;
+    left: 3.5rem;
+  }
+
+  .xl\:inset-64 {
+    top: 4rem;
+    right: 4rem;
+    bottom: 4rem;
+    left: 4rem;
+  }
+
+  .xl\:inset-80 {
+    top: 5rem;
+    right: 5rem;
+    bottom: 5rem;
+    left: 5rem;
+  }
+
+  .xl\:inset-96 {
+    top: 6rem;
+    right: 6rem;
+    bottom: 6rem;
+    left: 6rem;
+  }
+
+  .xl\:inset-112 {
+    top: 7rem;
+    right: 7rem;
+    bottom: 7rem;
+    left: 7rem;
+  }
+
+  .xl\:inset-128 {
+    top: 8rem;
+    right: 8rem;
+    bottom: 8rem;
+    left: 8rem;
+  }
+
+  .xl\:inset-144 {
+    top: 9rem;
+    right: 9rem;
+    bottom: 9rem;
+    left: 9rem;
+  }
+
+  .xl\:inset-160 {
+    top: 10rem;
+    right: 10rem;
+    bottom: 10rem;
+    left: 10rem;
+  }
+
+  .xl\:inset-176 {
+    top: 11rem;
+    right: 11rem;
+    bottom: 11rem;
+    left: 11rem;
+  }
+
+  .xl\:inset-192 {
+    top: 12rem;
+    right: 12rem;
+    bottom: 12rem;
+    left: 12rem;
+  }
+
+  .xl\:inset-208 {
+    top: 13rem;
+    right: 13rem;
+    bottom: 13rem;
+    left: 13rem;
+  }
+
+  .xl\:inset-224 {
+    top: 14rem;
+    right: 14rem;
+    bottom: 14rem;
+    left: 14rem;
+  }
+
+  .xl\:inset-256 {
+    top: 16rem;
+    right: 16rem;
+    bottom: 16rem;
+    left: 16rem;
+  }
+
+  .xl\:inset-288 {
+    top: 18rem;
+    right: 18rem;
+    bottom: 18rem;
+    left: 18rem;
+  }
+
+  .xl\:inset-320 {
+    top: 20rem;
+    right: 20rem;
+    bottom: 20rem;
+    left: 20rem;
+  }
+
+  .xl\:inset-384 {
+    top: 24rem;
+    right: 24rem;
+    bottom: 24rem;
+    left: 24rem;
+  }
+
+  .xl\:inset-448 {
+    top: 28rem;
+    right: 28rem;
+    bottom: 28rem;
+    left: 28rem;
+  }
+
+  .xl\:inset-512 {
+    top: 32rem;
+    right: 32rem;
+    bottom: 32rem;
+    left: 32rem;
+  }
+
+  .xl\:inset-2xs {
+    top: 0.125rem;
+    right: 0.125rem;
+    bottom: 0.125rem;
+    left: 0.125rem;
+  }
+
+  .xl\:inset-xs {
+    top: 0.25rem;
+    right: 0.25rem;
+    bottom: 0.25rem;
+    left: 0.25rem;
+  }
+
+  .xl\:inset-sm {
+    top: 0.5rem;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    left: 0.5rem;
+  }
+
+  .xl\:inset-md {
+    top: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+  }
+
+  .xl\:inset-lg {
+    top: 1.5rem;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    left: 1.5rem;
+  }
+
+  .xl\:inset-xl {
+    top: 3rem;
+    right: 3rem;
+    bottom: 3rem;
+    left: 3rem;
+  }
+
+  .xl\:inset-2xl {
+    top: 4rem;
+    right: 4rem;
+    bottom: 4rem;
+    left: 4rem;
+  }
+
+  .xl\:inset-3xl {
+    top: 5rem;
+    right: 5rem;
+    bottom: 5rem;
+    left: 5rem;
+  }
+
+  .xl\:inset-4xl {
+    top: 10rem;
+    right: 10rem;
+    bottom: 10rem;
+    left: 10rem;
+  }
 }
 @media screen and (min-width: 1920px) {
   .\32 xl\:inline {
@@ -1861,6 +3976,314 @@ h1 {
 
   .\32 xl\:hidden {
     display: none;
+  }
+
+  .\32 xl\:inset-1 {
+    top: 0.0625rem;
+    right: 0.0625rem;
+    bottom: 0.0625rem;
+    left: 0.0625rem;
+  }
+
+  .\32 xl\:inset-2 {
+    top: 0.125rem;
+    right: 0.125rem;
+    bottom: 0.125rem;
+    left: 0.125rem;
+  }
+
+  .\32 xl\:inset-4 {
+    top: 0.25rem;
+    right: 0.25rem;
+    bottom: 0.25rem;
+    left: 0.25rem;
+  }
+
+  .\32 xl\:inset-6 {
+    top: 0.375rem;
+    right: 0.375rem;
+    bottom: 0.375rem;
+    left: 0.375rem;
+  }
+
+  .\32 xl\:inset-8 {
+    top: 0.5rem;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    left: 0.5rem;
+  }
+
+  .\32 xl\:inset-10 {
+    top: 0.625rem;
+    right: 0.625rem;
+    bottom: 0.625rem;
+    left: 0.625rem;
+  }
+
+  .\32 xl\:inset-12 {
+    top: 0.75rem;
+    right: 0.75rem;
+    bottom: 0.75rem;
+    left: 0.75rem;
+  }
+
+  .\32 xl\:inset-14 {
+    top: 0.875rem;
+    right: 0.875rem;
+    bottom: 0.875rem;
+    left: 0.875rem;
+  }
+
+  .\32 xl\:inset-16 {
+    top: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+  }
+
+  .\32 xl\:inset-20 {
+    top: 1.25rem;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    left: 1.25rem;
+  }
+
+  .\32 xl\:inset-24 {
+    top: 1.5rem;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    left: 1.5rem;
+  }
+
+  .\32 xl\:inset-28 {
+    top: 1.75rem;
+    right: 1.75rem;
+    bottom: 1.75rem;
+    left: 1.75rem;
+  }
+
+  .\32 xl\:inset-32 {
+    top: 2rem;
+    right: 2rem;
+    bottom: 2rem;
+    left: 2rem;
+  }
+
+  .\32 xl\:inset-36 {
+    top: 2.25rem;
+    right: 2.25rem;
+    bottom: 2.25rem;
+    left: 2.25rem;
+  }
+
+  .\32 xl\:inset-40 {
+    top: 2.5rem;
+    right: 2.5rem;
+    bottom: 2.5rem;
+    left: 2.5rem;
+  }
+
+  .\32 xl\:inset-44 {
+    top: 2.75rem;
+    right: 2.75rem;
+    bottom: 2.75rem;
+    left: 2.75rem;
+  }
+
+  .\32 xl\:inset-48 {
+    top: 3rem;
+    right: 3rem;
+    bottom: 3rem;
+    left: 3rem;
+  }
+
+  .\32 xl\:inset-56 {
+    top: 3.5rem;
+    right: 3.5rem;
+    bottom: 3.5rem;
+    left: 3.5rem;
+  }
+
+  .\32 xl\:inset-64 {
+    top: 4rem;
+    right: 4rem;
+    bottom: 4rem;
+    left: 4rem;
+  }
+
+  .\32 xl\:inset-80 {
+    top: 5rem;
+    right: 5rem;
+    bottom: 5rem;
+    left: 5rem;
+  }
+
+  .\32 xl\:inset-96 {
+    top: 6rem;
+    right: 6rem;
+    bottom: 6rem;
+    left: 6rem;
+  }
+
+  .\32 xl\:inset-112 {
+    top: 7rem;
+    right: 7rem;
+    bottom: 7rem;
+    left: 7rem;
+  }
+
+  .\32 xl\:inset-128 {
+    top: 8rem;
+    right: 8rem;
+    bottom: 8rem;
+    left: 8rem;
+  }
+
+  .\32 xl\:inset-144 {
+    top: 9rem;
+    right: 9rem;
+    bottom: 9rem;
+    left: 9rem;
+  }
+
+  .\32 xl\:inset-160 {
+    top: 10rem;
+    right: 10rem;
+    bottom: 10rem;
+    left: 10rem;
+  }
+
+  .\32 xl\:inset-176 {
+    top: 11rem;
+    right: 11rem;
+    bottom: 11rem;
+    left: 11rem;
+  }
+
+  .\32 xl\:inset-192 {
+    top: 12rem;
+    right: 12rem;
+    bottom: 12rem;
+    left: 12rem;
+  }
+
+  .\32 xl\:inset-208 {
+    top: 13rem;
+    right: 13rem;
+    bottom: 13rem;
+    left: 13rem;
+  }
+
+  .\32 xl\:inset-224 {
+    top: 14rem;
+    right: 14rem;
+    bottom: 14rem;
+    left: 14rem;
+  }
+
+  .\32 xl\:inset-256 {
+    top: 16rem;
+    right: 16rem;
+    bottom: 16rem;
+    left: 16rem;
+  }
+
+  .\32 xl\:inset-288 {
+    top: 18rem;
+    right: 18rem;
+    bottom: 18rem;
+    left: 18rem;
+  }
+
+  .\32 xl\:inset-320 {
+    top: 20rem;
+    right: 20rem;
+    bottom: 20rem;
+    left: 20rem;
+  }
+
+  .\32 xl\:inset-384 {
+    top: 24rem;
+    right: 24rem;
+    bottom: 24rem;
+    left: 24rem;
+  }
+
+  .\32 xl\:inset-448 {
+    top: 28rem;
+    right: 28rem;
+    bottom: 28rem;
+    left: 28rem;
+  }
+
+  .\32 xl\:inset-512 {
+    top: 32rem;
+    right: 32rem;
+    bottom: 32rem;
+    left: 32rem;
+  }
+
+  .\32 xl\:inset-2xs {
+    top: 0.125rem;
+    right: 0.125rem;
+    bottom: 0.125rem;
+    left: 0.125rem;
+  }
+
+  .\32 xl\:inset-xs {
+    top: 0.25rem;
+    right: 0.25rem;
+    bottom: 0.25rem;
+    left: 0.25rem;
+  }
+
+  .\32 xl\:inset-sm {
+    top: 0.5rem;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    left: 0.5rem;
+  }
+
+  .\32 xl\:inset-md {
+    top: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+  }
+
+  .\32 xl\:inset-lg {
+    top: 1.5rem;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    left: 1.5rem;
+  }
+
+  .\32 xl\:inset-xl {
+    top: 3rem;
+    right: 3rem;
+    bottom: 3rem;
+    left: 3rem;
+  }
+
+  .\32 xl\:inset-2xl {
+    top: 4rem;
+    right: 4rem;
+    bottom: 4rem;
+    left: 4rem;
+  }
+
+  .\32 xl\:inset-3xl {
+    top: 5rem;
+    right: 5rem;
+    bottom: 5rem;
+    left: 5rem;
+  }
+
+  .\32 xl\:inset-4xl {
+    top: 10rem;
+    right: 10rem;
+    bottom: 10rem;
+    left: 10rem;
   }
 }
 .centered {
@@ -1910,8 +4333,6 @@ h1 {
     place-content: center;
   }
 }
-/* Heap: Stacked elements
-Credits: https://smolcss.dev/#smol-stack-layout */
 .heap {
   display: grid;
   grid-template-areas: "stack";
@@ -2473,5 +4894,332 @@ Credits: https://smolcss.dev/#smol-stack-layout */
   .\32 xl\:stack-y-reverse > * + * {
     margin-bottom: var(--koi-spacer, 1rem);
     margin-top: 0;
+  }
+}
+.container {
+  width: 100%;
+  /* Center the element */
+}
+@media screen and (min-width: 0px) and (min-width: 240px) {
+  .container {
+    max-width: 240px;
+  }
+}
+@media screen and (min-width: 0px) and (min-width: 360px) {
+  .container {
+    max-width: 360px;
+  }
+}
+@media screen and (min-width: 0px) and (min-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+}
+@media screen and (min-width: 0px) and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 0px) and (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+@media screen and (min-width: 0px) and (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+  }
+}
+@media screen and (min-width: 0px) and (min-width: 1920px) {
+  .container {
+    max-width: 1920px;
+  }
+}
+
+@media screen and (min-width: 240px) {
+  .\32 xs\:container {
+    width: 100%;
+    /* Center the element */
+  }
+}
+@media screen and (min-width: 240px) and (min-width: 0px) and (min-width: 240px) {
+  .\32 xs\:container {
+    max-width: 240px;
+  }
+}
+@media screen and (min-width: 240px) and (min-width: 0px) and (min-width: 360px) {
+  .\32 xs\:container {
+    max-width: 360px;
+  }
+}
+@media screen and (min-width: 240px) and (min-width: 0px) and (min-width: 480px) {
+  .\32 xs\:container {
+    max-width: 480px;
+  }
+}
+@media screen and (min-width: 240px) and (min-width: 0px) and (min-width: 768px) {
+  .\32 xs\:container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 240px) and (min-width: 0px) and (min-width: 1024px) {
+  .\32 xs\:container {
+    max-width: 1024px;
+  }
+}
+@media screen and (min-width: 240px) and (min-width: 0px) and (min-width: 1440px) {
+  .\32 xs\:container {
+    max-width: 1440px;
+  }
+}
+@media screen and (min-width: 240px) and (min-width: 0px) and (min-width: 1920px) {
+  .\32 xs\:container {
+    max-width: 1920px;
+  }
+}
+@media screen and (min-width: 360px) {
+  .xs\:container {
+    width: 100%;
+    /* Center the element */
+  }
+}
+@media screen and (min-width: 360px) and (min-width: 0px) and (min-width: 240px) {
+  .xs\:container {
+    max-width: 240px;
+  }
+}
+@media screen and (min-width: 360px) and (min-width: 0px) and (min-width: 360px) {
+  .xs\:container {
+    max-width: 360px;
+  }
+}
+@media screen and (min-width: 360px) and (min-width: 0px) and (min-width: 480px) {
+  .xs\:container {
+    max-width: 480px;
+  }
+}
+@media screen and (min-width: 360px) and (min-width: 0px) and (min-width: 768px) {
+  .xs\:container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 360px) and (min-width: 0px) and (min-width: 1024px) {
+  .xs\:container {
+    max-width: 1024px;
+  }
+}
+@media screen and (min-width: 360px) and (min-width: 0px) and (min-width: 1440px) {
+  .xs\:container {
+    max-width: 1440px;
+  }
+}
+@media screen and (min-width: 360px) and (min-width: 0px) and (min-width: 1920px) {
+  .xs\:container {
+    max-width: 1920px;
+  }
+}
+@media screen and (min-width: 480px) {
+  .sm\:container {
+    width: 100%;
+    /* Center the element */
+  }
+}
+@media screen and (min-width: 480px) and (min-width: 0px) and (min-width: 240px) {
+  .sm\:container {
+    max-width: 240px;
+  }
+}
+@media screen and (min-width: 480px) and (min-width: 0px) and (min-width: 360px) {
+  .sm\:container {
+    max-width: 360px;
+  }
+}
+@media screen and (min-width: 480px) and (min-width: 0px) and (min-width: 480px) {
+  .sm\:container {
+    max-width: 480px;
+  }
+}
+@media screen and (min-width: 480px) and (min-width: 0px) and (min-width: 768px) {
+  .sm\:container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 480px) and (min-width: 0px) and (min-width: 1024px) {
+  .sm\:container {
+    max-width: 1024px;
+  }
+}
+@media screen and (min-width: 480px) and (min-width: 0px) and (min-width: 1440px) {
+  .sm\:container {
+    max-width: 1440px;
+  }
+}
+@media screen and (min-width: 480px) and (min-width: 0px) and (min-width: 1920px) {
+  .sm\:container {
+    max-width: 1920px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:container {
+    width: 100%;
+    /* Center the element */
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 0px) and (min-width: 240px) {
+  .md\:container {
+    max-width: 240px;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 0px) and (min-width: 360px) {
+  .md\:container {
+    max-width: 360px;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 0px) and (min-width: 480px) {
+  .md\:container {
+    max-width: 480px;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 0px) and (min-width: 768px) {
+  .md\:container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 0px) and (min-width: 1024px) {
+  .md\:container {
+    max-width: 1024px;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 0px) and (min-width: 1440px) {
+  .md\:container {
+    max-width: 1440px;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 0px) and (min-width: 1920px) {
+  .md\:container {
+    max-width: 1920px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:container {
+    width: 100%;
+    /* Center the element */
+  }
+}
+@media screen and (min-width: 1024px) and (min-width: 0px) and (min-width: 240px) {
+  .lg\:container {
+    max-width: 240px;
+  }
+}
+@media screen and (min-width: 1024px) and (min-width: 0px) and (min-width: 360px) {
+  .lg\:container {
+    max-width: 360px;
+  }
+}
+@media screen and (min-width: 1024px) and (min-width: 0px) and (min-width: 480px) {
+  .lg\:container {
+    max-width: 480px;
+  }
+}
+@media screen and (min-width: 1024px) and (min-width: 0px) and (min-width: 768px) {
+  .lg\:container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1024px) and (min-width: 0px) and (min-width: 1024px) {
+  .lg\:container {
+    max-width: 1024px;
+  }
+}
+@media screen and (min-width: 1024px) and (min-width: 0px) and (min-width: 1440px) {
+  .lg\:container {
+    max-width: 1440px;
+  }
+}
+@media screen and (min-width: 1024px) and (min-width: 0px) and (min-width: 1920px) {
+  .lg\:container {
+    max-width: 1920px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .xl\:container {
+    width: 100%;
+    /* Center the element */
+  }
+}
+@media screen and (min-width: 1440px) and (min-width: 0px) and (min-width: 240px) {
+  .xl\:container {
+    max-width: 240px;
+  }
+}
+@media screen and (min-width: 1440px) and (min-width: 0px) and (min-width: 360px) {
+  .xl\:container {
+    max-width: 360px;
+  }
+}
+@media screen and (min-width: 1440px) and (min-width: 0px) and (min-width: 480px) {
+  .xl\:container {
+    max-width: 480px;
+  }
+}
+@media screen and (min-width: 1440px) and (min-width: 0px) and (min-width: 768px) {
+  .xl\:container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1440px) and (min-width: 0px) and (min-width: 1024px) {
+  .xl\:container {
+    max-width: 1024px;
+  }
+}
+@media screen and (min-width: 1440px) and (min-width: 0px) and (min-width: 1440px) {
+  .xl\:container {
+    max-width: 1440px;
+  }
+}
+@media screen and (min-width: 1440px) and (min-width: 0px) and (min-width: 1920px) {
+  .xl\:container {
+    max-width: 1920px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .\32 xl\:container {
+    width: 100%;
+    /* Center the element */
+  }
+}
+@media screen and (min-width: 1920px) and (min-width: 0px) and (min-width: 240px) {
+  .\32 xl\:container {
+    max-width: 240px;
+  }
+}
+@media screen and (min-width: 1920px) and (min-width: 0px) and (min-width: 360px) {
+  .\32 xl\:container {
+    max-width: 360px;
+  }
+}
+@media screen and (min-width: 1920px) and (min-width: 0px) and (min-width: 480px) {
+  .\32 xl\:container {
+    max-width: 480px;
+  }
+}
+@media screen and (min-width: 1920px) and (min-width: 0px) and (min-width: 768px) {
+  .\32 xl\:container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1920px) and (min-width: 0px) and (min-width: 1024px) {
+  .\32 xl\:container {
+    max-width: 1024px;
+  }
+}
+@media screen and (min-width: 1920px) and (min-width: 0px) and (min-width: 1440px) {
+  .\32 xl\:container {
+    max-width: 1440px;
+  }
+}
+@media screen and (min-width: 1920px) and (min-width: 0px) and (min-width: 1920px) {
+  .\32 xl\:container {
+    max-width: 1920px;
   }
 }

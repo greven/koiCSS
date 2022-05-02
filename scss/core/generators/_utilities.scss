@@ -27,9 +27,17 @@ $util-glue: config(utility-glue);
   @each $key, $value in $values {
     $properties: map.get($utility-map, property);
 
+    // Multiple properties are possible
+    @if meta.type-of($properties) == 'string' {
+      $properties: list.append((), $properties);
+    }
+
+    // Use custom class if present
     $property-class: if(map.has-key($utility-map, class), map.get($utility-map, class), list.nth($properties, 1));
-    $property-class: if($property-class == null, $key, $property-class);
+    $property-class: if($property-class == null, '', $property-class);
     $property-class: str-escape($property-class);
+
+    $property-class-modifier: if($key, if($property-class == '', '', '-') + $key, '');
 
     $local-vars: map-get($utility-map, local-vars);
 
@@ -43,17 +51,15 @@ $util-glue: config(utility-glue);
         $infix: if(mq.min($breakpoint) == null, '', str-escape(#{'' + $breakpoint + $util-glue}));
       }
 
-      @each $property in $properties {
-        @if $property and $value {
-          .#{$infix + $property-class} {
-            @if $local-vars {
-              @each $local-var, $variable in $local-vars {
-                --#{$prefix}#{$local-var}: #{$variable};
-              }
+      .#{$infix + $property-class + $property-class-modifier} {
+        @each $property in $properties {
+          @if $local-vars {
+            @each $local-var, $variable in $local-vars {
+              --#{$prefix}#{$local-var}: #{$variable};
             }
-
-            #{$property}: $value;
           }
+
+          #{$property}: $value if(config(important-utilities), !important, null);
         }
       }
     }

@@ -1692,8 +1692,6 @@ figure figcaption {
     place-content: center;
   }
 }
-/* Heap: Stacked elements
-Credits: https://smolcss.dev/#smol-stack-layout */
 .heap {
   display: grid;
   grid-template-areas: "stack";
