@@ -2,14 +2,15 @@
 //   Visibility Utilities
 // --------------------------------
 
-@use '../core/api/visibility';
+@use '../core/generators' as *;
+@use '../core' as *;
 
 @mixin utilities {
-  .sr-only {
-    @include visibility.visually-hidden();
+  @include create-responsive-utility(sr-only) {
+    @include visually-hidden;
   }
 
-  .not-sr-only {
-    @include visibility.not-visually-hidden();
+  @include create-responsive-utility(not-sr-only) {
+    @include not-visually-hidden;
   }
 }

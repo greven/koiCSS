@@ -1,6 +1,8 @@
 @use 'layout';
+@use 'spacing';
 @use 'visibility';
 
 @mixin utilities {
   @include layout.utilities();
+  @include visibility.utilities();
 }

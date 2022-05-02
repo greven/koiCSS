@@ -6,10 +6,21 @@
 @use '../core' as *;
 
 $utility-classes: (
+  'clear': (
+    property: clear,
+    responsive: true,
+    values: left right both none,
+  ),
+  'columns': (
+    property: column-count,
+    class: columns,
+    responsive: true,
+    values: 1 2 3 4 5 6 7 8 9 10 11 12,
+  ),
   'display': (
     property: display,
-    responsive: true,
     class: null,
+    responsive: true,
     values: (
       inline: inline,
       inline-block: inline-block,
@@ -23,21 +34,10 @@ $utility-classes: (
       hidden: none,
     ),
   ),
-  'position': (
-    property: position,
-    class: null,
-    responsive: true,
-    values: static relative absolute fixed sticky,
-  ),
   'float': (
     property: float,
     responsive: true,
     values: left right none,
-  ),
-  'clear': (
-    property: clear,
-    responsive: true,
-    values: left right both none,
   ),
   'object-fit': (
     property: object-fit,
@@ -69,10 +69,35 @@ $utility-classes: (
     responsive: true,
     values: auto hidden visible scroll,
   ),
+  'position': (
+    property: position,
+    class: null,
+    responsive: true,
+    values: static relative absolute fixed sticky,
+  ),
+  'visibility': (
+    property: visibility,
+    class: null,
+    responsive: true,
+    values: (
+      visible: visible,
+      invisible: hidden,
+    ),
+  ),
+  'layer': (
+    property: z-index,
+    class: layer,
+    responsive: true,
+    values: theme(layer),
+  ),
 );
 
 @mixin utilities {
   @include generate-utilities($utility-classes);
+
+  @include create-responsive-utility(container) {
+    @include container(0px);
+  }
 
   // Centered content using grid place-content
   @include create-responsive-utility(centered) {
@@ -155,9 +180,5 @@ $utility-classes: (
       margin-bottom: var(--koi-spacer, spacing(md));
       margin-top: 0;
     }
-  }
-
-  @include create-responsive-utility(container) {
-    @include container(0px);
   }
 }
