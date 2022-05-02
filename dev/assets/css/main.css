@@ -1535,312 +1535,156 @@ h1 {
   display: none;
 }
 
-.inset-1 {
-  top: 0.0625rem;
-  right: 0.0625rem;
-  bottom: 0.0625rem;
-  left: 0.0625rem;
+.static {
+  position: static;
 }
 
-.inset-2 {
-  top: 0.125rem;
-  right: 0.125rem;
-  bottom: 0.125rem;
-  left: 0.125rem;
+.relative {
+  position: relative;
 }
 
-.inset-4 {
-  top: 0.25rem;
-  right: 0.25rem;
-  bottom: 0.25rem;
-  left: 0.25rem;
+.absolute {
+  position: absolute;
 }
 
-.inset-6 {
-  top: 0.375rem;
-  right: 0.375rem;
-  bottom: 0.375rem;
-  left: 0.375rem;
+.fixed {
+  position: fixed;
 }
 
-.inset-8 {
-  top: 0.5rem;
-  right: 0.5rem;
-  bottom: 0.5rem;
-  left: 0.5rem;
+.sticky {
+  position: sticky;
 }
 
-.inset-10 {
-  top: 0.625rem;
-  right: 0.625rem;
-  bottom: 0.625rem;
-  left: 0.625rem;
+.float-left {
+  float: left;
 }
 
-.inset-12 {
-  top: 0.75rem;
-  right: 0.75rem;
-  bottom: 0.75rem;
-  left: 0.75rem;
+.float-right {
+  float: right;
 }
 
-.inset-14 {
-  top: 0.875rem;
-  right: 0.875rem;
-  bottom: 0.875rem;
-  left: 0.875rem;
+.float-none {
+  float: none;
 }
 
-.inset-16 {
-  top: 1rem;
-  right: 1rem;
-  bottom: 1rem;
-  left: 1rem;
+.clear-left {
+  clear: left;
 }
 
-.inset-20 {
-  top: 1.25rem;
-  right: 1.25rem;
-  bottom: 1.25rem;
-  left: 1.25rem;
+.clear-right {
+  clear: right;
 }
 
-.inset-24 {
-  top: 1.5rem;
-  right: 1.5rem;
-  bottom: 1.5rem;
-  left: 1.5rem;
+.clear-both {
+  clear: both;
 }
 
-.inset-28 {
-  top: 1.75rem;
-  right: 1.75rem;
-  bottom: 1.75rem;
-  left: 1.75rem;
+.clear-none {
+  clear: none;
 }
 
-.inset-32 {
-  top: 2rem;
-  right: 2rem;
-  bottom: 2rem;
-  left: 2rem;
+.object-contain {
+  object-fit: contain;
 }
 
-.inset-36 {
-  top: 2.25rem;
-  right: 2.25rem;
-  bottom: 2.25rem;
-  left: 2.25rem;
+.object-cover {
+  object-fit: cover;
 }
 
-.inset-40 {
-  top: 2.5rem;
-  right: 2.5rem;
-  bottom: 2.5rem;
-  left: 2.5rem;
+.object-fill {
+  object-fit: fill;
 }
 
-.inset-44 {
-  top: 2.75rem;
-  right: 2.75rem;
-  bottom: 2.75rem;
-  left: 2.75rem;
+.object-none {
+  object-fit: none;
 }
 
-.inset-48 {
-  top: 3rem;
-  right: 3rem;
-  bottom: 3rem;
-  left: 3rem;
+.object-scale-down {
+  object-fit: scale-down;
 }
 
-.inset-56 {
-  top: 3.5rem;
-  right: 3.5rem;
-  bottom: 3.5rem;
-  left: 3.5rem;
+.object-bottom {
+  object-position: bottom;
 }
 
-.inset-64 {
-  top: 4rem;
-  right: 4rem;
-  bottom: 4rem;
-  left: 4rem;
+.object-center {
+  object-position: center;
 }
 
-.inset-80 {
-  top: 5rem;
-  right: 5rem;
-  bottom: 5rem;
-  left: 5rem;
+.object-left {
+  object-position: left;
 }
 
-.inset-96 {
-  top: 6rem;
-  right: 6rem;
-  bottom: 6rem;
-  left: 6rem;
+.object-left-bottom {
+  object-position: left-bottom;
 }
 
-.inset-112 {
-  top: 7rem;
-  right: 7rem;
-  bottom: 7rem;
-  left: 7rem;
+.object-left-top {
+  object-position: left-top;
 }
 
-.inset-128 {
-  top: 8rem;
-  right: 8rem;
-  bottom: 8rem;
-  left: 8rem;
+.object-right {
+  object-position: right;
 }
 
-.inset-144 {
-  top: 9rem;
-  right: 9rem;
-  bottom: 9rem;
-  left: 9rem;
+.object-right-bottom {
+  object-position: right-bottom;
 }
 
-.inset-160 {
-  top: 10rem;
-  right: 10rem;
-  bottom: 10rem;
-  left: 10rem;
+.object-right-top {
+  object-position: right-top;
 }
 
-.inset-176 {
-  top: 11rem;
-  right: 11rem;
-  bottom: 11rem;
-  left: 11rem;
+.object-top {
+  object-position: top;
 }
 
-.inset-192 {
-  top: 12rem;
-  right: 12rem;
-  bottom: 12rem;
-  left: 12rem;
+.overflow-auto {
+  overflow: auto;
 }
 
-.inset-208 {
-  top: 13rem;
-  right: 13rem;
-  bottom: 13rem;
-  left: 13rem;
+.overflow-hidden {
+  overflow: hidden;
 }
 
-.inset-224 {
-  top: 14rem;
-  right: 14rem;
-  bottom: 14rem;
-  left: 14rem;
+.overflow-visible {
+  overflow: visible;
 }
 
-.inset-256 {
-  top: 16rem;
-  right: 16rem;
-  bottom: 16rem;
-  left: 16rem;
+.overflow-scroll {
+  overflow: scroll;
 }
 
-.inset-288 {
-  top: 18rem;
-  right: 18rem;
-  bottom: 18rem;
-  left: 18rem;
+.overflow-x-auto {
+  overflow: auto;
 }
 
-.inset-320 {
-  top: 20rem;
-  right: 20rem;
-  bottom: 20rem;
-  left: 20rem;
+.overflow-x-hidden {
+  overflow: hidden;
 }
 
-.inset-384 {
-  top: 24rem;
-  right: 24rem;
-  bottom: 24rem;
-  left: 24rem;
+.overflow-x-visible {
+  overflow: visible;
 }
 
-.inset-448 {
-  top: 28rem;
-  right: 28rem;
-  bottom: 28rem;
-  left: 28rem;
+.overflow-x-scroll {
+  overflow: scroll;
 }
 
-.inset-512 {
-  top: 32rem;
-  right: 32rem;
-  bottom: 32rem;
-  left: 32rem;
+.overflow-y-auto {
+  overflow: auto;
 }
 
-.inset-2xs {
-  top: 0.125rem;
-  right: 0.125rem;
-  bottom: 0.125rem;
-  left: 0.125rem;
+.overflow-y-hidden {
+  overflow: hidden;
 }
 
-.inset-xs {
-  top: 0.25rem;
-  right: 0.25rem;
-  bottom: 0.25rem;
-  left: 0.25rem;
+.overflow-y-visible {
+  overflow: visible;
 }
 
-.inset-sm {
-  top: 0.5rem;
-  right: 0.5rem;
-  bottom: 0.5rem;
-  left: 0.5rem;
-}
-
-.inset-md {
-  top: 1rem;
-  right: 1rem;
-  bottom: 1rem;
-  left: 1rem;
-}
-
-.inset-lg {
-  top: 1.5rem;
-  right: 1.5rem;
-  bottom: 1.5rem;
-  left: 1.5rem;
-}
-
-.inset-xl {
-  top: 3rem;
-  right: 3rem;
-  bottom: 3rem;
-  left: 3rem;
-}
-
-.inset-2xl {
-  top: 4rem;
-  right: 4rem;
-  bottom: 4rem;
-  left: 4rem;
-}
-
-.inset-3xl {
-  top: 5rem;
-  right: 5rem;
-  bottom: 5rem;
-  left: 5rem;
-}
-
-.inset-4xl {
-  top: 10rem;
-  right: 10rem;
-  bottom: 10rem;
-  left: 10rem;
+.overflow-y-scroll {
+  overflow: scroll;
 }
 
 @media screen and (min-width: 240px) {
@@ -1884,312 +1728,156 @@ h1 {
     display: none;
   }
 
-  .\32 xs\:inset-1 {
-    top: 0.0625rem;
-    right: 0.0625rem;
-    bottom: 0.0625rem;
-    left: 0.0625rem;
+  .\32 xs\:static {
+    position: static;
   }
 
-  .\32 xs\:inset-2 {
-    top: 0.125rem;
-    right: 0.125rem;
-    bottom: 0.125rem;
-    left: 0.125rem;
+  .\32 xs\:relative {
+    position: relative;
   }
 
-  .\32 xs\:inset-4 {
-    top: 0.25rem;
-    right: 0.25rem;
-    bottom: 0.25rem;
-    left: 0.25rem;
+  .\32 xs\:absolute {
+    position: absolute;
   }
 
-  .\32 xs\:inset-6 {
-    top: 0.375rem;
-    right: 0.375rem;
-    bottom: 0.375rem;
-    left: 0.375rem;
+  .\32 xs\:fixed {
+    position: fixed;
   }
 
-  .\32 xs\:inset-8 {
-    top: 0.5rem;
-    right: 0.5rem;
-    bottom: 0.5rem;
-    left: 0.5rem;
+  .\32 xs\:sticky {
+    position: sticky;
   }
 
-  .\32 xs\:inset-10 {
-    top: 0.625rem;
-    right: 0.625rem;
-    bottom: 0.625rem;
-    left: 0.625rem;
+  .\32 xs\:float-left {
+    float: left;
   }
 
-  .\32 xs\:inset-12 {
-    top: 0.75rem;
-    right: 0.75rem;
-    bottom: 0.75rem;
-    left: 0.75rem;
+  .\32 xs\:float-right {
+    float: right;
   }
 
-  .\32 xs\:inset-14 {
-    top: 0.875rem;
-    right: 0.875rem;
-    bottom: 0.875rem;
-    left: 0.875rem;
+  .\32 xs\:float-none {
+    float: none;
   }
 
-  .\32 xs\:inset-16 {
-    top: 1rem;
-    right: 1rem;
-    bottom: 1rem;
-    left: 1rem;
+  .\32 xs\:clear-left {
+    clear: left;
   }
 
-  .\32 xs\:inset-20 {
-    top: 1.25rem;
-    right: 1.25rem;
-    bottom: 1.25rem;
-    left: 1.25rem;
+  .\32 xs\:clear-right {
+    clear: right;
   }
 
-  .\32 xs\:inset-24 {
-    top: 1.5rem;
-    right: 1.5rem;
-    bottom: 1.5rem;
-    left: 1.5rem;
+  .\32 xs\:clear-both {
+    clear: both;
   }
 
-  .\32 xs\:inset-28 {
-    top: 1.75rem;
-    right: 1.75rem;
-    bottom: 1.75rem;
-    left: 1.75rem;
+  .\32 xs\:clear-none {
+    clear: none;
   }
 
-  .\32 xs\:inset-32 {
-    top: 2rem;
-    right: 2rem;
-    bottom: 2rem;
-    left: 2rem;
+  .\32 xs\:object-contain {
+    object-fit: contain;
   }
 
-  .\32 xs\:inset-36 {
-    top: 2.25rem;
-    right: 2.25rem;
-    bottom: 2.25rem;
-    left: 2.25rem;
+  .\32 xs\:object-cover {
+    object-fit: cover;
   }
 
-  .\32 xs\:inset-40 {
-    top: 2.5rem;
-    right: 2.5rem;
-    bottom: 2.5rem;
-    left: 2.5rem;
+  .\32 xs\:object-fill {
+    object-fit: fill;
   }
 
-  .\32 xs\:inset-44 {
-    top: 2.75rem;
-    right: 2.75rem;
-    bottom: 2.75rem;
-    left: 2.75rem;
+  .\32 xs\:object-none {
+    object-fit: none;
   }
 
-  .\32 xs\:inset-48 {
-    top: 3rem;
-    right: 3rem;
-    bottom: 3rem;
-    left: 3rem;
+  .\32 xs\:object-scale-down {
+    object-fit: scale-down;
   }
 
-  .\32 xs\:inset-56 {
-    top: 3.5rem;
-    right: 3.5rem;
-    bottom: 3.5rem;
-    left: 3.5rem;
+  .\32 xs\:object-bottom {
+    object-position: bottom;
   }
 
-  .\32 xs\:inset-64 {
-    top: 4rem;
-    right: 4rem;
-    bottom: 4rem;
-    left: 4rem;
+  .\32 xs\:object-center {
+    object-position: center;
   }
 
-  .\32 xs\:inset-80 {
-    top: 5rem;
-    right: 5rem;
-    bottom: 5rem;
-    left: 5rem;
+  .\32 xs\:object-left {
+    object-position: left;
   }
 
-  .\32 xs\:inset-96 {
-    top: 6rem;
-    right: 6rem;
-    bottom: 6rem;
-    left: 6rem;
+  .\32 xs\:object-left-bottom {
+    object-position: left-bottom;
   }
 
-  .\32 xs\:inset-112 {
-    top: 7rem;
-    right: 7rem;
-    bottom: 7rem;
-    left: 7rem;
+  .\32 xs\:object-left-top {
+    object-position: left-top;
   }
 
-  .\32 xs\:inset-128 {
-    top: 8rem;
-    right: 8rem;
-    bottom: 8rem;
-    left: 8rem;
+  .\32 xs\:object-right {
+    object-position: right;
   }
 
-  .\32 xs\:inset-144 {
-    top: 9rem;
-    right: 9rem;
-    bottom: 9rem;
-    left: 9rem;
+  .\32 xs\:object-right-bottom {
+    object-position: right-bottom;
   }
 
-  .\32 xs\:inset-160 {
-    top: 10rem;
-    right: 10rem;
-    bottom: 10rem;
-    left: 10rem;
+  .\32 xs\:object-right-top {
+    object-position: right-top;
   }
 
-  .\32 xs\:inset-176 {
-    top: 11rem;
-    right: 11rem;
-    bottom: 11rem;
-    left: 11rem;
+  .\32 xs\:object-top {
+    object-position: top;
   }
 
-  .\32 xs\:inset-192 {
-    top: 12rem;
-    right: 12rem;
-    bottom: 12rem;
-    left: 12rem;
+  .\32 xs\:overflow-auto {
+    overflow: auto;
   }
 
-  .\32 xs\:inset-208 {
-    top: 13rem;
-    right: 13rem;
-    bottom: 13rem;
-    left: 13rem;
+  .\32 xs\:overflow-hidden {
+    overflow: hidden;
   }
 
-  .\32 xs\:inset-224 {
-    top: 14rem;
-    right: 14rem;
-    bottom: 14rem;
-    left: 14rem;
+  .\32 xs\:overflow-visible {
+    overflow: visible;
   }
 
-  .\32 xs\:inset-256 {
-    top: 16rem;
-    right: 16rem;
-    bottom: 16rem;
-    left: 16rem;
+  .\32 xs\:overflow-scroll {
+    overflow: scroll;
   }
 
-  .\32 xs\:inset-288 {
-    top: 18rem;
-    right: 18rem;
-    bottom: 18rem;
-    left: 18rem;
+  .\32 xs\:overflow-x-auto {
+    overflow: auto;
   }
 
-  .\32 xs\:inset-320 {
-    top: 20rem;
-    right: 20rem;
-    bottom: 20rem;
-    left: 20rem;
+  .\32 xs\:overflow-x-hidden {
+    overflow: hidden;
   }
 
-  .\32 xs\:inset-384 {
-    top: 24rem;
-    right: 24rem;
-    bottom: 24rem;
-    left: 24rem;
+  .\32 xs\:overflow-x-visible {
+    overflow: visible;
   }
 
-  .\32 xs\:inset-448 {
-    top: 28rem;
-    right: 28rem;
-    bottom: 28rem;
-    left: 28rem;
+  .\32 xs\:overflow-x-scroll {
+    overflow: scroll;
   }
 
-  .\32 xs\:inset-512 {
-    top: 32rem;
-    right: 32rem;
-    bottom: 32rem;
-    left: 32rem;
+  .\32 xs\:overflow-y-auto {
+    overflow: auto;
   }
 
-  .\32 xs\:inset-2xs {
-    top: 0.125rem;
-    right: 0.125rem;
-    bottom: 0.125rem;
-    left: 0.125rem;
+  .\32 xs\:overflow-y-hidden {
+    overflow: hidden;
   }
 
-  .\32 xs\:inset-xs {
-    top: 0.25rem;
-    right: 0.25rem;
-    bottom: 0.25rem;
-    left: 0.25rem;
+  .\32 xs\:overflow-y-visible {
+    overflow: visible;
   }
 
-  .\32 xs\:inset-sm {
-    top: 0.5rem;
-    right: 0.5rem;
-    bottom: 0.5rem;
-    left: 0.5rem;
-  }
-
-  .\32 xs\:inset-md {
-    top: 1rem;
-    right: 1rem;
-    bottom: 1rem;
-    left: 1rem;
-  }
-
-  .\32 xs\:inset-lg {
-    top: 1.5rem;
-    right: 1.5rem;
-    bottom: 1.5rem;
-    left: 1.5rem;
-  }
-
-  .\32 xs\:inset-xl {
-    top: 3rem;
-    right: 3rem;
-    bottom: 3rem;
-    left: 3rem;
-  }
-
-  .\32 xs\:inset-2xl {
-    top: 4rem;
-    right: 4rem;
-    bottom: 4rem;
-    left: 4rem;
-  }
-
-  .\32 xs\:inset-3xl {
-    top: 5rem;
-    right: 5rem;
-    bottom: 5rem;
-    left: 5rem;
-  }
-
-  .\32 xs\:inset-4xl {
-    top: 10rem;
-    right: 10rem;
-    bottom: 10rem;
-    left: 10rem;
+  .\32 xs\:overflow-y-scroll {
+    overflow: scroll;
   }
 }
 @media screen and (min-width: 360px) {
@@ -2233,312 +1921,156 @@ h1 {
     display: none;
   }
 
-  .xs\:inset-1 {
-    top: 0.0625rem;
-    right: 0.0625rem;
-    bottom: 0.0625rem;
-    left: 0.0625rem;
+  .xs\:static {
+    position: static;
   }
 
-  .xs\:inset-2 {
-    top: 0.125rem;
-    right: 0.125rem;
-    bottom: 0.125rem;
-    left: 0.125rem;
+  .xs\:relative {
+    position: relative;
   }
 
-  .xs\:inset-4 {
-    top: 0.25rem;
-    right: 0.25rem;
-    bottom: 0.25rem;
-    left: 0.25rem;
+  .xs\:absolute {
+    position: absolute;
   }
 
-  .xs\:inset-6 {
-    top: 0.375rem;
-    right: 0.375rem;
-    bottom: 0.375rem;
-    left: 0.375rem;
+  .xs\:fixed {
+    position: fixed;
   }
 
-  .xs\:inset-8 {
-    top: 0.5rem;
-    right: 0.5rem;
-    bottom: 0.5rem;
-    left: 0.5rem;
+  .xs\:sticky {
+    position: sticky;
   }
 
-  .xs\:inset-10 {
-    top: 0.625rem;
-    right: 0.625rem;
-    bottom: 0.625rem;
-    left: 0.625rem;
+  .xs\:float-left {
+    float: left;
   }
 
-  .xs\:inset-12 {
-    top: 0.75rem;
-    right: 0.75rem;
-    bottom: 0.75rem;
-    left: 0.75rem;
+  .xs\:float-right {
+    float: right;
   }
 
-  .xs\:inset-14 {
-    top: 0.875rem;
-    right: 0.875rem;
-    bottom: 0.875rem;
-    left: 0.875rem;
+  .xs\:float-none {
+    float: none;
   }
 
-  .xs\:inset-16 {
-    top: 1rem;
-    right: 1rem;
-    bottom: 1rem;
-    left: 1rem;
+  .xs\:clear-left {
+    clear: left;
   }
 
-  .xs\:inset-20 {
-    top: 1.25rem;
-    right: 1.25rem;
-    bottom: 1.25rem;
-    left: 1.25rem;
+  .xs\:clear-right {
+    clear: right;
   }
 
-  .xs\:inset-24 {
-    top: 1.5rem;
-    right: 1.5rem;
-    bottom: 1.5rem;
-    left: 1.5rem;
+  .xs\:clear-both {
+    clear: both;
   }
 
-  .xs\:inset-28 {
-    top: 1.75rem;
-    right: 1.75rem;
-    bottom: 1.75rem;
-    left: 1.75rem;
+  .xs\:clear-none {
+    clear: none;
   }
 
-  .xs\:inset-32 {
-    top: 2rem;
-    right: 2rem;
-    bottom: 2rem;
-    left: 2rem;
+  .xs\:object-contain {
+    object-fit: contain;
   }
 
-  .xs\:inset-36 {
-    top: 2.25rem;
-    right: 2.25rem;
-    bottom: 2.25rem;
-    left: 2.25rem;
+  .xs\:object-cover {
+    object-fit: cover;
   }
 
-  .xs\:inset-40 {
-    top: 2.5rem;
-    right: 2.5rem;
-    bottom: 2.5rem;
-    left: 2.5rem;
+  .xs\:object-fill {
+    object-fit: fill;
   }
 
-  .xs\:inset-44 {
-    top: 2.75rem;
-    right: 2.75rem;
-    bottom: 2.75rem;
-    left: 2.75rem;
+  .xs\:object-none {
+    object-fit: none;
   }
 
-  .xs\:inset-48 {
-    top: 3rem;
-    right: 3rem;
-    bottom: 3rem;
-    left: 3rem;
+  .xs\:object-scale-down {
+    object-fit: scale-down;
   }
 
-  .xs\:inset-56 {
-    top: 3.5rem;
-    right: 3.5rem;
-    bottom: 3.5rem;
-    left: 3.5rem;
+  .xs\:object-bottom {
+    object-position: bottom;
   }
 
-  .xs\:inset-64 {
-    top: 4rem;
-    right: 4rem;
-    bottom: 4rem;
-    left: 4rem;
+  .xs\:object-center {
+    object-position: center;
   }
 
-  .xs\:inset-80 {
-    top: 5rem;
-    right: 5rem;
-    bottom: 5rem;
-    left: 5rem;
+  .xs\:object-left {
+    object-position: left;
   }
 
-  .xs\:inset-96 {
-    top: 6rem;
-    right: 6rem;
-    bottom: 6rem;
-    left: 6rem;
+  .xs\:object-left-bottom {
+    object-position: left-bottom;
   }
 
-  .xs\:inset-112 {
-    top: 7rem;
-    right: 7rem;
-    bottom: 7rem;
-    left: 7rem;
+  .xs\:object-left-top {
+    object-position: left-top;
   }
 
-  .xs\:inset-128 {
-    top: 8rem;
-    right: 8rem;
-    bottom: 8rem;
-    left: 8rem;
+  .xs\:object-right {
+    object-position: right;
   }
 
-  .xs\:inset-144 {
-    top: 9rem;
-    right: 9rem;
-    bottom: 9rem;
-    left: 9rem;
+  .xs\:object-right-bottom {
+    object-position: right-bottom;
   }
 
-  .xs\:inset-160 {
-    top: 10rem;
-    right: 10rem;
-    bottom: 10rem;
-    left: 10rem;
+  .xs\:object-right-top {
+    object-position: right-top;
   }
 
-  .xs\:inset-176 {
-    top: 11rem;
-    right: 11rem;
-    bottom: 11rem;
-    left: 11rem;
+  .xs\:object-top {
+    object-position: top;
   }
 
-  .xs\:inset-192 {
-    top: 12rem;
-    right: 12rem;
-    bottom: 12rem;
-    left: 12rem;
+  .xs\:overflow-auto {
+    overflow: auto;
   }
 
-  .xs\:inset-208 {
-    top: 13rem;
-    right: 13rem;
-    bottom: 13rem;
-    left: 13rem;
+  .xs\:overflow-hidden {
+    overflow: hidden;
   }
 
-  .xs\:inset-224 {
-    top: 14rem;
-    right: 14rem;
-    bottom: 14rem;
-    left: 14rem;
+  .xs\:overflow-visible {
+    overflow: visible;
   }
 
-  .xs\:inset-256 {
-    top: 16rem;
-    right: 16rem;
-    bottom: 16rem;
-    left: 16rem;
+  .xs\:overflow-scroll {
+    overflow: scroll;
   }
 
-  .xs\:inset-288 {
-    top: 18rem;
-    right: 18rem;
-    bottom: 18rem;
-    left: 18rem;
+  .xs\:overflow-x-auto {
+    overflow: auto;
   }
 
-  .xs\:inset-320 {
-    top: 20rem;
-    right: 20rem;
-    bottom: 20rem;
-    left: 20rem;
+  .xs\:overflow-x-hidden {
+    overflow: hidden;
   }
 
-  .xs\:inset-384 {
-    top: 24rem;
-    right: 24rem;
-    bottom: 24rem;
-    left: 24rem;
+  .xs\:overflow-x-visible {
+    overflow: visible;
   }
 
-  .xs\:inset-448 {
-    top: 28rem;
-    right: 28rem;
-    bottom: 28rem;
-    left: 28rem;
+  .xs\:overflow-x-scroll {
+    overflow: scroll;
   }
 
-  .xs\:inset-512 {
-    top: 32rem;
-    right: 32rem;
-    bottom: 32rem;
-    left: 32rem;
+  .xs\:overflow-y-auto {
+    overflow: auto;
   }
 
-  .xs\:inset-2xs {
-    top: 0.125rem;
-    right: 0.125rem;
-    bottom: 0.125rem;
-    left: 0.125rem;
+  .xs\:overflow-y-hidden {
+    overflow: hidden;
   }
 
-  .xs\:inset-xs {
-    top: 0.25rem;
-    right: 0.25rem;
-    bottom: 0.25rem;
-    left: 0.25rem;
+  .xs\:overflow-y-visible {
+    overflow: visible;
   }
 
-  .xs\:inset-sm {
-    top: 0.5rem;
-    right: 0.5rem;
-    bottom: 0.5rem;
-    left: 0.5rem;
-  }
-
-  .xs\:inset-md {
-    top: 1rem;
-    right: 1rem;
-    bottom: 1rem;
-    left: 1rem;
-  }
-
-  .xs\:inset-lg {
-    top: 1.5rem;
-    right: 1.5rem;
-    bottom: 1.5rem;
-    left: 1.5rem;
-  }
-
-  .xs\:inset-xl {
-    top: 3rem;
-    right: 3rem;
-    bottom: 3rem;
-    left: 3rem;
-  }
-
-  .xs\:inset-2xl {
-    top: 4rem;
-    right: 4rem;
-    bottom: 4rem;
-    left: 4rem;
-  }
-
-  .xs\:inset-3xl {
-    top: 5rem;
-    right: 5rem;
-    bottom: 5rem;
-    left: 5rem;
-  }
-
-  .xs\:inset-4xl {
-    top: 10rem;
-    right: 10rem;
-    bottom: 10rem;
-    left: 10rem;
+  .xs\:overflow-y-scroll {
+    overflow: scroll;
   }
 }
 @media screen and (min-width: 480px) {
@@ -2582,312 +2114,156 @@ h1 {
     display: none;
   }
 
-  .sm\:inset-1 {
-    top: 0.0625rem;
-    right: 0.0625rem;
-    bottom: 0.0625rem;
-    left: 0.0625rem;
+  .sm\:static {
+    position: static;
   }
 
-  .sm\:inset-2 {
-    top: 0.125rem;
-    right: 0.125rem;
-    bottom: 0.125rem;
-    left: 0.125rem;
+  .sm\:relative {
+    position: relative;
   }
 
-  .sm\:inset-4 {
-    top: 0.25rem;
-    right: 0.25rem;
-    bottom: 0.25rem;
-    left: 0.25rem;
+  .sm\:absolute {
+    position: absolute;
   }
 
-  .sm\:inset-6 {
-    top: 0.375rem;
-    right: 0.375rem;
-    bottom: 0.375rem;
-    left: 0.375rem;
+  .sm\:fixed {
+    position: fixed;
   }
 
-  .sm\:inset-8 {
-    top: 0.5rem;
-    right: 0.5rem;
-    bottom: 0.5rem;
-    left: 0.5rem;
+  .sm\:sticky {
+    position: sticky;
   }
 
-  .sm\:inset-10 {
-    top: 0.625rem;
-    right: 0.625rem;
-    bottom: 0.625rem;
-    left: 0.625rem;
+  .sm\:float-left {
+    float: left;
   }
 
-  .sm\:inset-12 {
-    top: 0.75rem;
-    right: 0.75rem;
-    bottom: 0.75rem;
-    left: 0.75rem;
+  .sm\:float-right {
+    float: right;
   }
 
-  .sm\:inset-14 {
-    top: 0.875rem;
-    right: 0.875rem;
-    bottom: 0.875rem;
-    left: 0.875rem;
+  .sm\:float-none {
+    float: none;
   }
 
-  .sm\:inset-16 {
-    top: 1rem;
-    right: 1rem;
-    bottom: 1rem;
-    left: 1rem;
+  .sm\:clear-left {
+    clear: left;
   }
 
-  .sm\:inset-20 {
-    top: 1.25rem;
-    right: 1.25rem;
-    bottom: 1.25rem;
-    left: 1.25rem;
+  .sm\:clear-right {
+    clear: right;
   }
 
-  .sm\:inset-24 {
-    top: 1.5rem;
-    right: 1.5rem;
-    bottom: 1.5rem;
-    left: 1.5rem;
+  .sm\:clear-both {
+    clear: both;
   }
 
-  .sm\:inset-28 {
-    top: 1.75rem;
-    right: 1.75rem;
-    bottom: 1.75rem;
-    left: 1.75rem;
+  .sm\:clear-none {
+    clear: none;
   }
 
-  .sm\:inset-32 {
-    top: 2rem;
-    right: 2rem;
-    bottom: 2rem;
-    left: 2rem;
+  .sm\:object-contain {
+    object-fit: contain;
   }
 
-  .sm\:inset-36 {
-    top: 2.25rem;
-    right: 2.25rem;
-    bottom: 2.25rem;
-    left: 2.25rem;
+  .sm\:object-cover {
+    object-fit: cover;
   }
 
-  .sm\:inset-40 {
-    top: 2.5rem;
-    right: 2.5rem;
-    bottom: 2.5rem;
-    left: 2.5rem;
+  .sm\:object-fill {
+    object-fit: fill;
   }
 
-  .sm\:inset-44 {
-    top: 2.75rem;
-    right: 2.75rem;
-    bottom: 2.75rem;
-    left: 2.75rem;
+  .sm\:object-none {
+    object-fit: none;
   }
 
-  .sm\:inset-48 {
-    top: 3rem;
-    right: 3rem;
-    bottom: 3rem;
-    left: 3rem;
+  .sm\:object-scale-down {
+    object-fit: scale-down;
   }
 
-  .sm\:inset-56 {
-    top: 3.5rem;
-    right: 3.5rem;
-    bottom: 3.5rem;
-    left: 3.5rem;
+  .sm\:object-bottom {
+    object-position: bottom;
   }
 
-  .sm\:inset-64 {
-    top: 4rem;
-    right: 4rem;
-    bottom: 4rem;
-    left: 4rem;
+  .sm\:object-center {
+    object-position: center;
   }
 
-  .sm\:inset-80 {
-    top: 5rem;
-    right: 5rem;
-    bottom: 5rem;
-    left: 5rem;
+  .sm\:object-left {
+    object-position: left;
   }
 
-  .sm\:inset-96 {
-    top: 6rem;
-    right: 6rem;
-    bottom: 6rem;
-    left: 6rem;
+  .sm\:object-left-bottom {
+    object-position: left-bottom;
   }
 
-  .sm\:inset-112 {
-    top: 7rem;
-    right: 7rem;
-    bottom: 7rem;
-    left: 7rem;
+  .sm\:object-left-top {
+    object-position: left-top;
   }
 
-  .sm\:inset-128 {
-    top: 8rem;
-    right: 8rem;
-    bottom: 8rem;
-    left: 8rem;
+  .sm\:object-right {
+    object-position: right;
   }
 
-  .sm\:inset-144 {
-    top: 9rem;
-    right: 9rem;
-    bottom: 9rem;
-    left: 9rem;
+  .sm\:object-right-bottom {
+    object-position: right-bottom;
   }
 
-  .sm\:inset-160 {
-    top: 10rem;
-    right: 10rem;
-    bottom: 10rem;
-    left: 10rem;
+  .sm\:object-right-top {
+    object-position: right-top;
   }
 
-  .sm\:inset-176 {
-    top: 11rem;
-    right: 11rem;
-    bottom: 11rem;
-    left: 11rem;
+  .sm\:object-top {
+    object-position: top;
   }
 
-  .sm\:inset-192 {
-    top: 12rem;
-    right: 12rem;
-    bottom: 12rem;
-    left: 12rem;
+  .sm\:overflow-auto {
+    overflow: auto;
   }
 
-  .sm\:inset-208 {
-    top: 13rem;
-    right: 13rem;
-    bottom: 13rem;
-    left: 13rem;
+  .sm\:overflow-hidden {
+    overflow: hidden;
   }
 
-  .sm\:inset-224 {
-    top: 14rem;
-    right: 14rem;
-    bottom: 14rem;
-    left: 14rem;
+  .sm\:overflow-visible {
+    overflow: visible;
   }
 
-  .sm\:inset-256 {
-    top: 16rem;
-    right: 16rem;
-    bottom: 16rem;
-    left: 16rem;
+  .sm\:overflow-scroll {
+    overflow: scroll;
   }
 
-  .sm\:inset-288 {
-    top: 18rem;
-    right: 18rem;
-    bottom: 18rem;
-    left: 18rem;
+  .sm\:overflow-x-auto {
+    overflow: auto;
   }
 
-  .sm\:inset-320 {
-    top: 20rem;
-    right: 20rem;
-    bottom: 20rem;
-    left: 20rem;
+  .sm\:overflow-x-hidden {
+    overflow: hidden;
   }
 
-  .sm\:inset-384 {
-    top: 24rem;
-    right: 24rem;
-    bottom: 24rem;
-    left: 24rem;
+  .sm\:overflow-x-visible {
+    overflow: visible;
   }
 
-  .sm\:inset-448 {
-    top: 28rem;
-    right: 28rem;
-    bottom: 28rem;
-    left: 28rem;
+  .sm\:overflow-x-scroll {
+    overflow: scroll;
   }
 
-  .sm\:inset-512 {
-    top: 32rem;
-    right: 32rem;
-    bottom: 32rem;
-    left: 32rem;
+  .sm\:overflow-y-auto {
+    overflow: auto;
   }
 
-  .sm\:inset-2xs {
-    top: 0.125rem;
-    right: 0.125rem;
-    bottom: 0.125rem;
-    left: 0.125rem;
+  .sm\:overflow-y-hidden {
+    overflow: hidden;
   }
 
-  .sm\:inset-xs {
-    top: 0.25rem;
-    right: 0.25rem;
-    bottom: 0.25rem;
-    left: 0.25rem;
+  .sm\:overflow-y-visible {
+    overflow: visible;
   }
 
-  .sm\:inset-sm {
-    top: 0.5rem;
-    right: 0.5rem;
-    bottom: 0.5rem;
-    left: 0.5rem;
-  }
-
-  .sm\:inset-md {
-    top: 1rem;
-    right: 1rem;
-    bottom: 1rem;
-    left: 1rem;
-  }
-
-  .sm\:inset-lg {
-    top: 1.5rem;
-    right: 1.5rem;
-    bottom: 1.5rem;
-    left: 1.5rem;
-  }
-
-  .sm\:inset-xl {
-    top: 3rem;
-    right: 3rem;
-    bottom: 3rem;
-    left: 3rem;
-  }
-
-  .sm\:inset-2xl {
-    top: 4rem;
-    right: 4rem;
-    bottom: 4rem;
-    left: 4rem;
-  }
-
-  .sm\:inset-3xl {
-    top: 5rem;
-    right: 5rem;
-    bottom: 5rem;
-    left: 5rem;
-  }
-
-  .sm\:inset-4xl {
-    top: 10rem;
-    right: 10rem;
-    bottom: 10rem;
-    left: 10rem;
+  .sm\:overflow-y-scroll {
+    overflow: scroll;
   }
 }
 @media screen and (min-width: 768px) {
@@ -2931,312 +2307,156 @@ h1 {
     display: none;
   }
 
-  .md\:inset-1 {
-    top: 0.0625rem;
-    right: 0.0625rem;
-    bottom: 0.0625rem;
-    left: 0.0625rem;
+  .md\:static {
+    position: static;
   }
 
-  .md\:inset-2 {
-    top: 0.125rem;
-    right: 0.125rem;
-    bottom: 0.125rem;
-    left: 0.125rem;
+  .md\:relative {
+    position: relative;
   }
 
-  .md\:inset-4 {
-    top: 0.25rem;
-    right: 0.25rem;
-    bottom: 0.25rem;
-    left: 0.25rem;
+  .md\:absolute {
+    position: absolute;
   }
 
-  .md\:inset-6 {
-    top: 0.375rem;
-    right: 0.375rem;
-    bottom: 0.375rem;
-    left: 0.375rem;
+  .md\:fixed {
+    position: fixed;
   }
 
-  .md\:inset-8 {
-    top: 0.5rem;
-    right: 0.5rem;
-    bottom: 0.5rem;
-    left: 0.5rem;
+  .md\:sticky {
+    position: sticky;
   }
 
-  .md\:inset-10 {
-    top: 0.625rem;
-    right: 0.625rem;
-    bottom: 0.625rem;
-    left: 0.625rem;
+  .md\:float-left {
+    float: left;
   }
 
-  .md\:inset-12 {
-    top: 0.75rem;
-    right: 0.75rem;
-    bottom: 0.75rem;
-    left: 0.75rem;
+  .md\:float-right {
+    float: right;
   }
 
-  .md\:inset-14 {
-    top: 0.875rem;
-    right: 0.875rem;
-    bottom: 0.875rem;
-    left: 0.875rem;
+  .md\:float-none {
+    float: none;
   }
 
-  .md\:inset-16 {
-    top: 1rem;
-    right: 1rem;
-    bottom: 1rem;
-    left: 1rem;
+  .md\:clear-left {
+    clear: left;
   }
 
-  .md\:inset-20 {
-    top: 1.25rem;
-    right: 1.25rem;
-    bottom: 1.25rem;
-    left: 1.25rem;
+  .md\:clear-right {
+    clear: right;
   }
 
-  .md\:inset-24 {
-    top: 1.5rem;
-    right: 1.5rem;
-    bottom: 1.5rem;
-    left: 1.5rem;
+  .md\:clear-both {
+    clear: both;
   }
 
-  .md\:inset-28 {
-    top: 1.75rem;
-    right: 1.75rem;
-    bottom: 1.75rem;
-    left: 1.75rem;
+  .md\:clear-none {
+    clear: none;
   }
 
-  .md\:inset-32 {
-    top: 2rem;
-    right: 2rem;
-    bottom: 2rem;
-    left: 2rem;
+  .md\:object-contain {
+    object-fit: contain;
   }
 
-  .md\:inset-36 {
-    top: 2.25rem;
-    right: 2.25rem;
-    bottom: 2.25rem;
-    left: 2.25rem;
+  .md\:object-cover {
+    object-fit: cover;
   }
 
-  .md\:inset-40 {
-    top: 2.5rem;
-    right: 2.5rem;
-    bottom: 2.5rem;
-    left: 2.5rem;
+  .md\:object-fill {
+    object-fit: fill;
   }
 
-  .md\:inset-44 {
-    top: 2.75rem;
-    right: 2.75rem;
-    bottom: 2.75rem;
-    left: 2.75rem;
+  .md\:object-none {
+    object-fit: none;
   }
 
-  .md\:inset-48 {
-    top: 3rem;
-    right: 3rem;
-    bottom: 3rem;
-    left: 3rem;
+  .md\:object-scale-down {
+    object-fit: scale-down;
   }
 
-  .md\:inset-56 {
-    top: 3.5rem;
-    right: 3.5rem;
-    bottom: 3.5rem;
-    left: 3.5rem;
+  .md\:object-bottom {
+    object-position: bottom;
   }
 
-  .md\:inset-64 {
-    top: 4rem;
-    right: 4rem;
-    bottom: 4rem;
-    left: 4rem;
+  .md\:object-center {
+    object-position: center;
   }
 
-  .md\:inset-80 {
-    top: 5rem;
-    right: 5rem;
-    bottom: 5rem;
-    left: 5rem;
+  .md\:object-left {
+    object-position: left;
   }
 
-  .md\:inset-96 {
-    top: 6rem;
-    right: 6rem;
-    bottom: 6rem;
-    left: 6rem;
+  .md\:object-left-bottom {
+    object-position: left-bottom;
   }
 
-  .md\:inset-112 {
-    top: 7rem;
-    right: 7rem;
-    bottom: 7rem;
-    left: 7rem;
+  .md\:object-left-top {
+    object-position: left-top;
   }
 
-  .md\:inset-128 {
-    top: 8rem;
-    right: 8rem;
-    bottom: 8rem;
-    left: 8rem;
+  .md\:object-right {
+    object-position: right;
   }
 
-  .md\:inset-144 {
-    top: 9rem;
-    right: 9rem;
-    bottom: 9rem;
-    left: 9rem;
+  .md\:object-right-bottom {
+    object-position: right-bottom;
   }
 
-  .md\:inset-160 {
-    top: 10rem;
-    right: 10rem;
-    bottom: 10rem;
-    left: 10rem;
+  .md\:object-right-top {
+    object-position: right-top;
   }
 
-  .md\:inset-176 {
-    top: 11rem;
-    right: 11rem;
-    bottom: 11rem;
-    left: 11rem;
+  .md\:object-top {
+    object-position: top;
   }
 
-  .md\:inset-192 {
-    top: 12rem;
-    right: 12rem;
-    bottom: 12rem;
-    left: 12rem;
+  .md\:overflow-auto {
+    overflow: auto;
   }
 
-  .md\:inset-208 {
-    top: 13rem;
-    right: 13rem;
-    bottom: 13rem;
-    left: 13rem;
+  .md\:overflow-hidden {
+    overflow: hidden;
   }
 
-  .md\:inset-224 {
-    top: 14rem;
-    right: 14rem;
-    bottom: 14rem;
-    left: 14rem;
+  .md\:overflow-visible {
+    overflow: visible;
   }
 
-  .md\:inset-256 {
-    top: 16rem;
-    right: 16rem;
-    bottom: 16rem;
-    left: 16rem;
+  .md\:overflow-scroll {
+    overflow: scroll;
   }
 
-  .md\:inset-288 {
-    top: 18rem;
-    right: 18rem;
-    bottom: 18rem;
-    left: 18rem;
+  .md\:overflow-x-auto {
+    overflow: auto;
   }
 
-  .md\:inset-320 {
-    top: 20rem;
-    right: 20rem;
-    bottom: 20rem;
-    left: 20rem;
+  .md\:overflow-x-hidden {
+    overflow: hidden;
   }
 
-  .md\:inset-384 {
-    top: 24rem;
-    right: 24rem;
-    bottom: 24rem;
-    left: 24rem;
+  .md\:overflow-x-visible {
+    overflow: visible;
   }
 
-  .md\:inset-448 {
-    top: 28rem;
-    right: 28rem;
-    bottom: 28rem;
-    left: 28rem;
+  .md\:overflow-x-scroll {
+    overflow: scroll;
   }
 
-  .md\:inset-512 {
-    top: 32rem;
-    right: 32rem;
-    bottom: 32rem;
-    left: 32rem;
+  .md\:overflow-y-auto {
+    overflow: auto;
   }
 
-  .md\:inset-2xs {
-    top: 0.125rem;
-    right: 0.125rem;
-    bottom: 0.125rem;
-    left: 0.125rem;
+  .md\:overflow-y-hidden {
+    overflow: hidden;
   }
 
-  .md\:inset-xs {
-    top: 0.25rem;
-    right: 0.25rem;
-    bottom: 0.25rem;
-    left: 0.25rem;
+  .md\:overflow-y-visible {
+    overflow: visible;
   }
 
-  .md\:inset-sm {
-    top: 0.5rem;
-    right: 0.5rem;
-    bottom: 0.5rem;
-    left: 0.5rem;
-  }
-
-  .md\:inset-md {
-    top: 1rem;
-    right: 1rem;
-    bottom: 1rem;
-    left: 1rem;
-  }
-
-  .md\:inset-lg {
-    top: 1.5rem;
-    right: 1.5rem;
-    bottom: 1.5rem;
-    left: 1.5rem;
-  }
-
-  .md\:inset-xl {
-    top: 3rem;
-    right: 3rem;
-    bottom: 3rem;
-    left: 3rem;
-  }
-
-  .md\:inset-2xl {
-    top: 4rem;
-    right: 4rem;
-    bottom: 4rem;
-    left: 4rem;
-  }
-
-  .md\:inset-3xl {
-    top: 5rem;
-    right: 5rem;
-    bottom: 5rem;
-    left: 5rem;
-  }
-
-  .md\:inset-4xl {
-    top: 10rem;
-    right: 10rem;
-    bottom: 10rem;
-    left: 10rem;
+  .md\:overflow-y-scroll {
+    overflow: scroll;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -3280,312 +2500,156 @@ h1 {
     display: none;
   }
 
-  .lg\:inset-1 {
-    top: 0.0625rem;
-    right: 0.0625rem;
-    bottom: 0.0625rem;
-    left: 0.0625rem;
+  .lg\:static {
+    position: static;
   }
 
-  .lg\:inset-2 {
-    top: 0.125rem;
-    right: 0.125rem;
-    bottom: 0.125rem;
-    left: 0.125rem;
+  .lg\:relative {
+    position: relative;
   }
 
-  .lg\:inset-4 {
-    top: 0.25rem;
-    right: 0.25rem;
-    bottom: 0.25rem;
-    left: 0.25rem;
+  .lg\:absolute {
+    position: absolute;
   }
 
-  .lg\:inset-6 {
-    top: 0.375rem;
-    right: 0.375rem;
-    bottom: 0.375rem;
-    left: 0.375rem;
+  .lg\:fixed {
+    position: fixed;
   }
 
-  .lg\:inset-8 {
-    top: 0.5rem;
-    right: 0.5rem;
-    bottom: 0.5rem;
-    left: 0.5rem;
+  .lg\:sticky {
+    position: sticky;
   }
 
-  .lg\:inset-10 {
-    top: 0.625rem;
-    right: 0.625rem;
-    bottom: 0.625rem;
-    left: 0.625rem;
+  .lg\:float-left {
+    float: left;
   }
 
-  .lg\:inset-12 {
-    top: 0.75rem;
-    right: 0.75rem;
-    bottom: 0.75rem;
-    left: 0.75rem;
+  .lg\:float-right {
+    float: right;
   }
 
-  .lg\:inset-14 {
-    top: 0.875rem;
-    right: 0.875rem;
-    bottom: 0.875rem;
-    left: 0.875rem;
+  .lg\:float-none {
+    float: none;
   }
 
-  .lg\:inset-16 {
-    top: 1rem;
-    right: 1rem;
-    bottom: 1rem;
-    left: 1rem;
+  .lg\:clear-left {
+    clear: left;
   }
 
-  .lg\:inset-20 {
-    top: 1.25rem;
-    right: 1.25rem;
-    bottom: 1.25rem;
-    left: 1.25rem;
+  .lg\:clear-right {
+    clear: right;
   }
 
-  .lg\:inset-24 {
-    top: 1.5rem;
-    right: 1.5rem;
-    bottom: 1.5rem;
-    left: 1.5rem;
+  .lg\:clear-both {
+    clear: both;
   }
 
-  .lg\:inset-28 {
-    top: 1.75rem;
-    right: 1.75rem;
-    bottom: 1.75rem;
-    left: 1.75rem;
+  .lg\:clear-none {
+    clear: none;
   }
 
-  .lg\:inset-32 {
-    top: 2rem;
-    right: 2rem;
-    bottom: 2rem;
-    left: 2rem;
+  .lg\:object-contain {
+    object-fit: contain;
   }
 
-  .lg\:inset-36 {
-    top: 2.25rem;
-    right: 2.25rem;
-    bottom: 2.25rem;
-    left: 2.25rem;
+  .lg\:object-cover {
+    object-fit: cover;
   }
 
-  .lg\:inset-40 {
-    top: 2.5rem;
-    right: 2.5rem;
-    bottom: 2.5rem;
-    left: 2.5rem;
+  .lg\:object-fill {
+    object-fit: fill;
   }
 
-  .lg\:inset-44 {
-    top: 2.75rem;
-    right: 2.75rem;
-    bottom: 2.75rem;
-    left: 2.75rem;
+  .lg\:object-none {
+    object-fit: none;
   }
 
-  .lg\:inset-48 {
-    top: 3rem;
-    right: 3rem;
-    bottom: 3rem;
-    left: 3rem;
+  .lg\:object-scale-down {
+    object-fit: scale-down;
   }
 
-  .lg\:inset-56 {
-    top: 3.5rem;
-    right: 3.5rem;
-    bottom: 3.5rem;
-    left: 3.5rem;
+  .lg\:object-bottom {
+    object-position: bottom;
   }
 
-  .lg\:inset-64 {
-    top: 4rem;
-    right: 4rem;
-    bottom: 4rem;
-    left: 4rem;
+  .lg\:object-center {
+    object-position: center;
   }
 
-  .lg\:inset-80 {
-    top: 5rem;
-    right: 5rem;
-    bottom: 5rem;
-    left: 5rem;
+  .lg\:object-left {
+    object-position: left;
   }
 
-  .lg\:inset-96 {
-    top: 6rem;
-    right: 6rem;
-    bottom: 6rem;
-    left: 6rem;
+  .lg\:object-left-bottom {
+    object-position: left-bottom;
   }
 
-  .lg\:inset-112 {
-    top: 7rem;
-    right: 7rem;
-    bottom: 7rem;
-    left: 7rem;
+  .lg\:object-left-top {
+    object-position: left-top;
   }
 
-  .lg\:inset-128 {
-    top: 8rem;
-    right: 8rem;
-    bottom: 8rem;
-    left: 8rem;
+  .lg\:object-right {
+    object-position: right;
   }
 
-  .lg\:inset-144 {
-    top: 9rem;
-    right: 9rem;
-    bottom: 9rem;
-    left: 9rem;
+  .lg\:object-right-bottom {
+    object-position: right-bottom;
   }
 
-  .lg\:inset-160 {
-    top: 10rem;
-    right: 10rem;
-    bottom: 10rem;
-    left: 10rem;
+  .lg\:object-right-top {
+    object-position: right-top;
   }
 
-  .lg\:inset-176 {
-    top: 11rem;
-    right: 11rem;
-    bottom: 11rem;
-    left: 11rem;
+  .lg\:object-top {
+    object-position: top;
   }
 
-  .lg\:inset-192 {
-    top: 12rem;
-    right: 12rem;
-    bottom: 12rem;
-    left: 12rem;
+  .lg\:overflow-auto {
+    overflow: auto;
   }
 
-  .lg\:inset-208 {
-    top: 13rem;
-    right: 13rem;
-    bottom: 13rem;
-    left: 13rem;
+  .lg\:overflow-hidden {
+    overflow: hidden;
   }
 
-  .lg\:inset-224 {
-    top: 14rem;
-    right: 14rem;
-    bottom: 14rem;
-    left: 14rem;
+  .lg\:overflow-visible {
+    overflow: visible;
   }
 
-  .lg\:inset-256 {
-    top: 16rem;
-    right: 16rem;
-    bottom: 16rem;
-    left: 16rem;
+  .lg\:overflow-scroll {
+    overflow: scroll;
   }
 
-  .lg\:inset-288 {
-    top: 18rem;
-    right: 18rem;
-    bottom: 18rem;
-    left: 18rem;
+  .lg\:overflow-x-auto {
+    overflow: auto;
   }
 
-  .lg\:inset-320 {
-    top: 20rem;
-    right: 20rem;
-    bottom: 20rem;
-    left: 20rem;
+  .lg\:overflow-x-hidden {
+    overflow: hidden;
   }
 
-  .lg\:inset-384 {
-    top: 24rem;
-    right: 24rem;
-    bottom: 24rem;
-    left: 24rem;
+  .lg\:overflow-x-visible {
+    overflow: visible;
   }
 
-  .lg\:inset-448 {
-    top: 28rem;
-    right: 28rem;
-    bottom: 28rem;
-    left: 28rem;
+  .lg\:overflow-x-scroll {
+    overflow: scroll;
   }
 
-  .lg\:inset-512 {
-    top: 32rem;
-    right: 32rem;
-    bottom: 32rem;
-    left: 32rem;
+  .lg\:overflow-y-auto {
+    overflow: auto;
   }
 
-  .lg\:inset-2xs {
-    top: 0.125rem;
-    right: 0.125rem;
-    bottom: 0.125rem;
-    left: 0.125rem;
+  .lg\:overflow-y-hidden {
+    overflow: hidden;
   }
 
-  .lg\:inset-xs {
-    top: 0.25rem;
-    right: 0.25rem;
-    bottom: 0.25rem;
-    left: 0.25rem;
+  .lg\:overflow-y-visible {
+    overflow: visible;
   }
 
-  .lg\:inset-sm {
-    top: 0.5rem;
-    right: 0.5rem;
-    bottom: 0.5rem;
-    left: 0.5rem;
-  }
-
-  .lg\:inset-md {
-    top: 1rem;
-    right: 1rem;
-    bottom: 1rem;
-    left: 1rem;
-  }
-
-  .lg\:inset-lg {
-    top: 1.5rem;
-    right: 1.5rem;
-    bottom: 1.5rem;
-    left: 1.5rem;
-  }
-
-  .lg\:inset-xl {
-    top: 3rem;
-    right: 3rem;
-    bottom: 3rem;
-    left: 3rem;
-  }
-
-  .lg\:inset-2xl {
-    top: 4rem;
-    right: 4rem;
-    bottom: 4rem;
-    left: 4rem;
-  }
-
-  .lg\:inset-3xl {
-    top: 5rem;
-    right: 5rem;
-    bottom: 5rem;
-    left: 5rem;
-  }
-
-  .lg\:inset-4xl {
-    top: 10rem;
-    right: 10rem;
-    bottom: 10rem;
-    left: 10rem;
+  .lg\:overflow-y-scroll {
+    overflow: scroll;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -3629,312 +2693,156 @@ h1 {
     display: none;
   }
 
-  .xl\:inset-1 {
-    top: 0.0625rem;
-    right: 0.0625rem;
-    bottom: 0.0625rem;
-    left: 0.0625rem;
+  .xl\:static {
+    position: static;
   }
 
-  .xl\:inset-2 {
-    top: 0.125rem;
-    right: 0.125rem;
-    bottom: 0.125rem;
-    left: 0.125rem;
+  .xl\:relative {
+    position: relative;
   }
 
-  .xl\:inset-4 {
-    top: 0.25rem;
-    right: 0.25rem;
-    bottom: 0.25rem;
-    left: 0.25rem;
+  .xl\:absolute {
+    position: absolute;
   }
 
-  .xl\:inset-6 {
-    top: 0.375rem;
-    right: 0.375rem;
-    bottom: 0.375rem;
-    left: 0.375rem;
+  .xl\:fixed {
+    position: fixed;
   }
 
-  .xl\:inset-8 {
-    top: 0.5rem;
-    right: 0.5rem;
-    bottom: 0.5rem;
-    left: 0.5rem;
+  .xl\:sticky {
+    position: sticky;
   }
 
-  .xl\:inset-10 {
-    top: 0.625rem;
-    right: 0.625rem;
-    bottom: 0.625rem;
-    left: 0.625rem;
+  .xl\:float-left {
+    float: left;
   }
 
-  .xl\:inset-12 {
-    top: 0.75rem;
-    right: 0.75rem;
-    bottom: 0.75rem;
-    left: 0.75rem;
+  .xl\:float-right {
+    float: right;
   }
 
-  .xl\:inset-14 {
-    top: 0.875rem;
-    right: 0.875rem;
-    bottom: 0.875rem;
-    left: 0.875rem;
+  .xl\:float-none {
+    float: none;
   }
 
-  .xl\:inset-16 {
-    top: 1rem;
-    right: 1rem;
-    bottom: 1rem;
-    left: 1rem;
+  .xl\:clear-left {
+    clear: left;
   }
 
-  .xl\:inset-20 {
-    top: 1.25rem;
-    right: 1.25rem;
-    bottom: 1.25rem;
-    left: 1.25rem;
+  .xl\:clear-right {
+    clear: right;
   }
 
-  .xl\:inset-24 {
-    top: 1.5rem;
-    right: 1.5rem;
-    bottom: 1.5rem;
-    left: 1.5rem;
+  .xl\:clear-both {
+    clear: both;
   }
 
-  .xl\:inset-28 {
-    top: 1.75rem;
-    right: 1.75rem;
-    bottom: 1.75rem;
-    left: 1.75rem;
+  .xl\:clear-none {
+    clear: none;
   }
 
-  .xl\:inset-32 {
-    top: 2rem;
-    right: 2rem;
-    bottom: 2rem;
-    left: 2rem;
+  .xl\:object-contain {
+    object-fit: contain;
   }
 
-  .xl\:inset-36 {
-    top: 2.25rem;
-    right: 2.25rem;
-    bottom: 2.25rem;
-    left: 2.25rem;
+  .xl\:object-cover {
+    object-fit: cover;
   }
 
-  .xl\:inset-40 {
-    top: 2.5rem;
-    right: 2.5rem;
-    bottom: 2.5rem;
-    left: 2.5rem;
+  .xl\:object-fill {
+    object-fit: fill;
   }
 
-  .xl\:inset-44 {
-    top: 2.75rem;
-    right: 2.75rem;
-    bottom: 2.75rem;
-    left: 2.75rem;
+  .xl\:object-none {
+    object-fit: none;
   }
 
-  .xl\:inset-48 {
-    top: 3rem;
-    right: 3rem;
-    bottom: 3rem;
-    left: 3rem;
+  .xl\:object-scale-down {
+    object-fit: scale-down;
   }
 
-  .xl\:inset-56 {
-    top: 3.5rem;
-    right: 3.5rem;
-    bottom: 3.5rem;
-    left: 3.5rem;
+  .xl\:object-bottom {
+    object-position: bottom;
   }
 
-  .xl\:inset-64 {
-    top: 4rem;
-    right: 4rem;
-    bottom: 4rem;
-    left: 4rem;
+  .xl\:object-center {
+    object-position: center;
   }
 
-  .xl\:inset-80 {
-    top: 5rem;
-    right: 5rem;
-    bottom: 5rem;
-    left: 5rem;
+  .xl\:object-left {
+    object-position: left;
   }
 
-  .xl\:inset-96 {
-    top: 6rem;
-    right: 6rem;
-    bottom: 6rem;
-    left: 6rem;
+  .xl\:object-left-bottom {
+    object-position: left-bottom;
   }
 
-  .xl\:inset-112 {
-    top: 7rem;
-    right: 7rem;
-    bottom: 7rem;
-    left: 7rem;
+  .xl\:object-left-top {
+    object-position: left-top;
   }
 
-  .xl\:inset-128 {
-    top: 8rem;
-    right: 8rem;
-    bottom: 8rem;
-    left: 8rem;
+  .xl\:object-right {
+    object-position: right;
   }
 
-  .xl\:inset-144 {
-    top: 9rem;
-    right: 9rem;
-    bottom: 9rem;
-    left: 9rem;
+  .xl\:object-right-bottom {
+    object-position: right-bottom;
   }
 
-  .xl\:inset-160 {
-    top: 10rem;
-    right: 10rem;
-    bottom: 10rem;
-    left: 10rem;
+  .xl\:object-right-top {
+    object-position: right-top;
   }
 
-  .xl\:inset-176 {
-    top: 11rem;
-    right: 11rem;
-    bottom: 11rem;
-    left: 11rem;
+  .xl\:object-top {
+    object-position: top;
   }
 
-  .xl\:inset-192 {
-    top: 12rem;
-    right: 12rem;
-    bottom: 12rem;
-    left: 12rem;
+  .xl\:overflow-auto {
+    overflow: auto;
   }
 
-  .xl\:inset-208 {
-    top: 13rem;
-    right: 13rem;
-    bottom: 13rem;
-    left: 13rem;
+  .xl\:overflow-hidden {
+    overflow: hidden;
   }
 
-  .xl\:inset-224 {
-    top: 14rem;
-    right: 14rem;
-    bottom: 14rem;
-    left: 14rem;
+  .xl\:overflow-visible {
+    overflow: visible;
   }
 
-  .xl\:inset-256 {
-    top: 16rem;
-    right: 16rem;
-    bottom: 16rem;
-    left: 16rem;
+  .xl\:overflow-scroll {
+    overflow: scroll;
   }
 
-  .xl\:inset-288 {
-    top: 18rem;
-    right: 18rem;
-    bottom: 18rem;
-    left: 18rem;
+  .xl\:overflow-x-auto {
+    overflow: auto;
   }
 
-  .xl\:inset-320 {
-    top: 20rem;
-    right: 20rem;
-    bottom: 20rem;
-    left: 20rem;
+  .xl\:overflow-x-hidden {
+    overflow: hidden;
   }
 
-  .xl\:inset-384 {
-    top: 24rem;
-    right: 24rem;
-    bottom: 24rem;
-    left: 24rem;
+  .xl\:overflow-x-visible {
+    overflow: visible;
   }
 
-  .xl\:inset-448 {
-    top: 28rem;
-    right: 28rem;
-    bottom: 28rem;
-    left: 28rem;
+  .xl\:overflow-x-scroll {
+    overflow: scroll;
   }
 
-  .xl\:inset-512 {
-    top: 32rem;
-    right: 32rem;
-    bottom: 32rem;
-    left: 32rem;
+  .xl\:overflow-y-auto {
+    overflow: auto;
   }
 
-  .xl\:inset-2xs {
-    top: 0.125rem;
-    right: 0.125rem;
-    bottom: 0.125rem;
-    left: 0.125rem;
+  .xl\:overflow-y-hidden {
+    overflow: hidden;
   }
 
-  .xl\:inset-xs {
-    top: 0.25rem;
-    right: 0.25rem;
-    bottom: 0.25rem;
-    left: 0.25rem;
+  .xl\:overflow-y-visible {
+    overflow: visible;
   }
 
-  .xl\:inset-sm {
-    top: 0.5rem;
-    right: 0.5rem;
-    bottom: 0.5rem;
-    left: 0.5rem;
-  }
-
-  .xl\:inset-md {
-    top: 1rem;
-    right: 1rem;
-    bottom: 1rem;
-    left: 1rem;
-  }
-
-  .xl\:inset-lg {
-    top: 1.5rem;
-    right: 1.5rem;
-    bottom: 1.5rem;
-    left: 1.5rem;
-  }
-
-  .xl\:inset-xl {
-    top: 3rem;
-    right: 3rem;
-    bottom: 3rem;
-    left: 3rem;
-  }
-
-  .xl\:inset-2xl {
-    top: 4rem;
-    right: 4rem;
-    bottom: 4rem;
-    left: 4rem;
-  }
-
-  .xl\:inset-3xl {
-    top: 5rem;
-    right: 5rem;
-    bottom: 5rem;
-    left: 5rem;
-  }
-
-  .xl\:inset-4xl {
-    top: 10rem;
-    right: 10rem;
-    bottom: 10rem;
-    left: 10rem;
+  .xl\:overflow-y-scroll {
+    overflow: scroll;
   }
 }
 @media screen and (min-width: 1920px) {
@@ -3978,312 +2886,156 @@ h1 {
     display: none;
   }
 
-  .\32 xl\:inset-1 {
-    top: 0.0625rem;
-    right: 0.0625rem;
-    bottom: 0.0625rem;
-    left: 0.0625rem;
+  .\32 xl\:static {
+    position: static;
   }
 
-  .\32 xl\:inset-2 {
-    top: 0.125rem;
-    right: 0.125rem;
-    bottom: 0.125rem;
-    left: 0.125rem;
+  .\32 xl\:relative {
+    position: relative;
   }
 
-  .\32 xl\:inset-4 {
-    top: 0.25rem;
-    right: 0.25rem;
-    bottom: 0.25rem;
-    left: 0.25rem;
+  .\32 xl\:absolute {
+    position: absolute;
   }
 
-  .\32 xl\:inset-6 {
-    top: 0.375rem;
-    right: 0.375rem;
-    bottom: 0.375rem;
-    left: 0.375rem;
+  .\32 xl\:fixed {
+    position: fixed;
   }
 
-  .\32 xl\:inset-8 {
-    top: 0.5rem;
-    right: 0.5rem;
-    bottom: 0.5rem;
-    left: 0.5rem;
+  .\32 xl\:sticky {
+    position: sticky;
   }
 
-  .\32 xl\:inset-10 {
-    top: 0.625rem;
-    right: 0.625rem;
-    bottom: 0.625rem;
-    left: 0.625rem;
+  .\32 xl\:float-left {
+    float: left;
   }
 
-  .\32 xl\:inset-12 {
-    top: 0.75rem;
-    right: 0.75rem;
-    bottom: 0.75rem;
-    left: 0.75rem;
+  .\32 xl\:float-right {
+    float: right;
   }
 
-  .\32 xl\:inset-14 {
-    top: 0.875rem;
-    right: 0.875rem;
-    bottom: 0.875rem;
-    left: 0.875rem;
+  .\32 xl\:float-none {
+    float: none;
   }
 
-  .\32 xl\:inset-16 {
-    top: 1rem;
-    right: 1rem;
-    bottom: 1rem;
-    left: 1rem;
+  .\32 xl\:clear-left {
+    clear: left;
   }
 
-  .\32 xl\:inset-20 {
-    top: 1.25rem;
-    right: 1.25rem;
-    bottom: 1.25rem;
-    left: 1.25rem;
+  .\32 xl\:clear-right {
+    clear: right;
   }
 
-  .\32 xl\:inset-24 {
-    top: 1.5rem;
-    right: 1.5rem;
-    bottom: 1.5rem;
-    left: 1.5rem;
+  .\32 xl\:clear-both {
+    clear: both;
   }
 
-  .\32 xl\:inset-28 {
-    top: 1.75rem;
-    right: 1.75rem;
-    bottom: 1.75rem;
-    left: 1.75rem;
+  .\32 xl\:clear-none {
+    clear: none;
   }
 
-  .\32 xl\:inset-32 {
-    top: 2rem;
-    right: 2rem;
-    bottom: 2rem;
-    left: 2rem;
+  .\32 xl\:object-contain {
+    object-fit: contain;
   }
 
-  .\32 xl\:inset-36 {
-    top: 2.25rem;
-    right: 2.25rem;
-    bottom: 2.25rem;
-    left: 2.25rem;
+  .\32 xl\:object-cover {
+    object-fit: cover;
   }
 
-  .\32 xl\:inset-40 {
-    top: 2.5rem;
-    right: 2.5rem;
-    bottom: 2.5rem;
-    left: 2.5rem;
+  .\32 xl\:object-fill {
+    object-fit: fill;
   }
 
-  .\32 xl\:inset-44 {
-    top: 2.75rem;
-    right: 2.75rem;
-    bottom: 2.75rem;
-    left: 2.75rem;
+  .\32 xl\:object-none {
+    object-fit: none;
   }
 
-  .\32 xl\:inset-48 {
-    top: 3rem;
-    right: 3rem;
-    bottom: 3rem;
-    left: 3rem;
+  .\32 xl\:object-scale-down {
+    object-fit: scale-down;
   }
 
-  .\32 xl\:inset-56 {
-    top: 3.5rem;
-    right: 3.5rem;
-    bottom: 3.5rem;
-    left: 3.5rem;
+  .\32 xl\:object-bottom {
+    object-position: bottom;
   }
 
-  .\32 xl\:inset-64 {
-    top: 4rem;
-    right: 4rem;
-    bottom: 4rem;
-    left: 4rem;
+  .\32 xl\:object-center {
+    object-position: center;
   }
 
-  .\32 xl\:inset-80 {
-    top: 5rem;
-    right: 5rem;
-    bottom: 5rem;
-    left: 5rem;
+  .\32 xl\:object-left {
+    object-position: left;
   }
 
-  .\32 xl\:inset-96 {
-    top: 6rem;
-    right: 6rem;
-    bottom: 6rem;
-    left: 6rem;
+  .\32 xl\:object-left-bottom {
+    object-position: left-bottom;
   }
 
-  .\32 xl\:inset-112 {
-    top: 7rem;
-    right: 7rem;
-    bottom: 7rem;
-    left: 7rem;
+  .\32 xl\:object-left-top {
+    object-position: left-top;
   }
 
-  .\32 xl\:inset-128 {
-    top: 8rem;
-    right: 8rem;
-    bottom: 8rem;
-    left: 8rem;
+  .\32 xl\:object-right {
+    object-position: right;
   }
 
-  .\32 xl\:inset-144 {
-    top: 9rem;
-    right: 9rem;
-    bottom: 9rem;
-    left: 9rem;
+  .\32 xl\:object-right-bottom {
+    object-position: right-bottom;
   }
 
-  .\32 xl\:inset-160 {
-    top: 10rem;
-    right: 10rem;
-    bottom: 10rem;
-    left: 10rem;
+  .\32 xl\:object-right-top {
+    object-position: right-top;
   }
 
-  .\32 xl\:inset-176 {
-    top: 11rem;
-    right: 11rem;
-    bottom: 11rem;
-    left: 11rem;
+  .\32 xl\:object-top {
+    object-position: top;
   }
 
-  .\32 xl\:inset-192 {
-    top: 12rem;
-    right: 12rem;
-    bottom: 12rem;
-    left: 12rem;
+  .\32 xl\:overflow-auto {
+    overflow: auto;
   }
 
-  .\32 xl\:inset-208 {
-    top: 13rem;
-    right: 13rem;
-    bottom: 13rem;
-    left: 13rem;
+  .\32 xl\:overflow-hidden {
+    overflow: hidden;
   }
 
-  .\32 xl\:inset-224 {
-    top: 14rem;
-    right: 14rem;
-    bottom: 14rem;
-    left: 14rem;
+  .\32 xl\:overflow-visible {
+    overflow: visible;
   }
 
-  .\32 xl\:inset-256 {
-    top: 16rem;
-    right: 16rem;
-    bottom: 16rem;
-    left: 16rem;
+  .\32 xl\:overflow-scroll {
+    overflow: scroll;
   }
 
-  .\32 xl\:inset-288 {
-    top: 18rem;
-    right: 18rem;
-    bottom: 18rem;
-    left: 18rem;
+  .\32 xl\:overflow-x-auto {
+    overflow: auto;
   }
 
-  .\32 xl\:inset-320 {
-    top: 20rem;
-    right: 20rem;
-    bottom: 20rem;
-    left: 20rem;
+  .\32 xl\:overflow-x-hidden {
+    overflow: hidden;
   }
 
-  .\32 xl\:inset-384 {
-    top: 24rem;
-    right: 24rem;
-    bottom: 24rem;
-    left: 24rem;
+  .\32 xl\:overflow-x-visible {
+    overflow: visible;
   }
 
-  .\32 xl\:inset-448 {
-    top: 28rem;
-    right: 28rem;
-    bottom: 28rem;
-    left: 28rem;
+  .\32 xl\:overflow-x-scroll {
+    overflow: scroll;
   }
 
-  .\32 xl\:inset-512 {
-    top: 32rem;
-    right: 32rem;
-    bottom: 32rem;
-    left: 32rem;
+  .\32 xl\:overflow-y-auto {
+    overflow: auto;
   }
 
-  .\32 xl\:inset-2xs {
-    top: 0.125rem;
-    right: 0.125rem;
-    bottom: 0.125rem;
-    left: 0.125rem;
+  .\32 xl\:overflow-y-hidden {
+    overflow: hidden;
   }
 
-  .\32 xl\:inset-xs {
-    top: 0.25rem;
-    right: 0.25rem;
-    bottom: 0.25rem;
-    left: 0.25rem;
+  .\32 xl\:overflow-y-visible {
+    overflow: visible;
   }
 
-  .\32 xl\:inset-sm {
-    top: 0.5rem;
-    right: 0.5rem;
-    bottom: 0.5rem;
-    left: 0.5rem;
-  }
-
-  .\32 xl\:inset-md {
-    top: 1rem;
-    right: 1rem;
-    bottom: 1rem;
-    left: 1rem;
-  }
-
-  .\32 xl\:inset-lg {
-    top: 1.5rem;
-    right: 1.5rem;
-    bottom: 1.5rem;
-    left: 1.5rem;
-  }
-
-  .\32 xl\:inset-xl {
-    top: 3rem;
-    right: 3rem;
-    bottom: 3rem;
-    left: 3rem;
-  }
-
-  .\32 xl\:inset-2xl {
-    top: 4rem;
-    right: 4rem;
-    bottom: 4rem;
-    left: 4rem;
-  }
-
-  .\32 xl\:inset-3xl {
-    top: 5rem;
-    right: 5rem;
-    bottom: 5rem;
-    left: 5rem;
-  }
-
-  .\32 xl\:inset-4xl {
-    top: 10rem;
-    right: 10rem;
-    bottom: 10rem;
-    left: 10rem;
+  .\32 xl\:overflow-y-scroll {
+    overflow: scroll;
   }
 }
 .centered {

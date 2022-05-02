@@ -4,7 +4,11 @@
 
 @use 'sass:map';
 @use 'sass:list';
+@use 'sass:string';
+@use 'sass:math';
+@use 'sass:meta';
 
+@use '../helpers/type' as *;
 @use 'config' as *;
 @use 'theme' as *;
 
@@ -16,13 +20,46 @@
 $negative-spacing: () !default;
 @each $key, $value in theme(spacing) {
   $map: ();
-  $map: map.merge($map, (n#{$key}: -$value));
+  $map: map.merge(
+    $map,
+    (
+      $key: -$value,
+    )
+  );
   $negative-spacing: map.merge($negative-spacing, $map);
 }
 
 // --------------------------------
 //   Functions
 // --------------------------------
+
+// Check if the $key is a negative spacing value
+@function is-negative-spacing($key) {
+  @if meta.type-of($key) == 'string' {
+    @if string.length($key) >= 2 and string.slice($key, 1, 1) == '-' {
+      $key: string.slice($key, 2);
+      @return map.has-key($negative-spacing, $key);
+    }
+  } @else if meta.type-of($key) == 'number' {
+    @if $key < 0 and map.has-key($negative-spacing, math.abs($key)) {
+      @return map.has-key($negative-spacing, math.abs($key));
+    }
+  }
+  @return false;
+}
+
+// Get a negative spacing value
+@function negative-spacing($key) {
+  @if meta.type-of($key) == 'string' {
+    @if string.length($key) >= 2 and string.slice($key, 1, 1) == '-' {
+      $value: map.get($negative-spacing, string.slice($key, 2));
+      @return $value;
+    }
+  } @else if meta.type-of($key) == 'number' {
+    $value: map.get($negative-spacing, math.abs($key));
+    @return $value;
+  }
+}
 
 /// Return a spacing value(s) from the theme
 ///
@@ -37,8 +74,8 @@ $negative-spacing: () !default;
     $result: 0;
   } @else if theme-has-key(spacing, $key) {
     $result: theme(spacing, $key);
-  } @else if map.has-key($negative-spacing, $key) {
-    $result: map.get($negative-spacing, $key);
+  } @else if is-negative-spacing($key) {
+    $result: negative-spacing($key);
   } @else {
     @error "Key [#{$key}] is not a valid theme spacing.";
   }
@@ -50,8 +87,8 @@ $negative-spacing: () !default;
     } @else if theme-has-key(spacing, $key) {
       $value: theme(spacing, $key);
       $result: list.append($result, $value);
-    } @else if map.has-key($negative-spacing, $key) {
-      $value: map.get($negative-spacing, $key);
+    } @else if is-negative-spacing($key) {
+      $value: negative-spacing($key);
       $result: list.append($result, $value);
     } @else {
       @error "Key(s) [#{$keys}] are not valid theme spacings.";

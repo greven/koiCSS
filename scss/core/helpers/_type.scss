@@ -4,6 +4,10 @@
 
 @use 'sass:meta';
 
+@function to-string($value) {
+  @return meta.inspect($value);
+}
+
 @function to-bool($value) {
   @return not(not $value or $value == '' or $value == 0 or $value == ());
 }
