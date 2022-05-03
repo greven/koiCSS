@@ -1,0 +1,19 @@
+// --------------------------------
+//   Shadow Utilities
+// --------------------------------
+
+@use '../core/generators' as *;
+@use '../core' as *;
+
+$utility-classes: (
+  'shadow': (
+    property: box-shadow,
+    class: shadow,
+    state: hover focus,
+    values: theme(shadow),
+  ),
+);
+
+@mixin utilities {
+  @include generate-utilities($utility-classes);
+}

@@ -2,8 +2,12 @@
 //   CSS Custom Props Generator (vars)
 // ------------------------------------
 
+@use 'sass:list';
+
 @use '../helpers/internal' as *;
 @use '../helpers/color' as *;
+
+$ignore-accent-colors: (white black);
 
 // --------------------------------
 //   Mixins
@@ -25,8 +29,10 @@
     @include color-custom-prop($property, $color, $value, $suffix);
 
     // Accent colors
-    .accent-#{'' + $color} {
-      @include hsl-color-custom-prop(accent, null, $value, $suffix: $suffix);
+    @if not list.index($ignore-accent-colors, $color) {
+      .accent-#{'' + $color} {
+        @include hsl-color-custom-prop(accent, null, $value, $suffix: $suffix);
+      }
     }
   }
   /*! purgecss end ignore */

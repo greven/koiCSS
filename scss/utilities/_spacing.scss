@@ -6,6 +6,12 @@
 @use '../core' as *;
 
 $utility-classes: (
+  'gap': (
+    property: gap,
+    class: gap,
+    responsive: true,
+    values: theme(spacing),
+  ),
   'margin': (
     property: margin,
     class: m,

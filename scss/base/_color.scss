@@ -11,7 +11,9 @@ $custom-prop-name: c;
 // --------------------------------
 
 @mixin vars {
+  $colors: theme(colors);
+
   :root {
-    @include generate-css-color-vars(theme(colors), $custom-prop-name);
+    @include generate-css-color-vars($colors, $custom-prop-name);
   }
 }

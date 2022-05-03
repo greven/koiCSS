@@ -38,6 +38,10 @@ $util-glue: config(utility-glue);
     $property-class: str-escape($property-class);
 
     $property-class-modifier: if($key, if($property-class == '', '', '-') + $key, '');
+    $property-class-modifier: str-escape($property-class-modifier);
+
+    // Pseudo classes
+    $state: if(map.has-key($utility-map, state), map.get($utility-map, state), ());
 
     $local-vars: map-get($utility-map, local-vars);
 
@@ -60,6 +64,23 @@ $util-glue: config(utility-glue);
           }
 
           #{$property}: $value if(config(important-utilities), !important, null);
+        }
+      }
+
+      // Pseudo States variants
+      @each $pseudo in $state {
+        $infix: str-escape(#{'' + $pseudo + $util-glue});
+
+        .#{$infix + $property-class + $property-class-modifier}:#{$pseudo} {
+          @each $property in $properties {
+            @if $local-vars {
+              @each $local-var, $variable in $local-vars {
+                --#{$prefix}#{$local-var}: #{$variable};
+              }
+            }
+
+            #{$property}: $value if(config(important-utilities), !important, null);
+          }
         }
       }
     }

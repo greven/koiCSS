@@ -1,0 +1,107 @@
+// --------------------------------
+//   Sizing Utilities
+// --------------------------------
+
+@use 'sass:map';
+
+@use '../theme/tokens/spacing' as *;
+@use '../core/generators' as *;
+@use '../core' as *;
+
+$utility-classes: (
+  'width': (
+    property: width,
+    class: w,
+    responsive: true,
+    values:
+      map.merge(
+        theme(sizes),
+        (
+          auto: auto,
+          screen: 100vw,
+          min: min-content,
+          max: max-content,
+          fit: fit-content,
+        )
+      ),
+  ),
+  'min-width': (
+    property: min-width,
+    class: min-w,
+    responsive: true,
+    values: (
+      0: 0,
+      full: 100%,
+      min: min-content,
+      max: max-content,
+      fit: fit-content,
+    ),
+  ),
+  'max-width': (
+    property: max-width,
+    class: max-w,
+    responsive: true,
+    values:
+      map.merge(
+        theme(screens),
+        (
+          0: 0,
+          none: none,
+          full: 100%,
+          min: min-content,
+          max: max-content,
+          fit: fit-content,
+        )
+      ),
+  ),
+  'height': (
+    property: height,
+    class: h,
+    responsive: true,
+    values:
+      map.merge(
+        theme(sizes),
+        (
+          auto: auto,
+          screen: 100vh,
+          min: min-content,
+          max: max-content,
+          fit: fit-content,
+        )
+      ),
+  ),
+  'min-height': (
+    property: min-height,
+    class: min-h,
+    responsive: true,
+    values: (
+      0: 0,
+      full: 100%,
+      screen: 100vh,
+      min: min-content,
+      max: max-content,
+      fit: fit-content,
+    ),
+  ),
+  'max-height': (
+    property: max-height,
+    class: max-h,
+    responsive: true,
+    values:
+      map.merge(
+        $spacing-scale,
+        (
+          0: 0,
+          full: 100%,
+          screen: 100vh,
+          min: min-content,
+          max: max-content,
+          fit: fit-content,
+        )
+      ),
+  ),
+);
+
+@mixin utilities {
+  @include generate-utilities($utility-classes);
+}

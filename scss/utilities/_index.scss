@@ -1,9 +1,13 @@
 @use 'layout';
+@use 'shadow';
+@use 'size';
 @use 'spacing';
 @use 'visibility';
 
 @mixin utilities {
   @include layout.utilities();
+  @include shadow.utilities();
+  @include size.utilities();
   @include spacing.utilities();
   @include visibility.utilities();
 }
