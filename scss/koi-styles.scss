@@ -1,6 +1,6 @@
 @use 'koi' as *;
 
-@include theme();
-@include base();
-@include components();
-@include utilities();
+@include theme;
+@include base;
+@include components;
+@include utilities;
