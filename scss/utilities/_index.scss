@@ -1,12 +1,20 @@
+@use 'background';
+@use 'border';
+@use 'effects';
+@use 'flex';
+@use 'grid';
 @use 'layout';
-@use 'shadow';
 @use 'size';
 @use 'spacing';
+@use 'typography';
 @use 'visibility';
 
 @mixin utilities {
+  @include background.utilities();
+  @include effects.utilities();
+  @include flex.utilities();
+  @include grid.utilities();
   @include layout.utilities();
-  @include shadow.utilities();
   @include size.utilities();
   @include spacing.utilities();
   @include visibility.utilities();

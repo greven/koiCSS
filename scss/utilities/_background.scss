@@ -1,0 +1,23 @@
+// --------------------------------
+//   Background Utilities
+// --------------------------------
+
+@use '../core/generators' as *;
+@use '../core' as *;
+@use 'support';
+
+$utility-classes: (
+  'background-color': (
+    property: background-color,
+    class: bg,
+    state: hover focus,
+    local-vars: (
+      'koi-bg-opacity': 1,
+    ),
+    values: support.$utility-colors-map,
+  ),
+);
+
+@mixin utilities {
+  @include generate-utilities($utility-classes);
+}

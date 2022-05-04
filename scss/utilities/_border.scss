@@ -1,0 +1,12 @@
+// --------------------------------
+//   Border Utilities
+// --------------------------------
+
+@use '../core/generators' as *;
+@use '../core' as *;
+
+$utility-classes: ();
+
+@mixin utilities {
+  @include generate-utilities($utility-classes);
+}

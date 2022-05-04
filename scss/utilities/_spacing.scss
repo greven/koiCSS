@@ -6,12 +6,6 @@
 @use '../core' as *;
 
 $utility-classes: (
-  'gap': (
-    property: gap,
-    class: gap,
-    responsive: true,
-    values: theme(spacing),
-  ),
   'margin': (
     property: margin,
     class: m,
@@ -177,6 +171,24 @@ $utility-classes: (
   'padding-left': (
     property: padding-left,
     class: pl,
+    responsive: true,
+    values: theme(spacing),
+  ),
+  'gap': (
+    property: gap,
+    class: gap,
+    responsive: true,
+    values: theme(spacing),
+  ),
+  'gap-x': (
+    property: column-gap,
+    class: gap-x,
+    responsive: true,
+    values: theme(spacing),
+  ),
+  'gap-y': (
+    property: row-gap,
+    class: gap-y,
     responsive: true,
     values: theme(spacing),
   ),

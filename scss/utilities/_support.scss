@@ -1,0 +1,43 @@
+// ---------------------------------
+//   Support Helpers and Variables
+// ---------------------------------
+
+@use 'sass:map';
+@use 'sass:meta';
+
+@use '../core' as *;
+
+$-default-shade: config(fallbacks, colors);
+
+// Flatten theme colors for utility generation
+$utility-colors-map: ();
+@each $color, $shades-or-value in theme(colors) {
+  // Simple colors
+  @if meta.type-of($shades-or-value) == 'color' {
+    $utility-colors-map: map.merge(
+      $utility-colors-map,
+      (
+        '#{$color}': $shades-or-value,
+      )
+    );
+  } @else {
+    // Color shades
+    @each $color-shade, $value in $shades-or-value {
+      $utility-colors-map: map.merge(
+        $utility-colors-map,
+        (
+          '#{$color}-#{$color-shade}': $value,
+        )
+      );
+      // Alias default color shade
+      @if $color-shade == $-default-shade {
+        $utility-colors-map: map.merge(
+          $utility-colors-map,
+          (
+            '#{$color}': $value,
+          )
+        );
+      }
+    }
+  }
+}
