@@ -17,7 +17,7 @@ $util-glue: config(utility-glue);
 // Create multiple utilities from an utility map.
 @mixin -utility-class($utility-map, $breakpoint: null) {
   $values: map.get($utility-map, values);
-  $prefix: config(prefix) + '-';
+  $prefix: koi-;
 
   // If the values are a list or string, convert it into a map
   @if meta.type-of($values) == 'string' or meta.type-of(list.nth($values, 1)) != 'list' {

@@ -12,9 +12,9 @@ $utility-classes: (
     class: bg,
     state: hover focus,
     local-vars: (
-      'koi-bg-opacity': 1,
+      'bg-opacity': 1,
     ),
-    values: support.$utility-colors-map,
+    values: support.$utility-bg-colors-map,
   ),
 );
 
