@@ -2,6 +2,8 @@
 //   Background Utilities
 // --------------------------------
 
+@use 'sass:map';
+
 @use '../core/generators' as *;
 @use '../core' as *;
 @use 'support';
@@ -14,7 +16,15 @@ $utility-classes: (
     local-vars: (
       'bg-opacity': 1,
     ),
-    values: support.$utility-bg-colors-map,
+    values:
+      map.merge(
+        (
+          current: currentColor,
+          inherit: inherit,
+          transparent: transparent,
+        ),
+        support.$utility-bg-colors-map
+      ),
   ),
 );
 

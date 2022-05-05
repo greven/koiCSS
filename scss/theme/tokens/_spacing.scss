@@ -49,21 +49,20 @@ $spacing-scale: (
   512: rem(512),
 ) !default;
 
-// Spacing (marging, padding)
-$spacing: map.merge(
-  $spacing-scale,
-  (
-    2xs: $spacer * 0.125,
-    xs: $spacer * 0.25,
-    sm: $spacer * 0.5,
-    md: $spacer,
-    lg: $spacer * 1.5,
-    xl: $spacer * 3,
-    2xl: $spacer * 4,
-    3xl: $spacer * 5,
-    4xl: $spacer * 10,
-  )
+$spacers: (
+  2xs: $spacer * 0.125,
+  xs: $spacer * 0.25,
+  sm: $spacer * 0.5,
+  md: $spacer,
+  lg: $spacer * 1.5,
+  xl: $spacer * 3,
+  2xl: $spacer * 4,
+  3xl: $spacer * 5,
+  4xl: $spacer * 10,
 );
+
+// Spacing (marging, padding)
+$spacing: map.merge($spacing-scale, $spacers);
 
 // Sizes (width, height...)
 $sizes: map.merge(

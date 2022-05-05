@@ -100,3 +100,47 @@
     }
   }
 }
+
+@mixin stack($direction: row, $spacer: md, $reverse: false) {
+  $direction: if($reverse, #{$direction}-reverse, $direction);
+  $spacer: if(theme-has-key(spacing, $spacer), spacing($spacer), $spacer);
+
+  display: flex;
+  flex-direction: $direction;
+  justify-content: flex-start;
+  @if $direction == row {
+    align-items: center;
+  } @else {
+    align-items: initial;
+  }
+
+  & > * {
+    @if $direction == row {
+      margin-top: 0;
+      margin-bottom: 0;
+    } @else {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  & > * + * {
+    @if $direction == row {
+      @if $reverse {
+        margin-left: 0;
+        margin-right: var(--koi-spacer, $spacer);
+      } @else {
+        margin-left: var(--koi-spacer, $spacer);
+        margin-right: 0;
+      }
+    } @else {
+      @if $reverse {
+        margin-top: 0;
+        margin-bottom: var(--koi-spacer, $spacer);
+      } @else {
+        margin-top: var(--koi-spacer, $spacer);
+        margin-bottom: 0;
+      }
+    }
+  }
+}

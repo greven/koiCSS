@@ -141,7 +141,7 @@ $negative-spacing: () !default;
 }
 
 @mixin margin-top($key) {
-  margin: spacing($key);
+  margin-top: spacing($key);
 }
 
 @mixin margin-bottom($key) {
@@ -201,7 +201,7 @@ $negative-spacing: () !default;
 }
 
 @mixin padding-top($key) {
-  padding: spacing($key);
+  padding-top: spacing($key);
 }
 
 @mixin padding-bottom($key) {

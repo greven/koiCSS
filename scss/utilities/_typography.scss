@@ -2,10 +2,37 @@
 //   Typography Utilities
 // --------------------------------
 
+@use 'sass:map';
+
 @use '../core/generators' as *;
 @use '../core' as *;
+@use 'support';
 
-$utility-classes: ();
+$utility-classes: (
+  'color': (
+    property: color,
+    class: text,
+    state: hover focus,
+    local-vars: (
+      'text-opacity': 1,
+    ),
+    values:
+      map.merge(
+        (
+          current: currentColor,
+          inherit: inherit,
+          transparent: transparent,
+        ),
+        support.$utility-text-colors-map
+      ),
+  ),
+  'text-align': (
+    property: text-align,
+    class: text,
+    responsive: true,
+    values: left right center justify,
+  ),
+);
 
 @mixin utilities {
   @include generate-utilities($utility-classes);

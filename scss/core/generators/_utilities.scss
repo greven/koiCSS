@@ -14,6 +14,18 @@
 
 $util-glue: config(utility-glue);
 
+@mixin -create-class($properties, $local-vars, $prefix, $value) {
+  @each $property in $properties {
+    @if $local-vars {
+      @each $local-var, $variable in $local-vars {
+        --#{$prefix}#{$local-var}: #{$variable};
+      }
+    }
+
+    #{$property}: $value if(config(important-utilities), !important, null);
+  }
+}
+
 // Create multiple utilities from an utility map.
 @mixin -utility-class($utility-map, $breakpoint: null) {
   $values: map.get($utility-map, values);
@@ -26,6 +38,7 @@ $util-glue: config(utility-glue);
 
   @each $key, $value in $values {
     $properties: map.get($utility-map, property);
+    $default-value: if(map.has-key($utility-map, default), map.get($utility-map, default), null);
 
     // Multiple properties are possible
     @if meta.type-of($properties) == 'string' {
@@ -55,32 +68,30 @@ $util-glue: config(utility-glue);
         $infix: if(mq.min($breakpoint) == null, '', str-escape(#{'' + $breakpoint + $util-glue}));
       }
 
-      .#{$infix + $property-class + $property-class-modifier} {
-        @each $property in $properties {
-          @if $local-vars {
-            @each $local-var, $variable in $local-vars {
-              --#{$prefix}#{$local-var}: #{$variable};
-            }
-          }
-
-          #{$property}: $value if(config(important-utilities), !important, null);
+      // Default value
+      @if $key == $default-value {
+        .#{$infix + $property-class} {
+          @include -create-class($properties, $local-vars, $prefix, $value);
         }
+      }
+
+      .#{$infix + $property-class + $property-class-modifier} {
+        @include -create-class($properties, $local-vars, $prefix, $value);
       }
 
       // Pseudo States variants
       @each $pseudo in $state {
         $infix: str-escape(#{'' + $pseudo + $util-glue});
 
-        .#{$infix + $property-class + $property-class-modifier}:#{$pseudo} {
-          @each $property in $properties {
-            @if $local-vars {
-              @each $local-var, $variable in $local-vars {
-                --#{$prefix}#{$local-var}: #{$variable};
-              }
-            }
-
-            #{$property}: $value if(config(important-utilities), !important, null);
+        // Default value
+        @if $key == $default-value {
+          .#{$infix + $property-class}:#{$pseudo} {
+            @include -create-class($properties, $local-vars, $prefix, $value);
           }
+        }
+
+        .#{$infix + $property-class + $property-class-modifier}:#{$pseudo} {
+          @include -create-class($properties, $local-vars, $prefix, $value);
         }
       }
     }

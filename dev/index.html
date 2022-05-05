@@ -9,13 +9,23 @@
   <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 
-<body class="mx-auto lg:container p-32 accent-black">
+<body class="mx-auto xl:container p-32 accent-black">
   <h1>Heading 1</h1>
 
-  <div class="mt-32 flex gap-12">
-    <div class="px-20 py-12 bg-blue hover:bg-blue-4 text-white rounded">A</div>
-    <div class="px-20 py-12 bg-red hover:bg-red-4 text-white rounded">B</div>
-    <div class="px-20 py-12 bg-green hover:bg-green-4 text-white rounded">C</div>
+  <!-- <div class="stacker"> -->
+  <div class="flex flex-row space-x-md">
+    <div
+      class="flex-1 px-32 py-24 bg-green-3 hover:bg-green-4 text-inherit rounded-2xl hover:shadow-xl border-current border-2 hover:border-green-8 border-dotted hover:border-solid text-center">
+      A
+    </div>
+    <div
+      class="flex-1 px-32 py-24 bg-yellow-3 hover:bg-yellow-4 text-inherit rounded-2xl hover:shadow-xl border-current border-2 hover:border-yellow-8 border-dotted hover:border-solid text-center">
+      B
+    </div>
+    <div
+      class="flex-1 px-32 py-24 bg-red-3 hover:bg-red-4 text-inherit rounded-2xl hover:shadow-xl border-current border-2 hover:border-red-8 border-dotted hover:border-solid text-center">
+      C
+    </div>
   </div>
 
   <div class="mt-8 md:mt-16 md:columns-2 xl:gap-x-32">Lorem ipsum dolor sit amet, consectetur adipisicing elit.

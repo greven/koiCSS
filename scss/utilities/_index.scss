@@ -11,11 +11,13 @@
 
 @mixin utilities {
   @include background.utilities();
+  @include border.utilities();
   @include effects.utilities();
   @include flex.utilities();
   @include grid.utilities();
   @include layout.utilities();
   @include size.utilities();
   @include spacing.utilities();
+  @include typography.utilities();
   @include visibility.utilities();
 }

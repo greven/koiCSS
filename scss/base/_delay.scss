@@ -1,0 +1,17 @@
+// --------------------------------
+//   Delay Styles
+// --------------------------------
+
+@use '../core' as *;
+
+$custom-prop-name: delay;
+
+// --------------------------------
+//   CSS Custom Properties
+// --------------------------------
+
+@mixin vars {
+  :root {
+    @include generate-css-vars(theme(delay), $custom-prop-name);
+  }
+}

@@ -10,6 +10,7 @@ $utility-classes: (
     property: box-shadow,
     class: shadow,
     state: hover focus,
+    default: config(fallbacks, shadow),
     values: theme(shadow),
   ),
 );

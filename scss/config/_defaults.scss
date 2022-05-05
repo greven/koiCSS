@@ -20,6 +20,7 @@ $config: (
   ),
   fallbacks: (
     accent: primary,
+    border-width: 1,
     colors: 6,
     duration: normal,
     font-size: md,
@@ -27,7 +28,7 @@ $config: (
     layer: base,
     leading: normal,
     radius: md,
-    shadow: sm,
+    shadow: md,
     timing: ease,
     tracking: normal,
   ),
