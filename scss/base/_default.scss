@@ -28,18 +28,28 @@
     top: -0.5em;
   }
 
+  pre,
+  code {
+    font-family: font(mono);
+    font-size: font(sm);
+  }
+
   pre {
     @include responsive-padding;
     @include rounded;
+    position: relative;
     background-color: color(code-bg);
     color: color(code-text);
     overflow-x: auto;
   }
 
-  pre,
-  code {
-    font-family: font(mono);
-    font-size: font(sm);
+  code::before {
+    color: color(text, 4);
+    font-size: font(xs);
+    content: attr(data-lang);
+    position: absolute;
+    right: 1rem;
+    top: 0.7rem;
   }
 
   blockquote {
@@ -79,6 +89,26 @@
 
     &:hover {
       border-bottom-width: 2px;
+    }
+  }
+
+  img {
+    height: auto;
+    user-select: none;
+  }
+
+  iframe {
+    height: 100%;
+    width: 100%;
+  }
+
+  figure {
+    margin-left: 0;
+    margin-right: 0;
+
+    figcaption {
+      margin-top: space(8);
+      text-align: center;
     }
   }
 

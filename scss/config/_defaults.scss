@@ -5,11 +5,12 @@
 $config: (
   prefix: '',
   use-reset-styles: true,
+  use-css-variables: true,
   use-default-styles: true,
+  use-important-utilities: false,
   default-color-scheme: light,
   base-font-size: 16,
   spacer: 1rem,
-  important-utilities: false,
   utility-glue: ':',
   responsive: (
     padding: (
@@ -17,6 +18,20 @@ $config: (
       min: 0.75rem,
       max: 1.5rem,
     ),
+  ),
+  utilities: (
+    animation: true,
+    background: true,
+    border: true,
+    effects: true,
+    flex: true,
+    grid: true,
+    layout: true,
+    size: true,
+    spacing: true,
+    transition: true,
+    typography: true,
+    visibility: true,
   ),
   fallbacks: (
     accent: primary,

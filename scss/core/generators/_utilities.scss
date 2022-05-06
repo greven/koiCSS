@@ -13,6 +13,7 @@
 @use '../helpers' as *;
 
 $util-glue: config(utility-glue);
+$use-important: config(use-important-utilities);
 
 @mixin -create-class($properties, $local-vars, $prefix, $value) {
   @each $property in $properties {
@@ -22,7 +23,7 @@ $util-glue: config(utility-glue);
       }
     }
 
-    #{$property}: $value if(config(important-utilities), !important, null);
+    #{$property}: $value if($use-important, !important, null);
   }
 }
 

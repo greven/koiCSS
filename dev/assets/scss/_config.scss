@@ -3,6 +3,10 @@
 @use 'koi' with (
   $config: (
     spacer: 1rem,
+    utilities: (
+      size: true,
+      spacing: true,
+    ),
   ),
   $theme: (
     colors: (
@@ -17,7 +21,7 @@
       //   7: #0b7a67,
       //   8: #0e6154,
       //   9: #115046,
-      // ),
+      // ),,,
     ),
     font-family: (
       heading: (

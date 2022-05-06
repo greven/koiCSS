@@ -9,9 +9,9 @@
 @use 'color';
 @use 'delay';
 @use 'duration';
-@use 'media';
 @use 'shadow';
 @use 'timing';
+@use 'typography';
 
 @mixin styles {
   // Reset
@@ -24,13 +24,15 @@
     @include default.styles();
   }
 
-  @include animation.vars;
-  @include color.vars;
-  @include delay.vars;
-  @include duration.vars;
-  @include shadow.vars;
-  @include timing.vars;
+  @if config(use-css-variables) {
+    @include animation.vars;
+    @include color.vars;
+    @include delay.vars;
+    @include duration.vars;
+    @include shadow.vars;
+    @include timing.vars;
+    // @include typography.vars;
+  }
 
   @include animation.styles;
-  @include media.styles;
 }
