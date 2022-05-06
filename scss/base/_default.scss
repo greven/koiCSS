@@ -37,16 +37,16 @@
   pre {
     @include responsive-padding;
     @include rounded;
-    position: relative;
     background-color: color(code-bg);
     color: color(code-text);
     overflow-x: auto;
+    position: relative;
   }
 
   code::before {
     color: color(text, 4);
-    font-size: font(xs);
     content: attr(data-lang);
+    font-size: font(xs);
     position: absolute;
     right: 1rem;
     top: 0.7rem;
