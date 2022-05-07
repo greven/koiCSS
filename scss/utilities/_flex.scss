@@ -5,7 +5,7 @@
 @use '../core/generators' as *;
 @use '../core' as *;
 
-$utility-classes: (
+$utilities: (
   'flex': (
     property: flex,
     responsive: true,
@@ -130,7 +130,3 @@ $utility-classes: (
     values: auto start end center stretch,
   ),
 );
-
-@mixin utilities {
-  @include generate-utilities($utility-classes);
-}

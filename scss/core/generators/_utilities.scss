@@ -15,125 +15,185 @@
 $util-glue: config(utility-glue);
 $use-important: config(use-important-utilities);
 
-@mixin -create-class($properties, $local-vars, $prefix, $value) {
+$standard-class-utils: ();
+$standard-pseudo-utils: ();
+$responsive-class-utils: ();
+$responsive-pseudo-utils: ();
+
+@function -map-class-properties($properties, $local-vars, $prefix, $value) {
+  $prefix: 'koi-';
+  $merged-props: ();
+  $merged-custom-props: ();
+
   @each $property in $properties {
     @if $local-vars {
       @each $local-var, $variable in $local-vars {
-        --#{$prefix}#{$local-var}: #{$variable};
+        $map: (--#{$prefix}#{$local-var}: #{$variable});
+        $merged-custom-props: map.merge($merged-custom-props, $map);
       }
     }
 
-    #{$property}: $value if($use-important, !important, null);
+    $map: (#{$property}: $value #{if($use-important, !important, null)});
+    $merged-props: map.merge($merged-props, $map);
   }
+
+  @return map.merge($merged-props, $merged-custom-props);
 }
 
-// Create multiple utilities from an utility map.
-@mixin -utility-class($utility-map, $breakpoint: null) {
-  $values: map.get($utility-map, values);
-  $prefix: koi-;
+@mixin -create-utility-maps($utilities) {
+  @each $utility-key, $utility in $utilities {
+    $prefix: config(prefix);
+    $values: map.get($utility, values);
+    $pseudos: if(map.has-key($utility, state), map.get($utility, state), ());
+    $local-vars: map.get($utility, local-vars);
+    $responsive: map.get($utility, responsive);
+    // TODO: Default value generation
+    $default-value: if(map.has-key($utility, default), map.get($utility, default), null);
 
-  // If the values are a list or string, convert it into a map
-  @if meta.type-of($values) == 'string' or meta.type-of(list.nth($values, 1)) != 'list' {
-    $values: list.zip($values, $values);
-  }
-
-  @each $key, $value in $values {
-    $properties: map.get($utility-map, property);
-    $default-value: if(map.has-key($utility-map, default), map.get($utility-map, default), null);
-
-    // Multiple properties are possible
-    @if meta.type-of($properties) == 'string' {
-      $properties: list.append((), $properties);
+    // If the values are a list or string, convert it into a map
+    @if meta.type-of($values) == 'string' or meta.type-of(list.nth($values, 1)) != 'list' {
+      $values: list.zip($values, $values);
     }
 
-    // Use custom class if present
-    $property-class: if(map.has-key($utility-map, class), map.get($utility-map, class), list.nth($properties, 1));
-    $property-class: if($property-class == null, '', $property-class);
-    $property-class: str-escape($property-class);
+    // Standard class set
+    $class-set: ();
+    $pseudo-set: ();
 
-    $property-class-modifier: if($key, if($property-class == '', '', '-') + $key, '');
-    $property-class-modifier: str-escape($property-class-modifier);
+    @each $key, $value in $values {
+      $properties: map.get($utility, property);
 
-    // Pseudo classes
-    $state: if(map.has-key($utility-map, state), map.get($utility-map, state), ());
-
-    $local-vars: map-get($utility-map, local-vars);
-
-    @if $value != null {
-      @if meta.type-of($value) == 'string' {
-        $value: string.unquote($value);
+      // Multiple properties are possible
+      @if meta.type-of($properties) == 'string' {
+        $properties: list.append((), $properties);
       }
 
-      $infix: '';
-      @if $breakpoint {
-        $infix: if(mq.min($breakpoint) == null, '', str-escape(#{'' + $breakpoint + $util-glue}));
-      }
+      // Use custom class name if present
+      $class-name: if(map.has-key($utility, class), map.get($utility, class), list.nth($properties, 1));
+      $class-name: if($class-name == null, '', str-escape($class-name));
+      $class-name-modifier: if($key, str-escape(if($class-name == '', '', '-') + $key), '');
+      $compiled-class-name: #{$prefix}#{$class-name}#{$class-name-modifier};
 
-      // Default value
-      @if $key == $default-value {
-        .#{$infix + $property-class} {
-          @include -create-class($properties, $local-vars, $prefix, $value);
+      @if $value != null {
+        @if meta.type-of($value) == 'string' {
+          $value: string.unquote($value);
+        }
+
+        $properties-map: -map-class-properties($properties, $local-vars, $prefix, $value);
+
+        $map: (
+          '#{$compiled-class-name}': (
+            class-name: $class-name,
+            class-name-modifier: $class-name-modifier,
+            selector: '.#{$compiled-class-name}',
+            responsive: $responsive,
+            default: map.get($utility, default),
+            properties: $properties-map,
+          ),
+        );
+        $class-set: map.merge($class-set, $map);
+
+        // Pseudo / state variants
+        @each $pseudo in $pseudos {
+          $compiled-pseudo-name: str-escape(#{$pseudo}#{$util-glue}#{$compiled-class-name});
+
+          $map: (
+            '#{$compiled-pseudo-name}': (
+              class-name: $class-name,
+              class-name-modifier: $class-name-modifier,
+              selector: '.#{$compiled-pseudo-name}:#{$pseudo}',
+              responsive: $responsive,
+              pseudo: $pseudo,
+              default: map.get($utility, default),
+              properties: $properties-map,
+            ),
+          );
+          $pseudo-set: map.merge($pseudo-set, $map);
         }
       }
+    }
 
-      .#{$infix + $property-class + $property-class-modifier} {
-        @include -create-class($properties, $local-vars, $prefix, $value);
-      }
+    $standard-class-utils: map.merge($standard-class-utils, $class-set) !global;
+    $standard-pseudo-utils: map.merge($standard-pseudo-utils, $pseudo-set) !global;
 
-      // Pseudo States variants
-      @each $pseudo in $state {
-        $infix: str-escape(#{'' + $pseudo + $util-glue});
+    // Responsive class set
+    @if $responsive {
+      @each $screen, $breakpoint in theme(screens) {
+        $class-set: ();
+        // $pseudo-set: ();
 
-        // Default value
-        @if $key == $default-value {
-          .#{$infix + $property-class}:#{$pseudo} {
-            @include -create-class($properties, $local-vars, $prefix, $value);
+        $infix: str-escape(#{$screen}#{$util-glue});
+
+        @each $key, $value in $values {
+          $properties: map.get($utility, property);
+
+          // Multiple properties are possible
+          @if meta.type-of($properties) == 'string' {
+            $properties: list.append((), $properties);
+          }
+
+          // Use custom class name if present
+          $class-name: if(map.has-key($utility, class), map.get($utility, class), list.nth($properties, 1));
+          $class-name: if($class-name == null, '', str-escape($class-name));
+          $class-name-modifier: if($key, str-escape(if($class-name == '', '', '-') + $key), '');
+          $compiled-class-name: #{$prefix}#{$class-name}#{$class-name-modifier};
+
+          @if $value != null {
+            @if meta.type-of($value) == 'string' {
+              $value: string.unquote($value);
+            }
+
+            $properties-map: -map-class-properties($properties, $local-vars, $prefix, $value);
+
+            $map: (
+              '#{$infix}#{$compiled-class-name}': (
+                class-name: $class-name,
+                class-name-modifier: $class-name-modifier,
+                selector: '.#{$infix}#{$compiled-class-name}',
+                responsive: $responsive,
+                screen: $screen,
+                default: map.get($utility, default),
+                properties: $properties-map,
+              ),
+            );
+            $class-set: map.merge($class-set, $map);
           }
         }
-
-        .#{$infix + $property-class + $property-class-modifier}:#{$pseudo} {
-          @include -create-class($properties, $local-vars, $prefix, $value);
-        }
       }
+
+      $responsive-class-utils: map.merge($responsive-class-utils, $class-set) !global;
+      // $responsive-pseudo-utils: map.merge($responsive-class-utils, $class-set) !global;
     }
   }
 }
 
-// Generate utilities from a map of utility maps
 @mixin generate-utilities($utilities) {
-  // Generate standard utilities first
-  @each $key, $utility in $utilities {
-    @include -utility-class($utility);
-  }
+  @include -create-utility-maps($utilities);
 
-  // Maybe generate responsive utilities
-  @each $breakpoint, $-value in theme(screens) {
-    @include mq.from($breakpoint) {
-      @each $key, $utility in $utilities {
-        @if map.get($utility, responsive) {
-          @include -utility-class($utility, $breakpoint);
-        }
+  $standard-class-set: map.merge($standard-class-utils, $standard-pseudo-utils);
+  $responsive-class-set: map.merge($responsive-class-utils, $responsive-pseudo-utils);
+
+  @each $class, $class-map in $standard-class-set {
+    $selector: map.get($class-map, selector);
+    $properties: map.get($class-map, properties);
+
+    #{$selector} {
+      @each $key, $value in $properties {
+        #{$key}: #{$value};
       }
     }
   }
-}
 
-// Create a single responsive utility
-@mixin create-responsive-utility($class) {
-  $class: str-escape($class);
-
-  // Create standard utility first
-  .#{$class} {
-    @content;
-  }
-
-  // Create responsive modifiers
-  @each $breakpoint, $-value in theme(screens) {
-    $infix: str-escape(#{'' + $breakpoint + $util-glue});
-
+  @each $screen, $breakpoint in theme(screens) {
     @include mq.from($breakpoint) {
-      .#{$infix + $class} {
-        @content;
+      @each $class, $class-map in $responsive-class-set {
+        $selector: map.get($class-map, selector);
+        $properties: map.get($class-map, properties);
+
+        #{$selector} {
+          @each $key, $value in $properties {
+            #{$key}: #{$value};
+          }
+        }
       }
     }
   }

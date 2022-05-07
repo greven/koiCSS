@@ -5,7 +5,7 @@
 @use '../core/generators' as *;
 @use '../core' as *;
 
-$utility-classes: (
+$utilities: (
   'margin': (
     property: margin,
     class: m,
@@ -193,7 +193,3 @@ $utility-classes: (
     values: theme(spacing),
   ),
 );
-
-@mixin utilities {
-  @include generate-utilities($utility-classes);
-}

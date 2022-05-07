@@ -11,41 +11,19 @@
 @use 'typography';
 @use 'visibility';
 
+$utilities: () !default;
+$utilities: map-deep-merge(
+  background.$utilities,
+  border.$utilities,
+  effects.$utilities,
+  flex.$utilities,
+  grid.$utilities,
+  layout.$utilities,
+  size.$utilities,
+  spacing.$utilities,
+  typography.$utilities
+);
+
 @mixin utilities {
-  // @if config(utilities, animation) {
-  //   @include animation.utilities();
-  // }
-  @if config(utilities, background) {
-    @include background.utilities();
-  }
-  @if config(utilities, border) {
-    @include border.utilities();
-  }
-  @if config(utilities, effects) {
-    @include effects.utilities();
-  }
-  @if config(utilities, flex) {
-    @include flex.utilities();
-  }
-  @if config(utilities, grid) {
-    @include grid.utilities();
-  }
-  @if config(utilities, layout) {
-    @include layout.utilities();
-  }
-  @if config(utilities, size) {
-    @include size.utilities();
-  }
-  @if config(utilities, spacing) {
-    @include spacing.utilities();
-  }
-  // @if config(utilities, transition) {
-  //   @include transition.utilities();
-  // }
-  @if config(utilities, typography) {
-    @include typography.utilities();
-  }
-  @if config(utilities, visibility) {
-    @include visibility.utilities();
-  }
+  @include generate-utilities($utilities);
 }

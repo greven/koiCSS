@@ -8,7 +8,7 @@
 @use '../core' as *;
 @use 'support';
 
-$utility-classes: (
+$utilities: (
   'background-color': (
     property: background-color,
     class: bg,
@@ -27,7 +27,3 @@ $utility-classes: (
       ),
   ),
 );
-
-@mixin utilities {
-  @include generate-utilities($utility-classes);
-}

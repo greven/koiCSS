@@ -5,7 +5,7 @@
 @use '../core/generators' as *;
 @use '../core' as *;
 
-$utility-classes: (
+$utilities: (
   'shadow': (
     property: box-shadow,
     class: shadow,
@@ -14,7 +14,3 @@ $utility-classes: (
     values: theme(shadow),
   ),
 );
-
-@mixin utilities {
-  @include generate-utilities($utility-classes);
-}

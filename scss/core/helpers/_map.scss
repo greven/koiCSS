@@ -29,3 +29,37 @@
 
   @error "Key(s) [#{$keys}] doesn't exist and there is no fallback.";
 }
+
+// Multiple map merge
+@function merge($maps...) {
+  $collection: ();
+  @each $map in $maps {
+    $collection: map.merge($collection, $map);
+  }
+  @return $collection;
+}
+
+// Multiple map deep-merge
+@function deep-merge($maps...) {
+  $collection: ();
+  @each $map in $maps {
+    $collection: map.deep-merge($collection, $map);
+  }
+  @return $collection;
+}
+
+// Filter elements in $map where the key equals $condition
+@function filter($map, $condition) {
+  $filtered: ();
+  @each $key, $value in $map {
+    @if $value == $condition {
+      $filtered: map.merge(
+        $filtered,
+        (
+          $key: $value,
+        )
+      );
+    }
+  }
+  @return $filtered;
+}

@@ -8,7 +8,7 @@
 @use '../core/generators' as *;
 @use '../core' as *;
 
-$utility-classes: (
+$utilities: (
   'width': (
     property: width,
     class: w,
@@ -101,7 +101,3 @@ $utility-classes: (
       ),
   ),
 );
-
-@mixin utilities {
-  @include generate-utilities($utility-classes);
-}

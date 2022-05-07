@@ -8,7 +8,7 @@
 @use '../core' as *;
 @use 'support';
 
-$utility-classes: (
+$utilities: (
   'color': (
     property: color,
     class: text,
@@ -58,14 +58,14 @@ $utility-classes: (
   ),
 );
 
-@mixin utilities {
-  @include generate-utilities($utility-classes);
+// @mixin utilities {
+//   @include generate-utilities($utility-classes);
 
-  // Text size: (font-size with corresponding line-height)
-  $-font-sizes: map.keys(theme(font-size));
-  @each $key in $-font-sizes {
-    @include create-responsive-utility(text-#{$key}) {
-      @include text-size($key);
-    }
-  }
-}
+//   // Text size: (font-size with corresponding line-height)
+//   $-font-sizes: map.keys(theme(font-size));
+//   @each $key in $-font-sizes {
+//     @include create-responsive-utility(text-#{$key}) {
+//       @include text-size($key);
+//     }
+//   }
+// }

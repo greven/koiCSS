@@ -5,7 +5,7 @@
 @use '../core/generators' as *;
 @use '../core' as *;
 
-$utility-classes: (
+$utilities: (
   'grid-template-columns': (
     responsive: true,
     property: grid-template-columns,
@@ -153,7 +153,3 @@ $utility-classes: (
     ),
   ),
 );
-
-@mixin utilities {
-  @include generate-utilities($utility-classes);
-}
