@@ -132,5 +132,4 @@ out
 .pnp.*
 
 # Project
-dist/
 dev/**/*.css

@@ -6,7 +6,7 @@
 @use '../core' as *;
 
 $utilities: (
-  'flex': (
+  flex: (
     property: flex,
     responsive: true,
     values: (
@@ -16,7 +16,7 @@ $utilities: (
       none: none,
     ),
   ),
-  'flex-direction': (
+  flex-direction: (
     property: flex-direction,
     class: flex,
     responsive: true,
@@ -27,13 +27,13 @@ $utilities: (
       col-reverse: column-reverse,
     ),
   ),
-  'flex-wrap': (
+  flex-wrap: (
     property: flex-wrap,
     class: flex,
     responsive: true,
     values: wrap nowrap wrap-reverse,
   ),
-  'flex-grow': (
+  flex-grow: (
     property: flex-grow,
     class: flex,
     responsive: true,
@@ -42,7 +42,7 @@ $utilities: (
       grow: 1,
     ),
   ),
-  'flex-shrink': (
+  flex-shrink: (
     property: flex-shrink,
     class: flex,
     responsive: true,
@@ -51,7 +51,7 @@ $utilities: (
       shrink: 1,
     ),
   ),
-  'order': (
+  order: (
     property: order,
     responsive: true,
     values: (
@@ -65,7 +65,7 @@ $utilities: (
       last: 6,
     ),
   ),
-  'justify-content': (
+  justify-content: (
     property: justify-content,
     class: justify,
     responsive: true,
@@ -78,12 +78,12 @@ $utilities: (
       evenly: space-evenly,
     ),
   ),
-  'justify-self': (
+  justify-self: (
     property: justify-self,
     responsive: true,
     values: auto start end center stretch,
   ),
-  'align-content': (
+  align-content: (
     property: content,
     responsive: true,
     values: (
@@ -95,7 +95,7 @@ $utilities: (
       stretch: stretch,
     ),
   ),
-  'align-items': (
+  align-items: (
     property: align-items,
     class: items,
     responsive: true,
@@ -107,7 +107,7 @@ $utilities: (
       stretch: stretch,
     ),
   ),
-  'align-self': (
+  align-self: (
     property: align-self,
     class: self,
     responsive: true,
@@ -119,12 +119,12 @@ $utilities: (
       stretch: stretch,
     ),
   ),
-  'place-items': (
+  place-items: (
     property: place-items,
     responsive: true,
     values: start end center stretch,
   ),
-  'place-self': (
+  place-self: (
     property: place-self,
     responsive: true,
     values: auto start end center stretch,

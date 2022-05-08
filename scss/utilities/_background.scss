@@ -8,6 +8,17 @@
 @use '../core' as *;
 @use 'support';
 
+$bg-values: map.merge(
+  (
+    current: currentColor,
+    inherit: inherit,
+    transparent: transparent,
+  ),
+  support.$utility-bg-colors-map
+);
+
+// --------------------------------
+
 $utilities: (
   'background-color': (
     property: background-color,
@@ -16,14 +27,6 @@ $utilities: (
     local-vars: (
       'bg-opacity': 1,
     ),
-    values:
-      map.merge(
-        (
-          current: currentColor,
-          inherit: inherit,
-          transparent: transparent,
-        ),
-        support.$utility-bg-colors-map
-      ),
+    values: $bg-values,
   ),
 );

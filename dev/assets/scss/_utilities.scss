@@ -1,6 +1,10 @@
+@use 'sass:meta';
+
 @forward 'config';
 @use 'koi';
 
+// @include koi.utilities();
+
 // << Insert your utility classes here >>
 
-@include koi.utilities();
+@include meta.load-css('../../../dist/koi-utilities.css');

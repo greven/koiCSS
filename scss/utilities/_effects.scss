@@ -6,7 +6,7 @@
 @use '../core' as *;
 
 $utilities: (
-  'shadow': (
+  shadow: (
     property: box-shadow,
     class: shadow,
     state: hover focus,

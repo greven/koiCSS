@@ -9,7 +9,7 @@
 @use 'support';
 
 $utilities: (
-  'color': (
+  color: (
     property: color,
     class: text,
     state: hover focus,
@@ -26,7 +26,7 @@ $utilities: (
         support.$utility-text-colors-map
       ),
   ),
-  'font-style': (
+  font-style: (
     property: font-style,
     class: null,
     values: (
@@ -34,23 +34,23 @@ $utilities: (
       not-italic: normal,
     ),
   ),
-  'font-weight': (
+  font-weight: (
     property: font-weight,
     class: font,
     values: theme(font-weight),
   ),
-  'line-height': (
+  line-height: (
     property: line-height,
     class: leading,
     responsive: true,
     values: theme(leading),
   ),
-  'letter-spacing': (
+  letter-spacing: (
     property: letter-spacing,
     class: tracking,
     values: theme(tracking),
   ),
-  'text-align': (
+  text-align: (
     property: text-align,
     class: text,
     responsive: true,
@@ -59,7 +59,7 @@ $utilities: (
 );
 
 @mixin utilities {
-  // Text size: (font-size with corresponding line-height)
+  // Font-size with corresponding line-height
   $-font-sizes: map.keys(theme(font-size));
   @each $key in $-font-sizes {
     @include create-responsive-utility(text-#{$key}) {

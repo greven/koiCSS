@@ -8,22 +8,63 @@
 @use '../core/generators' as *;
 @use '../core' as *;
 
+$sizes: theme(sizes);
+$screens: theme(screens);
+
+$width-values: map.merge(
+  $sizes,
+  (
+    auto: auto,
+    screen: 100vw,
+    min: min-content,
+    max: max-content,
+    fit: fit-content,
+  )
+);
+
+$max-width-values: map.merge(
+  $screens,
+  (
+    0: 0,
+    none: none,
+    full: 100%,
+    min: min-content,
+    max: max-content,
+    fit: fit-content,
+  )
+);
+
+$height-values: map.merge(
+  $sizes,
+  (
+    auto: auto,
+    screen: 100vh,
+    min: min-content,
+    max: max-content,
+    fit: fit-content,
+  )
+);
+
+$max-height-values: map.merge(
+  $spacing-scale,
+  (
+    0: 0,
+    full: 100%,
+    screen: 100vh,
+    min: min-content,
+    max: max-content,
+    fit: fit-content,
+  )
+);
+
+// --------------------------------
+
 $utilities: (
   'width': (
     property: width,
     class: w,
     responsive: true,
-    values:
-      map.merge(
-        theme(sizes),
-        (
-          auto: auto,
-          screen: 100vw,
-          min: min-content,
-          max: max-content,
-          fit: fit-content,
-        )
-      ),
+    values: $width-values,
   ),
   'min-width': (
     property: min-width,
@@ -41,34 +82,13 @@ $utilities: (
     property: max-width,
     class: max-w,
     responsive: true,
-    values:
-      map.merge(
-        theme(screens),
-        (
-          0: 0,
-          none: none,
-          full: 100%,
-          min: min-content,
-          max: max-content,
-          fit: fit-content,
-        )
-      ),
+    values: $max-width-values,
   ),
   'height': (
     property: height,
     class: h,
     responsive: true,
-    values:
-      map.merge(
-        theme(sizes),
-        (
-          auto: auto,
-          screen: 100vh,
-          min: min-content,
-          max: max-content,
-          fit: fit-content,
-        )
-      ),
+    values: $height-values,
   ),
   'min-height': (
     property: min-height,
@@ -87,17 +107,6 @@ $utilities: (
     property: max-height,
     class: max-h,
     responsive: true,
-    values:
-      map.merge(
-        $spacing-scale,
-        (
-          0: 0,
-          full: 100%,
-          screen: 100vh,
-          min: min-content,
-          max: max-content,
-          fit: fit-content,
-        )
-      ),
+    values: $max-height-values,
   ),
 );

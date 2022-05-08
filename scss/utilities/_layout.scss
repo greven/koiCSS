@@ -10,18 +10,18 @@
 @use '../core' as *;
 
 $utilities: (
-  'clear': (
+  clear: (
     property: clear,
     responsive: true,
     values: left right both none,
   ),
-  'columns': (
+  columns: (
     property: column-count,
     class: columns,
     responsive: true,
     values: 1 2 3 4 5 6 7 8 9 10 11 12,
   ),
-  'display': (
+  display: (
     property: display,
     class: null,
     responsive: true,
@@ -38,48 +38,48 @@ $utilities: (
       hidden: none,
     ),
   ),
-  'float': (
+  float: (
     property: float,
     responsive: true,
     values: left right none,
   ),
-  'object-fit': (
+  object-fit: (
     property: object-fit,
     class: object,
     responsive: true,
     values: contain cover fill none scale-down,
   ),
-  'object-position': (
+  object-position: (
     property: object-position,
     class: object,
     responsive: true,
     values: bottom center left left-bottom left-top right right-bottom right-top top,
   ),
-  'overflow': (
+  overflow: (
     property: overflow,
     class: overflow,
     responsive: true,
     values: auto hidden visible scroll,
   ),
-  'overflow-x': (
+  overflow-x: (
     property: overflow,
     class: overflow-x,
     responsive: true,
     values: auto hidden visible scroll,
   ),
-  'overflow-y': (
+  overflow-y: (
     property: overflow,
     class: overflow-y,
     responsive: true,
     values: auto hidden visible scroll,
   ),
-  'position': (
+  position: (
     property: position,
     class: null,
     responsive: true,
     values: static relative absolute fixed sticky,
   ),
-  'visibility': (
+  visibility: (
     property: visibility,
     class: null,
     responsive: true,
@@ -88,7 +88,7 @@ $utilities: (
       invisible: hidden,
     ),
   ),
-  'layer': (
+  layer: (
     property: z-index,
     class: layer,
     responsive: true,

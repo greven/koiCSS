@@ -8,51 +8,56 @@
 @use '../core' as *;
 @use 'support';
 
+$radius: theme(radius);
+
+$border-color-values: map.merge(
+  (
+    current: currentColor,
+    inherit: inherit,
+    transparent: transparent,
+  ),
+  support.$utility-border-colors-map
+);
+
+// --------------------------------
+
 $utilities: (
-  'rounded': (
+  rounded: (
     property: border-radius,
     class: rounded,
     default: config(fallbacks, radius),
-    values: theme(radius),
+    values: $radius,
   ),
-  'rounded-top': (
+  rounded-top: (
     property: border-top-left-radius border-top-right-radius,
     class: rounded-t,
-    values: theme(radius),
+    values: $radius,
   ),
-  'rounded-right': (
+  rounded-right: (
     property: border-top-right-radius border-bottom-right-radius,
     class: rounded-r,
-    values: theme(radius),
+    values: $radius,
   ),
-  'rounded-bottom': (
+  rounded-bottom: (
     property: border-bottom-right-radius border-bottom-left-radius,
     class: rounded-b,
-    values: theme(radius),
+    values: $radius,
   ),
-  'rounded-left': (
+  rounded-left: (
     property: border-bottom-left-radius border-top-left-radius,
     class: rounded-l,
-    values: theme(radius),
+    values: $radius,
   ),
-  'border-color': (
+  border-color: (
     property: border-color,
     class: border,
     state: hover focus,
     local-vars: (
       'border-opacity': 1,
     ),
-    values:
-      map.merge(
-        (
-          current: currentColor,
-          inherit: inherit,
-          transparent: transparent,
-        ),
-        support.$utility-border-colors-map
-      ),
+    values: $border-color-values,
   ),
-  'border-width': (
+  border-width: (
     property: border-width,
     class: border,
     state: hover focus,
@@ -65,7 +70,7 @@ $utilities: (
       8: 8px,
     ),
   ),
-  'border-style': (
+  border-style: (
     property: border-style,
     class: border,
     state: hover focus,
