@@ -43,7 +43,7 @@ $theme: map.deep-merge($default-theme, $theme);
     }
 
     @media (prefers-color-scheme: $color-scheme) {
-      :root {
+      html {
         @include generate-color-scheme-css-vars(map.get($color-schemes-map, $color-scheme));
         color-scheme: $color-scheme;
       }
