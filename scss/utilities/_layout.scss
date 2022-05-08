@@ -96,54 +96,52 @@ $utilities: (
   ),
 );
 
-// @mixin utilities {
-//   @include generate-utilities($utility-classes);
+@mixin utilities {
+  @include create-responsive-utility(container) {
+    @include container(0px);
+  }
 
-//   @include create-responsive-utility(container) {
-//     @include container(0px);
-//   }
+  // Centered content using grid place-content
+  @include create-responsive-utility(centered) {
+    display: grid;
+    place-content: center;
+  }
 
-//   // Centered content using grid place-content
-//   @include create-responsive-utility(centered) {
-//     display: grid;
-//     place-content: center;
-//   }
+  // Heap: Stacked elements
+  // Credits: https://smolcss.dev/#smol-stack-layout
+  @include create-responsive-utility(heap) {
+    display: grid;
+    grid-template-areas: 'stack';
 
-//   // Heap: Stacked elements
-//   // Credits: https://smolcss.dev/#smol-stack-layout
-//   @include create-responsive-utility(heap) {
-//     display: grid;
-//     grid-template-areas: 'stack';
+    & > * {
+      grid-area: stack;
+    }
+  }
 
-//     & > * {
-//       grid-area: stack;
-//     }
-//   }
+  $-spacers: list.append(map.keys($spacers), 0);
+  @each $key in $-spacers {
+    $spacer-value: if(theme-has-key(spacing, $key), spacing($key), $key);
 
-//   $-spacers: list.append(map.keys($spacers), 0);
-//   @each $key in $-spacers {
-//     $spacer-value: if(theme-has-key(spacing, $key), spacing($key), $key);
+    @include create-responsive-utility(space-x-#{$key}) {
+      & > :not([hidden]) ~ :not([hidden]) {
+        margin-right: calc($spacer-value * var(--koi-space-x-reverse, 0));
+        margin-left: calc($spacer-value * calc(1 - var(--koi-space-x-reverse, 0)));
+      }
+    }
 
-//     @include create-responsive-utility(space-x-#{$key}) {
-//       & > :not([hidden]) ~ :not([hidden]) {
-//         margin-right: calc($spacer-value * var(--koi-space-x-reverse, 0));
-//         margin-left: calc($spacer-value * calc(1 - var(--koi-space-x-reverse, 0)));
-//       }
-//     }
+    @include create-responsive-utility(space-y-#{$key}) {
+      & > :not([hidden]) ~ :not([hidden]) {
+        margin-top: calc($spacer-value * calc(1 - var(--koi-space-y-reverse, 0)));
+        margin-bottom: calc($spacer-value * var(--koi-space-y-reverse, 0));
+      }
+    }
+  }
 
-//     @include create-responsive-utility(space-y-#{$key}) {
-//       & > :not([hidden]) ~ :not([hidden]) {
-//         margin-top: calc($spacer-value * calc(1 - var(--koi-space-y-reverse, 0)));
-//         margin-bottom: calc($spacer-value * var(--koi-space-y-reverse, 0));
-//       }
-//     }
-//   }
+  @include create-responsive-utility(space-x-reverse) {
+    --koi-space-x-reverse: 1;
+  }
 
-//   @include create-responsive-utility(space-x-reverse) {
-//     --koi-space-x-reverse: 1;
-//   }
-
-//   @include create-responsive-utility(space-y-reverse) {
-//     --koi-space-y-reverse: 1;
-//   }
-// }
+  @include create-responsive-utility(space-y-reverse) {
+    --koi-space-y-reverse: 1;
+  }
+}

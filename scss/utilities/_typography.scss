@@ -58,14 +58,12 @@ $utilities: (
   ),
 );
 
-// @mixin utilities {
-//   @include generate-utilities($utility-classes);
-
-//   // Text size: (font-size with corresponding line-height)
-//   $-font-sizes: map.keys(theme(font-size));
-//   @each $key in $-font-sizes {
-//     @include create-responsive-utility(text-#{$key}) {
-//       @include text-size($key);
-//     }
-//   }
-// }
+@mixin utilities {
+  // Text size: (font-size with corresponding line-height)
+  $-font-sizes: map.keys(theme(font-size));
+  @each $key in $-font-sizes {
+    @include create-responsive-utility(text-#{$key}) {
+      @include text-size($key);
+    }
+  }
+}

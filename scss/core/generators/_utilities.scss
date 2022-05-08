@@ -216,22 +216,22 @@ $responsive-pseudo-utils: ();
 }
 
 // Create a single responsive utility
-// @mixin create-responsive-utility($class) {
-//   $class: str-escape($class);
+@mixin create-responsive-utility($class) {
+  $class: str-escape($class);
 
-//   // Create standard utility first
-//   .#{$class} {
-//     @content;
-//   }
+  // Create standard utility first
+  .#{$class} {
+    @content;
+  }
 
-//   // Create responsive class modifiers
-//   @each $screen, $breakpoint in theme(screens) {
-//     $infix: str-escape(#{'' + $screen + $util-glue});
+  // Create responsive class modifiers
+  @each $screen, $breakpoint in theme(screens) {
+    $infix: str-escape(#{'' + $screen + $util-glue});
 
-//     @include mq.from($screen) {
-//       .#{$infix + $class} {
-//         @content;
-//       }
-//     }
-//   }
-// }
+    @include mq.from($screen) {
+      .#{$infix + $class} {
+        @content;
+      }
+    }
+  }
+}
