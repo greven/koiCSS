@@ -82,6 +82,8 @@ $responsive-pseudo-utils: ();
 
         $map: (
           '#{$compiled-class-name}': (
+            parent: null,
+            category: standard,
             class-name: $class-name,
             class-name-modifier: $class-name-modifier,
             selector: '.#{$compiled-class-name}',
@@ -90,6 +92,7 @@ $responsive-pseudo-utils: ();
             properties: $properties-map,
           ),
         );
+
         $class-set: map.merge($class-set, $map);
 
         // Pseudo / state variants
@@ -98,6 +101,8 @@ $responsive-pseudo-utils: ();
 
           $map: (
             '#{$compiled-pseudo-name}': (
+              parent: '.#{$compiled-class-name}',
+              category: pseudo,
               class-name: $class-name,
               class-name-modifier: $class-name-modifier,
               selector: '.#{$compiled-pseudo-name}:#{$pseudo}',
@@ -107,6 +112,7 @@ $responsive-pseudo-utils: ();
               properties: $properties-map,
             ),
           );
+
           $pseudo-set: map.merge($pseudo-set, $map);
         }
       }
@@ -146,6 +152,7 @@ $responsive-pseudo-utils: ();
 
             $map: (
               '#{$infix}#{$compiled-class-name}': (
+                category: standard,
                 class-name: $class-name,
                 class-name-modifier: $class-name-modifier,
                 selector: '.#{$infix}#{$compiled-class-name}',
@@ -155,13 +162,14 @@ $responsive-pseudo-utils: ();
                 properties: $properties-map,
               ),
             );
+
             $class-set: map.merge($class-set, $map);
           }
         }
-      }
 
-      $responsive-class-utils: map.merge($responsive-class-utils, $class-set) !global;
-      // $responsive-pseudo-utils: map.merge($responsive-class-utils, $class-set) !global;
+        $responsive-class-utils: map.merge($responsive-class-utils, $class-set) !global;
+        // $responsive-pseudo-utils: map.merge($responsive-class-utils, $class-set) !global;
+      }
     }
   }
 }
@@ -174,11 +182,17 @@ $responsive-pseudo-utils: ();
 
   @each $class, $class-map in $standard-class-set {
     $selector: map.get($class-map, selector);
+    $parent: map.get($class-map, parent);
+    $category: map.get($class-map, category);
     $properties: map.get($class-map, properties);
 
     #{$selector} {
-      @each $key, $value in $properties {
-        #{$key}: #{$value};
+      @if $category == standard {
+        @each $key, $value in $properties {
+          #{$key}: #{$value};
+        }
+      } @else {
+        @extend #{$parent};
       }
     }
   }
@@ -186,15 +200,38 @@ $responsive-pseudo-utils: ();
   @each $screen, $breakpoint in theme(screens) {
     @include mq.from($breakpoint) {
       @each $class, $class-map in $responsive-class-set {
-        $selector: map.get($class-map, selector);
-        $properties: map.get($class-map, properties);
+        @if $screen == map.get($class-map, screen) {
+          $selector: map.get($class-map, selector);
+          $properties: map.get($class-map, properties);
 
-        #{$selector} {
-          @each $key, $value in $properties {
-            #{$key}: #{$value};
+          #{$selector} {
+            @each $key, $value in $properties {
+              #{$key}: #{$value};
+            }
           }
         }
       }
     }
   }
 }
+
+// Create a single responsive utility
+// @mixin create-responsive-utility($class) {
+//   $class: str-escape($class);
+
+//   // Create standard utility first
+//   .#{$class} {
+//     @content;
+//   }
+
+//   // Create responsive class modifiers
+//   @each $screen, $breakpoint in theme(screens) {
+//     $infix: str-escape(#{'' + $screen + $util-glue});
+
+//     @include mq.from($screen) {
+//       .#{$infix + $class} {
+//         @content;
+//       }
+//     }
+//   }
+// }
