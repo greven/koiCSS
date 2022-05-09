@@ -31,9 +31,11 @@
     "postcss:prod:min": "postcss dist/koi.min.css dist/koi.utilities.min.css -u autoprefixer -u cssnano --replace --no-map",
     "prebuild": "npm run lint:fix",
     "prepare": "husky install",
-    "serve": "live-server ./dev --mount=/dist:./dist --no-browser",
+    "serve": "live-server ./dev --mount=/dist:./dist --no-browser --no-css-inject",
     "start": "npm run dev",
-    "watch:dev": "sass -I node_modules -I scss --no-source-map dev/assets/scss:dev/assets/css --color --watch --update",
+    "watch:dev:main": "sass -I node_modules -I scss --no-source-map dev/assets/scss/main.scss:dev/assets/css/main.css --color --watch --update",
+    "watch:dev:utils": "sass -I node_modules -I scss --no-source-map dev/assets/scss/utilities.scss:dev/assets/css/utilities.css --color --watch --update",
+    "watch:dev": "concurrently npm:watch:dev:main npm:watch:dev:utils",
     "watch": "npm run build:styles -- --watch --update"
   },
   "devDependencies": {
