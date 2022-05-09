@@ -11,7 +11,5 @@ $custom-prop-name: delay;
 // --------------------------------
 
 @mixin vars {
-  :root {
-    @include generate-css-vars(theme(delay), $custom-prop-name);
-  }
+  @include generate-css-vars(theme(delay), $custom-prop-name);
 }

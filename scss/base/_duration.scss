@@ -11,7 +11,5 @@ $custom-prop-name: duration;
 // --------------------------------
 
 @mixin vars {
-  :root {
-    @include generate-css-vars(theme(duration), $custom-prop-name);
-  }
+  @include generate-css-vars(theme(duration), $custom-prop-name);
 }

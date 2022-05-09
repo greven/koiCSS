@@ -11,7 +11,5 @@ $custom-prop-name: shadow;
 // --------------------------------
 
 @mixin vars {
-  :root {
-    @include generate-css-vars(theme(shadow), $custom-prop-name);
-  }
+  @include generate-css-vars(theme(shadow), $custom-prop-name);
 }

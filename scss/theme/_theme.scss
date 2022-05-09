@@ -7,11 +7,13 @@
 @use '../core/api/config' as *;
 @use '../core/generators/vars' as *;
 @use 'tokens' as *;
-@use 'colors' as *;
+@use 'color';
+@use 'components';
 
 $default-theme: map.deep-merge(
   (
-    color-schemes: $color-schemes,
+    color-schemes: color.$schemes,
+    components: components.$config,
   ),
   $tokens
 );
@@ -33,7 +35,7 @@ $theme: map.deep-merge($default-theme, $theme);
 }
 
 // Output color vars for each color-scheme
-@mixin create-themes($color-schemes-map: $color-schemes) {
+@mixin create-themes($color-schemes-map: color.$schemes) {
   @include default-theme($color-schemes-map);
 
   @each $color-scheme, $color in $color-schemes-map {

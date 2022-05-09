@@ -25,13 +25,15 @@
   }
 
   @if config(use-css-variables) {
-    @include animation.vars;
-    @include color.vars;
-    @include delay.vars;
-    @include duration.vars;
-    @include shadow.vars;
-    @include timing.vars;
-    // @include typography.vars;
+    :root {
+      @include animation.vars;
+      @include color.vars;
+      @include delay.vars;
+      @include duration.vars;
+      @include shadow.vars;
+      @include timing.vars;
+      // @include typography.vars;
+    }
   }
 
   @include animation.styles;

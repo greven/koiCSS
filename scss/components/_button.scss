@@ -2,32 +2,61 @@
 //   Button
 // --------------------------------
 
+@use 'sass:map';
+
 @use '../core' as *;
 
-@mixin button {
-  .btn {
-    @include font-size(sm);
-    align-items: center;
-    background-color: color(gray, 1);
-    border: 1px solid color(gray, 2);
-    border-radius: radius(md);
-    box-shadow: shadow();
-    color: color(gray, 7);
-    display: inline-flex;
-    font-weight: font-weight(medium);
-    padding-block: spacing(4);
-    padding-inline: spacing(8);
+$selectors: button, '.btn';
+$config: theme(components, button);
 
-    &:hover {
-      background-color: color(gray, 5);
-    }
+@mixin reset {
+  appearance: none;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 400;
+  padding: 0;
+  text-decoration: none;
+}
 
-    &:focus {
-      outline: none;
+// @mixin default {
+// @include text-size(map.get($config, font-size));
+// align-items: center;
+// background-color: color(gray, 1);
+// border: 1px solid color(gray, 2);
+// border-radius: radius(map.get($config, radius));
+// box-shadow: shadow(map.get($config, shadow));
+// color: color(gray, 7);
+// display: inline-flex;
+// font-weight: font-weight(map.get($config, font-weight));
+// padding: spacing(map.get($config, padding-y), map.get($config, padding-x));
+// text-transform: map.get($config, text-transform);
+
+// &:hover {
+//   background-color: color(gray, 5);
+// }
+
+// &:focus {
+//   outline: none;
+// }
+// }
+
+@mixin styled($selectors, $config) {
+  #{$selectors} {
+    @include reset;
+
+    @each $property, $value in map.get($config, defaults) {
+      #{$property}: $value;
     }
   }
 }
 
 @mixin styles {
-  @include button;
+  // #{$selectors} {
+  //   @include reset;
+  //   @include default;
+  // }
+
+  @include styled($selectors, $config);
 }

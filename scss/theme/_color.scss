@@ -7,11 +7,10 @@
 @use '../core/helpers/internal' as *;
 @use 'tokens' as *;
 
-// The Color scheme specific CSS variables can be
-// access as: var(--c-surface-1) or by using the
-// color function: color(surface, 1).
+// The Color scheme specific CSS variables can be access as:
+// var(--c-surface-1) or by using the color function: color(surface, 1).
 
-$color-schemes: (
+$schemes: (
   light: (
     surface: (
       1: map.get($tokens, colors, gray, 0),

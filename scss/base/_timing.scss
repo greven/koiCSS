@@ -9,7 +9,5 @@
 // --------------------------------
 
 @mixin vars {
-  :root {
-    @include generate-css-vars(theme(timing));
-  }
+  @include generate-css-vars(theme(timing));
 }

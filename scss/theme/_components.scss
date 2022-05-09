@@ -1,0 +1,23 @@
+// -------------------------------------
+//   Components Theme variables
+// ------------------------------------
+
+@use 'sass:map';
+
+$config: (
+  button: (
+    defaults: (
+      padding: spacing(4, 12),
+      background-color: color(blue, 6),
+    ),
+    variants: (
+      dark: (
+        color: white,
+        background-color: black,
+      ),
+      sm: (
+        padding: spacing(4, 12),
+      ),
+    ),
+  ),
+);
