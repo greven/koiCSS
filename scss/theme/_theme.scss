@@ -6,7 +6,7 @@
 
 @use '../config' as *;
 @use '../core/generators/vars' as *;
-@use 'tokens' as *;
+@use '../tokens' as *;
 @use 'color';
 @use 'components';
 

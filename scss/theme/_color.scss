@@ -5,7 +5,7 @@
 @use 'sass:map';
 
 @use '../core/helpers/internal' as *;
-@use 'tokens' as *;
+@use '../tokens' as *;
 
 // The Color scheme specific CSS variables can be access as:
 // var(--c-surface-1) or by using the color function: color(surface, 1).

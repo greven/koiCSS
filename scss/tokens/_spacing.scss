@@ -4,8 +4,8 @@
 
 @use 'sass:map';
 
-@use '../../config' as *;
-@use '../../core/helpers/unit' as *;
+@use '../config' as *;
+@use '../core/helpers/unit' as *;
 
 $spacer: map.get($config, spacer);
 

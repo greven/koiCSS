@@ -5,7 +5,7 @@
 @use 'sass:map';
 @use 'sass:list';
 
-@use '../theme/tokens/spacing' as *;
+@use '../tokens/spacing' as *;
 @use '../core/generators' as *;
 @use '../core' as *;
 
