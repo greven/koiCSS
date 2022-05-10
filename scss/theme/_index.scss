@@ -3,9 +3,3 @@
 // --------------------------------
 
 @forward 'theme';
-
-@use 'theme' as *;
-
-@mixin theme {
-  @include create-themes();
-}

@@ -25,6 +25,10 @@ $theme: map.deep-merge($default-theme, $theme);
 //   Mixins
 // --------------------------------
 
+@mixin theme {
+  @include create-themes();
+}
+
 // Color Schemes
 
 @mixin default-theme($color-schemes-map, $color-scheme: config(default-color-scheme)) {
