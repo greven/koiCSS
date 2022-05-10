@@ -6,7 +6,7 @@
 @use 'sass:string';
 @use 'sass:meta';
 
-@use '../api/config' as *;
+@use '../../config' as *;
 @use 'string' as *;
 @use 'color' as *;
 

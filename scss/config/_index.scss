@@ -4,3 +4,12 @@
 
 $config: () !default;
 $config: map.deep-merge(defaults.$config, $config);
+
+// Get a config value
+@function config($keys...) {
+  @if map.has-key($config, $keys...) {
+    @return map.get($config, $keys...);
+  } @else {
+    @return null;
+  }
+}

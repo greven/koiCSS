@@ -7,7 +7,7 @@
 @use 'sass:meta';
 @use 'sass:string';
 
-@use '../api/config' as *;
+@use '../../config' as *;
 @use '../api/media-query' as mq;
 @use '../api/theme' as *;
 @use '../helpers' as *;
