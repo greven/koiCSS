@@ -13,10 +13,9 @@ $default-shade: config(fallbacks, colors);
 $utility-bg-colors-map: ();
 $utility-text-colors-map: ();
 $utility-border-colors-map: ();
+
 @each $color, $shades-or-value in theme(colors) {
-  // -----------------------
-  // -- Background Colors --
-  // -----------------------
+  // -- Background Colors
 
   // Simple colors
   @if meta.type-of($shades-or-value) == 'color' {
@@ -47,9 +46,7 @@ $utility-border-colors-map: ();
     }
   }
 
-  // -----------------
   // -- Text Colors --
-  // -----------------
 
   // Simple colors
   @if meta.type-of($shades-or-value) == 'color' {
@@ -80,9 +77,7 @@ $utility-border-colors-map: ();
     }
   }
 
-  // -------------------
   // -- Border Colors --
-  // -------------------
 
   // Simple colors
   @if meta.type-of($shades-or-value) == 'color' {

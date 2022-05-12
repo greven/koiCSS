@@ -12,31 +12,3 @@
 .loader-2 {
   @include koi.loader-2();
 }
-
-.loader-3 {
-  @include koi.loader-3();
-}
-
-.loader-4 {
-  @include koi.loader-4();
-}
-
-.loader-5 {
-  @include koi.loader-5();
-}
-
-.loader-6 {
-  @include koi.loader-6($accent: #f00);
-}
-
-.loader-7 {
-  @include koi.loader-7($accent: #ff0);
-}
-
-.loader-8 {
-  @include koi.loader-8();
-}
-
-.loader-9 {
-  @include koi.loader-9($size: 10px);
-}
