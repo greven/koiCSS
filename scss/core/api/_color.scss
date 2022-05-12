@@ -3,6 +3,7 @@
 // --------------------------------
 
 @use '../../config' as *;
+@use '../../config/internal' as *;
 @use '../helpers/internal' as *;
 @use 'theme' as *;
 
@@ -15,9 +16,9 @@ $-default-accent: config(fallbacks, accent);
 
 @function color($name, $shade: $-default-shade) {
   @if is-scheme-color($name, $shade) {
-    @return css-var(c-#{$name}-#{$shade});
+    @return css-var(#{$color-prefix}-#{$name}-#{$shade});
   } @else if is-scheme-color($name) {
-    @return css-var(c-#{$name});
+    @return css-var(#{$color-prefix}-#{$name});
   } @else if is-theme-color($name, $shade) {
     @return theme(colors, $name, $shade);
   } @else if is-theme-color($name) {
