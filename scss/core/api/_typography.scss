@@ -4,8 +4,10 @@
 
 @use 'sass:map';
 @use 'sass:list';
+@use 'sass:string';
 
 @use '../../config' as *;
+@use '../helpers' as *;
 @use 'theme' as *;
 
 // --------------------------------
@@ -83,4 +85,47 @@ $-default-tracking: config(fallbacks, tracking);
 @mixin text-size($font-size: $-default-font-size) {
   font-size: font-size($font-size);
   line-height: text-leading($font-size);
+}
+
+// Mixin helper to define a font-face
+// Example: @include font-face('Tobias Light', 'fonts/Tobias-Light', $family: Tobias, $weight: 300);
+@mixin font-face(
+  $name,
+  $path,
+  $family: null,
+  $weight: 400,
+  $style: normal,
+  $display: swap,
+  $exts: eot woff2 woff ttf svg,
+  $extra: null
+) {
+  $family: if($family, string.quote($family), string.quote($name));
+
+  $formats: (
+    eot: 'embedded-opentype',
+    otf: 'opentype',
+    ttf: 'truetype',
+  );
+
+  $src: (local($name), local(str-replace($name, ' ', '-')));
+  @each $ext in $exts {
+    $extension: if($ext == svg, $ext + '#' + str-replace($name, ' ', '_'), $ext);
+    $format: if(map.has-key($formats, $ext), map.get($formats, $ext), $ext);
+    $src: list.append(
+      $src,
+      url(string.quote($path + '.' + $extension)) format(string.quote($format)),
+      $separator: comma
+    );
+  }
+
+  @font-face {
+    font-family: $family;
+    font-style: $style;
+    font-weight: $weight;
+    font-display: $display;
+    src: $src;
+    @each $key, $value in $extra {
+      $key: $value;
+    }
+  }
 }

@@ -13,10 +13,10 @@
 $schemes: (
   light: (
     surface: (
-      1: map.get($tokens, colors, gray, 0),
+      1: map.get($tokens, colors, gray, 1),
       2: map.get($tokens, colors, white),
-      3: map.get($tokens, colors, gray, 1),
-      4: map.get($tokens, colors, gray, 2),
+      3: map.get($tokens, colors, gray, 2),
+      4: map.get($tokens, colors, gray, 3),
     ),
     text: (
       1: map.get($tokens, colors, gray, 9),
