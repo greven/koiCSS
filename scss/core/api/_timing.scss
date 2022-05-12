@@ -2,7 +2,7 @@
 //   Timing (Animation & Transition)
 // ------------------------------------
 
-@use 'config' as *;
+@use '../../config' as *;
 @use 'theme' as *;
 
 $-default-timing: config(fallbacks, timing);

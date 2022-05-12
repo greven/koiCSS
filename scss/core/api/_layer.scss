@@ -2,7 +2,7 @@
 //   Layer / Z-Index
 // --------------------------------
 
-@use 'config' as *;
+@use '../../config' as *;
 @use 'theme' as *;
 
 $-default-layer: config(fallbacks, layer);

@@ -2,8 +2,8 @@
 //   Color
 // --------------------------------
 
+@use '../../config' as *;
 @use '../helpers/internal' as *;
-@use 'config' as *;
 @use 'theme' as *;
 
 $-default-shade: config(fallbacks, colors);

@@ -8,7 +8,7 @@
 @use '../tokens' as *;
 
 // The Color scheme specific CSS variables can be access as:
-// var(--c-surface-1) or by using the color function: color(surface, 1).
+// var(--color-surface-1) or by using the color function: color(surface, 1).
 
 $schemes: (
   light: (

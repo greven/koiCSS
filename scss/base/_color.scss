@@ -2,9 +2,8 @@
 //   Color Styles
 // --------------------------------
 
+@use '../config/internal' as *;
 @use '../core' as *;
-
-$custom-prop-name: c;
 
 // --------------------------------
 //   CSS Custom Properties
@@ -13,5 +12,5 @@ $custom-prop-name: c;
 @mixin vars {
   $colors: theme(colors);
 
-  @include generate-css-color-vars($colors, $custom-prop-name);
+  @include generate-css-color-vars($colors, $color-prefix);
 }

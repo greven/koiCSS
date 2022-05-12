@@ -2,7 +2,7 @@
 //   Duration (Animation & Transition)
 // -------------------------------------
 
-@use 'config' as *;
+@use '../../config' as *;
 @use 'theme' as *;
 
 $-default-duration: config(fallbacks, duration);

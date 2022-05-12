@@ -4,6 +4,7 @@
 
 @use 'sass:list';
 
+@use '../../config/internal' as *;
 @use '../helpers/internal' as *;
 @use '../helpers/color' as *;
 
@@ -41,7 +42,7 @@ $ignore-accent-colors: (white black);
 @mixin generate-color-scheme-css-vars($colors-map: (), $color-scheme: null, $suffix: null) {
   /*! purgecss start ignore */
   @each $color, $value in $colors-map {
-    @include hsl-color-custom-prop(c-#{$color}, $color-scheme, $value, $suffix);
+    @include hsl-color-custom-prop(#{$color-prefix}-#{$color}, $color-scheme, $value, $suffix);
   }
   /*! purgecss end ignore */
 }

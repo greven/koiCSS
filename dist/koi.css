@@ -105,7 +105,7 @@ html {
 }
 
 @media (prefers-color-scheme: light) {
-  :root {
+  html {
     /*! purgecss start ignore */
     --c-surface-1-h: 0deg;
     --c-surface-1-s: 0%;
@@ -268,7 +268,7 @@ html {
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  html {
     /*! purgecss start ignore */
     --c-surface-1-h: 0deg;
     --c-surface-1-s: 0%;
@@ -717,12 +717,9 @@ select {
   --anim-pulse: pulse 2s cubic-bezier(0, 0, 0.2, 1) infinite;
   --anim-spin: spin 2s linear infinite;
   --anim-ring: ring 500ms linear infinite;
-}
-
-:root {
   /*! purgecss start ignore */
-  --c-white: #ffffff;
-  --c-black: #000000;
+  --c-white: #fff;
+  --c-black: #000;
   --c-primary-0: #f0fffa;
   --c-primary-1: #c9fded;
   --c-primary-2: #94fadd;
@@ -783,6 +780,64 @@ select {
   --c-blue-7: #1d4fd7;
   --c-blue-8: #1e3fae;
   --c-blue-9: #1e3b8a;
+  /*! purgecss end ignore */
+  /*! purgecss start ignore */
+  --delay-75: 75ms;
+  --delay-100: 100ms;
+  --delay-150: 150ms;
+  --delay-200: 200ms;
+  --delay-300: 300ms;
+  --delay-500: 500ms;
+  --delay-700: 700ms;
+  --delay-1000: 1000ms;
+  /*! purgecss end ignore */
+  /*! purgecss start ignore */
+  --duration-ultra-fast: 25ms;
+  --duration-super-fast: 50ms;
+  --duration-fastest: 75ms;
+  --duration-faster: 100ms;
+  --duration-fast: 150ms;
+  --duration-normal: 200ms;
+  --duration-slow: 300ms;
+  --duration-slower: 500ms;
+  --duration-slowest: 600ms;
+  --duration-super-slow: 800ms;
+  --duration-ultra-slow: 1200ms;
+  --duration-1: 1s;
+  --duration-2: 2s;
+  --duration-3: 3s;
+  --duration-4: 4s;
+  --duration-5: 5s;
+  --duration-25: 25ms;
+  --duration-50: 50ms;
+  --duration-75: 75ms;
+  --duration-100: 100ms;
+  --duration-150: 150ms;
+  --duration-200: 200ms;
+  --duration-300: 300ms;
+  --duration-500: 500ms;
+  --duration-700: 700ms;
+  --duration-1000: 1000ms;
+  /*! purgecss end ignore */
+  /*! purgecss start ignore */
+  --shadow-xs: 0 1px 2px 0 rgba(0 0 0 / 0.05);
+  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0 0 0 / 0.1), 0 2px 4px -1px rgba(0 0 0 / 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0 0 0 / 0.1), 0 4px 6px -2px rgba(0 0 0 / 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0 0 0 / 0.1), 0 10px 10px -5px rgba(0 0 0 / 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgba(0 0 0 / 0.25);
+  --shadow-inner: inset 0 2px 4px 0 rgba(0 0 0 / 0.06);
+  --shadow-outline: 0 0 0 3px rgba(66 153 225 / 0.5);
+  --shadow-solid: 0 0 0 2px currentColor;
+  --shadow-none: 0 0 #0000;
+  /*! purgecss end ignore */
+  /*! purgecss start ignore */
+  --linear: linear;
+  --ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-elastic: cubic-bezier(0.5, 1, 0.75, 1.25);
   /*! purgecss end ignore */
 }
 :root .accent-primary {
@@ -1038,76 +1093,6 @@ select {
   --accent-9: hsl(var(--accent-9-h), var(--accent-9-s), var(--accent-9-l));
 }
 
-:root {
-  /*! purgecss start ignore */
-  --delay-75: 75ms;
-  --delay-100: 100ms;
-  --delay-150: 150ms;
-  --delay-200: 200ms;
-  --delay-300: 300ms;
-  --delay-500: 500ms;
-  --delay-700: 700ms;
-  --delay-1000: 1000ms;
-  /*! purgecss end ignore */
-}
-
-:root {
-  /*! purgecss start ignore */
-  --duration-ultra-fast: 25ms;
-  --duration-super-fast: 50ms;
-  --duration-fastest: 75ms;
-  --duration-faster: 100ms;
-  --duration-fast: 150ms;
-  --duration-normal: 200ms;
-  --duration-slow: 300ms;
-  --duration-slower: 500ms;
-  --duration-slowest: 600ms;
-  --duration-super-slow: 800ms;
-  --duration-ultra-slow: 1200ms;
-  --duration-1: 1s;
-  --duration-2: 2s;
-  --duration-3: 3s;
-  --duration-4: 4s;
-  --duration-5: 5s;
-  --duration-25: 25ms;
-  --duration-50: 50ms;
-  --duration-75: 75ms;
-  --duration-100: 100ms;
-  --duration-150: 150ms;
-  --duration-200: 200ms;
-  --duration-300: 300ms;
-  --duration-500: 500ms;
-  --duration-700: 700ms;
-  --duration-1000: 1000ms;
-  /*! purgecss end ignore */
-}
-
-:root {
-  /*! purgecss start ignore */
-  --shadow-xs: 0 1px 2px 0 rgba(0 0 0 / 0.05);
-  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-  --shadow-md: 0 4px 6px -1px rgba(0 0 0 / 0.1), 0 2px 4px -1px rgba(0 0 0 / 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0 0 0 / 0.1), 0 4px 6px -2px rgba(0 0 0 / 0.05);
-  --shadow-xl: 0 20px 25px -5px rgba(0 0 0 / 0.1), 0 10px 10px -5px rgba(0 0 0 / 0.04);
-  --shadow-2xl: 0 25px 50px -12px rgba(0 0 0 / 0.25);
-  --shadow-inner: inset 0 2px 4px 0 rgba(0 0 0 / 0.06);
-  --shadow-outline: 0 0 0 3px rgba(66 153 225 / 0.5);
-  --shadow-solid: 0 0 0 2px currentColor;
-  --shadow-none: 0 0 #0000;
-  /*! purgecss end ignore */
-}
-
-:root {
-  /*! purgecss start ignore */
-  --linear: linear;
-  --ease: cubic-bezier(0.25, 0.1, 0.25, 1);
-  --ease-in: cubic-bezier(0.4, 0, 1, 1);
-  --ease-out: cubic-bezier(0, 0, 0.2, 1);
-  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
-  --ease-elastic: cubic-bezier(0.5, 1, 0.75, 1.25);
-  /*! purgecss end ignore */
-}
-
 /*! purgecss start ignore */
 @keyframes blink {
   0%, 100% {
@@ -1191,24 +1176,17 @@ select {
 }
 
 /*! purgecss end ignore */
-.btn {
-  font-size: 0.875rem;
-  align-items: center;
-  background-color: #f5f5f5;
-  border: 1px solid #e6e6e6;
-  border-radius: 0.25rem;
-  box-shadow: 0 4px 6px -1px rgba(0 0 0 / 0.1), 0 2px 4px -1px rgba(0 0 0 / 0.06);
-  color: #404040;
-  display: inline-flex;
-  font-weight: 500;
-  padding-block: 0.25rem;
-  padding-inline: 0.5rem;
-}
-.btn:hover {
-  background-color: #737373;
-}
-.btn:focus {
-  outline: none;
+button, .btn {
+  appearance: none;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 400;
+  padding: 0;
+  text-decoration: none;
+  padding: spacing(4, 12);
+  background-color: color(blue, 6);
 }
 
 .card {
@@ -1275,11 +1253,6 @@ select {
   --koi-bg-opacity: 1;
 }
 
-.bg-primary, .focus\:bg-primary:focus, .hover\:bg-primary:hover {
-  background-color: rgba(8, 155, 128, var(--koi-bg-opacity));
-  --koi-bg-opacity: 1;
-}
-
 .bg-primary-7, .focus\:bg-primary-7:focus, .hover\:bg-primary-7:hover {
   background-color: rgba(11, 121, 103, var(--koi-bg-opacity));
   --koi-bg-opacity: 1;
@@ -1326,11 +1299,6 @@ select {
 }
 
 .bg-gray-6, .focus\:bg-gray-6:focus, .hover\:bg-gray-6:hover {
-  background-color: rgba(82, 82, 82, var(--koi-bg-opacity));
-  --koi-bg-opacity: 1;
-}
-
-.bg-gray, .focus\:bg-gray:focus, .hover\:bg-gray:hover {
   background-color: rgba(82, 82, 82, var(--koi-bg-opacity));
   --koi-bg-opacity: 1;
 }
@@ -1385,11 +1353,6 @@ select {
   --koi-bg-opacity: 1;
 }
 
-.bg-red, .focus\:bg-red:focus, .hover\:bg-red:hover {
-  background-color: rgba(220, 40, 40, var(--koi-bg-opacity));
-  --koi-bg-opacity: 1;
-}
-
 .bg-red-7, .focus\:bg-red-7:focus, .hover\:bg-red-7:hover {
   background-color: rgba(186, 28, 28, var(--koi-bg-opacity));
   --koi-bg-opacity: 1;
@@ -1436,11 +1399,6 @@ select {
 }
 
 .bg-yellow-6, .focus\:bg-yellow-6:focus, .hover\:bg-yellow-6:hover {
-  background-color: rgba(200, 138, 4, var(--koi-bg-opacity));
-  --koi-bg-opacity: 1;
-}
-
-.bg-yellow, .focus\:bg-yellow:focus, .hover\:bg-yellow:hover {
   background-color: rgba(200, 138, 4, var(--koi-bg-opacity));
   --koi-bg-opacity: 1;
 }
@@ -1495,11 +1453,6 @@ select {
   --koi-bg-opacity: 1;
 }
 
-.bg-green, .focus\:bg-green:focus, .hover\:bg-green:hover {
-  background-color: rgba(22, 162, 73, var(--koi-bg-opacity));
-  --koi-bg-opacity: 1;
-}
-
 .bg-green-7, .focus\:bg-green-7:focus, .hover\:bg-green-7:hover {
   background-color: rgba(21, 127, 60, var(--koi-bg-opacity));
   --koi-bg-opacity: 1;
@@ -1546,11 +1499,6 @@ select {
 }
 
 .bg-blue-6, .focus\:bg-blue-6:focus, .hover\:bg-blue-6:hover {
-  background-color: rgba(36, 99, 235, var(--koi-bg-opacity));
-  --koi-bg-opacity: 1;
-}
-
-.bg-blue, .focus\:bg-blue:focus, .hover\:bg-blue:hover {
   background-color: rgba(36, 99, 235, var(--koi-bg-opacity));
   --koi-bg-opacity: 1;
 }
@@ -1846,11 +1794,6 @@ select {
   --koi-border-opacity: 1;
 }
 
-.border-primary, .focus\:border-primary:focus, .hover\:border-primary:hover {
-  border-color: rgba(8, 155, 128, var(--koi-border-opacity));
-  --koi-border-opacity: 1;
-}
-
 .border-primary-7, .focus\:border-primary-7:focus, .hover\:border-primary-7:hover {
   border-color: rgba(11, 121, 103, var(--koi-border-opacity));
   --koi-border-opacity: 1;
@@ -1897,11 +1840,6 @@ select {
 }
 
 .border-gray-6, .focus\:border-gray-6:focus, .hover\:border-gray-6:hover {
-  border-color: rgba(82, 82, 82, var(--koi-border-opacity));
-  --koi-border-opacity: 1;
-}
-
-.border-gray, .focus\:border-gray:focus, .hover\:border-gray:hover {
   border-color: rgba(82, 82, 82, var(--koi-border-opacity));
   --koi-border-opacity: 1;
 }
@@ -1956,11 +1894,6 @@ select {
   --koi-border-opacity: 1;
 }
 
-.border-red, .focus\:border-red:focus, .hover\:border-red:hover {
-  border-color: rgba(220, 40, 40, var(--koi-border-opacity));
-  --koi-border-opacity: 1;
-}
-
 .border-red-7, .focus\:border-red-7:focus, .hover\:border-red-7:hover {
   border-color: rgba(186, 28, 28, var(--koi-border-opacity));
   --koi-border-opacity: 1;
@@ -2007,11 +1940,6 @@ select {
 }
 
 .border-yellow-6, .focus\:border-yellow-6:focus, .hover\:border-yellow-6:hover {
-  border-color: rgba(200, 138, 4, var(--koi-border-opacity));
-  --koi-border-opacity: 1;
-}
-
-.border-yellow, .focus\:border-yellow:focus, .hover\:border-yellow:hover {
   border-color: rgba(200, 138, 4, var(--koi-border-opacity));
   --koi-border-opacity: 1;
 }
@@ -2066,11 +1994,6 @@ select {
   --koi-border-opacity: 1;
 }
 
-.border-green, .focus\:border-green:focus, .hover\:border-green:hover {
-  border-color: rgba(22, 162, 73, var(--koi-border-opacity));
-  --koi-border-opacity: 1;
-}
-
 .border-green-7, .focus\:border-green-7:focus, .hover\:border-green-7:hover {
   border-color: rgba(21, 127, 60, var(--koi-border-opacity));
   --koi-border-opacity: 1;
@@ -2117,11 +2040,6 @@ select {
 }
 
 .border-blue-6, .focus\:border-blue-6:focus, .hover\:border-blue-6:hover {
-  border-color: rgba(36, 99, 235, var(--koi-border-opacity));
-  --koi-border-opacity: 1;
-}
-
-.border-blue, .focus\:border-blue:focus, .hover\:border-blue:hover {
   border-color: rgba(36, 99, 235, var(--koi-border-opacity));
   --koi-border-opacity: 1;
 }
@@ -8625,11 +8543,6 @@ select {
   --koi-text-opacity: 1;
 }
 
-.text-primary, .focus\:text-primary:focus, .hover\:text-primary:hover {
-  color: rgba(8, 155, 128, var(--koi-text-opacity));
-  --koi-text-opacity: 1;
-}
-
 .text-primary-7, .focus\:text-primary-7:focus, .hover\:text-primary-7:hover {
   color: rgba(11, 121, 103, var(--koi-text-opacity));
   --koi-text-opacity: 1;
@@ -8676,11 +8589,6 @@ select {
 }
 
 .text-gray-6, .focus\:text-gray-6:focus, .hover\:text-gray-6:hover {
-  color: rgba(82, 82, 82, var(--koi-text-opacity));
-  --koi-text-opacity: 1;
-}
-
-.text-gray, .focus\:text-gray:focus, .hover\:text-gray:hover {
   color: rgba(82, 82, 82, var(--koi-text-opacity));
   --koi-text-opacity: 1;
 }
@@ -8735,11 +8643,6 @@ select {
   --koi-text-opacity: 1;
 }
 
-.text-red, .focus\:text-red:focus, .hover\:text-red:hover {
-  color: rgba(220, 40, 40, var(--koi-text-opacity));
-  --koi-text-opacity: 1;
-}
-
 .text-red-7, .focus\:text-red-7:focus, .hover\:text-red-7:hover {
   color: rgba(186, 28, 28, var(--koi-text-opacity));
   --koi-text-opacity: 1;
@@ -8786,11 +8689,6 @@ select {
 }
 
 .text-yellow-6, .focus\:text-yellow-6:focus, .hover\:text-yellow-6:hover {
-  color: rgba(200, 138, 4, var(--koi-text-opacity));
-  --koi-text-opacity: 1;
-}
-
-.text-yellow, .focus\:text-yellow:focus, .hover\:text-yellow:hover {
   color: rgba(200, 138, 4, var(--koi-text-opacity));
   --koi-text-opacity: 1;
 }
@@ -8845,11 +8743,6 @@ select {
   --koi-text-opacity: 1;
 }
 
-.text-green, .focus\:text-green:focus, .hover\:text-green:hover {
-  color: rgba(22, 162, 73, var(--koi-text-opacity));
-  --koi-text-opacity: 1;
-}
-
 .text-green-7, .focus\:text-green-7:focus, .hover\:text-green-7:hover {
   color: rgba(21, 127, 60, var(--koi-text-opacity));
   --koi-text-opacity: 1;
@@ -8896,11 +8789,6 @@ select {
 }
 
 .text-blue-6, .focus\:text-blue-6:focus, .hover\:text-blue-6:hover {
-  color: rgba(36, 99, 235, var(--koi-text-opacity));
-  --koi-text-opacity: 1;
-}
-
-.text-blue, .focus\:text-blue:focus, .hover\:text-blue:hover {
   color: rgba(36, 99, 235, var(--koi-text-opacity));
   --koi-text-opacity: 1;
 }

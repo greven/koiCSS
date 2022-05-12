@@ -8,8 +8,8 @@
 @use 'sass:math';
 @use 'sass:meta';
 
+@use '../../config' as *;
 @use '../helpers/type' as *;
-@use 'config' as *;
 @use 'theme' as *;
 
 // --------------------------------

@@ -5,10 +5,10 @@
 @use 'sass:map';
 
 @use '../config' as *;
-@use '../core/generators/vars' as *;
 @use '../tokens' as *;
-@use 'color';
+@use '../core/generators/vars' as *;
 @use 'components';
+@use 'color';
 
 $default-theme: map.deep-merge(
   (

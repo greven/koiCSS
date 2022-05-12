@@ -8,8 +8,8 @@
 @use 'sass:selector';
 
 @use '../../theme' as *;
+@use '../../config' as *;
 @use '../helpers' as *;
-@use 'config' as *;
 
 // --------------------------------
 //   Functions

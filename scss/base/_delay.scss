@@ -2,14 +2,13 @@
 //   Delay Styles
 // --------------------------------
 
+@use '../config/internal' as *;
 @use '../core' as *;
-
-$custom-prop-name: delay;
 
 // --------------------------------
 //   CSS Custom Properties
 // --------------------------------
 
 @mixin vars {
-  @include generate-css-vars(theme(delay), $custom-prop-name);
+  @include generate-css-vars(theme(delay), $delay-prefix);
 }

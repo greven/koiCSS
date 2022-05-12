@@ -2,10 +2,9 @@
 //   Animation Styles
 // --------------------------------
 
-@use '../core' as *;
+@use '../config/internal' as *;
 @use '../core/helpers/internal' as *;
-
-$custom-prop-name: anim;
+@use '../core' as *;
 
 // --------------------------------
 //   Mixins
@@ -112,13 +111,13 @@ $custom-prop-name: anim;
 // --------------------------------
 
 @mixin vars {
-  @include custom-prop($custom-prop-name, blink, (blink 1s timing(ease) infinite));
-  @include custom-prop($custom-prop-name, bounce, (bounce 2s timing(ease) infinite));
-  @include custom-prop($custom-prop-name, fade-in, (fade-in 0.5s timing(ease)));
-  @include custom-prop($custom-prop-name, fade-out, (fade-out 0.5s timing(ease)));
-  @include custom-prop($custom-prop-name, float, (float 3s timing(ease-in-out) infinite));
-  @include custom-prop($custom-prop-name, ping, (ping 3s timing(ease-out) infinite));
-  @include custom-prop($custom-prop-name, pulse, (pulse 2s timing(ease-out) infinite));
-  @include custom-prop($custom-prop-name, spin, (spin 2s timing(linear) infinite));
-  @include custom-prop($custom-prop-name, ring, (ring 500ms timing(linear) infinite));
+  @include custom-prop($animation-prefix, blink, (blink 1s timing(ease) infinite));
+  @include custom-prop($animation-prefix, bounce, (bounce 2s timing(ease) infinite));
+  @include custom-prop($animation-prefix, fade-in, (fade-in 0.5s timing(ease)));
+  @include custom-prop($animation-prefix, fade-out, (fade-out 0.5s timing(ease)));
+  @include custom-prop($animation-prefix, float, (float 3s timing(ease-in-out) infinite));
+  @include custom-prop($animation-prefix, ping, (ping 3s timing(ease-out) infinite));
+  @include custom-prop($animation-prefix, pulse, (pulse 2s timing(ease-out) infinite));
+  @include custom-prop($animation-prefix, spin, (spin 2s timing(linear) infinite));
+  @include custom-prop($animation-prefix, ring, (ring 500ms timing(linear) infinite));
 }

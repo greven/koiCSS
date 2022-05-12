@@ -2,14 +2,13 @@
 //   Shadow Styles
 // --------------------------------
 
+@use '../config/internal' as *;
 @use '../core' as *;
-
-$custom-prop-name: shadow;
 
 // --------------------------------
 //   CSS Custom Properties
 // --------------------------------
 
 @mixin vars {
-  @include generate-css-vars(theme(shadow), $custom-prop-name);
+  @include generate-css-vars(theme(shadow), $shadow-prefix);
 }

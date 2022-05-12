@@ -4,7 +4,7 @@
 
 @use 'sass:map';
 
-@use 'config' as *;
+@use '../../config' as *;
 @use 'theme' as *;
 
 $-default-shadow: config(fallbacks, shadow);
