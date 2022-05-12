@@ -10,6 +10,8 @@
 
 // << Insert your base styles here >>
 
+// @include koi.font-face('Tobias Light', 'fonts/Tobias-Light', $family: Tobias, $weight: 300);
+
 body {
   // @include koi.container($padding: true, $center: true);
   // @include koi.responsive-margin-block;
