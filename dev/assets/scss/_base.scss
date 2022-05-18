@@ -11,12 +11,13 @@
 // << Insert your base styles here >>
 
 // @include koi.font-face('Tobias Light', 'fonts/Tobias-Light', $family: Tobias, $weight: 300);
+// @debug koi.lch(30% 50 300);
 
 body {
   // @include koi.container($padding: true, $center: true);
   // @include koi.responsive-margin-block;
-  background-color: koi.color(surface, 1);
-  color: koi.color(text, 1);
+  background-color: koi.fill(surface, 1);
+  color: koi.fill(text, 1);
 }
 
 h1 {
@@ -29,12 +30,13 @@ h1 {
 .wrapper {
   @include koi.box($padding: true, $rounded: true, $shadow: true);
   @include koi.responsive-margin-block;
-  background-color: koi.color(surface, 2);
-  border: 2px solid koi.color(gray);
+  background-color: koi.fill(surface, 2);
+  border: 2px solid koi.fill(gray);
 
   &:hover {
-    background-color: koi.color(surface, 3);
-    border-color: koi.accent(5);
+    background-color: koi.fill(surface, 3);
+    border-color: koi.fill(accent, 5);
+    // border-color: koi.accent(5);
   }
 }
 

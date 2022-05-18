@@ -15,9 +15,11 @@
 ///
 /// @return {number} `$value-in-pixel` in rem.
 ///
-@function rem($value-in-px, $base-font-size: 16) {
-  $size: math.div($value-in-px, $base-font-size);
-  @return #{$size}rem;
+@function px-to-rem($px, $base-font-size: 16) {
+  @if $px == null {
+    @return null;
+  }
+  @return math.div($px, $base-font-size) * 1rem;
 }
 
 /// Strip unit from value.

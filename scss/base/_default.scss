@@ -7,6 +7,7 @@
   }
 
   body {
+    @include smooth-font;
     font-family: font(sans);
     font-size: font(md);
     font-weight: font(normal);
@@ -37,14 +38,14 @@
   pre {
     @include responsive-padding;
     @include rounded;
-    background-color: color(code-bg);
-    color: color(code-text);
+    background-color: fill(code-bg);
+    color: fill(code-text);
     overflow-x: auto;
     position: relative;
   }
 
   code::before {
-    color: color(text, 4);
+    color: fill(text, 4);
     content: attr(data-lang);
     font-size: font(xs);
     position: absolute;
@@ -53,9 +54,9 @@
   }
 
   blockquote {
-    border-left-color: color(quote-border);
+    border-left-color: fill(quote-border);
     border-left-width: 0.25rem;
-    color: color(quote-text);
+    color: fill(quote-text);
     font-style: italic;
     font-weight: font(medium);
     margin-bottom: 1.6em;
@@ -82,7 +83,7 @@
 
   a {
     border-bottom: 1px solid accent(5);
-    color: color(text, 1);
+    color: fill(text, 1);
     font-weight: font(medium);
     text-decoration: none;
     transition: all 50ms linear;

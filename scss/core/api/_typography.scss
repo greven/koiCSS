@@ -83,3 +83,17 @@ $-default-tracking: config(fallbacks, tracking);
   font-size: font-size($font-size);
   line-height: text-leading($font-size);
 }
+
+// Applies antialiasing via font-smoothing to text.
+@mixin smooth-font {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+// Sets text content overflow to ellipsis
+// Element must be `display: block` or `display: inline-block` for this to work.
+@mixin overflow-ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

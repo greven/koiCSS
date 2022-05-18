@@ -49,5 +49,8 @@
     "stylelint": "^14.8.0",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-sass-guidelines": "^9.0.1"
+  },
+  "dependencies": {
+    "@oddbird/blend": "^0.2.3"
   }
 }

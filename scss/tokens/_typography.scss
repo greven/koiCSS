@@ -44,59 +44,59 @@ $font-family: (
 // Font size with default line-height
 $font-size: (
   2xs: (
-    rem(10),
-    rem(12),
+    px-to-rem(10),
+    px-to-rem(12),
   ),
   xs: (
-    rem(12),
-    rem(16),
+    px-to-rem(12),
+    px-to-rem(16),
   ),
   sm: (
-    rem(14),
-    rem(20),
+    px-to-rem(14),
+    px-to-rem(20),
   ),
   md: (
-    rem(16),
-    rem(24),
+    px-to-rem(16),
+    px-to-rem(24),
   ),
   lg: (
-    rem(18),
-    rem(28),
+    px-to-rem(18),
+    px-to-rem(28),
   ),
   xl: (
-    rem(20),
-    rem(28),
+    px-to-rem(20),
+    px-to-rem(28),
   ),
   2xl: (
-    rem(24),
-    rem(32),
+    px-to-rem(24),
+    px-to-rem(32),
   ),
   3xl: (
-    rem(30),
-    rem(36),
+    px-to-rem(30),
+    px-to-rem(36),
   ),
   4xl: (
-    rem(36),
-    rem(40),
+    px-to-rem(36),
+    px-to-rem(40),
   ),
   5xl: (
-    rem(48),
+    px-to-rem(48),
     1,
   ),
   6xl: (
-    rem(60),
+    px-to-rem(60),
     1,
   ),
   7xl: (
-    rem(72),
+    px-to-rem(72),
     1,
   ),
   8xl: (
-    rem(96),
+    px-to-rem(96),
     1,
   ),
   9xl: (
-    rem(128),
+    px-to-rem(128),
     1,
   ),
 ) !default;
@@ -115,16 +115,16 @@ $font-weight: (
 
 // Line Height
 $leading: (
-  1: rem(8),
-  2: rem(10),
-  3: rem(12),
-  4: rem(16),
-  5: rem(20),
-  6: rem(24),
-  7: rem(28),
-  8: rem(32),
-  9: rem(36),
-  10: rem(40),
+  1: px-to-rem(8),
+  2: px-to-rem(10),
+  3: px-to-rem(12),
+  4: px-to-rem(16),
+  5: px-to-rem(20),
+  6: px-to-rem(24),
+  7: px-to-rem(28),
+  8: px-to-rem(32),
+  9: px-to-rem(36),
+  10: px-to-rem(40),
   none: 1,
   tight: 1.25,
   snug: 1.375,

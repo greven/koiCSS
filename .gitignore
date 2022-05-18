@@ -132,4 +132,5 @@ out
 .pnp.*
 
 # Project
+_dev.scss
 dev/**/*.css

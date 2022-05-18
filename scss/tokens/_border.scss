@@ -5,13 +5,13 @@
 @use '../core/helpers/unit' as *;
 
 $radius: (
-  xs: rem(2),
-  sm: rem(3),
-  md: rem(4),
-  lg: rem(6),
-  xl: rem(8),
-  2xl: rem(12),
-  3xl: rem(16),
-  4xl: rem(24),
+  xs: px-to-rem(2),
+  sm: px-to-rem(3),
+  md: px-to-rem(4),
+  lg: px-to-rem(6),
+  xl: px-to-rem(8),
+  2xl: px-to-rem(12),
+  3xl: px-to-rem(16),
+  4xl: px-to-rem(24),
   full: 9999px,
 ) !default;

@@ -14,7 +14,7 @@ $-default-accent: config(fallbacks, accent);
 //   Functions
 // --------------------------------
 
-@function color($name, $shade: $-default-shade) {
+@function fill($name, $shade: $-default-shade) {
   @if is-scheme-color($name, $shade) {
     @return css-var(#{$color-prefix}-#{$name}-#{$shade});
   } @else if is-scheme-color($name) {
@@ -23,6 +23,8 @@ $-default-accent: config(fallbacks, accent);
     @return theme(colors, $name, $shade);
   } @else if is-theme-color($name) {
     @return theme(colors, $name);
+  } @else if $name == accent {
+    @return accent($shade);
   } @else {
     @error "Color #{$name}-#{$shade} not found in theme.";
   }
