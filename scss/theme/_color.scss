@@ -10,6 +10,11 @@
 // The Color scheme specific CSS variables can be access as:
 // var(--color-surface-1) or by using the color function: color(surface, 1).
 
+// TODO: 1. Generate primary and secondary?? colors shade palettes using '@oddbird/blend'
+// TODO: 2. We need to get a way from importing from there here, other using we can't override colors used in the theme when we @use the library and override any colors
+// Note: Remove if SASS adds support for CSS Color Modules Level 4 & Level 5
+// @forward '@oddbird/blend';
+
 $schemes: (
   light: (
     surface: (
@@ -27,7 +32,7 @@ $schemes: (
     code-bg: map.get($tokens, colors, gray, 9),
     code-text: map.get($tokens, colors, gray, 1),
     quote-text: map.get($tokens, colors, gray, 8),
-    quote-border: map.get($tokens, colors, primary, 6),
+    quote-border: map.get($tokens, colors, blue, 6),
   ),
   dark: (
     surface: (
@@ -45,6 +50,6 @@ $schemes: (
     code-bg: map.get($tokens, colors, black),
     code-text: map.get($tokens, colors, gray, 1),
     quote-text: map.get($tokens, colors, gray, 1),
-    quote-border: map.get($tokens, colors, primary, 6),
+    quote-border: map.get($tokens, colors, blue, 6),
   ),
 ) !default;

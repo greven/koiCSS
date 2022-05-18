@@ -11,7 +11,6 @@
 // << Insert your base styles here >>
 
 // @include koi.font-face('Tobias Light', 'fonts/Tobias-Light', $family: Tobias, $weight: 300);
-// @debug koi.lch(30% 50 300);
 
 body {
   // @include koi.container($padding: true, $center: true);
@@ -30,6 +29,8 @@ h1 {
 .wrapper {
   @include koi.box($padding: true, $rounded: true, $shadow: true);
   @include koi.responsive-margin-block;
+  // @include koi.transition(background);
+  @include koi.transition-colors;
   background-color: koi.fill(surface, 2);
   border: 2px solid koi.fill(gray);
 

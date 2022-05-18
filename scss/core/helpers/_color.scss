@@ -2,9 +2,6 @@
 //   Color Helpers
 // --------------------------------
 
-// Note: Remove if SASS adds support for CSS Color Modules Level 4 & Level 5
-@forward '@oddbird/blend';
-
 @use 'sass:color';
 @use 'sass:math';
 @use 'sass:meta';

@@ -5,8 +5,9 @@
 @use 'sass:map';
 
 @use '../config' as *;
+@use '../config/internal' as *;
+@use '../core/helpers/internal' as *;
 @use '../tokens' as *;
-@use '../core/generators/vars' as *;
 @use 'components';
 @use 'color';
 
@@ -27,6 +28,14 @@ $theme: map.deep-merge($default-theme, $theme);
 
 @mixin theme {
   @include create-themes();
+}
+
+@mixin generate-color-scheme-css-vars($colors-map: (), $color-scheme: null, $suffix: null) {
+  /*! purgecss start ignore */
+  @each $color, $value in $colors-map {
+    @include hsl-color-custom-prop(#{$color-prefix}-#{$color}, $color-scheme, $value, $suffix);
+  }
+  /*! purgecss end ignore */
 }
 
 // Color Schemes
