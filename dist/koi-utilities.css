@@ -23,56 +23,6 @@
   --koi-bg-opacity: 1;
 }
 
-.bg-primary-0, .focus\:bg-primary-0:focus, .hover\:bg-primary-0:hover {
-  background-color: rgba(240, 255, 250, var(--koi-bg-opacity));
-  --koi-bg-opacity: 1;
-}
-
-.bg-primary-1, .focus\:bg-primary-1:focus, .hover\:bg-primary-1:hover {
-  background-color: rgba(201, 253, 237, var(--koi-bg-opacity));
-  --koi-bg-opacity: 1;
-}
-
-.bg-primary-2, .focus\:bg-primary-2:focus, .hover\:bg-primary-2:hover {
-  background-color: rgba(148, 250, 221, var(--koi-bg-opacity));
-  --koi-bg-opacity: 1;
-}
-
-.bg-primary-3, .focus\:bg-primary-3:focus, .hover\:bg-primary-3:hover {
-  background-color: rgba(86, 240, 202, var(--koi-bg-opacity));
-  --koi-bg-opacity: 1;
-}
-
-.bg-primary-4, .focus\:bg-primary-4:focus, .hover\:bg-primary-4:hover {
-  background-color: rgba(36, 214, 175, var(--koi-bg-opacity));
-  --koi-bg-opacity: 1;
-}
-
-.bg-primary-5, .focus\:bg-primary-5:focus, .hover\:bg-primary-5:hover {
-  background-color: rgba(13, 191, 155, var(--koi-bg-opacity));
-  --koi-bg-opacity: 1;
-}
-
-.bg-primary-6, .focus\:bg-primary-6:focus, .hover\:bg-primary-6:hover {
-  background-color: rgba(8, 155, 128, var(--koi-bg-opacity));
-  --koi-bg-opacity: 1;
-}
-
-.bg-primary-7, .focus\:bg-primary-7:focus, .hover\:bg-primary-7:hover {
-  background-color: rgba(11, 121, 103, var(--koi-bg-opacity));
-  --koi-bg-opacity: 1;
-}
-
-.bg-primary-8, .focus\:bg-primary-8:focus, .hover\:bg-primary-8:hover {
-  background-color: rgba(14, 98, 86, var(--koi-bg-opacity));
-  --koi-bg-opacity: 1;
-}
-
-.bg-primary-9, .focus\:bg-primary-9:focus, .hover\:bg-primary-9:hover {
-  background-color: rgba(17, 80, 69, var(--koi-bg-opacity));
-  --koi-bg-opacity: 1;
-}
-
 .bg-gray-0, .focus\:bg-gray-0:focus, .hover\:bg-gray-0:hover {
   background-color: rgba(250, 250, 250, var(--koi-bg-opacity));
   --koi-bg-opacity: 1;
@@ -323,6 +273,306 @@
   --koi-bg-opacity: 1;
 }
 
+.bg-primary-0, .focus\:bg-primary-0:focus, .hover\:bg-primary-0:hover {
+  background-color: rgba(255, 248, 247, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-primary-1, .focus\:bg-primary-1:focus, .hover\:bg-primary-1:hover {
+  background-color: rgba(255, 234, 232, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-primary-2, .focus\:bg-primary-2:focus, .hover\:bg-primary-2:hover {
+  background-color: rgba(255, 217, 213, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-primary-3, .focus\:bg-primary-3:focus, .hover\:bg-primary-3:hover {
+  background-color: rgba(255, 192, 186, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-primary-4, .focus\:bg-primary-4:focus, .hover\:bg-primary-4:hover {
+  background-color: rgba(255, 161, 154, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-primary-5, .focus\:bg-primary-5:focus, .hover\:bg-primary-5:hover {
+  background-color: rgba(255, 123, 118, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-primary-6, .focus\:bg-primary-6:focus, .hover\:bg-primary-6:hover {
+  background-color: rgba(221, 76, 79, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-primary-7, .focus\:bg-primary-7:focus, .hover\:bg-primary-7:hover {
+  background-color: rgba(175, 28, 45, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-primary-8, .focus\:bg-primary-8:focus, .hover\:bg-primary-8:hover {
+  background-color: rgba(144, 0, 30, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-primary-9, .focus\:bg-primary-9:focus, .hover\:bg-primary-9:hover {
+  background-color: rgba(135, 0, 28, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-neutral-0, .focus\:bg-neutral-0:focus, .hover\:bg-neutral-0:hover {
+  background-color: rgba(242, 247, 251, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-neutral-1, .focus\:bg-neutral-1:focus, .hover\:bg-neutral-1:hover {
+  background-color: rgba(223, 229, 232, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-neutral-2, .focus\:bg-neutral-2:focus, .hover\:bg-neutral-2:hover {
+  background-color: rgba(201, 206, 210, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-neutral-3, .focus\:bg-neutral-3:focus, .hover\:bg-neutral-3:hover {
+  background-color: rgba(171, 176, 179, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-neutral-4, .focus\:bg-neutral-4:focus, .hover\:bg-neutral-4:hover {
+  background-color: rgba(137, 142, 145, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-neutral-5, .focus\:bg-neutral-5:focus, .hover\:bg-neutral-5:hover {
+  background-color: rgba(101, 106, 109, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-neutral-6, .focus\:bg-neutral-6:focus, .hover\:bg-neutral-6:hover {
+  background-color: rgba(46, 50, 53, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-neutral-7, .focus\:bg-neutral-7:focus, .hover\:bg-neutral-7:hover {
+  background-color: rgba(34, 38, 41, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-neutral-8, .focus\:bg-neutral-8:focus, .hover\:bg-neutral-8:hover {
+  background-color: rgba(27, 31, 34, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-neutral-9, .focus\:bg-neutral-9:focus, .hover\:bg-neutral-9:hover {
+  background-color: rgba(26, 29, 32, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-success-0, .focus\:bg-success-0:focus, .hover\:bg-success-0:hover {
+  background-color: rgba(243, 252, 245, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-success-1, .focus\:bg-success-1:focus, .hover\:bg-success-1:hover {
+  background-color: rgba(222, 252, 233, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-success-2, .focus\:bg-success-2:focus, .hover\:bg-success-2:hover {
+  background-color: rgba(187, 247, 208, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-success-3, .focus\:bg-success-3:focus, .hover\:bg-success-3:hover {
+  background-color: rgba(133, 239, 172, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-success-4, .focus\:bg-success-4:focus, .hover\:bg-success-4:hover {
+  background-color: rgba(74, 222, 128, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-success-5, .focus\:bg-success-5:focus, .hover\:bg-success-5:hover {
+  background-color: rgba(33, 196, 93, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-success-6, .focus\:bg-success-6:focus, .hover\:bg-success-6:hover {
+  background-color: rgba(22, 162, 73, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-success-7, .focus\:bg-success-7:focus, .hover\:bg-success-7:hover {
+  background-color: rgba(21, 127, 60, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-success-8, .focus\:bg-success-8:focus, .hover\:bg-success-8:hover {
+  background-color: rgba(22, 100, 52, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-success-9, .focus\:bg-success-9:focus, .hover\:bg-success-9:hover {
+  background-color: rgba(20, 82, 45, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-info-0, .focus\:bg-info-0:focus, .hover\:bg-info-0:hover {
+  background-color: rgba(240, 246, 255, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-info-1, .focus\:bg-info-1:focus, .hover\:bg-info-1:hover {
+  background-color: rgba(220, 235, 254, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-info-2, .focus\:bg-info-2:focus, .hover\:bg-info-2:hover {
+  background-color: rgba(190, 219, 254, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-info-3, .focus\:bg-info-3:focus, .hover\:bg-info-3:hover {
+  background-color: rgba(145, 195, 253, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-info-4, .focus\:bg-info-4:focus, .hover\:bg-info-4:hover {
+  background-color: rgba(97, 166, 250, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-info-5, .focus\:bg-info-5:focus, .hover\:bg-info-5:hover {
+  background-color: rgba(60, 131, 246, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-info-6, .focus\:bg-info-6:focus, .hover\:bg-info-6:hover {
+  background-color: rgba(36, 99, 235, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-info-7, .focus\:bg-info-7:focus, .hover\:bg-info-7:hover {
+  background-color: rgba(29, 79, 215, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-info-8, .focus\:bg-info-8:focus, .hover\:bg-info-8:hover {
+  background-color: rgba(30, 63, 174, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-info-9, .focus\:bg-info-9:focus, .hover\:bg-info-9:hover {
+  background-color: rgba(30, 59, 138, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-warning-0, .focus\:bg-warning-0:focus, .hover\:bg-warning-0:hover {
+  background-color: rgba(254, 252, 231, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-warning-1, .focus\:bg-warning-1:focus, .hover\:bg-warning-1:hover {
+  background-color: rgba(254, 249, 195, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-warning-2, .focus\:bg-warning-2:focus, .hover\:bg-warning-2:hover {
+  background-color: rgba(254, 240, 139, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-warning-3, .focus\:bg-warning-3:focus, .hover\:bg-warning-3:hover {
+  background-color: rgba(253, 223, 73, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-warning-4, .focus\:bg-warning-4:focus, .hover\:bg-warning-4:hover {
+  background-color: rgba(250, 204, 20, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-warning-5, .focus\:bg-warning-5:focus, .hover\:bg-warning-5:hover {
+  background-color: rgba(251, 232, 176, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-warning-6, .focus\:bg-warning-6:focus, .hover\:bg-warning-6:hover {
+  background-color: rgba(200, 138, 4, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-warning-7, .focus\:bg-warning-7:focus, .hover\:bg-warning-7:hover {
+  background-color: rgba(162, 97, 7, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-warning-8, .focus\:bg-warning-8:focus, .hover\:bg-warning-8:hover {
+  background-color: rgba(134, 78, 14, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-warning-9, .focus\:bg-warning-9:focus, .hover\:bg-warning-9:hover {
+  background-color: rgba(115, 63, 18, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-danger-0, .focus\:bg-danger-0:focus, .hover\:bg-danger-0:hover {
+  background-color: rgba(254, 241, 241, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-danger-1, .focus\:bg-danger-1:focus, .hover\:bg-danger-1:hover {
+  background-color: rgba(254, 225, 225, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-danger-2, .focus\:bg-danger-2:focus, .hover\:bg-danger-2:hover {
+  background-color: rgba(254, 200, 200, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-danger-3, .focus\:bg-danger-3:focus, .hover\:bg-danger-3:hover {
+  background-color: rgba(252, 166, 166, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-danger-4, .focus\:bg-danger-4:focus, .hover\:bg-danger-4:hover {
+  background-color: rgba(248, 114, 114, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-danger-5, .focus\:bg-danger-5:focus, .hover\:bg-danger-5:hover {
+  background-color: rgba(239, 67, 67, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-danger-6, .focus\:bg-danger-6:focus, .hover\:bg-danger-6:hover {
+  background-color: rgba(220, 40, 40, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-danger-7, .focus\:bg-danger-7:focus, .hover\:bg-danger-7:hover {
+  background-color: rgba(186, 28, 28, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-danger-8, .focus\:bg-danger-8:focus, .hover\:bg-danger-8:hover {
+  background-color: rgba(152, 27, 27, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
+.bg-danger-9, .focus\:bg-danger-9:focus, .hover\:bg-danger-9:hover {
+  background-color: rgba(129, 29, 29, var(--koi-bg-opacity));
+  --koi-bg-opacity: 1;
+}
+
 .rounded-xs {
   border-radius: 0.125rem;
 }
@@ -561,56 +811,6 @@
 
 .border-black, .focus\:border-black:focus, .hover\:border-black:hover {
   border-color: rgba(0, 0, 0, var(--koi-border-opacity));
-  --koi-border-opacity: 1;
-}
-
-.border-primary-0, .focus\:border-primary-0:focus, .hover\:border-primary-0:hover {
-  border-color: rgba(240, 255, 250, var(--koi-border-opacity));
-  --koi-border-opacity: 1;
-}
-
-.border-primary-1, .focus\:border-primary-1:focus, .hover\:border-primary-1:hover {
-  border-color: rgba(201, 253, 237, var(--koi-border-opacity));
-  --koi-border-opacity: 1;
-}
-
-.border-primary-2, .focus\:border-primary-2:focus, .hover\:border-primary-2:hover {
-  border-color: rgba(148, 250, 221, var(--koi-border-opacity));
-  --koi-border-opacity: 1;
-}
-
-.border-primary-3, .focus\:border-primary-3:focus, .hover\:border-primary-3:hover {
-  border-color: rgba(86, 240, 202, var(--koi-border-opacity));
-  --koi-border-opacity: 1;
-}
-
-.border-primary-4, .focus\:border-primary-4:focus, .hover\:border-primary-4:hover {
-  border-color: rgba(36, 214, 175, var(--koi-border-opacity));
-  --koi-border-opacity: 1;
-}
-
-.border-primary-5, .focus\:border-primary-5:focus, .hover\:border-primary-5:hover {
-  border-color: rgba(13, 191, 155, var(--koi-border-opacity));
-  --koi-border-opacity: 1;
-}
-
-.border-primary-6, .focus\:border-primary-6:focus, .hover\:border-primary-6:hover {
-  border-color: rgba(8, 155, 128, var(--koi-border-opacity));
-  --koi-border-opacity: 1;
-}
-
-.border-primary-7, .focus\:border-primary-7:focus, .hover\:border-primary-7:hover {
-  border-color: rgba(11, 121, 103, var(--koi-border-opacity));
-  --koi-border-opacity: 1;
-}
-
-.border-primary-8, .focus\:border-primary-8:focus, .hover\:border-primary-8:hover {
-  border-color: rgba(14, 98, 86, var(--koi-border-opacity));
-  --koi-border-opacity: 1;
-}
-
-.border-primary-9, .focus\:border-primary-9:focus, .hover\:border-primary-9:hover {
-  border-color: rgba(17, 80, 69, var(--koi-border-opacity));
   --koi-border-opacity: 1;
 }
 
@@ -861,6 +1061,306 @@
 
 .border-blue-9, .focus\:border-blue-9:focus, .hover\:border-blue-9:hover {
   border-color: rgba(30, 59, 138, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-primary-0, .focus\:border-primary-0:focus, .hover\:border-primary-0:hover {
+  border-color: rgba(255, 248, 247, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-primary-1, .focus\:border-primary-1:focus, .hover\:border-primary-1:hover {
+  border-color: rgba(255, 234, 232, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-primary-2, .focus\:border-primary-2:focus, .hover\:border-primary-2:hover {
+  border-color: rgba(255, 217, 213, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-primary-3, .focus\:border-primary-3:focus, .hover\:border-primary-3:hover {
+  border-color: rgba(255, 192, 186, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-primary-4, .focus\:border-primary-4:focus, .hover\:border-primary-4:hover {
+  border-color: rgba(255, 161, 154, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-primary-5, .focus\:border-primary-5:focus, .hover\:border-primary-5:hover {
+  border-color: rgba(255, 123, 118, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-primary-6, .focus\:border-primary-6:focus, .hover\:border-primary-6:hover {
+  border-color: rgba(221, 76, 79, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-primary-7, .focus\:border-primary-7:focus, .hover\:border-primary-7:hover {
+  border-color: rgba(175, 28, 45, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-primary-8, .focus\:border-primary-8:focus, .hover\:border-primary-8:hover {
+  border-color: rgba(144, 0, 30, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-primary-9, .focus\:border-primary-9:focus, .hover\:border-primary-9:hover {
+  border-color: rgba(135, 0, 28, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-neutral-0, .focus\:border-neutral-0:focus, .hover\:border-neutral-0:hover {
+  border-color: rgba(242, 247, 251, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-neutral-1, .focus\:border-neutral-1:focus, .hover\:border-neutral-1:hover {
+  border-color: rgba(223, 229, 232, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-neutral-2, .focus\:border-neutral-2:focus, .hover\:border-neutral-2:hover {
+  border-color: rgba(201, 206, 210, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-neutral-3, .focus\:border-neutral-3:focus, .hover\:border-neutral-3:hover {
+  border-color: rgba(171, 176, 179, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-neutral-4, .focus\:border-neutral-4:focus, .hover\:border-neutral-4:hover {
+  border-color: rgba(137, 142, 145, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-neutral-5, .focus\:border-neutral-5:focus, .hover\:border-neutral-5:hover {
+  border-color: rgba(101, 106, 109, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-neutral-6, .focus\:border-neutral-6:focus, .hover\:border-neutral-6:hover {
+  border-color: rgba(46, 50, 53, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-neutral-7, .focus\:border-neutral-7:focus, .hover\:border-neutral-7:hover {
+  border-color: rgba(34, 38, 41, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-neutral-8, .focus\:border-neutral-8:focus, .hover\:border-neutral-8:hover {
+  border-color: rgba(27, 31, 34, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-neutral-9, .focus\:border-neutral-9:focus, .hover\:border-neutral-9:hover {
+  border-color: rgba(26, 29, 32, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-success-0, .focus\:border-success-0:focus, .hover\:border-success-0:hover {
+  border-color: rgba(243, 252, 245, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-success-1, .focus\:border-success-1:focus, .hover\:border-success-1:hover {
+  border-color: rgba(222, 252, 233, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-success-2, .focus\:border-success-2:focus, .hover\:border-success-2:hover {
+  border-color: rgba(187, 247, 208, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-success-3, .focus\:border-success-3:focus, .hover\:border-success-3:hover {
+  border-color: rgba(133, 239, 172, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-success-4, .focus\:border-success-4:focus, .hover\:border-success-4:hover {
+  border-color: rgba(74, 222, 128, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-success-5, .focus\:border-success-5:focus, .hover\:border-success-5:hover {
+  border-color: rgba(33, 196, 93, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-success-6, .focus\:border-success-6:focus, .hover\:border-success-6:hover {
+  border-color: rgba(22, 162, 73, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-success-7, .focus\:border-success-7:focus, .hover\:border-success-7:hover {
+  border-color: rgba(21, 127, 60, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-success-8, .focus\:border-success-8:focus, .hover\:border-success-8:hover {
+  border-color: rgba(22, 100, 52, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-success-9, .focus\:border-success-9:focus, .hover\:border-success-9:hover {
+  border-color: rgba(20, 82, 45, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-info-0, .focus\:border-info-0:focus, .hover\:border-info-0:hover {
+  border-color: rgba(240, 246, 255, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-info-1, .focus\:border-info-1:focus, .hover\:border-info-1:hover {
+  border-color: rgba(220, 235, 254, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-info-2, .focus\:border-info-2:focus, .hover\:border-info-2:hover {
+  border-color: rgba(190, 219, 254, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-info-3, .focus\:border-info-3:focus, .hover\:border-info-3:hover {
+  border-color: rgba(145, 195, 253, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-info-4, .focus\:border-info-4:focus, .hover\:border-info-4:hover {
+  border-color: rgba(97, 166, 250, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-info-5, .focus\:border-info-5:focus, .hover\:border-info-5:hover {
+  border-color: rgba(60, 131, 246, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-info-6, .focus\:border-info-6:focus, .hover\:border-info-6:hover {
+  border-color: rgba(36, 99, 235, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-info-7, .focus\:border-info-7:focus, .hover\:border-info-7:hover {
+  border-color: rgba(29, 79, 215, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-info-8, .focus\:border-info-8:focus, .hover\:border-info-8:hover {
+  border-color: rgba(30, 63, 174, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-info-9, .focus\:border-info-9:focus, .hover\:border-info-9:hover {
+  border-color: rgba(30, 59, 138, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-warning-0, .focus\:border-warning-0:focus, .hover\:border-warning-0:hover {
+  border-color: rgba(254, 252, 231, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-warning-1, .focus\:border-warning-1:focus, .hover\:border-warning-1:hover {
+  border-color: rgba(254, 249, 195, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-warning-2, .focus\:border-warning-2:focus, .hover\:border-warning-2:hover {
+  border-color: rgba(254, 240, 139, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-warning-3, .focus\:border-warning-3:focus, .hover\:border-warning-3:hover {
+  border-color: rgba(253, 223, 73, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-warning-4, .focus\:border-warning-4:focus, .hover\:border-warning-4:hover {
+  border-color: rgba(250, 204, 20, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-warning-5, .focus\:border-warning-5:focus, .hover\:border-warning-5:hover {
+  border-color: rgba(251, 232, 176, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-warning-6, .focus\:border-warning-6:focus, .hover\:border-warning-6:hover {
+  border-color: rgba(200, 138, 4, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-warning-7, .focus\:border-warning-7:focus, .hover\:border-warning-7:hover {
+  border-color: rgba(162, 97, 7, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-warning-8, .focus\:border-warning-8:focus, .hover\:border-warning-8:hover {
+  border-color: rgba(134, 78, 14, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-warning-9, .focus\:border-warning-9:focus, .hover\:border-warning-9:hover {
+  border-color: rgba(115, 63, 18, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-danger-0, .focus\:border-danger-0:focus, .hover\:border-danger-0:hover {
+  border-color: rgba(254, 241, 241, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-danger-1, .focus\:border-danger-1:focus, .hover\:border-danger-1:hover {
+  border-color: rgba(254, 225, 225, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-danger-2, .focus\:border-danger-2:focus, .hover\:border-danger-2:hover {
+  border-color: rgba(254, 200, 200, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-danger-3, .focus\:border-danger-3:focus, .hover\:border-danger-3:hover {
+  border-color: rgba(252, 166, 166, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-danger-4, .focus\:border-danger-4:focus, .hover\:border-danger-4:hover {
+  border-color: rgba(248, 114, 114, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-danger-5, .focus\:border-danger-5:focus, .hover\:border-danger-5:hover {
+  border-color: rgba(239, 67, 67, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-danger-6, .focus\:border-danger-6:focus, .hover\:border-danger-6:hover {
+  border-color: rgba(220, 40, 40, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-danger-7, .focus\:border-danger-7:focus, .hover\:border-danger-7:hover {
+  border-color: rgba(186, 28, 28, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-danger-8, .focus\:border-danger-8:focus, .hover\:border-danger-8:hover {
+  border-color: rgba(152, 27, 27, var(--koi-border-opacity));
+  --koi-border-opacity: 1;
+}
+
+.border-danger-9, .focus\:border-danger-9:focus, .hover\:border-danger-9:hover {
+  border-color: rgba(129, 29, 29, var(--koi-border-opacity));
   --koi-border-opacity: 1;
 }
 
@@ -7313,56 +7813,6 @@
   --koi-text-opacity: 1;
 }
 
-.text-primary-0, .focus\:text-primary-0:focus, .hover\:text-primary-0:hover {
-  color: rgba(240, 255, 250, var(--koi-text-opacity));
-  --koi-text-opacity: 1;
-}
-
-.text-primary-1, .focus\:text-primary-1:focus, .hover\:text-primary-1:hover {
-  color: rgba(201, 253, 237, var(--koi-text-opacity));
-  --koi-text-opacity: 1;
-}
-
-.text-primary-2, .focus\:text-primary-2:focus, .hover\:text-primary-2:hover {
-  color: rgba(148, 250, 221, var(--koi-text-opacity));
-  --koi-text-opacity: 1;
-}
-
-.text-primary-3, .focus\:text-primary-3:focus, .hover\:text-primary-3:hover {
-  color: rgba(86, 240, 202, var(--koi-text-opacity));
-  --koi-text-opacity: 1;
-}
-
-.text-primary-4, .focus\:text-primary-4:focus, .hover\:text-primary-4:hover {
-  color: rgba(36, 214, 175, var(--koi-text-opacity));
-  --koi-text-opacity: 1;
-}
-
-.text-primary-5, .focus\:text-primary-5:focus, .hover\:text-primary-5:hover {
-  color: rgba(13, 191, 155, var(--koi-text-opacity));
-  --koi-text-opacity: 1;
-}
-
-.text-primary-6, .focus\:text-primary-6:focus, .hover\:text-primary-6:hover {
-  color: rgba(8, 155, 128, var(--koi-text-opacity));
-  --koi-text-opacity: 1;
-}
-
-.text-primary-7, .focus\:text-primary-7:focus, .hover\:text-primary-7:hover {
-  color: rgba(11, 121, 103, var(--koi-text-opacity));
-  --koi-text-opacity: 1;
-}
-
-.text-primary-8, .focus\:text-primary-8:focus, .hover\:text-primary-8:hover {
-  color: rgba(14, 98, 86, var(--koi-text-opacity));
-  --koi-text-opacity: 1;
-}
-
-.text-primary-9, .focus\:text-primary-9:focus, .hover\:text-primary-9:hover {
-  color: rgba(17, 80, 69, var(--koi-text-opacity));
-  --koi-text-opacity: 1;
-}
-
 .text-gray-0, .focus\:text-gray-0:focus, .hover\:text-gray-0:hover {
   color: rgba(250, 250, 250, var(--koi-text-opacity));
   --koi-text-opacity: 1;
@@ -7610,6 +8060,306 @@
 
 .text-blue-9, .focus\:text-blue-9:focus, .hover\:text-blue-9:hover {
   color: rgba(30, 59, 138, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-primary-0, .focus\:text-primary-0:focus, .hover\:text-primary-0:hover {
+  color: rgba(255, 248, 247, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-primary-1, .focus\:text-primary-1:focus, .hover\:text-primary-1:hover {
+  color: rgba(255, 234, 232, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-primary-2, .focus\:text-primary-2:focus, .hover\:text-primary-2:hover {
+  color: rgba(255, 217, 213, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-primary-3, .focus\:text-primary-3:focus, .hover\:text-primary-3:hover {
+  color: rgba(255, 192, 186, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-primary-4, .focus\:text-primary-4:focus, .hover\:text-primary-4:hover {
+  color: rgba(255, 161, 154, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-primary-5, .focus\:text-primary-5:focus, .hover\:text-primary-5:hover {
+  color: rgba(255, 123, 118, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-primary-6, .focus\:text-primary-6:focus, .hover\:text-primary-6:hover {
+  color: rgba(221, 76, 79, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-primary-7, .focus\:text-primary-7:focus, .hover\:text-primary-7:hover {
+  color: rgba(175, 28, 45, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-primary-8, .focus\:text-primary-8:focus, .hover\:text-primary-8:hover {
+  color: rgba(144, 0, 30, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-primary-9, .focus\:text-primary-9:focus, .hover\:text-primary-9:hover {
+  color: rgba(135, 0, 28, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-neutral-0, .focus\:text-neutral-0:focus, .hover\:text-neutral-0:hover {
+  color: rgba(242, 247, 251, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-neutral-1, .focus\:text-neutral-1:focus, .hover\:text-neutral-1:hover {
+  color: rgba(223, 229, 232, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-neutral-2, .focus\:text-neutral-2:focus, .hover\:text-neutral-2:hover {
+  color: rgba(201, 206, 210, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-neutral-3, .focus\:text-neutral-3:focus, .hover\:text-neutral-3:hover {
+  color: rgba(171, 176, 179, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-neutral-4, .focus\:text-neutral-4:focus, .hover\:text-neutral-4:hover {
+  color: rgba(137, 142, 145, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-neutral-5, .focus\:text-neutral-5:focus, .hover\:text-neutral-5:hover {
+  color: rgba(101, 106, 109, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-neutral-6, .focus\:text-neutral-6:focus, .hover\:text-neutral-6:hover {
+  color: rgba(46, 50, 53, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-neutral-7, .focus\:text-neutral-7:focus, .hover\:text-neutral-7:hover {
+  color: rgba(34, 38, 41, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-neutral-8, .focus\:text-neutral-8:focus, .hover\:text-neutral-8:hover {
+  color: rgba(27, 31, 34, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-neutral-9, .focus\:text-neutral-9:focus, .hover\:text-neutral-9:hover {
+  color: rgba(26, 29, 32, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-success-0, .focus\:text-success-0:focus, .hover\:text-success-0:hover {
+  color: rgba(243, 252, 245, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-success-1, .focus\:text-success-1:focus, .hover\:text-success-1:hover {
+  color: rgba(222, 252, 233, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-success-2, .focus\:text-success-2:focus, .hover\:text-success-2:hover {
+  color: rgba(187, 247, 208, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-success-3, .focus\:text-success-3:focus, .hover\:text-success-3:hover {
+  color: rgba(133, 239, 172, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-success-4, .focus\:text-success-4:focus, .hover\:text-success-4:hover {
+  color: rgba(74, 222, 128, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-success-5, .focus\:text-success-5:focus, .hover\:text-success-5:hover {
+  color: rgba(33, 196, 93, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-success-6, .focus\:text-success-6:focus, .hover\:text-success-6:hover {
+  color: rgba(22, 162, 73, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-success-7, .focus\:text-success-7:focus, .hover\:text-success-7:hover {
+  color: rgba(21, 127, 60, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-success-8, .focus\:text-success-8:focus, .hover\:text-success-8:hover {
+  color: rgba(22, 100, 52, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-success-9, .focus\:text-success-9:focus, .hover\:text-success-9:hover {
+  color: rgba(20, 82, 45, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-info-0, .focus\:text-info-0:focus, .hover\:text-info-0:hover {
+  color: rgba(240, 246, 255, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-info-1, .focus\:text-info-1:focus, .hover\:text-info-1:hover {
+  color: rgba(220, 235, 254, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-info-2, .focus\:text-info-2:focus, .hover\:text-info-2:hover {
+  color: rgba(190, 219, 254, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-info-3, .focus\:text-info-3:focus, .hover\:text-info-3:hover {
+  color: rgba(145, 195, 253, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-info-4, .focus\:text-info-4:focus, .hover\:text-info-4:hover {
+  color: rgba(97, 166, 250, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-info-5, .focus\:text-info-5:focus, .hover\:text-info-5:hover {
+  color: rgba(60, 131, 246, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-info-6, .focus\:text-info-6:focus, .hover\:text-info-6:hover {
+  color: rgba(36, 99, 235, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-info-7, .focus\:text-info-7:focus, .hover\:text-info-7:hover {
+  color: rgba(29, 79, 215, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-info-8, .focus\:text-info-8:focus, .hover\:text-info-8:hover {
+  color: rgba(30, 63, 174, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-info-9, .focus\:text-info-9:focus, .hover\:text-info-9:hover {
+  color: rgba(30, 59, 138, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-warning-0, .focus\:text-warning-0:focus, .hover\:text-warning-0:hover {
+  color: rgba(254, 252, 231, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-warning-1, .focus\:text-warning-1:focus, .hover\:text-warning-1:hover {
+  color: rgba(254, 249, 195, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-warning-2, .focus\:text-warning-2:focus, .hover\:text-warning-2:hover {
+  color: rgba(254, 240, 139, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-warning-3, .focus\:text-warning-3:focus, .hover\:text-warning-3:hover {
+  color: rgba(253, 223, 73, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-warning-4, .focus\:text-warning-4:focus, .hover\:text-warning-4:hover {
+  color: rgba(250, 204, 20, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-warning-5, .focus\:text-warning-5:focus, .hover\:text-warning-5:hover {
+  color: rgba(251, 232, 176, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-warning-6, .focus\:text-warning-6:focus, .hover\:text-warning-6:hover {
+  color: rgba(200, 138, 4, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-warning-7, .focus\:text-warning-7:focus, .hover\:text-warning-7:hover {
+  color: rgba(162, 97, 7, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-warning-8, .focus\:text-warning-8:focus, .hover\:text-warning-8:hover {
+  color: rgba(134, 78, 14, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-warning-9, .focus\:text-warning-9:focus, .hover\:text-warning-9:hover {
+  color: rgba(115, 63, 18, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-danger-0, .focus\:text-danger-0:focus, .hover\:text-danger-0:hover {
+  color: rgba(254, 241, 241, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-danger-1, .focus\:text-danger-1:focus, .hover\:text-danger-1:hover {
+  color: rgba(254, 225, 225, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-danger-2, .focus\:text-danger-2:focus, .hover\:text-danger-2:hover {
+  color: rgba(254, 200, 200, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-danger-3, .focus\:text-danger-3:focus, .hover\:text-danger-3:hover {
+  color: rgba(252, 166, 166, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-danger-4, .focus\:text-danger-4:focus, .hover\:text-danger-4:hover {
+  color: rgba(248, 114, 114, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-danger-5, .focus\:text-danger-5:focus, .hover\:text-danger-5:hover {
+  color: rgba(239, 67, 67, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-danger-6, .focus\:text-danger-6:focus, .hover\:text-danger-6:hover {
+  color: rgba(220, 40, 40, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-danger-7, .focus\:text-danger-7:focus, .hover\:text-danger-7:hover {
+  color: rgba(186, 28, 28, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-danger-8, .focus\:text-danger-8:focus, .hover\:text-danger-8:hover {
+  color: rgba(152, 27, 27, var(--koi-text-opacity));
+  --koi-text-opacity: 1;
+}
+
+.text-danger-9, .focus\:text-danger-9:focus, .hover\:text-danger-9:hover {
+  color: rgba(129, 29, 29, var(--koi-text-opacity));
   --koi-text-opacity: 1;
 }
 

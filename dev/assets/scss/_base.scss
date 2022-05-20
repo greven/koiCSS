@@ -49,3 +49,34 @@ h1 {
     @include koi.stack(row);
   }
 }
+
+.box-0 {
+  background-color: koi.fill(primary, 0);
+}
+.box-1 {
+  background-color: koi.fill(primary, 1);
+}
+.box-2 {
+  background-color: koi.fill(primary, 2);
+}
+.box-3 {
+  background-color: koi.fill(primary, 3);
+}
+.box-4 {
+  background-color: koi.fill(primary, 4);
+}
+.box-5 {
+  background-color: koi.fill(primary, 5);
+}
+.box-6 {
+  background-color: koi.fill(primary, 6);
+}
+.box-7 {
+  background-color: koi.fill(primary, 7);
+}
+.box-8 {
+  background-color: koi.fill(primary, 8);
+}
+.box-9 {
+  background-color: koi.fill(primary, 9);
+}

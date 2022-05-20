@@ -1,55 +1,87 @@
-// -------------------------------------
-//   Color Schemes
-// ------------------------------------
+// --------------------------------------
+//   Theme Color helpers and generators
+// --------------------------------------
 
 @use 'sass:map';
+@use 'sass:list';
+@use 'sass:color';
+@use 'sass:math';
 
+@use '../config/internal' as *;
 @use '../core/helpers/internal' as *;
+@use '../core/helpers' as *;
 @use '../tokens' as *;
 
-// The Color scheme specific CSS variables can be access as:
-// var(--color-surface-1) or by using the color function: color(surface, 1).
+// Note: Remove if if/when SASS supports CSS Color Modules Level 4 & Level 5
+@use '@oddbird/blend';
 
-// TODO: 1. Generate primary and secondary?? colors shade palettes using '@oddbird/blend'
-// TODO: 2. We need to get a way from importing from there here, other using we can't override colors used in the theme when we @use the library and override any colors
-// Note: Remove if SASS adds support for CSS Color Modules Level 4 & Level 5
-// @forward '@oddbird/blend';
+// --------------------------------
+//   Functions
+// --------------------------------
 
-$schemes: (
-  light: (
-    surface: (
-      1: map.get($tokens, colors, gray, 1),
-      2: map.get($tokens, colors, white),
-      3: map.get($tokens, colors, gray, 2),
-      4: map.get($tokens, colors, gray, 3),
-    ),
-    text: (
-      1: map.get($tokens, colors, gray, 9),
-      2: map.get($tokens, colors, gray, 6),
-      3: map.get($tokens, colors, gray, 4),
-      4: map.get($tokens, colors, gray, 3),
-    ),
-    code-bg: map.get($tokens, colors, gray, 9),
-    code-text: map.get($tokens, colors, gray, 1),
-    quote-text: map.get($tokens, colors, gray, 8),
-    quote-border: map.get($tokens, colors, blue, 6),
-  ),
-  dark: (
-    surface: (
-      1: map.get($tokens, colors, gray, 9),
-      2: map.get($tokens, colors, gray, 8),
-      3: map.get($tokens, colors, gray, 7),
-      4: map.get($tokens, colors, gray, 6),
-    ),
-    text: (
-      1: map.get($tokens, colors, gray, 0),
-      2: map.get($tokens, colors, gray, 3),
-      3: map.get($tokens, colors, gray, 5),
-      4: map.get($tokens, colors, gray, 6),
-    ),
-    code-bg: map.get($tokens, colors, black),
-    code-text: map.get($tokens, colors, gray, 1),
-    quote-text: map.get($tokens, colors, gray, 1),
-    quote-border: map.get($tokens, colors, blue, 6),
-  ),
-) !default;
+$num-color-shades: 10;
+
+@function create-theme-color-steps($slope: 0.9) {
+  $r: 100 * ($slope - math.div(1, $num-color-shades));
+  $step: math.div($r, $num-color-shades - 1);
+  $range-start: (100 - $r) * 0.5;
+  $range-end: $range-start + $num-color-shades * $step;
+
+  $range: ();
+  $v: $range-start;
+  @while $v < $range-end {
+    $range: list-prepend($range, $v);
+    $v: $v + $step;
+  }
+
+  @return $range;
+}
+
+$color-steps: create-theme-color-steps();
+
+@function calculate-theme-color-offset($color) {
+  $lightness: blend.lightness($color);
+  $offset: 9999;
+
+  @for $i from 1 through $num-color-shades {
+    $diff: $lightness - list.nth($color-steps, $i);
+    @if math.abs($diff) < math.abs($offset) {
+      $offset: $diff;
+    }
+  }
+  @return $offset;
+}
+
+@function create-theme-color($color) {
+  $lightness: blend.lightness($color);
+  $offset: calculate-theme-color-offset($color);
+
+  $map: ();
+  @for $i from 0 to $num-color-shades {
+    $lightness: list.nth($color-steps, $i + 1) + $offset;
+    $desaturation: math.pow(math.abs(math.round(math.div($num-color-shades, 2)) - $i), 2) * 1%;
+
+    $c: blend.set($color, $lightness: $lightness);
+    $c: color.adjust($c, $saturation: -$desaturation);
+
+    $map: map.merge(
+      $map,
+      (
+        $i: $c,
+      )
+    );
+  }
+  @return $map;
+}
+
+// --------------------------------
+//   Mixins
+// --------------------------------
+
+@mixin generate-scheme-css-vars($colors-map: (), $color-scheme: null, $suffix: null) {
+  /*! purgecss start ignore */
+  @each $color, $value in $colors-map {
+    @include hsl-color-custom-prop(#{$color-prefix}-#{$color}, $color-scheme, $value, $suffix);
+  }
+  /*! purgecss end ignore */
+}

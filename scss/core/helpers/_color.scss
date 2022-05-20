@@ -135,3 +135,75 @@
     @return hsla($color-h, $color-s, $color-l, $alpha);
   }
 }
+
+@function -linear_channel_value($channel-value) {
+  $normalized-value: math.div($channel-value, 255);
+  @if $normalized-value < 0.03928 {
+    @return math.div($normalized-value, 12.92);
+  }
+
+  @return math.pow(math.div($normalized-value + 0.055, 1.055), 2.4);
+}
+
+// Get the relative luminance of the color.
+// http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
+@function luminance($color) {
+  @if type-of($color) == 'color' {
+    $red: -linear-channel-value(color.red($color));
+    $green: -linear-channel-value(color.green($color));
+    $blue: -linear-channel-value(color.blue($color));
+
+    @return (0.2126 * $red) + (0.7152 * $green) + (0.0722 * $blue);
+  } @else {
+    @error "#{$color} is not a valid color object!";
+  }
+}
+
+// Color contrast between 2 colors
+// defined by (WCAG Version 2).
+@function contrast($bg-color, $fg-color) {
+  $bg-lum: luminance($bg-color) + 0.05;
+  $fg-lum: luminance($fg-color) + 0.05;
+
+  @return math.div(math.max($bg-lum, $fg-lum), math.min($bg-lum, $fg-lum));
+}
+
+// Determine whether the color is 'light' or 'dark'.
+// Source: Material Components
+@function tone($color) {
+  @if meta.type-of($color) != 'color' {
+    @warn '#{$color} is not a color object. Falling back to "dark" tone.';
+    @return 'dark';
+  }
+
+  $minimumContrast: 3.1;
+
+  $lightContrast: contrast($color, white);
+  $darkContrast: contrast($color, rgba(black, 0.87));
+
+  @if ($lightContrast < $minimumContrast) and ($darkContrast > $lightContrast) {
+    @return 'light';
+  } @else {
+    @return 'dark';
+  }
+}
+
+// Checks if a color meets the Web Content Accessibility following
+// the WCAG (Version 2.0) guidelines for constract ratio.
+
+// The 'level' arg can be either 'AA' or 'AAA', it defaults to 'AA'.
+// The 'size' arg can be either 'large' or 'small', it defaults to 'small'.
+@function is-color-accessible($fg-color, $bg-color, $level: 'AA', $size: 'small') {
+  $contrast: contrast($fg-color, $bg-color);
+
+  @if $level + $size == 'AAsmall' or $level + $size == 'AAAlarge' {
+    @return $contrast >= 4.5;
+  } @else {
+    @if $level + $size == 'AAlarge' {
+      @return $contrast >= 3;
+    }
+    @if $level + $size == 'AAAsmall' {
+      @return $contrast >= 7;
+    }
+  }
+}

@@ -5,18 +5,76 @@
 @use 'sass:map';
 
 @use '../config' as *;
-@use '../config/internal' as *;
-@use '../core/helpers/internal' as *;
 @use '../tokens' as *;
-@use 'components';
-@use 'color';
+@use 'color' as *;
+@use 'components' as *;
 
-$default-theme: map.deep-merge(
-  (
-    color-schemes: color.$schemes,
-    components: components.$config,
+// --------------------------------
+//   Vars
+// --------------------------------
+
+$colors: map.get($tokens, colors);
+
+$primary: create-theme-color(#dc2626);
+$neutral: create-theme-color(#2e3235);
+
+$schemes: (
+  light: (
+    surface: (
+      1: map.get($colors, gray, 1),
+      2: map.get($colors, white),
+      3: map.get($colors, gray, 2),
+      4: map.get($colors, gray, 3),
+    ),
+    text: (
+      1: map.get($colors, gray, 9),
+      2: map.get($colors, gray, 6),
+      3: map.get($colors, gray, 4),
+      4: map.get($colors, gray, 3),
+    ),
+    code-bg: map.get($colors, gray, 9),
+    code-text: map.get($colors, gray, 1),
+    quote-text: map.get($colors, gray, 8),
+    quote-border: map.get($primary, 6),
   ),
-  $tokens
+  dark: (
+    surface: (
+      1: map.get($colors, gray, 9),
+      2: map.get($colors, gray, 8),
+      3: map.get($colors, gray, 7),
+      4: map.get($colors, gray, 6),
+    ),
+    text: (
+      1: map.get($colors, gray, 0),
+      2: map.get($colors, gray, 3),
+      3: map.get($colors, gray, 5),
+      4: map.get($colors, gray, 6),
+    ),
+    code-bg: map.get($colors, black),
+    code-text: map.get($colors, gray, 1),
+    quote-text: map.get($colors, gray, 1),
+    quote-border: map.get($primary, 6),
+  ),
+) !default;
+
+$default-theme: map.merge(
+  map.deep-merge(
+    $tokens,
+    (
+      colors: (
+        primary: $primary,
+        neutral: $neutral,
+        success: map.get($colors, green),
+        info: map.get($colors, blue),
+        warning: map.get($colors, yellow),
+        danger: map.get($colors, red),
+      ),
+    )
+  ),
+  (
+    color-schemes: $schemes,
+    components: $components,
+  )
 );
 
 $theme: () !default;
@@ -26,48 +84,41 @@ $theme: map.deep-merge($default-theme, $theme);
 //   Mixins
 // --------------------------------
 
-@mixin theme {
-  @include create-themes();
-}
-
-@mixin generate-color-scheme-css-vars($colors-map: (), $color-scheme: null, $suffix: null) {
-  /*! purgecss start ignore */
-  @each $color, $value in $colors-map {
-    @include hsl-color-custom-prop(#{$color-prefix}-#{$color}, $color-scheme, $value, $suffix);
-  }
-  /*! purgecss end ignore */
-}
-
 // Color Schemes
 
 @mixin default-theme($color-schemes-map, $color-scheme: config(default-color-scheme)) {
   html {
     $color-scheme: light;
-    @include generate-color-scheme-css-vars(map.get($color-schemes-map, $color-scheme));
+    @include generate-scheme-css-vars(map.get($color-schemes-map, $color-scheme));
   }
 }
 
 // Output color vars for each color-scheme
-@mixin create-themes($color-schemes-map: color.$schemes) {
+@mixin create-themes($color-schemes-map: $schemes) {
   @include default-theme($color-schemes-map);
 
   @each $color-scheme, $color in $color-schemes-map {
     // Generate color scheme colors (dark, light, ...)
     html {
-      @include generate-color-scheme-css-vars($color, $color-scheme);
+      @include generate-scheme-css-vars($color, $color-scheme);
     }
 
     @media (prefers-color-scheme: $color-scheme) {
       html {
-        @include generate-color-scheme-css-vars(map.get($color-schemes-map, $color-scheme));
+        @include generate-scheme-css-vars(map.get($color-schemes-map, $color-scheme));
         color-scheme: $color-scheme;
       }
     }
 
     [color-scheme='#{$color-scheme}'],
     [data-theme='#{$color-scheme}'] {
-      @include generate-color-scheme-css-vars(map.get($color-schemes-map, $color-scheme));
+      @include generate-scheme-css-vars(map.get($color-schemes-map, $color-scheme));
       color-scheme: $color-scheme;
     }
   }
+}
+
+// Output
+@mixin theme {
+  @include create-themes();
 }

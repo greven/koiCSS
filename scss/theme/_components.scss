@@ -4,7 +4,7 @@
 
 @use 'sass:map';
 
-$config: (
+$components: (
   button: (
     defaults: (
       padding: spacing(4, 12),
