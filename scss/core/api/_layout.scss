@@ -2,14 +2,13 @@
 //   Layout
 // -------------------------------------
 
-@use 'sass:map';
 @use 'sass:meta';
 
 @use 'theme' as *;
 @use 'border' as *;
 @use 'spacing' as *;
 @use 'shadow' as *;
-@use 'media-query' as mq;
+@use 'media-query' as *;
 
 // -------------------------------------
 //   Mixins
@@ -64,7 +63,7 @@
 }
 
 @mixin container($from: xl, $padding: null, $center: false, $max-width: true) {
-  $from_width: if(mq.bp($from), mq.bp($from), $from);
+  $from_width: if(bp($from), bp($from), $from);
 
   width: 100%;
 
@@ -91,64 +90,12 @@
   // Set the max-width of the element to match the
   // min-width of the current breakpoint
   @if $max-width {
-    @include mq.from($from_width) {
+    @include mq-from($from_width) {
       @each $breakpoint, $width in theme(screens) {
-        @include mq.from($breakpoint) {
+        @include mq-from($breakpoint) {
           max-width: $width;
         }
       }
     }
   }
-}
-
-@mixin stack($direction: row, $spacer: md, $reverse: false) {
-  $direction: if($reverse, #{$direction}-reverse, $direction);
-  $spacer: if(theme-has-key(spacing, $spacer), spacing($spacer), $spacer);
-
-  display: flex;
-  flex-direction: $direction;
-  justify-content: flex-start;
-  @if $direction == row {
-    align-items: center;
-  } @else {
-    align-items: initial;
-  }
-
-  & > * {
-    @if $direction == row {
-      margin-top: 0;
-      margin-bottom: 0;
-    } @else {
-      margin-left: 0;
-      margin-right: 0;
-    }
-  }
-
-  & > * + * {
-    @if $direction == row {
-      @if $reverse {
-        margin-left: 0;
-        margin-right: var(--koi-spacer, $spacer);
-      } @else {
-        margin-left: var(--koi-spacer, $spacer);
-        margin-right: 0;
-      }
-    } @else {
-      @if $reverse {
-        margin-top: 0;
-        margin-bottom: var(--koi-spacer, $spacer);
-      } @else {
-        margin-top: var(--koi-spacer, $spacer);
-        margin-bottom: 0;
-      }
-    }
-  }
-}
-
-@mixin even-columns($width: 300px, $gap: md) {
-  $gap: if(theme-has-key(spacing, $gap), spacing($gap), $gap);
-
-  display: grid;
-  gap: $gap;
-  grid-template-columns: repeat(auto-fill, minmax(min($width, 100%), 1fr));
 }

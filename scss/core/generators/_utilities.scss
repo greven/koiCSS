@@ -8,7 +8,7 @@
 @use 'sass:string';
 
 @use '../../config' as *;
-@use '../api/media-query' as mq;
+@use '../api/media-query' as *;
 @use '../api/theme' as *;
 @use '../helpers' as *;
 
@@ -198,7 +198,7 @@ $responsive-pseudo-utils: ();
   }
 
   @each $screen, $breakpoint in theme(screens) {
-    @include mq.from($breakpoint) {
+    @include mq-from($breakpoint) {
       @each $class, $class-map in $responsive-class-set {
         @if $screen == map.get($class-map, screen) {
           $selector: map.get($class-map, selector);
@@ -228,7 +228,7 @@ $responsive-pseudo-utils: ();
   @each $screen, $breakpoint in theme(screens) {
     $infix: str-escape(#{'' + $screen + $util-glue});
 
-    @include mq.from($screen) {
+    @include mq-from($screen) {
       .#{$infix + $class} {
         @content;
       }
