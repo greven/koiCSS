@@ -144,3 +144,11 @@
     }
   }
 }
+
+@mixin even-columns($width: 300px, $gap: md) {
+  $gap: if(theme-has-key(spacing, $gap), spacing($gap), $gap);
+
+  display: grid;
+  gap: $gap;
+  grid-template-columns: repeat(auto-fill, minmax(min($width, 100%), 1fr));
+}

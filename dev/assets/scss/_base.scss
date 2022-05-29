@@ -80,3 +80,7 @@ h1 {
 .box-9 {
   background-color: koi.fill(primary, 9);
 }
+
+.even-columns {
+  @include koi.even-columns();
+}
