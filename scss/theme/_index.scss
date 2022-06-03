@@ -3,4 +3,4 @@
 // --------------------------------
 
 @forward 'color' show create-theme-color, generate-scheme-css-vars;
-@forward 'theme';
+@forward 'theme' show $theme, create-themes, theme;

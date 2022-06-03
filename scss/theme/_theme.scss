@@ -57,20 +57,21 @@ $schemes: (
   ),
 ) !default;
 
-$default-theme: map.merge(
-  map.deep-merge(
-    $tokens,
-    (
-      colors: (
-        primary: $primary,
-        neutral: $neutral,
-        success: map.get($colors, green),
-        info: map.get($colors, blue),
-        warning: map.get($colors, yellow),
-        danger: map.get($colors, red),
-      ),
-    )
+$theme-colors: (
+  colors: (
+    primary: $primary,
+    neutral: $neutral,
+    success: map.get($colors, green),
+    info: map.get($colors, blue),
+    warning: map.get($colors, yellow),
+    danger: map.get($colors, red),
   ),
+);
+
+$base: map.deep-merge($tokens, $theme-colors);
+
+$default-theme: map.merge(
+  $base,
   (
     color-schemes: $schemes,
     components: $components,
