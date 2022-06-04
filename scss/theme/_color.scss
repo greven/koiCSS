@@ -7,8 +7,6 @@
 @use 'sass:color';
 @use 'sass:math';
 
-@use '../config/internal' as *;
-@use '../core/helpers/internal' as *;
 @use '../core/helpers' as *;
 @use '../tokens' as *;
 
@@ -72,16 +70,4 @@ $color-steps: create-theme-color-steps();
     );
   }
   @return $map;
-}
-
-// --------------------------------
-//   Mixins
-// --------------------------------
-
-@mixin generate-scheme-css-vars($colors-map: (), $color-scheme: null, $suffix: null) {
-  /*! purgecss start ignore */
-  @each $color, $value in $colors-map {
-    @include hsl-color-custom-prop(#{$color-prefix}-#{$color}, $color-scheme, $value, $suffix);
-  }
-  /*! purgecss end ignore */
 }
