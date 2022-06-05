@@ -7,7 +7,6 @@
 @use '../config' as *;
 @use '../tokens' as *;
 @use 'color' as *;
-@use 'components' as *;
 
 $colors: map.get($tokens, colors);
 
@@ -70,7 +69,6 @@ $default-theme: map.merge(
   $base,
   (
     color-schemes: $schemes,
-    components: $components,
   )
 );
 

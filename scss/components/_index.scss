@@ -1,4 +1,6 @@
+@forward 'button' as button-*;
 @forward 'loader';
+
 @use 'button';
 @use 'card';
 @use 'navbar';

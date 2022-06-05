@@ -5,6 +5,8 @@
 
 // << Insert your components here >>
 
+// @include koi.button-styles();
+
 .loader-1 {
   @include koi.loader-1($size: 1rem, $color: #ccc, $thickness: 2px);
 }
