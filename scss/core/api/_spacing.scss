@@ -99,9 +99,9 @@ $negative-spacing: () !default;
 }
 
 @function responsive-spacing(
-  $value: config(responsive, padding, value),
-  $min: config(responsive, padding, min),
-  $max: config(responsive, padding, max)
+  $value: config(responsive-padding, value),
+  $min: config(responsive-padding, min),
+  $max: config(responsive-padding, max)
 ) {
   @return clamp(var(--koi-spacing-min, $min), var(--koi-spacing-value, $value), var(--koi-spacing-max, $max));
 }

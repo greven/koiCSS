@@ -12,12 +12,10 @@ $config: (
   base-font-size: 16,
   spacer: 1rem,
   utility-glue: ':',
-  responsive: (
-    padding: (
-      value: 5%,
-      min: 0.75rem,
-      max: 1.5rem,
-    ),
+  responsive-padding: (
+    value: 5%,
+    min: 0.75rem,
+    max: 1.5rem,
   ),
   fallbacks: (
     accent: primary,
