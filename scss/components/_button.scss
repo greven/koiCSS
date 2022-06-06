@@ -152,8 +152,8 @@ $btn-padding-y: spacing(8);
 
 // Makes the button full width
 @mixin wide {
-  width: 100%;
   justify-content: center;
+  width: 100%;
 }
 
 @mixin styles {
