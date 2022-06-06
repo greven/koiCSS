@@ -1,11 +1,22 @@
-@forward 'config';
+// @forward 'config';
 @use 'koi';
 
 @include koi.components();
+// Alternatively instead of including all components you can include just the ones you want
+// @include koi.button-styles();
 
 // << Insert your components here >>
 
-// @include koi.button-styles();
+// :root {
+//   --btn-border-radius: #{koi.radius(full)};
+// }
+
+// #{koi.$button-selectors} {
+//   --btn-text-color: #{koi.fill(red, 9)};
+//   --btn-bg-color: #{koi.fill(red, 1)};
+//   --btn-bg-color-hover: #{koi.fill(red, 2)};
+//   --btn-border-color: #{koi.fill(red, 6)};
+// }
 
 .loader-1 {
   @include koi.loader-1($size: 1rem, $color: #ccc, $thickness: 2px);

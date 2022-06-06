@@ -29,10 +29,11 @@ h1 {
 .wrapper {
   @include koi.box($padding: true, $rounded: true, $shadow: true);
   @include koi.responsive-margin-block;
-  // @include koi.transition(background);
   @include koi.transition-colors;
+  // @include koi.transition(background);
   background-color: koi.fill(surface, 2);
   border: 2px solid koi.fill(gray);
+  border-radius: koi.radius(2xl);
 
   &:hover {
     background-color: koi.fill(surface, 3);
