@@ -2,6 +2,7 @@
 
 @use 'koi' with (
   $config: (
+    // prefix: 'koi',
     spacer: 1rem,
   ),
   $theme: (

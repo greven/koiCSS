@@ -54925,6 +54925,664 @@
     --koi-space-y-reverse: 1;
   }
 }
+.text-2xs {
+  font-size: 0.625rem;
+  line-height: 0.75rem;
+}
+
+@media screen and (min-width: 240px) {
+  .\32 xs\:text-2xs {
+    font-size: 0.625rem;
+    line-height: 0.75rem;
+  }
+}
+@media screen and (min-width: 360px) {
+  .xs\:text-2xs {
+    font-size: 0.625rem;
+    line-height: 0.75rem;
+  }
+}
+@media screen and (min-width: 480px) {
+  .sm\:text-2xs {
+    font-size: 0.625rem;
+    line-height: 0.75rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:text-2xs {
+    font-size: 0.625rem;
+    line-height: 0.75rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:text-2xs {
+    font-size: 0.625rem;
+    line-height: 0.75rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .xl\:text-2xs {
+    font-size: 0.625rem;
+    line-height: 0.75rem;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .\32 xl\:text-2xs {
+    font-size: 0.625rem;
+    line-height: 0.75rem;
+  }
+}
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+@media screen and (min-width: 240px) {
+  .\32 xs\:text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+@media screen and (min-width: 360px) {
+  .xs\:text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+@media screen and (min-width: 480px) {
+  .sm\:text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .xl\:text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .\32 xl\:text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+@media screen and (min-width: 240px) {
+  .\32 xs\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+@media screen and (min-width: 360px) {
+  .xs\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+@media screen and (min-width: 480px) {
+  .sm\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .xl\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .\32 xl\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+.text-md {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+@media screen and (min-width: 240px) {
+  .\32 xs\:text-md {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+@media screen and (min-width: 360px) {
+  .xs\:text-md {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+@media screen and (min-width: 480px) {
+  .sm\:text-md {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:text-md {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:text-md {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .xl\:text-md {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .\32 xl\:text-md {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+@media screen and (min-width: 240px) {
+  .\32 xs\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+@media screen and (min-width: 360px) {
+  .xs\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+@media screen and (min-width: 480px) {
+  .sm\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .xl\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .\32 xl\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+@media screen and (min-width: 240px) {
+  .\32 xs\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+@media screen and (min-width: 360px) {
+  .xs\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+@media screen and (min-width: 480px) {
+  .sm\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .xl\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .\32 xl\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+@media screen and (min-width: 240px) {
+  .\32 xs\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+@media screen and (min-width: 360px) {
+  .xs\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+@media screen and (min-width: 480px) {
+  .sm\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .xl\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .\32 xl\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+@media screen and (min-width: 240px) {
+  .\32 xs\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+@media screen and (min-width: 360px) {
+  .xs\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+@media screen and (min-width: 480px) {
+  .sm\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .xl\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .\32 xl\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+@media screen and (min-width: 240px) {
+  .\32 xs\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+@media screen and (min-width: 360px) {
+  .xs\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+@media screen and (min-width: 480px) {
+  .sm\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .xl\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .\32 xl\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+@media screen and (min-width: 240px) {
+  .\32 xs\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 360px) {
+  .xs\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 480px) {
+  .sm\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .xl\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .\32 xl\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
+@media screen and (min-width: 240px) {
+  .\32 xs\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 360px) {
+  .xs\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 480px) {
+  .sm\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .xl\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .\32 xl\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+}
+.text-7xl {
+  font-size: 4.5rem;
+  line-height: 1;
+}
+
+@media screen and (min-width: 240px) {
+  .\32 xs\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 360px) {
+  .xs\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 480px) {
+  .sm\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .xl\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .\32 xl\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+}
+.text-8xl {
+  font-size: 6rem;
+  line-height: 1;
+}
+
+@media screen and (min-width: 240px) {
+  .\32 xs\:text-8xl {
+    font-size: 6rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 360px) {
+  .xs\:text-8xl {
+    font-size: 6rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 480px) {
+  .sm\:text-8xl {
+    font-size: 6rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:text-8xl {
+    font-size: 6rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:text-8xl {
+    font-size: 6rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .xl\:text-8xl {
+    font-size: 6rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .\32 xl\:text-8xl {
+    font-size: 6rem;
+    line-height: 1;
+  }
+}
+.text-9xl {
+  font-size: 8rem;
+  line-height: 1;
+}
+
+@media screen and (min-width: 240px) {
+  .\32 xs\:text-9xl {
+    font-size: 8rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 360px) {
+  .xs\:text-9xl {
+    font-size: 8rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 480px) {
+  .sm\:text-9xl {
+    font-size: 8rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:text-9xl {
+    font-size: 8rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:text-9xl {
+    font-size: 8rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .xl\:text-9xl {
+    font-size: 8rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .\32 xl\:text-9xl {
+    font-size: 8rem;
+    line-height: 1;
+  }
+}
 .sr-only {
   border: 0;
   clip: rect(0 0 0 0);

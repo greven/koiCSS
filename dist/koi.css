@@ -1437,17 +1437,59 @@ select {
 }
 
 /*! purgecss end ignore */
-button, .btn {
+.btn, a.btn, button, [type=button], [type=submit], [type=reset], [type=file] {
   appearance: none;
   background-color: transparent;
-  border: 0;
+  border: none;
+  color: var(--accent-5, #dc2626);
   cursor: pointer;
   display: inline-block;
   font-weight: 400;
   padding: 0;
   text-decoration: none;
-  padding: spacing(4, 12);
-  background-color: color(blue, 6);
+  touch-action: manipulation;
+  user-select: none;
+  white-space: nowrap;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1ch;
+  padding: var(--btn-padding-y, 0.5rem) var(--btn-padding-x, 1rem);
+  color: var(--btn-text-color, #262626);
+  font-weight: var(--btn-font-weight, 500);
+  text-transform: var(--btn-text-case, uppercase);
+  background-color: #fff;
+  border-color: #d4d4d4;
+  border-radius: var(--btn-border-radius, 0.5rem);
+  border-style: var(--btn-border-style, solid);
+  border-width: var(--btn-border-width, 1px);
+  box-shadow: var(--btn-shadow, 0 1px 2px 0 rgba(0 0 0 / 0.05));
+}
+@media not screen and (prefers-reduced-motion: reduce) {
+  .btn, a.btn, button, [type=button], [type=submit], [type=reset], [type=file] {
+    transition-property: var(--koi-transition-property, background-color, border-color, color, fill, stroke);
+    transition-duration: var(--koi-transition-duration, 200ms);
+    transition-timing-function: var(--koi-transition-timing-function, cubic-bezier(0.25, 0.1, 0.25, 1));
+    transition-delay: var(--koi-transition-delay, );
+  }
+}
+.btn:hover, a.btn:hover, button:hover, [type=button]:hover, [type=submit]:hover, [type=reset]:hover, [type=file]:hover {
+  background-color: #f5f5f5;
+}
+.btn:active, a.btn:active, button:active, [type=button]:active, [type=submit]:active, [type=reset]:active, [type=file]:active {
+  background-color: #fafafa;
+}
+.btn:focus, a.btn:focus, button:focus, [type=button]:focus, [type=submit]:focus, [type=reset]:focus, [type=file]:focus {
+  outline: none;
+}
+.btn:disabled, .btn.is-disabled, a.btn:disabled, a.btn.is-disabled, button:disabled, button.is-disabled, [type=button]:disabled, [type=button].is-disabled, [type=submit]:disabled, [type=submit].is-disabled, [type=reset]:disabled, [type=reset].is-disabled, [type=file]:disabled, [type=file].is-disabled {
+  cursor: not-allowed;
+  color: #a3a3a3;
+  background-color: #fafafa;
+  box-shadow: none;
 }
 
 .card {
@@ -56379,6 +56421,664 @@ button, .btn {
 @media screen and (min-width: 1920px) {
   .\32 xl\:space-y-reverse {
     --koi-space-y-reverse: 1;
+  }
+}
+.text-2xs {
+  font-size: 0.625rem;
+  line-height: 0.75rem;
+}
+
+@media screen and (min-width: 240px) {
+  .\32 xs\:text-2xs {
+    font-size: 0.625rem;
+    line-height: 0.75rem;
+  }
+}
+@media screen and (min-width: 360px) {
+  .xs\:text-2xs {
+    font-size: 0.625rem;
+    line-height: 0.75rem;
+  }
+}
+@media screen and (min-width: 480px) {
+  .sm\:text-2xs {
+    font-size: 0.625rem;
+    line-height: 0.75rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:text-2xs {
+    font-size: 0.625rem;
+    line-height: 0.75rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:text-2xs {
+    font-size: 0.625rem;
+    line-height: 0.75rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .xl\:text-2xs {
+    font-size: 0.625rem;
+    line-height: 0.75rem;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .\32 xl\:text-2xs {
+    font-size: 0.625rem;
+    line-height: 0.75rem;
+  }
+}
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+@media screen and (min-width: 240px) {
+  .\32 xs\:text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+@media screen and (min-width: 360px) {
+  .xs\:text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+@media screen and (min-width: 480px) {
+  .sm\:text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .xl\:text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .\32 xl\:text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+@media screen and (min-width: 240px) {
+  .\32 xs\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+@media screen and (min-width: 360px) {
+  .xs\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+@media screen and (min-width: 480px) {
+  .sm\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .xl\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .\32 xl\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+.text-md {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+@media screen and (min-width: 240px) {
+  .\32 xs\:text-md {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+@media screen and (min-width: 360px) {
+  .xs\:text-md {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+@media screen and (min-width: 480px) {
+  .sm\:text-md {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:text-md {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:text-md {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .xl\:text-md {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .\32 xl\:text-md {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+@media screen and (min-width: 240px) {
+  .\32 xs\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+@media screen and (min-width: 360px) {
+  .xs\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+@media screen and (min-width: 480px) {
+  .sm\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .xl\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .\32 xl\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+@media screen and (min-width: 240px) {
+  .\32 xs\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+@media screen and (min-width: 360px) {
+  .xs\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+@media screen and (min-width: 480px) {
+  .sm\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .xl\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .\32 xl\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+@media screen and (min-width: 240px) {
+  .\32 xs\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+@media screen and (min-width: 360px) {
+  .xs\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+@media screen and (min-width: 480px) {
+  .sm\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .xl\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .\32 xl\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+@media screen and (min-width: 240px) {
+  .\32 xs\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+@media screen and (min-width: 360px) {
+  .xs\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+@media screen and (min-width: 480px) {
+  .sm\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .xl\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .\32 xl\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+@media screen and (min-width: 240px) {
+  .\32 xs\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+@media screen and (min-width: 360px) {
+  .xs\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+@media screen and (min-width: 480px) {
+  .sm\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .xl\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .\32 xl\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+@media screen and (min-width: 240px) {
+  .\32 xs\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 360px) {
+  .xs\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 480px) {
+  .sm\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .xl\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .\32 xl\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
+@media screen and (min-width: 240px) {
+  .\32 xs\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 360px) {
+  .xs\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 480px) {
+  .sm\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .xl\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .\32 xl\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+}
+.text-7xl {
+  font-size: 4.5rem;
+  line-height: 1;
+}
+
+@media screen and (min-width: 240px) {
+  .\32 xs\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 360px) {
+  .xs\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 480px) {
+  .sm\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .xl\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .\32 xl\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+}
+.text-8xl {
+  font-size: 6rem;
+  line-height: 1;
+}
+
+@media screen and (min-width: 240px) {
+  .\32 xs\:text-8xl {
+    font-size: 6rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 360px) {
+  .xs\:text-8xl {
+    font-size: 6rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 480px) {
+  .sm\:text-8xl {
+    font-size: 6rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:text-8xl {
+    font-size: 6rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:text-8xl {
+    font-size: 6rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .xl\:text-8xl {
+    font-size: 6rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .\32 xl\:text-8xl {
+    font-size: 6rem;
+    line-height: 1;
+  }
+}
+.text-9xl {
+  font-size: 8rem;
+  line-height: 1;
+}
+
+@media screen and (min-width: 240px) {
+  .\32 xs\:text-9xl {
+    font-size: 8rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 360px) {
+  .xs\:text-9xl {
+    font-size: 8rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 480px) {
+  .sm\:text-9xl {
+    font-size: 8rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:text-9xl {
+    font-size: 8rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:text-9xl {
+    font-size: 8rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .xl\:text-9xl {
+    font-size: 8rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .\32 xl\:text-9xl {
+    font-size: 8rem;
+    line-height: 1;
   }
 }
 .sr-only {

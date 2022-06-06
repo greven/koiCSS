@@ -27,5 +27,6 @@ $utilities: map-deep-merge(
 @mixin utilities {
   @include generate-utilities($utilities);
   @include layout.utilities();
+  @include typography.utilities();
   @include visibility.utilities();
 }

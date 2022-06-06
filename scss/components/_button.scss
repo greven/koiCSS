@@ -2,61 +2,88 @@
 //   Button
 // --------------------------------
 
-// TODO: How can I have an variable entry point for the components theme config where I can change things like border-radius and it reflects on all componentst that use that theme-border-radius? See maybe how stiches does things?
-
 @use 'sass:map';
+@use 'sass:selector';
 
 @use '../core' as *;
+@use '../core/helpers/internal' as *;
 
-$selectors: button, '.btn';
+$selectors: selector.parse(".btn, a.btn, button, [type='button'], [type='submit'], [type='reset'], [type='file']");
 
 @mixin reset {
   appearance: none;
   background-color: transparent;
   border: 0;
+  color: fill(accent, 5);
   cursor: pointer;
   display: inline-block;
   font-weight: 400;
   padding: 0;
   text-decoration: none;
+  touch-action: manipulation;
+  user-select: none;
+  white-space: nowrap;
 }
 
-@mixin defaults {
-  @include text-size(md);
-  background-color: fill(gray, 5);
-  border: 1px solid fill(gray, 2);
-  border-radius: radius(md);
-  box-shadow: shadow(sm);
-  // color: color(gray, 7);
-  // display: inline-flex;
-  // font-weight: font-weight(map.get($config, font-weight));
-  // padding: spacing(map.get($config, padding-y), map.get($config, padding-x));
-  // text-transform: map.get($config, text-transform);
+@mixin base {
+  @include transition-colors();
+  align-items: css-var(--btn-items, center);
+  background-color: css-var(--btn-bg-color, fill(white));
+  border-color: css-var(--btn-border-color, fill(gray, 3));
+  border-radius: css-var(--btn-border-radius, radius(xl));
+  border-style: css-var(--btn-border-style, solid);
+  border-width: css-var(--btn-border-width, 1px);
+  box-shadow: css-var(--btn-shadow, shadow(xs));
+  color: css-var(--btn-text-color, fill(gray, 8));
+  display: css-var(--btn-display, inline-flex);
+  font-size: css-var(--btn-font-size, font(sm));
+  font-weight: css-var(--btn-font-weight, font(medium));
+  gap: css-var(--btn-gap, 1ch);
+  justify-content: css-var(--btn-justify, center);
+  letter-spacing: css-var(--btn-tracking, tracking(wide));
+  line-height: css-var(--btn-leading, text-leading(sm));
+  padding: css-var(--btn-padding-y, spacing(8)) css-var(--btn-padding-x, spacing(16));
+  text-align: css-var(--btn-text-align, center);
+  text-transform: css-var(--btn-text-case, uppercase);
 
-  // &:hover {
-  //   background-color: color(gray, 5);
+  &:hover {
+    background-color: css-var(--btn-bg-color-hover, fill(gray, 1));
+  }
+
+  &:active {
+    background-color: css-var(--btn-bg-color-active, fill(gray, 0));
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  // &:focus-visible {
+  //   @include focus.outline;
   // }
 
-  // &:focus {
-  //   outline: none;
-  // }
-  // }
-
-  // @mixin styled($selectors, $config) {
-  //   #{$selectors} {
-  //     @include reset;
-
-  //     @each $property, $value in map.get($config, defaults) {
-  //       #{$property}: $value;
-  //     }
-  //   }
+  &:disabled,
+  &.is-disabled {
+    background-color: css-var(--btn-bg-color-disabled, fill(gray, 0));
+    border-color: css-var(--btn-border-color-disabled, fill(gray, 2));
+    box-shadow: none;
+    color: css-var(--btn-text-color-disabled, fill(gray, 4));
+    cursor: not-allowed;
+  }
 }
+
+// @mixin solid {
+// }
+
+// @mixin outline {
+// }
+
+// @mixin ghost {
+// }
 
 @mixin styles {
   #{$selectors} {
     @include reset;
-    @include defaults;
+    @include base;
   }
-
-  // @include styled($selectors, $config);
 }
