@@ -8,7 +8,26 @@
 @use '../core' as *;
 @use '../core/helpers/internal' as *;
 
-$selectors: selector.parse(".btn, a.btn, button, [type='button'], [type='submit'], [type='reset'], [type='file']");
+$class: btn;
+$selectors: selector.parse(
+  ".#{$class}, a.#{$class}, [type='button'].#{$class}, [type='submit'].#{$class}, [type='reset'].#{$class}"
+);
+
+// --------------------------------
+//   Vars
+// --------------------------------
+
+$btn-font-size: font(sm);
+$btn-font-weight: font(medium);
+$btn-leading: text-leading(sm);
+$btn-tracking: tracking(wide);
+$btn-border-radius: radius(xl);
+$btn-padding-x: spacing(16);
+$btn-padding-y: spacing(8);
+
+// --------------------------------
+//   Mixins
+// --------------------------------
 
 @mixin reset {
   appearance: none;
@@ -30,28 +49,30 @@ $selectors: selector.parse(".btn, a.btn, button, [type='button'], [type='submit'
   align-items: css-var(--btn-items, center);
   background-color: css-var(--btn-bg-color, fill(white));
   border-color: css-var(--btn-border-color, fill(gray, 3));
-  border-radius: css-var(--btn-border-radius, radius(xl));
+  border-radius: css-var(--btn-border-radius, $btn-border-radius);
   border-style: css-var(--btn-border-style, solid);
   border-width: css-var(--btn-border-width, 1px);
   box-shadow: css-var(--btn-shadow, shadow(xs));
   color: css-var(--btn-text-color, fill(gray, 8));
   display: css-var(--btn-display, inline-flex);
-  font-size: css-var(--btn-font-size, font(sm));
-  font-weight: css-var(--btn-font-weight, font(medium));
+  font-size: css-var(--btn-font-size, $btn-font-size);
+  font-weight: css-var(--btn-font-weight, $btn-font-weight);
   gap: css-var(--btn-gap, 1ch);
   justify-content: css-var(--btn-justify, center);
-  letter-spacing: css-var(--btn-tracking, tracking(wide));
-  line-height: css-var(--btn-leading, text-leading(sm));
-  padding: css-var(--btn-padding-y, spacing(8)) css-var(--btn-padding-x, spacing(16));
+  letter-spacing: css-var(--btn-tracking, $btn-tracking);
+  line-height: css-var(--btn-leading, $btn-leading);
+  padding: css-var(--btn-padding-y, $btn-padding-y) css-var(--btn-padding-x, $btn-padding-x);
   text-align: css-var(--btn-text-align, center);
   text-transform: css-var(--btn-text-case, uppercase);
 
   &:hover {
     background-color: css-var(--btn-bg-color-hover, fill(gray, 1));
+    box-shadow: css-var(--btn-shadow-hover, shadow(xs));
   }
 
   &:active {
     background-color: css-var(--btn-bg-color-active, fill(gray, 0));
+    box-shadow: none;
   }
 
   &:focus {
@@ -81,9 +102,105 @@ $selectors: selector.parse(".btn, a.btn, button, [type='button'], [type='submit'
 // @mixin ghost {
 // }
 
+@mixin dark {
+  --btn-bg-color: #{fill(gray, 9)};
+  --btn-bg-color-hover: #{fill(gray, 7)};
+  --btn-bg-color-active: #{fill(gray, 8)};
+  --btn-text-color: #{fill(white)};
+  --btn-border-color: transparent;
+}
+
+@mixin primary {
+  --btn-bg-color: #{fill(primary, 6)};
+  --btn-bg-color-hover: #{fill(primary, 5)};
+  --btn-bg-color-active: #{fill(primary, 7)};
+  --btn-text-color: #{fill(white)};
+  --btn-border-color: transparent;
+}
+
+@mixin info {
+  --btn-bg-color: #{fill(info)};
+  --btn-bg-color-hover: #{fill(info, 5)};
+  --btn-bg-color-active: #{fill(info, 7)};
+  --btn-text-color: #{fill(white)};
+  --btn-border-color: transparent;
+}
+
+@mixin success {
+  --btn-bg-color: #{fill(success)};
+  --btn-bg-color-hover: #{fill(success, 5)};
+  --btn-bg-color-active: #{fill(success, 7)};
+  --btn-text-color: #{fill(white)};
+  --btn-border-color: transparent;
+}
+
+@mixin warning {
+  --btn-bg-color: #{fill(warning)};
+  --btn-bg-color-hover: #{fill(warning, 5)};
+  --btn-bg-color-active: #{fill(warning, 7)};
+  --btn-text-color: #{fill(white)};
+  --btn-border-color: transparent;
+}
+
+@mixin danger {
+  --btn-bg-color: #{fill(danger)};
+  --btn-bg-color-hover: #{fill(danger, 5)};
+  --btn-bg-color-active: #{fill(danger, 7)};
+  --btn-text-color: #{fill(white)};
+  --btn-border-color: transparent;
+}
+
+// Makes the button full width
+@mixin wide {
+  width: 100%;
+  justify-content: center;
+}
+
 @mixin styles {
-  #{$selectors} {
+  .#{$class},
+  a.#{$class},
+  button,
+  [type='button'],
+  [type='submit'],
+  [type='reset'],
+  [type='file'] {
     @include reset;
     @include base;
+  }
+
+  #{$selectors} {
+    @include base;
+
+    &--dark {
+      @include dark;
+    }
+
+    &--primary {
+      @include primary;
+    }
+
+    &--info {
+      @include info;
+    }
+
+    &--success {
+      @include success;
+    }
+
+    &--warning {
+      @include warning;
+    }
+
+    &--danger {
+      @include danger;
+    }
+
+    &--wide {
+      @include wide;
+    }
+  }
+
+  a.#{$class} {
+    text-decoration: none;
   }
 }
