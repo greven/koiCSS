@@ -45,9 +45,9 @@ $btn-padding-y: spacing(8);
 }
 
 @mixin base {
-  @include transition-colors();
+  @include transition((color, background-color, border-color, transform));
   align-items: css-var(--btn-items, center);
-  background-color: css-var(--btn-bg-color, fill(white));
+  background-color: css-var(--btn-color, fill(white));
   border-color: css-var(--btn-border-color, fill(gray, 3));
   border-radius: css-var(--btn-border-radius, $btn-border-radius);
   border-style: css-var(--btn-border-style, solid);
@@ -66,13 +66,18 @@ $btn-padding-y: spacing(8);
   text-transform: css-var(--btn-text-case, uppercase);
 
   &:hover {
-    background-color: css-var(--btn-bg-color-hover, fill(gray, 1));
+    background-color: css-var(--btn-color-hover, fill(gray, 1));
     box-shadow: css-var(--btn-shadow-hover, shadow(xs));
   }
 
   &:active {
-    background-color: css-var(--btn-bg-color-active, fill(gray, 0));
+    background-color: css-var(--btn-color-active, fill(gray, 0));
     box-shadow: none;
+
+    // &:hover,
+    // &:focus {
+    //   transform: scale(var(--btn-focus-scale, 0.95));
+    // }
   }
 
   &:focus {
@@ -85,7 +90,7 @@ $btn-padding-y: spacing(8);
 
   &:disabled,
   &.is-disabled {
-    background-color: css-var(--btn-bg-color-disabled, fill(gray, 0));
+    background-color: css-var(--btn-color-disabled, fill(gray, 0));
     border-color: css-var(--btn-border-color-disabled, fill(gray, 2));
     box-shadow: none;
     color: css-var(--btn-text-color-disabled, fill(gray, 4));
@@ -93,59 +98,70 @@ $btn-padding-y: spacing(8);
   }
 }
 
-// @mixin solid {
-// }
+@mixin outline {
+  background-color: transparent;
+  border-color: var(--btn-color);
+  color: var(--btn-color);
 
-// @mixin outline {
-// }
+  &:hover {
+    // background-color: rgb(var(--btn-color), 0.25);
+    border-color: var(--btn-color-hover);
+  }
+
+  // &:hover,
+  // &:focus {
+  //   color: white;
+  //   border-color: var(--btn-color-hover);
+  // }
+}
 
 // @mixin ghost {
 // }
 
 @mixin dark {
-  --btn-bg-color: #{fill(gray, 9)};
-  --btn-bg-color-hover: #{fill(gray, 7)};
-  --btn-bg-color-active: #{fill(gray, 8)};
+  --btn-color: #{fill(gray, 9)};
+  --btn-color-hover: #{fill(gray, 7)};
+  --btn-color-active: #{fill(gray, 8)};
   --btn-text-color: #{fill(white)};
   --btn-border-color: transparent;
 }
 
 @mixin primary {
-  --btn-bg-color: #{fill(primary, 6)};
-  --btn-bg-color-hover: #{fill(primary, 5)};
-  --btn-bg-color-active: #{fill(primary, 7)};
+  --btn-color: #{fill(primary, 6)};
+  --btn-color-hover: #{fill(primary, 5)};
+  --btn-color-active: #{fill(primary, 7)};
   --btn-text-color: #{fill(white)};
   --btn-border-color: transparent;
 }
 
 @mixin info {
-  --btn-bg-color: #{fill(info)};
-  --btn-bg-color-hover: #{fill(info, 5)};
-  --btn-bg-color-active: #{fill(info, 7)};
+  --btn-color: #{fill(info)};
+  --btn-color-hover: #{fill(info, 5)};
+  --btn-color-active: #{fill(info, 7)};
   --btn-text-color: #{fill(white)};
   --btn-border-color: transparent;
 }
 
 @mixin success {
-  --btn-bg-color: #{fill(success)};
-  --btn-bg-color-hover: #{fill(success, 5)};
-  --btn-bg-color-active: #{fill(success, 7)};
+  --btn-color: #{fill(success)};
+  --btn-color-hover: #{fill(success, 5)};
+  --btn-color-active: #{fill(success, 7)};
   --btn-text-color: #{fill(white)};
   --btn-border-color: transparent;
 }
 
 @mixin warning {
-  --btn-bg-color: #{fill(warning)};
-  --btn-bg-color-hover: #{fill(warning, 5)};
-  --btn-bg-color-active: #{fill(warning, 7)};
+  --btn-color: #{fill(warning)};
+  --btn-color-hover: #{fill(warning, 5)};
+  --btn-color-active: #{fill(warning, 7)};
   --btn-text-color: #{fill(white)};
   --btn-border-color: transparent;
 }
 
 @mixin danger {
-  --btn-bg-color: #{fill(danger)};
-  --btn-bg-color-hover: #{fill(danger, 5)};
-  --btn-bg-color-active: #{fill(danger, 7)};
+  --btn-color: #{fill(danger)};
+  --btn-color-hover: #{fill(danger, 5)};
+  --btn-color-active: #{fill(danger, 7)};
   --btn-text-color: #{fill(white)};
   --btn-border-color: transparent;
 }
@@ -193,6 +209,10 @@ $btn-padding-y: spacing(8);
 
     &--danger {
       @include danger;
+    }
+
+    &--outline {
+      @include outline;
     }
 
     &--wide {

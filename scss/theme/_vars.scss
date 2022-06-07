@@ -55,6 +55,7 @@ $schemes: (
 $theme-colors: (
   colors: (
     primary: $primary,
+    // secondary: $secondary
     neutral: $neutral,
     success: map.get($colors, green),
     info: map.get($colors, blue),
