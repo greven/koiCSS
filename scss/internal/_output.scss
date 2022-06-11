@@ -19,9 +19,10 @@
 }
 
 // Returns the css custom property
-@function -css-var-name($name, $key: null, $suffix: null) {
+@function css-var-name($name, $key: null, $suffix: null) {
   $prefix: _css-var-prefix();
   $suffix: if($suffix, '-#{$suffix}', '');
+  
   $key: if($name and $key, '-#{$key}', $key);
 
   @return '--#{$prefix}#{$name}#{$key}#{$suffix}';
@@ -31,7 +32,7 @@
 // Example: css-var(--c-green-5) -> var(--koi-c-green-5)
 @function css-var($name, $fallback: null) {
   $name: replace($name, '--', '');
-  $var-name: string.unquote(-css-var-name($name));
+  $var-name: string.unquote(css-var-name($name));
   @if $fallback {
     @return var($var-name, $fallback);
   }
@@ -45,5 +46,5 @@
 // Output a CSS custom property (CSS var) definition
 @mixin custom-prop($property, $key, $value) {
   $value: if(meta.type-of($value) == 'string', string.unquote($value), $value);
-  #{-css-var-name($property, $key)}: $value;
+  #{css-var-name($property, $key)}: $value;
 }

@@ -1,4 +1,5 @@
 @use '../config' as *;
+@use '../internal/color' as *;
 @use '../helpers/color' as *;
 @use '../theme/helpers' as *;
 
@@ -8,13 +9,15 @@ $_default-shade: config(fallbacks, colors);
 // Return a HSL theme color as a CSS var (run time)
 @function fill($name, $shade: $_default-shade, $alpha: 1) {
   @if is-theme-color($name, $shade) {
-    @return _css-color-var($name, $shade, $alpha);
+    @return css-color-var($name, $shade, $alpha);
   } @else if is-theme-color($name) {
-    @return _css-color-var($name, $alpha: $alpha);
+    @return css-color-var($name, $alpha: $alpha);
   } @else {
     @error "Color #{$name} or #{$name}-#{$shade} not found in theme.";
   }
 }
+
+// @function
 
 // Return an RGB theme color value (compile time)
 @function color($name, $shade: $_default-shade, $alpha: 1) {
