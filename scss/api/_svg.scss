@@ -1,0 +1,44 @@
+// --------------------------------
+//   SVG API
+// --------------------------------
+
+@use 'sass:math';
+
+@use '../helpers/string';
+
+$escape-characters: (
+  ('"', "'"),
+  ('<', '%3C'),
+  ('>', '%3E'),
+  ('(', '%28'),
+  (')', '%29'),
+  ('#', '%23'),
+  ('&', '%26')
+) !default;
+
+// --------------------------------
+//   Functions
+// --------------------------------
+
+/// Escape a string, replacing invalid characters.
+///
+/// @param {string} $str
+///
+/// @return {string}
+///
+@function escape($str) {
+  @each $char, $encoded in $escape-characters {
+    $str: string.replace($str, $char, $encoded);
+  }
+  @return $str;
+}
+
+/// Encodes an SVG as data URI, replacing invalid characters
+///
+/// @param {string} $svg
+///
+/// @return {string}
+///
+@function svg-encode($svg) {
+  @return url('data:image/svg+xml;charset=utf8,#{escape($svg)}');
+}

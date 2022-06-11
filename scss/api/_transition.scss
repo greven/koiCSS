@@ -1,0 +1,67 @@
+// --------------------------------
+//   Transitions
+// --------------------------------
+
+@use 'sass:map';
+
+@use '../config' as *;
+@use '../theme' as *;
+@use 'media-query' as *;
+
+// --------------------------------
+//   Values
+// --------------------------------
+
+$_default-duration: theme(duration, config(fallbacks, duration));
+$_default-timing-function: theme(timing, config(fallbacks, timing));
+
+$_default-properties: (
+  background-color,
+  border-color,
+  color,
+  fill,
+  stroke,
+  opacity,
+  box-shadow,
+  transform,
+  filter,
+  backdrop-filter
+);
+
+// --------------------------------
+//   Mixins
+// --------------------------------
+
+@mixin transition(
+  $property: transform,
+  $duration: $_default-duration,
+  $timing-function: $_default-timing-function,
+  $delay: null
+) {
+  @include prefers-reduced-motion(null) {
+    transition-delay: var(--koi-transition-delay, $delay);
+    transition-duration: var(--koi-transition-duration, $duration);
+    transition-property: var(--koi-transition-property, $property);
+    transition-timing-function: var(--koi-transition-timing-function, $timing-function);
+  }
+}
+
+@mixin transition-all($duration: $_default-duration, $timing-function: $_default-timing-function, $delay: null) {
+  @include transition(all, $duration, $timing-function, $delay);
+}
+
+@mixin transition-colors($duration: $_default-duration, $timing-function: $_default-timing-function, $delay: null) {
+  @include transition((background-color, border-color, color, fill, stroke), $duration, $timing-function, $delay);
+}
+
+@mixin transition-opacity($duration: $_default-duration, $timing-function: $_default-timing-function, $delay: null) {
+  @include transition(opacity, $duration, $timing-function, $delay);
+}
+
+@mixin transition-shadow($duration: $_default-duration, $timing-function: $_default-timing-function, $delay: null) {
+  @include transition(box-shadow, $duration, $timing-function, $delay);
+}
+
+@mixin transition-transform($duration: $_default-duration, $timing-function: $_default-timing-function, $delay: null) {
+  @include transition(transform, $duration, $timing-function, $delay);
+}

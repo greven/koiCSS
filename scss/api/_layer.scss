@@ -1,0 +1,34 @@
+// --------------------------------
+//   Layer / Z-Index API
+// --------------------------------
+
+@use '../config' as *;
+@use '../theme' as *;
+
+$_default-layer: config(fallbacks, layer);
+
+// --------------------------------
+//   Functions
+// --------------------------------
+
+@function layer($layer: $_default-layer) {
+  @return theme(layer, $layer);
+}
+
+// Alias
+@function z-index($layer: $_default-layer) {
+  @return layer($layer);
+}
+
+// --------------------------------
+//   Mixins
+// --------------------------------
+
+@mixin layer($layer: $_default-layer) {
+  z-index: layer($layer);
+}
+
+// Alias
+@mixin z-index($layer: $_default-layer) {
+  z-index: layer($layer);
+}

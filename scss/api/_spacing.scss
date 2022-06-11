@@ -1,0 +1,231 @@
+// --------------------------------
+//   Spacing API
+// --------------------------------
+
+@use 'sass:list';
+@use 'sass:map';
+@use 'sass:math';
+@use 'sass:meta';
+@use 'sass:string';
+
+@use '../config' as *;
+@use '../theme' as *;
+@use '../helpers/type' as *;
+
+// --------------------------------
+//   Values
+// --------------------------------
+
+// Negative spacing (needed for negative margins)
+$negative-spacing: () !default;
+@each $key, $value in theme(spacing) {
+  $map: ();
+  $map: map.merge(
+    $map,
+    (
+      $key: -$value,
+    )
+  );
+  $negative-spacing: map.merge($negative-spacing, $map);
+}
+
+// --------------------------------
+//   Functions
+// --------------------------------
+
+// Check if the $key is a negative spacing value
+@function is-negative-spacing($key) {
+  @if meta.type-of($key) == 'string' {
+    @if string.length($key) >= 2 and string.slice($key, 1, 1) == '-' {
+      $key: string.slice($key, 2);
+      @return map.has-key($negative-spacing, $key);
+    }
+  } @else if meta.type-of($key) == 'number' {
+    @if $key < 0 and map.has-key($negative-spacing, math.abs($key)) {
+      @return map.has-key($negative-spacing, math.abs($key));
+    }
+  }
+  @return false;
+}
+
+// Get a negative spacing value
+@function negative-spacing($key) {
+  @if meta.type-of($key) == 'string' {
+    @if string.length($key) >= 2 and string.slice($key, 1, 1) == '-' {
+      $value: map.get($negative-spacing, string.slice($key, 2));
+      @return $value;
+    }
+  } @else if meta.type-of($key) == 'number' {
+    $value: map.get($negative-spacing, math.abs($key));
+    @return $value;
+  }
+}
+
+/// Return a spacing value(s) from the theme
+///
+/// @param {string} $key - spacing key
+/// @param {string} $keys - spacing keys
+///
+/// @return {any} `$spacing-value`.
+///
+@function spacing($key, $keys...) {
+  $result: ();
+  @if $key == 0 {
+    $result: 0;
+  } @else if theme-has-key(spacing, $key) {
+    $result: theme(spacing, $key);
+  } @else if is-negative-spacing($key) {
+    $result: negative-spacing($key);
+  } @else {
+    @error "Key [#{$key}] is not a valid theme spacing.";
+  }
+
+  @each $key in $keys {
+    @if $key == 0 {
+      $value: 0;
+      $result: list.append($result, $value);
+    } @else if theme-has-key(spacing, $key) {
+      $value: theme(spacing, $key);
+      $result: list.append($result, $value);
+    } @else if is-negative-spacing($key) {
+      $value: negative-spacing($key);
+      $result: list.append($result, $value);
+    } @else {
+      @error "Key(s) [#{$keys}] are not valid theme spacings.";
+    }
+  }
+
+  @return $result;
+}
+
+@function responsive-spacing(
+  $value: config(responsive-padding, value),
+  $min: config(responsive-padding, min),
+  $max: config(responsive-padding, max)
+) {
+  @return clamp(var(--koi-spacing-min, $min), var(--koi-spacing-value, $value), var(--koi-spacing-max, $max));
+}
+
+// --------------------------------
+//   Mixins
+// --------------------------------
+
+// Margin
+
+@mixin margin($key, $keys...) {
+  margin: spacing($key, $keys...);
+}
+
+@mixin margin-inline($key, $keys...) {
+  margin-inline: spacing($key, $keys...);
+}
+
+@mixin margin-inline-start($key) {
+  margin-inline-start: spacing($key);
+}
+
+@mixin margin-inline-end($key) {
+  margin-inline-end: spacing($key);
+}
+
+@mixin margin-block($key, $keys...) {
+  margin-block: spacing($key, $keys...);
+}
+
+@mixin margin-block-start($key) {
+  margin-block-start: spacing($key);
+}
+
+@mixin margin-block-end($key) {
+  margin-block-end: spacing($key);
+}
+
+@mixin margin-top($key) {
+  margin-top: spacing($key);
+}
+
+@mixin margin-bottom($key) {
+  margin-bottom: spacing($key);
+}
+
+@mixin margin-left($key) {
+  margin-left: spacing($key);
+}
+
+@mixin margin-right($key) {
+  margin-right: spacing($key);
+}
+
+// Responsive Margin
+
+@mixin responsive-margin {
+  margin: responsive-spacing();
+}
+
+@mixin responsive-margin-inline {
+  margin-inline: responsive-spacing();
+}
+
+@mixin responsive-margin-block {
+  margin-block: responsive-spacing();
+}
+
+// Padding
+
+@mixin padding($key, $keys...) {
+  padding: spacing($key, $keys...);
+}
+
+@mixin padding-inline($key, $keys...) {
+  padding-inline: spacing($key, $keys...);
+}
+
+@mixin padding-inline-start($key) {
+  padding-inline-start: spacing($key);
+}
+
+@mixin padding-inline-end($key) {
+  padding-inline-end: spacing($key);
+}
+
+@mixin padding-block($key, $keys...) {
+  padding-block: spacing($key, $keys...);
+}
+
+@mixin padding-block-start($key) {
+  padding-block-start: spacing($key);
+}
+
+@mixin padding-block-end($key) {
+  padding-block-end: spacing($key);
+}
+
+@mixin padding-top($key) {
+  padding-top: spacing($key);
+}
+
+@mixin padding-bottom($key) {
+  padding-bottom: spacing($key);
+}
+
+@mixin padding-left($key) {
+  padding-left: spacing($key);
+}
+
+@mixin padding-right($key) {
+  padding-right: spacing($key);
+}
+
+// Responsive Padding
+
+@mixin responsive-padding {
+  padding: responsive-spacing();
+}
+
+@mixin responsive-padding-inline {
+  padding-inline: responsive-spacing();
+}
+
+@mixin responsive-padding-block {
+  padding-block: responsive-spacing();
+}

@@ -1,0 +1,101 @@
+// -------------------------------------
+//   Layout API
+// -------------------------------------
+
+@use 'sass:meta';
+
+@use '../config' as *;
+@use 'media-query' as *;
+@use 'border' as *;
+@use 'spacing' as *;
+@use 'shadow' as *;
+
+// -------------------------------------
+//   Mixins
+// -------------------------------------
+
+// Basic box element with theme defaults that
+// can be composed with other utilities.
+// Based on https://smolcss.dev/#smol-unbreakable-boxes */
+@mixin box($max-width: 100%, $color: null, $bg-color: null, $padding: null, $rounded: null, $shadow: null) {
+  background-color: $bg-color;
+  color: $color;
+  hyphens: auto;
+  word-break: break-word;
+
+  @if $max-width {
+    width: $max-width;
+  }
+
+  // Add padding to the element, either by value, by
+  // theme token or using responsive padding as fallback
+  @if $padding {
+    @if theme-has-key(spacing, $padding) {
+      padding-left: theme(spacing, $padding);
+      padding-right: theme(spacing, $padding);
+    } @else if meta.type-of($padding) == number {
+      padding-left: $padding;
+      padding-right: $padding;
+    } @else {
+      @include responsive-padding;
+    }
+  }
+
+  @if $rounded {
+    @if theme-has-key(radius, $rounded) {
+      @include rounded($rounded);
+    } @else if meta.type-of($rounded) == bool {
+      @include rounded();
+    } @else {
+      border-radius: $rounded;
+    }
+  }
+
+  @if $shadow {
+    @if theme-has-key(shadow, $shadow) {
+      @include shadow($shadow);
+    } @else if meta.type-of($shadow) == bool {
+      @include shadow();
+    } @else {
+      box-shadow: $shadow;
+    }
+  }
+}
+
+@mixin container($from: xl, $padding: null, $center: false, $max-width: true) {
+  $from-width: if(bp($from), bp($from), $from);
+
+  width: 100%;
+
+  /* Center the element */
+  @if $center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  // Add padding to the container, either by value, by
+  // theme token or using responsive padding as fallback
+  @if $padding {
+    @if theme-has-key(spacing, $padding) {
+      padding-left: theme(spacing, $padding);
+      padding-right: theme(spacing, $padding);
+    } @else if meta.type-of($padding) == number {
+      padding-left: $padding;
+      padding-right: $padding;
+    } @else {
+      @include responsive-padding-inline;
+    }
+  }
+
+  // Set the max-width of the element to match the
+  // min-width of the current breakpoint
+  @if $max-width {
+    @include mq-from($from-width) {
+      @each $breakpoint, $width in theme(screens) {
+        @include mq-from($breakpoint) {
+          max-width: $width;
+        }
+      }
+    }
+  }
+}

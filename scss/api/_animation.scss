@@ -1,0 +1,42 @@
+// --------------------------------
+//   Animation API
+// --------------------------------
+
+@use '../config' as *;
+@use '../theme' as *;
+@use 'media-query' as *;
+
+// --------------------------------
+//   Values
+// --------------------------------
+
+$_default-duration: theme(duration, config(fallbacks, duration));
+$_default-timing-function: theme(timing, config(fallbacks, timing));
+
+// --------------------------------
+//   Mixins
+// --------------------------------
+
+@mixin animation(
+  $name,
+  $duration: $_default-duration,
+  $timing-function: $_default-timing-function,
+  $delay: 0s,
+  $iteration-count: 1,
+  $direction: normal,
+  $fill-mode: none,
+  $play-state: null
+) {
+  @include prefers-reduced-motion(null) {
+    animation-delay: $delay;
+    animation-direction: $direction;
+    animation-duration: $duration;
+    animation-fill-mode: $fill-mode;
+    animation-iteration-count: $iteration-count;
+    animation-name: $name;
+    animation-timing-function: $timing-function;
+    @if $play-state {
+      animation-play-state: $play-state;
+    }
+  }
+}

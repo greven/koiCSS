@@ -1,0 +1,145 @@
+// --------------------------------
+//   Typography helpers
+// --------------------------------
+
+@use 'sass:map';
+@use 'sass:list';
+@use 'sass:string';
+
+@use '../config' as *;
+@use '../theme' as *;
+@use '../helpers/' as *;
+
+// --------------------------------
+//   Values
+// --------------------------------
+
+$_default-font-family: config(fallbacks, font-family);
+$_default-font-size: config(fallbacks, font-size);
+$_default-font-weight: config(fallbacks, font-weight);
+$_default-leading: config(fallbacks, leading);
+$_default-tracking: config(fallbacks, tracking);
+
+// --------------------------------
+//   Functions
+// --------------------------------
+
+@function font-family($font-family: $_default-font-family) {
+  @return theme(font-family, $font-family);
+}
+
+@function font-size($font-size: $_default-font-size) {
+  @return list.nth(theme(font-size, $font-size), 1);
+}
+
+@function font-weight($font-weight: $_default-font-weight) {
+  @return theme(font-weight, $font-weight);
+}
+
+// Get font-family, font-size or font-weight theme values
+@function font($key) {
+  @if theme-has-key(font-family, $key) {
+    @return font-family($key);
+  } @else if theme-has-key(font-size, $key) {
+    @return font-size($key);
+  } @else if theme-has-key(font-weight, $key) {
+    @return font-weight($key);
+  } @else {
+    @error "[#{$key}] does not exist in the theme!";
+  }
+}
+
+@function leading($leading: $_default-leading) {
+  @return theme(leading, $leading);
+}
+
+// Leading alias
+@function line-height($leading: $_default-leading) {
+  @return theme(leading, $leading);
+}
+
+@function tracking($tracking: $_default-tracking) {
+  @return theme(tracking, $tracking);
+}
+
+// Tracking alias
+@function letter-spacing($tracking: $_default-tracking) {
+  @return theme(tracking, $tracking);
+}
+
+// Font-size default leading (line-height)
+@function text-leading($font-size) {
+  @return list.nth(theme(font-size, $font-size), 2);
+}
+
+// --------------------------------
+//   Mixins
+// --------------------------------
+
+// Font-size with default line-height
+@mixin font-size($font-size: $_default-font-size) {
+  font-size: font-size($font-size);
+}
+
+// Font-size with default leading (line-height)
+@mixin text-size($font-size: $_default-font-size) {
+  font-size: font-size($font-size);
+  line-height: text-leading($font-size);
+}
+
+// Applies antialiasing via font-smoothing to text.
+@mixin smooth-font {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+// Sets text content overflow to ellipsis
+// Element must be `display: block` or `display: inline-block` for this to work.
+@mixin overflow-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Mixin helper to define a font-face
+// Example: @include font-face('Tobias Light', 'fonts/Tobias-Light', $family: Tobias, $weight: 300);
+@mixin font-face(
+  $name,
+  $path,
+  $family: null,
+  $weight: 400,
+  $style: normal,
+  $display: swap,
+  $exts: eot woff2 woff ttf svg,
+  $extra: null
+) {
+  $family: if($family, string.quote($family), string.quote($name));
+
+  $formats: (
+    eot: 'embedded-opentype',
+    otf: 'opentype',
+    ttf: 'truetype',
+  );
+
+  $src: (local($name), local(str-replace($name, ' ', '-')));
+  @each $ext in $exts {
+    $extension: if($ext == svg, $ext + '#' + str-replace($name, ' ', '_'), $ext);
+    $format: if(map.has-key($formats, $ext), map.get($formats, $ext), $ext);
+    $src: list.append(
+      $src,
+      url("#{string.quote($path + '.' + $extension)}") format(string.quote($format)),
+      $separator: comma
+    );
+  }
+
+  @font-face {
+    font-display: $display;
+    font-family: $family;
+    font-style: $style;
+    font-weight: $weight;
+    src: $src;
+    @each $key, $value in $extra {
+      #{$key}: $value;
+    }
+  }
+}

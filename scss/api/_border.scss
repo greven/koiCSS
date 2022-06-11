@@ -1,0 +1,44 @@
+// --------------------------------
+//   Border API
+// --------------------------------
+
+@use '../config' as *;
+@use '../theme' as *;
+
+$_default-radius: config(fallbacks, radius);
+
+// --------------------------------
+//   Functions
+// --------------------------------
+
+@function radius($radius: $_default-radius) {
+  @return theme(radius, $radius);
+}
+
+// --------------------------------
+//   Mixins
+// --------------------------------
+
+@mixin rounded($radius: $_default-radius) {
+  border-radius: radius($radius);
+}
+
+@mixin rounded-top($radius: $_default-radius) {
+  border-top-left-radius: radius($radius);
+  border-top-right-radius: radius($radius);
+}
+
+@mixin rounded-bottom($radius: $_default-radius) {
+  border-bottom-left-radius: radius($radius);
+  border-bottom-right-radius: radius($radius);
+}
+
+@mixin rounded-left($radius: $_default-radius) {
+  border-bottom-left-radius: radius($radius);
+  border-top-left-radius: radius($radius);
+}
+
+@mixin rounded-right($radius: $_default-radius) {
+  border-bottom-right-radius: radius($radius);
+  border-top-right-radius: radius($radius);
+}

@@ -1,0 +1,28 @@
+// ------------------------------------------------
+//   Timing Functions (Animation & Transition) API
+// ------------------------------------------------
+
+@use '../config' as *;
+@use '../theme' as *;
+
+$_default-timing: config(fallbacks, timing);
+
+// --------------------------------
+//   Functions
+// --------------------------------
+
+@function timing($timing: $_default-timing) {
+  @return theme(timing, $timing);
+}
+
+// --------------------------------
+//   Mixins
+// --------------------------------
+
+@mixin animation-timing($timing: $_default-timing) {
+  animation-timing-function: timing($timing);
+}
+
+@mixin transition-timing($timing: $_default-timing) {
+  transition-timing-function: timing($timing);
+}

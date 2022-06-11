@@ -1,0 +1,27 @@
+// --------------------------------
+//   Visibility API
+// --------------------------------
+
+// Visually hides an element
+@mixin visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+// Removes the visually-hidden styles
+@mixin not-visually-hidden {
+  clip: unset;
+  height: auto;
+  margin: unset;
+  overflow: unset;
+  position: static;
+  white-space: unset;
+  width: auto;
+}

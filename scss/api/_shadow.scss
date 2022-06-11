@@ -1,0 +1,32 @@
+// --------------------------------
+//   Shadows API
+// --------------------------------
+
+@use 'sass:map';
+
+@use '../config' as *;
+@use '../theme' as *;
+
+$_default-shadow: config(fallbacks, shadow);
+
+// --------------------------------
+//   Functions
+// --------------------------------
+
+/// Return a shadow value from the theme
+///
+/// @param {string} $shadow
+///
+/// @return {any} `$shadow-value`.
+///
+@function shadow($shadow: $_default-shadow) {
+  @return theme(shadow, $shadow);
+}
+
+// --------------------------------
+//   Mixins
+// --------------------------------
+
+@mixin shadow($shadow: $_default-shadow) {
+  box-shadow: shadow($shadow);
+}
