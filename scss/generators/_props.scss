@@ -2,7 +2,7 @@
 //   CSS Custom Props Generators
 // ------------------------------------
 
-@use '../internal/output' as *;
+@use '../internal/color' as *;
 
 // Output a colors map as CSS custom properties
 @mixin generate-css-color-vars($colors-map: (), $property: null, $suffix: null) {

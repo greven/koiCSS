@@ -172,215 +172,359 @@ a {
     transition-duration: 0.01ms !important;
   }
 }
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+sub,
+sup {
+  font-size: 0.75em;
+  position: relative;
+}
+
+sub {
+  bottom: -0.25em;
+  left: 0.25em;
+}
+
+sup {
+  left: 0.25em;
+  top: -0.5em;
+}
+
+pre,
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.875rem;
+}
+
+pre {
+  padding: clamp(var(--koi-spacing-min, 0.75rem), var(--koi-spacing-value, 5%), var(--koi-spacing-max, 1.5rem));
+  border-radius: 0.25rem;
+  overflow-x: auto;
+  position: relative;
+}
+
+code::before {
+  content: attr(data-lang);
+  font-size: 0.75rem;
+  position: absolute;
+  right: 1rem;
+  top: 0.7rem;
+}
+
+blockquote {
+  border-left-width: 0.25rem;
+  font-style: italic;
+  font-weight: 500;
+  margin-bottom: 1.6em;
+  margin-top: 1.6em;
+  padding-left: 1em;
+}
+blockquote p {
+  margin-bottom: 1.25em;
+  margin-top: 1.25em;
+}
+blockquote p:first-of-type::before {
+  content: open-quote;
+}
+blockquote p:last-of-type::after {
+  content: close-quote;
+}
+
+a {
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 50ms linear;
+}
+a:hover {
+  border-bottom-width: 2px;
+}
+
+img {
+  height: auto;
+  user-select: none;
+}
+
+iframe {
+  height: 100%;
+  width: 100%;
+}
+
+figure {
+  margin-left: 0;
+  margin-right: 0;
+}
+figure figcaption {
+  margin-top: space(8);
+  text-align: center;
+}
+
+[type=date],
+[type=datetime],
+[type=datetime-local],
+[type=email],
+[type=month],
+[type=number],
+[type=password],
+[type=search],
+[type=tel],
+[type=text],
+[type=time],
+[type=url],
+[type=week],
+textarea,
+select {
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 0.5em 0.75em;
+}
+
+[type=checkbox],
+[type=radio] {
+  height: 1em;
+  width: 1em;
+}
+[type=checkbox]:checked,
+[type=radio]:checked {
+  background-color: currentColor;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-color: transparent;
+}
+
+[type=checkbox]:checked {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3E%3C/svg%3E");
+}
+
+[type=radio] {
+  border-radius: 9999px;
+}
+[type=radio]:checked {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='3'/%3E%3C/svg%3E");
+}
+
+select {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 16 16'%3E%3Cpath stroke='theme%28colors, gray, 5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6' /%3E%3C/svg%3E");
+  background-position: right 0.75em center;
+  background-repeat: no-repeat;
+  background-size: 16px 12px;
+}
+
 :root {
   /*! purgecss start ignore */
-  --color-white: hsl(0deg, 0%, 100%);
-  --color-white-h: 0deg;
-  --color-white-s: 0%;
-  --color-white-l: 100%;
-  --color-black: hsl(0deg, 0%, 0%);
-  --color-black-h: 0deg;
-  --color-black-s: 0%;
-  --color-black-l: 0%;
-  --color-gray-0: hsl(0deg, 0%, 98.0392156863%);
-  --color-gray-0-h: 0deg;
-  --color-gray-0-s: 0%;
-  --color-gray-0-l: 98.0392156863%;
-  --color-gray-1: hsl(0deg, 0%, 96.0784313725%);
-  --color-gray-1-h: 0deg;
-  --color-gray-1-s: 0%;
-  --color-gray-1-l: 96.0784313725%;
-  --color-gray-2: hsl(0deg, 0%, 90.1960784314%);
-  --color-gray-2-h: 0deg;
-  --color-gray-2-s: 0%;
-  --color-gray-2-l: 90.1960784314%;
-  --color-gray-3: hsl(0deg, 0%, 83.137254902%);
-  --color-gray-3-h: 0deg;
-  --color-gray-3-s: 0%;
-  --color-gray-3-l: 83.137254902%;
-  --color-gray-4: hsl(0deg, 0%, 63.9215686275%);
-  --color-gray-4-h: 0deg;
-  --color-gray-4-s: 0%;
-  --color-gray-4-l: 63.9215686275%;
-  --color-gray-5: hsl(0deg, 0%, 45.0980392157%);
-  --color-gray-5-h: 0deg;
-  --color-gray-5-s: 0%;
-  --color-gray-5-l: 45.0980392157%;
-  --color-gray-6: hsl(0deg, 0%, 32.1568627451%);
-  --color-gray-6-h: 0deg;
-  --color-gray-6-s: 0%;
-  --color-gray-6-l: 32.1568627451%;
-  --color-gray-7: hsl(0deg, 0%, 25.0980392157%);
-  --color-gray-7-h: 0deg;
-  --color-gray-7-s: 0%;
-  --color-gray-7-l: 25.0980392157%;
-  --color-gray-8: hsl(0deg, 0%, 14.9019607843%);
-  --color-gray-8-h: 0deg;
-  --color-gray-8-s: 0%;
-  --color-gray-8-l: 14.9019607843%;
-  --color-gray-9: hsl(0deg, 0%, 9.0196078431%);
-  --color-gray-9-h: 0deg;
-  --color-gray-9-s: 0%;
-  --color-gray-9-l: 9.0196078431%;
-  --color-success-0: hsl(133.3333333333deg, 60%, 97.0588235294%);
-  --color-success-0-h: 133.3333333333deg;
-  --color-success-0-s: 60%;
-  --color-success-0-l: 97.0588235294%;
-  --color-success-1: hsl(142deg, 83.3333333333%, 92.9411764706%);
-  --color-success-1-h: 142deg;
-  --color-success-1-s: 83.3333333333%;
-  --color-success-1-l: 92.9411764706%;
-  --color-success-2: hsl(141deg, 78.9473684211%, 85.0980392157%);
-  --color-success-2-h: 141deg;
-  --color-success-2-s: 78.9473684211%;
-  --color-success-2-l: 85.0980392157%;
-  --color-success-3: hsl(142.0754716981deg, 76.8115942029%, 72.9411764706%);
-  --color-success-3-h: 142.0754716981deg;
-  --color-success-3-s: 76.8115942029%;
-  --color-success-3-l: 72.9411764706%;
-  --color-success-4: hsl(141.8918918919deg, 69.1588785047%, 58.0392156863%);
-  --color-success-4-h: 141.8918918919deg;
-  --color-success-4-s: 69.1588785047%;
-  --color-success-4-l: 58.0392156863%;
-  --color-success-5: hsl(142.0858895706deg, 71.1790393013%, 44.9019607843%);
-  --color-success-5-h: 142.0858895706deg;
-  --color-success-5-s: 71.1790393013%;
-  --color-success-5-l: 44.9019607843%;
-  --color-success-6: hsl(141.8571428571deg, 76.0869565217%, 36.0784313725%);
-  --color-success-6-h: 141.8571428571deg;
-  --color-success-6-s: 76.0869565217%;
-  --color-success-6-l: 36.0784313725%;
-  --color-success-7: hsl(142.0754716981deg, 71.6216216216%, 29.0196078431%);
-  --color-success-7-h: 142.0754716981deg;
-  --color-success-7-s: 71.6216216216%;
-  --color-success-7-l: 29.0196078431%;
-  --color-success-8: hsl(143.0769230769deg, 63.9344262295%, 23.9215686275%);
-  --color-success-8-h: 143.0769230769deg;
-  --color-success-8-s: 63.9344262295%;
-  --color-success-8-l: 23.9215686275%;
-  --color-success-9: hsl(144.1935483871deg, 60.7843137255%, 20%);
-  --color-success-9-h: 144.1935483871deg;
-  --color-success-9-s: 60.7843137255%;
-  --color-success-9-l: 20%;
-  --color-info-0: hsl(216deg, 100%, 97.0588235294%);
-  --color-info-0-h: 216deg;
-  --color-info-0-s: 100%;
-  --color-info-0-l: 97.0588235294%;
-  --color-info-1: hsl(213.5294117647deg, 94.4444444444%, 92.9411764706%);
-  --color-info-1-h: 213.5294117647deg;
-  --color-info-1-s: 94.4444444444%;
-  --color-info-1-l: 92.9411764706%;
-  --color-info-2: hsl(212.8125deg, 96.9696969697%, 87.0588235294%);
-  --color-info-2-h: 212.8125deg;
-  --color-info-2-s: 96.9696969697%;
-  --color-info-2-l: 87.0588235294%;
-  --color-info-3: hsl(212.2222222222deg, 96.4285714286%, 78.0392156863%);
-  --color-info-3-h: 212.2222222222deg;
-  --color-info-3-s: 96.4285714286%;
-  --color-info-3-l: 78.0392156863%;
-  --color-info-4: hsl(212.9411764706deg, 93.8650306748%, 68.0392156863%);
-  --color-info-4-h: 212.9411764706deg;
-  --color-info-4-s: 93.8650306748%;
-  --color-info-4-l: 68.0392156863%;
-  --color-info-5: hsl(217.0967741935deg, 91.1764705882%, 60%);
-  --color-info-5-h: 217.0967741935deg;
-  --color-info-5-s: 91.1764705882%;
-  --color-info-5-l: 60%;
-  --color-info-6: hsl(221.0050251256deg, 83.2635983264%, 53.137254902%);
-  --color-info-6-h: 221.0050251256deg;
-  --color-info-6-s: 83.2635983264%;
-  --color-info-6-l: 53.137254902%;
-  --color-info-7: hsl(223.8709677419deg, 76.2295081967%, 47.8431372549%);
-  --color-info-7-h: 223.8709677419deg;
-  --color-info-7-s: 76.2295081967%;
-  --color-info-7-l: 47.8431372549%;
-  --color-info-8: hsl(226.25deg, 70.5882352941%, 40%);
-  --color-info-8-h: 226.25deg;
-  --color-info-8-s: 70.5882352941%;
-  --color-info-8-l: 40%;
-  --color-info-9: hsl(223.8888888889deg, 64.2857142857%, 32.9411764706%);
-  --color-info-9-h: 223.8888888889deg;
-  --color-info-9-s: 64.2857142857%;
-  --color-info-9-l: 32.9411764706%;
-  --color-warning-0: hsl(54.5454545455deg, 91.6666666667%, 95.2941176471%);
-  --color-warning-0-h: 54.5454545455deg;
-  --color-warning-0-s: 91.6666666667%;
-  --color-warning-0-l: 95.2941176471%;
-  --color-warning-1: hsl(54.9152542373deg, 96.7213114754%, 88.0392156863%);
-  --color-warning-1-h: 54.9152542373deg;
-  --color-warning-1-s: 96.7213114754%;
-  --color-warning-1-l: 88.0392156863%;
-  --color-warning-2: hsl(52.7586206897deg, 98.3050847458%, 76.862745098%);
-  --color-warning-2-h: 52.7586206897deg;
-  --color-warning-2-s: 98.3050847458%;
-  --color-warning-2-l: 76.862745098%;
-  --color-warning-3: hsl(50.4395604396deg, 97.8494623656%, 63.5294117647%);
-  --color-warning-3-h: 50.4395604396deg;
-  --color-warning-3-s: 97.8494623656%;
-  --color-warning-3-l: 63.5294117647%;
-  --color-warning-4: hsl(47.9475982533deg, 95.8158995816%, 53.137254902%);
-  --color-warning-4-h: 47.9475982533deg;
-  --color-warning-4-s: 95.8158995816%;
-  --color-warning-4-l: 53.137254902%;
-  --color-warning-5: hsl(45.3982300885deg, 93.3884297521%, 47.4509803922%);
-  --color-warning-5-h: 45.3982300885deg;
-  --color-warning-5-s: 93.3884297521%;
-  --color-warning-5-l: 47.4509803922%;
-  --color-warning-6: hsl(40.6060606061deg, 96.1165048544%, 40.3921568627%);
-  --color-warning-6-h: 40.6060606061deg;
-  --color-warning-6-s: 96.1165048544%;
-  --color-warning-6-l: 40.3921568627%;
-  --color-warning-7: hsl(35.4545454545deg, 91.6666666667%, 32.9411764706%);
-  --color-warning-7-h: 35.4545454545deg;
-  --color-warning-7-s: 91.6666666667%;
-  --color-warning-7-l: 32.9411764706%;
-  --color-warning-8: hsl(31.7647058824deg, 80.9523809524%, 28.8235294118%);
-  --color-warning-8-h: 31.7647058824deg;
-  --color-warning-8-s: 80.9523809524%;
-  --color-warning-8-l: 28.8235294118%;
-  --color-warning-9: hsl(28.4210526316deg, 72.5190839695%, 25.6862745098%);
-  --color-warning-9-h: 28.4210526316deg;
-  --color-warning-9-s: 72.5190839695%;
-  --color-warning-9-l: 25.6862745098%;
-  --color-danger-0: hsl(0deg, 86.6666666667%, 97.0588235294%);
-  --color-danger-0-h: 0deg;
-  --color-danger-0-s: 86.6666666667%;
-  --color-danger-0-l: 97.0588235294%;
-  --color-danger-1: hsl(0deg, 93.5483870968%, 93.9215686275%);
-  --color-danger-1-h: 0deg;
-  --color-danger-1-s: 93.5483870968%;
-  --color-danger-1-l: 93.9215686275%;
-  --color-danger-2: hsl(0deg, 96.4285714286%, 89.0196078431%);
-  --color-danger-2-h: 0deg;
-  --color-danger-2-s: 96.4285714286%;
-  --color-danger-2-l: 89.0196078431%;
-  --color-danger-3: hsl(0deg, 93.4782608696%, 81.9607843137%);
-  --color-danger-3-h: 0deg;
-  --color-danger-3-s: 93.4782608696%;
-  --color-danger-3-l: 81.9607843137%;
-  --color-danger-4: hsl(0deg, 90.5405405405%, 70.9803921569%);
-  --color-danger-4-h: 0deg;
-  --color-danger-4-s: 90.5405405405%;
-  --color-danger-4-l: 70.9803921569%;
-  --color-danger-5: hsl(0deg, 84.3137254902%, 60%);
-  --color-danger-5-h: 0deg;
-  --color-danger-5-s: 84.3137254902%;
-  --color-danger-5-l: 60%;
-  --color-danger-6: hsl(0deg, 72%, 50.9803921569%);
-  --color-danger-6-h: 0deg;
-  --color-danger-6-s: 72%;
-  --color-danger-6-l: 50.9803921569%;
-  --color-danger-7: hsl(0deg, 73.8317757009%, 41.9607843137%);
-  --color-danger-7-h: 0deg;
-  --color-danger-7-s: 73.8317757009%;
-  --color-danger-7-l: 41.9607843137%;
-  --color-danger-8: hsl(0deg, 69.8324022346%, 35.0980392157%);
-  --color-danger-8-h: 0deg;
-  --color-danger-8-s: 69.8324022346%;
-  --color-danger-8-l: 35.0980392157%;
-  --color-danger-9: hsl(0deg, 63.2911392405%, 30.9803921569%);
-  --color-danger-9-h: 0deg;
-  --color-danger-9-s: 63.2911392405%;
-  --color-danger-9-l: 30.9803921569%;
+  -css-var-name(color, white, ): hsl(0deg, 0%, 100%);
+  -css-var-name(color, white, )-h: 0deg;
+  -css-var-name(color, white, )-s: 0%;
+  -css-var-name(color, white, )-l: 100%;
+  -css-var-name(color, black, ): hsl(0deg, 0%, 0%);
+  -css-var-name(color, black, )-h: 0deg;
+  -css-var-name(color, black, )-s: 0%;
+  -css-var-name(color, black, )-l: 0%;
+  -css-var-name(color, "gray-0", ): hsl(0deg, 0%, 98.0392156863%);
+  -css-var-name(color, "gray-0", )-h: 0deg;
+  -css-var-name(color, "gray-0", )-s: 0%;
+  -css-var-name(color, "gray-0", )-l: 98.0392156863%;
+  -css-var-name(color, "gray-1", ): hsl(0deg, 0%, 96.0784313725%);
+  -css-var-name(color, "gray-1", )-h: 0deg;
+  -css-var-name(color, "gray-1", )-s: 0%;
+  -css-var-name(color, "gray-1", )-l: 96.0784313725%;
+  -css-var-name(color, "gray-2", ): hsl(0deg, 0%, 90.1960784314%);
+  -css-var-name(color, "gray-2", )-h: 0deg;
+  -css-var-name(color, "gray-2", )-s: 0%;
+  -css-var-name(color, "gray-2", )-l: 90.1960784314%;
+  -css-var-name(color, "gray-3", ): hsl(0deg, 0%, 83.137254902%);
+  -css-var-name(color, "gray-3", )-h: 0deg;
+  -css-var-name(color, "gray-3", )-s: 0%;
+  -css-var-name(color, "gray-3", )-l: 83.137254902%;
+  -css-var-name(color, "gray-4", ): hsl(0deg, 0%, 63.9215686275%);
+  -css-var-name(color, "gray-4", )-h: 0deg;
+  -css-var-name(color, "gray-4", )-s: 0%;
+  -css-var-name(color, "gray-4", )-l: 63.9215686275%;
+  -css-var-name(color, "gray-5", ): hsl(0deg, 0%, 45.0980392157%);
+  -css-var-name(color, "gray-5", )-h: 0deg;
+  -css-var-name(color, "gray-5", )-s: 0%;
+  -css-var-name(color, "gray-5", )-l: 45.0980392157%;
+  -css-var-name(color, "gray-6", ): hsl(0deg, 0%, 32.1568627451%);
+  -css-var-name(color, "gray-6", )-h: 0deg;
+  -css-var-name(color, "gray-6", )-s: 0%;
+  -css-var-name(color, "gray-6", )-l: 32.1568627451%;
+  -css-var-name(color, "gray-7", ): hsl(0deg, 0%, 25.0980392157%);
+  -css-var-name(color, "gray-7", )-h: 0deg;
+  -css-var-name(color, "gray-7", )-s: 0%;
+  -css-var-name(color, "gray-7", )-l: 25.0980392157%;
+  -css-var-name(color, "gray-8", ): hsl(0deg, 0%, 14.9019607843%);
+  -css-var-name(color, "gray-8", )-h: 0deg;
+  -css-var-name(color, "gray-8", )-s: 0%;
+  -css-var-name(color, "gray-8", )-l: 14.9019607843%;
+  -css-var-name(color, "gray-9", ): hsl(0deg, 0%, 9.0196078431%);
+  -css-var-name(color, "gray-9", )-h: 0deg;
+  -css-var-name(color, "gray-9", )-s: 0%;
+  -css-var-name(color, "gray-9", )-l: 9.0196078431%;
+  -css-var-name(color, "success-0", ): hsl(133.3333333333deg, 60%, 97.0588235294%);
+  -css-var-name(color, "success-0", )-h: 133.3333333333deg;
+  -css-var-name(color, "success-0", )-s: 60%;
+  -css-var-name(color, "success-0", )-l: 97.0588235294%;
+  -css-var-name(color, "success-1", ): hsl(142deg, 83.3333333333%, 92.9411764706%);
+  -css-var-name(color, "success-1", )-h: 142deg;
+  -css-var-name(color, "success-1", )-s: 83.3333333333%;
+  -css-var-name(color, "success-1", )-l: 92.9411764706%;
+  -css-var-name(color, "success-2", ): hsl(141deg, 78.9473684211%, 85.0980392157%);
+  -css-var-name(color, "success-2", )-h: 141deg;
+  -css-var-name(color, "success-2", )-s: 78.9473684211%;
+  -css-var-name(color, "success-2", )-l: 85.0980392157%;
+  -css-var-name(color, "success-3", ): hsl(142.0754716981deg, 76.8115942029%, 72.9411764706%);
+  -css-var-name(color, "success-3", )-h: 142.0754716981deg;
+  -css-var-name(color, "success-3", )-s: 76.8115942029%;
+  -css-var-name(color, "success-3", )-l: 72.9411764706%;
+  -css-var-name(color, "success-4", ): hsl(141.8918918919deg, 69.1588785047%, 58.0392156863%);
+  -css-var-name(color, "success-4", )-h: 141.8918918919deg;
+  -css-var-name(color, "success-4", )-s: 69.1588785047%;
+  -css-var-name(color, "success-4", )-l: 58.0392156863%;
+  -css-var-name(color, "success-5", ): hsl(142.0858895706deg, 71.1790393013%, 44.9019607843%);
+  -css-var-name(color, "success-5", )-h: 142.0858895706deg;
+  -css-var-name(color, "success-5", )-s: 71.1790393013%;
+  -css-var-name(color, "success-5", )-l: 44.9019607843%;
+  -css-var-name(color, "success-6", ): hsl(141.8571428571deg, 76.0869565217%, 36.0784313725%);
+  -css-var-name(color, "success-6", )-h: 141.8571428571deg;
+  -css-var-name(color, "success-6", )-s: 76.0869565217%;
+  -css-var-name(color, "success-6", )-l: 36.0784313725%;
+  -css-var-name(color, "success-7", ): hsl(142.0754716981deg, 71.6216216216%, 29.0196078431%);
+  -css-var-name(color, "success-7", )-h: 142.0754716981deg;
+  -css-var-name(color, "success-7", )-s: 71.6216216216%;
+  -css-var-name(color, "success-7", )-l: 29.0196078431%;
+  -css-var-name(color, "success-8", ): hsl(143.0769230769deg, 63.9344262295%, 23.9215686275%);
+  -css-var-name(color, "success-8", )-h: 143.0769230769deg;
+  -css-var-name(color, "success-8", )-s: 63.9344262295%;
+  -css-var-name(color, "success-8", )-l: 23.9215686275%;
+  -css-var-name(color, "success-9", ): hsl(144.1935483871deg, 60.7843137255%, 20%);
+  -css-var-name(color, "success-9", )-h: 144.1935483871deg;
+  -css-var-name(color, "success-9", )-s: 60.7843137255%;
+  -css-var-name(color, "success-9", )-l: 20%;
+  -css-var-name(color, "info-0", ): hsl(216deg, 100%, 97.0588235294%);
+  -css-var-name(color, "info-0", )-h: 216deg;
+  -css-var-name(color, "info-0", )-s: 100%;
+  -css-var-name(color, "info-0", )-l: 97.0588235294%;
+  -css-var-name(color, "info-1", ): hsl(213.5294117647deg, 94.4444444444%, 92.9411764706%);
+  -css-var-name(color, "info-1", )-h: 213.5294117647deg;
+  -css-var-name(color, "info-1", )-s: 94.4444444444%;
+  -css-var-name(color, "info-1", )-l: 92.9411764706%;
+  -css-var-name(color, "info-2", ): hsl(212.8125deg, 96.9696969697%, 87.0588235294%);
+  -css-var-name(color, "info-2", )-h: 212.8125deg;
+  -css-var-name(color, "info-2", )-s: 96.9696969697%;
+  -css-var-name(color, "info-2", )-l: 87.0588235294%;
+  -css-var-name(color, "info-3", ): hsl(212.2222222222deg, 96.4285714286%, 78.0392156863%);
+  -css-var-name(color, "info-3", )-h: 212.2222222222deg;
+  -css-var-name(color, "info-3", )-s: 96.4285714286%;
+  -css-var-name(color, "info-3", )-l: 78.0392156863%;
+  -css-var-name(color, "info-4", ): hsl(212.9411764706deg, 93.8650306748%, 68.0392156863%);
+  -css-var-name(color, "info-4", )-h: 212.9411764706deg;
+  -css-var-name(color, "info-4", )-s: 93.8650306748%;
+  -css-var-name(color, "info-4", )-l: 68.0392156863%;
+  -css-var-name(color, "info-5", ): hsl(217.0967741935deg, 91.1764705882%, 60%);
+  -css-var-name(color, "info-5", )-h: 217.0967741935deg;
+  -css-var-name(color, "info-5", )-s: 91.1764705882%;
+  -css-var-name(color, "info-5", )-l: 60%;
+  -css-var-name(color, "info-6", ): hsl(221.0050251256deg, 83.2635983264%, 53.137254902%);
+  -css-var-name(color, "info-6", )-h: 221.0050251256deg;
+  -css-var-name(color, "info-6", )-s: 83.2635983264%;
+  -css-var-name(color, "info-6", )-l: 53.137254902%;
+  -css-var-name(color, "info-7", ): hsl(223.8709677419deg, 76.2295081967%, 47.8431372549%);
+  -css-var-name(color, "info-7", )-h: 223.8709677419deg;
+  -css-var-name(color, "info-7", )-s: 76.2295081967%;
+  -css-var-name(color, "info-7", )-l: 47.8431372549%;
+  -css-var-name(color, "info-8", ): hsl(226.25deg, 70.5882352941%, 40%);
+  -css-var-name(color, "info-8", )-h: 226.25deg;
+  -css-var-name(color, "info-8", )-s: 70.5882352941%;
+  -css-var-name(color, "info-8", )-l: 40%;
+  -css-var-name(color, "info-9", ): hsl(223.8888888889deg, 64.2857142857%, 32.9411764706%);
+  -css-var-name(color, "info-9", )-h: 223.8888888889deg;
+  -css-var-name(color, "info-9", )-s: 64.2857142857%;
+  -css-var-name(color, "info-9", )-l: 32.9411764706%;
+  -css-var-name(color, "warning-0", ): hsl(54.5454545455deg, 91.6666666667%, 95.2941176471%);
+  -css-var-name(color, "warning-0", )-h: 54.5454545455deg;
+  -css-var-name(color, "warning-0", )-s: 91.6666666667%;
+  -css-var-name(color, "warning-0", )-l: 95.2941176471%;
+  -css-var-name(color, "warning-1", ): hsl(54.9152542373deg, 96.7213114754%, 88.0392156863%);
+  -css-var-name(color, "warning-1", )-h: 54.9152542373deg;
+  -css-var-name(color, "warning-1", )-s: 96.7213114754%;
+  -css-var-name(color, "warning-1", )-l: 88.0392156863%;
+  -css-var-name(color, "warning-2", ): hsl(52.7586206897deg, 98.3050847458%, 76.862745098%);
+  -css-var-name(color, "warning-2", )-h: 52.7586206897deg;
+  -css-var-name(color, "warning-2", )-s: 98.3050847458%;
+  -css-var-name(color, "warning-2", )-l: 76.862745098%;
+  -css-var-name(color, "warning-3", ): hsl(50.4395604396deg, 97.8494623656%, 63.5294117647%);
+  -css-var-name(color, "warning-3", )-h: 50.4395604396deg;
+  -css-var-name(color, "warning-3", )-s: 97.8494623656%;
+  -css-var-name(color, "warning-3", )-l: 63.5294117647%;
+  -css-var-name(color, "warning-4", ): hsl(47.9475982533deg, 95.8158995816%, 53.137254902%);
+  -css-var-name(color, "warning-4", )-h: 47.9475982533deg;
+  -css-var-name(color, "warning-4", )-s: 95.8158995816%;
+  -css-var-name(color, "warning-4", )-l: 53.137254902%;
+  -css-var-name(color, "warning-5", ): hsl(45.3982300885deg, 93.3884297521%, 47.4509803922%);
+  -css-var-name(color, "warning-5", )-h: 45.3982300885deg;
+  -css-var-name(color, "warning-5", )-s: 93.3884297521%;
+  -css-var-name(color, "warning-5", )-l: 47.4509803922%;
+  -css-var-name(color, "warning-6", ): hsl(40.6060606061deg, 96.1165048544%, 40.3921568627%);
+  -css-var-name(color, "warning-6", )-h: 40.6060606061deg;
+  -css-var-name(color, "warning-6", )-s: 96.1165048544%;
+  -css-var-name(color, "warning-6", )-l: 40.3921568627%;
+  -css-var-name(color, "warning-7", ): hsl(35.4545454545deg, 91.6666666667%, 32.9411764706%);
+  -css-var-name(color, "warning-7", )-h: 35.4545454545deg;
+  -css-var-name(color, "warning-7", )-s: 91.6666666667%;
+  -css-var-name(color, "warning-7", )-l: 32.9411764706%;
+  -css-var-name(color, "warning-8", ): hsl(31.7647058824deg, 80.9523809524%, 28.8235294118%);
+  -css-var-name(color, "warning-8", )-h: 31.7647058824deg;
+  -css-var-name(color, "warning-8", )-s: 80.9523809524%;
+  -css-var-name(color, "warning-8", )-l: 28.8235294118%;
+  -css-var-name(color, "warning-9", ): hsl(28.4210526316deg, 72.5190839695%, 25.6862745098%);
+  -css-var-name(color, "warning-9", )-h: 28.4210526316deg;
+  -css-var-name(color, "warning-9", )-s: 72.5190839695%;
+  -css-var-name(color, "warning-9", )-l: 25.6862745098%;
+  -css-var-name(color, "danger-0", ): hsl(0deg, 86.6666666667%, 97.0588235294%);
+  -css-var-name(color, "danger-0", )-h: 0deg;
+  -css-var-name(color, "danger-0", )-s: 86.6666666667%;
+  -css-var-name(color, "danger-0", )-l: 97.0588235294%;
+  -css-var-name(color, "danger-1", ): hsl(0deg, 93.5483870968%, 93.9215686275%);
+  -css-var-name(color, "danger-1", )-h: 0deg;
+  -css-var-name(color, "danger-1", )-s: 93.5483870968%;
+  -css-var-name(color, "danger-1", )-l: 93.9215686275%;
+  -css-var-name(color, "danger-2", ): hsl(0deg, 96.4285714286%, 89.0196078431%);
+  -css-var-name(color, "danger-2", )-h: 0deg;
+  -css-var-name(color, "danger-2", )-s: 96.4285714286%;
+  -css-var-name(color, "danger-2", )-l: 89.0196078431%;
+  -css-var-name(color, "danger-3", ): hsl(0deg, 93.4782608696%, 81.9607843137%);
+  -css-var-name(color, "danger-3", )-h: 0deg;
+  -css-var-name(color, "danger-3", )-s: 93.4782608696%;
+  -css-var-name(color, "danger-3", )-l: 81.9607843137%;
+  -css-var-name(color, "danger-4", ): hsl(0deg, 90.5405405405%, 70.9803921569%);
+  -css-var-name(color, "danger-4", )-h: 0deg;
+  -css-var-name(color, "danger-4", )-s: 90.5405405405%;
+  -css-var-name(color, "danger-4", )-l: 70.9803921569%;
+  -css-var-name(color, "danger-5", ): hsl(0deg, 84.3137254902%, 60%);
+  -css-var-name(color, "danger-5", )-h: 0deg;
+  -css-var-name(color, "danger-5", )-s: 84.3137254902%;
+  -css-var-name(color, "danger-5", )-l: 60%;
+  -css-var-name(color, "danger-6", ): hsl(0deg, 72%, 50.9803921569%);
+  -css-var-name(color, "danger-6", )-h: 0deg;
+  -css-var-name(color, "danger-6", )-s: 72%;
+  -css-var-name(color, "danger-6", )-l: 50.9803921569%;
+  -css-var-name(color, "danger-7", ): hsl(0deg, 73.8317757009%, 41.9607843137%);
+  -css-var-name(color, "danger-7", )-h: 0deg;
+  -css-var-name(color, "danger-7", )-s: 73.8317757009%;
+  -css-var-name(color, "danger-7", )-l: 41.9607843137%;
+  -css-var-name(color, "danger-8", ): hsl(0deg, 69.8324022346%, 35.0980392157%);
+  -css-var-name(color, "danger-8", )-h: 0deg;
+  -css-var-name(color, "danger-8", )-s: 69.8324022346%;
+  -css-var-name(color, "danger-8", )-l: 35.0980392157%;
+  -css-var-name(color, "danger-9", ): hsl(0deg, 63.2911392405%, 30.9803921569%);
+  -css-var-name(color, "danger-9", )-h: 0deg;
+  -css-var-name(color, "danger-9", )-s: 63.2911392405%;
+  -css-var-name(color, "danger-9", )-l: 30.9803921569%;
   /*! purgecss end ignore */
 }

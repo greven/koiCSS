@@ -3,8 +3,24 @@
 // --------------------------------
 
 @use 'sass:list';
+@use 'sass:meta';
 
+@use '../config/internal' as *;
 @use '../helpers/color' as *;
+@use 'output' as *;
+
+// --------------------------------
+//   Functions
+// --------------------------------
+
+@function _css-color-var($name, $shade: null, $alpha: 1) {
+  $var-name: if($shade, #{$color-prefix}-#{$name}-#{$shade}, #{$color-prefix}-#{$name});
+  @return hsl(css-var(#{$var-name}-h), css-var(#{$var-name}-s), css-var(#{$var-name}-l), $alpha);
+}
+
+// --------------------------------
+//   Mixins
+// --------------------------------
 
 @mixin hsl-color-custom-prop($name, $value) {
   $hsl: hsl-parts($value);
@@ -13,4 +29,18 @@
   #{$name}-h: list.nth($hsl, 1);
   #{$name}-s: list.nth($hsl, 2);
   #{$name}-l: list.nth($hsl, 3);
+}
+
+// Output a CSS custom property (CSS var) color definition
+@mixin color-custom-prop($property, $color-name: null, $value, $suffix: null) {
+  @if meta.type-of($value) == 'color' {
+    $var-name: #{-css-var-name($property, $color-name, $suffix)};
+    @include hsl-color-custom-prop($var-name, $value);
+  } @else {
+    @each $shade, $shade-value in $value {
+      $key: if($color-name and $shade, '#{$color-name}-#{$shade}', $shade);
+      $var-name: #{-css-var-name($property, $key, $suffix)};
+      @include hsl-color-custom-prop($var-name, $shade-value);
+    }
+  }
 }

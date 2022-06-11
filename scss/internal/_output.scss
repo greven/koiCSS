@@ -7,7 +7,6 @@
 
 @use '../config' as *;
 @use '../helpers/string' as *;
-@use 'color' as *;
 
 // --------------------------------
 //   Functions
@@ -47,18 +46,4 @@
 @mixin custom-prop($property, $key, $value) {
   $value: if(meta.type-of($value) == 'string', string.unquote($value), $value);
   #{-css-var-name($property, $key)}: $value;
-}
-
-// Output a CSS custom property (CSS var) color definition
-@mixin color-custom-prop($property, $color-name: null, $value, $suffix: null) {
-  @if meta.type-of($value) == 'color' {
-    $var-name: #{-css-var-name($property, $color-name, $suffix)};
-    @include hsl-color-custom-prop($var-name, $value);
-  } @else {
-    @each $shade, $shade-value in $value {
-      $key: if($color-name and $shade, '#{$color-name}-#{$shade}', $shade);
-      $var-name: #{-css-var-name($property, $key, $suffix)};
-      @include hsl-color-custom-prop($var-name, $shade-value);
-    }
-  }
 }
