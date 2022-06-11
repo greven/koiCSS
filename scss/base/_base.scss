@@ -2,19 +2,12 @@
 //   Base Styles
 // --------------------------------
 
-@use '../core' as *;
+@use '../config' as *;
 @use 'reset';
 @use 'default';
-@use 'animation';
 @use 'color';
-@use 'delay';
-@use 'duration';
-@use 'shadow';
-@use 'timing';
-@use 'typography';
 
 @mixin styles {
-  // Reset
   @if config(use-reset-styles) {
     @include reset.styles();
   }
@@ -26,16 +19,7 @@
 
   @if config(use-css-variables) {
     :root {
-      @include animation.vars;
       @include color.vars;
-      @include delay.vars;
-      @include duration.vars;
-      @include shadow.vars;
-      @include timing.vars;
-      // @include typography.vars;
     }
   }
-
-  @include animation.styles;
-  // @include typography.styles;
 }

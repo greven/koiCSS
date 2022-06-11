@@ -2,10 +2,10 @@
 @use 'sass:list';
 @use 'sass:color';
 
-@forward 'config';
+// @forward 'config';
 @use 'koi';
 
-@include koi.theme();
+// @include koi.theme();
 @include koi.base();
 
 // << Insert your base styles here >>
@@ -13,76 +13,18 @@
 // @include koi.font-face('Tobias Light', 'fonts/Tobias-Light', $family: Tobias, $weight: 300);
 
 body {
-  // @include koi.container($padding: true, $center: true);
-  // @include koi.responsive-margin-block;
-  background-color: koi.fill(surface, 1);
-  color: koi.fill(text, 1);
+  padding: 32px;
 }
 
-h1 {
-  @include koi.text-size(4xl);
-  font-family: koi.font-family(heading);
-  color: koi.accent(5);
-  // color: koi.change-alpha(koi.accent(5), 1);
-}
-
-.wrapper {
-  @include koi.box($padding: true, $rounded: true, $shadow: true);
-  @include koi.responsive-margin-block;
-  @include koi.transition-colors;
-  // @include koi.transition(background);
-  background-color: koi.fill(surface, 2);
-  border: 2px solid koi.fill(gray);
-  border-radius: koi.radius(2xl);
-
-  &:hover {
-    background-color: koi.fill(surface, 3);
-    border-color: koi.fill(accent, 5);
-    // border-color: koi.accent(5);
-  }
-}
-
-.stacker {
-  @include koi.margin-top(lg);
-  @include koi.stack(column);
-
-  @include koi.mq(md) {
-    @include koi.stack(row);
-  }
-}
-
-.box-0 {
-  background-color: koi.fill(primary, 0);
-}
-.box-1 {
-  background-color: koi.fill(primary, 1);
-}
-.box-2 {
-  background-color: koi.fill(primary, 2);
-}
-.box-3 {
-  background-color: koi.fill(primary, 3);
-}
-.box-4 {
-  background-color: koi.fill(primary, 4);
-}
-.box-5 {
-  background-color: koi.fill(primary, 5);
-}
-.box-6 {
-  background-color: koi.fill(primary, 6);
-}
-.box-7 {
-  background-color: koi.fill(primary, 7);
-}
-.box-8 {
-  background-color: koi.fill(primary, 8);
-}
-.box-9 {
-  background-color: koi.fill(primary, 9);
-}
-
-.even-columns {
-  @include koi.even-columns(250px);
-  margin-top: koi.spacing(md);
+.a {
+  margin: 32px 0;
+  width: 82px;
+  height: 82px;
+  border-radius: 8px;
+  // background-color: var(--color-success-6);
+  // background-color: hsl(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.5);
+  // background-color: koi.fill(black);
+  // background-color: koi.fill(black, $alpha: 0.5);
+  // background-color: koi.color(black);
+  background-color: koi.color(black, $alpha: 0.5);
 }

@@ -1,76 +1,50 @@
 // --------------------------------------
-//   Theme vars
+//   Theme Map Generation (vars)
 // --------------------------------------
 
 @use 'sass:map';
 
-@use '../config' as *;
 @use '../tokens' as *;
-@use 'color' as *;
 
-$colors: map.get($tokens, colors);
+// ---- Colors ----
 
-$primary: create-theme-color(#dc2626);
-$neutral: create-theme-color(#2e3235);
-
-$schemes: (
-  light: (
-    surface: (
-      1: map.get($colors, gray, 1),
-      2: map.get($colors, white),
-      3: map.get($colors, gray, 2),
-      4: map.get($colors, gray, 3),
-    ),
-    text: (
-      1: map.get($colors, gray, 9),
-      2: map.get($colors, gray, 6),
-      3: map.get($colors, gray, 4),
-      4: map.get($colors, gray, 3),
-    ),
-    code-bg: map.get($colors, gray, 9),
-    code-text: map.get($colors, gray, 1),
-    quote-text: map.get($colors, gray, 8),
-    quote-border: map.get($primary, 6),
-  ),
-  dark: (
-    surface: (
-      1: map.get($colors, gray, 9),
-      2: map.get($colors, gray, 8),
-      3: map.get($colors, gray, 7),
-      4: map.get($colors, gray, 6),
-    ),
-    text: (
-      1: map.get($colors, gray, 0),
-      2: map.get($colors, gray, 3),
-      3: map.get($colors, gray, 5),
-      4: map.get($colors, gray, 6),
-    ),
-    code-bg: map.get($colors, black),
-    code-text: map.get($colors, gray, 1),
-    quote-text: map.get($colors, gray, 1),
-    quote-border: map.get($primary, 6),
-  ),
-) !default;
-
-$theme-colors: (
-  colors: (
-    primary: $primary,
-    // secondary: $secondary
-    neutral: $neutral,
-    success: map.get($colors, green),
-    info: map.get($colors, blue),
-    warning: map.get($colors, yellow),
-    danger: map.get($colors, red),
-  ),
+// TODO: Generate primary, secondary and neutral shades from base color
+$colors: (
+  // primary: $primary,
+  // secondary: $secondary,
+  // neutral: $neutral,
+  white: map.get($colors, white),
+  black: map.get($colors, black),
+  gray: map.get($colors, gray),
+  success: map.get($colors, green),
+  info: map.get($colors, blue),
+  warning: map.get($colors, yellow),
+  danger: map.get($colors, red)
 );
 
-$base: map.deep-merge($tokens, $theme-colors);
+// ---- Theme ----
 
-$default-theme: map.merge(
-  $base,
-  (
-    color-schemes: $schemes,
-  )
+$default-theme: (
+  aspect: $aspect,
+  blur: $blur,
+  radius: $radius,
+  delay: $delay,
+  duration: $duration,
+  keyframes: $keyframes,
+  layer: $layer,
+  opacity: $opacity,
+  screens: $screens,
+  shadow: $shadow,
+  spacing: $spacing,
+  sizes: $sizes,
+  timing: $timing,
+  font-family: $font-family,
+  font-size: $font-size,
+  font-weight: $font-weight,
+  leading: $leading,
+  tracking: $tracking,
+  colors: $colors,
+  gradients: $gradients,
 );
 
 $theme: () !default;

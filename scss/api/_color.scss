@@ -1,0 +1,35 @@
+@use '../config' as *;
+@use '../config/internal' as *;
+@use '../internal/output' as *;
+@use '../helpers/color' as *;
+@use '../theme/helpers' as *;
+
+$_default-shade: config(fallbacks, colors);
+// $_default-accent: config(fallbacks, accent);
+
+@function _css-color-var($name, $shade: null, $alpha: 1) {
+  $var-name: if($shade, #{$color-prefix}-#{$name}-#{$shade}, #{$color-prefix}-#{$name});
+  @return hsl(css-var(#{$var-name}-h), css-var(#{$var-name}-s), css-var(#{$var-name}-l), $alpha);
+}
+
+// Return a HSL theme color as a CSS var
+@function fill($name, $shade: $_default-shade, $alpha: 1) {
+  @if is-theme-color($name, $shade) {
+    @return _css-color-var($name, $shade, $alpha);
+  } @else if is-theme-color($name) {
+    @return _css-color-var($name, $alpha: $alpha);
+  } @else {
+    @error "Color #{$name} or #{$name}-#{$shade} not found in theme.";
+  }
+}
+
+// Return an RGB theme color value
+@function color($name, $shade: $_default-shade, $alpha: 1) {
+  @if is-theme-color($name, $shade) {
+    @return to-rgb(theme(colors, $name, $shade), $alpha);
+  } @else if is-theme-color($name) {
+    @return to-rgb(theme(colors, $name), $alpha);
+  } @else {
+    @error "Color #{$name} or #{$name}-#{$shade} not found in theme.";
+  }
+}

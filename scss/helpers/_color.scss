@@ -1,0 +1,106 @@
+// --------------------------------
+//   Color Helpers
+// --------------------------------
+
+@use 'sass:color';
+@use 'sass:math';
+@use 'sass:meta';
+
+// Convert color to hsl
+@function to-hsl($color, $alpha: 1) {
+  @if type-of($color) == 'color' {
+    @return hsl(color.hue($color), color.saturation($color), color.lightness($color), $alpha);
+  } @else {
+    @error "#{$color} is not a valid color object!";
+  }
+}
+
+// Returns an HSL triplet as hue saturation lightness
+@function hsl-parts($color) {
+  @if type-of($color) == 'color' {
+    @return color.hue($color) color.saturation($color) color.lightness($color);
+  } @else {
+    @error "#{$color} is not a valid color object!";
+  }
+}
+
+// Convert color to rgb
+@function to-rgb($color, $alpha: 1) {
+  @if type-of($color) == 'color' {
+    @return rgb(color.red($color), color.green($color), color.blue($color), $alpha);
+  } @else {
+    @error "#{$color} is not a valid color object!";
+  }
+}
+
+@function _linear-channel-value($channel-value) {
+  $normalized-value: math.div($channel-value, 255);
+  @if $normalized-value < 0.03928 {
+    @return math.div($normalized-value, 12.92);
+  }
+
+  @return math.pow(math.div($normalized-value + 0.055, 1.055), 2.4);
+}
+
+// Get the relative luminance of the color.
+// http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
+@function luminance($color) {
+  @if meta.type-of($color) == 'color' {
+    $red: _linear-channel-value(color.red($color));
+    $green: _linear-channel-value(color.green($color));
+    $blue: _linear-channel-value(color.blue($color));
+
+    @return (0.2126 * $red) + (0.7152 * $green) + (0.0722 * $blue);
+  } @else {
+    @error "#{$color} is not a valid color object!";
+  }
+}
+
+// Color contrast between 2 colors
+// defined by (WCAG Version 2).
+@function contrast($bg-color, $fg-color) {
+  $bg-lum: luminance($bg-color) + 0.05;
+  $fg-lum: luminance($fg-color) + 0.05;
+
+  @return math.div(math.max($bg-lum, $fg-lum), math.min($bg-lum, $fg-lum));
+}
+
+// Determine whether the color is 'light' or 'dark'.
+// Source: Material Components
+@function tone($color) {
+  @if meta.type-of($color) != 'color' {
+    @warn '#{$color} is not a color object. Falling back to "dark" tone.';
+    @return 'dark';
+  }
+
+  $minimum-contrast: 3.1;
+
+  $light-contrast: contrast($color, white);
+  $dark-contrast: contrast($color, rgb(black 0.87));
+
+  @if ($light-contrast < $minimum-contrast) and ($dark-contrast > $light-contrast) {
+    @return 'light';
+  } @else {
+    @return 'dark';
+  }
+}
+
+// Checks if a color meets the Web Content Accessibility following
+// the WCAG (Version 2.0) guidelines for constract ratio.
+
+// The 'level' arg can be either 'AA' or 'AAA', it defaults to 'AA'.
+// The 'size' arg can be either 'large' or 'small', it defaults to 'small'.
+@function is-color-accessible($fg-color, $bg-color, $level: 'AA', $size: 'small') {
+  $contrast: contrast($fg-color, $bg-color);
+
+  @if $level + $size == 'AAsmall' or $level + $size == 'AAAlarge' {
+    @return $contrast >= 4.5;
+  } @else {
+    @if $level + $size == 'AAlarge' {
+      @return $contrast >= 3;
+    }
+    @if $level + $size == 'AAAsmall' {
+      @return $contrast >= 7;
+    }
+  }
+}

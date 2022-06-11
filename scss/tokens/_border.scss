@@ -2,7 +2,7 @@
 //   Border
 // --------------------------------
 
-@use '../core/helpers/unit' as *;
+@use '../helpers/unit' as *;
 
 $radius: (
   xs: px-to-rem(2),

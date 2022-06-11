@@ -1,15 +1,6 @@
 // ------------------------------------
-//   Theming (dark, light theme colors)
+//   Theming support
 // ------------------------------------
 
-@forward 'mixins' show create-themes;
-@forward 'color' show create-theme-color;
-@forward 'vars' show $theme;
-
-@use 'vars';
-@use 'mixins' as *;
-
-// Output
-@mixin theme {
-  @include create-themes(vars.$schemes);
-}
+@forward 'helpers';
+@forward 'vars';

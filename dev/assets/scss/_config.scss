@@ -1,18 +1,18 @@
 // Your custom KoiCSS overwrites
 
 @use 'koi' with (
-  $config: (
-    // prefix: 'koi',
-    spacer: 1rem,
-  ),
-  $theme: (
-    // colors: (),
-    font-family:
-      (
-        heading: (
-          'Lato',
-          sans-serif,
-        )
-      ),
-  )
+  // $config: (
+  //   // prefix: 'koi',
+  //   spacer: 1rem,
+  // ),
+  // $theme: (
+  //   colors: (),
+  //   font-family:
+  //     (
+  //       heading: (
+  //         'Lato',
+  //         sans-serif,
+  //       )
+  //     ),
+  // )
 );

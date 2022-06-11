@@ -1,0 +1,16 @@
+// --------------------------------
+//   Internal Color Helpers
+// --------------------------------
+
+@use 'sass:list';
+
+@use '../helpers/color' as *;
+
+@mixin hsl-color-custom-prop($name, $value) {
+  $hsl: hsl-parts($value);
+
+  #{$name}: to-hsl($value);
+  #{$name}-h: list.nth($hsl, 1);
+  #{$name}-s: list.nth($hsl, 2);
+  #{$name}-l: list.nth($hsl, 3);
+}

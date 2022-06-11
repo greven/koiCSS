@@ -3,7 +3,8 @@
 // --------------------------------
 
 @use '../config/internal' as *;
-@use '../core' as *;
+@use '../generators/props' as *;
+@use '../theme' as *;
 
 // --------------------------------
 //   CSS Custom Properties
