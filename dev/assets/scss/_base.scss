@@ -16,11 +16,16 @@ body {
   padding: 32px;
 }
 
-.a {
+.a,
+.b,
+.c {
   margin: 32px 0;
   width: 82px;
   height: 82px;
   border-radius: 8px;
+}
+
+.a {
   // background-color: var(--color-success-6);
   // background-color: hsl(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.5);
   // background-color: koi.fill(black);
@@ -28,5 +33,14 @@ body {
   // background-color: koi.color(black);
   // background-color: koi.color(black, $alpha: 0.5);
   // background-color: koi.color(success, 6, 0.9);
+  // background-color: koi.fill(success, 6);
   background-color: koi.fill(success, 6);
+}
+
+.b {
+  background-color: koi.fill(success, 6, $saturation: -50%);
+}
+
+.c {
+  background-color: koi.fill(success, 6, $saturation: 50%, $lightness: 50%);
 }

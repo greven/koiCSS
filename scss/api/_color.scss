@@ -7,17 +7,31 @@ $_default-shade: config(fallbacks, colors);
 // $_default-accent: config(fallbacks, accent);
 
 // Return a HSL theme color as a CSS var (run time)
-@function fill($name, $shade: $_default-shade, $alpha: 1) {
+// @function fill($name, $shade: $_default-shade, $alpha: 1) {
+//   @if is-theme-color($name, $shade) {
+//     @return css-color-var($name, $shade, $alpha);
+//   } @else if is-theme-color($name) {
+//     @return css-color-var($name, $alpha: $alpha);
+//   } @else {
+//     @error "Color #{$name} or #{$name}-#{$shade} not found in theme.";
+//   }
+// }
+
+@function fill($name, $shade: $_default-shade, $alpha: 1, $saturation: null, $lightness: null, $complement: false) {
   @if is-theme-color($name, $shade) {
-    @return css-color-var($name, $shade, $alpha);
+    @return hsl-color-var($name, $shade, $alpha, $saturation, $lightness, $complement);
   } @else if is-theme-color($name) {
-    @return css-color-var($name, $alpha: $alpha);
+    @return hsl-color-var(
+      $name,
+      $alpha: $alpha,
+      $saturation: $saturation,
+      $lightness: $lightness,
+      $complement: $complement
+    );
   } @else {
     @error "Color #{$name} or #{$name}-#{$shade} not found in theme.";
   }
 }
-
-// @function
 
 // Return an RGB theme color value (compile time)
 @function color($name, $shade: $_default-shade, $alpha: 1) {

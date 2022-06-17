@@ -15,7 +15,7 @@
   }
 }
 
-// Returns an HSL triplet as hue saturation lightness
+// Returns the HSL channels triplet (hue saturation lightness)
 @function hsl-parts($color) {
   @if type-of($color) == 'color' {
     @return color.hue($color) color.saturation($color) color.lightness($color);
