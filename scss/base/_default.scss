@@ -8,10 +8,10 @@
 
   body {
     @include smooth-font;
+    color: fill(text, 1);
     font-family: font(sans);
     font-size: font(md);
     font-weight: font(normal);
-    color: fill(text, 1);
   }
 
   sub,
