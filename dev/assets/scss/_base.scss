@@ -18,7 +18,8 @@ body {
 
 .a,
 .b,
-.c {
+.c,
+.d {
   margin: 32px 0;
   width: 82px;
   height: 82px;
@@ -26,15 +27,10 @@ body {
 }
 
 .a {
+  background-color: hsl(var(--color-success-6-h), var(--color-success-6-s), var(--color-success-6-l), 0.95);
   // background-color: var(--color-success-6);
-  // background-color: hsl(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.5);
-  // background-color: koi.fill(black);
   // background-color: koi.fill(black, $alpha: 0.5);
-  // background-color: koi.color(black);
-  // background-color: koi.color(black, $alpha: 0.5);
-  // background-color: koi.color(success, 6, 0.9);
   // background-color: koi.fill(success, 6);
-  background-color: koi.fill(success, 6);
 }
 
 .b {
@@ -43,4 +39,9 @@ body {
 
 .c {
   background-color: koi.fill(success, 6, $saturation: 50%, $lightness: 50%);
+}
+
+.d {
+  background-color: color.scale(koi.color(warning, 6, 0.9), $lightness: 5%);
+  // background-color: koi.fill(primary, 6);
 }

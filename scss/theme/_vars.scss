@@ -5,14 +5,15 @@
 @use 'sass:map';
 
 @use '../tokens' as *;
+@use 'color' as *;
 
 // ---- Colors ----
 
 // TODO: Generate primary, secondary and neutral shades from base color
 $colors: (
-  // primary: $primary,
-  // secondary: $secondary,
-  // neutral: $neutral,
+  // primary: create-theme-color(#dc2626),
+  // secondary: create-theme-color(#7c3aed),
+  // neutral: create-theme-color(#2e3235),
   white: map.get($colors, white),
   black: map.get($colors, black),
   gray: map.get($colors, gray),

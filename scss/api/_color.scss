@@ -6,17 +6,6 @@
 $_default-shade: config(fallbacks, colors);
 // $_default-accent: config(fallbacks, accent);
 
-// Return a HSL theme color as a CSS var (run time)
-// @function fill($name, $shade: $_default-shade, $alpha: 1) {
-//   @if is-theme-color($name, $shade) {
-//     @return css-color-var($name, $shade, $alpha);
-//   } @else if is-theme-color($name) {
-//     @return css-color-var($name, $alpha: $alpha);
-//   } @else {
-//     @error "Color #{$name} or #{$name}-#{$shade} not found in theme.";
-//   }
-// }
-
 @function fill($name, $shade: $_default-shade, $alpha: 1, $saturation: null, $lightness: null, $complement: false) {
   @if is-theme-color($name, $shade) {
     @return hsl-color-var($name, $shade, $alpha, $saturation, $lightness, $complement);
