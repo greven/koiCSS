@@ -1,16 +1,17 @@
 @use '../api/' as *;
 
 @mixin styles {
-  // ::selection {
-  //   background: accent(5);
-  //   color: #fff;
-  // }
+  ::selection {
+    background: fill(primary, 5);
+    color: #fff;
+  }
 
   body {
     @include smooth-font;
     font-family: font(sans);
     font-size: font(md);
     font-weight: font(normal);
+    color: fill(text, 1);
   }
 
   sub,
@@ -38,8 +39,8 @@
   pre {
     @include responsive-padding;
     @include rounded;
-    // background-color: fill(code-bg);
-    // color: fill(code-text);
+    background-color: var(--koi-color-code-bg, fill(black));
+    color: fill(gray, 0);
     overflow-x: auto;
     position: relative;
   }
@@ -54,9 +55,9 @@
   }
 
   blockquote {
-    // border-left-color: fill(quote-border);
+    border-left-color: var(--koi-color-quote-border, fill(primary));
     border-left-width: 0.25rem;
-    // color: fill(quote-text);
+    color: var(--koi-color-quote-text, fill(text, 1));
     font-style: italic;
     font-weight: font(medium);
     margin-bottom: 1.6em;
@@ -82,8 +83,8 @@
   }
 
   a {
-    // border-bottom: 1px solid accent(5);
-    // color: fill(text, 1);
+    border-bottom: 1px solid fill(primary, 5);
+    color: fill(text, 1);
     font-weight: font(medium);
     text-decoration: none;
     transition: all 50ms linear;

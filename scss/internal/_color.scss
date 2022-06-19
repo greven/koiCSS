@@ -14,14 +14,28 @@
 //   Functions
 // --------------------------------
 
-// @function css-color-var($name, $shade: null, $alpha: 1) {
-//   $hsl-parts: css-color-var-parts($name, $shade);
-//   @return hsl(list.nth($hsl-parts, 1), list.nth($hsl-parts, 2), list.nth($hsl-parts, 3), $alpha);
-// }
-
 // Output a theme color as HSL with the channels as CSS custom props vars.
 // To adjust the color one can set its alpha, saturation and/or $lightness.
-@function hsl-color-var($name, $shade: null, $alpha: 1, $saturation: null, $lightness: null, $complement: false) {
+// If $complment is set to true, it will output the complment of the HSL color
+// If $invert is set to true, it will ouput in RGB format the inverted color but it won't allow any other adjustments.
+@function hsl-color-var(
+  $name,
+  $shade: null,
+  $alpha: 1,
+  $saturation: null,
+  $lightness: null,
+  $complement: false,
+  $invert: false
+) {
+  @if $invert {
+    $rgb-parts: rgb-color-var-parts($name, $shade);
+    $color-red: list.nth($rgb-parts, 1);
+    $color-green: list.nth($rgb-parts, 2);
+    $color-blue: list.nth($rgb-parts, 3);
+
+    @return rgb(calc(255 - $color-red), calc(255 - $color-green), calc(255 - $color-blue));
+  }
+
   $hsl-parts: hsl-color-var-parts($name, $shade);
   $color-hue: list.nth($hsl-parts, 1);
   $color-saturation: list.nth($hsl-parts, 2);
@@ -38,6 +52,12 @@
 @function hsl-color-var-parts($name, $shade: null) {
   $var-name: if($shade, #{$color-prefix}-#{$name}-#{$shade}, #{$color-prefix}-#{$name});
   @return css-var(#{$var-name}-h), css-var(#{$var-name}-s), css-var(#{$var-name}-l);
+}
+
+// Return the theme color css var RGB parts (channels)
+@function rgb-color-var-parts($name, $shade: null) {
+  $var-name: if($shade, #{$color-prefix}-#{$name}-#{$shade}, #{$color-prefix}-#{$name});
+  @return css-var(#{$var-name}-r), css-var(#{$var-name}-g), css-var(#{$var-name}-b);
 }
 
 @function _update-color-channel($current, $scale, $max) {
@@ -60,7 +80,7 @@
 // --------------------------------
 
 @mixin hsl-color-custom-prop($name, $value) {
-  $hsl: hsl-parts($value);
+  $hsl: hsl-channels($value);
 
   #{$name}: to-hsl($value);
   #{$name}-h: list.nth($hsl, 1);
@@ -68,16 +88,26 @@
   #{$name}-l: list.nth($hsl, 3);
 }
 
+@mixin rgb-color-custom-prop($name, $value) {
+  $rgb: rgb-channels($value);
+
+  #{$name}-r: list.nth($rgb, 1);
+  #{$name}-g: list.nth($rgb, 2);
+  #{$name}-b: list.nth($rgb, 3);
+}
+
 // Output a CSS custom property (CSS var) color definition
 @mixin color-custom-prop($property, $color-name: null, $value, $suffix: null) {
   @if meta.type-of($value) == 'color' {
     $var-name: #{css-var-name($property, $color-name, $suffix)};
     @include hsl-color-custom-prop($var-name, $value);
+    @include rgb-color-custom-prop($var-name, $value);
   } @else {
     @each $shade, $shade-value in $value {
       $key: if($color-name and $shade, '#{$color-name}-#{$shade}', $shade);
       $var-name: #{css-var-name($property, $key, $suffix)};
       @include hsl-color-custom-prop($var-name, $shade-value);
+      @include rgb-color-custom-prop($var-name, $shade-value);
     }
   }
 }

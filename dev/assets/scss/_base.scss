@@ -42,5 +42,6 @@ body {
 }
 
 .d {
-  background-color: koi.fill(primary, 6, $lightness: 35%, $saturation: -25%);
+  // background-color: koi.fill(primary, 6, $lightness: 35%, $saturation: -25%);
+  background-color: koi.fill(primary, 6, $invert: true);
 }
