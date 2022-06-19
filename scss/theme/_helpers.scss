@@ -29,3 +29,16 @@
 
   @return map.has-key($colors, $keys...) and (meta.type-of($value) == color);
 }
+
+// Checks if keys is a valid scheme color
+// (theme -> color-schemes)
+@function is-scheme-color($keys...) {
+  $color-schemes: theme(color-schemes);
+
+  @each $color-scheme, $values in $color-schemes {
+    @if map.has-key($values, $keys...) {
+      @return true;
+    }
+  }
+  @return false;
+}

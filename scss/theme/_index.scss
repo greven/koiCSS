@@ -3,4 +3,13 @@
 // ------------------------------------
 
 @forward 'helpers';
-@forward 'vars';
+@forward 'mixins' show create-themes, color-mode, light, dark;
+@forward 'vars' show $theme;
+
+@use 'vars';
+@use 'mixins' as *;
+
+// Output
+@mixin theme {
+  @include create-themes(vars.$schemes);
+}

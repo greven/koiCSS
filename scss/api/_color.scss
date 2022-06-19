@@ -7,7 +7,9 @@ $_default-shade: config(fallbacks, colors);
 // $_default-accent: config(fallbacks, accent);
 
 @function fill($name, $shade: $_default-shade, $alpha: 1, $saturation: null, $lightness: null, $complement: false) {
-  @if is-theme-color($name, $shade) {
+  @if is-scheme-color($name, $shade) {
+    @return hsl-color-var($name, $shade, $alpha, $saturation, $lightness, $complement);
+  } @else if is-theme-color($name, $shade) {
     @return hsl-color-var($name, $shade, $alpha, $saturation, $lightness, $complement);
   } @else if is-theme-color($name) {
     @return hsl-color-var(

@@ -45,7 +45,7 @@
   }
 
   code::before {
-    // color: fill(text, 4);
+    color: fill(text, 4);
     content: attr(data-lang);
     font-size: font(xs);
     position: absolute;

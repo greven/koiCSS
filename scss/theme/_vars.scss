@@ -5,22 +5,84 @@
 @use 'sass:map';
 
 @use '../tokens' as *;
-@use 'color' as *;
 
 // ---- Colors ----
 
-// TODO: Generate primary, secondary and neutral shades from base color
 $colors: (
-  // primary: create-theme-color(#dc2626),
-  // secondary: create-theme-color(#7c3aed),
-  // neutral: create-theme-color(#2e3235),
+  primary: (
+    0: #f0fdfa,
+    1: #ccfbf1,
+    2: #99f6e4,
+    3: #5eead4,
+    4: #2dd4bf,
+    5: #14b8a6,
+    6: #0d9488,
+    7: #0f766e,
+    8: #115e59,
+    9: #134e4a,
+  ),
+  secondary: (
+    0: #f5f3ff,
+    1: #ede9fe,
+    2: #ddd6fe,
+    3: #c4b5fd,
+    4: #a78bfa,
+    5: #8b5cf6,
+    6: #7c3aed,
+    7: #6d28d9,
+    8: #5b21b6,
+    9: #4c1d95,
+  ),
+  neutral: (
+    0: #f9fafb,
+    1: #f3f4f6,
+    2: #e5e7eb,
+    3: #d1d5db,
+    4: #9ca3af,
+    5: #6b7280,
+    6: #4b5563,
+    7: #374151,
+    8: #1f2937,
+    9: #111827,
+  ),
   white: map.get($colors, white),
   black: map.get($colors, black),
   gray: map.get($colors, gray),
   success: map.get($colors, green),
   info: map.get($colors, blue),
   warning: map.get($colors, yellow),
-  danger: map.get($colors, red)
+  danger: map.get($colors, red),
+);
+
+$schemes: (
+  light: (
+    surface: (
+      1: map.get($colors, gray, 1),
+      2: map.get($colors, white),
+      3: map.get($colors, gray, 2),
+      4: map.get($colors, gray, 3),
+    ),
+    text: (
+      1: map.get($colors, gray, 9),
+      2: map.get($colors, gray, 6),
+      3: map.get($colors, gray, 4),
+      4: map.get($colors, gray, 3),
+    ),
+  ),
+  dark: (
+    surface: (
+      1: map.get($colors, gray, 9),
+      2: map.get($colors, gray, 8),
+      3: map.get($colors, gray, 7),
+      4: map.get($colors, gray, 6),
+    ),
+    text: (
+      1: map.get($colors, gray, 0),
+      2: map.get($colors, gray, 3),
+      3: map.get($colors, gray, 5),
+      4: map.get($colors, gray, 6),
+    ),
+  ),
 );
 
 // ---- Theme ----
@@ -46,6 +108,7 @@ $default-theme: (
   tracking: $tracking,
   colors: $colors,
   gradients: $gradients,
+  color-schemes: $schemes,
 );
 
 $theme: () !default;
