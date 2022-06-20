@@ -55,7 +55,7 @@
   }
 
   blockquote {
-    border-left-color: var(--koi-color-quote-border, fill(primary));
+    border-left-color: accent(5);
     border-left-width: 0.25rem;
     color: var(--koi-color-quote-text, fill(text, 1));
     font-style: italic;

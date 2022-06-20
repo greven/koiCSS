@@ -1,10 +1,11 @@
 @use '../config' as *;
 @use '../internal/color' as *;
+@use '../internal/output' as *;
 @use '../helpers/color' as *;
 @use '../theme/helpers' as *;
 
 $_default-shade: config(fallbacks, colors);
-// $_default-accent: config(fallbacks, accent);
+$_default-accent: config(fallbacks, accent);
 
 @function fill(
   $name,
@@ -41,4 +42,9 @@ $_default-shade: config(fallbacks, colors);
   } @else {
     @error "Color #{$name} or #{$name}-#{$shade} not found in theme.";
   }
+}
+
+@function accent($shade: $-default-shade) {
+  $fallback-accent: theme(colors, $-default-accent, $shade);
+  @return css-var(accent-#{$shade}, $fallback-accent);
 }

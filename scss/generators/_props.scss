@@ -2,13 +2,24 @@
 //   CSS Custom Props Generators
 // ------------------------------------
 
+@use 'sass:list';
+
 @use '../internal/color' as *;
+
+$ignore-accent-colors: (white black);
 
 // Output a colors map as CSS custom properties
 @mixin generate-css-color-vars($colors-map: (), $property: null, $suffix: null) {
   /*! purgecss start ignore */
   @each $color-name, $value in $colors-map {
     @include color-custom-prop($property, $color-name, $value, $suffix);
+
+    // Accent colors utility classes
+    @if not list.index($ignore-accent-colors, $color-name) {
+      .accent-#{'' + $color-name} {
+        @include color-custom-prop(accent, null, $value, $suffix);
+      }
+    }
   }
   /*! purgecss end ignore */
 }
