@@ -1,13 +1,17 @@
-// ------------------------------------
-//   CSS Custom Props Generators
-// ------------------------------------
+// --------------------------------
+//   Generators
+// --------------------------------
 
 @use 'sass:list';
 
-@use '../internal/color' as *;
-@use '../internal/output' as *;
+@use 'color' as *;
+@use 'output' as *;
 
 $ignore-accent-colors: (white black);
+
+// --------------------------------
+// CSS Custom Props
+// --------------------------------
 
 // Generate CSS custom properties (vars) from theme property map.
 // Example:  @include generate-css-vars(theme(shadow), shadow);

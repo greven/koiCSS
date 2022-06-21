@@ -1,0 +1,49 @@
+// --------------------------------
+//   Settingd
+// --------------------------------
+
+@use 'sass:map';
+
+$_default-settings: (
+  prefix: '',
+  use-reset-styles: true,
+  use-css-variables: true,
+  use-default-styles: true,
+  use-utilities: false,
+  theme: (
+    default-color-scheme: light,
+  ),
+  typography: (
+    base-font-size: 16,
+    use-hyphens: true,
+  ),
+  layout: (
+    spacer: 1rem,
+    responsive-padding: (
+      value: 5%,
+      min: 0.75rem,
+      max: 1.5rem,
+    ),
+  ),
+  utilities: (
+    glue: ':',
+    use-important: false,
+  ),
+  fallbacks: (
+    accent: primary,
+    border-width: 1,
+    colors: 6,
+    duration: normal,
+    font-size: md,
+    font-weight: normal,
+    layer: base,
+    leading: normal,
+    radius: md,
+    shadow: md,
+    timing: ease,
+    tracking: normal,
+  ),
+);
+
+$settings: () !default;
+$settings: map.deep-merge($_default-settings, $settings);

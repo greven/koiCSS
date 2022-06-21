@@ -3,12 +3,13 @@
 // --------------------------------
 
 @use '../config' as *;
-@use '../theme' as *;
+@use 'theme' as *;
 
 // --------------------------------
 //   Values
 // --------------------------------
 
+// TODO: Use setting instead of config or import fallbacks directly from config to avoid cyclic redundency?
 $_default-duration: theme(duration, config(fallbacks, duration));
 $_default-timing-function: theme(timing, config(fallbacks, timing));
 

@@ -3,7 +3,7 @@
 // --------------------------------
 
 @use '../config' as *;
-@use '../theme' as *;
+@use 'theme' as *;
 
 $_default-radius: config(fallbacks, radius);
 
