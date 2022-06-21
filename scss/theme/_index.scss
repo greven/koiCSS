@@ -4,12 +4,12 @@
 
 @forward 'helpers';
 @forward 'mixins' show create-themes, color-mode, light, dark;
-@forward 'vars' show $theme;
 
-@use 'vars';
+@use '../config' as *;
+@use 'helpers' as *;
 @use 'mixins' as *;
 
 // Output
 @mixin theme {
-  @include create-themes(vars.$schemes);
+  @include create-themes(theme(color-schemes));
 }

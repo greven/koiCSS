@@ -1,0 +1,152 @@
+// ----------------------------------
+//   Animation and Transition Styles
+// ----------------------------------
+
+@use '../config/internal' as *;
+@use '../internal/output' as *;
+@use '../generators/props' as *;
+@use '../theme' as *;
+
+// --------------------------------
+//   Mixins
+// --------------------------------
+
+/// Blink animation
+///
+/// @param {number} $duration
+///
+@mixin blink($duration: 1s, $iteration-count: infinite) {
+  @include animation($name: blink, $duration: $duration, $iteration-count: $iteration-count);
+}
+
+/// Bounce animation
+///
+/// @param {number} $duration
+///
+@mixin bounce($duration: 1s, $iteration-count: infinite) {
+  @include animation($name: bounce, $duration: $duration, $iteration-count: $iteration-count);
+}
+
+/// Fade-in animation
+///
+/// @param {number} $duration
+///
+@mixin fade-in($duration: theme(duration, slower)) {
+  @include animation($name: fade-in, $duration: $duration, $timing-function: theme(timing, ease-in));
+}
+
+/// Fade-out animation
+///
+/// @param {number} $duration
+///
+@mixin fade-out($duration: theme(duration, slower)) {
+  @include animation($name: fade-out, $duration: $duration, $timing-function: theme(timing, ease-in));
+}
+
+/// Float animation
+///
+/// @param {number} $duration
+///
+@mixin float($duration: 1s, $iteration-count: infinite) {
+  @include animation(
+    $name: float,
+    $duration: $duration,
+    $timing-function: theme(timing, ease),
+    $iteration-count: $iteration-count
+  );
+}
+
+/// Ping animation
+///
+/// @param {number} $duration
+///
+@mixin ping($duration: 1s, $iteration-count: infinite) {
+  @include animation(
+    $name: ping,
+    $duration: $duration,
+    $timing-function: theme(timing, ease-out),
+    $iteration-count: $iteration-count
+  );
+}
+
+/// Pulse animation
+///
+/// @param {number} $duration
+///
+@mixin pulse($duration: 2s, $iteration-count: infinite) {
+  @include animation(
+    $name: pulse,
+    $duration: $duration,
+    $timing-function: cubic-bezier(0.4, 0, 0.6, 1),
+    $iteration-count: $iteration-count
+  );
+}
+
+/// Spin animation
+///
+/// @param {number} $duration
+///
+@mixin spin($duration: 1s, $iteration-count: infinite) {
+  @include animation($name: spin, $duration: $duration, $timing-function: linear, $iteration-count: $iteration-count);
+}
+
+/// Ring animation
+///
+/// @param {number} $duration
+///
+@mixin ring($duration: theme(duration, slower)) {
+  @include animation($name: ring, $duration: $duration);
+  transform-origin: top center;
+}
+
+@mixin generate-keyframes() {
+  /*! purgecss start ignore */
+  @each $keyframe-key, $keyframe-value in theme(keyframes) {
+    :root {
+      @keyframes #{$keyframe-key} {
+        @each $keyframe-timestamp, $keyframe-property in $keyframe-value {
+          #{$keyframe-timestamp} {
+            @each $keyframe-transform-property, $keyframe-property-value in $keyframe-property {
+              #{$keyframe-transform-property}: #{$keyframe-property-value};
+            }
+          }
+        }
+      }
+    }
+  }
+  /*! purgecss end ignore */
+}
+
+// --------------------------------
+//   Styles
+// --------------------------------
+
+@mixin styles {
+  @include generate-keyframes;
+}
+
+// --------------------------------
+//   CSS Custom Properties
+// --------------------------------
+
+@mixin vars {
+  // Animation
+  @include custom-prop($animation-prefix, blink, (blink 1s timing(ease) infinite));
+  @include custom-prop($animation-prefix, bounce, (bounce 2s timing(ease) infinite));
+  @include custom-prop($animation-prefix, fade-in, (fade-in 0.5s timing(ease)));
+  @include custom-prop($animation-prefix, fade-out, (fade-out 0.5s timing(ease)));
+  @include custom-prop($animation-prefix, float, (float 3s timing(ease-in-out) infinite));
+  @include custom-prop($animation-prefix, ping, (ping 3s timing(ease-out) infinite));
+  @include custom-prop($animation-prefix, pulse, (pulse 2s timing(ease-out) infinite));
+  @include custom-prop($animation-prefix, spin, (spin 2s timing(linear) infinite));
+  @include custom-prop($animation-prefix, ring, (ring 500ms timing(linear) infinite));
+
+  // Animation and Transition Timing Functions
+  @include generate-css-vars(theme(timing));
+
+  // Animation and Transition Duration
+  @include generate-css-vars(theme(duration), $duration-prefix);
+
+  // Animation and Transition Delay
+  @include generate-css-vars(theme(delay), $delay-prefix);
+}

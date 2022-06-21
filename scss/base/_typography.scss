@@ -1,0 +1,50 @@
+// --------------------------------
+//   Typography Styles
+// --------------------------------
+
+@use '../theme' as *;
+@use '../config' as *;
+@use '../api' as *;
+
+// --------------------------------
+//   Mixins
+// --------------------------------
+
+@mixin base {
+  @if config(typography-hyphens) {
+    p,
+    li,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      hyphens: auto;
+      overflow-wrap: break-word;
+    }
+  }
+}
+
+@mixin headings {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: fill(heading);
+    // font-family: $font-family-heading;
+    // font-weight: $heading-font-weight;
+    // line-height: $line-height-heading;
+  }
+}
+
+// --------------------------------
+//   Styles
+// --------------------------------
+
+@mixin styles {
+  @include base;
+  @include headings;
+}

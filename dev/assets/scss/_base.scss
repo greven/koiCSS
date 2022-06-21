@@ -5,8 +5,8 @@
 // @forward 'config';
 @use 'koi';
 
-@include koi.theme();
-@include koi.base();
+// @include koi.theme();
+// @include koi.base();
 
 // << Insert your base styles here >>
 
@@ -16,32 +16,32 @@ body {
   padding: 32px;
 }
 
-.a,
-.b,
-.c,
-.d {
-  margin: 32px 0;
-  width: 82px;
-  height: 82px;
-  border-radius: 8px;
-}
+// .a,
+// .b,
+// .c,
+// .d {
+//   margin: 32px 0;
+//   width: 82px;
+//   height: 82px;
+//   border-radius: 8px;
+// }
 
-.a {
-  background-color: hsl(var(--color-success-6-h), var(--color-success-6-s), var(--color-success-6-l), 0.95);
-  // background-color: var(--color-success-6);
-  // background-color: koi.fill(black, $alpha: 0.5);
-  // background-color: koi.fill(success, 6);
-}
+// .a {
+//   background-color: hsl(var(--color-success-6-h), var(--color-success-6-s), var(--color-success-6-l), 0.95);
+//   // background-color: var(--color-success-6);
+//   // background-color: koi.fill(black, $alpha: 0.5);
+//   // background-color: koi.fill(success, 6);
+// }
 
-.b {
-  background-color: koi.fill(success, 6, $saturation: -50%);
-}
+// .b {
+//   background-color: koi.fill(success, 6, $saturation: -50%);
+// }
 
-.c {
-  background-color: koi.fill(success, 6, $saturation: 50%, $lightness: 50%);
-}
+// .c {
+//   background-color: koi.fill(success, 6, $saturation: 50%, $lightness: 50%);
+// }
 
-.d {
-  // background-color: koi.fill(primary, 6, $lightness: 35%, $saturation: -25%);
-  background-color: koi.fill(primary, 6, $invert: true);
-}
+// .d {
+//   // background-color: koi.fill(primary, 6, $lightness: 35%, $saturation: -25%);
+//   background-color: koi.fill(primary, 6, $invert: true);
+// }

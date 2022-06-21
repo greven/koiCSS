@@ -6,7 +6,6 @@
 
 @use '../config' as *;
 @use '../theme' as *;
-@use 'media-query' as *;
 
 // --------------------------------
 //   Values
@@ -38,12 +37,10 @@ $_default-properties: (
   $timing-function: $_default-timing-function,
   $delay: null
 ) {
-  @include prefers-reduced-motion(null) {
-    transition-delay: var(--koi-transition-delay, $delay);
-    transition-duration: var(--koi-transition-duration, $duration);
-    transition-property: var(--koi-transition-property, $property);
-    transition-timing-function: var(--koi-transition-timing-function, $timing-function);
-  }
+  transition-delay: var(--koi-transition-delay, $delay);
+  transition-duration: var(--koi-transition-duration, $duration);
+  transition-property: var(--koi-transition-property, $property);
+  transition-timing-function: var(--koi-transition-timing-function, $timing-function);
 }
 
 @mixin transition-all($duration: $_default-duration, $timing-function: $_default-timing-function, $delay: null) {

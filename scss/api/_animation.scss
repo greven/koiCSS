@@ -4,7 +4,6 @@
 
 @use '../config' as *;
 @use '../theme' as *;
-@use 'media-query' as *;
 
 // --------------------------------
 //   Values
@@ -27,16 +26,14 @@ $_default-timing-function: theme(timing, config(fallbacks, timing));
   $fill-mode: none,
   $play-state: null
 ) {
-  @include prefers-reduced-motion(null) {
-    animation-delay: $delay;
-    animation-direction: $direction;
-    animation-duration: $duration;
-    animation-fill-mode: $fill-mode;
-    animation-iteration-count: $iteration-count;
-    animation-name: $name;
-    animation-timing-function: $timing-function;
-    @if $play-state {
-      animation-play-state: $play-state;
-    }
+  animation-delay: $delay;
+  animation-direction: $direction;
+  animation-duration: $duration;
+  animation-fill-mode: $fill-mode;
+  animation-iteration-count: $iteration-count;
+  animation-name: $name;
+  animation-timing-function: $timing-function;
+  @if $play-state {
+    animation-play-state: $play-state;
   }
 }

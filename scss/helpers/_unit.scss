@@ -6,6 +6,8 @@
 @use 'sass:math';
 @use 'sass:meta';
 
+@use '../config' as *;
+
 /// Convert a value in pixels (px) to rem.
 ///
 /// @param {number (unitless)} $value-in-pixel -
@@ -15,7 +17,7 @@
 ///
 /// @return {number} `$value-in-pixel` in rem.
 ///
-@function px-to-rem($px, $base-font-size: 16) {
+@function px-to-rem($px, $base-font-size: config(base-font-size)) {
   @if $px == null {
     @return null;
   }

@@ -1,4 +1,9 @@
-@use '../api/' as *;
+// --------------------------------
+//   Default Styles
+// --------------------------------
+
+@use '../api' as *;
+@use '../theme' as *;
 
 @mixin styles {
   ::selection {

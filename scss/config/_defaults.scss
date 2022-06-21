@@ -9,14 +9,15 @@ $config: (
   use-default-styles: true,
   use-important-utilities: false,
   default-color-scheme: light,
-  base-font-size: 16,
   spacer: 1rem,
-  utility-glue: ':',
   responsive-padding: (
     value: 5%,
     min: 0.75rem,
     max: 1.5rem,
   ),
+  base-font-size: 16,
+  typography-hyphens: true,
+  utility-glue: ':',
   fallbacks: (
     accent: primary,
     border-width: 1,

@@ -1,5 +1,7 @@
 @use 'sass:map';
 
+@forward 'theme';
+
 @use 'defaults';
 
 $config: () !default;

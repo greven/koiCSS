@@ -5,7 +5,10 @@
 @use '../config' as *;
 @use 'reset';
 @use 'default';
+@use 'animation';
 @use 'color';
+@use 'shadow';
+@use 'typography';
 
 @mixin styles {
   @if config(use-reset-styles) {
@@ -19,7 +22,12 @@
 
   @if config(use-css-variables) {
     :root {
+      @include animation.vars;
       @include color.vars;
+      @include shadow.vars;
     }
   }
+
+  @include animation.styles;
+  @include typography.styles;
 }

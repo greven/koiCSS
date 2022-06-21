@@ -5,8 +5,19 @@
 @use 'sass:list';
 
 @use '../internal/color' as *;
+@use '../internal/output' as *;
 
 $ignore-accent-colors: (white black);
+
+// Generate CSS custom properties (vars) from theme property map.
+// Example:  @include generate-css-vars(theme(shadow), shadow);
+@mixin generate-css-vars($map: (), $property: null) {
+  /*! purgecss start ignore */
+  @each $key, $value in $map {
+    @include custom-prop($property, $key, $value);
+  }
+  /*! purgecss end ignore */
+}
 
 // Output a colors map as CSS custom properties
 @mixin generate-css-color-vars($colors-map: (), $property: null, $suffix: null) {
