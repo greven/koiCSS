@@ -2,10 +2,10 @@
 //   Border API
 // --------------------------------
 
-@use '../config' as *;
+@use 'setting' as *;
 @use 'theme' as *;
 
-$_default-radius: config(fallbacks, radius);
+$_default-radius: setting(fallbacks, radius);
 
 // --------------------------------
 //   Functions

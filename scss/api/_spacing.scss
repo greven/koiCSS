@@ -8,9 +8,9 @@
 @use 'sass:meta';
 @use 'sass:string';
 
-@use '../config' as *;
-@use '../theme' as *;
 @use '../helpers/type' as *;
+@use 'setting' as *;
+@use 'theme' as *;
 
 // --------------------------------
 //   Values
@@ -99,9 +99,9 @@ $negative-spacing: () !default;
 }
 
 @function responsive-spacing(
-  $value: config(responsive-padding, value),
-  $min: config(responsive-padding, min),
-  $max: config(responsive-padding, max)
+  $value: setting(layout, responsive-padding, value),
+  $min: setting(layout, responsive-padding, min),
+  $max: setting(layout, responsive-padding, max)
 ) {
   @return clamp(var(--koi-spacing-min, $min), var(--koi-spacing-value, $value), var(--koi-spacing-max, $max));
 }

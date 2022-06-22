@@ -6,19 +6,19 @@
 @use 'sass:list';
 @use 'sass:string';
 
-@use '../config' as *;
-@use '../theme' as *;
-@use '../helpers/' as *;
+@use '../helpers' as *;
+@use 'setting' as *;
+@use 'theme' as *;
 
 // --------------------------------
 //   Values
 // --------------------------------
 
-$_default-font-family: config(fallbacks, font-family);
-$_default-font-size: config(fallbacks, font-size);
-$_default-font-weight: config(fallbacks, font-weight);
-$_default-leading: config(fallbacks, leading);
-$_default-tracking: config(fallbacks, tracking);
+$_default-font-family: setting(fallbacks, font-family);
+$_default-font-size: setting(fallbacks, font-size);
+$_default-font-weight: setting(fallbacks, font-weight);
+$_default-leading: setting(fallbacks, leading);
+$_default-tracking: setting(fallbacks, tracking);
 
 // --------------------------------
 //   Functions

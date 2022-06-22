@@ -2,10 +2,10 @@
 //   Duration (Animation & Transition) API
 // ----------------------------------------
 
-@use '../config' as *;
-@use '../theme' as *;
+@use 'setting' as *;
+@use 'theme' as *;
 
-$_default-duration: config(fallbacks, duration);
+$_default-duration: setting(fallbacks, duration);
 
 // --------------------------------
 //   Functions

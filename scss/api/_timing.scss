@@ -2,10 +2,10 @@
 //   Timing Functions (Animation & Transition) API
 // ------------------------------------------------
 
-@use '../config' as *;
-@use '../theme' as *;
+@use 'setting' as *;
+@use 'theme' as *;
 
-$_default-timing: config(fallbacks, timing);
+$_default-timing: setting(fallbacks, timing);
 
 // --------------------------------
 //   Functions

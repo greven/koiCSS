@@ -2,16 +2,15 @@
 //   Animation API
 // --------------------------------
 
-@use '../config' as *;
+@use 'setting' as *;
 @use 'theme' as *;
 
 // --------------------------------
 //   Values
 // --------------------------------
 
-// TODO: Use setting instead of config or import fallbacks directly from config to avoid cyclic redundency?
-$_default-duration: theme(duration, config(fallbacks, duration));
-$_default-timing-function: theme(timing, config(fallbacks, timing));
+$_default-duration: theme(duration, setting(fallbacks, duration));
+$_default-timing-function: theme(timing, setting(fallbacks, timing));
 
 // --------------------------------
 //   Mixins

@@ -6,24 +6,31 @@
 @use 'sass:meta';
 @use 'sass:list';
 
-@use '../config' as *;
-@use '../helpers' as *;
+@use '../config';
+@use '../config/internal' as *;
+@use '../internal/generators' as *;
+@use '../helpers/' as *;
+@use 'setting' as *;
+
+// --------------------------------
+//   Functions
+// --------------------------------
 
 // Get a value from the theme using
 // fallbacks definied in the config
 @function theme($keys...) {
   $property: list.nth($keys, 1);
-  $fallback: config(fallbacks, $property);
-  @return map-get-key($theme, $fallback, $keys...);
+  $fallback: setting(fallbacks, $property);
+  @return map-get-key(config.$theme, $fallback, $keys...);
 }
 
 @function theme-has-key($keys...) {
-  @return map.has-key($theme, $keys...);
+  @return map.has-key(config.$theme, $keys...);
 }
 
 // Checks if keys is a valid theme color
 @function is-theme-color($keys...) {
-  $colors: map.get($theme, colors);
+  $colors: map.get(config.$theme, colors);
   $value: map.get($colors, $keys...);
 
   @return map.has-key($colors, $keys...) and (meta.type-of($value) == color);
@@ -40,4 +47,73 @@
     }
   }
   @return false;
+}
+
+// --------------------------------
+//   Mixins
+// --------------------------------
+
+// Color Schemes
+
+@mixin generate-scheme-css-vars($colors-map: (), $color-scheme: null, $suffix: null) {
+  @include generate-css-color-vars($colors-map, $color-prefix, $color-scheme);
+}
+
+@mixin _default-color-scheme($color-schemes-map, $color-scheme: setting(default-color-scheme)) {
+  html {
+    $color-scheme: light;
+    @include generate-scheme-css-vars(map.get($color-schemes-map, $color-scheme));
+  }
+}
+
+// Output color vars for each color-scheme
+@mixin create-themes($color-schemes-map) {
+  @include _default-color-scheme($color-schemes-map);
+
+  @each $color-scheme, $color in $color-schemes-map {
+    // Generate color scheme colors (dark, light, ...)
+    html {
+      @include generate-scheme-css-vars($color, $color-scheme);
+    }
+
+    @media (prefers-color-scheme: $color-scheme) {
+      html {
+        @include generate-scheme-css-vars(map.get($color-schemes-map, $color-scheme));
+        color-scheme: $color-scheme;
+      }
+    }
+
+    [color-scheme='#{$color-scheme}'],
+    [data-theme='#{$color-scheme}'] {
+      @include generate-scheme-css-vars(map.get($color-schemes-map, $color-scheme));
+      color-scheme: $color-scheme;
+    }
+  }
+}
+
+// Match color scheme mode
+@mixin color-mode($color-scheme: light) {
+  @media (prefers-color-scheme: $color-scheme) {
+    @at-root #{selector.nest(':root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark])', &)} {
+      @content;
+    }
+  }
+
+  @at-root #{selector.nest(':root[data-theme=#{$color-scheme}], :root[color-scheme=#{$color-scheme}]', &)} {
+    @content;
+  }
+}
+
+// Matches data-theme="light" or data-theme="auto"
+@mixin light() {
+  @include color-mode(light) {
+    @content;
+  }
+}
+
+// Matches data-theme="dark" or data-theme="auto"
+@mixin dark() {
+  @include color-mode(dark) {
+    @content;
+  }
 }

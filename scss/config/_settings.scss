@@ -10,15 +10,12 @@ $_default-settings: (
   use-css-variables: true,
   use-default-styles: true,
   use-utilities: false,
-  theme: (
-    default-color-scheme: light,
-  ),
+  default-color-scheme: light,
   typography: (
     base-font-size: 16,
     use-hyphens: true,
   ),
   layout: (
-    spacer: 1rem,
     responsive-padding: (
       value: 5%,
       min: 0.75rem,

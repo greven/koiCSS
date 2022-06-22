@@ -1,11 +1,11 @@
-@use '../config' as *;
 @use '../internal/color' as *;
 @use '../internal/output' as *;
 @use '../helpers/color' as *;
-@use '../theme/helpers' as *;
+@use 'setting' as *;
+@use 'theme' as *;
 
-$_default-shade: config(fallbacks, colors);
-$_default-accent: config(fallbacks, accent);
+$_default-shade: setting(fallbacks, colors);
+$_default-accent: setting(fallbacks, accent);
 
 @function fill(
   $name,

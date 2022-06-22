@@ -8,6 +8,8 @@
 
 @use '../config' as *;
 
+$_base-font-size: map.get($settings, typography, base-font-size);
+
 /// Convert a value in pixels (px) to rem.
 ///
 /// @param {number (unitless)} $value-in-pixel -
@@ -17,11 +19,12 @@
 ///
 /// @return {number} `$value-in-pixel` in rem.
 ///
-@function px-to-rem($px, $base-font-size: config(base-font-size)) {
+@function px-to-rem($px, $base-font-size: $_base-font-size) {
   @if $px == null {
     @return null;
   }
-  @return math.div($px, $base-font-size) * 1rem;
+
+  @return math.div(strip-unit($px), $base-font-size) * 1rem;
 }
 
 /// Strip unit from value.

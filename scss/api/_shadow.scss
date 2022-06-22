@@ -4,10 +4,10 @@
 
 @use 'sass:map';
 
-@use '../config' as *;
-@use '../theme' as *;
+@use 'setting' as *;
+@use 'theme' as *;
 
-$_default-shadow: config(fallbacks, shadow);
+$_default-shadow: setting(fallbacks, shadow);
 
 // --------------------------------
 //   Functions
