@@ -5,10 +5,11 @@
 @use 'sass:map';
 @use 'sass:meta';
 @use 'sass:list';
+@use 'sass:selector';
 
 @use '../config';
 @use '../config/internal' as *;
-@use '../internal/generators' as *;
+@use '../internal' as *;
 @use '../helpers/' as *;
 @use 'setting' as *;
 

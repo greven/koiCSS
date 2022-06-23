@@ -1,6 +1,5 @@
-@use '../internal/color' as *;
-@use '../internal/output' as *;
 @use '../helpers/color' as *;
+@use '../internal' as *;
 @use 'setting' as *;
 @use 'theme' as *;
 

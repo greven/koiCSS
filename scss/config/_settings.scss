@@ -7,9 +7,10 @@
 $_default-settings: (
   prefix: '',
   use-reset-styles: true,
-  use-css-variables: true,
   use-default-styles: true,
+  use-theming: true,
   use-utilities: false,
+  use-css-variables: true,
   default-color-scheme: light,
   typography: (
     base-font-size: 16,

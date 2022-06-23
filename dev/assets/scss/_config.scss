@@ -1,14 +1,17 @@
 // Your custom KoiCSS overwrites
 
-// @use 'koi' with (
-// $theme: (
-//   color-schemes: (
-//     light: (
-//       heading: #f00,
-//     ),
-//     dark: (
-//       heading: #f00,
-//     ),
-//   ),
-// )
-// );
+@use 'koi' with (
+  $settings: (
+    //   prefix: 'koi',
+  ),
+  $theme: (
+    color-schemes: (
+      light: (
+        // heading: rgb(102, 46, 233),
+      ),
+      dark: (
+        // heading: rgb(46, 183, 233),
+      ),
+    ),
+  )
+);

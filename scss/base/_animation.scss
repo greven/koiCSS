@@ -3,9 +3,8 @@
 // ----------------------------------
 
 @use '../config/internal' as *;
-@use '../internal/output' as *;
-@use '../generators/props' as *;
-@use '../theme' as *;
+@use '../internal' as *;
+@use '../api' as *;
 
 // --------------------------------
 //   Mixins
@@ -99,6 +98,7 @@
   transform-origin: top center;
 }
 
+/* stylelint-disable */
 @mixin generate-keyframes() {
   /*! purgecss start ignore */
   @each $keyframe-key, $keyframe-value in theme(keyframes) {
@@ -116,6 +116,7 @@
   }
   /*! purgecss end ignore */
 }
+/* stylelint-enable */
 
 // --------------------------------
 //   Styles

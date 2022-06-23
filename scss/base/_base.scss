@@ -2,7 +2,7 @@
 //   Base Styles
 // --------------------------------
 
-@use '../config' as *;
+@use '../api' as *;
 @use 'reset';
 @use 'default';
 @use 'animation';
@@ -11,21 +11,25 @@
 @use 'typography';
 
 @mixin styles {
-  @if config(use-reset-styles) {
+  @if setting(use-reset-styles) {
     @include reset.styles();
   }
 
   // Default styles
-  @if config(use-default-styles) {
+  @if setting(use-default-styles) {
     @include default.styles();
   }
 
-  @if config(use-css-variables) {
+  @if setting(use-css-variables) {
     :root {
       @include animation.vars;
       @include color.vars;
       @include shadow.vars;
     }
+  }
+
+  @if setting(use-theming) {
+    @include create-themes(theme(color-schemes));
   }
 
   @include animation.styles;

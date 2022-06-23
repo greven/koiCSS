@@ -2,8 +2,6 @@
 //   Typography Styles
 // --------------------------------
 
-@use '../theme' as *;
-@use '../config' as *;
 @use '../api' as *;
 
 // --------------------------------
@@ -11,7 +9,7 @@
 // --------------------------------
 
 @mixin base {
-  @if config(typography-hyphens) {
+  @if setting(typography, use-hyphens) {
     p,
     li,
     h1,

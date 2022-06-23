@@ -2,11 +2,10 @@
 @use 'sass:list';
 @use 'sass:color';
 
-// @forward 'config';
+@forward 'config';
 @use 'koi';
 
-// @include koi.theme();
-// @include koi.base();
+@include koi.base();
 
 // << Insert your base styles here >>
 
@@ -14,8 +13,14 @@
 
 body {
   padding: 32px;
-  background: #222;
+  // background: #444;
+  // color: #ccc;
+}
+
+.wrapper {
   @include koi.animation(blink);
+  @include koi.rounded(md);
+  padding: koi.spacing(xl);
 }
 
 // .a,
