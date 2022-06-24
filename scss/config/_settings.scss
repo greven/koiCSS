@@ -15,12 +15,13 @@ $_default-settings: (
   typography: (
     base-font-size: 16,
     use-hyphens: true,
+    preferred-fluid-font-size: '2vw + 1rem',
   ),
   layout: (
-    responsive-padding: (
-      value: 5%,
+    fluid-padding: (
       min: 0.75rem,
       max: 1.5rem,
+      fluid-value: 5%,
     ),
   ),
   utilities: (

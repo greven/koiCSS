@@ -41,7 +41,7 @@
   }
 
   pre {
-    @include responsive-padding;
+    @include fluid-padding;
     @include rounded;
     background-color: var(--koi-color-code-bg, fill(black));
     color: fill(gray, 0);

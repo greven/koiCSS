@@ -98,12 +98,19 @@ $negative-spacing: () !default;
   @return $result;
 }
 
-@function responsive-spacing(
-  $value: setting(layout, responsive-padding, value),
-  $min: setting(layout, responsive-padding, min),
-  $max: setting(layout, responsive-padding, max)
+@function fluid-spacing(
+  $min: setting(layout, fluid-padding, min),
+  $max: setting(layout, fluid-padding, max),
+  $fluid-value: setting(layout, fluid-padding, fluid-value)
 ) {
-  @return clamp(var(--koi-spacing-min, $min), var(--koi-spacing-value, $value), var(--koi-spacing-max, $max));
+  $min: if(theme-has-key(spacing, $min), spacing($min), $min);
+  $max: if(theme-has-key(spacing, $max), spacing($max), $max);
+
+  @return clamp(
+    var(--koi-spacing-min, $min),
+    var(--koi-spacing-fluid-value, $fluid-value),
+    var(--koi-spacing-max, $max)
+  );
 }
 
 // --------------------------------
@@ -156,18 +163,30 @@ $negative-spacing: () !default;
   margin-right: spacing($key);
 }
 
-// Responsive Margin
+// Fluid Margin
 
-@mixin responsive-margin {
-  margin: responsive-spacing();
+@mixin fluid-margin(
+  $min: setting(layout, fluid-padding, min),
+  $max: setting(layout, fluid-padding, max),
+  $fluid-value: setting(layout, fluid-padding, fluid-value)
+) {
+  margin: fluid-spacing($min, $max, $fluid-value);
 }
 
-@mixin responsive-margin-inline {
-  margin-inline: responsive-spacing();
+@mixin fluid-margin-inline(
+  $min: setting(layout, fluid-padding, min),
+  $max: setting(layout, fluid-padding, max),
+  $fluid-value: setting(layout, fluid-padding, fluid-value)
+) {
+  margin-inline: fluid-spacing($min, $max, $fluid-value);
 }
 
-@mixin responsive-margin-block {
-  margin-block: responsive-spacing();
+@mixin fluid-margin-block(
+  $min: setting(layout, fluid-padding, min),
+  $max: setting(layout, fluid-padding, max),
+  $fluid-value: setting(layout, fluid-padding, fluid-value)
+) {
+  margin-block: fluid-spacing($min, $max, $fluid-value);
 }
 
 // Padding
@@ -216,16 +235,28 @@ $negative-spacing: () !default;
   padding-right: spacing($key);
 }
 
-// Responsive Padding
+// Fluid Padding
 
-@mixin responsive-padding {
-  padding: responsive-spacing();
+@mixin fluid-padding(
+  $min: setting(layout, fluid-padding, min),
+  $max: setting(layout, fluid-padding, max),
+  $fluid-value: setting(layout, fluid-padding, fluid-value)
+) {
+  padding: fluid-spacing($min, $max, $fluid-value);
 }
 
-@mixin responsive-padding-inline {
-  padding-inline: responsive-spacing();
+@mixin fluid-padding-inline(
+  $min: setting(layout, fluid-padding, min),
+  $max: setting(layout, fluid-padding, max),
+  $fluid-value: setting(layout, fluid-padding, fluid-value)
+) {
+  padding-inline: fluid-spacing($min, $max, $fluid-value);
 }
 
-@mixin responsive-padding-block {
-  padding-block: responsive-spacing();
+@mixin fluid-padding-block(
+  $min: setting(layout, fluid-padding, min),
+  $max: setting(layout, fluid-padding, max),
+  $fluid-value: setting(layout, fluid-padding, fluid-value)
+) {
+  padding-block: fluid-spacing($min, $max, $fluid-value);
 }
