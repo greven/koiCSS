@@ -4,6 +4,8 @@
 
 @use 'sass:map';
 
+@use '../tokens' as *;
+
 $_default-settings: (
   prefix: '',
   use-reset-styles: true,
@@ -13,9 +15,13 @@ $_default-settings: (
   use-css-variables: true,
   default-color-scheme: light,
   typography: (
-    base-font-size: 16,
     use-hyphens: true,
+    base-font-size: 16,
     preferred-fluid-font-size: '2vw + 1rem',
+    font-family-base: map.get($font-family, sans),
+    font-family-heading: map.get($font-family, sans),
+    heading-font-weight: 700,
+    headings-font-size: 5xl 4xl 3xl 2xl xl lg,
   ),
   layout: (
     fluid-padding: (

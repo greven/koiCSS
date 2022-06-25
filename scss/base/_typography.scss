@@ -2,7 +2,20 @@
 //   Typography Styles
 // --------------------------------
 
+@use 'sass:list';
+@use 'sass:string';
+
 @use '../api' as *;
+@use '../helpers' as *;
+
+// --------------------------------
+//   Functions
+// --------------------------------
+
+@function _heading-font-size($heading-number) {
+  $sizes: setting(typography, headings-font-size);
+  @return list.nth($sizes, $heading-number);
+}
 
 // --------------------------------
 //   Mixins
@@ -32,9 +45,74 @@
   h5,
   h6 {
     color: fill(heading);
-    // font-family: $font-family-heading;
-    // font-weight: $heading-font-weight;
-    // line-height: $line-height-heading;
+    font-family: setting(typography, font-family-heading);
+    font-weight: setting(typography, heading-font-weight);
+  }
+
+  h1,
+  .h1 {
+    $font-size: _heading-font-size(1);
+    $font-size-rem: font-size($font-size);
+    $font-size-px: rem-to-px($font-size-rem);
+
+    @include text-size($font-size);
+    margin-bottom: em(40px, $font-size-px);
+    margin-top: 0;
+  }
+
+  h2,
+  .h2 {
+    $font-size: _heading-font-size(2);
+    $font-size-rem: font-size($font-size);
+    $font-size-px: rem-to-px($font-size-rem);
+
+    @include text-size($font-size);
+    margin-bottom: em(28px, $font-size-px);
+    margin-top: em(56px, $font-size-px);
+  }
+
+  h3,
+  .h3 {
+    $font-size: _heading-font-size(3);
+    $font-size-rem: font-size($font-size);
+    $font-size-px: rem-to-px($font-size-rem);
+
+    @include text-size($font-size);
+    margin-bottom: em(22px, $font-size-px);
+    margin-top: em(44px, $font-size-px);
+  }
+
+  h4,
+  .h4 {
+    $font-size: _heading-font-size(4);
+    $font-size-rem: font-size($font-size);
+    $font-size-px: rem-to-px($font-size-rem);
+
+    @include text-size($font-size);
+    margin-bottom: em(16px, $font-size-px);
+    margin-top: em(32px, $font-size-px);
+  }
+
+  h5,
+  .h5 {
+    $font-size: _heading-font-size(5);
+    $font-size-rem: font-size($font-size);
+    $font-size-px: rem-to-px($font-size-rem);
+
+    @include text-size($font-size);
+    margin-bottom: em(12px, $font-size-px);
+    margin-top: em(24px, $font-size-px);
+  }
+
+  h6,
+  .h6 {
+    $font-size: _heading-font-size(6);
+    $font-size-rem: font-size($font-size);
+    $font-size-px: rem-to-px($font-size-rem);
+
+    @include text-size($font-size);
+    margin-bottom: em(10px, $font-size-px);
+    margin-top: em(20px, $font-size-px);
   }
 }
 

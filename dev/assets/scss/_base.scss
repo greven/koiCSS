@@ -22,10 +22,6 @@ body {
   @include koi.fluid-padding-block(md, 4xl);
 }
 
-h1 {
-  font-size: koi.fluid-font-size(4xl, 6xl);
-}
-
 // .a,
 // .b,
 // .c,

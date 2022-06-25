@@ -19,12 +19,42 @@ $_base-font-size: map.get($settings, typography, base-font-size);
 ///
 /// @return {number} `$value-in-pixel` in rem.
 ///
-@function px-to-rem($px, $base-font-size: $_base-font-size) {
-  @if $px == null {
+@function rem($value-in-pixel, $base-font-size: $_base-font-size) {
+  @if $value-in-pixel == null {
     @return null;
   }
 
-  @return math.div(strip-unit($px), $base-font-size) * 1rem;
+  @return math.div(strip-unit($value-in-pixel), $base-font-size) * 1rem;
+}
+
+/// Convert a value in pixels (px) to em.
+///
+/// @param {number (unitless)} $value-in-pixel -
+///   The value to be converted to rem.
+/// @param {integer (unitless)} $base-font-size -
+///   Base font size
+///
+/// @return {number} `$value-in-pixel` in em.
+///
+@function em($value-in-pixel, $base-font-size) {
+  @return math.div(strip-unit($value-in-pixel), strip-unit($base-font-size)) * 1em;
+}
+
+/// Convert a value in rem to pixels (px).
+///
+/// @param {number (unitless)} $value-in-rem -
+///   The value to be converted to rem.
+/// @param {integer (unitless)} $base-font-size -
+///   Optional base font size, defaults to 16.
+///
+/// @return {number} `$value-in-rem` in px.
+///
+@function rem-to-px($value-in-rem, $base-font-size: $_base-font-size) {
+  @if $value-in-rem == null {
+    @return null;
+  }
+
+  @return strip-unit($value-in-rem) * $base-font-size * 1px;
 }
 
 /// Strip unit from value.
