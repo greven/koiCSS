@@ -12,33 +12,35 @@
 $schemes: (
   light: (
     surface: (
-      1: map.get($colors, gray, 1),
+      1: map.get($colors, grey, 1),
       2: map.get($colors, white),
-      3: map.get($colors, gray, 2),
-      4: map.get($colors, gray, 3),
+      3: map.get($colors, grey, 2),
+      4: map.get($colors, grey, 3),
     ),
+    border: map.get($colors, grey, 2),
     text: (
-      1: map.get($colors, gray, 9),
-      2: map.get($colors, gray, 6),
-      3: map.get($colors, gray, 4),
-      4: map.get($colors, gray, 3),
+      1: map.get($colors, grey, 9),
+      2: map.get($colors, grey, 6),
+      3: map.get($colors, grey, 4),
+      4: map.get($colors, grey, 3),
     ),
-    heading: map.get($colors, gray, 9),
+    heading: map.get($colors, grey, 9),
   ),
   dark: (
     surface: (
-      1: map.get($colors, gray, 9),
-      2: map.get($colors, gray, 8),
-      3: map.get($colors, gray, 7),
-      4: map.get($colors, gray, 6),
+      1: map.get($colors, grey, 9),
+      2: map.get($colors, grey, 8),
+      3: map.get($colors, grey, 7),
+      4: map.get($colors, grey, 6),
     ),
+    border: map.get($colors, grey, 7),
     text: (
-      1: map.get($colors, gray, 0),
-      2: map.get($colors, gray, 3),
-      3: map.get($colors, gray, 5),
-      4: map.get($colors, gray, 6),
+      1: map.get($colors, grey, 0),
+      2: map.get($colors, grey, 3),
+      3: map.get($colors, grey, 5),
+      4: map.get($colors, grey, 6),
     ),
-    heading: map.get($colors, gray, 0),
+    heading: map.get($colors, grey, 0),
   ),
 );
 

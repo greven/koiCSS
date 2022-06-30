@@ -18,10 +18,10 @@
 //   --btn-border-color: #{koi.fill(red, 6)};
 // }
 
-.loader-1 {
-  @include koi.loader-1($size: 1rem, $color: #ccc, $thickness: 2px);
-}
+// .loader-1 {
+//   @include koi.loader-1($size: 1rem, $color: #ccc, $thickness: 2px);
+// }
 
-.loader-2 {
-  @include koi.loader-2();
-}
+// .loader-2 {
+//   @include koi.loader-2();
+// }

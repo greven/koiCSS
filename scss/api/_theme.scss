@@ -105,15 +105,27 @@
   }
 }
 
+// Sets a property value depending on the color mode (light or dark).
+// It takes 3 arguments: the property, the value in light mode, and the value in dark mode.
+@mixin use-color-mode($property, $light-value, $dark-value) {
+  @include light-mode {
+    #{$property}: $light-value;
+  }
+
+  @include dark-mode {
+    #{$property}: $dark-value;
+  }
+}
+
 // Matches data-theme="light" or data-theme="auto"
-@mixin light() {
+@mixin light-mode() {
   @include color-mode(light) {
     @content;
   }
 }
 
 // Matches data-theme="dark" or data-theme="auto"
-@mixin dark() {
+@mixin dark-mode() {
   @include color-mode(dark) {
     @content;
   }

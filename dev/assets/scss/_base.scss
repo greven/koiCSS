@@ -22,32 +22,38 @@ body {
   @include koi.fluid-padding-block(md, 4xl);
 }
 
-// .a,
-// .b,
-// .c,
-// .d {
-//   margin: 32px 0;
-//   width: 82px;
-//   height: 82px;
-//   border-radius: 8px;
-// }
+.even-columns {
+  // display: block;
+  @include koi.even-columns(250px);
+}
 
-// .a {
-//   background-color: hsl(var(--color-success-6-h), var(--color-success-6-s), var(--color-success-6-l), 0.95);
-//   // background-color: var(--color-success-6);
-//   // background-color: koi.fill(black, $alpha: 0.5);
-//   // background-color: koi.fill(success, 6);
-// }
+.keys-2 {
+  font-size: koi.font(4xl);
+}
 
-// .b {
-//   background-color: koi.fill(success, 6, $saturation: -50%);
-// }
+.my-box-1,
+.my-box-2 {
+  @include koi.box($padding: true);
+  @include koi.border(koi.fill(grey, 8), $radius: koi.radius(xl));
+  // @include koi.fluid-margin-block();
+}
 
-// .c {
-//   background-color: koi.fill(success, 6, $saturation: 50%, $lightness: 50%);
-// }
+.my-box-1 {
+  // background-color: koi.fill(danger, 0);
+  background: koi.gradient(6);
+  color: koi.fill(white);
 
-// .d {
-//   // background-color: koi.fill(primary, 6, $lightness: 35%, $saturation: -25%);
-//   background-color: koi.fill(primary, 6, $invert: true);
-// }
+  @include koi.dark-mode {
+    background-color: koi.fill(danger, 9, 0.25);
+  }
+}
+
+.my-box-2 {
+  // background-color: koi.fill(primary, 0);
+  background: koi.gradient(9);
+  color: koi.fill(black);
+
+  @include koi.dark-mode {
+    background-color: koi.fill(primary, 9, 0.25);
+  }
+}

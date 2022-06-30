@@ -44,7 +44,7 @@
     @include fluid-padding;
     @include rounded;
     background-color: var(--koi-color-code-bg, fill(black));
-    color: fill(gray, 0);
+    color: fill(grey, 0);
     overflow-x: auto;
     position: relative;
   }
@@ -86,6 +86,15 @@
     }
   }
 
+  cite {
+    color: fill(text, 3);
+    display: block;
+    font-size: font(sm);
+    margin-top: spacing(10);
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
   a {
     border-bottom: 1px solid fill(primary, 5);
     color: fill(text, 1);
@@ -113,7 +122,7 @@
     margin-right: 0;
 
     figcaption {
-      margin-top: space(8);
+      margin-top: spacing(8);
       text-align: center;
     }
   }
@@ -173,7 +182,7 @@
 
   select {
     background-image: svg-encode(
-      '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16"><path stroke="#{theme(colors, gray, 5)}" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 5l6 6 6-6" /></svg>'
+      '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16"><path stroke="#{theme(colors, grey, 5)}" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 5l6 6 6-6" /></svg>'
     );
     background-position: right 0.75em center;
     background-repeat: no-repeat;

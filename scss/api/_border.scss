@@ -4,6 +4,7 @@
 
 @use 'setting' as *;
 @use 'theme' as *;
+@use 'color' as *;
 
 $_default-radius: setting(fallbacks, radius);
 
@@ -41,4 +42,11 @@ $_default-radius: setting(fallbacks, radius);
 @mixin rounded-right($radius: $_default-radius) {
   border-bottom-right-radius: radius($radius);
   border-top-right-radius: radius($radius);
+}
+
+@mixin border($color: fill(border), $width: 1px, $style: solid, $radius: none) {
+  border-color: $color;
+  border-radius: $radius;
+  border-style: $style;
+  border-width: $width;
 }

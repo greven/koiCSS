@@ -1,0 +1,87 @@
+// --------------------------------
+//   Keyboard Components
+// --------------------------------
+
+@use '../api' as *;
+
+// --------------------------------
+//   Vars
+// --------------------------------
+
+$_class: '.kbd';
+
+// --------------------------------
+//   Mixins
+// --------------------------------
+
+@mixin key {
+  $key-height: 0.25em;
+
+  @include dark-mode {
+    --koi-key-bg: #{fill(grey, 9)};
+    --koi-key-text: #{fill(grey, 4)};
+    --koi-key-border-1: #{fill(grey, 7)};
+    --koi-key-border-2: #{fill(grey, 8)};
+  }
+
+  @include border($radius: 0.35em);
+  background-color: var(--koi-key-bg, fill(white));
+  box-shadow: 0 calc($key-height + 1px) 0 -2px var(--koi-key-border-1, fill(grey, 1)),
+    0 $key-height 0 0 var(--koi-key-border-2, fill(grey, 2)), shadow();
+  color: var(--koi-key-text, fill(text, 2));
+  font-family: font(mono);
+  font-size: 0.875em;
+  font-weight: 500;
+  line-height: 1em;
+  padding: 0.25em 0.5em;
+  user-select: none;
+}
+
+@mixin label {
+  color: fill(grey, 5);
+  font-family: font(mono);
+  user-select: none;
+}
+
+@mixin icon {
+  height: auto;
+  max-width: 1em;
+  min-width: 1em;
+  vertical-align: middle;
+}
+
+@mixin group {
+  align-items: center;
+  display: inline-flex;
+  gap: 0.5em;
+}
+
+// --------------------------------
+//   Styles
+// --------------------------------
+
+@mixin styles {
+  kbd {
+    @include key;
+  }
+
+  #{$_class} {
+    @include group;
+
+    &__key {
+      @include key;
+    }
+
+    &__label {
+      @include label;
+
+      &:not(:only-child) {
+        padding-top: 0.125em;
+      }
+    }
+
+    &__icon {
+      @include icon;
+    }
+  }
+}
