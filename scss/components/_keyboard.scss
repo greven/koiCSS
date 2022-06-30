@@ -17,13 +17,6 @@ $_class: '.kbd';
 @mixin key {
   $key-height: 0.25em;
 
-  @include dark-mode {
-    --koi-key-bg: #{fill(grey, 9)};
-    --koi-key-text: #{fill(grey, 4)};
-    --koi-key-border-1: #{fill(grey, 7)};
-    --koi-key-border-2: #{fill(grey, 8)};
-  }
-
   @include border($radius: 0.35em);
   background-color: var(--koi-key-bg, fill(white));
   box-shadow: 0 calc($key-height + 1px) 0 -2px var(--koi-key-border-1, fill(grey, 1)),
@@ -35,6 +28,13 @@ $_class: '.kbd';
   line-height: 1em;
   padding: 0.25em 0.5em;
   user-select: none;
+
+  @include dark-mode {
+    --koi-key-bg: #{fill(grey, 9)};
+    --koi-key-text: #{fill(grey, 4)};
+    --koi-key-border-1: #{fill(grey, 7)};
+    --koi-key-border-2: #{fill(grey, 8)};
+  }
 }
 
 @mixin label {
