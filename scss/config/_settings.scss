@@ -29,11 +29,12 @@ $_default-settings: (
     use-hyphens: true,
     base-font-size: 16,
     base-font-family: list.join(Lato, $_font-sans),
+    body-font-size: lg,
     headings-font-family: list.join(Montserrat, $_font-sans),
     headings-font-weight: 700,
     headings-font-size: 5xl 4xl 3xl 2xl xl lg,
     headings-spacing-ratio: 1.125,
-    lead-font-size: lg,
+    lead-font-size: xl,
     fluid-font-size: '2vw + 1rem',
   ),
   layout: (

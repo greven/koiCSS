@@ -28,11 +28,12 @@ body {
 }
 
 .keys-2 {
-  font-size: koi.font(4xl);
+  font-size: koi.font(3xl);
 }
 
 .my-box-1,
-.my-box-2 {
+.my-box-2,
+.my-box-3 {
   @include koi.box($padding: true, $shadow: md);
   @include koi.border(koi.fill(grey, 8), $radius: koi.radius(lg));
   @include koi.transition-shadow();
@@ -54,6 +55,16 @@ body {
 .my-box-2 {
   // --koi-gradient-direction: 100deg;
   background: koi.gradient(9);
+  color: koi.fill(black);
+
+  @include koi.dark-mode {
+    background-color: koi.fill(primary, 9, 0.25);
+  }
+}
+
+.my-box-3 {
+  // --koi-gradient-direction: 100deg;
+  background: koi.gradient(5);
   color: koi.fill(black);
 
   @include koi.dark-mode {

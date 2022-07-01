@@ -14,6 +14,7 @@
 // --------------------------------
 
 $_headings-font-weight: setting(typography, headings-font-weight);
+$_body-font-size: setting(typography, body-font-size);
 $_lead-font-size: setting(typography, lead-font-size);
 
 // --------------------------------
@@ -65,12 +66,22 @@ $_lead-font-size: setting(typography, lead-font-size);
       overflow-wrap: break-word;
     }
 
+    // Lead paragraphs, etc.
     .lead {
       @include text-size($_lead-font-size);
     }
-  }
 
-  // TODO: Lists!!!!!!!!!!!
+    // TODO: Include instead of text-size fluid typography?
+    // Prose typography
+    .prose {
+      @include text-size($_body-font-size);
+
+      p {
+        margin-bottom: 1.25em;
+        margin-top: 1.25em;
+      }
+    }
+  }
 }
 
 @mixin headings {
@@ -155,6 +166,25 @@ $_lead-font-size: setting(typography, lead-font-size);
   }
 }
 
+@mixin lists {
+  // Prose typography
+  .prose {
+    ul,
+    ol {
+      margin: spacing(md, 0, md, md);
+      padding-left: spacing(sm);
+
+      li {
+        list-style-position: inside;
+
+        &::marker {
+          color: accent(6);
+        }
+      }
+    }
+  }
+}
+
 // --------------------------------
 //   Styles
 // --------------------------------
@@ -162,4 +192,5 @@ $_lead-font-size: setting(typography, lead-font-size);
 @mixin styles {
   @include base;
   @include headings;
+  @include lists;
 }
