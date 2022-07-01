@@ -18,19 +18,19 @@ $_class: '.kbd';
   $key-height: 0.25em;
 
   @include border($radius: 0.35em);
+  align-items: center;
   background-color: var(--koi-key-bg, fill(white));
   box-shadow: 0 calc($key-height + 1px) 0 -2px var(--koi-key-border-1, fill(grey, 1)),
     0 $key-height 0 0 var(--koi-key-border-2, fill(grey, 2)), shadow();
   color: var(--koi-key-text, fill(text, 2));
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 2em;
-  min-width: 2em;
   font-family: font(mono);
   font-size: 0.875em;
   font-weight: 500;
+  justify-content: center;
   line-height: 1em;
+  min-height: 2em;
+  min-width: 2em;
   padding: 0.25em 0.5em;
   user-select: none;
 
