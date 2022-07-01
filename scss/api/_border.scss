@@ -44,9 +44,12 @@ $_default-radius: setting(fallbacks, radius);
   border-top-right-radius: radius($radius);
 }
 
-@mixin border($color: fill(border), $width: 1px, $style: solid, $radius: none) {
+@mixin border($color: fill(border), $width: 1px, $style: solid, $radius: null) {
   border-color: $color;
-  border-radius: $radius;
   border-style: $style;
   border-width: $width;
+
+  @if $radius {
+    border-radius: $radius;
+  }
 }

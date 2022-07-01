@@ -5,17 +5,28 @@
 @use 'sass:map';
 
 @use '../tokens' as *;
+@use 'settings' as *;
 @use 'colors' as *;
+
+// ---- Typography ----
+
+$font-family: map.merge(
+  (
+    base: map.get($settings, typography, base-font-family),
+    headings: map.get($settings, typography, headings-font-family),
+  ),
+  $font-family
+);
 
 // ---- Colors Schemes ----
 
 $schemes: (
   light: (
     surface: (
-      1: map.get($colors, grey, 1),
+      1: map.get($colors, grey, 0),
       2: map.get($colors, white),
-      3: map.get($colors, grey, 2),
-      4: map.get($colors, grey, 3),
+      3: map.get($colors, grey, 1),
+      4: map.get($colors, grey, 2),
     ),
     border: map.get($colors, grey, 2),
     text: (

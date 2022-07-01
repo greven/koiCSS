@@ -12,6 +12,8 @@
 
 @mixin vars {
   $colors: theme(colors);
+  $gradients: theme(gradients);
 
   @include generate-css-color-vars($colors, $color-prefix);
+  @include generate-css-vars($gradients, $gradient-prefix);
 }

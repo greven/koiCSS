@@ -3,27 +3,53 @@
 // --------------------------------
 
 @use 'sass:list';
+@use 'sass:math';
 @use 'sass:string';
 
 @use '../api' as *;
 @use '../helpers' as *;
 
 // --------------------------------
+//   Vars
+// --------------------------------
+
+$_headings-font-weight: setting(typography, headings-font-weight);
+$_lead-font-size: setting(typography, lead-font-size);
+
+// --------------------------------
 //   Functions
 // --------------------------------
 
 @function _heading-font-size($heading-level) {
-  $sizes: setting(typography, headings-font-size);
-  @return list.nth($sizes, $heading-level);
-}
-
-@function _heading-prose-spacing($heading-level, $margin-top: true, $margin-bottom: true) {
-  // TODO: !
+  $headings-font-size: setting(typography, headings-font-size);
+  @return list.nth($headings-font-size, $heading-level);
 }
 
 // --------------------------------
 //   Mixins
 // --------------------------------
+
+// Add spacing to heading when inside a prose parent
+@mixin _heading-prose-spacing($heading-level, $margin-top: true, $margin-bottom: true) {
+  $spacing-ratio: setting(typography, headings-spacing-ratio);
+  $font-size-key: _heading-font-size($heading-level);
+  $font-size-rem: font-size($font-size-key);
+  $font-size-px: rem-to-px($font-size-rem);
+
+  @if $margin-top {
+    margin-top: em($font-size-px * $spacing-ratio, $font-size-px);
+  } @else {
+    margin-top: 0;
+  }
+
+  @if $margin-bottom {
+    margin-bottom: em(math.div($font-size-px * $spacing-ratio, 2), $font-size-px);
+  } @else {
+    margin-bottom: 0;
+  }
+
+  line-height: text-leading($font-size-key);
+}
 
 @mixin base {
   @if setting(typography, use-hyphens) {
@@ -38,9 +64,13 @@
       hyphens: auto;
       overflow-wrap: break-word;
     }
+
+    .lead {
+      @include text-size($_lead-font-size);
+    }
   }
 
-  // TODO: Lists
+  // TODO: Lists!!!!!!!!!!!
 }
 
 @mixin headings {
@@ -51,8 +81,8 @@
   h5,
   h6 {
     color: fill(heading);
-    font-family: setting(typography, font-family-heading);
-    font-weight: setting(typography, heading-font-weight);
+    font-family: font(headings);
+    font-weight: $_headings-font-weight;
   }
 
   h1,
@@ -91,72 +121,36 @@
     font-size: font-size($font-size);
   }
 
-  // Add margins and line-height for prose headings
+  // Prose typography
   .prose {
     h1,
     .h1 {
-      $font-size: _heading-font-size(1);
-      $font-size-rem: font-size($font-size);
-      $font-size-px: rem-to-px($font-size-rem);
-
-      line-height: text-leading($font-size);
-      margin-bottom: em(40px, $font-size-px);
-      margin-top: 0;
+      @include _heading-prose-spacing(1, $margin-top: false);
     }
 
     h2,
     .h2 {
-      $font-size: _heading-font-size(2);
-      $font-size-rem: font-size($font-size);
-      $font-size-px: rem-to-px($font-size-rem);
-
-      line-height: text-leading($font-size);
-      margin-bottom: em(28px, $font-size-px);
-      margin-top: em(56px, $font-size-px);
+      @include _heading-prose-spacing(2);
     }
 
     h3,
     .h3 {
-      $font-size: _heading-font-size(3);
-      $font-size-rem: font-size($font-size);
-      $font-size-px: rem-to-px($font-size-rem);
-
-      line-height: text-leading($font-size);
-      margin-bottom: em(22px, $font-size-px);
-      margin-top: em(44px, $font-size-px);
+      @include _heading-prose-spacing(3);
     }
 
     h4,
     .h4 {
-      $font-size: _heading-font-size(4);
-      $font-size-rem: font-size($font-size);
-      $font-size-px: rem-to-px($font-size-rem);
-
-      line-height: text-leading($font-size);
-      margin-bottom: em(16px, $font-size-px);
-      margin-top: em(32px, $font-size-px);
+      @include _heading-prose-spacing(4);
     }
 
     h5,
     .h5 {
-      $font-size: _heading-font-size(5);
-      $font-size-rem: font-size($font-size);
-      $font-size-px: rem-to-px($font-size-rem);
-
-      line-height: text-leading($font-size);
-      margin-bottom: em(12px, $font-size-px);
-      margin-top: em(24px, $font-size-px);
+      @include _heading-prose-spacing(5);
     }
 
     h6,
     .h6 {
-      $font-size: _heading-font-size(6);
-      $font-size-rem: font-size($font-size);
-      $font-size-px: rem-to-px($font-size-rem);
-
-      line-height: text-leading($font-size);
-      margin-bottom: em(10px, $font-size-px);
-      margin-top: em(20px, $font-size-px);
+      @include _heading-prose-spacing(6);
     }
   }
 }

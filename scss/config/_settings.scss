@@ -1,10 +1,21 @@
 // --------------------------------
-//   Settingd
+//   Settings
 // --------------------------------
 
+@use 'sass:list';
 @use 'sass:map';
 
 @use '../tokens' as *;
+
+// --------------------------------
+//   Vars
+// --------------------------------
+
+$_font-sans: map.get($font-family, sans);
+
+// --------------------------------
+//   Default Settings
+// --------------------------------
 
 $_default-settings: (
   prefix: '',
@@ -17,11 +28,13 @@ $_default-settings: (
   typography: (
     use-hyphens: true,
     base-font-size: 16,
-    preferred-fluid-font-size: '2vw + 1rem',
-    font-family-base: map.get($font-family, sans),
-    font-family-heading: map.get($font-family, sans),
-    heading-font-weight: 700,
+    base-font-family: list.join(Lato, $_font-sans),
+    headings-font-family: list.join(Montserrat, $_font-sans),
+    headings-font-weight: 700,
     headings-font-size: 5xl 4xl 3xl 2xl xl lg,
+    headings-spacing-ratio: 1.125,
+    lead-font-size: lg,
+    fluid-font-size: '2vw + 1rem',
   ),
   layout: (
     fluid-padding: (

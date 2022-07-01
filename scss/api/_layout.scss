@@ -7,6 +7,7 @@
 
 @use 'media-query' as *;
 @use 'border' as *;
+@use 'color' as *;
 @use 'size' as *;
 @use 'spacing' as *;
 @use 'shadow' as *;
@@ -18,7 +19,14 @@
 
 // Basic box element with theme defaults that can be composed with other utilities.
 // Based on https://smolcss.dev/#smol-unbreakable-boxes */
-@mixin box($max-width: 100%, $color: null, $bg-color: null, $padding: null, $rounded: null, $shadow: null) {
+@mixin box(
+  $max-width: 100%,
+  $color: fill(text, 1),
+  $bg-color: fill(surface, 2),
+  $padding: null,
+  $rounded: null,
+  $shadow: null
+) {
   background-color: $bg-color;
   color: $color;
   hyphens: auto;

@@ -4,16 +4,21 @@
 
 @use '../api' as *;
 
+// --------------------------------
+//   Styles
+// --------------------------------
+
 @mixin styles {
   ::selection {
-    background: fill(primary, 5);
-    color: #fff;
+    background: fill(primary, 1, 0.95);
+    color: #000;
   }
 
   body {
     @include smooth-font;
+    background-color: fill(surface, 1);
     color: fill(text, 1);
-    font-family: font(sans);
+    font-family: font(base);
     font-size: font(md);
     font-weight: font(normal);
   }
@@ -93,6 +98,12 @@
     margin-top: spacing(10);
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+
+  abbr[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+    text-decoration: none;
   }
 
   a {
