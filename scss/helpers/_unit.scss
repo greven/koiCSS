@@ -72,3 +72,7 @@ $_base-font-size: map.get($settings, typography, base-font-size);
 
   @return $value;
 }
+
+@function is-unit($value) {
+  @return not math.is-unitless($value);
+}

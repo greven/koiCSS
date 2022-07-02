@@ -7,7 +7,7 @@
 @use 'sass:meta';
 
 @use '../config/internal' as *;
-@use '../helpers/color' as *;
+@use '../helpers' as *;
 @use 'output' as *;
 
 // --------------------------------

@@ -35,7 +35,6 @@ $schemes: (
       3: map.get($colors, grey, 4),
       4: map.get($colors, grey, 3),
     ),
-    heading: map.get($colors, grey, 9),
   ),
   dark: (
     surface: (
@@ -51,7 +50,6 @@ $schemes: (
       3: map.get($colors, grey, 5),
       4: map.get($colors, grey, 6),
     ),
-    heading: map.get($colors, grey, 0),
   ),
 );
 

@@ -1,13 +1,17 @@
-@use '../helpers/color' as *;
+@use 'sass:list';
+@use 'sass:meta';
+
 @use '../internal' as *;
+@use '../helpers' as *;
 @use 'setting' as *;
 @use 'theme' as *;
 
 $_default-shade: setting(fallbacks, colors);
-$_default-accent: setting(fallbacks, accent);
+$_default-accent: setting(default-accent);
 
+// Try to return a theme color if not fallback to a color value if valid
 @function fill(
-  $name,
+  $color,
   $shade: $_default-shade,
   $alpha: 1,
   $saturation: null,
@@ -15,20 +19,31 @@ $_default-accent: setting(fallbacks, accent);
   $complement: false,
   $invert: false
 ) {
-  @if is-theme-color($name, $shade) or is-scheme-color($name, $shade) {
-    @return hsl-color-var($name, $shade, $alpha, $saturation, $lightness, $complement, $invert);
+  // Check if name is in format color-shade
+  @if meta.type-of($color) == 'string' {
+    $name-parts: _maybe-parse-string-color($color);
+
+    @if $name_parts {
+      $color: list.nth($name-parts, 1);
+      $shade: list.nth($name-parts, 2);
+    }
   }
-  @if is-theme-color($name) or is-scheme-color($name) {
+
+  @if is-theme-color($color, $shade) or is-scheme-color($color, $shade) {
+    @return hsl-color-var($color, $shade, $alpha, $saturation, $lightness, $complement, $invert);
+  } @else if is-theme-color($color) or is-scheme-color($color) {
     @return hsl-color-var(
-      $name,
+      $color,
       $alpha: $alpha,
       $saturation: $saturation,
       $lightness: $lightness,
       $complement: $complement,
       $invert: $invert
     );
+  } @else if meta.type-of($color) == 'color' {
+    @return $color;
   } @else {
-    @error "Color #{$name} or #{$name}-#{$shade} not found in theme.";
+    @error "Color #{$color} / #{$shade} not found in theme.";
   }
 }
 
@@ -43,7 +58,28 @@ $_default-accent: setting(fallbacks, accent);
   }
 }
 
-@function accent($shade: $-default-shade) {
-  $fallback-accent: theme(colors, $-default-accent, $shade);
+@function accent($shade: $_default-shade) {
+  $fallback-accent: theme(colors, $_default-accent, $shade);
   @return css-var(accent-#{$shade}, $fallback-accent);
+}
+
+// Parse a theme color in string form (i.e., text-1)
+// returning its name and shade or null
+@function _maybe-parse-string-color($name) {
+  @if meta.type-of($name) != 'string' {
+    @return null;
+  }
+
+  $name-parts: str-split($name, '-');
+
+  @if meta.type-of($name-parts) == 'list' and list.length($name-parts) == 2 {
+    $_name: list.nth($name-parts, 1);
+    $_shade: to-number(list.nth($name-parts, 2));
+
+    @if is-theme-color($_name, $_shade) or is-scheme-color($_name, $_shade) {
+      @return $_name $_shade;
+    }
+  }
+
+  @return null;
 }

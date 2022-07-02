@@ -106,6 +106,13 @@
     text-decoration: none;
   }
 
+  mark {
+    background: fill(setting(typography, mark-background));
+    border-radius: radius(sm);
+    color: #000;
+    padding: setting(typography, inline-text-padding);
+  }
+
   a {
     border-bottom: 1px solid fill(primary, 5);
     color: fill(text, 1);

@@ -13,6 +13,7 @@
 //   Vars
 // --------------------------------
 
+$_headings-color: setting(typography, headings-color);
 $_headings-font-weight: setting(typography, headings-font-weight);
 $_body-font-size: setting(typography, body-font-size);
 $_lead-font-size: setting(typography, lead-font-size);
@@ -71,7 +72,7 @@ $_lead-font-size: setting(typography, lead-font-size);
       @include text-size($_lead-font-size);
     }
 
-    // TODO: Include instead of text-size fluid typography?
+    // TODO: Include instead of text-size fluid typography? Should we use responsive-font size / fluid?
     // Prose typography
     .prose {
       @include text-size($_body-font-size);
@@ -91,9 +92,9 @@ $_lead-font-size: setting(typography, lead-font-size);
   h4,
   h5,
   h6 {
-    color: fill(heading);
+    color: fill($_headings-color);
     font-family: font(headings);
-    font-weight: $_headings-font-weight;
+    font-weight: font-weight($_headings-font-weight);
   }
 
   h1,

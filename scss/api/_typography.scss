@@ -25,12 +25,20 @@ $_default-tracking: setting(fallbacks, tracking);
 //   Functions
 // --------------------------------
 
+// Get theme font-family
 @function font-family($font-family: $_default-font-family) {
   @return theme(font-family, $font-family);
 }
 
+// Get theme font-size or fallback to value
 @function font-size($font-size: $_default-font-size) {
-  @return list.nth(theme(font-size, $font-size), 1);
+  @if theme-has-key(font-size, $font-size) {
+    @return list.nth(theme(font-size, $font-size), 1);
+  } @else if is-unit($font-size) {
+    @return $font-size;
+  } @else {
+    @error "[#{$font-size}] does not exist in the theme!";
+  }
 }
 
 @function fluid-font-size($min-font-size, $max-font-size, $preferred-font-size: setting(typography, fluid-font-size)) {
@@ -44,8 +52,9 @@ $_default-tracking: setting(fallbacks, tracking);
   );
 }
 
+// Get theme font-weight or fallback to value
 @function font-weight($font-weight: $_default-font-weight) {
-  @return theme(font-weight, $font-weight);
+  @return theme-or-fallback(font-weight, $font-weight);
 }
 
 // Get font-family, font-size or font-weight theme values
@@ -61,25 +70,27 @@ $_default-tracking: setting(fallbacks, tracking);
   }
 }
 
+// Get theme leading (line-height) or fallback to value
 @function leading($leading: $_default-leading) {
-  @return theme(leading, $leading);
+  @return theme-or-fallback(leading, $leading);
 }
 
 // Leading alias
 @function line-height($leading: $_default-leading) {
-  @return theme(leading, $leading);
+  @return leading($leading);
 }
 
+// Get theme tracking (letter-spacing) or fallback to value
 @function tracking($tracking: $_default-tracking) {
-  @return theme(tracking, $tracking);
+  @return theme-or-fallback(tracking, $tracking);
 }
 
 // Tracking alias
 @function letter-spacing($tracking: $_default-tracking) {
-  @return theme(tracking, $tracking);
+  @return tracking($tracking);
 }
 
-// Font-size default leading (line-height)
+// Leading (line-height) by font-size
 @function text-leading($font-size) {
   @return list.nth(theme(font-size, $font-size), 2);
 }

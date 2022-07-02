@@ -29,6 +29,15 @@
   @return map.has-key(config.$theme, $keys...);
 }
 
+// Try to return a theme value or fallback to the value
+@function theme-or-fallback($property, $key_or_value) {
+  @if theme-has-key($property, $key_or_value) {
+    @return theme($property, $key_or_value);
+  } @else {
+    @return $key_or_value;
+  }
+}
+
 // Checks if keys is a valid theme color
 @function is-theme-color($keys...) {
   $colors: map.get(config.$theme, colors);
