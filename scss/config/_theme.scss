@@ -1,82 +1,47 @@
 // --------------------------------
-//   Theme vars
+//   Theme Configuration (vars)
 // --------------------------------
 
 @use 'sass:map';
 
-@use '../tokens' as *;
-@use 'settings' as *;
-@use 'colors' as *;
+@use '../tokens';
+@use 'typography';
+@use 'colors';
 
 // ---- Typography ----
 
 $font-family: map.merge(
   (
-    base: map.get($settings, typography, base-font-family),
-    headings: map.get($settings, typography, headings-font-family),
+    base: typography.$base-font-family,
+    headings: typography.$headings-font-family,
   ),
-  $font-family
-);
-
-// ---- Colors Schemes ----
-
-$schemes: (
-  light: (
-    surface: (
-      1: map.get($colors, grey, 0),
-      2: map.get($colors, white),
-      3: map.get($colors, grey, 1),
-      4: map.get($colors, grey, 2),
-    ),
-    border: map.get($colors, grey, 2),
-    text: (
-      1: map.get($colors, grey, 9),
-      2: map.get($colors, grey, 6),
-      3: map.get($colors, grey, 4),
-      4: map.get($colors, grey, 3),
-    ),
-  ),
-  dark: (
-    surface: (
-      1: map.get($colors, grey, 9),
-      2: map.get($colors, grey, 8),
-      3: map.get($colors, grey, 7),
-      4: map.get($colors, grey, 6),
-    ),
-    border: map.get($colors, grey, 7),
-    text: (
-      1: map.get($colors, grey, 0),
-      2: map.get($colors, grey, 3),
-      3: map.get($colors, grey, 5),
-      4: map.get($colors, grey, 6),
-    ),
-  ),
+  tokens.$font-family
 );
 
 // ---- Theme ----
 
 $default-theme: (
-  aspect: $aspect,
-  blur: $blur,
-  radius: $radius,
-  delay: $delay,
-  duration: $duration,
-  keyframes: $keyframes,
-  layer: $layer,
-  opacity: $opacity,
-  screens: $screens,
-  shadow: $shadow,
-  spacing: $spacing,
-  sizes: $sizes,
-  timing: $timing,
+  aspect: tokens.$aspect,
+  blur: tokens.$blur,
+  radius: tokens.$radius,
+  delay: tokens.$delay,
+  duration: tokens.$duration,
+  keyframes: tokens.$keyframes,
+  layer: tokens.$layer,
+  opacity: tokens.$opacity,
+  screens: tokens.$screens,
+  shadow: tokens.$shadow,
+  spacing: tokens.$spacing,
+  sizes: tokens.$sizes,
+  timing: tokens.$timing,
   font-family: $font-family,
-  font-size: $font-size,
-  font-weight: $font-weight,
-  leading: $leading,
-  tracking: $tracking,
-  colors: $colors,
-  gradients: $gradients,
-  color-schemes: $schemes,
+  font-size: tokens.$font-size,
+  font-weight: tokens.$font-weight,
+  leading: tokens.$leading,
+  tracking: tokens.$tracking,
+  colors: colors.$base,
+  gradients: tokens.$gradients,
+  color-schemes: colors.$schemes,
 );
 
 $theme: () !default;

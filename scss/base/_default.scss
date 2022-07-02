@@ -2,6 +2,7 @@
 //   Default Styles
 // --------------------------------
 
+@use '../config';
 @use '../api' as *;
 
 // --------------------------------
@@ -10,7 +11,7 @@
 
 @mixin styles {
   ::selection {
-    background: fill(primary, 1, 0.95);
+    background-color: accent(1);
     color: #000;
   }
 
@@ -107,14 +108,14 @@
   }
 
   mark {
-    background: fill(setting(typography, mark-background));
-    border-radius: radius(sm);
+    background: hsl(50 100% 85%);
+    border-radius: radius(config.$inline-text-border-radius);
     color: #000;
-    padding: setting(typography, inline-text-padding);
+    padding: config.$inline-text-padding;
   }
 
   a {
-    border-bottom: 1px solid fill(primary, 5);
+    border-bottom: 1px solid accent(5);
     color: fill(text, 1);
     font-weight: font(medium);
     text-decoration: none;

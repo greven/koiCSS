@@ -6,25 +6,16 @@
 @use 'sass:math';
 @use 'sass:string';
 
+@use '../config';
 @use '../api' as *;
 @use '../helpers' as *;
-
-// --------------------------------
-//   Vars
-// --------------------------------
-
-$_headings-color: setting(typography, headings-color);
-$_headings-font-weight: setting(typography, headings-font-weight);
-$_body-font-size: setting(typography, body-font-size);
-$_lead-font-size: setting(typography, lead-font-size);
 
 // --------------------------------
 //   Functions
 // --------------------------------
 
 @function _heading-font-size($heading-level) {
-  $headings-font-size: setting(typography, headings-font-size);
-  @return list.nth($headings-font-size, $heading-level);
+  @return list.nth(config.$headings-font-size, $heading-level);
 }
 
 // --------------------------------
@@ -33,19 +24,18 @@ $_lead-font-size: setting(typography, lead-font-size);
 
 // Add spacing to heading when inside a prose parent
 @mixin _heading-prose-spacing($heading-level, $margin-top: true, $margin-bottom: true) {
-  $spacing-ratio: setting(typography, headings-spacing-ratio);
   $font-size-key: _heading-font-size($heading-level);
   $font-size-rem: font-size($font-size-key);
   $font-size-px: rem-to-px($font-size-rem);
 
   @if $margin-top {
-    margin-top: em($font-size-px * $spacing-ratio, $font-size-px);
+    margin-top: em($font-size-px * config.$headings-spacing-ratio, $font-size-px);
   } @else {
     margin-top: 0;
   }
 
   @if $margin-bottom {
-    margin-bottom: em(math.div($font-size-px * $spacing-ratio, 2), $font-size-px);
+    margin-bottom: em(math.div($font-size-px * config.$headings-spacing-ratio, 2), $font-size-px);
   } @else {
     margin-bottom: 0;
   }
@@ -54,7 +44,7 @@ $_lead-font-size: setting(typography, lead-font-size);
 }
 
 @mixin base {
-  @if setting(typography, use-hyphens) {
+  @if config.$use-hyphens {
     p,
     li,
     h1,
@@ -69,13 +59,13 @@ $_lead-font-size: setting(typography, lead-font-size);
 
     // Lead paragraphs, etc.
     .lead {
-      @include text-size($_lead-font-size);
+      @include text-size(config.$lead-font-size);
     }
 
     // TODO: Include instead of text-size fluid typography? Should we use responsive-font size / fluid?
     // Prose typography
     .prose {
-      @include text-size($_body-font-size);
+      @include text-size(config.$body-font-size);
 
       p {
         margin-bottom: 1.25em;
@@ -92,9 +82,9 @@ $_lead-font-size: setting(typography, lead-font-size);
   h4,
   h5,
   h6 {
-    color: fill($_headings-color);
+    color: fill(config.$headings-color);
     font-family: font(headings);
-    font-weight: font-weight($_headings-font-weight);
+    font-weight: font-weight(config.$headings-font-weight);
   }
 
   h1,

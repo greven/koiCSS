@@ -8,8 +8,8 @@
 @use 'sass:meta';
 @use 'sass:string';
 
-@use '../helpers/type' as *;
-@use 'setting' as *;
+@use '../config';
+@use '../helpers' as *;
 @use 'theme' as *;
 
 // --------------------------------
@@ -99,9 +99,9 @@ $negative-spacing: () !default;
 }
 
 @function fluid-spacing(
-  $min: setting(layout, fluid-padding, min),
-  $max: setting(layout, fluid-padding, max),
-  $fluid-value: setting(layout, fluid-padding, fluid-value)
+  $min: config.$fluid-padding-min,
+  $max: config.$fluid-padding-max,
+  $fluid-value: config.$fluid-padding-value
 ) {
   $min: if(theme-has-key(spacing, $min), spacing($min), $min);
   $max: if(theme-has-key(spacing, $max), spacing($max), $max);
@@ -166,25 +166,25 @@ $negative-spacing: () !default;
 // Fluid Margin
 
 @mixin fluid-margin(
-  $min: setting(layout, fluid-padding, min),
-  $max: setting(layout, fluid-padding, max),
-  $fluid-value: setting(layout, fluid-padding, fluid-value)
+  $min: config.$fluid-padding-min,
+  $max: config.$fluid-padding-max,
+  $fluid-value: config.$fluid-padding-value
 ) {
   margin: fluid-spacing($min, $max, $fluid-value);
 }
 
 @mixin fluid-margin-inline(
-  $min: setting(layout, fluid-padding, min),
-  $max: setting(layout, fluid-padding, max),
-  $fluid-value: setting(layout, fluid-padding, fluid-value)
+  $min: config.$fluid-padding-min,
+  $max: config.$fluid-padding-max,
+  $fluid-value: config.$fluid-padding-value
 ) {
   margin-inline: fluid-spacing($min, $max, $fluid-value);
 }
 
 @mixin fluid-margin-block(
-  $min: setting(layout, fluid-padding, min),
-  $max: setting(layout, fluid-padding, max),
-  $fluid-value: setting(layout, fluid-padding, fluid-value)
+  $min: config.$fluid-padding-min,
+  $max: config.$fluid-padding-max,
+  $fluid-value: config.$fluid-padding-value
 ) {
   margin-block: fluid-spacing($min, $max, $fluid-value);
 }
@@ -238,25 +238,25 @@ $negative-spacing: () !default;
 // Fluid Padding
 
 @mixin fluid-padding(
-  $min: setting(layout, fluid-padding, min),
-  $max: setting(layout, fluid-padding, max),
-  $fluid-value: setting(layout, fluid-padding, fluid-value)
+  $min: config.$fluid-padding-min,
+  $max: config.$fluid-padding-max,
+  $fluid-value: config.$fluid-padding-value
 ) {
   padding: fluid-spacing($min, $max, $fluid-value);
 }
 
 @mixin fluid-padding-inline(
-  $min: setting(layout, fluid-padding, min),
-  $max: setting(layout, fluid-padding, max),
-  $fluid-value: setting(layout, fluid-padding, fluid-value)
+  $min: config.$fluid-padding-min,
+  $max: config.$fluid-padding-max,
+  $fluid-value: config.$fluid-padding-value
 ) {
   padding-inline: fluid-spacing($min, $max, $fluid-value);
 }
 
 @mixin fluid-padding-block(
-  $min: setting(layout, fluid-padding, min),
-  $max: setting(layout, fluid-padding, max),
-  $fluid-value: setting(layout, fluid-padding, fluid-value)
+  $min: config.$fluid-padding-min,
+  $max: config.$fluid-padding-max,
+  $fluid-value: config.$fluid-padding-value
 ) {
   padding-block: fluid-spacing($min, $max, $fluid-value);
 }

@@ -1,0 +1,38 @@
+// ----------------------------------
+//   Typography Configuration (vars)
+// ----------------------------------
+
+@use 'sass:list';
+@use 'sass:map';
+
+@use '../tokens';
+
+// --------------------------------
+//   vars
+// --------------------------------
+
+$_font-sans: map.get(tokens.$font-family, sans);
+
+// --------------------------------
+//   Config
+// --------------------------------
+
+$use-hyphens: true;
+
+$base-font-size: 16;
+$base-font-family: list.join(Lato, $_font-sans);
+
+$body-font-size: lg;
+
+$headings-color: text-1;
+$headings-font-family: list.join(Montserrat, $_font-sans);
+$headings-font-weight: medium;
+$headings-font-size: 5xl 4xl 3xl 2xl xl lg;
+$headings-spacing-ratio: 1.125;
+
+$lead-font-size: xl;
+
+$fluid-font-size: '2vw + 1rem';
+
+$inline-text-padding: 0.05em 0.15em;
+$inline-text-border-radius: xs;

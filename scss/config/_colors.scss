@@ -1,12 +1,14 @@
 // --------------------------------
-//   Color vars
+//   Colors Configuration (vars)
 // --------------------------------
 
 @use 'sass:map';
 
 @use '../tokens' as *;
 
-$colors: (
+// ---- Base Colors ----
+
+$base: (
   primary: (
     0: #f0fdfa,
     1: #ccfbf1,
@@ -50,4 +52,39 @@ $colors: (
   info: map.get($colors, blue),
   warning: map.get($colors, yellow),
   danger: map.get($colors, red),
+);
+
+// ---- Colors Schemes ----
+
+$schemes: (
+  light: (
+    surface: (
+      1: map.get($colors, grey, 0),
+      2: map.get($colors, white),
+      3: map.get($colors, grey, 1),
+      4: map.get($colors, grey, 2),
+    ),
+    border: map.get($colors, grey, 2),
+    text: (
+      1: map.get($colors, grey, 9),
+      2: map.get($colors, grey, 6),
+      3: map.get($colors, grey, 4),
+      4: map.get($colors, grey, 3),
+    ),
+  ),
+  dark: (
+    surface: (
+      1: map.get($colors, grey, 9),
+      2: map.get($colors, grey, 8),
+      3: map.get($colors, grey, 7),
+      4: map.get($colors, grey, 6),
+    ),
+    border: map.get($colors, grey, 7),
+    text: (
+      1: map.get($colors, grey, 0),
+      2: map.get($colors, grey, 3),
+      3: map.get($colors, grey, 5),
+      4: map.get($colors, grey, 6),
+    ),
+  ),
 );

@@ -6,8 +6,16 @@
 @use 'setting' as *;
 @use 'theme' as *;
 
+// --------------------------------
+//   vars
+// --------------------------------
+
 $_default-shade: setting(fallbacks, colors);
 $_default-accent: setting(default-accent);
+
+// --------------------------------
+//   Functions
+// --------------------------------
 
 // Try to return a theme color if not fallback to a color value if valid
 @function fill(

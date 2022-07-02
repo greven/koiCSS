@@ -13,7 +13,7 @@ $_default-radius: setting(fallbacks, radius);
 // --------------------------------
 
 @function radius($radius: $_default-radius) {
-  @return theme(radius, $radius);
+  @return theme-or-fallback(radius, $radius);
 }
 
 // --------------------------------
