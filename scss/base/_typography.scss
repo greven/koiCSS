@@ -13,6 +13,7 @@
 @use '../internal' as *;
 @use '../helpers' as *;
 @use '../api' as *;
+@use 'layout' as *;
 
 // --------------------------------
 //   Vars
@@ -117,16 +118,24 @@ $_type-base-index: list.index($_type-steps, 'md');
   .prose {
     ul,
     ol {
+      @include stack(column, sm);
       margin: spacing(md, 0, md, md);
       padding-left: spacing(sm);
 
       li {
-        list-style-position: inside;
+        list-style-position: var(--koi-list-position, outside);
 
         &::marker {
-          color: accent(6);
+          color: var(--koi-list-marker-color, accent(6));
+          font-weight: font(bold);
         }
       }
+    }
+
+    li > ul,
+    li > ol {
+      margin-top: spacing(xs);
+      padding-inline-start: spacing(lg);
     }
   }
 }

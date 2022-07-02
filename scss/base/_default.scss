@@ -126,9 +126,10 @@
   }
 
   a {
-    border-bottom: 1px solid accent(5);
-    color: fill(text, 1);
-    font-weight: font(medium);
+    background: var(--koi-link-background, transparent);
+    border-bottom: var(--koi-link-border, 1px solid accent(5));
+    color: var(--koi-link-foreground, fill(text, 1));
+    font-weight: var(--koi-link-font-weight, font(medium));
     text-decoration: none;
     transition: all 50ms linear;
 

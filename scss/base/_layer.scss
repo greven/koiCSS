@@ -1,0 +1,15 @@
+// --------------------------------
+//   Layer Styles
+// --------------------------------
+
+@use '../config/internal' as *;
+@use '../internal' as *;
+@use '../api' as *;
+
+// --------------------------------
+//   CSS Custom Properties
+// --------------------------------
+
+@mixin vars {
+  @include generate-css-vars(theme(layer), $layer-prefix);
+}

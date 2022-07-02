@@ -7,7 +7,10 @@
 @use 'default';
 @use 'animation';
 @use 'color';
+@use 'layer';
+@use 'screens';
 @use 'shadow';
+@use 'spacing';
 @use 'typography';
 
 @mixin styles {
@@ -20,12 +23,14 @@
     @include default.styles();
   }
 
-  // TODO: Add rest of properties, border, layer, etc...
   @if setting(use-css-variables) {
     :root {
       @include animation.vars;
       @include color.vars;
+      @include layer.vars;
+      @include screens.vars;
       @include shadow.vars;
+      @include spacing.vars;
       @include typography.vars;
     }
   }
