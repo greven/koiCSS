@@ -2,25 +2,30 @@
 //   Typography helpers
 // --------------------------------
 
+@use 'sass:list';
 @use 'sass:map';
 @use 'sass:math';
-@use 'sass:list';
 @use 'sass:string';
 
 @use '../config';
 @use '../helpers' as *;
 @use 'setting' as *;
+@use 'media-query' as *;
 @use 'theme' as *;
 
 // --------------------------------
-//   Values
+//   Vars
 // --------------------------------
 
 $_default-font-family: setting(fallbacks, font-family);
 $_default-font-size: setting(fallbacks, font-size);
 $_default-font-weight: setting(fallbacks, font-weight);
+
 $_default-leading: setting(fallbacks, leading);
 $_default-tracking: setting(fallbacks, tracking);
+
+$_default-min-bp: bp(2xs);
+$_default-max-bp: bp(2xl);
 
 // --------------------------------
 //   Functions
@@ -40,17 +45,6 @@ $_default-tracking: setting(fallbacks, tracking);
   } @else {
     @error "[#{$font-size}] does not exist in the theme!";
   }
-}
-
-@function fluid-font-size($min-font-size, $max-font-size, $preferred-font-size: config.$fluid-font-size) {
-  $min-font-size: if(theme-has-key(font-size, $min-font-size), font-size($min-font-size), $min-font-size);
-  $max-font-size: if(theme-has-key(font-size, $max-font-size), font-size($max-font-size), $max-font-size);
-
-  @return clamp(
-    var(--koi-fluid-min-font-size, $min-font-size),
-    var(--koi-fluid-preferred-font-size, string.unquote($preferred-font-size)),
-    var(--koi-fluid-max-font-size, $max-font-size)
-  );
 }
 
 // Get theme font-weight or fallback to value
@@ -81,6 +75,11 @@ $_default-tracking: setting(fallbacks, tracking);
   @return leading($leading);
 }
 
+// Fluid leading / line height
+@function fluid-line-height($factor: config.$fluid-base-line-height-factor, $leading: 2px) {
+  @return calc($leading + $factor + $leading);
+}
+
 // Get theme tracking (letter-spacing) or fallback to value
 @function tracking($tracking: $_default-tracking) {
   @return theme-or-fallback(tracking, $tracking);
@@ -94,6 +93,36 @@ $_default-tracking: setting(fallbacks, tracking);
 // Leading (line-height) by font-size
 @function text-leading($font-size) {
   @return list.nth(theme(font-size, $font-size), 2);
+}
+
+// Fluid font-size
+@function fluid-font-size($min-fs, $max-fs, $min-bp: $_default-min-bp, $max-bp: $_default-max-bp) {
+  $min-fs: font-size($min-fs);
+  $max-fs: font-size($max-fs);
+  $min-px: $min-fs;
+  $max-px: $max-fs;
+
+  // If $min-fs is in px convert it to rem
+  @if math.unit($min-fs) == 'px' {
+    $min-fs: rem($min-fs);
+  } @else {
+    $min-px: rem-to-px($min-px);
+  }
+
+  // If $max-fs is in px convert it to rem
+  @if math.unit($max-fs) == 'px' {
+    $max-fs: rem($max-fs);
+  } @else {
+    $max-px: rem-to-px($max-px);
+  }
+
+  $slope: math.div($max-px - $min-px, $max-bp - $min-bp);
+  $slope-vw: math-round-float($slope * 100, 2);
+  $intercept-rem: math-round-float(rem($min-px - $slope * $min-bp), 2);
+  $min-rem: math-round-float($min-fs, 2);
+  $max-rem: math-round-float($max-fs, 2);
+
+  @return clamp(#{$min-rem}, #{$slope-vw}vw + #{$intercept-rem}, #{$max-rem});
 }
 
 // --------------------------------

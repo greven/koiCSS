@@ -1,0 +1,16 @@
+// --------------------------------
+//   Math helpers
+// --------------------------------
+
+@use 'sass:math';
+
+// Custom rounding function for possible long floating-point numbers
+@function round-float($number, $places: 0) {
+  $n: 1;
+  @if $places > 0 {
+    @for $i from 1 through $places {
+      $n: $n * 10;
+    }
+  }
+  @return math.div(math.round($number * $n), $n);
+}

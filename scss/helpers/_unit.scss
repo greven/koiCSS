@@ -9,9 +9,9 @@
 
 /// Convert a value in pixels (px) to rem.
 ///
-/// @param {number (unitless)} $value-in-pixel -
+/// @param {number} $value-in-pixel -
 ///   The value to be converted to rem.
-/// @param {integer (unitless)} $base-font-size -
+/// @param {integer} $base-font-size -
 ///   Optional base font size, defaults to 16.
 ///
 /// @return {number} `$value-in-pixel` in rem.
@@ -21,14 +21,14 @@
     @return null;
   }
 
-  @return math.div(strip-unit($value-in-pixel), $base-font-size) * 1rem;
+  @return math.div(strip-unit($value-in-pixel), strip-unit($base-font-size)) * 1rem;
 }
 
 /// Convert a value in pixels (px) to em.
 ///
-/// @param {number (unitless)} $value-in-pixel -
+/// @param {number} $value-in-pixel -
 ///   The value to be converted to rem.
-/// @param {integer (unitless)} $base-font-size -
+/// @param {integer} $base-font-size -
 ///   Base font size
 ///
 /// @return {number} `$value-in-pixel` in em.
@@ -39,9 +39,9 @@
 
 /// Convert a value in rem to pixels (px).
 ///
-/// @param {number (unitless)} $value-in-rem -
+/// @param {number} $value-in-rem -
 ///   The value to be converted to rem.
-/// @param {integer (unitless)} $base-font-size -
+/// @param {integer} $base-font-size -
 ///   Optional base font size, defaults to 16.
 ///
 /// @return {number} `$value-in-rem` in px.
@@ -51,7 +51,7 @@
     @return null;
   }
 
-  @return strip-unit($value-in-rem) * $base-font-size * 1px;
+  @return strip-unit($value-in-rem) * strip-unit($base-font-size) * 1px;
 }
 
 /// Strip unit from value.

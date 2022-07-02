@@ -11,17 +11,21 @@
 
 @mixin styles {
   ::selection {
-    background-color: accent(1);
-    color: #000;
+    background-color: var(--koi-selection-background, accent(1));
+    color: var(--koi-selection-foreground, fill(black));
   }
 
   body {
-    @include smooth-font;
-    background-color: fill(surface, 1);
-    color: fill(text, 1);
+    background-color: var(--koi-body-background, fill(surface, 1));
+    color: var(--koi-body-foreground, fill(text, 1));
     font-family: font(base);
     font-size: font(md);
     font-weight: font(normal);
+    line-height: leading(normal);
+
+    @if setting(use-font-smoothing) {
+      @include smooth-font;
+    }
   }
 
   sub,
@@ -49,10 +53,17 @@
   pre {
     @include fluid-padding;
     @include rounded;
-    background-color: var(--koi-color-code-bg, fill(black));
+    background-color: var(--koi-code-background, fill(black));
     color: fill(grey, 0);
     overflow-x: auto;
     position: relative;
+  }
+
+  code {
+    background-color: var(--koi-code-background, fill(black));
+    border-radius: radius(config.$inline-text-border-radius);
+    color: var(--koi-code-foreground, fill(grey, 0));
+    padding: config.$inline-text-padding;
   }
 
   code::before {
@@ -65,9 +76,9 @@
   }
 
   blockquote {
-    border-left-color: accent(5);
-    border-left-width: 0.25rem;
-    color: var(--koi-color-quote-text, fill(text, 1));
+    border-left-color: var(--koi-quote-border-color, accent(5));
+    border-left-width: var(--koi-quote-border-with, 0.25rem);
+    color: var(--koi-quote-foreground, fill(text, 1));
     font-style: italic;
     font-weight: font(medium);
     margin-bottom: 1.6em;
@@ -93,7 +104,7 @@
   }
 
   cite {
-    color: fill(text, 3);
+    color: var(--koi-cite-foreground, fill(text, 2));
     display: block;
     font-size: font(sm);
     margin-top: spacing(10);
@@ -108,9 +119,9 @@
   }
 
   mark {
-    background: hsl(50 100% 85%);
+    background: var(--koi-mark-background, hsl(50 100% 85%));
     border-radius: radius(config.$inline-text-border-radius);
-    color: #000;
+    color: var(--koi-mark-foreground, fill(black));
     padding: config.$inline-text-padding;
   }
 

@@ -3,45 +3,27 @@
 // --------------------------------
 
 @use 'sass:list';
+@use 'sass:map';
 @use 'sass:math';
 @use 'sass:string';
+@use 'sass:selector';
 
 @use '../config';
-@use '../api' as *;
+@use '../config/internal' as *;
+@use '../internal' as *;
 @use '../helpers' as *;
+@use '../api' as *;
 
 // --------------------------------
-//   Functions
+//   Vars
 // --------------------------------
 
-@function _heading-font-size($heading-level) {
-  @return list.nth(config.$headings-font-size, $heading-level);
-}
+$_type-steps: map.keys(theme(font-size));
+$_type-base-index: list.index($_type-steps, 'md');
 
 // --------------------------------
 //   Mixins
 // --------------------------------
-
-// Add spacing to heading when inside a prose parent
-@mixin _heading-prose-spacing($heading-level, $margin-top: true, $margin-bottom: true) {
-  $font-size-key: _heading-font-size($heading-level);
-  $font-size-rem: font-size($font-size-key);
-  $font-size-px: rem-to-px($font-size-rem);
-
-  @if $margin-top {
-    margin-top: em($font-size-px * config.$headings-spacing-ratio, $font-size-px);
-  } @else {
-    margin-top: 0;
-  }
-
-  @if $margin-bottom {
-    margin-bottom: em(math.div($font-size-px * config.$headings-spacing-ratio, 2), $font-size-px);
-  } @else {
-    margin-bottom: 0;
-  }
-
-  line-height: text-leading($font-size-key);
-}
 
 @mixin base {
   @if config.$use-hyphens {
@@ -56,21 +38,24 @@
       hyphens: auto;
       overflow-wrap: break-word;
     }
+  }
 
-    // Lead paragraphs, etc.
-    .lead {
-      @include text-size(config.$lead-font-size);
+  .prose {
+    // @include text-size(config.$prose-min-body-font-size);
+    font-size: fluid-font-size(config.$prose-body-min-font-size, config.$prose-body-max-font-size);
+
+    @include prose(p) {
+      margin-bottom: 1.25em;
+      margin-top: 1.25em;
     }
 
-    // TODO: Include instead of text-size fluid typography? Should we use responsive-font size / fluid?
-    // Prose typography
-    .prose {
-      @include text-size(config.$body-font-size);
+    // Lead paragraphs, etc.
+    @include prose('.lead') {
+      font-size: fluid-font-size(config.$prose-lead-min-font-size, config.$prose-lead-max-font-size);
+    }
 
-      p {
-        margin-bottom: 1.25em;
-        margin-top: 1.25em;
-      }
+    * {
+      line-height: fluid-line-height(config.$prose-base-line-height-factor);
     }
   }
 }
@@ -89,76 +74,46 @@
 
   h1,
   .h1 {
-    $font-size: _heading-font-size(1);
-    font-size: font-size($font-size);
+    @include text-size(5xl);
   }
 
   h2,
   .h2 {
-    $font-size: _heading-font-size(2);
-    font-size: font-size($font-size);
+    @include text-size(4xl);
   }
 
   h3,
   .h3 {
-    $font-size: _heading-font-size(3);
-    font-size: font-size($font-size);
+    @include text-size(3xl);
   }
 
   h4,
   .h4 {
-    $font-size: _heading-font-size(4);
-    font-size: font-size($font-size);
+    @include text-size(2xl);
   }
 
   h5,
   .h5 {
-    $font-size: _heading-font-size(5);
-    font-size: font-size($font-size);
+    @include text-size(xl);
   }
 
   h6,
   .h6 {
-    $font-size: _heading-font-size(6);
-    font-size: font-size($font-size);
+    @include text-size(lg);
   }
 
-  // Prose typography
   .prose {
-    h1,
-    .h1 {
-      @include _heading-prose-spacing(1, $margin-top: false);
+    @include prose('h1') {
+      @include prose-heading($margin-top: false);
     }
 
-    h2,
-    .h2 {
-      @include _heading-prose-spacing(2);
-    }
-
-    h3,
-    .h3 {
-      @include _heading-prose-spacing(3);
-    }
-
-    h4,
-    .h4 {
-      @include _heading-prose-spacing(4);
-    }
-
-    h5,
-    .h5 {
-      @include _heading-prose-spacing(5);
-    }
-
-    h6,
-    .h6 {
-      @include _heading-prose-spacing(6);
+    @include prose('h2, h3, h4, h5, h6') {
+      @include prose-heading;
     }
   }
 }
 
 @mixin lists {
-  // Prose typography
   .prose {
     ul,
     ol {
@@ -176,6 +131,58 @@
   }
 }
 
+// Add spacing to heading when inside a prose parent
+@mixin prose-heading($margin-top: true) {
+  /* stylelint-disable */
+
+  @if $margin-top {
+    margin-top: config.$prose-headings-margin-top;
+
+    :where(& + *) {
+      margin-top: 0 !important;
+    }
+  }
+
+  line-height: fluid-line-height(config.$prose-headings-line-height-factor);
+  margin-bottom: config.$prose-headings-margin-bottom;
+  /* stylelint-enable */
+}
+
+@mixin prose($selector) {
+  $ignore-prose-selector: ':not(:where([class~=' not-prose '] *))';
+
+  #{selector.unify($selector, $ignore-prose-selector)} {
+    @content;
+  }
+}
+
+// --------------------------------
+//   Generators
+// --------------------------------
+
+// Output font-sizes as CSS Custom properties
+@mixin generate-font-sizes-css-vars($prefix) {
+  /*! purgecss start ignore */
+  @for $i from 1 through length($_type-steps) {
+    $size: list.nth($_type-steps, $i);
+    @include custom-prop($prefix, $size, font-size($size));
+  }
+  /*! purgecss end ignore */
+}
+
+// Output fluid font-sizes as CSS Custom properties
+@mixin generate-fluid-font-sizes-css-vars($prefix) {
+  /*! purgecss start ignore */
+  @for $i from 1 through length($_type-steps) {
+    $size: list.nth($_type-steps, $i);
+    $min: config.$base-font-size * math.pow(config.$fluid-type-scale, $i - $_type-base-index);
+    $max: config.$base-font-size * math.pow(config.$fluid-type-scale, $i - $_type-base-index + 1);
+
+    @include custom-prop($prefix, $size, #{fluid-font-size($min, $max)});
+  }
+  /*! purgecss end ignore */
+}
+
 // --------------------------------
 //   Styles
 // --------------------------------
@@ -184,4 +191,28 @@
   @include base;
   @include headings;
   @include lists;
+}
+
+// --------------------------------
+//   CSS Custom Properties
+// --------------------------------
+
+@mixin vars {
+  // Font family
+  @include generate-css-vars(theme(font-family), $font-family-prefix);
+
+  // Font size
+  @include generate-font-sizes-css-vars($font-size-prefix);
+
+  // Fluid font size
+  @include generate-fluid-font-sizes-css-vars($fluid-font-size-prefix);
+
+  // Font weight
+  @include generate-css-vars(theme(font-weight), $font-weight-prefix);
+
+  // Leading
+  @include generate-css-vars(theme(leading), $leading-prefix);
+
+  // Tracking
+  @include generate-css-vars(theme(tracking), $tracking-prefix);
 }

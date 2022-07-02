@@ -4,8 +4,13 @@
 
 @use 'sass:list';
 
+@use '../config';
 @use 'color' as *;
 @use 'output' as *;
+
+// --------------------------------
+// Vars
+// --------------------------------
 
 $ignore-accent-colors: (white black surface text border);
 

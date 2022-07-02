@@ -20,11 +20,13 @@
     @include default.styles();
   }
 
+  // TODO: Add rest of properties, border, layer, etc...
   @if setting(use-css-variables) {
     :root {
       @include animation.vars;
       @include color.vars;
       @include shadow.vars;
+      @include typography.vars;
     }
   }
 
