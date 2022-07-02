@@ -76,14 +76,16 @@
   }
 
   blockquote {
+    background-color: var(--koi-quote-background, fill(surface, 2));
     border-left-color: var(--koi-quote-border-color, accent(5));
     border-left-width: var(--koi-quote-border-with, 0.25rem);
+    border-radius: var(--koi-quote-border-radius, 3px);
     color: var(--koi-quote-foreground, fill(text, 1));
     font-style: italic;
     font-weight: font(medium);
     margin-bottom: 1.6em;
     margin-top: 1.6em;
-    padding-left: 1em;
+    padding: 0.25em 2em;
 
     p {
       margin-bottom: 1.25em;
@@ -100,6 +102,10 @@
       &::after {
         content: close-quote;
       }
+    }
+
+    cite {
+      margin-bottom: 1.25em;
     }
   }
 

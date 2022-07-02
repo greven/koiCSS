@@ -115,6 +115,21 @@ $_type-base-index: list.index($_type-steps, 'md');
 }
 
 @mixin lists {
+  dl {
+    dt {
+      color: fill(text, 1);
+      font-weight: font(bold);
+    }
+
+    dd {
+      margin: 0;
+    }
+
+    dd + dt {
+      margin-top: spacing(md);
+    }
+  }
+
   .prose {
     ul,
     ol {
@@ -127,7 +142,6 @@ $_type-base-index: list.index($_type-steps, 'md');
 
         &::marker {
           color: var(--koi-list-marker-color, accent(6));
-          font-weight: font(bold);
         }
       }
     }
