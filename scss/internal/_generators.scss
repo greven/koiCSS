@@ -7,7 +7,7 @@
 @use 'color' as *;
 @use 'output' as *;
 
-$ignore-accent-colors: (white black);
+$ignore-accent-colors: (white black surface text border);
 
 // --------------------------------
 // CSS Custom Props
