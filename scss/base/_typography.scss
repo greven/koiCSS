@@ -148,7 +148,7 @@ $_type-base-index: list.index($_type-steps, 'md');
 
     li > ul,
     li > ol {
-      margin-top: spacing(xs);
+      margin-top: spacing(sm);
       padding-inline-start: spacing(lg);
     }
   }
