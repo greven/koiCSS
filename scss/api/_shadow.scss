@@ -30,3 +30,13 @@ $_default-shadow: setting(fallbacks, shadow);
 @mixin shadow($shadow: $_default-shadow) {
   box-shadow: shadow($shadow);
 }
+
+// Apply an Outline shadow
+@mixin outline-shadow($color: rgba(0, 0, 0, 0.5), $width: 2px) {
+  box-shadow: 0 0 0 $width $color;
+}
+
+// Apply an Inner shadow
+@mixin inner-shadow($color: rgba(0, 0, 0, 0.5), $width: 2px) {
+  box-shadow: inset 0 0 0 $width $color;
+}
