@@ -12,8 +12,7 @@
 // @include koi.font-face('Tobias Light', 'fonts/Tobias-Light', $family: Tobias, $weight: 300);
 
 body {
-  padding: 32px;
-  // background: rgb(250, 250, 250);
+  @include koi.container($from: md, $padding: true, $center: true, $max-width: lg);
   // color: #ccc;
 }
 

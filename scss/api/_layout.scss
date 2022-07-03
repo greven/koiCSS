@@ -5,9 +5,9 @@
 @use 'sass:math';
 @use 'sass:meta';
 
-@use 'media-query' as *;
 @use 'border' as *;
 @use 'color' as *;
+@use 'media-query' as *;
 @use 'size' as *;
 @use 'spacing' as *;
 @use 'shadow' as *;
@@ -77,7 +77,7 @@
   }
 }
 
-@mixin container($from: xl, $padding: null, $center: false, $max-width: true) {
+@mixin container($from: xl, $padding: false, $center: false, $max-width: true) {
   $from-width: if(bp($from), bp($from), $from);
 
   width: 100%;
@@ -102,15 +102,30 @@
     }
   }
 
-  // Set the max-width of the element to match the
-  // min-width of the current breakpoint
   @if $max-width {
-    @include mq-from($from-width) {
-      @each $breakpoint, $width in theme(screens) {
-        @include mq-from($breakpoint) {
-          max-width: $width;
+    // Set the max-width of the element to match the
+    // min-width of the current breakpoint
+    @if meta.type-of($max-width) == bool {
+      @include mq-from($from-width) {
+        @each $breakpoint, $width in theme(screens) {
+          @include mq-from($breakpoint) {
+            max-width: $width;
+          }
         }
       }
+      // If $max-width matches a screen size set it
+      // to that breakpoint value
+    } @else if bp($max-width) {
+      @include mq-from($from-width) {
+        max-width: bp($max-width);
+      }
+      // As fallback set $max-width to the passed value
+    } @else if not math.is-unitless($max-width) {
+      @include mq-from($from-width) {
+        max-width: $max-width;
+      }
+    } @else {
+      @error "Please set a valid $max-width value.";
     }
   }
 }
