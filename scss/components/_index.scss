@@ -1,5 +1,7 @@
+@use 'button';
 @use 'keyboard';
 
 @mixin components {
+  @include button.styles();
   @include keyboard.styles();
 }

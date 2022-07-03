@@ -28,7 +28,8 @@ $_default-shadow: setting(fallbacks, shadow);
 // --------------------------------
 
 @mixin shadow($shadow: $_default-shadow) {
-  box-shadow: shadow($shadow);
+  --koi-shadow: #{shadow($shadow)};
+  box-shadow: var(--koi-ring-offset-shadow, 0 0 #0000), var(--koi-ring-shadow, 0 0 #0000), var(--koi-shadow);
 }
 
 // Apply an Outline shadow

@@ -1,0 +1,43 @@
+// --------------------------------
+//   Button Components
+// --------------------------------
+
+@use 'sass:selector';
+
+@use '../api' as *;
+
+// --------------------------------
+//   Vars
+// --------------------------------
+
+$_class: '.btn';
+
+$_selectors: selector.parse(
+  "#{$_class}, a#{$_class}, [type='button']#{$_class}, [type='submit']#{$_class}, [type='reset']#{$_class}"
+);
+
+// --------------------------------
+//   Mixins
+// --------------------------------
+
+// --------------------------------
+//   Styles
+// --------------------------------
+
+@mixin styles {
+  // TODO: Remove this, just trying out focus ring
+  button {
+    @include shadow();
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #333;
+    padding: 0.5rem 1rem;
+
+    &:focus {
+      // @include outline();
+      @include ring();
+      outline: none;
+    }
+  }
+}
