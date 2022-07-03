@@ -168,18 +168,18 @@
 }
 
 @mixin inset($value) {
-  top: $value;
-  right: $value;
   bottom: $value;
   left: $value;
+  right: $value;
+  top: $value;
 }
 
 @mixin inset-x($value) {
-  right: $value;
   left: $value;
+  right: $value;
 }
 
 @mixin inset-y($value) {
-  top: $value;
   bottom: $value;
+  top: $value;
 }
