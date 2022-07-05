@@ -108,9 +108,24 @@
     color: var(--koi-cite-foreground, fill(text, 2));
     display: block;
     font-size: font(sm);
-    margin-top: spacing(10);
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+
+  figure > blockquote {
+    @include rounded-bottom(0);
+    margin-bottom: 0;
+  }
+
+  figure > blockquote + figcaption {
+    @include rounded-bottom(var(--koi-quote-border-radius, 3px));
+    background-color: var(--koi-quote-background, fill(surface, 2));
+    border-left-color: var(--koi-quote-border-color, accent(5));
+    border-left-width: var(--koi-quote-border-with, 0.25rem);
+    color: var(--koi-quote-foreground, fill(text, 1));
+    margin-top: -0.5em;
+    padding: 0 2em 1.5em 2em;
+    text-align: left;
   }
 
   abbr[title] {

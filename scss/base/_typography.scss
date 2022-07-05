@@ -41,7 +41,6 @@ $_type-base-index: list.index($_type-steps, 'md');
   }
 
   .prose {
-    // @include text-size(config.$prose-min-body-font-size);
     font-size: fluid-font-size(config.$prose-body-min-font-size, config.$prose-body-max-font-size);
 
     @include prose(p) {
