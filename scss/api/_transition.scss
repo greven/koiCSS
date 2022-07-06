@@ -6,13 +6,15 @@
 
 @use 'setting' as *;
 @use 'theme' as *;
+@use 'duration' as *;
+@use 'timing' as *;
 
 // --------------------------------
 //   Values
 // --------------------------------
 
-$_default-duration: theme(duration, setting(fallbacks, duration));
-$_default-timing-function: theme(timing, setting(fallbacks, timing));
+$_default-duration: theme(duration, setting(defaults, duration));
+$_default-timing-function: theme(timing, setting(defaults, timing));
 
 $_default-properties: (
   background-color,
@@ -38,9 +40,9 @@ $_default-properties: (
   $delay: null
 ) {
   transition-delay: var(--koi-transition-delay, $delay);
-  transition-duration: var(--koi-transition-duration, $duration);
+  transition-duration: var(--koi-transition-duration, duration($duration));
   transition-property: var(--koi-transition-property, $property);
-  transition-timing-function: var(--koi-transition-timing-function, $timing-function);
+  transition-timing-function: var(--koi-transition-timing-function, timing($timing-function));
 }
 
 @mixin transition-all($duration: $_default-duration, $timing-function: $_default-timing-function, $delay: null) {

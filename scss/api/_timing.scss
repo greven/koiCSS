@@ -5,14 +5,14 @@
 @use 'setting' as *;
 @use 'theme' as *;
 
-$_default-timing: setting(fallbacks, timing);
+$_default-timing: setting(defaults, timing);
 
 // --------------------------------
 //   Functions
 // --------------------------------
 
 @function timing($timing: $_default-timing) {
-  @return theme(timing, $timing);
+  @return theme-or-fallback(timing, $timing);
 }
 
 // --------------------------------

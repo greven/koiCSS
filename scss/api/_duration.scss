@@ -5,14 +5,14 @@
 @use 'setting' as *;
 @use 'theme' as *;
 
-$_default-duration: setting(fallbacks, duration);
+$_default-duration: setting(defaults, duration);
 
 // --------------------------------
 //   Functions
 // --------------------------------
 
 @function duration($duration: $_default-duration) {
-  @return theme(duration, $duration);
+  @return theme-or-fallback(duration, $duration);
 }
 
 // --------------------------------

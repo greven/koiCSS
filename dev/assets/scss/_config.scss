@@ -4,26 +4,6 @@
 
 @use 'koi' with (
   $settings: (
-    //   prefix: 'koi',
-    // typography:
-    //   (
-    //     headings-font-family: (
-    //       Lato,
-    //       ui-sans-serif,
-    //       system-ui,
-    //       sans-serif,
-    //     )
-    //   )
-  ),
-  $theme: (
-    color-schemes: (
-      // light: (
-        // heading: rgb(102, 46, 233),
-        // surface: (1: rgb(243 244 246))
-      // ),
-      // dark: (
-        // heading: rgb(46, 183, 233),
-      // ),
-    ),
+    color-schemes: light dark dim,
   )
 );

@@ -10,18 +10,18 @@
 @use '../config';
 @use '../config/internal' as *;
 @use '../internal' as *;
-@use '../helpers/' as *;
+@use '../helpers' as *;
 @use 'setting' as *;
 
 // --------------------------------
 //   Functions
 // --------------------------------
 
-// Get a value from the theme using
-// fallbacks definied in the config
+// Get a value from the theme using or a
+// default value if definied in the config
 @function theme($keys...) {
   $property: list.nth($keys, 1);
-  $fallback: setting(fallbacks, $property);
+  $fallback: setting(defaults, $property);
   @return map-get-key(config.$theme, $fallback, $keys...);
 }
 
@@ -59,20 +59,56 @@
   @return false;
 }
 
+@function is-color-scheme-enabled($color-scheme) {
+  $color-schemes: setting(color-schemes);
+  @return to-bool(list.index($color-schemes, $color-scheme));
+}
+
 // --------------------------------
 //   Mixins
 // --------------------------------
 
-// Color Schemes
+// ---- Color Schemes Generation ----
 
 @mixin generate-scheme-css-vars($colors-map: (), $color-scheme: null, $suffix: null) {
   @include generate-css-color-vars($colors-map, $color-prefix, $color-scheme);
 }
 
-@mixin _default-color-scheme($color-schemes-map, $color-scheme: setting(default-color-scheme)) {
+@mixin _default-color-scheme($color-schemes-map) {
+  $default-color-scheme: light;
+  $default-color-schemes-map: map.get($color-schemes-map, $default-color-scheme);
+
   html {
-    $color-scheme: light;
-    @include generate-scheme-css-vars(map.get($color-schemes-map, $color-scheme));
+    --color-mode: #{$default-color-scheme};
+    @include generate-scheme-css-vars($default-color-schemes-map);
+  }
+}
+
+// Create color scheme colors (dark, light, ...)
+@mixin color-scheme($color-scheme, $color-schemes-map) {
+  $color-schemes-map: map.get($color-schemes-map, $color-scheme);
+
+  @if is-color-scheme-enabled($color-scheme) {
+    @media (prefers-color-scheme: $color-scheme) {
+      html {
+        @if $color-scheme {
+          --color-mode: #{$color-scheme};
+        }
+
+        @include generate-scheme-css-vars($color-schemes-map);
+        color-scheme: $color-scheme;
+      }
+    }
+
+    [color-scheme='#{$color-scheme}'],
+    [data-theme='#{$color-scheme}'] {
+      @include generate-scheme-css-vars($color-schemes-map);
+      color-scheme: $color-scheme;
+
+      @if $color-scheme {
+        --color-mode: #{$color-scheme};
+      }
+    }
   }
 }
 
@@ -80,49 +116,25 @@
 @mixin create-themes($color-schemes-map) {
   @include _default-color-scheme($color-schemes-map);
 
-  @each $color-scheme, $color in $color-schemes-map {
-    // Generate color scheme colors (dark, light, ...)
-    html {
-      @include generate-scheme-css-vars($color, $color-scheme);
-    }
-
-    @media (prefers-color-scheme: $color-scheme) {
-      html {
-        @include generate-scheme-css-vars(map.get($color-schemes-map, $color-scheme));
-        color-scheme: $color-scheme;
-      }
-    }
-
-    [color-scheme='#{$color-scheme}'],
-    [data-theme='#{$color-scheme}'] {
-      @include generate-scheme-css-vars(map.get($color-schemes-map, $color-scheme));
-      color-scheme: $color-scheme;
-    }
+  @each $color-scheme, $_color in $color-schemes-map {
+    @include color-scheme($color-scheme, $color-schemes-map);
   }
 }
+
+// ---- Helpers ----
 
 // Match color scheme mode
 @mixin color-mode($color-scheme: light) {
-  @media (prefers-color-scheme: $color-scheme) {
-    @at-root #{selector.nest(':root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark])', &)} {
+  @if is-color-scheme-enabled($color-scheme) {
+    @media (prefers-color-scheme: $color-scheme) {
+      @at-root #{selector.nest(':root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark])', &)} {
+        @content;
+      }
+    }
+
+    @at-root #{selector.nest(':root[data-theme=#{$color-scheme}], :root[color-scheme=#{$color-scheme}]', &)} {
       @content;
     }
-  }
-
-  @at-root #{selector.nest(':root[data-theme=#{$color-scheme}], :root[color-scheme=#{$color-scheme}]', &)} {
-    @content;
-  }
-}
-
-// Sets a property value depending on the color mode (light or dark).
-// It takes 3 arguments: the property, the value in light mode, and the value in dark mode.
-@mixin use-color-mode($property, $light-value, $dark-value) {
-  @include light-mode {
-    #{$property}: $light-value;
-  }
-
-  @include dark-mode {
-    #{$property}: $dark-value;
   }
 }
 
@@ -137,5 +149,17 @@
 @mixin dark-mode() {
   @include color-mode(dark) {
     @content;
+  }
+}
+
+// Sets a property value depending on the color mode (light or dark).
+// It takes 3 arguments: the property, the value in light mode, and the value in dark mode.
+@mixin use-color-mode($property, $light-value, $dark-value) {
+  @include light-mode {
+    #{$property}: $light-value;
+  }
+
+  @include dark-mode {
+    #{$property}: $dark-value;
   }
 }

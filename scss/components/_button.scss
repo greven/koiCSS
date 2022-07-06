@@ -35,8 +35,8 @@ $_selectors: selector.parse(
     padding: 0.5rem 1rem;
 
     &:focus {
-      // @include outline();
-      @include ring();
+      // @include outline;
+      @include ring;
       outline: none;
     }
   }

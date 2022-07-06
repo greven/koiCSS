@@ -25,9 +25,9 @@ $_default-settings: (
   use-utilities: false,
   use-css-variables: true,
   use-font-smoothing: true,
-  default-color-scheme: light,
-  default-accent: primary,
-  fallbacks: (
+  color-schemes: light dark,
+  defaults: (
+    accent: primary,
     border-width: 1,
     colors: 6,
     duration: normal,

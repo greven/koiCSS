@@ -9,8 +9,8 @@
 //   Values
 // --------------------------------
 
-$_default-duration: theme(duration, setting(fallbacks, duration));
-$_default-timing-function: theme(timing, setting(fallbacks, timing));
+$_default-duration: theme(duration, setting(defaults, duration));
+$_default-timing-function: theme(timing, setting(defaults, timing));
 
 // --------------------------------
 //   Mixins

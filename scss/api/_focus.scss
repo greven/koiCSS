@@ -4,6 +4,7 @@
 
 @use '../config';
 @use 'color' as *;
+@use 'transition' as *;
 
 // -------------------------------------
 //   Vars
@@ -47,7 +48,8 @@ $_default-style: solid;
   $width: $_default-width,
   $offset: $_default-offset,
   $offset-color: $_default-offset-color,
-  $inset: null
+  $inset: null,
+  $transition: true
 ) {
   --koi-ring-offset-shadow: var(--koi-ring-inset, #{$inset}) 0 0 0 var(--koi-ring-offset, #{$offset})
     var(--koi-ring-offset-color, #{$offset-color});
@@ -56,4 +58,8 @@ $_default-style: solid;
     var(--koi-ring-color, #{$color});
 
   box-shadow: var(--koi-ring-offset-shadow), var(--koi-ring-shadow), var(--koi-shadow, 0 0 #0000);
+
+  @if $transition {
+    @include transition-shadow(faster);
+  }
 }

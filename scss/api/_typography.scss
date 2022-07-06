@@ -17,12 +17,12 @@
 //   Vars
 // --------------------------------
 
-$_default-font-family: setting(fallbacks, font-family);
-$_default-font-size: setting(fallbacks, font-size);
-$_default-font-weight: setting(fallbacks, font-weight);
+$_default-font-family: setting(defaults, font-family);
+$_default-font-size: setting(defaults, font-size);
+$_default-font-weight: setting(defaults, font-weight);
 
-$_default-leading: setting(fallbacks, leading);
-$_default-tracking: setting(fallbacks, tracking);
+$_default-leading: setting(defaults, leading);
+$_default-tracking: setting(defaults, tracking);
 
 $_default-min-bp: bp(2xs);
 $_default-max-bp: bp(2xl);

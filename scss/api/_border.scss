@@ -6,7 +6,7 @@
 @use 'theme' as *;
 @use 'color' as *;
 
-$_default-radius: setting(fallbacks, radius);
+$_default-radius: setting(defaults, radius);
 
 // --------------------------------
 //   Functions

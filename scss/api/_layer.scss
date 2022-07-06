@@ -5,7 +5,7 @@
 @use 'setting' as *;
 @use 'theme' as *;
 
-$_default-layer: setting(fallbacks, layer);
+$_default-layer: setting(defaults, layer);
 
 // --------------------------------
 //   Functions

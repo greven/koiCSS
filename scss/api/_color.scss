@@ -10,8 +10,8 @@
 //   vars
 // --------------------------------
 
-$_default-shade: setting(fallbacks, colors);
-$_default-accent: setting(default-accent);
+$_default-shade: setting(defaults, colors);
+$_default-accent: setting(defaults, accent);
 
 // --------------------------------
 //   Functions
