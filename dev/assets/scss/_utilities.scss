@@ -3,9 +3,9 @@
 @forward 'config';
 @use 'koi';
 
-// @include koi.utilities();
+@include koi.utilities();
 
 // Alternatively We can include the utilities directly or use the pre-built CSS file, this way the build time during development will be largely reduced, there is one catch though, this build won't assume any configuration changes.
-@include meta.load-css('../../../dist/koi-utilities.css');
+// @include meta.load-css('../../../dist/koi-utilities.css');
 
 // << Insert your utility classes here >>

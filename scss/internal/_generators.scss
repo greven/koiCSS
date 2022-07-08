@@ -3,19 +3,26 @@
 // --------------------------------
 
 @use 'sass:list';
+@use 'sass:map';
+@use 'sass:meta';
+@use 'sass:string';
 
 @use '../config';
-@use 'color' as *;
+@use '../helpers' as *;
 @use 'output' as *;
+@use 'color' as *;
 
 // --------------------------------
-// Vars
+//   Vars
 // --------------------------------
 
 $ignore-accent-colors: (white black surface text border);
 
+$prefix: map.get(config.$settings, prefix);
+$util-glue: config.$utility-glue;
+
 // --------------------------------
-// CSS Custom Props
+//   CSS Custom Props
 // --------------------------------
 
 // Generate CSS custom properties (vars) from theme property map.
@@ -43,3 +50,233 @@ $ignore-accent-colors: (white black surface text border);
   }
   /*! purgecss end ignore */
 }
+
+// --------------------------------
+//   Utilities
+// --------------------------------
+
+$standard-class-utils: ();
+$standard-pseudo-utils: ();
+$responsive-class-utils: ();
+$responsive-pseudo-utils: ();
+
+@function -map-class-props($properties, $local-vars, $value) {
+  $local-var-prefix: 'koi-';
+  $use-important: config.$utility-use-important;
+  $merged-props: ();
+  $merged-custom-props: ();
+
+  @each $property in $properties {
+    @if $local-vars {
+      @each $local-var, $variable in $local-vars {
+        $map: (--#{$local-var-prefix}#{$local-var}: #{$variable});
+        $merged-custom-props: map.merge($merged-custom-props, $map);
+      }
+    }
+
+    $map: (#{$property}: $value #{if($use-important, !important, null)});
+    $merged-props: map.merge($merged-props, $map);
+  }
+
+  @return map.merge($merged-props, $merged-custom-props);
+}
+
+/* stylelint-disable */
+@mixin -create-utility-maps($utilities) {
+  @each $utility-key, $utility in $utilities {
+    $prefix: if($prefix == '', $prefix, '#{$prefix}-');
+    $values: map.get($utility, values);
+    $screens: map.get(config.$theme, screens);
+    $pseudos: if(map.has-key($utility, state), map.get($utility, state), ());
+    $local-vars: map.get($utility, local-vars);
+    $responsive: map.get($utility, responsive);
+    // TODO: Default value generation
+    $default-value: if(map.has-key($utility, default), map.get($utility, default), null);
+
+    // If the values are a list or string, convert it into a map
+    @if meta.type-of($values) == 'string' or meta.type-of(list.nth($values, 1)) != 'list' {
+      $values: list.zip($values, $values);
+    }
+
+    // Standard class set
+    $class-set: ();
+    $pseudo-set: ();
+
+    @each $key, $value in $values {
+      $properties: map.get($utility, property);
+
+      // Multiple properties are possible
+      @if meta.type-of($properties) == 'string' {
+        $properties: list.append((), $properties);
+      }
+
+      // Use custom class name if present
+      $class-name: if(map.has-key($utility, class), map.get($utility, class), list.nth($properties, 1));
+      $class-name: if($class-name == null, '', str-escape($class-name));
+      $class-name-modifier: if($key, str-escape(if($class-name == '', '', '-') + $key), '');
+      $compiled-class-name: #{$prefix}#{$class-name}#{$class-name-modifier};
+
+      @if $value != null {
+        @if meta.type-of($value) == 'string' {
+          $value: string.unquote($value);
+        }
+
+        $properties-map: -map-class-props($properties, $local-vars, $value);
+
+        $map: (
+          '#{$compiled-class-name}': (
+            parent: null,
+            category: standard,
+            class-name: $class-name,
+            class-name-modifier: $class-name-modifier,
+            selector: '.#{$compiled-class-name}',
+            responsive: $responsive,
+            default: map.get($utility, default),
+            properties: $properties-map,
+          ),
+        );
+
+        $class-set: map.merge($class-set, $map);
+
+        // Pseudo / state variants
+        @each $pseudo in $pseudos {
+          $compiled-pseudo-name: str-escape(#{$pseudo}#{$util-glue}#{$compiled-class-name});
+
+          $map: (
+            '#{$compiled-pseudo-name}': (
+              parent: '.#{$compiled-class-name}',
+              category: pseudo,
+              class-name: $class-name,
+              class-name-modifier: $class-name-modifier,
+              selector: '.#{$compiled-pseudo-name}:#{$pseudo}',
+              responsive: $responsive,
+              pseudo: $pseudo,
+              default: map.get($utility, default),
+              properties: $properties-map,
+            ),
+          );
+
+          $pseudo-set: map.merge($pseudo-set, $map);
+        }
+      }
+    }
+
+    $standard-class-utils: map.merge($standard-class-utils, $class-set) !global;
+    $standard-pseudo-utils: map.merge($standard-pseudo-utils, $pseudo-set) !global;
+
+    // Responsive class set
+    @if $responsive {
+      @each $screen, $breakpoint in $screens {
+        $class-set: ();
+        // $pseudo-set: ();
+
+        $infix: str-escape(#{$screen}#{$util-glue});
+
+        @each $key, $value in $values {
+          $properties: map.get($utility, property);
+
+          // Multiple properties are possible
+          @if meta.type-of($properties) == 'string' {
+            $properties: list.append((), $properties);
+          }
+
+          // Use custom class name if present
+          $class-name: if(map.has-key($utility, class), map.get($utility, class), list.nth($properties, 1));
+          $class-name: if($class-name == null, '', str-escape($class-name));
+          $class-name-modifier: if($key, str-escape(if($class-name == '', '', '-') + $key), '');
+          $compiled-class-name: #{$prefix}#{$class-name}#{$class-name-modifier};
+
+          @if $value != null {
+            @if meta.type-of($value) == 'string' {
+              $value: string.unquote($value);
+            }
+
+            $properties-map: -map-class-props($properties, $local-vars, $value);
+
+            $map: (
+              '#{$infix}#{$compiled-class-name}': (
+                category: standard,
+                class-name: $class-name,
+                class-name-modifier: $class-name-modifier,
+                selector: '.#{$infix}#{$compiled-class-name}',
+                responsive: $responsive,
+                screen: $screen,
+                default: map.get($utility, default),
+                properties: $properties-map,
+              ),
+            );
+
+            $class-set: map.merge($class-set, $map);
+          }
+        }
+
+        $responsive-class-utils: map.merge($responsive-class-utils, $class-set) !global;
+        // $responsive-pseudo-utils: map.merge($responsive-class-utils, $class-set) !global;
+      }
+    }
+  }
+}
+
+@mixin generate-utilities($utilities) {
+  $screens: map.get(config.$theme, screens);
+  $standard-class-set: map.merge($standard-class-utils, $standard-pseudo-utils);
+  $responsive-class-set: map.merge($responsive-class-utils, $responsive-pseudo-utils);
+  @include -create-utility-maps($utilities);
+
+  @each $class, $class-map in $standard-class-set {
+    $selector: map.get($class-map, selector);
+    $parent: map.get($class-map, parent);
+    $category: map.get($class-map, category);
+    $properties: map.get($class-map, properties);
+
+    #{$selector} {
+      @if $category == standard {
+        @each $key, $value in $properties {
+          #{$key}: #{$value};
+        }
+      } @else {
+        @extend #{$parent};
+      }
+    }
+  }
+
+  @each $screen, $breakpoint in $screens {
+    @media screen and (min-width: $breakpoint) {
+      @each $class, $class-map in $responsive-class-set {
+        @if $screen == map.get($class-map, screen) {
+          $selector: map.get($class-map, selector);
+          $properties: map.get($class-map, properties);
+
+          #{$selector} {
+            @each $key, $value in $properties {
+              #{$key}: #{$value};
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Create a single responsive utility
+@mixin create-responsive-utility($class) {
+  $screens: map.get(config.$theme, screens);
+  $class: str-escape($class);
+
+  // Create standard utility first
+  .#{$class} {
+    @content;
+  }
+
+  // Create responsive class modifiers
+  @each $screen, $breakpoint in $screens {
+    $infix: str-escape(#{'' + $screen + $util-glue});
+
+    @media screen and (min-width: $breakpoint) {
+      .#{$infix + $class} {
+        @content;
+      }
+    }
+  }
+}
+/* stylelint-enable */

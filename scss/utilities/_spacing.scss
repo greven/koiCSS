@@ -1,0 +1,29 @@
+// ---------------------------------
+//   Spacing Utilities
+// ---------------------------------
+
+@use 'sass:map';
+
+@use '../config';
+@use '../api' as *;
+
+$spacing: theme(spacing);
+$margin-spacing: map.merge(
+  $spacing,
+  (
+    auto: auto,
+  )
+);
+
+// --------------------------------
+//   Utilities
+// --------------------------------
+
+$utilities: (
+  'margin': (
+    property: margin,
+    class: m,
+    responsive: true,
+    values: $margin-spacing,
+  ),
+);
