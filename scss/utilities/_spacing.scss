@@ -8,6 +8,7 @@
 @use '../api' as *;
 
 $spacing: theme(spacing);
+
 $margin-spacing: map.merge(
   $spacing,
   (
@@ -25,5 +26,143 @@ $utilities: (
     class: m,
     responsive: true,
     values: $margin-spacing,
+  ),
+  'margin-x': (
+    property: margin-right margin-left,
+    class: mx,
+    responsive: true,
+    values: $margin-spacing,
+  ),
+  'margin-y': (
+    property: margin-top margin-bottom,
+    class: my,
+    responsive: true,
+    values: $margin-spacing,
+  ),
+  'margin-top': (
+    property: margin-top,
+    class: mt,
+    responsive: true,
+    values: $margin-spacing,
+  ),
+  'margin-right': (
+    property: margin-right,
+    class: mr,
+    responsive: true,
+    values: $margin-spacing,
+  ),
+  'margin-bottom': (
+    property: margin-bottom,
+    class: mb,
+    responsive: true,
+    values: $margin-spacing,
+  ),
+  'margin-left': (
+    property: margin-left,
+    class: ml,
+    responsive: true,
+    values: $margin-spacing,
+  ),
+  '-margin': (
+    property: margin,
+    class: -m,
+    responsive: true,
+    values: $negative-spacing,
+  ),
+  '-margin-x': (
+    property: margin-right margin-left,
+    class: -mx,
+    responsive: true,
+    values: $negative-spacing,
+  ),
+  '-margin-y': (
+    property: margin-top margin-bottom,
+    class: -my,
+    responsive: true,
+    values: $negative-spacing,
+  ),
+  '-margin-top': (
+    property: margin-top,
+    class: -mt,
+    responsive: true,
+    values: $negative-spacing,
+  ),
+  '-margin-right': (
+    property: margin-right,
+    class: -mr,
+    responsive: true,
+    values: $negative-spacing,
+  ),
+  '-margin-bottom': (
+    property: margin-bottom,
+    class: -mb,
+    responsive: true,
+    values: $negative-spacing,
+  ),
+  '-margin-left': (
+    property: margin-left,
+    class: -ml,
+    responsive: true,
+    values: $negative-spacing,
+  ),
+  'padding': (
+    property: padding,
+    class: p,
+    responsive: true,
+    values: $spacing,
+  ),
+  'padding-x': (
+    property: padding-right padding-left,
+    class: px,
+    responsive: true,
+    values: $spacing,
+  ),
+  'padding-y': (
+    property: padding-top padding-bottom,
+    class: py,
+    responsive: true,
+    values: $spacing,
+  ),
+  'padding-top': (
+    property: padding-top,
+    class: pt,
+    responsive: true,
+    values: $spacing,
+  ),
+  'padding-right': (
+    property: padding-right,
+    class: pr,
+    responsive: true,
+    values: $spacing,
+  ),
+  'padding-bottom': (
+    property: padding-bottom,
+    class: pb,
+    responsive: true,
+    values: $spacing,
+  ),
+  'padding-left': (
+    property: padding-left,
+    class: pl,
+    responsive: true,
+    values: $spacing,
+  ),
+  'gap': (
+    property: gap,
+    class: gap,
+    responsive: true,
+    values: $spacing,
+  ),
+  'gap-x': (
+    property: column-gap,
+    class: gap-x,
+    responsive: true,
+    values: $spacing,
+  ),
+  'gap-y': (
+    property: row-gap,
+    class: gap-y,
+    responsive: true,
+    values: $spacing,
   ),
 );

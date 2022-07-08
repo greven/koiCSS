@@ -1,0 +1,39 @@
+// --------------------------------
+//   Internal Utilities Helpers
+// --------------------------------
+
+@use 'sass:map';
+
+@use '../config';
+@use '../helpers' as *;
+
+// --------------------------------
+//   Support Vars
+// --------------------------------
+
+// --------------------------------
+//   Functions
+// --------------------------------
+
+// Create a map with the CSS custom properties for utilities
+@function map-utility-class-props($properties, $local-vars, $value) {
+  $local-var-prefix: 'koi-';
+  $use-important: config.$utility-use-important;
+
+  $merged-props: ();
+  $merged-custom-props: ();
+
+  @each $property in $properties {
+    @if $local-vars {
+      @each $local-var, $variable in $local-vars {
+        $map: (--#{$local-var-prefix}#{$local-var}: #{$variable});
+        $merged-custom-props: map.merge($merged-custom-props, $map);
+      }
+    }
+
+    $map: (#{$property}: $value #{if($use-important, !important, null)});
+    $merged-props: map.merge($merged-props, $map);
+  }
+
+  @return map.merge($merged-props, $merged-custom-props);
+}

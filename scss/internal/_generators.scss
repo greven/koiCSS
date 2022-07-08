@@ -9,6 +9,7 @@
 
 @use '../config';
 @use '../helpers' as *;
+@use 'utilities' as *;
 @use 'output' as *;
 @use 'color' as *;
 
@@ -18,12 +19,11 @@
 
 $ignore-accent-colors: (white black surface text border);
 
-$prefix: map.get(config.$settings, prefix);
-$util-glue: config.$utility-glue;
-
 // --------------------------------
 //   CSS Custom Props
 // --------------------------------
+
+/* stylelint-disable */
 
 // Generate CSS custom properties (vars) from theme property map.
 // Example:  @include generate-css-vars(theme(shadow), shadow);
@@ -55,43 +55,23 @@ $util-glue: config.$utility-glue;
 //   Utilities
 // --------------------------------
 
-$standard-class-utils: ();
-$standard-pseudo-utils: ();
-$responsive-class-utils: ();
-$responsive-pseudo-utils: ();
+$_standard-class-utils: ();
+$_standard-pseudo-utils: ();
+$_responsive-class-utils: ();
+$_responsive-pseudo-utils: ();
 
-@function -map-class-props($properties, $local-vars, $value) {
-  $local-var-prefix: 'koi-';
-  $use-important: config.$utility-use-important;
-  $merged-props: ();
-  $merged-custom-props: ();
-
-  @each $property in $properties {
-    @if $local-vars {
-      @each $local-var, $variable in $local-vars {
-        $map: (--#{$local-var-prefix}#{$local-var}: #{$variable});
-        $merged-custom-props: map.merge($merged-custom-props, $map);
-      }
-    }
-
-    $map: (#{$property}: $value #{if($use-important, !important, null)});
-    $merged-props: map.merge($merged-props, $map);
-  }
-
-  @return map.merge($merged-props, $merged-custom-props);
-}
-
-/* stylelint-disable */
-@mixin -create-utility-maps($utilities) {
-  @each $utility-key, $utility in $utilities {
-    $prefix: if($prefix == '', $prefix, '#{$prefix}-');
-    $values: map.get($utility, values);
+@mixin _create-utility-maps($utilities) {
+  $util-glue: config.$utility-glue;
+  $prefix: map.get(config.$settings, prefix);
+  $prefix: if($prefix == '', $prefix, '#{$prefix}-');
+  @each $utility-key, $utility-map in $utilities {
+    $values: map.get($utility-map, values);
     $screens: map.get(config.$theme, screens);
-    $pseudos: if(map.has-key($utility, state), map.get($utility, state), ());
-    $local-vars: map.get($utility, local-vars);
-    $responsive: map.get($utility, responsive);
+    $pseudos: if(map.has-key($utility-map, state), map.get($utility-map, state), ());
+    $local-vars: map.get($utility-map, local-vars);
+    $responsive: map.get($utility-map, responsive);
     // TODO: Default value generation
-    $default-value: if(map.has-key($utility, default), map.get($utility, default), null);
+    // $default-value: if(map.has-key($utility-map, default), map.get($utility-map, default), null);
 
     // If the values are a list or string, convert it into a map
     @if meta.type-of($values) == 'string' or meta.type-of(list.nth($values, 1)) != 'list' {
@@ -103,7 +83,7 @@ $responsive-pseudo-utils: ();
     $pseudo-set: ();
 
     @each $key, $value in $values {
-      $properties: map.get($utility, property);
+      $properties: map.get($utility-map, property);
 
       // Multiple properties are possible
       @if meta.type-of($properties) == 'string' {
@@ -111,7 +91,7 @@ $responsive-pseudo-utils: ();
       }
 
       // Use custom class name if present
-      $class-name: if(map.has-key($utility, class), map.get($utility, class), list.nth($properties, 1));
+      $class-name: if(map.has-key($utility-map, class), map.get($utility-map, class), list.nth($properties, 1));
       $class-name: if($class-name == null, '', str-escape($class-name));
       $class-name-modifier: if($key, str-escape(if($class-name == '', '', '-') + $key), '');
       $compiled-class-name: #{$prefix}#{$class-name}#{$class-name-modifier};
@@ -121,7 +101,7 @@ $responsive-pseudo-utils: ();
           $value: string.unquote($value);
         }
 
-        $properties-map: -map-class-props($properties, $local-vars, $value);
+        $properties-map: map-utility-class-props($properties, $local-vars, $value);
 
         $map: (
           '#{$compiled-class-name}': (
@@ -131,7 +111,7 @@ $responsive-pseudo-utils: ();
             class-name-modifier: $class-name-modifier,
             selector: '.#{$compiled-class-name}',
             responsive: $responsive,
-            default: map.get($utility, default),
+            default: map.get($utility-map, default),
             properties: $properties-map,
           ),
         );
@@ -151,7 +131,7 @@ $responsive-pseudo-utils: ();
               selector: '.#{$compiled-pseudo-name}:#{$pseudo}',
               responsive: $responsive,
               pseudo: $pseudo,
-              default: map.get($utility, default),
+              default: map.get($utility-map, default),
               properties: $properties-map,
             ),
           );
@@ -161,8 +141,8 @@ $responsive-pseudo-utils: ();
       }
     }
 
-    $standard-class-utils: map.merge($standard-class-utils, $class-set) !global;
-    $standard-pseudo-utils: map.merge($standard-pseudo-utils, $pseudo-set) !global;
+    $_standard-class-utils: map.merge($_standard-class-utils, $class-set) !global;
+    $_standard-pseudo-utils: map.merge($_standard-pseudo-utils, $pseudo-set) !global;
 
     // Responsive class set
     @if $responsive {
@@ -173,7 +153,7 @@ $responsive-pseudo-utils: ();
         $infix: str-escape(#{$screen}#{$util-glue});
 
         @each $key, $value in $values {
-          $properties: map.get($utility, property);
+          $properties: map.get($utility-map, property);
 
           // Multiple properties are possible
           @if meta.type-of($properties) == 'string' {
@@ -181,7 +161,7 @@ $responsive-pseudo-utils: ();
           }
 
           // Use custom class name if present
-          $class-name: if(map.has-key($utility, class), map.get($utility, class), list.nth($properties, 1));
+          $class-name: if(map.has-key($utility-map, class), map.get($utility-map, class), list.nth($properties, 1));
           $class-name: if($class-name == null, '', str-escape($class-name));
           $class-name-modifier: if($key, str-escape(if($class-name == '', '', '-') + $key), '');
           $compiled-class-name: #{$prefix}#{$class-name}#{$class-name-modifier};
@@ -191,7 +171,7 @@ $responsive-pseudo-utils: ();
               $value: string.unquote($value);
             }
 
-            $properties-map: -map-class-props($properties, $local-vars, $value);
+            $properties-map: map-utility-class-props($properties, $local-vars, $value);
 
             $map: (
               '#{$infix}#{$compiled-class-name}': (
@@ -201,7 +181,7 @@ $responsive-pseudo-utils: ();
                 selector: '.#{$infix}#{$compiled-class-name}',
                 responsive: $responsive,
                 screen: $screen,
-                default: map.get($utility, default),
+                default: map.get($utility-map, default),
                 properties: $properties-map,
               ),
             );
@@ -210,8 +190,8 @@ $responsive-pseudo-utils: ();
           }
         }
 
-        $responsive-class-utils: map.merge($responsive-class-utils, $class-set) !global;
-        // $responsive-pseudo-utils: map.merge($responsive-class-utils, $class-set) !global;
+        $_responsive-class-utils: map.merge($_responsive-class-utils, $class-set) !global;
+        // $_responsive-pseudo-utils: map.merge($_responsive-class-utils, $class-set) !global;
       }
     }
   }
@@ -219,9 +199,11 @@ $responsive-pseudo-utils: ();
 
 @mixin generate-utilities($utilities) {
   $screens: map.get(config.$theme, screens);
-  $standard-class-set: map.merge($standard-class-utils, $standard-pseudo-utils);
-  $responsive-class-set: map.merge($responsive-class-utils, $responsive-pseudo-utils);
-  @include -create-utility-maps($utilities);
+
+  @include _create-utility-maps($utilities);
+
+  $standard-class-set: map.merge($_standard-class-utils, $_standard-pseudo-utils);
+  $responsive-class-set: map.merge($_responsive-class-utils, $_responsive-pseudo-utils);
 
   @each $class, $class-map in $standard-class-set {
     $selector: map.get($class-map, selector);
@@ -260,6 +242,7 @@ $responsive-pseudo-utils: ();
 
 // Create a single responsive utility
 @mixin create-responsive-utility($class) {
+  $util-glue: config.$utility-glue;
   $screens: map.get(config.$theme, screens);
   $class: str-escape($class);
 
