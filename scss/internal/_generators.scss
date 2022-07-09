@@ -67,7 +67,7 @@ $_responsive-pseudo-utils: ();
   @each $utility-key, $utility-map in $utilities {
     $values: map.get($utility-map, values);
     $screens: map.get(config.$theme, screens);
-    $pseudos: if(map.has-key($utility-map, state), map.get($utility-map, state), ());
+    $pseudos: if(map.has-key($utility-map, pseudos), map.get($utility-map, pseudos), ());
     $local-vars: map.get($utility-map, local-vars);
     $responsive: map.get($utility-map, responsive);
     // TODO: Default value generation
@@ -128,7 +128,7 @@ $_responsive-pseudo-utils: ();
               category: pseudo,
               class-name: $class-name,
               class-name-modifier: $class-name-modifier,
-              selector: '.#{$compiled-pseudo-name}:#{$pseudo}',
+              selector: '.#{$compiled-pseudo-name}#{pseudo-class($pseudo)}',
               responsive: $responsive,
               pseudo: $pseudo,
               default: map.get($utility-map, default),
@@ -239,6 +239,7 @@ $_responsive-pseudo-utils: ();
     }
   }
 }
+/* stylelint-enable */
 
 // Create a single responsive utility
 @mixin create-responsive-utility($class) {
@@ -262,4 +263,3 @@ $_responsive-pseudo-utils: ();
     }
   }
 }
-/* stylelint-enable */

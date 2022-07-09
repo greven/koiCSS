@@ -11,9 +11,30 @@
 //   Support Vars
 // --------------------------------
 
+$pseudos: (
+  first: ':first-child',
+  last: ':last-child',
+  first-type: ':first-of-type',
+  last-type: ':last-of-type',
+  odd: ':nth-child(odd)',
+  even: ':nth-child(even)',
+  hover: ':hover',
+  focus: ':focus',
+  active: ':active',
+  visited: ':visited',
+  checked: ':checked',
+  disabled: ':disabled',
+  empty: ':empty',
+  focus-within: ':focus-within',
+);
+
 // --------------------------------
 //   Functions
 // --------------------------------
+
+@function pseudo-class($key) {
+  @return map.get($pseudos, $key);
+}
 
 // Create a map with the CSS custom properties for utilities
 @function map-utility-class-props($properties, $local-vars, $value) {

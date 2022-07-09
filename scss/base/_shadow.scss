@@ -11,5 +11,6 @@
 // --------------------------------
 
 @mixin vars {
+  // --------SHADOWS--------
   @include generate-css-vars(theme(shadow), $shadow-prefix);
 }

@@ -18,6 +18,8 @@
   "license": "MIT",
   "scripts": {
     "build:dev": "sass -I node_modules -I scss -I dist --no-source-map dev/assets/scss:dev/assets/css && npm run postcss:dev",
+    "build:utilities": "sass -I node_modules --no-source-map scss/koi-utilities.scss:dist/koi-utilities.css",
+    "build:utilities:min": "sass -I node_modules -s compressed --no-source-map scss/koi-utilities.scss:dist/koi-utilities.css",
     "build:styles": "sass -I node_modules --no-source-map scss/koi-styles.scss:dist/koi.css scss/koi-utilities.scss:dist/koi-utilities.css",
     "build:styles:min": "sass -I node_modules -s compressed --no-source-map scss/koi-styles.scss:dist/koi.min.css scss/koi-utilities.scss:dist/koi-utilities.min.css",
     "build": "npm run clean && concurrently npm:build:styles npm:build:styles:min && concurrently npm:postcss:prod*",

@@ -1,0 +1,26 @@
+// ------------------------------------------------
+//   Effects Utilities (Box Shadow, Opacity, ...)
+// ------------------------------------------------
+
+@use '../config';
+@use '../api' as *;
+
+// --------------------------------
+//   Vars
+// --------------------------------
+
+$shadows: theme(shadow);
+
+// --------------------------------
+//   Utilities
+// --------------------------------
+
+$utilities: (
+  shadow: (
+    property: box-shadow,
+    class: shadow,
+    pseudos: hover focus,
+    default: setting(fallbacks, shadow),
+    values: $shadows,
+  ),
+);

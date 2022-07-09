@@ -131,7 +131,7 @@
 // --------------------------------
 
 @mixin vars {
-  // Animation
+  // --------ANIMATIONS--------
   @include custom-prop($animation-prefix, blink, (blink 1s timing(ease) infinite));
   @include custom-prop($animation-prefix, bounce, (bounce 2s timing(ease) infinite));
   @include custom-prop($animation-prefix, fade-in, (fade-in 0.5s timing(ease)));
@@ -142,12 +142,12 @@
   @include custom-prop($animation-prefix, spin, (spin 2s timing(linear) infinite));
   @include custom-prop($animation-prefix, ring, (ring 500ms timing(linear) infinite));
 
-  // Animation and Transition Timing Functions
+  // --------TIMING-FUNCTIONS--------
   @include generate-css-vars(theme(timing));
 
-  // Animation and Transition Duration
+  // --------DURATIONS--------
   @include generate-css-vars(theme(duration), $duration-prefix);
 
-  // Animation and Transition Delay
+  // --------DELAYS--------
   @include generate-css-vars(theme(delay), $delay-prefix);
 }

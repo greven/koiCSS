@@ -3,6 +3,7 @@
 // --------------------------------
 
 @mixin styles {
+  /*! purgecss start ignore */
   /* Better box model */
   *,
   *::before,
@@ -165,4 +166,5 @@
       transition-duration: 0.01ms !important;
     }
   }
+  /*! purgecss end ignore */
 }

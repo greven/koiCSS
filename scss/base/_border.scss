@@ -1,5 +1,5 @@
 // --------------------------------
-//   Screen Styles (Breakpoints)
+//   Border Styles
 // --------------------------------
 
 @use '../config/internal' as *;
@@ -11,6 +11,6 @@
 // --------------------------------
 
 @mixin vars {
-  // --------SCREENS--------
-  @include generate-css-vars(theme(screens), $screens-prefix);
+  // --------RADIUS--------
+  @include generate-css-vars(theme(radius), $radius-prefix);
 }

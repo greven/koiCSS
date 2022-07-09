@@ -1,13 +1,12 @@
 @use '../helpers' as *;
 
 @use '../internal' as *;
+@use 'effects';
 @use 'spacing';
 
 $utilities: () !default;
-$utilities: map-deep-merge(spacing.$utilities);
+$utilities: map-deep-merge(effects.$utilities, spacing.$utilities);
 
 @mixin utilities {
   @include generate-utilities($utilities);
 }
-
-// TODO: Responsive utils not being generated...

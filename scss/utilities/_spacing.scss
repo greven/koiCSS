@@ -7,6 +7,10 @@
 @use '../config';
 @use '../api' as *;
 
+// --------------------------------
+//   Vars
+// --------------------------------
+
 $spacing: theme(spacing);
 
 $margin-spacing: map.merge(
@@ -42,24 +46,28 @@ $utilities: (
   'margin-top': (
     property: margin-top,
     class: mt,
+    pseudos: first last,
     responsive: true,
     values: $margin-spacing,
   ),
   'margin-right': (
     property: margin-right,
     class: mr,
+    pseudos: first last,
     responsive: true,
     values: $margin-spacing,
   ),
   'margin-bottom': (
     property: margin-bottom,
     class: mb,
+    pseudos: first last,
     responsive: true,
     values: $margin-spacing,
   ),
   'margin-left': (
     property: margin-left,
     class: ml,
+    pseudos: first last,
     responsive: true,
     values: $margin-spacing,
   ),
@@ -84,24 +92,28 @@ $utilities: (
   '-margin-top': (
     property: margin-top,
     class: -mt,
+    pseudos: first last,
     responsive: true,
     values: $negative-spacing,
   ),
   '-margin-right': (
     property: margin-right,
     class: -mr,
+    pseudos: first last,
     responsive: true,
     values: $negative-spacing,
   ),
   '-margin-bottom': (
     property: margin-bottom,
     class: -mb,
+    pseudos: first last,
     responsive: true,
     values: $negative-spacing,
   ),
   '-margin-left': (
     property: margin-left,
     class: -ml,
+    pseudos: first last,
     responsive: true,
     values: $negative-spacing,
   ),
@@ -126,24 +138,28 @@ $utilities: (
   'padding-top': (
     property: padding-top,
     class: pt,
+    pseudos: first last,
     responsive: true,
     values: $spacing,
   ),
   'padding-right': (
     property: padding-right,
     class: pr,
+    pseudos: first last,
     responsive: true,
     values: $spacing,
   ),
   'padding-bottom': (
     property: padding-bottom,
     class: pb,
+    pseudos: first last,
     responsive: true,
     values: $spacing,
   ),
   'padding-left': (
     property: padding-left,
     class: pl,
+    pseudos: first last,
     responsive: true,
     values: $spacing,
   ),

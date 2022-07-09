@@ -219,21 +219,19 @@ $_type-base-index: list.index($_type-steps, 'md');
 // --------------------------------
 
 @mixin vars {
-  // Font family
+  // --------FONT-FAMILIES--------
   @include generate-css-vars(theme(font-family), $font-family-prefix);
 
-  // Font size
+  // --------FONT-SIZES--------
   @include generate-font-sizes-css-vars($font-size-prefix);
-
-  // Fluid font size
   @include generate-fluid-font-sizes-css-vars($fluid-font-size-prefix);
 
-  // Font weight
+  // --------FONT-WEIGHTS--------
   @include generate-css-vars(theme(font-weight), $font-weight-prefix);
 
-  // Leading
+  // --------LEADING--------
   @include generate-css-vars(theme(leading), $leading-prefix);
 
-  // Tracking
+  // --------TRACKING--------
   @include generate-css-vars(theme(tracking), $tracking-prefix);
 }

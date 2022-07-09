@@ -1,0 +1,37 @@
+// --------------------------------
+//   Utility classes API
+// --------------------------------
+
+@use 'sass:map';
+
+@use '../config';
+@use '../helpers' as *;
+
+// --------------------------------
+//   Mixins
+// --------------------------------
+
+// Create a single responsive utility
+@mixin create-responsive-utility($class) {
+  /*! purgecss start ignore */
+  $util-glue: config.$utility-glue;
+  $screens: map.get(config.$theme, screens);
+  $class: str-escape($class);
+
+  // Create standard utility first
+  .#{$class} {
+    @content;
+  }
+
+  // Create responsive class modifiers
+  @each $screen, $breakpoint in $screens {
+    $infix: str-escape(#{'' + $screen + $util-glue});
+
+    @media screen and (min-width: $breakpoint) {
+      .#{$infix + $class} {
+        @content;
+      }
+    }
+  }
+  /*! purgecss end ignore */
+}

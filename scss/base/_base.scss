@@ -6,6 +6,7 @@
 @use 'reset';
 @use 'default';
 @use 'animation';
+@use 'border';
 @use 'color';
 @use 'layer';
 @use 'screens';
@@ -26,6 +27,7 @@
   @if setting(use-css-variables) {
     :root {
       @include animation.vars;
+      @include border.vars;
       @include color.vars;
       @include layer.vars;
       @include screens.vars;

@@ -2,9 +2,9 @@
 //   Typography helpers
 // --------------------------------
 
-@use 'sass:list';
 @use 'sass:map';
 @use 'sass:math';
+@use 'sass:list';
 @use 'sass:string';
 
 @use '../config';
@@ -24,8 +24,12 @@ $_default-font-weight: setting(defaults, font-weight);
 $_default-leading: setting(defaults, leading);
 $_default-tracking: setting(defaults, tracking);
 
-$_default-min-bp: bp(2xs);
-$_default-max-bp: bp(2xl);
+$_screens: theme(screens);
+$_min-screen: list.nth(map.keys($_screens), 1);
+$_max-screen: list.nth(map.keys($_screens), -1);
+
+$_default-min-bp: bp($_min-screen);
+$_default-max-bp: bp($_max-screen);
 
 // --------------------------------
 //   Functions

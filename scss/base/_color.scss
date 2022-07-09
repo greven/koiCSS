@@ -14,6 +14,9 @@
   $colors: theme(colors);
   $gradients: theme(gradients);
 
+  // --------COLORS--------
   @include generate-css-color-vars($colors, $color-prefix);
+
+  // --------GRADIENTS--------
   @include generate-css-vars($gradients, $gradient-prefix);
 }

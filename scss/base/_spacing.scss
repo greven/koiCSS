@@ -11,5 +11,6 @@
 // --------------------------------
 
 @mixin vars {
+  // --------SPACING--------
   @include generate-css-vars(theme(spacing), $spacing-prefix);
 }
