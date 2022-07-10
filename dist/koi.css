@@ -187,12 +187,16 @@ a {
 body {
   background-color: var(--koi-body-background, hsl(var(--color-surface-1-h), var(--color-surface-1-s), var(--color-surface-1-l), 1));
   color: var(--koi-body-foreground, hsl(var(--color-text-1-h), var(--color-text-1-s), var(--color-text-1-l), 1));
-  font-family: Lato, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Open Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+}
+body :focus-visible {
+  outline: hsl(var(--color-primary-6-h), var(--color-primary-6-s), var(--color-primary-6-l), 1) auto 1px;
+  outline-color: hsl(var(--color-primary-6-h), var(--color-primary-6-s), var(--color-primary-6-l), 1);
 }
 
 sub,
@@ -1133,8 +1137,8 @@ select {
   --size-4xl: 10rem;
   /*! purgecss end ignore */
   /*! purgecss start ignore */
-  --font-base: Lato, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-headings: Montserrat, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-base: "Open Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-headings: "Montserrat", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -1818,13 +1822,20 @@ html {
   --color-surface-4-r: 230;
   --color-surface-4-g: 230;
   --color-surface-4-b: 230;
-  --color-border: hsl(0deg, 0%, 90.1960784314%);
-  --color-border-h: 0deg;
-  --color-border-s: 0%;
-  --color-border-l: 90.1960784314%;
-  --color-border-r: 230;
-  --color-border-g: 230;
-  --color-border-b: 230;
+  --color-border-1: hsl(0deg, 0%, 90.1960784314%);
+  --color-border-1-h: 0deg;
+  --color-border-1-s: 0%;
+  --color-border-1-l: 90.1960784314%;
+  --color-border-1-r: 230;
+  --color-border-1-g: 230;
+  --color-border-1-b: 230;
+  --color-border-2: hsl(0deg, 0%, 83.137254902%);
+  --color-border-2-h: 0deg;
+  --color-border-2-s: 0%;
+  --color-border-2-l: 83.137254902%;
+  --color-border-2-r: 212;
+  --color-border-2-g: 212;
+  --color-border-2-b: 212;
   --color-text-1: hsl(0deg, 0%, 9.0196078431%);
   --color-text-1-h: 0deg;
   --color-text-1-s: 0%;
@@ -1888,13 +1899,20 @@ html {
     --color-surface-4-r: 230;
     --color-surface-4-g: 230;
     --color-surface-4-b: 230;
-    --color-border: hsl(0deg, 0%, 90.1960784314%);
-    --color-border-h: 0deg;
-    --color-border-s: 0%;
-    --color-border-l: 90.1960784314%;
-    --color-border-r: 230;
-    --color-border-g: 230;
-    --color-border-b: 230;
+    --color-border-1: hsl(0deg, 0%, 90.1960784314%);
+    --color-border-1-h: 0deg;
+    --color-border-1-s: 0%;
+    --color-border-1-l: 90.1960784314%;
+    --color-border-1-r: 230;
+    --color-border-1-g: 230;
+    --color-border-1-b: 230;
+    --color-border-2: hsl(0deg, 0%, 83.137254902%);
+    --color-border-2-h: 0deg;
+    --color-border-2-s: 0%;
+    --color-border-2-l: 83.137254902%;
+    --color-border-2-r: 212;
+    --color-border-2-g: 212;
+    --color-border-2-b: 212;
     --color-text-1: hsl(0deg, 0%, 9.0196078431%);
     --color-text-1-h: 0deg;
     --color-text-1-s: 0%;
@@ -1958,13 +1976,20 @@ html {
   --color-surface-4-r: 230;
   --color-surface-4-g: 230;
   --color-surface-4-b: 230;
-  --color-border: hsl(0deg, 0%, 90.1960784314%);
-  --color-border-h: 0deg;
-  --color-border-s: 0%;
-  --color-border-l: 90.1960784314%;
-  --color-border-r: 230;
-  --color-border-g: 230;
-  --color-border-b: 230;
+  --color-border-1: hsl(0deg, 0%, 90.1960784314%);
+  --color-border-1-h: 0deg;
+  --color-border-1-s: 0%;
+  --color-border-1-l: 90.1960784314%;
+  --color-border-1-r: 230;
+  --color-border-1-g: 230;
+  --color-border-1-b: 230;
+  --color-border-2: hsl(0deg, 0%, 83.137254902%);
+  --color-border-2-h: 0deg;
+  --color-border-2-s: 0%;
+  --color-border-2-l: 83.137254902%;
+  --color-border-2-r: 212;
+  --color-border-2-g: 212;
+  --color-border-2-b: 212;
   --color-text-1: hsl(0deg, 0%, 9.0196078431%);
   --color-text-1-h: 0deg;
   --color-text-1-s: 0%;
@@ -2030,13 +2055,20 @@ html {
     --color-surface-4-r: 82;
     --color-surface-4-g: 82;
     --color-surface-4-b: 82;
-    --color-border: hsl(0deg, 0%, 25.0980392157%);
-    --color-border-h: 0deg;
-    --color-border-s: 0%;
-    --color-border-l: 25.0980392157%;
-    --color-border-r: 64;
-    --color-border-g: 64;
-    --color-border-b: 64;
+    --color-border-1: hsl(0deg, 0%, 25.0980392157%);
+    --color-border-1-h: 0deg;
+    --color-border-1-s: 0%;
+    --color-border-1-l: 25.0980392157%;
+    --color-border-1-r: 64;
+    --color-border-1-g: 64;
+    --color-border-1-b: 64;
+    --color-border-2: hsl(0deg, 0%, 32.1568627451%);
+    --color-border-2-h: 0deg;
+    --color-border-2-s: 0%;
+    --color-border-2-l: 32.1568627451%;
+    --color-border-2-r: 82;
+    --color-border-2-g: 82;
+    --color-border-2-b: 82;
     --color-text-1: hsl(0deg, 0%, 98.0392156863%);
     --color-text-1-h: 0deg;
     --color-text-1-s: 0%;
@@ -2100,13 +2132,20 @@ html {
   --color-surface-4-r: 82;
   --color-surface-4-g: 82;
   --color-surface-4-b: 82;
-  --color-border: hsl(0deg, 0%, 25.0980392157%);
-  --color-border-h: 0deg;
-  --color-border-s: 0%;
-  --color-border-l: 25.0980392157%;
-  --color-border-r: 64;
-  --color-border-g: 64;
-  --color-border-b: 64;
+  --color-border-1: hsl(0deg, 0%, 25.0980392157%);
+  --color-border-1-h: 0deg;
+  --color-border-1-s: 0%;
+  --color-border-1-l: 25.0980392157%;
+  --color-border-1-r: 64;
+  --color-border-1-g: 64;
+  --color-border-1-b: 64;
+  --color-border-2: hsl(0deg, 0%, 32.1568627451%);
+  --color-border-2-h: 0deg;
+  --color-border-2-s: 0%;
+  --color-border-2-l: 32.1568627451%;
+  --color-border-2-r: 82;
+  --color-border-2-g: 82;
+  --color-border-2-b: 82;
   --color-text-1: hsl(0deg, 0%, 98.0392156863%);
   --color-text-1-h: 0deg;
   --color-text-1-s: 0%;
@@ -2256,7 +2295,7 @@ h4,
 h5,
 h6 {
   color: hsl(var(--color-text-1-h), var(--color-text-1-s), var(--color-text-1-l), 1);
-  font-family: Montserrat, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Montserrat", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 500;
 }
 
@@ -2380,6 +2419,24 @@ button,
   transition-duration: var(--koi-transition-duration, 200ms);
   transition-property: var(--koi-transition-property, color, background-color, border-color, transform);
   transition-timing-function: var(--koi-transition-timing-function, cubic-bezier(0.25, 0.1, 0.25, 1));
+  align-items: center;
+  background-color: var(--koi-btn-background, hsl(var(--color-surface-2-h), var(--color-surface-2-s), var(--color-surface-2-l), 1));
+  border-color: var(--koi-btn-border-color, hsl(var(--color-border-2-h), var(--color-border-2-s), var(--color-border-2-l), 1));
+  border-radius: var(--koi-btn-border-radius, 8px);
+  border-style: var(--koi-btn-border-style, solid);
+  border-width: var(--koi-btn-border-width, 1px);
+  box-shadow: var(--koi-btn-shadow, 0 1px 2px 0 rgba(var(--koi-shadow-color, 0 0 0) / 0.05));
+  color: var(--koi-btn-text-color, hsl(var(--color-text-2-h), var(--color-text-2-s), var(--color-text-2-l), 1));
+  display: inline-flex;
+  font-size: var(--koi-btn-font-size, 0.875rem);
+  font-weight: var(--koi-btn-font-weight, 500);
+  gap: var(--koi-btn-gap, 1ch);
+  justify-content: center;
+  letter-spacing: var(--koi-btn-tracking, 0.025em);
+  line-height: var(--koi-btn-leading, 1.25rem);
+  padding: var(--koi-btn-padding-y, 0.5rem) var(--koi-btn-padding-x, 1rem);
+  text-align: center;
+  text-transform: var(--koi-btn-text-case, uppercase);
 }
 .btn:focus,
 a.btn:focus,
@@ -2390,9 +2447,120 @@ button:focus,
 [type=file]:focus {
   outline: none;
 }
+.btn:hover,
+a.btn:hover,
+button:hover,
+[type=button]:hover,
+[type=submit]:hover,
+[type=reset]:hover,
+[type=file]:hover {
+  background-color: var(--koi-btn-color-hover, hsl(var(--color-surface-3-h), var(--color-surface-3-s), var(--color-surface-3-l), 1));
+  box-shadow: var(--koi-btn-shadow-hover, 0 1px 2px 0 rgba(var(--koi-shadow-color, 0 0 0) / 0.05));
+}
+.btn:active,
+a.btn:active,
+button:active,
+[type=button]:active,
+[type=submit]:active,
+[type=reset]:active,
+[type=file]:active {
+  background-color: var(--koi-btn-color-active, hsl(var(--color-surface-1-h), var(--color-surface-1-s), var(--color-surface-1-l), 1));
+  box-shadow: none;
+}
+.btn:focus-visible,
+a.btn:focus-visible,
+button:focus-visible,
+[type=button]:focus-visible,
+[type=submit]:focus-visible,
+[type=reset]:focus-visible,
+[type=file]:focus-visible {
+  --koi-ring-offset-shadow: var(--koi-ring-inset, ) 0 0 0 var(--koi-ring-offset, 2px)
+    var(--koi-ring-offset-color, hsl(var(--color-surface-1-h), var(--color-surface-1-s), var(--color-surface-1-l), 1));
+  --koi-ring-shadow: var(--koi-ring-inset, ) 0 0 0 calc(2px + var(--koi-ring-offset, 2px))
+    var(--koi-ring-color, var(--accent-5, #14b8a6));
+  box-shadow: var(--koi-ring-offset-shadow), var(--koi-ring-shadow), var(--koi-shadow, 0 0 rgba(0, 0, 0, 0));
+  transition-delay: var(--koi-transition-delay, );
+  transition-duration: var(--koi-transition-duration, 100ms);
+  transition-property: var(--koi-transition-property, box-shadow);
+  transition-timing-function: var(--koi-transition-timing-function, cubic-bezier(0.25, 0.1, 0.25, 1));
+}
+.btn:disabled, .btn[data-state=disabled],
+a.btn:disabled,
+a.btn[data-state=disabled],
+button:disabled,
+button[data-state=disabled],
+[type=button]:disabled,
+[type=button][data-state=disabled],
+[type=submit]:disabled,
+[type=submit][data-state=disabled],
+[type=reset]:disabled,
+[type=reset][data-state=disabled],
+[type=file]:disabled,
+[type=file][data-state=disabled] {
+  background-color: var(--koi-btn-background-disabled, hsl(var(--color-surface-3-h), var(--color-surface-3-s), var(--color-surface-3-l), 1));
+  border-color: var(--btn-border-color-disabled, hsl(var(--color-border-1-h), var(--color-border-1-s), var(--color-border-1-l), 1));
+  box-shadow: none;
+  color: var(--koi-btn-text-color-disabled, hsl(var(--color-text-3-h), var(--color-text-3-s), var(--color-text-3-l), 1));
+  cursor: not-allowed;
+}
+
+.btn, a.btn, [type=button].btn, [type=submit].btn, [type=reset].btn {
+  transition-delay: var(--koi-transition-delay, 0);
+  transition-duration: var(--koi-transition-duration, 200ms);
+  transition-property: var(--koi-transition-property, color, background-color, border-color, transform);
+  transition-timing-function: var(--koi-transition-timing-function, cubic-bezier(0.25, 0.1, 0.25, 1));
+  align-items: center;
+  background-color: var(--koi-btn-background, hsl(var(--color-surface-2-h), var(--color-surface-2-s), var(--color-surface-2-l), 1));
+  border-color: var(--koi-btn-border-color, hsl(var(--color-border-2-h), var(--color-border-2-s), var(--color-border-2-l), 1));
+  border-radius: var(--koi-btn-border-radius, 8px);
+  border-style: var(--koi-btn-border-style, solid);
+  border-width: var(--koi-btn-border-width, 1px);
+  box-shadow: var(--koi-btn-shadow, 0 1px 2px 0 rgba(var(--koi-shadow-color, 0 0 0) / 0.05));
+  color: var(--koi-btn-text-color, hsl(var(--color-text-2-h), var(--color-text-2-s), var(--color-text-2-l), 1));
+  display: inline-flex;
+  font-size: var(--koi-btn-font-size, 0.875rem);
+  font-weight: var(--koi-btn-font-weight, 500);
+  gap: var(--koi-btn-gap, 1ch);
+  justify-content: center;
+  letter-spacing: var(--koi-btn-tracking, 0.025em);
+  line-height: var(--koi-btn-leading, 1.25rem);
+  padding: var(--koi-btn-padding-y, 0.5rem) var(--koi-btn-padding-x, 1rem);
+  text-align: center;
+  text-transform: var(--koi-btn-text-case, uppercase);
+}
+.btn:hover, a.btn:hover, [type=button].btn:hover, [type=submit].btn:hover, [type=reset].btn:hover {
+  background-color: var(--koi-btn-color-hover, hsl(var(--color-surface-3-h), var(--color-surface-3-s), var(--color-surface-3-l), 1));
+  box-shadow: var(--koi-btn-shadow-hover, 0 1px 2px 0 rgba(var(--koi-shadow-color, 0 0 0) / 0.05));
+}
+.btn:active, a.btn:active, [type=button].btn:active, [type=submit].btn:active, [type=reset].btn:active {
+  background-color: var(--koi-btn-color-active, hsl(var(--color-surface-1-h), var(--color-surface-1-s), var(--color-surface-1-l), 1));
+  box-shadow: none;
+}
+.btn:focus-visible, a.btn:focus-visible, [type=button].btn:focus-visible, [type=submit].btn:focus-visible, [type=reset].btn:focus-visible {
+  --koi-ring-offset-shadow: var(--koi-ring-inset, ) 0 0 0 var(--koi-ring-offset, 2px)
+    var(--koi-ring-offset-color, hsl(var(--color-surface-1-h), var(--color-surface-1-s), var(--color-surface-1-l), 1));
+  --koi-ring-shadow: var(--koi-ring-inset, ) 0 0 0 calc(2px + var(--koi-ring-offset, 2px))
+    var(--koi-ring-color, var(--accent-5, #14b8a6));
+  box-shadow: var(--koi-ring-offset-shadow), var(--koi-ring-shadow), var(--koi-shadow, 0 0 rgba(0, 0, 0, 0));
+  transition-delay: var(--koi-transition-delay, );
+  transition-duration: var(--koi-transition-duration, 100ms);
+  transition-property: var(--koi-transition-property, box-shadow);
+  transition-timing-function: var(--koi-transition-timing-function, cubic-bezier(0.25, 0.1, 0.25, 1));
+}
+.btn:disabled, .btn[data-state=disabled], a.btn:disabled, a.btn[data-state=disabled], [type=button].btn:disabled, [type=button].btn[data-state=disabled], [type=submit].btn:disabled, [type=submit].btn[data-state=disabled], [type=reset].btn:disabled, [type=reset].btn[data-state=disabled] {
+  background-color: var(--koi-btn-background-disabled, hsl(var(--color-surface-3-h), var(--color-surface-3-s), var(--color-surface-3-l), 1));
+  border-color: var(--btn-border-color-disabled, hsl(var(--color-border-1-h), var(--color-border-1-s), var(--color-border-1-l), 1));
+  box-shadow: none;
+  color: var(--koi-btn-text-color-disabled, hsl(var(--color-text-3-h), var(--color-text-3-s), var(--color-text-3-l), 1));
+  cursor: not-allowed;
+}
+.btn--wide, a.btn--wide, [type=button].btn--wide, [type=submit].btn--wide, [type=reset].btn--wide {
+  justify-content: center;
+  width: 100%;
+}
 
 kbd {
-  border-color: hsl(var(--color-border-h), var(--color-border-s), var(--color-border-l), 1);
+  border-color: hsl(var(--color-border-1-h), var(--color-border-1-s), var(--color-border-1-l), 1);
   border-style: solid;
   border-width: 1px;
   border-radius: 0.35em;
@@ -2432,7 +2600,7 @@ kbd {
   gap: 0.5em;
 }
 .kbd__key {
-  border-color: hsl(var(--color-border-h), var(--color-border-s), var(--color-border-l), 1);
+  border-color: hsl(var(--color-border-1-h), var(--color-border-1-s), var(--color-border-1-l), 1);
   border-style: solid;
   border-width: 1px;
   border-radius: 0.35em;

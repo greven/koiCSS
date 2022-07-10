@@ -17,7 +17,7 @@ body {
   // --koi-btn-text-case: capitalize;
 
   @include koi.container($from: md, $padding: true, $center: true, $max-width: lg);
-  background-color: #fff;
+  // background-color: #fff;
   // color: #ccc;
 }
 

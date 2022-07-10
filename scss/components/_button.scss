@@ -17,7 +17,7 @@ $selectors: selector.parse(
 );
 
 // Theming
-$btn-border-radius: radius(xl);
+$btn-border-radius: radius(md);
 $btn-font-size: font(sm);
 $btn-font-weight: font(medium);
 $btn-leading: text-leading(sm);
@@ -25,7 +25,7 @@ $btn-padding-x: spacing(16);
 $btn-padding-y: spacing(8);
 $btn-shadow: shadow(xs);
 $btn-tracking: tracking(wide);
-$btn-text-case: uppercase;
+$btn-text-case: capitalize;
 
 // --------------------------------
 //   Mixins
