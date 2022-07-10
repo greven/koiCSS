@@ -71,6 +71,12 @@ $_default-accent: setting(defaults, accent);
   @return css-var(accent-#{$shade}, $fallback-accent);
 }
 
+// Return an RGB theme color value (compile time) in channels (triplet) format
+@function color-channels($name, $shade: $_default-shade) {
+  $color: color($name, $shade);
+  @return rgb-channels($color);
+}
+
 // Parse a theme color in string form (i.e., text-1)
 // returning its name and shade or null
 @function _maybe-parse-string-color($name) {

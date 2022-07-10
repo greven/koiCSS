@@ -2,10 +2,11 @@
 
 @use '../internal' as *;
 @use 'effects';
+@use 'filters';
 @use 'spacing';
 
 $utilities: () !default;
-$utilities: map-deep-merge(effects.$utilities, spacing.$utilities);
+$utilities: map-deep-merge(effects.$utilities, filters.$utilities, spacing.$utilities);
 
 @mixin utilities {
   @include generate-utilities($utilities);

@@ -64,7 +64,10 @@ $schemes: (
       3: map.get($colors, grey, 1),
       4: map.get($colors, grey, 2),
     ),
-    border: map.get($colors, grey, 2),
+    border: (
+      1: map.get($colors, grey, 2),
+      2: map.get($colors, grey, 3),
+    ),
     text: (
       1: map.get($colors, grey, 9),
       2: map.get($colors, grey, 6),
@@ -79,7 +82,10 @@ $schemes: (
       3: map.get($colors, grey, 7),
       4: map.get($colors, grey, 6),
     ),
-    border: map.get($colors, grey, 7),
+    border: (
+      1: map.get($colors, grey, 7),
+      2: map.get($colors, grey, 6),
+    ),
     text: (
       1: map.get($colors, grey, 0),
       2: map.get($colors, grey, 3),

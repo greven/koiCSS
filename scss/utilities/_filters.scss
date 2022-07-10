@@ -1,6 +1,8 @@
 // ------------------------------------------------
-//   Effects Utilities (Box Shadow, Opacity, ...)
+//   Filter Utilities (blur, ...)
 // ------------------------------------------------
+
+@use 'sass:map';
 
 @use '../config';
 @use '../api' as *;
@@ -9,24 +11,22 @@
 //   Vars
 // --------------------------------
 
-$shadows: theme(shadow);
-$opacities: theme(opacity);
+$blurs: ();
+
+@each $key, $value in theme(blur) {
+  $blurs: map.set($blurs, $key, blur($value));
+}
 
 // --------------------------------
 //   Utilities
 // --------------------------------
 
 $utilities: (
-  shadow: (
-    property: box-shadow,
-    class: shadow,
+  blur: (
+    property: filter,
+    class: blur,
     pseudos: hover focus,
-    default: setting(fallbacks, shadow),
-    values: $shadows,
-  ),
-  opacity: (
-    property: opacity,
-    pseudos: hover focus,
-    values: $opacities,
+    default: setting(fallbacks, blur),
+    values: $blurs,
   ),
 );

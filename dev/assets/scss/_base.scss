@@ -12,7 +12,12 @@
 // @include koi.font-face('Tobias Light', 'fonts/Tobias-Light', $family: Tobias, $weight: 300);
 
 body {
+  // --koi-btn-border-radius: var(--radius-full);
+  // --koi-btn-font-size: var(--font-size-md);
+  // --koi-btn-text-case: capitalize;
+
   @include koi.container($from: md, $padding: true, $center: true, $max-width: lg);
+  background-color: #fff;
   // color: #ccc;
 }
 
@@ -74,14 +79,19 @@ body {
 .box-s2 {
   @include koi.box($padding: true, $rounded: true, $bg-color: koi.fill(surface, 2));
   @include koi.border();
+  @include koi.shadow(sm);
 }
 
 .box-s3 {
+  --koi-shadow-color: 255 0 0;
+  @debug koi.color(success, 6);
   @include koi.box($padding: true, $rounded: true, $bg-color: koi.fill(surface, 3));
   @include koi.border();
+  @include koi.shadow(md, koi.color-channels(black));
 }
 
 .box-s4 {
   @include koi.box($padding: true, $rounded: true, $bg-color: koi.fill(surface, 4));
   @include koi.border();
+  @include koi.shadow(lg);
 }

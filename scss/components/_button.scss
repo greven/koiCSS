@@ -10,34 +10,119 @@
 //   Vars
 // --------------------------------
 
-$_class: '.btn';
+$class: '.btn';
 
-$_selectors: selector.parse(
-  "#{$_class}, a#{$_class}, [type='button']#{$_class}, [type='submit']#{$_class}, [type='reset']#{$_class}"
+$selectors: selector.parse(
+  "#{$class}, a#{$class}, [type='button']#{$class}, [type='submit']#{$class}, [type='reset']#{$class}"
 );
+
+// Theming
+$btn-border-radius: radius(xl);
+$btn-font-size: font(sm);
+$btn-font-weight: font(medium);
+$btn-leading: text-leading(sm);
+$btn-padding-x: spacing(16);
+$btn-padding-y: spacing(8);
+$btn-shadow: shadow(xs);
+$btn-tracking: tracking(wide);
+$btn-text-case: uppercase;
 
 // --------------------------------
 //   Mixins
 // --------------------------------
+
+@mixin reset {
+  appearance: none;
+  background-color: transparent;
+  border: 0;
+  color: fill(black);
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 400;
+  padding: 0;
+  text-decoration: none;
+  touch-action: manipulation;
+  user-select: none;
+  white-space: nowrap;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@mixin base {
+  @include transition((color, background-color, border-color, transform));
+
+  align-items: center;
+  background-color: var(--koi-btn-background, fill(surface, 2));
+  border-color: var(--koi-btn-border-color, fill(border, 2));
+  border-radius: var(--koi-btn-border-radius, $btn-border-radius);
+  border-style: var(--koi-btn-border-style, solid);
+  border-width: var(--koi-btn-border-width, 1px);
+  box-shadow: var(--koi-btn-shadow, $btn-shadow);
+  color: var(--koi-btn-text-color, fill(text, 2));
+  display: inline-flex;
+  font-size: var(--koi-btn-font-size, $btn-font-size);
+  font-weight: var(--koi-btn-font-weight, $btn-font-weight);
+  gap: var(--koi-btn-gap, 1ch);
+  justify-content: center;
+  letter-spacing: var(--koi-btn-tracking, $btn-tracking);
+  line-height: var(--koi-btn-leading, $btn-leading);
+  padding: var(--koi-btn-padding-y, $btn-padding-y) var(--koi-btn-padding-x, $btn-padding-x);
+  text-align: center;
+  text-transform: var(--koi-btn-text-case, $btn-text-case);
+
+  &:hover {
+    background-color: var(--koi-btn-color-hover, fill(surface, 3));
+    box-shadow: var(--koi-btn-shadow-hover, shadow(xs));
+  }
+
+  &:active {
+    background-color: var(--koi-btn-color-active, fill(surface, 1));
+    box-shadow: none;
+  }
+
+  &:focus-visible {
+    @include ring;
+  }
+
+  &:disabled,
+  &[data-state='disabled'] {
+    background-color: var(--koi-btn-background-disabled, fill(surface, 3));
+    border-color: var(--btn-border-color-disabled, fill(border, 1));
+    box-shadow: none;
+    color: var(--koi-btn-text-color-disabled, fill(text, 3));
+    cursor: not-allowed;
+  }
+}
+
+// Makes the button full width
+@mixin wide {
+  justify-content: center;
+  width: 100%;
+}
 
 // --------------------------------
 //   Styles
 // --------------------------------
 
 @mixin styles {
-  // TODO: Remove this, just trying out focus ring
-  button {
-    @include shadow();
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    color: #333;
-    padding: 0.5rem 1rem;
+  #{$class},
+  a#{$class},
+  button,
+  [type='button'],
+  [type='submit'],
+  [type='reset'],
+  [type='file'] {
+    @include reset;
+    @include base;
+  }
 
-    &:focus {
-      // @include outline;
-      @include ring;
-      outline: none;
+  #{$selectors} {
+    @include base;
+
+    &--wide {
+      @include wide;
     }
   }
 }

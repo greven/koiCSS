@@ -20,10 +20,10 @@ $_font-sans: map.get(tokens.$font-family, sans);
 $use-hyphens: true;
 
 $base-font-size: 16px;
-$base-font-family: list.join(Lato, $_font-sans);
+$base-font-family: list.join('Open Sans', $_font-sans);
 
 $headings-color: text-1;
-$headings-font-family: list.join(Montserrat, $_font-sans);
+$headings-font-family: list.join('Montserrat', $_font-sans);
 $headings-font-weight: medium;
 
 $inline-text-padding: 0.1875em;

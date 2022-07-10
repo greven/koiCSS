@@ -27,6 +27,11 @@
     @if setting(use-font-smoothing) {
       @include smooth-font;
     }
+
+    :focus-visible {
+      outline: fill(primary) auto 1px;
+      outline-color: fill(primary);
+    }
   }
 
   sub,

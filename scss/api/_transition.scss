@@ -37,7 +37,7 @@ $_default-properties: (
   $property: transform,
   $duration: $_default-duration,
   $timing-function: $_default-timing-function,
-  $delay: null
+  $delay: 0
 ) {
   transition-delay: var(--koi-transition-delay, $delay);
   transition-duration: var(--koi-transition-duration, duration($duration));

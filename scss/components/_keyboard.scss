@@ -8,7 +8,7 @@
 //   Vars
 // --------------------------------
 
-$_class: '.kbd';
+$class: '.kbd';
 
 // --------------------------------
 //   Mixins
@@ -70,7 +70,7 @@ $_class: '.kbd';
     @include key;
   }
 
-  #{$_class} {
+  #{$class} {
     @include group;
 
     &__key {
