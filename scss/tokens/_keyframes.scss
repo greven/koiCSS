@@ -63,21 +63,90 @@ $keyframes: (
       transform: rotate(360deg),
     ),
   ),
-  ring: (
+  scale-up: (
+    to: (
+      transform: scale(1.25),
+    ),
+  ),
+  scale-down: (
+    to: (
+      transform: scale(0.75),
+    ),
+  ),
+  slide-out-up: (
+    to: (
+      transform: translateY(-100%),
+    ),
+  ),
+  slide-out-down: (
+    to: (
+      transform: translateY(100%),
+    ),
+  ),
+  slide-out-right: (
+    to: (
+      transform: translateX(100%),
+    ),
+  ),
+  slide-out-left: (
+    to: (
+      transform: translateX(-100%),
+    ),
+  ),
+  slide-in-up: (
+    from: (
+      transform: translateY(100%),
+    ),
+  ),
+  slide-in-down: (
+    from: (
+      transform: translateY(-100%),
+    ),
+  ),
+  slide-in-right: (
+    from: (
+      transform: translateX(-100%),
+    ),
+  ),
+  slide-in-left: (
+    from: (
+      transform: translateX(100%),
+    ),
+  ),
+  shake-x: (
+    (0%, 100%):
+      (
+        transform: translateX(0%),
+      ),
     20%: (
-      transform: rotate3d(0, 0, 1, 15deg),
+      transform: translateX(-5%),
     ),
     40%: (
-      transform: rotate3d(0, 0, 1, -10deg),
+      transform: translateX(5%),
     ),
     60%: (
-      transform: rotate3d(0, 0, 1, 5deg),
+      transform: translateX(-5%),
     ),
     80%: (
-      transform: rotate3d(0, 0, 1, -5deg),
+      transform: translateX(5%),
     ),
-    to: (
-      transform: rotate3d(0, 0, 1, 0deg),
+  ),
+  shake-y: (
+    (0%, 100%):
+      (
+        transform: translateY(0%),
+      ),
+    20%: (
+      transform: translateY(-5%),
+    ),
+    40%: (
+      transform: translateY(5%),
+    ),
+    60%: (
+      transform: translateY(-5%),
+    ),
+    80%: (
+      transform: translateY(5%),
     ),
   ),
 ) !default;

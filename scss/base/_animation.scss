@@ -89,13 +89,100 @@
   @include animation($name: spin, $duration: $duration, $timing-function: linear, $iteration-count: $iteration-count);
 }
 
-/// Ring animation
+/// Scale up animation
 ///
 /// @param {number} $duration
 ///
-@mixin ring($duration: theme(duration, slower)) {
-  @include animation($name: ring, $duration: $duration);
-  transform-origin: top center;
+@mixin scale-up($duration: 0.5s) {
+  @include animation($name: scale-up, $duration: $duration, $timing-function: theme(timing, ease));
+}
+
+/// Scale down animation
+///
+/// @param {number} $duration
+///
+@mixin scale-down($duration: 0.5s) {
+  @include animation($name: scale-down, $duration: $duration, $timing-function: theme(timing, ease));
+}
+
+/// Slide out up animation
+///
+/// @param {number} $duration
+///
+@mixin slide-out-up($duration: 0.5s) {
+  @include animation($name: slide-out-up, $duration: $duration, $timing-function: theme(timing, ease));
+}
+
+/// Slide out down animation
+///
+/// @param {number} $duration
+///
+@mixin slide-out-down($duration: 0.5s) {
+  @include animation($name: slide-out-down, $duration: $duration, $timing-function: theme(timing, ease));
+}
+
+/// Slide out right animation
+///
+/// @param {number} $duration
+///
+@mixin slide-out-right($duration: 0.5s) {
+  @include animation($name: slide-out-right, $duration: $duration, $timing-function: theme(timing, ease));
+}
+
+/// Slide out left animation
+///
+/// @param {number} $duration
+///
+@mixin slide-out-left($duration: 0.5s) {
+  @include animation($name: slide-out-left, $duration: $duration, $timing-function: theme(timing, ease));
+}
+
+/// Slide in up animation
+///
+/// @param {number} $duration
+///
+@mixin slide-in-up($duration: 0.5s) {
+  @include animation($name: slide-in-up, $duration: $duration, $timing-function: theme(timing, ease));
+}
+
+/// Slide in down animation
+///
+/// @param {number} $duration
+///
+@mixin slide-in-down($duration: 0.5s) {
+  @include animation($name: slide-in-down, $duration: $duration, $timing-function: theme(timing, ease));
+}
+
+/// Slide in right animation
+///
+/// @param {number} $duration
+///
+@mixin slide-in-right($duration: 0.5s) {
+  @include animation($name: slide-in-right, $duration: $duration, $timing-function: theme(timing, ease));
+}
+
+/// Slide in left animation
+///
+/// @param {number} $duration
+///
+@mixin slide-in-left($duration: 0.5s) {
+  @include animation($name: slide-in-left, $duration: $duration, $timing-function: theme(timing, ease));
+}
+
+/// Shake X animation
+///
+/// @param {number} $duration
+///
+@mixin shake-x($duration: 0.75s) {
+  @include animation($name: shake-x, $duration: $duration, $timing-function: theme(timing, ease-out));
+}
+
+/// Shake Y animation
+///
+/// @param {number} $duration
+///
+@mixin shake-y($duration: 0.75s) {
+  @include animation($name: shake-y, $duration: $duration, $timing-function: theme(timing, ease-out));
 }
 
 /* stylelint-disable */
@@ -140,7 +227,18 @@
   @include custom-prop($animation-prefix, ping, (ping 3s timing(ease-out) infinite));
   @include custom-prop($animation-prefix, pulse, (pulse 2s timing(ease-out) infinite));
   @include custom-prop($animation-prefix, spin, (spin 2s timing(linear) infinite));
-  @include custom-prop($animation-prefix, ring, (ring 500ms timing(linear) infinite));
+  @include custom-prop($animation-prefix, scale-up, (scale-up 0.5s timing(ease)));
+  @include custom-prop($animation-prefix, scale-down, (scale-down 0.5s timing(ease)));
+  @include custom-prop($animation-prefix, slide-out-up, (slide-out-up 0.5s timing(ease)));
+  @include custom-prop($animation-prefix, slide-out-down, (slide-out-down 0.5s timing(ease)));
+  @include custom-prop($animation-prefix, slide-out-right, (slide-out-right 0.5s timing(ease)));
+  @include custom-prop($animation-prefix, slide-out-left, (slide-out-left 0.5s timing(ease)));
+  @include custom-prop($animation-prefix, slide-in-up, (slide-in-up 0.5s timing(ease)));
+  @include custom-prop($animation-prefix, slide-in-down, (slide-in-down 0.5s timing(ease)));
+  @include custom-prop($animation-prefix, slide-in-right, (slide-in-right 0.5s timing(ease)));
+  @include custom-prop($animation-prefix, slide-in-left, (slide-in-left 0.5s timing(ease)));
+  @include custom-prop($animation-prefix, shake-x, (shake-x 0.75s timing(ease-out)));
+  @include custom-prop($animation-prefix, shake-y, (shake-y 0.75s timing(ease-out)));
 
   // --------TIMING-FUNCTIONS--------
   @include generate-css-vars(theme(timing));
