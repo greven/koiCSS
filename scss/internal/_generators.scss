@@ -18,6 +18,7 @@
 // --------------------------------
 
 $ignore-accent-colors: (white black surface text border);
+$default-accent: config.default(color-accent);
 
 // --------------------------------
 //   CSS Custom Props
@@ -36,15 +37,20 @@ $ignore-accent-colors: (white black surface text border);
 }
 
 // Output a colors map as CSS custom properties
-@mixin generate-css-color-vars($colors-map: (), $property: null, $suffix: null) {
+@mixin generate-css-theme-color-vars($colors-map: (), $property: null, $suffix: null) {
   /*! purgecss start ignore */
+
+  // Default accent
+  $default-accent-map: map.get($colors-map, $default-accent);
+  @include color-custom-prop(color, accent, $default-accent-map, $suffix);
+
   @each $color-name, $value in $colors-map {
     @include color-custom-prop($property, $color-name, $value, $suffix);
 
     // Accent colors utility classes
     @if not list.index($ignore-accent-colors, $color-name) {
       .accent-#{'' + $color-name} {
-        @include color-custom-prop(accent, null, $value, $suffix);
+        @include color-custom-prop(color, accent, $value, $suffix);
       }
     }
   }

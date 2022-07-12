@@ -16,17 +16,6 @@ $selectors: selector.parse(
   "#{$class}, a#{$class}, [type='button']#{$class}, [type='submit']#{$class}, [type='reset']#{$class}"
 );
 
-// Theming
-$border-radius: radius(lg) !default;
-$font-size: font(sm) !default;
-$font-weight: font(semibold) !default;
-$leading: text-leading(sm) !default;
-$padding-x: spacing(16) !default;
-$padding-y: spacing(8) !default;
-$shadow: shadow(xs) !default;
-$tracking: tracking(wide) !default;
-$text-transform: capitalize !default;
-
 // --------------------------------
 //   Mixins
 // --------------------------------
@@ -64,36 +53,38 @@ $text-transform: capitalize !default;
   align-items: var(--koi-btn-align-items, center);
   background-color: var(--koi-btn-background, fill(surface, 2));
   border-color: var(--koi-btn-border-color, fill(border, 2));
-  border-radius: var(--koi-btn-border-radius, $border-radius);
+  border-radius: var(--koi-btn-border-radius, radius(lg));
   border-style: var(--koi-btn-border-style, solid);
-  border-width: var(--koi-btn-border-width, 1px);
-  box-shadow: var(--koi-btn-shadow, $shadow);
+  border-width: var(--koi-btn-border-width, 2px);
+  box-shadow: var(--koi-btn-shadow, shadow(xs));
   color: var(--koi-btn-foreground, fill(text, 2));
   display: var(--koi-btn-display, inline-flex);
-  font-size: var(--koi-btn-font-size, $font-size);
-  font-weight: var(--koi-btn-font-weight, $font-weight);
+  font-size: var(--koi-btn-font-size, font(sm));
+  font-weight: var(--koi-btn-font-weight, font(semibold));
   gap: var(--koi-btn-gap, 1ch);
   justify-content: var(--koi-btn-justify-content, center);
-  letter-spacing: var(--koi-btn-tracking, $tracking);
-  line-height: var(--koi-btn-leading, $leading);
-  padding: var(--koi-btn-padding-y, $padding-y) var(--koi-btn-padding-x, $padding-x);
+  letter-spacing: var(--koi-btn-tracking, tracking(wide));
+  line-height: var(--koi-btn-leading, text-leading(sm));
+  padding: var(--koi-btn-padding-y, spacing(8)) var(--koi-btn-padding-x, spacing(16));
   text-align: var(--koi-btn-text-align, center);
-  text-transform: var(--koi-btn-text-case, $text-transform);
+  text-transform: var(--koi-btn-text-transform, capitalize);
 
   &:hover {
     @include shadow(var(--koi-btn-shadow-hover, shadow(sm)));
     background-color: var(--koi-btn-background-hover, fill(surface, 3));
+    color: var(--koi-btn-foreground-hover, fill(text, 2));
   }
 
   &:active {
     @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
     background-color: var(--koi-btn-background-active, fill(surface, 1));
+    color: var(--koi-btn-foreground-active, fill(text, 2));
   }
 
   &:disabled,
   &[data-state='disabled'] {
     background-color: var(--koi-btn-background-disabled, fill(surface, 3));
-    border-color: var(--btn-border-color-disabled, fill(border, 1));
+    border-color: var(--koi-btn-border-color-disabled, fill(border, 1));
     box-shadow: none;
     color: var(--koi-btn-foreground-disabled, fill(text, 3));
     cursor: not-allowed;
@@ -104,20 +95,36 @@ $text-transform: capitalize !default;
   --koi-btn-background: #{fill(contrast, 1)};
   --koi-btn-background-hover: #{fill(contrast, 3)};
   --koi-btn-background-active: #{fill(contrast, 2)};
-  --koi-btn-foreground: #{fill(contrast, 1, $invert: true)};
   --koi-btn-border-color: transparent;
+  --koi-btn-foreground: #{fill(contrast, 1, $invert: true)};
 }
 
 // ---- Variants ----
 
 @mixin solid {
+  @include focus(accent(6));
+
   --koi-btn-background: #{accent(6)};
   --koi-btn-background-hover: #{accent(7)};
   --koi-btn-background-active: #{accent(5)};
   --koi-btn-border-color: transparent;
   --koi-btn-foreground: #{fill(white)};
+}
 
+@mixin outline {
   @include focus(accent(6));
+
+  --koi-btn-background: transparent;
+  --koi-btn-background-hover: #{accent(0)};
+  --koi-btn-background-active: #{accent(5)};
+  --koi-btn-border-color: #{accent(6)};
+  --koi-btn-foreground: #{accent(6)};
+
+  // @include dark-mode {
+  //   --koi-btn-background-hover: #{accent(9, $alpha: 0.25)};
+  //   --koi-btn-foreground: #{accent(6)};
+  //   --koi-btn-foreground-hover: #{accent(5)};
+  // }
 }
 
 // ---- Modifiers ----
@@ -153,6 +160,10 @@ $text-transform: capitalize !default;
 
     &--solid {
       @include solid;
+    }
+
+    &--outline {
+      @include outline;
     }
 
     &--wide {

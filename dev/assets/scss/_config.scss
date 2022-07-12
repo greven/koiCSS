@@ -3,6 +3,5 @@
 @use 'sass:list';
 
 @use 'koi' with (
-  $color-schemes: light dark dim,
-  $button-text-transform: capitalize
+  $color-schemes: light dark dim
 );

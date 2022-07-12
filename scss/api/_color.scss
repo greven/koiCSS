@@ -7,7 +7,6 @@
 @use 'theme' as *;
 
 $_default-shade: config.default(color-shade);
-$_default-accent: config.default(color-accent);
 
 // --------------------------------
 //   Functions
@@ -44,6 +43,15 @@ $_default-accent: config.default(color-accent);
       $complement: $complement,
       $invert: $invert
     );
+  } @else if $color == 'accent' {
+    @return hsl-color-var(
+      accent-#{$shade},
+      $alpha: $alpha,
+      $saturation: $saturation,
+      $lightness: $lightness,
+      $complement: $complement,
+      $invert: $invert
+    );
   } @else if meta.type-of($color) == 'color' {
     @return $color;
   } @else {
@@ -62,9 +70,23 @@ $_default-accent: config.default(color-accent);
   }
 }
 
-@function accent($shade: $_default-shade) {
-  $fallback-accent: theme(colors, $_default-accent, $shade);
-  @return css-var(accent-#{$shade}, $fallback-accent);
+@function accent(
+  $shade: $_default-shade,
+  $alpha: 1,
+  $saturation: null,
+  $lightness: null,
+  $complement: false,
+  $invert: false
+) {
+  @return fill(
+    accent,
+    $shade: $shade,
+    $alpha: $alpha,
+    $saturation: $saturation,
+    $lightness: $lightness,
+    $complement: $complement,
+    $invert: $invert
+  );
 }
 
 // Return an RGB theme color value (compile time) in channels (triplet) format

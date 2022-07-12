@@ -90,7 +90,6 @@ body {
 
 .box-s3 {
   --koi-shadow-color: 255 0 0;
-  @debug koi.color(success, 6);
   @include koi.box($padding: true, $rounded: true, $bg-color: koi.fill(surface, 3));
   @include koi.border();
   @include koi.shadow(md, koi.color-channels(black));

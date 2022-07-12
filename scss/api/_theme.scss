@@ -70,7 +70,9 @@
 // ---- Color Schemes Generation ----
 
 @mixin generate-scheme-css-vars($colors-map: (), $color-scheme: null, $suffix: null) {
-  @include generate-css-color-vars($colors-map, $color-prefix, $color-scheme);
+  @each $color-name, $value in $colors-map {
+    @include color-custom-prop($color-prefix, $color-name, $value, $color-scheme);
+  }
 }
 
 @mixin _default-color-scheme($color-schemes-map) {

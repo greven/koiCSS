@@ -62,6 +62,7 @@ $schemes: (
       1: map.get($colors, black),
       2: map.get($colors, grey, 9),
       3: map.get($colors, grey, 7),
+      4: map.get($colors, grey, 5),
     ),
     surface: (
       1: map.get($colors, grey, 0),
@@ -85,6 +86,7 @@ $schemes: (
       1: map.get($colors, white),
       2: map.get($colors, grey, 0),
       3: map.get($colors, grey, 2),
+      4: map.get($colors, grey, 4),
     ),
     surface: (
       1: map.get($colors, grey, 9),
