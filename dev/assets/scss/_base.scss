@@ -11,18 +11,18 @@
 
 // @include koi.font-face('Tobias Light', 'fonts/Tobias-Light', $family: Tobias, $weight: 300);
 
-// body {
-//   // --koi-btn-border-radius: var(--radius-full);
-//   // --koi-btn-font-size: var(--font-size-md);
-//   // --koi-btn-text-case: capitalize;
+body {
+  // --koi-btn-border-radius: var(--radius-full);
+  // --koi-btn-font-size: var(--font-size-md);
+  --koi-btn-text-case: capitalize;
 
-// @include koi.container($from: md, $padding: true, $center: true, $max-width: lg);
-// }
+  // @include koi.container($from: md, $padding: true, $center: true, $max-width: lg);
+}
 
-// .wrapper {
-//   @include koi.rounded(md);
-//   @include koi.fluid-padding-block(md, 4xl);
-// }
+.wrapper {
+  @include koi.rounded(md);
+  @include koi.fluid-padding-block(md, 4xl);
+}
 
 .buttons {
   display: flex;
@@ -30,75 +30,75 @@
   gap: 8px;
 }
 
-// .even-columns {
-//   // display: block;
-//   @include koi.even-columns(250px);
-// }
+.even-columns {
+  // display: block;
+  @include koi.even-columns(250px);
+}
 
-// .keys-2 {
-//   font-size: koi.font(3xl);
-// }
+.keys-2 {
+  font-size: koi.font(3xl);
+}
 
-// .my-box-1,
-// .my-box-2,
-// .my-box-3 {
-//   @include koi.box($padding: true, $shadow: md);
-//   @include koi.border(koi.fill(grey, 8), $radius: koi.radius(lg));
-//   @include koi.transition-shadow();
+.my-box-1,
+.my-box-2,
+.my-box-3 {
+  @include koi.box($padding: true, $shadow: md);
+  @include koi.border(koi.fill(grey, 8), $radius: koi.radius(lg));
+  @include koi.transition-shadow();
 
-//   &:hover {
-//     @include koi.shadow(xl);
-//   }
-// }
+  &:hover {
+    @include koi.shadow(xl);
+  }
+}
 
-// .my-box-1 {
-//   background: var(--gradient-10);
-//   color: koi.fill(black);
-//   animation: var(--animation-shake-x);
+.my-box-1 {
+  background: var(--gradient-10);
+  color: koi.fill(black);
+  animation: var(--animation-shake-x);
 
-//   @include koi.dark-mode {
-//     background-color: koi.fill(danger, 9, 0.25);
-//   }
-// }
+  @include koi.dark-mode {
+    background-color: koi.fill(danger, 9, 0.25);
+  }
+}
 
-// .my-box-2 {
-//   // --koi-gradient-direction: 100deg;
-//   background: koi.gradient(9);
-//   color: koi.fill(black);
-//   animation: var(--animation-shake-x);
+.my-box-2 {
+  // --koi-gradient-direction: 100deg;
+  background: koi.gradient(9);
+  color: koi.fill(black);
+  animation: var(--animation-shake-x);
 
-//   @include koi.dark-mode {
-//     background-color: koi.fill(primary, 9, 0.25);
-//   }
-// }
+  @include koi.dark-mode {
+    background-color: koi.fill(primary, 9, 0.25);
+  }
+}
 
-// .my-box-3 {
-//   // --koi-gradient-direction: 100deg;
-//   background: koi.gradient(5);
-//   color: koi.fill(black);
-//   animation: var(--animation-shake-x);
+.my-box-3 {
+  // --koi-gradient-direction: 100deg;
+  background: koi.gradient(5);
+  color: koi.fill(black);
+  animation: var(--animation-shake-x);
 
-//   @include koi.dark-mode {
-//     background-color: koi.fill(primary, 9, 0.25);
-//   }
-// }
+  @include koi.dark-mode {
+    background-color: koi.fill(primary, 9, 0.25);
+  }
+}
 
-// .box-s2 {
-//   @include koi.box($padding: true, $rounded: true, $bg-color: koi.fill(surface, 2));
-//   @include koi.border();
-//   @include koi.shadow(sm);
-// }
+.box-s2 {
+  @include koi.box($padding: true, $rounded: true, $bg-color: koi.fill(surface, 2));
+  @include koi.border();
+  @include koi.shadow(sm);
+}
 
-// .box-s3 {
-//   --koi-shadow-color: 255 0 0;
-//   @debug koi.color(success, 6);
-//   @include koi.box($padding: true, $rounded: true, $bg-color: koi.fill(surface, 3));
-//   @include koi.border();
-//   @include koi.shadow(md, koi.color-channels(black));
-// }
+.box-s3 {
+  --koi-shadow-color: 255 0 0;
+  @debug koi.color(success, 6);
+  @include koi.box($padding: true, $rounded: true, $bg-color: koi.fill(surface, 3));
+  @include koi.border();
+  @include koi.shadow(md, koi.color-channels(black));
+}
 
-// .box-s4 {
-//   @include koi.box($padding: true, $rounded: true, $bg-color: koi.fill(surface, 4));
-//   @include koi.border();
-//   @include koi.shadow(lg);
-// }
+.box-s4 {
+  @include koi.box($padding: true, $rounded: true, $bg-color: koi.fill(surface, 4));
+  @include koi.border();
+  @include koi.shadow(lg);
+}

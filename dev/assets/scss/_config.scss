@@ -4,5 +4,5 @@
 
 @use 'koi' with (
   $color-schemes: light dark dim,
-  $button-text-transform: uppercase
+  $button-text-transform: capitalize
 );

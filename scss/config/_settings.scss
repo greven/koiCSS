@@ -20,22 +20,26 @@ $use-css-variables: true !default;
 $use-font-smoothing: true !default;
 $color-schemes: light dark !default;
 
-$defaults: (
-  border-width: 1,
-  blur: md,
-  color-accent: primary,
-  color-shade: 6,
-  duration: normal,
-  font-family: sans,
-  font-size: md,
-  font-weight: normal,
-  layer: base,
-  leading: normal,
-  radius: md,
-  shadow: md,
-  timing: ease,
-  tracking: normal,
-) !default;
+$defaults: () !default;
+$defaults: map.deep-merge(
+  (
+    border-width: 1,
+    blur: md,
+    color-accent: primary,
+    color-shade: 6,
+    duration: normal,
+    font-family: sans,
+    font-size: md,
+    font-weight: normal,
+    layer: base,
+    leading: normal,
+    radius: md,
+    shadow: md,
+    timing: ease,
+    tracking: normal,
+  ),
+  $defaults
+);
 
 // --------------------------------
 //   Functions
