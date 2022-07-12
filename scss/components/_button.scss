@@ -102,23 +102,23 @@ $selectors: selector.parse(
 // ---- Variants ----
 
 @mixin solid {
-  @include focus(accent(6));
 
   --koi-btn-background: #{accent(6)};
   --koi-btn-background-hover: #{accent(7)};
   --koi-btn-background-active: #{accent(5)};
   --koi-btn-border-color: transparent;
   --koi-btn-foreground: #{fill(white)};
+  @include focus(accent(6));
 }
 
 @mixin outline {
-  @include focus(accent(6));
 
   --koi-btn-background: transparent;
   --koi-btn-background-hover: #{accent(0)};
   --koi-btn-background-active: #{accent(5)};
   --koi-btn-border-color: #{accent(6)};
   --koi-btn-foreground: #{accent(6)};
+  @include focus(accent(6));
 
   // @include dark-mode {
   //   --koi-btn-background-hover: #{accent(9, $alpha: 0.25)};
