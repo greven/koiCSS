@@ -31,6 +31,13 @@ $btn-text-case: capitalize;
 //   Mixins
 // --------------------------------
 
+// Button focus mixin to had a focus ring
+@mixin focus($color: fill(contrast, 1), $offset-color: fill(surface, 1)) {
+  &:focus-visible {
+    @include ring($color: $color, $offset-color: $offset-color);
+  }
+}
+
 @mixin reset {
   appearance: none;
   background-color: transparent;
@@ -51,39 +58,36 @@ $btn-text-case: capitalize;
 }
 
 @mixin base {
+  @include focus;
   @include transition((color, background-color, border-color, transform));
 
-  align-items: center;
+  align-items: var(--koi-btn-align-items, center);
   background-color: var(--koi-btn-background, fill(surface, 2));
   border-color: var(--koi-btn-border-color, fill(border, 2));
   border-radius: var(--koi-btn-border-radius, $btn-border-radius);
   border-style: var(--koi-btn-border-style, solid);
   border-width: var(--koi-btn-border-width, 1px);
   box-shadow: var(--koi-btn-shadow, $btn-shadow);
-  color: var(--koi-btn-text-color, fill(text, 2));
-  display: inline-flex;
+  color: var(--koi-btn-foreground, fill(text, 2));
+  display: var(--koi-btn-display, inline-flex);
   font-size: var(--koi-btn-font-size, $btn-font-size);
   font-weight: var(--koi-btn-font-weight, $btn-font-weight);
   gap: var(--koi-btn-gap, 1ch);
-  justify-content: center;
+  justify-content: var(--koi-btn-justify-content, center);
   letter-spacing: var(--koi-btn-tracking, $btn-tracking);
   line-height: var(--koi-btn-leading, $btn-leading);
   padding: var(--koi-btn-padding-y, $btn-padding-y) var(--koi-btn-padding-x, $btn-padding-x);
-  text-align: center;
+  text-align: var(--koi-btn-text-align, center);
   text-transform: var(--koi-btn-text-case, $btn-text-case);
 
   &:hover {
-    background-color: var(--koi-btn-color-hover, fill(surface, 3));
-    box-shadow: var(--koi-btn-shadow-hover, shadow(xs));
+    @include shadow(var(--koi-btn-shadow-hover, shadow(sm)));
+    background-color: var(--koi-btn-background-hover, fill(surface, 3));
   }
 
   &:active {
-    background-color: var(--koi-btn-color-active, fill(surface, 1));
-    box-shadow: none;
-  }
-
-  &:focus-visible {
-    @include ring;
+    @include shadow(var(--koi-btn-shadow-active, none));
+    background-color: var(--koi-btn-background-active, fill(surface, 1));
   }
 
   &:disabled,
@@ -91,10 +95,30 @@ $btn-text-case: capitalize;
     background-color: var(--koi-btn-background-disabled, fill(surface, 3));
     border-color: var(--btn-border-color-disabled, fill(border, 1));
     box-shadow: none;
-    color: var(--koi-btn-text-color-disabled, fill(text, 3));
+    color: var(--koi-btn-foreground-disabled, fill(text, 3));
     cursor: not-allowed;
   }
 }
+
+@mixin dark {
+  --koi-btn-background: #{fill(contrast, 1)};
+  --koi-btn-background-hover: #{fill(contrast, 3)};
+  --koi-btn-background-active: #{fill(contrast, 2)};
+  --koi-btn-foreground: #{fill(contrast, 1, $invert: true)};
+  --koi-btn-border-color: transparent;
+}
+
+// ---- Variants ----
+
+@mixin solid($color) {
+  --koi-btn-background: #{fill($color, 9)};
+  --koi-btn-background-hover: #{fill($color, 7)};
+  --koi-btn-background-active: #{fill($color, 8)};
+  --koi-btn-border-color: transparent;
+  --koi-btn-foreground: #{fill(white)};
+}
+
+// ---- Modifiers ----
 
 // Makes the button full width
 @mixin wide {
@@ -120,6 +144,10 @@ $btn-text-case: capitalize;
 
   #{$selectors} {
     @include base;
+
+    &--dark {
+      @include dark();
+    }
 
     &--wide {
       @include wide;

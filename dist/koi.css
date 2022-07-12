@@ -403,7 +403,18 @@ select {
   --animation-ping: ping 3s cubic-bezier(0, 0, 0.2, 1) infinite;
   --animation-pulse: pulse 2s cubic-bezier(0, 0, 0.2, 1) infinite;
   --animation-spin: spin 2s linear infinite;
-  --animation-ring: ring 500ms linear infinite;
+  --animation-scale-up: scale-up 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  --animation-scale-down: scale-down 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  --animation-slide-out-up: slide-out-up 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  --animation-slide-out-down: slide-out-down 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  --animation-slide-out-right: slide-out-right 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  --animation-slide-out-left: slide-out-left 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  --animation-slide-in-up: slide-in-up 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  --animation-slide-in-down: slide-in-down 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  --animation-slide-in-right: slide-in-right 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  --animation-slide-in-left: slide-in-left 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  --animation-shake-x: shake-x 0.75s cubic-bezier(0, 0, 0.2, 1);
+  --animation-shake-y: shake-y 0.75s cubic-bezier(0, 0, 0.2, 1);
   /*! purgecss start ignore */
   --linear: linear;
   --ease: cubic-bezier(0.25, 0.1, 0.25, 1);
@@ -1794,6 +1805,27 @@ select {
 html {
   --color-mode: light;
   /*! purgecss start ignore */
+  --color-contrast-1: hsl(0deg, 0%, 0%);
+  --color-contrast-1-h: 0deg;
+  --color-contrast-1-s: 0%;
+  --color-contrast-1-l: 0%;
+  --color-contrast-1-r: 0;
+  --color-contrast-1-g: 0;
+  --color-contrast-1-b: 0;
+  --color-contrast-2: hsl(0deg, 0%, 14.9019607843%);
+  --color-contrast-2-h: 0deg;
+  --color-contrast-2-s: 0%;
+  --color-contrast-2-l: 14.9019607843%;
+  --color-contrast-2-r: 38;
+  --color-contrast-2-g: 38;
+  --color-contrast-2-b: 38;
+  --color-contrast-3: hsl(0deg, 0%, 32.1568627451%);
+  --color-contrast-3-h: 0deg;
+  --color-contrast-3-s: 0%;
+  --color-contrast-3-l: 32.1568627451%;
+  --color-contrast-3-r: 82;
+  --color-contrast-3-g: 82;
+  --color-contrast-3-b: 82;
   --color-surface-1: hsl(0deg, 0%, 98.0392156863%);
   --color-surface-1-h: 0deg;
   --color-surface-1-s: 0%;
@@ -1866,11 +1898,55 @@ html {
   --color-text-4-b: 212;
   /*! purgecss end ignore */
 }
+html .accent-contrast {
+  --accent-1: hsl(0deg, 0%, 0%);
+  --accent-1-h: 0deg;
+  --accent-1-s: 0%;
+  --accent-1-l: 0%;
+  --accent-1-r: 0;
+  --accent-1-g: 0;
+  --accent-1-b: 0;
+  --accent-2: hsl(0deg, 0%, 14.9019607843%);
+  --accent-2-h: 0deg;
+  --accent-2-s: 0%;
+  --accent-2-l: 14.9019607843%;
+  --accent-2-r: 38;
+  --accent-2-g: 38;
+  --accent-2-b: 38;
+  --accent-3: hsl(0deg, 0%, 32.1568627451%);
+  --accent-3-h: 0deg;
+  --accent-3-s: 0%;
+  --accent-3-l: 32.1568627451%;
+  --accent-3-r: 82;
+  --accent-3-g: 82;
+  --accent-3-b: 82;
+}
 
 @media (prefers-color-scheme: light) {
   html {
     --color-mode: light;
     /*! purgecss start ignore */
+    --color-contrast-1: hsl(0deg, 0%, 0%);
+    --color-contrast-1-h: 0deg;
+    --color-contrast-1-s: 0%;
+    --color-contrast-1-l: 0%;
+    --color-contrast-1-r: 0;
+    --color-contrast-1-g: 0;
+    --color-contrast-1-b: 0;
+    --color-contrast-2: hsl(0deg, 0%, 14.9019607843%);
+    --color-contrast-2-h: 0deg;
+    --color-contrast-2-s: 0%;
+    --color-contrast-2-l: 14.9019607843%;
+    --color-contrast-2-r: 38;
+    --color-contrast-2-g: 38;
+    --color-contrast-2-b: 38;
+    --color-contrast-3: hsl(0deg, 0%, 32.1568627451%);
+    --color-contrast-3-h: 0deg;
+    --color-contrast-3-s: 0%;
+    --color-contrast-3-l: 32.1568627451%;
+    --color-contrast-3-r: 82;
+    --color-contrast-3-g: 82;
+    --color-contrast-3-b: 82;
     --color-surface-1: hsl(0deg, 0%, 98.0392156863%);
     --color-surface-1-h: 0deg;
     --color-surface-1-s: 0%;
@@ -1944,10 +2020,54 @@ html {
     /*! purgecss end ignore */
     color-scheme: light;
   }
+  html .accent-contrast {
+    --accent-1: hsl(0deg, 0%, 0%);
+    --accent-1-h: 0deg;
+    --accent-1-s: 0%;
+    --accent-1-l: 0%;
+    --accent-1-r: 0;
+    --accent-1-g: 0;
+    --accent-1-b: 0;
+    --accent-2: hsl(0deg, 0%, 14.9019607843%);
+    --accent-2-h: 0deg;
+    --accent-2-s: 0%;
+    --accent-2-l: 14.9019607843%;
+    --accent-2-r: 38;
+    --accent-2-g: 38;
+    --accent-2-b: 38;
+    --accent-3: hsl(0deg, 0%, 32.1568627451%);
+    --accent-3-h: 0deg;
+    --accent-3-s: 0%;
+    --accent-3-l: 32.1568627451%;
+    --accent-3-r: 82;
+    --accent-3-g: 82;
+    --accent-3-b: 82;
+  }
 }
 [color-scheme=light],
 [data-theme=light] {
   /*! purgecss start ignore */
+  --color-contrast-1: hsl(0deg, 0%, 0%);
+  --color-contrast-1-h: 0deg;
+  --color-contrast-1-s: 0%;
+  --color-contrast-1-l: 0%;
+  --color-contrast-1-r: 0;
+  --color-contrast-1-g: 0;
+  --color-contrast-1-b: 0;
+  --color-contrast-2: hsl(0deg, 0%, 14.9019607843%);
+  --color-contrast-2-h: 0deg;
+  --color-contrast-2-s: 0%;
+  --color-contrast-2-l: 14.9019607843%;
+  --color-contrast-2-r: 38;
+  --color-contrast-2-g: 38;
+  --color-contrast-2-b: 38;
+  --color-contrast-3: hsl(0deg, 0%, 32.1568627451%);
+  --color-contrast-3-h: 0deg;
+  --color-contrast-3-s: 0%;
+  --color-contrast-3-l: 32.1568627451%;
+  --color-contrast-3-r: 82;
+  --color-contrast-3-g: 82;
+  --color-contrast-3-b: 82;
   --color-surface-1: hsl(0deg, 0%, 98.0392156863%);
   --color-surface-1-h: 0deg;
   --color-surface-1-s: 0%;
@@ -2022,11 +2142,56 @@ html {
   color-scheme: light;
   --color-mode: light;
 }
+[color-scheme=light] .accent-contrast,
+[data-theme=light] .accent-contrast {
+  --accent-1: hsl(0deg, 0%, 0%);
+  --accent-1-h: 0deg;
+  --accent-1-s: 0%;
+  --accent-1-l: 0%;
+  --accent-1-r: 0;
+  --accent-1-g: 0;
+  --accent-1-b: 0;
+  --accent-2: hsl(0deg, 0%, 14.9019607843%);
+  --accent-2-h: 0deg;
+  --accent-2-s: 0%;
+  --accent-2-l: 14.9019607843%;
+  --accent-2-r: 38;
+  --accent-2-g: 38;
+  --accent-2-b: 38;
+  --accent-3: hsl(0deg, 0%, 32.1568627451%);
+  --accent-3-h: 0deg;
+  --accent-3-s: 0%;
+  --accent-3-l: 32.1568627451%;
+  --accent-3-r: 82;
+  --accent-3-g: 82;
+  --accent-3-b: 82;
+}
 
 @media (prefers-color-scheme: dark) {
   html {
     --color-mode: dark;
     /*! purgecss start ignore */
+    --color-contrast-1: hsl(0deg, 0%, 100%);
+    --color-contrast-1-h: 0deg;
+    --color-contrast-1-s: 0%;
+    --color-contrast-1-l: 100%;
+    --color-contrast-1-r: 255;
+    --color-contrast-1-g: 255;
+    --color-contrast-1-b: 255;
+    --color-contrast-2: hsl(0deg, 0%, 96.0784313725%);
+    --color-contrast-2-h: 0deg;
+    --color-contrast-2-s: 0%;
+    --color-contrast-2-l: 96.0784313725%;
+    --color-contrast-2-r: 245;
+    --color-contrast-2-g: 245;
+    --color-contrast-2-b: 245;
+    --color-contrast-3: hsl(0deg, 0%, 83.137254902%);
+    --color-contrast-3-h: 0deg;
+    --color-contrast-3-s: 0%;
+    --color-contrast-3-l: 83.137254902%;
+    --color-contrast-3-r: 212;
+    --color-contrast-3-g: 212;
+    --color-contrast-3-b: 212;
     --color-surface-1: hsl(0deg, 0%, 9.0196078431%);
     --color-surface-1-h: 0deg;
     --color-surface-1-s: 0%;
@@ -2100,10 +2265,54 @@ html {
     /*! purgecss end ignore */
     color-scheme: dark;
   }
+  html .accent-contrast {
+    --accent-1: hsl(0deg, 0%, 100%);
+    --accent-1-h: 0deg;
+    --accent-1-s: 0%;
+    --accent-1-l: 100%;
+    --accent-1-r: 255;
+    --accent-1-g: 255;
+    --accent-1-b: 255;
+    --accent-2: hsl(0deg, 0%, 96.0784313725%);
+    --accent-2-h: 0deg;
+    --accent-2-s: 0%;
+    --accent-2-l: 96.0784313725%;
+    --accent-2-r: 245;
+    --accent-2-g: 245;
+    --accent-2-b: 245;
+    --accent-3: hsl(0deg, 0%, 83.137254902%);
+    --accent-3-h: 0deg;
+    --accent-3-s: 0%;
+    --accent-3-l: 83.137254902%;
+    --accent-3-r: 212;
+    --accent-3-g: 212;
+    --accent-3-b: 212;
+  }
 }
 [color-scheme=dark],
 [data-theme=dark] {
   /*! purgecss start ignore */
+  --color-contrast-1: hsl(0deg, 0%, 100%);
+  --color-contrast-1-h: 0deg;
+  --color-contrast-1-s: 0%;
+  --color-contrast-1-l: 100%;
+  --color-contrast-1-r: 255;
+  --color-contrast-1-g: 255;
+  --color-contrast-1-b: 255;
+  --color-contrast-2: hsl(0deg, 0%, 96.0784313725%);
+  --color-contrast-2-h: 0deg;
+  --color-contrast-2-s: 0%;
+  --color-contrast-2-l: 96.0784313725%;
+  --color-contrast-2-r: 245;
+  --color-contrast-2-g: 245;
+  --color-contrast-2-b: 245;
+  --color-contrast-3: hsl(0deg, 0%, 83.137254902%);
+  --color-contrast-3-h: 0deg;
+  --color-contrast-3-s: 0%;
+  --color-contrast-3-l: 83.137254902%;
+  --color-contrast-3-r: 212;
+  --color-contrast-3-g: 212;
+  --color-contrast-3-b: 212;
   --color-surface-1: hsl(0deg, 0%, 9.0196078431%);
   --color-surface-1-h: 0deg;
   --color-surface-1-s: 0%;
@@ -2178,6 +2387,30 @@ html {
   color-scheme: dark;
   --color-mode: dark;
 }
+[color-scheme=dark] .accent-contrast,
+[data-theme=dark] .accent-contrast {
+  --accent-1: hsl(0deg, 0%, 100%);
+  --accent-1-h: 0deg;
+  --accent-1-s: 0%;
+  --accent-1-l: 100%;
+  --accent-1-r: 255;
+  --accent-1-g: 255;
+  --accent-1-b: 255;
+  --accent-2: hsl(0deg, 0%, 96.0784313725%);
+  --accent-2-h: 0deg;
+  --accent-2-s: 0%;
+  --accent-2-l: 96.0784313725%;
+  --accent-2-r: 245;
+  --accent-2-g: 245;
+  --accent-2-b: 245;
+  --accent-3: hsl(0deg, 0%, 83.137254902%);
+  --accent-3-h: 0deg;
+  --accent-3-s: 0%;
+  --accent-3-l: 83.137254902%;
+  --accent-3-r: 212;
+  --accent-3-g: 212;
+  --accent-3-b: 212;
+}
 
 /*! purgecss start ignore */
 @keyframes blink {
@@ -2243,21 +2476,99 @@ html {
   }
 }
 
-@keyframes ring {
+@keyframes scale-up {
+  to {
+    transform: scale(1.25);
+  }
+}
+
+@keyframes scale-down {
+  to {
+    transform: scale(0.75);
+  }
+}
+
+@keyframes slide-out-up {
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes slide-out-down {
+  to {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes slide-out-right {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes slide-out-left {
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slide-in-up {
+  from {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes slide-in-down {
+  from {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes shake-x {
+  0%, 100% {
+    transform: translateX(0%);
+  }
   20% {
-    transform: rotate3d(0, 0, 1, 15deg);
+    transform: translateX(-5%);
   }
   40% {
-    transform: rotate3d(0, 0, 1, -10deg);
+    transform: translateX(5%);
   }
   60% {
-    transform: rotate3d(0, 0, 1, 5deg);
+    transform: translateX(-5%);
   }
   80% {
-    transform: rotate3d(0, 0, 1, -5deg);
+    transform: translateX(5%);
   }
-  to {
-    transform: rotate3d(0, 0, 1, 0deg);
+}
+
+@keyframes shake-y {
+  0%, 100% {
+    transform: translateY(0%);
+  }
+  20% {
+    transform: translateY(-5%);
+  }
+  40% {
+    transform: translateY(5%);
+  }
+  60% {
+    transform: translateY(-5%);
+  }
+  80% {
+    transform: translateY(5%);
   }
 }
 
@@ -2419,24 +2730,24 @@ button,
   transition-duration: var(--koi-transition-duration, 200ms);
   transition-property: var(--koi-transition-property, color, background-color, border-color, transform);
   transition-timing-function: var(--koi-transition-timing-function, cubic-bezier(0.25, 0.1, 0.25, 1));
-  align-items: center;
+  align-items: var(--koi-btn-align-items, center);
   background-color: var(--koi-btn-background, hsl(var(--color-surface-2-h), var(--color-surface-2-s), var(--color-surface-2-l), 1));
   border-color: var(--koi-btn-border-color, hsl(var(--color-border-2-h), var(--color-border-2-s), var(--color-border-2-l), 1));
-  border-radius: var(--koi-btn-border-radius, 8px);
+  border-radius: var(--koi-btn-border-radius, 6px);
   border-style: var(--koi-btn-border-style, solid);
   border-width: var(--koi-btn-border-width, 1px);
   box-shadow: var(--koi-btn-shadow, 0 1px 2px 0 rgba(var(--koi-shadow-color, 0 0 0) / 0.05));
-  color: var(--koi-btn-text-color, hsl(var(--color-text-2-h), var(--color-text-2-s), var(--color-text-2-l), 1));
-  display: inline-flex;
+  color: var(--koi-btn-foreground, hsl(var(--color-text-2-h), var(--color-text-2-s), var(--color-text-2-l), 1));
+  display: var(--koi-btn-display, inline-flex);
   font-size: var(--koi-btn-font-size, 0.875rem);
   font-weight: var(--koi-btn-font-weight, 500);
   gap: var(--koi-btn-gap, 1ch);
-  justify-content: center;
+  justify-content: var(--koi-btn-justify-content, center);
   letter-spacing: var(--koi-btn-tracking, 0.025em);
   line-height: var(--koi-btn-leading, 1.25rem);
   padding: var(--koi-btn-padding-y, 0.5rem) var(--koi-btn-padding-x, 1rem);
-  text-align: center;
-  text-transform: var(--koi-btn-text-case, uppercase);
+  text-align: var(--koi-btn-text-align, center);
+  text-transform: var(--koi-btn-text-case, capitalize);
 }
 .btn:focus,
 a.btn:focus,
@@ -2446,26 +2757,6 @@ button:focus,
 [type=reset]:focus,
 [type=file]:focus {
   outline: none;
-}
-.btn:hover,
-a.btn:hover,
-button:hover,
-[type=button]:hover,
-[type=submit]:hover,
-[type=reset]:hover,
-[type=file]:hover {
-  background-color: var(--koi-btn-color-hover, hsl(var(--color-surface-3-h), var(--color-surface-3-s), var(--color-surface-3-l), 1));
-  box-shadow: var(--koi-btn-shadow-hover, 0 1px 2px 0 rgba(var(--koi-shadow-color, 0 0 0) / 0.05));
-}
-.btn:active,
-a.btn:active,
-button:active,
-[type=button]:active,
-[type=submit]:active,
-[type=reset]:active,
-[type=file]:active {
-  background-color: var(--koi-btn-color-active, hsl(var(--color-surface-1-h), var(--color-surface-1-s), var(--color-surface-1-l), 1));
-  box-shadow: none;
 }
 .btn:focus-visible,
 a.btn:focus-visible,
@@ -2477,12 +2768,34 @@ button:focus-visible,
   --koi-ring-offset-shadow: var(--koi-ring-inset, ) 0 0 0 var(--koi-ring-offset, 2px)
     var(--koi-ring-offset-color, hsl(var(--color-surface-1-h), var(--color-surface-1-s), var(--color-surface-1-l), 1));
   --koi-ring-shadow: var(--koi-ring-inset, ) 0 0 0 calc(2px + var(--koi-ring-offset, 2px))
-    var(--koi-ring-color, var(--accent-5, #14b8a6));
+    var(--koi-ring-color, hsl(var(--color-contrast-1-h), var(--color-contrast-1-s), var(--color-contrast-1-l), 1));
   box-shadow: var(--koi-ring-offset-shadow), var(--koi-ring-shadow), var(--koi-shadow, 0 0 rgba(0, 0, 0, 0));
   transition-delay: var(--koi-transition-delay, );
   transition-duration: var(--koi-transition-duration, 100ms);
   transition-property: var(--koi-transition-property, box-shadow);
   transition-timing-function: var(--koi-transition-timing-function, cubic-bezier(0.25, 0.1, 0.25, 1));
+}
+.btn:hover,
+a.btn:hover,
+button:hover,
+[type=button]:hover,
+[type=submit]:hover,
+[type=reset]:hover,
+[type=file]:hover {
+  --koi-shadow: var(--koi-btn-shadow-hover, 0 1px 3px 0 rgb(var(--koi-shadow-color, 0 0 0) / 0.1), 0 1px 2px -1px rgb(var(--koi-shadow-color, 0 0 0) / 0.1));
+  box-shadow: var(--koi-ring-offset-shadow, 0 0 rgba(0, 0, 0, 0)), var(--koi-ring-shadow, 0 0 rgba(0, 0, 0, 0)), var(--koi-shadow);
+  background-color: var(--koi-btn-background-hover, hsl(var(--color-surface-3-h), var(--color-surface-3-s), var(--color-surface-3-l), 1));
+}
+.btn:active,
+a.btn:active,
+button:active,
+[type=button]:active,
+[type=submit]:active,
+[type=reset]:active,
+[type=file]:active {
+  --koi-shadow: var(--koi-btn-shadow-active, none);
+  box-shadow: var(--koi-ring-offset-shadow, 0 0 rgba(0, 0, 0, 0)), var(--koi-ring-shadow, 0 0 rgba(0, 0, 0, 0)), var(--koi-shadow);
+  background-color: var(--koi-btn-background-active, hsl(var(--color-surface-1-h), var(--color-surface-1-s), var(--color-surface-1-l), 1));
 }
 .btn:disabled, .btn[data-state=disabled],
 a.btn:disabled,
@@ -2500,7 +2813,7 @@ button[data-state=disabled],
   background-color: var(--koi-btn-background-disabled, hsl(var(--color-surface-3-h), var(--color-surface-3-s), var(--color-surface-3-l), 1));
   border-color: var(--btn-border-color-disabled, hsl(var(--color-border-1-h), var(--color-border-1-s), var(--color-border-1-l), 1));
   box-shadow: none;
-  color: var(--koi-btn-text-color-disabled, hsl(var(--color-text-3-h), var(--color-text-3-s), var(--color-text-3-l), 1));
+  color: var(--koi-btn-foreground-disabled, hsl(var(--color-text-3-h), var(--color-text-3-s), var(--color-text-3-l), 1));
   cursor: not-allowed;
 }
 
@@ -2509,50 +2822,59 @@ button[data-state=disabled],
   transition-duration: var(--koi-transition-duration, 200ms);
   transition-property: var(--koi-transition-property, color, background-color, border-color, transform);
   transition-timing-function: var(--koi-transition-timing-function, cubic-bezier(0.25, 0.1, 0.25, 1));
-  align-items: center;
+  align-items: var(--koi-btn-align-items, center);
   background-color: var(--koi-btn-background, hsl(var(--color-surface-2-h), var(--color-surface-2-s), var(--color-surface-2-l), 1));
   border-color: var(--koi-btn-border-color, hsl(var(--color-border-2-h), var(--color-border-2-s), var(--color-border-2-l), 1));
-  border-radius: var(--koi-btn-border-radius, 8px);
+  border-radius: var(--koi-btn-border-radius, 6px);
   border-style: var(--koi-btn-border-style, solid);
   border-width: var(--koi-btn-border-width, 1px);
   box-shadow: var(--koi-btn-shadow, 0 1px 2px 0 rgba(var(--koi-shadow-color, 0 0 0) / 0.05));
-  color: var(--koi-btn-text-color, hsl(var(--color-text-2-h), var(--color-text-2-s), var(--color-text-2-l), 1));
-  display: inline-flex;
+  color: var(--koi-btn-foreground, hsl(var(--color-text-2-h), var(--color-text-2-s), var(--color-text-2-l), 1));
+  display: var(--koi-btn-display, inline-flex);
   font-size: var(--koi-btn-font-size, 0.875rem);
   font-weight: var(--koi-btn-font-weight, 500);
   gap: var(--koi-btn-gap, 1ch);
-  justify-content: center;
+  justify-content: var(--koi-btn-justify-content, center);
   letter-spacing: var(--koi-btn-tracking, 0.025em);
   line-height: var(--koi-btn-leading, 1.25rem);
   padding: var(--koi-btn-padding-y, 0.5rem) var(--koi-btn-padding-x, 1rem);
-  text-align: center;
-  text-transform: var(--koi-btn-text-case, uppercase);
-}
-.btn:hover, a.btn:hover, [type=button].btn:hover, [type=submit].btn:hover, [type=reset].btn:hover {
-  background-color: var(--koi-btn-color-hover, hsl(var(--color-surface-3-h), var(--color-surface-3-s), var(--color-surface-3-l), 1));
-  box-shadow: var(--koi-btn-shadow-hover, 0 1px 2px 0 rgba(var(--koi-shadow-color, 0 0 0) / 0.05));
-}
-.btn:active, a.btn:active, [type=button].btn:active, [type=submit].btn:active, [type=reset].btn:active {
-  background-color: var(--koi-btn-color-active, hsl(var(--color-surface-1-h), var(--color-surface-1-s), var(--color-surface-1-l), 1));
-  box-shadow: none;
+  text-align: var(--koi-btn-text-align, center);
+  text-transform: var(--koi-btn-text-case, capitalize);
 }
 .btn:focus-visible, a.btn:focus-visible, [type=button].btn:focus-visible, [type=submit].btn:focus-visible, [type=reset].btn:focus-visible {
   --koi-ring-offset-shadow: var(--koi-ring-inset, ) 0 0 0 var(--koi-ring-offset, 2px)
     var(--koi-ring-offset-color, hsl(var(--color-surface-1-h), var(--color-surface-1-s), var(--color-surface-1-l), 1));
   --koi-ring-shadow: var(--koi-ring-inset, ) 0 0 0 calc(2px + var(--koi-ring-offset, 2px))
-    var(--koi-ring-color, var(--accent-5, #14b8a6));
+    var(--koi-ring-color, hsl(var(--color-contrast-1-h), var(--color-contrast-1-s), var(--color-contrast-1-l), 1));
   box-shadow: var(--koi-ring-offset-shadow), var(--koi-ring-shadow), var(--koi-shadow, 0 0 rgba(0, 0, 0, 0));
   transition-delay: var(--koi-transition-delay, );
   transition-duration: var(--koi-transition-duration, 100ms);
   transition-property: var(--koi-transition-property, box-shadow);
   transition-timing-function: var(--koi-transition-timing-function, cubic-bezier(0.25, 0.1, 0.25, 1));
 }
+.btn:hover, a.btn:hover, [type=button].btn:hover, [type=submit].btn:hover, [type=reset].btn:hover {
+  --koi-shadow: var(--koi-btn-shadow-hover, 0 1px 3px 0 rgb(var(--koi-shadow-color, 0 0 0) / 0.1), 0 1px 2px -1px rgb(var(--koi-shadow-color, 0 0 0) / 0.1));
+  box-shadow: var(--koi-ring-offset-shadow, 0 0 rgba(0, 0, 0, 0)), var(--koi-ring-shadow, 0 0 rgba(0, 0, 0, 0)), var(--koi-shadow);
+  background-color: var(--koi-btn-background-hover, hsl(var(--color-surface-3-h), var(--color-surface-3-s), var(--color-surface-3-l), 1));
+}
+.btn:active, a.btn:active, [type=button].btn:active, [type=submit].btn:active, [type=reset].btn:active {
+  --koi-shadow: var(--koi-btn-shadow-active, none);
+  box-shadow: var(--koi-ring-offset-shadow, 0 0 rgba(0, 0, 0, 0)), var(--koi-ring-shadow, 0 0 rgba(0, 0, 0, 0)), var(--koi-shadow);
+  background-color: var(--koi-btn-background-active, hsl(var(--color-surface-1-h), var(--color-surface-1-s), var(--color-surface-1-l), 1));
+}
 .btn:disabled, .btn[data-state=disabled], a.btn:disabled, a.btn[data-state=disabled], [type=button].btn:disabled, [type=button].btn[data-state=disabled], [type=submit].btn:disabled, [type=submit].btn[data-state=disabled], [type=reset].btn:disabled, [type=reset].btn[data-state=disabled] {
   background-color: var(--koi-btn-background-disabled, hsl(var(--color-surface-3-h), var(--color-surface-3-s), var(--color-surface-3-l), 1));
   border-color: var(--btn-border-color-disabled, hsl(var(--color-border-1-h), var(--color-border-1-s), var(--color-border-1-l), 1));
   box-shadow: none;
-  color: var(--koi-btn-text-color-disabled, hsl(var(--color-text-3-h), var(--color-text-3-s), var(--color-text-3-l), 1));
+  color: var(--koi-btn-foreground-disabled, hsl(var(--color-text-3-h), var(--color-text-3-s), var(--color-text-3-l), 1));
   cursor: not-allowed;
+}
+.btn--dark, a.btn--dark, [type=button].btn--dark, [type=submit].btn--dark, [type=reset].btn--dark {
+  --koi-btn-background: hsl(var(--color-grey-9-h), var(--color-grey-9-s), var(--color-grey-9-l), 1);
+  --koi-btn-background-hover: hsl(var(--color-grey-7-h), var(--color-grey-7-s), var(--color-grey-7-l), 1);
+  --koi-btn-background-active: hsl(var(--color-grey-8-h), var(--color-grey-8-s), var(--color-grey-8-l), 1);
+  --koi-btn-border-color: transparent;
+  --koi-btn-foreground: hsl(var(--color-white-h), var(--color-white-s), var(--color-white-l), 1);
 }
 .btn--wide, a.btn--wide, [type=button].btn--wide, [type=submit].btn--wide, [type=reset].btn--wide {
   justify-content: center;

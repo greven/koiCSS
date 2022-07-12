@@ -67,7 +67,8 @@ $_type-base-index: list.index($_type-steps, 'md');
   h5,
   h6 {
     color: fill(config.$headings-color);
-    font-family: font(headings);
+    font-family: config.$base-font-family;
+    // font-family: font(headings);
     font-weight: font-weight(config.$headings-font-weight);
   }
 

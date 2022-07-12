@@ -19,7 +19,8 @@
   body {
     background-color: var(--koi-body-background, fill(surface, 1));
     color: var(--koi-body-foreground, fill(text, 1));
-    font-family: font(base);
+    // font-family: font(base);
+    font-family: config.$base-font-family;
     font-size: font(md);
     font-weight: font(normal);
     line-height: leading(normal);

@@ -5,5 +5,6 @@
 @use 'koi' with (
   $settings: (
     color-schemes: light dark dim,
-  )
+  ),
+  $btn-text-case: uppercase
 );
