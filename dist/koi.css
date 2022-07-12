@@ -2874,6 +2874,13 @@ button[data-state=disabled],
   --koi-btn-foreground: rgb(calc(255 - var(--color-contrast-1-r)), calc(255 - var(--color-contrast-1-g)), calc(255 - var(--color-contrast-1-b)));
   --koi-btn-border-color: transparent;
 }
+.btn--solid, a.btn--solid, [type=button].btn--solid, [type=submit].btn--solid, [type=reset].btn--solid {
+  --koi-btn-background: var(--accent-6, #0d9488);
+  --koi-btn-background-hover: var(--accent-7, #0f766e);
+  --koi-btn-background-active: var(--accent-5, #14b8a6);
+  --koi-btn-border-color: transparent;
+  --koi-btn-foreground: hsl(var(--color-white-h), var(--color-white-s), var(--color-white-l), 1);
+}
 .btn--wide, a.btn--wide, [type=button].btn--wide, [type=submit].btn--wide, [type=reset].btn--wide {
   justify-content: center;
   width: 100%;

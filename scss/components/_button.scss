@@ -86,7 +86,7 @@ $btn-text-case: capitalize;
   }
 
   &:active {
-    @include shadow(var(--koi-btn-shadow-active, none));
+    @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
     background-color: var(--koi-btn-background-active, fill(surface, 1));
   }
 
@@ -116,6 +116,8 @@ $btn-text-case: capitalize;
   --koi-btn-background-active: #{accent(5)};
   --koi-btn-border-color: transparent;
   --koi-btn-foreground: #{fill(white)};
+
+  @include focus(accent(6));
 }
 
 // ---- Modifiers ----

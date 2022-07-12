@@ -24,6 +24,12 @@
 //   @include koi.fluid-padding-block(md, 4xl);
 // }
 
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
 // .even-columns {
 //   // display: block;
 //   @include koi.even-columns(250px);
