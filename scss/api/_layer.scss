@@ -2,10 +2,10 @@
 //   Layer / Z-Index API
 // --------------------------------
 
-@use 'setting' as *;
+@use '../config';
 @use 'theme' as *;
 
-$_default-layer: setting(defaults, layer);
+$_default-layer: config.default(layer);
 
 // --------------------------------
 //   Functions

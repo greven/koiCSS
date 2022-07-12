@@ -6,17 +6,15 @@
 @use 'sass:meta';
 @use 'sass:string';
 
+@use '../config';
 @use '../helpers/string' as *;
-@use '../config' as *;
 
 // --------------------------------
 //   Functions
 // --------------------------------
 
-$_prefix: map.get($settings, prefix);
-
 // Return the prefix of the css vars if configured
-@function _css-var-prefix($prefix: $_prefix) {
+@function _css-var-prefix($prefix: config.$prefix) {
   $prefix: if($prefix == '', '', '#{$prefix}-');
   @return $prefix;
 }

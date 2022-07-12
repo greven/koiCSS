@@ -8,41 +8,44 @@
 @use '../tokens' as *;
 
 // --------------------------------
-//   Vars
-// --------------------------------
-
-$_font-sans: map.get($font-family, sans);
-
-// --------------------------------
 //   Default Settings
 // --------------------------------
 
-$_default-settings: (
-  prefix: '',
-  use-reset-styles: true,
-  use-default-styles: true,
-  use-theming: true,
-  use-utilities: false,
-  use-css-variables: true,
-  use-font-smoothing: true,
-  color-schemes: light dark,
-  defaults: (
-    accent: primary,
-    border-width: 1,
-    blur: md,
-    colors: 6,
-    duration: normal,
-    font-family: sans,
-    font-size: md,
-    font-weight: normal,
-    layer: base,
-    leading: normal,
-    radius: md,
-    shadow: md,
-    timing: ease,
-    tracking: normal,
-  ),
-);
+$prefix: '' !default;
+$use-reset-styles: true !default;
+$use-default-styles: true !default;
+$use-theming: true !default;
+$use-utilities: false !default;
+$use-css-variables: true !default;
+$use-font-smoothing: true !default;
+$color-schemes: light dark !default;
 
-$settings: () !default;
-$settings: map.deep-merge($_default-settings, $settings);
+$defaults: (
+  border-width: 1,
+  blur: md,
+  color-accent: primary,
+  color-shade: 6,
+  duration: normal,
+  font-family: sans,
+  font-size: md,
+  font-weight: normal,
+  layer: base,
+  leading: normal,
+  radius: md,
+  shadow: md,
+  timing: ease,
+  tracking: normal,
+) !default;
+
+// --------------------------------
+//   Functions
+// --------------------------------
+
+// Get the default theme property
+@function default($keys...) {
+  @if map.has-key($defaults, $keys...) {
+    @return map.get($defaults, $keys...);
+  } @else {
+    @return null;
+  }
+}

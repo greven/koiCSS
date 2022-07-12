@@ -9,7 +9,6 @@
 
 @use '../config';
 @use '../helpers' as *;
-@use 'setting' as *;
 @use 'media-query' as *;
 @use 'theme' as *;
 
@@ -17,12 +16,12 @@
 //   Vars
 // --------------------------------
 
-$_default-font-family: setting(defaults, font-family);
-$_default-font-size: setting(defaults, font-size);
-$_default-font-weight: setting(defaults, font-weight);
+$_default-font-family: config.default(font-family);
+$_default-font-size: config.default(font-size);
+$_default-font-weight: config.default(font-weight);
 
-$_default-leading: setting(defaults, leading);
-$_default-tracking: setting(defaults, tracking);
+$_default-leading: config.default(leading);
+$_default-tracking: config.default(tracking);
 
 $_screens: theme(screens);
 $_min-screen: list.nth(map.keys($_screens), 1);

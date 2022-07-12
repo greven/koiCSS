@@ -5,7 +5,15 @@
 @use 'sass:math';
 @use 'sass:meta';
 
-@use '../config';
+// --------------------------------
+//   Vars
+// --------------------------------
+
+$_base-font-size: 16px;
+
+// --------------------------------
+//   Functions
+// --------------------------------
 
 /// Convert a value in pixels (px) to rem.
 ///
@@ -16,7 +24,7 @@
 ///
 /// @return {number} `$value-in-pixel` in rem.
 ///
-@function rem($value-in-pixel, $base-font-size: config.$base-font-size) {
+@function rem($value-in-pixel, $base-font-size: $_base-font-size) {
   @if $value-in-pixel == null {
     @return null;
   }
@@ -46,7 +54,7 @@
 ///
 /// @return {number} `$value-in-rem` in px.
 ///
-@function rem-to-px($value-in-rem, $base-font-size: config.$base-font-size) {
+@function rem-to-px($value-in-rem, $base-font-size: $_base-font-size) {
   @if $value-in-rem == null {
     @return null;
   }

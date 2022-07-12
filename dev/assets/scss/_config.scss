@@ -3,8 +3,6 @@
 @use 'sass:list';
 
 @use 'koi' with (
-    $settings: (
-      color-schemes: light dark dim,
-    ),
-    // $btn-text-case: uppercase
-  );
+  $color-schemes: light dark dim,
+  $button-text-transform: uppercase
+);

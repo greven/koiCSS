@@ -17,31 +17,31 @@ $_font-sans: map.get(tokens.$font-family, sans);
 //   Config
 // --------------------------------
 
-$use-hyphens: true;
+$use-hyphens: true !default;
 
-$base-font-size: 16px;
-$base-font-family: list.join('Open Sans', $_font-sans);
+$base-font-size: 16px !default;
+$base-font-family: list.join('Open Sans', $_font-sans) !default;
 
-$headings-color: text-1;
-$headings-font-family: list.join('Montserrat', $_font-sans);
-$headings-font-weight: medium;
+$headings-color: text-1 !default;
+$headings-font-family: list.join('Montserrat', $_font-sans) !default;
+$headings-font-weight: medium !default;
 
-$inline-text-padding: 0.1875em;
-$inline-text-border-radius: xs;
+$inline-text-padding: 0.1875em !default;
+$inline-text-border-radius: xs !default;
 
 // Fluid
-$fluid-type-scale: 1.2;
-$fluid-base-line-height-factor: 2.5ex;
+$fluid-type-scale: 1.2 !default;
+$fluid-base-line-height-factor: 2.5ex !default;
 
 // Prose
-$prose-base-line-height-factor: 2.5ex;
+$prose-base-line-height-factor: 2.5ex !default;
 
-$prose-headings-margin-top: 1.125em;
-$prose-headings-margin-bottom: 0.65em;
-$prose-headings-line-height-factor: 2ex;
+$prose-headings-margin-top: 1.125em !default;
+$prose-headings-margin-bottom: 0.65em !default;
+$prose-headings-line-height-factor: 2ex !default;
 
-$prose-body-min-font-size: md;
-$prose-body-max-font-size: lg;
+$prose-body-min-font-size: md !default;
+$prose-body-max-font-size: lg !default;
 
-$prose-lead-min-font-size: lg;
-$prose-lead-max-font-size: xl;
+$prose-lead-min-font-size: lg !default;
+$prose-lead-max-font-size: xl !default;

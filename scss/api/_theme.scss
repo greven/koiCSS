@@ -11,7 +11,6 @@
 @use '../config/internal' as *;
 @use '../internal' as *;
 @use '../helpers' as *;
-@use 'setting' as *;
 
 // --------------------------------
 //   Functions
@@ -21,7 +20,7 @@
 // default value if definied in the config
 @function theme($keys...) {
   $property: list.nth($keys, 1);
-  $fallback: setting(defaults, $property);
+  $fallback: config.default($property);
   @return map-get-key(config.$theme, $fallback, $keys...);
 }
 
@@ -60,7 +59,7 @@
 }
 
 @function is-color-scheme-enabled($color-scheme) {
-  $color-schemes: setting(color-schemes);
+  $color-schemes: config.$color-schemes;
   @return to-bool(list.index($color-schemes, $color-scheme));
 }
 

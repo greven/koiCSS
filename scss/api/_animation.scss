@@ -2,15 +2,8 @@
 //   Animation API
 // --------------------------------
 
-@use 'setting' as *;
+@use '../config';
 @use 'theme' as *;
-
-// --------------------------------
-//   Values
-// --------------------------------
-
-$_default-duration: theme(duration, setting(defaults, duration));
-$_default-timing-function: theme(timing, setting(defaults, timing));
 
 // --------------------------------
 //   Mixins
@@ -18,8 +11,8 @@ $_default-timing-function: theme(timing, setting(defaults, timing));
 
 @mixin animation(
   $name,
-  $duration: $_default-duration,
-  $timing-function: $_default-timing-function,
+  $duration: theme(duration, config.default(duration)),
+  $timing-function: theme(timing, config.default(timing)),
   $delay: 0s,
   $iteration-count: 1,
   $direction: normal,

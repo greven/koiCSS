@@ -2,11 +2,11 @@
 //   Border API
 // --------------------------------
 
-@use 'setting' as *;
+@use '../config';
 @use 'theme' as *;
 @use 'color' as *;
 
-$_default-radius: setting(defaults, radius);
+$_default-radius: config.default(radius);
 
 // --------------------------------
 //   Functions

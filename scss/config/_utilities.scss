@@ -2,5 +2,5 @@
 //   Utilities Configuration (vars)
 // ---------------------------------
 
-$utility-use-important: false;
-$utility-glue: ':';
+$utility-use-important: false !default;
+$utility-glue: ':' !default;

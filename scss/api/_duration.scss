@@ -2,10 +2,10 @@
 //   Duration (Animation & Transition) API
 // ----------------------------------------
 
-@use 'setting' as *;
+@use '../config';
 @use 'theme' as *;
 
-$_default-duration: setting(defaults, duration);
+$_default-duration: config.default(duration);
 
 // --------------------------------
 //   Functions

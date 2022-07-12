@@ -7,6 +7,10 @@
 @use 'sass:meta';
 @use 'sass:string';
 
+// --------------------------------
+//   Functions
+// --------------------------------
+
 @function to-string($value) {
   @return meta.inspect($value);
 }

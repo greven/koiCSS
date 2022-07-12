@@ -4,6 +4,10 @@
 
 @use 'sass:math';
 
+// --------------------------------
+//   Functions
+// --------------------------------
+
 // Custom rounding function for possible long floating-point numbers
 @function round-float($number, $places: 0) {
   $n: 1;

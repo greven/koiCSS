@@ -4,6 +4,10 @@
 
 @use 'sass:list';
 
+// --------------------------------
+//   Functions
+// --------------------------------
+
 @function prepend($list, $value) {
   @return list.join($value, $list);
 }

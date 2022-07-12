@@ -3,15 +3,11 @@
 
 @use '../internal' as *;
 @use '../helpers' as *;
-@use 'setting' as *;
+@use '../config';
 @use 'theme' as *;
 
-// --------------------------------
-//   vars
-// --------------------------------
-
-$_default-shade: setting(defaults, colors);
-$_default-accent: setting(defaults, accent);
+$_default-shade: config.default(color-shade);
+$_default-accent: config.default(color-accent);
 
 // --------------------------------
 //   Functions

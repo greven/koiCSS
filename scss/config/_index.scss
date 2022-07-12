@@ -1,6 +1,5 @@
-@forward 'settings' show $settings;
-@forward 'theme' show $theme;
-
+@forward 'settings';
 @forward 'layout';
 @forward 'typography';
 @forward 'utilities';
+@forward 'theme' show $theme;

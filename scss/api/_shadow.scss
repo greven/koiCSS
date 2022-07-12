@@ -4,10 +4,10 @@
 
 @use 'sass:map';
 
-@use 'setting' as *;
+@use '../config';
 @use 'theme' as *;
 
-$_default-shadow: setting(defaults, shadow);
+$_default-shadow: config.default(shadow);
 
 // --------------------------------
 //   Functions

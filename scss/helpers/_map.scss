@@ -7,6 +7,10 @@
 @use 'sass:list';
 @use 'sass:string';
 
+// --------------------------------
+//   Functions
+// --------------------------------
+
 @function get-key($map: (), $fallback-key: null, $keys...) {
   @if list.length($keys) == 0 and $fallback-key {
     @if map.has-key($map, $fallback-key) {

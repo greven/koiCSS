@@ -5,6 +5,10 @@
 @use 'sass:list';
 @use 'sass:string';
 
+// --------------------------------
+//   Functions
+// --------------------------------
+
 /// Recursevely replace search string in string
 /// with a given replace string.
 ///

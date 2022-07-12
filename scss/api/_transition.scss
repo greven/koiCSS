@@ -4,7 +4,7 @@
 
 @use 'sass:map';
 
-@use 'setting' as *;
+@use 'config';
 @use 'theme' as *;
 @use 'duration' as *;
 @use 'timing' as *;
@@ -13,8 +13,8 @@
 //   Values
 // --------------------------------
 
-$_default-duration: theme(duration, setting(defaults, duration));
-$_default-timing-function: theme(timing, setting(defaults, timing));
+$_default-duration: theme(duration, config.default(duration));
+$_default-timing-function: theme(timing, config.default(timing));
 
 $_default-properties: (
   background-color,
