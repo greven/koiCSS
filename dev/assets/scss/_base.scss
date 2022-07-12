@@ -12,9 +12,8 @@
 // @include koi.font-face('Tobias Light', 'fonts/Tobias-Light', $family: Tobias, $weight: 300);
 
 body {
-  // --koi-btn-border-radius: var(--radius-full);
-  // --koi-btn-font-size: var(--font-size-md);
   --koi-btn-text-case: capitalize;
+  // --koi-btn-border-radius: var(--radius-full);
 
   // @include koi.container($from: md, $padding: true, $center: true, $max-width: lg);
 }

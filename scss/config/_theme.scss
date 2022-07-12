@@ -6,19 +6,7 @@
 
 @use '../tokens';
 @use 'theme/colors';
-// @use 'typography';
-
-// ---- Typography ----
-
-// $font-family: map.merge(
-//   (
-//     base: typography.$base-font-family,
-//     headings: typography.$headings-font-family,
-//   ),
-//   tokens.$font-family
-// );
-
-// ---- Theme ----
+@use 'theme/typography';
 
 $default-theme: (
   aspect: tokens.$aspect,
@@ -34,8 +22,7 @@ $default-theme: (
   spacing: tokens.$spacing,
   sizes: tokens.$sizes,
   timing: tokens.$timing,
-  // font-family: $font-family,
-  font-family: tokens.$font-family,
+  font-family: typography.$font-family,
   font-size: tokens.$font-size,
   font-weight: tokens.$font-weight,
   leading: tokens.$leading,

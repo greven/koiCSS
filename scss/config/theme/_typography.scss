@@ -2,10 +2,15 @@
 //    Theme Typography
 // --------------------------------
 
-// $font-family: map.merge(
-//   (
-//     base: typography.$base-font-family,
-//     headings: typography.$headings-font-family,
-//   ),
-//   tokens.$font-family
-// );
+@use 'sass:map';
+
+@use '../../tokens';
+@use '../typography';
+
+$font-family: map.merge(
+  (
+    base: typography.$base-font-family,
+    headings: typography.$headings-font-family,
+  ),
+  tokens.$font-family
+);
