@@ -110,10 +110,10 @@ $btn-text-case: capitalize;
 
 // ---- Variants ----
 
-@mixin solid($color) {
-  --koi-btn-background: #{fill($color, 9)};
-  --koi-btn-background-hover: #{fill($color, 7)};
-  --koi-btn-background-active: #{fill($color, 8)};
+@mixin solid {
+  --koi-btn-background: #{accent(6)};
+  --koi-btn-background-hover: #{accent(7)};
+  --koi-btn-background-active: #{accent(5)};
   --koi-btn-border-color: transparent;
   --koi-btn-foreground: #{fill(white)};
 }
@@ -146,7 +146,11 @@ $btn-text-case: capitalize;
     @include base;
 
     &--dark {
-      @include dark();
+      @include dark;
+    }
+
+    &--solid {
+      @include solid;
     }
 
     &--wide {

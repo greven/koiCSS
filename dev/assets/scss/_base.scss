@@ -5,7 +5,7 @@
 @forward 'config';
 @use 'koi';
 
-// @include koi.base();
+@include koi.base();
 
 // << Insert your base styles here >>
 

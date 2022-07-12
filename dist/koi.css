@@ -1148,8 +1148,6 @@ select {
   --size-4xl: 10rem;
   /*! purgecss end ignore */
   /*! purgecss start ignore */
-  --font-base: "Open Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-headings: "Montserrat", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -2606,7 +2604,7 @@ h4,
 h5,
 h6 {
   color: hsl(var(--color-text-1-h), var(--color-text-1-s), var(--color-text-1-l), 1);
-  font-family: "Montserrat", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Open Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 500;
 }
 
@@ -2870,11 +2868,11 @@ button[data-state=disabled],
   cursor: not-allowed;
 }
 .btn--dark, a.btn--dark, [type=button].btn--dark, [type=submit].btn--dark, [type=reset].btn--dark {
-  --koi-btn-background: hsl(var(--color-grey-9-h), var(--color-grey-9-s), var(--color-grey-9-l), 1);
-  --koi-btn-background-hover: hsl(var(--color-grey-7-h), var(--color-grey-7-s), var(--color-grey-7-l), 1);
-  --koi-btn-background-active: hsl(var(--color-grey-8-h), var(--color-grey-8-s), var(--color-grey-8-l), 1);
+  --koi-btn-background: hsl(var(--color-contrast-1-h), var(--color-contrast-1-s), var(--color-contrast-1-l), 1);
+  --koi-btn-background-hover: hsl(var(--color-contrast-3-h), var(--color-contrast-3-s), var(--color-contrast-3-l), 1);
+  --koi-btn-background-active: hsl(var(--color-contrast-2-h), var(--color-contrast-2-s), var(--color-contrast-2-l), 1);
+  --koi-btn-foreground: rgb(calc(255 - var(--color-contrast-1-r)), calc(255 - var(--color-contrast-1-g)), calc(255 - var(--color-contrast-1-b)));
   --koi-btn-border-color: transparent;
-  --koi-btn-foreground: hsl(var(--color-white-h), var(--color-white-s), var(--color-white-l), 1);
 }
 .btn--wide, a.btn--wide, [type=button].btn--wide, [type=submit].btn--wide, [type=reset].btn--wide {
   justify-content: center;
