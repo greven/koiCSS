@@ -21,7 +21,7 @@ $utilities: (
     property: box-shadow,
     class: shadow,
     pseudos: hover focus,
-    default: setting(fallbacks, shadow),
+    default: config.default(shadow),
     values: $shadows,
   ),
   opacity: (

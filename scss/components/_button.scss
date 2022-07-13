@@ -97,34 +97,40 @@ $selectors: selector.parse(
   --koi-btn-background-active: #{fill(contrast, 2)};
   --koi-btn-border-color: transparent;
   --koi-btn-foreground: #{fill(contrast, 1, $invert: true)};
+  --koi-btn-foreground-hover: #{fill(contrast, 1, $invert: true)};
+  --koi-btn-foreground-active: #{fill(contrast, 1, $invert: true)};
 }
 
 // ---- Variants ----
 
 @mixin solid {
-
   --koi-btn-background: #{accent(6)};
   --koi-btn-background-hover: #{accent(7)};
-  --koi-btn-background-active: #{accent(5)};
+  --koi-btn-background-active: #{accent(6)};
   --koi-btn-border-color: transparent;
   --koi-btn-foreground: #{fill(white)};
+  --koi-btn-foreground-hover: #{fill(white)};
+  --koi-btn-foreground-active: #{fill(white)};
   @include focus(accent(6));
 }
 
 @mixin outline {
-
   --koi-btn-background: transparent;
   --koi-btn-background-hover: #{accent(0)};
-  --koi-btn-background-active: #{accent(5)};
+  --koi-btn-background-active: #{accent(1)};
   --koi-btn-border-color: #{accent(6)};
+  --koi-btn-border-color-hover: #{accent(8)};
   --koi-btn-foreground: #{accent(6)};
+  --koi-btn-foreground-hover: #{accent(8)};
+  --koi-btn-foreground-active: #{accent(7)};
   @include focus(accent(6));
 
-  // @include dark-mode {
-  //   --koi-btn-background-hover: #{accent(9, $alpha: 0.25)};
-  //   --koi-btn-foreground: #{accent(6)};
-  //   --koi-btn-foreground-hover: #{accent(5)};
-  // }
+  @include dark-mode {
+    --koi-btn-background-hover: #{accent(9, $alpha: 0.15)};
+    --koi-btn-background-active: #{accent(8, $alpha: 0.15)};
+    --koi-btn-foreground-hover: #{accent(5)};
+    --koi-btn-foreground-active: #{accent(6)};
+  }
 }
 
 // ---- Modifiers ----

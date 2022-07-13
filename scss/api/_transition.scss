@@ -4,7 +4,7 @@
 
 @use 'sass:map';
 
-@use 'config';
+@use '../config';
 @use 'theme' as *;
 @use 'duration' as *;
 @use 'timing' as *;

@@ -1,9 +1,9 @@
 @use 'sass:list';
 @use 'sass:meta';
 
+@use '../config';
 @use '../internal' as *;
 @use '../helpers' as *;
-@use '../config';
 @use 'theme' as *;
 
 $_default-shade: config.default(color-shade);

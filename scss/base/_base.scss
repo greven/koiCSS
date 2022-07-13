@@ -3,6 +3,8 @@
 // --------------------------------
 
 @use '../api' as *;
+@use '../config';
+
 @use 'reset';
 @use 'default';
 @use 'animation';
@@ -15,16 +17,16 @@
 @use 'typography';
 
 @mixin styles {
-  @if setting(use-reset-styles) {
+  @if config.$use-reset-styles {
     @include reset.styles();
   }
 
   // Default styles
-  @if setting(use-default-styles) {
+  @if config.$use-default-styles {
     @include default.styles();
   }
 
-  @if setting(use-css-variables) {
+  @if config.$use-css-variables {
     :root {
       @include animation.vars;
       @include border.vars;
@@ -37,7 +39,7 @@
     }
   }
 
-  @if setting(use-theming) {
+  @if config.$use-theming {
     @include create-themes(theme(color-schemes));
   }
 

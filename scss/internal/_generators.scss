@@ -68,8 +68,9 @@ $_responsive-pseudo-utils: ();
 
 @mixin _create-utility-maps($utilities) {
   $util-glue: config.$utility-glue;
-  $prefix: map.get(config.$settings, prefix);
+  $prefix: config.$prefix;
   $prefix: if($prefix == '', $prefix, '#{$prefix}-');
+
   @each $utility-key, $utility-map in $utilities {
     $values: map.get($utility-map, values);
     $screens: map.get(config.$theme, screens);
