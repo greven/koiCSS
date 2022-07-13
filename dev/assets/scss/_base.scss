@@ -12,10 +12,13 @@
 // @include koi.font-face('Tobias Light', 'fonts/Tobias-Light', $family: Tobias, $weight: 300);
 
 body {
-  --koi-btn-text-case: capitalize;
+  // --koi-btn-text-case: capitalize;
   // --koi-btn-border-radius: var(--radius-full);
+  // --koi-btn-padding-x: #{koi.spacing(32)};
+  // --koi-btn-padding-y: #{koi.spacing(sm)};
+  // --koi-btn-text-transform: uppercase;
 
-  // @include koi.container($from: md, $padding: true, $center: true, $max-width: lg);
+  @include koi.container($from: md, $padding: true, $center: true, $max-width: lg);
 }
 
 .wrapper {
@@ -42,7 +45,7 @@ body {
 .my-box-2,
 .my-box-3 {
   @include koi.box($padding: true, $shadow: md);
-  @include koi.border(koi.fill(grey, 8), $radius: koi.radius(lg));
+  @include koi.border(koi.fill(grey, 5), $radius: koi.radius(lg));
   @include koi.transition-shadow();
 
   &:hover {

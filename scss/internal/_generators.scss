@@ -8,6 +8,7 @@
 @use 'sass:string';
 
 @use '../config';
+@use '../config/internal' as *;
 @use '../helpers' as *;
 @use 'utilities' as *;
 @use 'output' as *;
@@ -42,7 +43,7 @@ $default-accent: config.default(color-accent);
 
   // Default accent
   $default-accent-map: map.get($colors-map, $default-accent);
-  @include color-custom-prop(color, accent, $default-accent-map, $suffix);
+  @include color-custom-prop($color-prefix, accent, $default-accent-map, $suffix);
 
   @each $color-name, $value in $colors-map {
     @include color-custom-prop($property, $color-name, $value, $suffix);
@@ -50,10 +51,11 @@ $default-accent: config.default(color-accent);
     // Accent colors utility classes
     @if not list.index($ignore-accent-colors, $color-name) {
       .accent-#{'' + $color-name} {
-        @include color-custom-prop(color, accent, $value, $suffix);
+        @include color-custom-prop($color-prefix, accent, $value, $suffix);
       }
     }
   }
+
   /*! purgecss end ignore */
 }
 

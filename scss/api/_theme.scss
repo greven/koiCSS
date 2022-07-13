@@ -75,40 +75,35 @@
   }
 }
 
+@mixin generate-color-scheme($color-schemes-map, $color-scheme) {
+  --color-mode: #{$color-scheme};
+  @include generate-scheme-css-vars($color-schemes-map);
+  color-scheme: $color-scheme;
+}
+
 @mixin _default-color-scheme($color-schemes-map) {
   $default-color-scheme: light;
   $default-color-schemes-map: map.get($color-schemes-map, $default-color-scheme);
 
   html {
-    --color-mode: #{$default-color-scheme};
-    @include generate-scheme-css-vars($default-color-schemes-map);
+    @include generate-color-scheme($default-color-schemes-map, $default-color-scheme);
   }
 }
 
 // Create color scheme colors (dark, light, ...)
-@mixin color-scheme($color-scheme, $color-schemes-map) {
+@mixin color-scheme($color-schemes-map, $color-scheme) {
   $color-schemes-map: map.get($color-schemes-map, $color-scheme);
 
   @if is-color-scheme-enabled($color-scheme) {
     @media (prefers-color-scheme: $color-scheme) {
       html {
-        @if $color-scheme {
-          --color-mode: #{$color-scheme};
-        }
-
-        @include generate-scheme-css-vars($color-schemes-map);
-        color-scheme: $color-scheme;
+        @include generate-color-scheme($color-schemes-map, $color-scheme);
       }
     }
 
     [color-scheme='#{$color-scheme}'],
     [data-theme='#{$color-scheme}'] {
-      @include generate-scheme-css-vars($color-schemes-map);
-      color-scheme: $color-scheme;
-
-      @if $color-scheme {
-        --color-mode: #{$color-scheme};
-      }
+      @include generate-color-scheme($color-schemes-map, $color-scheme);
     }
   }
 }
@@ -118,7 +113,7 @@
   @include _default-color-scheme($color-schemes-map);
 
   @each $color-scheme, $_color in $color-schemes-map {
-    @include color-scheme($color-scheme, $color-schemes-map);
+    @include color-scheme($color-schemes-map, $color-scheme);
   }
 }
 

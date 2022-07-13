@@ -3,5 +3,6 @@
 @use 'sass:list';
 
 @use 'koi' with (
-  $color-schemes: light dark dim
+  $color-schemes: light dark dim,
+  $use-button-animation: true
 );

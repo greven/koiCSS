@@ -4,6 +4,7 @@
 
 @use 'sass:selector';
 
+@use '../config';
 @use '../api' as *;
 
 // --------------------------------
@@ -16,6 +17,8 @@ $selectors: selector.parse(
   "#{$class}, a#{$class}, [type='button']#{$class}, [type='submit']#{$class}, [type='reset']#{$class}"
 );
 
+$variant-colors: (primary secondary neutral info success warning danger);
+
 // --------------------------------
 //   Mixins
 // --------------------------------
@@ -24,6 +27,25 @@ $selectors: selector.parse(
 @mixin focus($color: fill(contrast, 1), $offset-color: fill(surface, 1)) {
   &:focus-visible {
     @include ring($color: $color, $offset-color: $offset-color);
+  }
+}
+
+@mixin hover {
+  &:hover:not(:disabled, [data-state='disabled']) {
+    @content;
+  }
+}
+
+@mixin active {
+  &:active:not(:disabled, [data-state='disabled']) {
+    @content;
+  }
+}
+
+@mixin disabled {
+  &:disabled,
+  &[data-state='disabled'] {
+    @content;
   }
 }
 
@@ -46,16 +68,15 @@ $selectors: selector.parse(
   }
 }
 
-@mixin base {
+@mixin default {
   @include focus;
   @include transition((color, background-color, border-color, transform));
-
   align-items: var(--koi-btn-align-items, center);
   background-color: var(--koi-btn-background, fill(surface, 2));
   border-color: var(--koi-btn-border-color, fill(border, 2));
   border-radius: var(--koi-btn-border-radius, radius(lg));
   border-style: var(--koi-btn-border-style, solid);
-  border-width: var(--koi-btn-border-width, 2px);
+  border-width: var(--koi-btn-border-width, 1px);
   box-shadow: var(--koi-btn-shadow, shadow(xs));
   color: var(--koi-btn-foreground, fill(text, 2));
   display: var(--koi-btn-display, inline-flex);
@@ -69,41 +90,38 @@ $selectors: selector.parse(
   text-align: var(--koi-btn-text-align, center);
   text-transform: var(--koi-btn-text-transform, capitalize);
 
-  &:hover {
+  @include hover {
     @include shadow(var(--koi-btn-shadow-hover, shadow(sm)));
     background-color: var(--koi-btn-background-hover, fill(surface, 3));
     color: var(--koi-btn-foreground-hover, fill(text, 2));
   }
 
-  &:active {
+  @include active {
     @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
-    background-color: var(--koi-btn-background-active, fill(surface, 1));
+    background-color: var(--koi-btn-background-active, fill(surface, 2));
     color: var(--koi-btn-foreground-active, fill(text, 2));
+
+    @if config.$use-button-animation {
+      transform: translateY(1px);
+    }
   }
 
-  &:disabled,
-  &[data-state='disabled'] {
-    background-color: var(--koi-btn-background-disabled, fill(surface, 3));
-    border-color: var(--koi-btn-border-color-disabled, fill(border, 1));
+  @include disabled {
+    background-color: var(--koi-btn-background-disabled, fill(surface, 4));
+    border-color: var(--koi-btn-border-color-disabled, transparent);
     box-shadow: none;
     color: var(--koi-btn-foreground-disabled, fill(text, 3));
     cursor: not-allowed;
   }
 }
 
-// TODO: Dark should be a variant within each variant, so btn--solid btn--dark
-// TODO: Or should this be an accent (using contrast)?
-@mixin dark {
-  --koi-btn-background: #{fill(contrast, 1)};
-  --koi-btn-background-hover: #{fill(contrast, 3)};
-  --koi-btn-background-active: #{fill(contrast, 2)};
-  --koi-btn-border-color: transparent;
-  --koi-btn-foreground: #{fill(contrast, 1, $invert: true)};
-  --koi-btn-foreground-hover: #{fill(contrast, 1, $invert: true)};
-  --koi-btn-foreground-active: #{fill(contrast, 1, $invert: true)};
-}
-
 // ---- Variants ----
+
+@mixin variant($variant) {
+  &#{$class}--#{$variant} {
+    @content;
+  }
+}
 
 @mixin solid {
   --koi-btn-background: #{accent(6)};
@@ -114,6 +132,27 @@ $selectors: selector.parse(
   --koi-btn-foreground-hover: #{fill(white)};
   --koi-btn-foreground-active: #{fill(white)};
   @include focus(accent(6));
+
+  border-width: var(--koi-btn-border-width, 2px);
+
+  // Variant colors
+  @each $color in $variant-colors {
+    @include variant($color) {
+      --koi-btn-background: #{fill($color, 6)};
+      --koi-btn-background-hover: #{fill($color, 7)};
+      --koi-btn-background-active: #{fill($color, 6)};
+      @include focus(fill($color, 6));
+    }
+  }
+
+  @include variant(dark) {
+    --koi-btn-background: #{fill(contrast, 0)};
+    --koi-btn-background-hover: #{fill(contrast, 3)};
+    --koi-btn-background-active: #{fill(contrast, 0)};
+    --koi-btn-foreground: #{fill(contrast, 0, $invert: true)};
+    --koi-btn-foreground-hover: #{fill(contrast, 0, $invert: true)};
+    --koi-btn-foreground-active: #{fill(contrast, 0, $invert: true)};
+  }
 }
 
 @mixin outline {
@@ -122,30 +161,82 @@ $selectors: selector.parse(
   --koi-btn-background-active: #{accent(1)};
   --koi-btn-border-color: #{accent(6)};
   --koi-btn-border-color-hover: #{accent(8)};
+  --koi-btn-border-width: 2px;
   --koi-btn-foreground: #{accent(6)};
   --koi-btn-foreground-hover: #{accent(8)};
   --koi-btn-foreground-active: #{accent(7)};
-  @include focus(accent(6));
+  @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
+  @include focus(accent(7));
 
-  @include dark-mode {
-    // &:not(.btn--dark) {
-    --koi-btn-background-hover: #{accent(9, $alpha: 0.15)};
-    --koi-btn-background-active: #{accent(8, $alpha: 0.15)};
-    --koi-btn-foreground-hover: #{accent(5)};
-    --koi-btn-foreground-active: #{accent(6)};
-    // }
+  border-width: var(--koi-btn-border-width, 2px);
+
+  @include hover {
+    @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
   }
 
-  // &.btn--dark {
-  //   --koi-btn-border-color: #{fill(contrast, 1)};
-  //   --koi-btn-foreground: #{fill(contrast, 1)};
-  // }
+  @include dark-mode {
+    --koi-btn-background-hover: #{accent(8, $alpha: 0.2)};
+    --koi-btn-background-active: #{accent(9, $alpha: 0.2)};
+    --koi-btn-foreground: #{accent(5)};
+    --koi-btn-foreground-hover: #{accent(4)};
+    --koi-btn-foreground-active: #{accent(5)};
+  }
+
+  // Variant colors
+  @each $color in $variant-colors {
+    @include variant($color) {
+      --koi-btn-background-hover: #{fill($color, 0)};
+      --koi-btn-background-active: #{fill($color, 1)};
+      --koi-btn-border-color: #{fill($color, 6)};
+      --koi-btn-border-color-hover: #{fill($color, 8)};
+      --koi-btn-foreground: #{fill($color, 6)};
+      --koi-btn-foreground-hover: #{fill($color, 8)};
+      --koi-btn-foreground-active: #{fill($color, 7)};
+      @include focus(fill($color, 7));
+
+      @include dark-mode {
+        --koi-btn-background-hover: #{fill($color, 8, $alpha: 0.2)};
+        --koi-btn-background-active: #{fill($color, 9, $alpha: 0.2)};
+        --koi-btn-foreground: #{fill($color, 5)};
+        --koi-btn-foreground-hover: #{fill($color, 4)};
+        --koi-btn-foreground-active: #{fill($color, 5)};
+      }
+    }
+  }
+}
+
+@mixin faded {
+  --koi-btn-background: #{accent(1)};
+  --koi-btn-background-hover: #{accent(2)};
+  --koi-btn-background-active: #{accent(1)};
+  --koi-btn-border-color: transparent;
+  --koi-btn-border-color-hover: transparent;
+  --koi-btn-foreground: #{accent(8)};
+  --koi-btn-foreground-hover: #{accent(9)};
+  --koi-btn-foreground-active: #{accent(8)};
+  @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
+  @include focus(accent(6));
+
+  border-width: var(--koi-btn-border-width, 2px);
+
+  @include dark-mode {
+    --koi-btn-background: #{accent(8, $alpha: 0.2)};
+    --koi-btn-background-hover: #{accent(8, $alpha: 0.2)};
+    --koi-btn-background-active: #{accent(9, $alpha: 0.2)};
+    --koi-btn-foreground: #{accent(5)};
+    --koi-btn-foreground-hover: #{accent(5)};
+    --koi-btn-foreground-active: #{accent(6)};
+  }
+
+  @include hover {
+    @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
+  }
 }
 
 @mixin ghost {
   --koi-btn-background: transparent;
   --koi-btn-background-hover: #{accent(1)};
-  --koi-btn-background-active: #{accent(2)};
+  --koi-btn-background-active: #{accent(0)};
   --koi-btn-border-color: transparent;
   --koi-btn-border-color-hover: transparent;
   --koi-btn-foreground: #{accent(6)};
@@ -154,19 +245,24 @@ $selectors: selector.parse(
   @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
   @include focus(accent(6));
 
+  border-width: var(--koi-btn-border-width, 2px);
+
   @include dark-mode {
-    --koi-btn-background-hover: #{accent(8, $alpha: 0.15)};
-    --koi-btn-background-active: #{accent(7, $alpha: 0.15)};
+    --koi-btn-background-hover: #{accent(8, $alpha: 0.2)};
+    --koi-btn-background-active: #{accent(9, $alpha: 0.2)};
     --koi-btn-foreground-hover: #{accent(5)};
     --koi-btn-foreground-active: #{accent(6)};
   }
 
-  &:hover {
+  @include hover {
     @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
   }
 }
 
 // ---- Modifiers ----
+
+// @mixin compact {
+// }
 
 // Makes the button full width
 @mixin wide {
@@ -187,11 +283,11 @@ $selectors: selector.parse(
   [type='reset'],
   [type='file'] {
     @include reset;
-    @include base;
+    @include default;
   }
 
   #{$selectors} {
-    @include base;
+    @include default;
 
     &--solid {
       @include solid;
@@ -199,6 +295,10 @@ $selectors: selector.parse(
 
     &--outline {
       @include outline;
+    }
+
+    &--faded {
+      @include faded;
     }
 
     &--ghost {

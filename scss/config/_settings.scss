@@ -12,13 +12,14 @@
 // --------------------------------
 
 $prefix: '' !default;
+$color-schemes: light dark !default;
 $use-reset-styles: true !default;
 $use-default-styles: true !default;
 $use-theming: true !default;
 $use-utilities: false !default;
 $use-css-variables: true !default;
 $use-font-smoothing: true !default;
-$color-schemes: light dark !default;
+$use-button-animation: true !default;
 
 $defaults: () !default;
 $defaults: map.deep-merge(
