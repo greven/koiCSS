@@ -65,7 +65,7 @@ $selectors: selector.parse(
   justify-content: var(--koi-btn-justify-content, center);
   letter-spacing: var(--koi-btn-tracking, tracking(wide));
   line-height: var(--koi-btn-leading, text-leading(sm));
-  padding: var(--koi-btn-padding-y, spacing(8)) var(--koi-btn-padding-x, spacing(16));
+  padding: var(--koi-btn-padding-y, 8px) var(--koi-btn-padding-x, 18px);
   text-align: var(--koi-btn-text-align, center);
   text-transform: var(--koi-btn-text-transform, capitalize);
 
@@ -91,6 +91,8 @@ $selectors: selector.parse(
   }
 }
 
+// TODO: Dark should be a variant within each variant, so btn--solid btn--dark
+// TODO: Or should this be an accent (using contrast)?
 @mixin dark {
   --koi-btn-background: #{fill(contrast, 1)};
   --koi-btn-background-hover: #{fill(contrast, 3)};
@@ -126,8 +128,39 @@ $selectors: selector.parse(
   @include focus(accent(6));
 
   @include dark-mode {
+    // &:not(.btn--dark) {
     --koi-btn-background-hover: #{accent(9, $alpha: 0.15)};
     --koi-btn-background-active: #{accent(8, $alpha: 0.15)};
+    --koi-btn-foreground-hover: #{accent(5)};
+    --koi-btn-foreground-active: #{accent(6)};
+    // }
+  }
+
+  // &.btn--dark {
+  //   --koi-btn-border-color: #{fill(contrast, 1)};
+  //   --koi-btn-foreground: #{fill(contrast, 1)};
+  // }
+}
+
+@mixin ghost {
+  --koi-btn-background: transparent;
+  --koi-btn-background-hover: #{accent(1)};
+  --koi-btn-background-active: #{accent(2)};
+  --koi-btn-border-color: transparent;
+  --koi-btn-border-color-hover: transparent;
+  --koi-btn-foreground: #{accent(6)};
+  --koi-btn-foreground-hover: #{accent(8)};
+  --koi-btn-foreground-active: #{accent(7)};
+  @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
+  @include focus(accent(6));
+
+  &:hover {
+    @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
+  }
+
+  @include dark-mode {
+    --koi-btn-background-hover: #{accent(8, $alpha: 0.15)};
+    --koi-btn-background-active: #{accent(7, $alpha: 0.15)};
     --koi-btn-foreground-hover: #{accent(5)};
     --koi-btn-foreground-active: #{accent(6)};
   }
@@ -160,16 +193,16 @@ $selectors: selector.parse(
   #{$selectors} {
     @include base;
 
-    &--dark {
-      @include dark;
-    }
-
     &--solid {
       @include solid;
     }
 
     &--outline {
       @include outline;
+    }
+
+    &--ghost {
+      @include ghost;
     }
 
     &--wide {
