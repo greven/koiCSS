@@ -154,15 +154,15 @@ $selectors: selector.parse(
   @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
   @include focus(accent(6));
 
-  &:hover {
-    @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
-  }
-
   @include dark-mode {
     --koi-btn-background-hover: #{accent(8, $alpha: 0.15)};
     --koi-btn-background-active: #{accent(7, $alpha: 0.15)};
     --koi-btn-foreground-hover: #{accent(5)};
     --koi-btn-foreground-active: #{accent(6)};
+  }
+
+  &:hover {
+    @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
   }
 }
 
