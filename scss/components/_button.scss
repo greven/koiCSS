@@ -131,9 +131,9 @@ $selectors: selector.parse(
   --koi-btn-foreground-hover: #{fill(contrast, 0)};
   --koi-btn-foreground-active: #{fill(contrast, 0)};
 
-  border-width: var(--koi-btn-border-width, 2px);
-
   @include focus(fill(contrast, 9));
+
+  border-width: var(--koi-btn-border-width, 2px);
 
   // Variant colors
   @include variant(accent) {
@@ -171,10 +171,10 @@ $selectors: selector.parse(
   --koi-btn-foreground-hover: #{fill(contrast, 7)};
   --koi-btn-foreground-active: #{fill(contrast, 7)};
 
-  border-width: var(--koi-btn-border-width, 2px);
-
   @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
   @include focus(fill(contrast, 9));
+
+  border-width: var(--koi-btn-border-width, 2px);
 
   @include hover {
     @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
@@ -243,10 +243,10 @@ $selectors: selector.parse(
   --koi-btn-foreground-hover: #{fill(contrast, 9)};
   --koi-btn-foreground-active: #{fill(contrast, 9)};
 
-  border-width: var(--koi-btn-border-width, 2px);
-
   @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
   @include focus(fill(contrast, 9));
+
+  border-width: var(--koi-btn-border-width, 2px);
 
   @include hover {
     @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
@@ -312,10 +312,10 @@ $selectors: selector.parse(
   --koi-btn-foreground-hover: #{fill(contrast, 9)};
   --koi-btn-foreground-active: #{fill(contrast, 9)};
 
-  border-width: var(--koi-btn-border-width, 2px);
-
   @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
   @include focus(fill(contrast, 9));
+
+  border-width: var(--koi-btn-border-width, 2px);
 
   @include hover {
     @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
