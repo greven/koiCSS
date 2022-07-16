@@ -304,8 +304,8 @@ $selectors: selector.parse(
 
 @mixin ghost {
   --koi-btn-background: transparent;
-  --koi-btn-background-hover: #{fill(contrast, 2)};
-  --koi-btn-background-active: #{fill(contrast, 2)};
+  --koi-btn-background-hover: #{fill(contrast, 1)};
+  --koi-btn-background-active: #{fill(contrast, 1)};
   --koi-btn-border-color: transparent;
   --koi-btn-border-color-hover: transparent;
   --koi-btn-foreground: #{fill(contrast, 8)};
@@ -322,14 +322,14 @@ $selectors: selector.parse(
   }
 
   @include dark-mode {
-    --koi-btn-background-hover: #{fill(contrast, 3, $alpha: 0.5)};
-    --koi-btn-background-active: #{fill(contrast, 3, $alpha: 0.5)};
+    --koi-btn-background-hover: #{fill(contrast, 2, $alpha: 0.5)};
+    --koi-btn-background-active: #{fill(contrast, 2, $alpha: 0.5)};
   }
 
   // Variant colors
   @include variant(accent) {
-    --koi-btn-background-hover: #{accent(2)};
-    --koi-btn-background-active: #{accent(2)};
+    --koi-btn-background-hover: #{accent(1)};
+    --koi-btn-background-active: #{accent(1)};
     --koi-btn-foreground: #{accent(8)};
     --koi-btn-foreground-hover: #{accent(9)};
     --koi-btn-foreground-active: #{accent(9)};
@@ -337,8 +337,8 @@ $selectors: selector.parse(
     @include focus(accent(7));
 
     @include dark-mode {
-      --koi-btn-background-hover: #{accent(7, $alpha: 0.2)};
-      --koi-btn-background-active: #{accent(7, $alpha: 0.2)};
+      --koi-btn-background-hover: #{accent(8, $alpha: 0.2)};
+      --koi-btn-background-active: #{accent(8, $alpha: 0.2)};
       --koi-btn-foreground: #{accent(5)};
       --koi-btn-foreground-hover: #{accent(4)};
       --koi-btn-foreground-active: #{accent(4)};
@@ -347,8 +347,8 @@ $selectors: selector.parse(
 
   @each $color in config.$variant-colors {
     @include variant($color) {
-      --koi-btn-background-hover: #{fill($color, 2)};
-      --koi-btn-background-active: #{fill($color, 2)};
+      --koi-btn-background-hover: #{fill($color, 1)};
+      --koi-btn-background-active: #{fill($color, 1)};
       --koi-btn-foreground: #{fill($color, 8)};
       --koi-btn-foreground-hover: #{fill($color, 9)};
       --koi-btn-foreground-active: #{fill($color, 9)};
@@ -356,8 +356,8 @@ $selectors: selector.parse(
       @include focus(fill($color, 7));
 
       @include dark-mode {
-        --koi-btn-background-hover: #{fill($color, 7, $alpha: 0.2)};
-        --koi-btn-background-active: #{fill($color, 7, $alpha: 0.2)};
+        --koi-btn-background-hover: #{fill($color, 8, $alpha: 0.2)};
+        --koi-btn-background-active: #{fill($color, 8, $alpha: 0.2)};
         --koi-btn-foreground: #{fill($color, 5)};
         --koi-btn-foreground-hover: #{fill($color, 4)};
         --koi-btn-foreground-active: #{fill($color, 4)};
