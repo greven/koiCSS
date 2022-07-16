@@ -330,9 +330,9 @@ $selectors: selector.parse(
   @include variant(accent) {
     --koi-btn-background-hover: #{accent(1)};
     --koi-btn-background-active: #{accent(1)};
-    --koi-btn-foreground: #{accent(8)};
-    --koi-btn-foreground-hover: #{accent(9)};
-    --koi-btn-foreground-active: #{accent(9)};
+    --koi-btn-foreground: #{accent(7)};
+    --koi-btn-foreground-hover: #{accent(8)};
+    --koi-btn-foreground-active: #{accent(8)};
 
     @include focus(accent(7));
 
@@ -349,9 +349,9 @@ $selectors: selector.parse(
     @include variant($color) {
       --koi-btn-background-hover: #{fill($color, 1)};
       --koi-btn-background-active: #{fill($color, 1)};
-      --koi-btn-foreground: #{fill($color, 8)};
-      --koi-btn-foreground-hover: #{fill($color, 9)};
-      --koi-btn-foreground-active: #{fill($color, 9)};
+      --koi-btn-foreground: #{fill($color, 7)};
+      --koi-btn-foreground-hover: #{fill($color, 8)};
+      --koi-btn-foreground-active: #{fill($color, 8)};
 
       @include focus(fill($color, 7));
 
@@ -366,8 +366,57 @@ $selectors: selector.parse(
   }
 }
 
-// @mixin link {
-// }
+@mixin link {
+  --koi-btn-background: transparent;
+  --koi-btn-background-hover: transparent;
+  --koi-btn-background-active: transparent;
+  --koi-btn-border-color: transparent;
+  --koi-btn-border-color-hover: transparent;
+  --koi-btn-foreground: #{fill(contrast, 8)};
+  --koi-btn-foreground-hover: #{fill(contrast, 9)};
+  --koi-btn-foreground-active: #{fill(contrast, 9)};
+
+  @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
+  @include focus(fill(contrast, 9));
+
+  border-width: var(--koi-btn-border-width, 2px);
+
+  @include hover {
+    @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
+    text-decoration: underline;
+  }
+
+  // Variant colors
+  @include variant(accent) {
+    --koi-btn-foreground: #{accent(7)};
+    --koi-btn-foreground-hover: #{accent(8)};
+    --koi-btn-foreground-active: #{accent(8)};
+
+    @include focus(accent(7));
+
+    @include dark-mode {
+      --koi-btn-foreground: #{accent(5)};
+      --koi-btn-foreground-hover: #{accent(4)};
+      --koi-btn-foreground-active: #{accent(4)};
+    }
+  }
+
+  @each $color in config.$variant-colors {
+    @include variant($color) {
+      --koi-btn-foreground: #{fill($color, 7)};
+      --koi-btn-foreground-hover: #{fill($color, 8)};
+      --koi-btn-foreground-active: #{fill($color, 8)};
+
+      @include focus(fill($color, 7));
+
+      @include dark-mode {
+        --koi-btn-foreground: #{fill($color, 5)};
+        --koi-btn-foreground-hover: #{fill($color, 4)};
+        --koi-btn-foreground-active: #{fill($color, 4)};
+      }
+    }
+  }
+}
 
 // ---- Modifiers ----
 
@@ -413,6 +462,10 @@ $selectors: selector.parse(
 
     &--ghost {
       @include ghost;
+    }
+
+    &--link {
+      @include link;
     }
 
     &--wide {
