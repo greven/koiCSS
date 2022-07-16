@@ -17,8 +17,6 @@ $selectors: selector.parse(
   "#{$class}, a#{$class}, [type='button']#{$class}, [type='submit']#{$class}, [type='reset']#{$class}"
 );
 
-$variant-colors: (primary secondary neutral info success warning danger);
-
 // --------------------------------
 //   Mixins
 // --------------------------------
@@ -53,9 +51,7 @@ $variant-colors: (primary secondary neutral info success warning danger);
   appearance: none;
   background-color: transparent;
   border: 0;
-  color: fill(black);
   cursor: pointer;
-  display: inline-block;
   font-weight: 400;
   padding: 0;
   text-decoration: none;
@@ -70,7 +66,8 @@ $variant-colors: (primary secondary neutral info success warning danger);
 
 @mixin default {
   @include focus;
-  @include transition((color, background-color, border-color, transform));
+  @include transition((color, background-color, border-color, transform), duration(fast));
+
   align-items: var(--koi-btn-align-items, center);
   background-color: var(--koi-btn-background, fill(surface, 2));
   border-color: var(--koi-btn-border-color, fill(border, 2));
@@ -92,12 +89,14 @@ $variant-colors: (primary secondary neutral info success warning danger);
 
   @include hover {
     @include shadow(var(--koi-btn-shadow-hover, shadow(sm)));
+
     background-color: var(--koi-btn-background-hover, fill(surface, 3));
     color: var(--koi-btn-foreground-hover, fill(text, 2));
   }
 
   @include active {
     @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
+
     background-color: var(--koi-btn-background-active, fill(surface, 3));
     color: var(--koi-btn-foreground-active, fill(text, 2));
 
@@ -124,67 +123,92 @@ $variant-colors: (primary secondary neutral info success warning danger);
 }
 
 @mixin solid {
-  --koi-btn-background: #{accent(6)};
-  --koi-btn-background-hover: #{accent(7)};
-  --koi-btn-background-active: #{accent(7)};
+  --koi-btn-background: #{fill(contrast, 9)};
+  --koi-btn-background-hover: #{fill(contrast, 7)};
+  --koi-btn-background-active: #{fill(contrast, 7)};
   --koi-btn-border-color: transparent;
-  --koi-btn-foreground: #{fill(white)};
-  --koi-btn-foreground-hover: #{fill(white)};
-  --koi-btn-foreground-active: #{fill(white)};
-  @include focus(accent(6));
+  --koi-btn-foreground: #{fill(contrast, 0)};
+  --koi-btn-foreground-hover: #{fill(contrast, 0)};
+  --koi-btn-foreground-active: #{fill(contrast, 0)};
 
   border-width: var(--koi-btn-border-width, 2px);
 
+  @include focus(fill(contrast, 9));
+
   // Variant colors
-  @each $color in $variant-colors {
+  @include variant(accent) {
+    --koi-btn-background: #{accent(6)};
+    --koi-btn-background-hover: #{accent(7)};
+    --koi-btn-background-active: #{accent(7)};
+    --koi-btn-foreground: #{fill(white)};
+    --koi-btn-foreground-hover: #{fill(white)};
+    --koi-btn-foreground-active: #{fill(white)};
+
+    @include focus(accent(6));
+  }
+
+  @each $color in config.$variant-colors {
     @include variant($color) {
       --koi-btn-background: #{fill($color, 6)};
       --koi-btn-background-hover: #{fill($color, 7)};
       --koi-btn-background-active: #{fill($color, 7)};
+      --koi-btn-foreground: #{fill(white)};
+      --koi-btn-foreground-hover: #{fill(white)};
+      --koi-btn-foreground-active: #{fill(white)};
+
       @include focus(fill($color, 6));
     }
-  }
-
-  @include variant(dark) {
-    --koi-btn-background: #{fill(contrast, 9)};
-    --koi-btn-background-hover: #{fill(contrast, 7)};
-    --koi-btn-background-active: #{fill(contrast, 7)};
-    --koi-btn-foreground: #{fill(contrast, 0)};
-    --koi-btn-foreground-hover: #{fill(contrast, 0)};
-    --koi-btn-foreground-active: #{fill(contrast, 0)};
-    @include focus(fill(contrast, 9));
   }
 }
 
 @mixin outline {
   --koi-btn-background: transparent;
-  --koi-btn-background-hover: #{accent(0)};
-  --koi-btn-background-active: #{accent(0)};
-  --koi-btn-border-color: #{accent(6)};
-  --koi-btn-border-color-hover: #{accent(8)};
-  --koi-btn-border-width: 2px;
-  --koi-btn-foreground: #{accent(6)};
-  --koi-btn-foreground-hover: #{accent(8)};
-  --koi-btn-foreground-active: #{accent(8)};
-  @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
-  @include focus(accent(7));
+  --koi-btn-background-hover: #{fill(contrast, 1)};
+  --koi-btn-background-active: #{fill(contrast, 1)};
+  --koi-btn-border-color: #{fill(contrast, 9)};
+  --koi-btn-border-color-hover: #{fill(contrast, 7)};
+  --koi-btn-foreground: #{fill(contrast, 9)};
+  --koi-btn-foreground-hover: #{fill(contrast, 7)};
+  --koi-btn-foreground-active: #{fill(contrast, 7)};
 
   border-width: var(--koi-btn-border-width, 2px);
+
+  @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
+  @include focus(fill(contrast, 9));
 
   @include hover {
     @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
   }
 
   @include dark-mode {
-    --koi-btn-background-hover: #{accent(8, $alpha: 0.2)};
-    --koi-btn-background-active: #{accent(8, $alpha: 0.2)};
-    --koi-btn-foreground: #{accent(5)};
-    --koi-btn-foreground-hover: #{accent(4)};
-    --koi-btn-foreground-active: #{accent(4)};
+    --koi-btn-background-hover: #{fill(contrast, 2)};
+    --koi-btn-background-active: #{fill(contrast, 2)};
   }
 
   // Variant colors
-  @each $color in $variant-colors {
+  @include variant(accent) {
+    --koi-btn-background-hover: #{accent(0)};
+    --koi-btn-background-active: #{accent(0)};
+    --koi-btn-border-color: #{accent(6)};
+    --koi-btn-border-color-hover: #{accent(9)};
+    --koi-btn-foreground: #{accent(6)};
+    --koi-btn-foreground-hover: #{accent(9)};
+    --koi-btn-foreground-active: #{accent(9)};
+
+    @include focus(accent(7));
+
+    @include dark-mode {
+      --koi-btn-background-hover: #{accent(8, $alpha: 0.2)};
+      --koi-btn-background-active: #{accent(8, $alpha: 0.2)};
+      --koi-btn-border-color: #{accent(5)};
+      --koi-btn-border-color-hover: #{accent(4)};
+      --koi-btn-foreground: #{accent(5)};
+      --koi-btn-foreground-hover: #{accent(4)};
+      --koi-btn-foreground-active: #{accent(4)};
+    }
+  }
+
+  @each $color in config.$variant-colors {
     @include variant($color) {
       --koi-btn-background-hover: #{fill($color, 0)};
       --koi-btn-background-active: #{fill($color, 0)};
@@ -193,11 +217,14 @@ $variant-colors: (primary secondary neutral info success warning danger);
       --koi-btn-foreground: #{fill($color, 6)};
       --koi-btn-foreground-hover: #{fill($color, 8)};
       --koi-btn-foreground-active: #{fill($color, 8)};
+
       @include focus(fill($color, 7));
 
       @include dark-mode {
         --koi-btn-background-hover: #{fill($color, 8, $alpha: 0.2)};
         --koi-btn-background-active: #{fill($color, 8, $alpha: 0.2)};
+        --koi-btn-border-color: #{fill($color, 5)};
+        --koi-btn-border-color-hover: #{fill($color, 4)};
         --koi-btn-foreground: #{fill($color, 5)};
         --koi-btn-foreground-hover: #{fill($color, 4)};
         --koi-btn-foreground-active: #{fill($color, 4)};
@@ -207,56 +234,135 @@ $variant-colors: (primary secondary neutral info success warning danger);
 }
 
 @mixin faded {
-  --koi-btn-background: #{accent(1)};
-  --koi-btn-background-hover: #{accent(2)};
-  --koi-btn-background-active: #{accent(2)};
+  --koi-btn-background: #{fill(contrast, 1)};
+  --koi-btn-background-hover: #{fill(contrast, 2)};
+  --koi-btn-background-active: #{fill(contrast, 2)};
   --koi-btn-border-color: transparent;
   --koi-btn-border-color-hover: transparent;
-  --koi-btn-foreground: #{accent(8)};
-  --koi-btn-foreground-hover: #{accent(9)};
-  --koi-btn-foreground-active: #{accent(9)};
-  @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
-  @include focus(accent(6));
+  --koi-btn-foreground: #{fill(contrast, 8)};
+  --koi-btn-foreground-hover: #{fill(contrast, 9)};
+  --koi-btn-foreground-active: #{fill(contrast, 9)};
 
   border-width: var(--koi-btn-border-width, 2px);
 
-  @include dark-mode {
-    --koi-btn-background: #{accent(8, $alpha: 0.2)};
-    --koi-btn-background-hover: #{accent(9, $alpha: 0.2)};
-    --koi-btn-background-active: #{accent(9, $alpha: 0.2)};
-    --koi-btn-foreground: #{accent(5)};
-    --koi-btn-foreground-hover: #{accent(6)};
-    --koi-btn-foreground-active: #{accent(6)};
-  }
+  @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
+  @include focus(fill(contrast, 9));
 
   @include hover {
     @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
+  }
+
+  @include dark-mode {
+    --koi-btn-background: #{fill(contrast, 2)};
+    --koi-btn-background-hover: #{fill(contrast, 3, $alpha: 0.5)};
+    --koi-btn-background-active: #{fill(contrast, 3, $alpha: 0.5)};
+  }
+
+  // Variant colors
+  @include variant(accent) {
+    --koi-btn-background: #{accent(1)};
+    --koi-btn-background-hover: #{accent(2)};
+    --koi-btn-background-active: #{accent(2)};
+    --koi-btn-foreground: #{accent(8)};
+    --koi-btn-foreground-hover: #{accent(9)};
+    --koi-btn-foreground-active: #{accent(9)};
+
+    @include focus(accent(7));
+
+    @include dark-mode {
+      --koi-btn-background: #{accent(8, $alpha: 0.2)};
+      --koi-btn-background-hover: #{accent(7, $alpha: 0.2)};
+      --koi-btn-background-active: #{accent(7, $alpha: 0.2)};
+      --koi-btn-foreground: #{accent(5)};
+      --koi-btn-foreground-hover: #{accent(4)};
+      --koi-btn-foreground-active: #{accent(4)};
+    }
+  }
+
+  @each $color in config.$variant-colors {
+    @include variant($color) {
+      --koi-btn-background: #{fill($color, 1)};
+      --koi-btn-background-hover: #{fill($color, 2)};
+      --koi-btn-background-active: #{fill($color, 2)};
+      --koi-btn-foreground: #{fill($color, 8)};
+      --koi-btn-foreground-hover: #{fill($color, 9)};
+      --koi-btn-foreground-active: #{fill($color, 9)};
+
+      @include focus(fill($color, 7));
+
+      @include dark-mode {
+        --koi-btn-background: #{fill($color, 8, $alpha: 0.2)};
+        --koi-btn-background-hover: #{fill($color, 7, $alpha: 0.2)};
+        --koi-btn-background-active: #{fill($color, 7, $alpha: 0.2)};
+        --koi-btn-foreground: #{fill($color, 5)};
+        --koi-btn-foreground-hover: #{fill($color, 4)};
+        --koi-btn-foreground-active: #{fill($color, 4)};
+      }
+    }
   }
 }
 
 @mixin ghost {
   --koi-btn-background: transparent;
-  --koi-btn-background-hover: #{accent(1)};
-  --koi-btn-background-active: #{accent(0)};
+  --koi-btn-background-hover: #{fill(contrast, 2)};
+  --koi-btn-background-active: #{fill(contrast, 2)};
   --koi-btn-border-color: transparent;
   --koi-btn-border-color-hover: transparent;
-  --koi-btn-foreground: #{accent(6)};
-  --koi-btn-foreground-hover: #{accent(8)};
-  --koi-btn-foreground-active: #{accent(8)};
-  @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
-  @include focus(accent(6));
+  --koi-btn-foreground: #{fill(contrast, 8)};
+  --koi-btn-foreground-hover: #{fill(contrast, 9)};
+  --koi-btn-foreground-active: #{fill(contrast, 9)};
 
   border-width: var(--koi-btn-border-width, 2px);
 
-  @include dark-mode {
-    --koi-btn-background-hover: #{accent(8, $alpha: 0.2)};
-    --koi-btn-background-active: #{accent(8, $alpha: 0.2)};
-    --koi-btn-foreground-hover: #{accent(6)};
-    --koi-btn-foreground-active: #{accent(6)};
-  }
+  @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
+  @include focus(fill(contrast, 9));
 
   @include hover {
     @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
+  }
+
+  @include dark-mode {
+    --koi-btn-background-hover: #{fill(contrast, 3, $alpha: 0.5)};
+    --koi-btn-background-active: #{fill(contrast, 3, $alpha: 0.5)};
+  }
+
+  // Variant colors
+  @include variant(accent) {
+    --koi-btn-background-hover: #{accent(2)};
+    --koi-btn-background-active: #{accent(2)};
+    --koi-btn-foreground: #{accent(8)};
+    --koi-btn-foreground-hover: #{accent(9)};
+    --koi-btn-foreground-active: #{accent(9)};
+
+    @include focus(accent(7));
+
+    @include dark-mode {
+      --koi-btn-background-hover: #{accent(7, $alpha: 0.2)};
+      --koi-btn-background-active: #{accent(7, $alpha: 0.2)};
+      --koi-btn-foreground: #{accent(5)};
+      --koi-btn-foreground-hover: #{accent(4)};
+      --koi-btn-foreground-active: #{accent(4)};
+    }
+  }
+
+  @each $color in config.$variant-colors {
+    @include variant($color) {
+      --koi-btn-background-hover: #{fill($color, 2)};
+      --koi-btn-background-active: #{fill($color, 2)};
+      --koi-btn-foreground: #{fill($color, 8)};
+      --koi-btn-foreground-hover: #{fill($color, 9)};
+      --koi-btn-foreground-active: #{fill($color, 9)};
+
+      @include focus(fill($color, 7));
+
+      @include dark-mode {
+        --koi-btn-background-hover: #{fill($color, 7, $alpha: 0.2)};
+        --koi-btn-background-active: #{fill($color, 7, $alpha: 0.2)};
+        --koi-btn-foreground: #{fill($color, 5)};
+        --koi-btn-foreground-hover: #{fill($color, 4)};
+        --koi-btn-foreground-active: #{fill($color, 4)};
+      }
+    }
   }
 }
 

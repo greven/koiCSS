@@ -56,7 +56,8 @@ body {
 .my-box-1 {
   background: var(--gradient-10);
   color: koi.fill(black);
-  animation: var(--animation-shake-x);
+  // @include koi.animation(shake-x, 1s);
+  // animation: var(--animation-shake-x);
 
   @include koi.dark-mode {
     background-color: koi.fill(danger, 9, 0.25);
@@ -67,7 +68,7 @@ body {
   // --koi-gradient-direction: 100deg;
   background: koi.gradient(9);
   color: koi.fill(black);
-  animation: var(--animation-shake-x);
+  // animation: var(--animation-shake-x);
 
   @include koi.dark-mode {
     background-color: koi.fill(primary, 9, 0.25);
@@ -78,7 +79,7 @@ body {
   // --koi-gradient-direction: 100deg;
   background: koi.gradient(5);
   color: koi.fill(black);
-  animation: var(--animation-shake-x);
+  // animation: var(--animation-shake-x);
 
   @include koi.dark-mode {
     background-color: koi.fill(primary, 9, 0.25);
