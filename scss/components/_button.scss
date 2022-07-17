@@ -30,6 +30,7 @@ $border-width: 2px;
 
 $padding-x: 18px;
 $padding-x-compact: 10px;
+$padding-x-wide: spacing(80);
 
 $shadow: shadow(sm);
 
@@ -147,6 +148,16 @@ $shadow: shadow(sm);
     box-shadow: none;
     color: var(--koi-btn-foreground-disabled, fill(text, 3));
     cursor: not-allowed;
+  }
+
+  @include variant(inverted) {
+    --koi-btn-background: #{fill(contrast, 9)};
+    --koi-btn-background-hover: #{fill(contrast, 7)};
+    --koi-btn-background-active: #{fill(contrast, 9)};
+    --koi-btn-border-color: transparent;
+    --koi-btn-foreground: #{fill(contrast, 0)};
+    --koi-btn-foreground-hover: #{fill(contrast, 1)};
+    --koi-btn-foreground-active: #{fill(contrast, 0)};
   }
 }
 
@@ -478,8 +489,13 @@ $shadow: shadow(sm);
   }
 }
 
-// Makes the button full width
+// Makes the button wider (more horizontal padding)
 @mixin wide {
+  padding: 0 var(--koi-btn-padding-x-wide, $padding-x-wide);
+}
+
+// Makes the button full width
+@mixin block {
   justify-content: center;
   width: 100%;
 }
@@ -510,8 +526,9 @@ $shadow: shadow(sm);
     flex: 1 0 auto;
     margin: 0;
 
+    @include focus-ring(accent(6), $offset: 0px);
+
     @include focus {
-      @include focus-ring(accent(6), $offset: 0px);
       z-index: 10;
     }
 
@@ -532,7 +549,7 @@ $shadow: shadow(sm);
     }
   }
 
-  &--wide {
+  &--block {
     display: flex;
 
     #{$selectors} {
@@ -581,6 +598,10 @@ $shadow: shadow(sm);
 
     &--wide {
       @include wide;
+    }
+
+    &--block {
+      @include block;
     }
 
     &--compact {
