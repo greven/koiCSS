@@ -523,10 +523,10 @@ $shadow: shadow(sm);
   position: relative;
 
   #{$selectors} {
+
+    @include focus-ring(accent(6), $offset: 0);
     flex: 1 0 auto;
     margin: 0;
-
-    @include focus-ring(accent(6), $offset: 0px);
 
     @include focus {
       z-index: 10;
