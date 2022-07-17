@@ -17,25 +17,46 @@ $selectors: selector.parse(
   "#{$class}, a#{$class}, [type='button']#{$class}, [type='submit']#{$class}, [type='reset']#{$class}"
 );
 
+// Defaults
+$height: 40px;
+$height-compact: 30px;
+
+$font-size: font(md);
+$leading: text-leading(md);
+$tracking: tracking(wide);
+
+$border-radius: radius(lg);
+$border-width: 2px;
+
+$padding-x: 18px;
+$padding-x-compact: 10px;
+
+$shadow: shadow(sm);
+
 // --------------------------------
 //   Mixins
 // --------------------------------
 
-// Button focus mixin to had a focus ring
-@mixin focus($color: fill(contrast, 9), $offset-color: fill(surface, 1)) {
-  &:focus-visible {
-    @include ring($color: $color, $offset-color: $offset-color);
+@mixin pseudo($pseudo) {
+  &#{$pseudo}:not(:disabled, [data-state='disabled']) {
+    @content;
   }
 }
 
 @mixin hover {
-  &:hover:not(:disabled, [data-state='disabled']) {
+  @include pseudo(':hover') {
+    @content;
+  }
+}
+
+@mixin focus {
+  @include pseudo(':focus') {
     @content;
   }
 }
 
 @mixin active {
-  &:active:not(:disabled, [data-state='disabled']) {
+  @include pseudo(':active') {
     @content;
   }
 }
@@ -43,6 +64,20 @@ $selectors: selector.parse(
 @mixin disabled {
   &:disabled,
   &[data-state='disabled'] {
+    @content;
+  }
+}
+
+// Button focus mixin to had a focus ring
+@mixin focus-ring($color: fill(contrast, 9), $width: 2px, $offset-color: fill(surface, 1), $offset: 2px) {
+  &:focus-visible {
+    @include ring($color: $color, $width: $width, $offset-color: $offset-color, $offset: $offset);
+  }
+}
+
+// Variant selector
+@mixin variant($variant) {
+  &#{$class}--#{$variant} {
     @content;
   }
 }
@@ -65,30 +100,31 @@ $selectors: selector.parse(
 }
 
 @mixin default {
-  @include focus;
+  @include focus-ring;
   @include transition((color, background-color, border-color, transform), duration(fast));
 
   align-items: var(--koi-btn-align-items, center);
   background-color: var(--koi-btn-background, fill(surface, 2));
   border-color: var(--koi-btn-border-color, fill(border, 2));
-  border-radius: var(--koi-btn-border-radius, radius(lg));
+  border-radius: var(--koi-btn-border-radius, $border-radius);
   border-style: var(--koi-btn-border-style, solid);
   border-width: var(--koi-btn-border-width, 1px);
-  box-shadow: var(--koi-btn-shadow, shadow(xs));
+  box-shadow: var(--koi-btn-shadow, $shadow);
   color: var(--koi-btn-foreground, fill(text, 2));
   display: var(--koi-btn-display, inline-flex);
-  font-size: var(--koi-btn-font-size, font(sm));
+  font-size: var(--koi-btn-font-size, $font-size);
   font-weight: var(--koi-btn-font-weight, font(semibold));
   gap: var(--koi-btn-gap, 1ch);
+  height: var(--koi-btn-height, $height);
   justify-content: var(--koi-btn-justify-content, center);
-  letter-spacing: var(--koi-btn-tracking, tracking(wide));
-  line-height: var(--koi-btn-leading, text-leading(sm));
-  padding: var(--koi-btn-padding-y, 8px) var(--koi-btn-padding-x, 18px);
+  letter-spacing: var(--koi-btn-tracking, $tracking);
+  line-height: var(--koi-btn-leading, $leading);
+  padding: 0 var(--koi-btn-padding-x, $padding-x);
   text-align: var(--koi-btn-text-align, center);
   text-transform: var(--koi-btn-text-transform, capitalize);
 
   @include hover {
-    @include shadow(var(--koi-btn-shadow-hover, shadow(sm)));
+    @include shadow(var(--koi-btn-shadow-hover, $shadow));
 
     background-color: var(--koi-btn-background-hover, fill(surface, 3));
     color: var(--koi-btn-foreground-hover, fill(text, 2));
@@ -101,7 +137,7 @@ $selectors: selector.parse(
     color: var(--koi-btn-foreground-active, fill(text, 2));
 
     @if config.$use-button-animation {
-      transform: translateY(1px);
+      transform: translateY(var(--koi-btn-animation-scale, 1px));
     }
   }
 
@@ -116,12 +152,6 @@ $selectors: selector.parse(
 
 // ---- Variants ----
 
-@mixin variant($variant) {
-  &#{$class}--#{$variant} {
-    @content;
-  }
-}
-
 @mixin solid {
   --koi-btn-background: #{fill(contrast, 9)};
   --koi-btn-background-hover: #{fill(contrast, 7)};
@@ -131,9 +161,9 @@ $selectors: selector.parse(
   --koi-btn-foreground-hover: #{fill(contrast, 0)};
   --koi-btn-foreground-active: #{fill(contrast, 0)};
 
-  @include focus(fill(contrast, 9));
+  @include focus-ring(fill(contrast, 9));
 
-  border-width: var(--koi-btn-border-width, 2px);
+  border-width: var(--koi-btn-border-width, $border-width);
 
   // Variant colors
   @include variant(accent) {
@@ -144,7 +174,7 @@ $selectors: selector.parse(
     --koi-btn-foreground-hover: #{fill(white)};
     --koi-btn-foreground-active: #{fill(white)};
 
-    @include focus(accent(6));
+    @include focus-ring(accent(6));
   }
 
   @each $color in config.$variant-colors {
@@ -156,7 +186,7 @@ $selectors: selector.parse(
       --koi-btn-foreground-hover: #{fill(white)};
       --koi-btn-foreground-active: #{fill(white)};
 
-      @include focus(fill($color, 6));
+      @include focus-ring(fill($color, 6));
     }
   }
 }
@@ -172,9 +202,9 @@ $selectors: selector.parse(
   --koi-btn-foreground-active: #{fill(contrast, 7)};
 
   @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
-  @include focus(fill(contrast, 9));
+  @include focus-ring(fill(contrast, 9));
 
-  border-width: var(--koi-btn-border-width, 2px);
+  border-width: var(--koi-btn-border-width, $border-width);
 
   @include hover {
     @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
@@ -195,7 +225,7 @@ $selectors: selector.parse(
     --koi-btn-foreground-hover: #{accent(9)};
     --koi-btn-foreground-active: #{accent(9)};
 
-    @include focus(accent(7));
+    @include focus-ring(accent(6));
 
     @include dark-mode {
       --koi-btn-background-hover: #{accent(8, $alpha: 0.2)};
@@ -205,6 +235,8 @@ $selectors: selector.parse(
       --koi-btn-foreground: #{accent(5)};
       --koi-btn-foreground-hover: #{accent(4)};
       --koi-btn-foreground-active: #{accent(4)};
+
+      @include focus-ring(accent(5));
     }
   }
 
@@ -218,7 +250,7 @@ $selectors: selector.parse(
       --koi-btn-foreground-hover: #{fill($color, 8)};
       --koi-btn-foreground-active: #{fill($color, 8)};
 
-      @include focus(fill($color, 7));
+      @include focus-ring(fill($color, 6));
 
       @include dark-mode {
         --koi-btn-background-hover: #{fill($color, 8, $alpha: 0.2)};
@@ -228,6 +260,8 @@ $selectors: selector.parse(
         --koi-btn-foreground: #{fill($color, 5)};
         --koi-btn-foreground-hover: #{fill($color, 4)};
         --koi-btn-foreground-active: #{fill($color, 4)};
+
+        @include focus-ring(fill($color, 5));
       }
     }
   }
@@ -244,9 +278,9 @@ $selectors: selector.parse(
   --koi-btn-foreground-active: #{fill(contrast, 9)};
 
   @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
-  @include focus(fill(contrast, 9));
+  @include focus-ring(fill(contrast, 9));
 
-  border-width: var(--koi-btn-border-width, 2px);
+  border-width: var(--koi-btn-border-width, $border-width);
 
   @include hover {
     @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
@@ -267,7 +301,7 @@ $selectors: selector.parse(
     --koi-btn-foreground-hover: #{accent(9)};
     --koi-btn-foreground-active: #{accent(9)};
 
-    @include focus(accent(7));
+    @include focus-ring(accent(6));
 
     @include dark-mode {
       --koi-btn-background: #{accent(8, $alpha: 0.2)};
@@ -288,7 +322,7 @@ $selectors: selector.parse(
       --koi-btn-foreground-hover: #{fill($color, 9)};
       --koi-btn-foreground-active: #{fill($color, 9)};
 
-      @include focus(fill($color, 7));
+      @include focus-ring(fill($color, 6));
 
       @include dark-mode {
         --koi-btn-background: #{fill($color, 8, $alpha: 0.2)};
@@ -313,9 +347,9 @@ $selectors: selector.parse(
   --koi-btn-foreground-active: #{fill(contrast, 9)};
 
   @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
-  @include focus(fill(contrast, 9));
+  @include focus-ring(fill(contrast, 9));
 
-  border-width: var(--koi-btn-border-width, 2px);
+  border-width: var(--koi-btn-border-width, $border-width);
 
   @include hover {
     @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
@@ -334,7 +368,7 @@ $selectors: selector.parse(
     --koi-btn-foreground-hover: #{accent(8)};
     --koi-btn-foreground-active: #{accent(8)};
 
-    @include focus(accent(7));
+    @include focus-ring(accent(6));
 
     @include dark-mode {
       --koi-btn-background-hover: #{accent(8, $alpha: 0.2)};
@@ -353,7 +387,7 @@ $selectors: selector.parse(
       --koi-btn-foreground-hover: #{fill($color, 8)};
       --koi-btn-foreground-active: #{fill($color, 8)};
 
-      @include focus(fill($color, 7));
+      @include focus-ring(fill($color, 6));
 
       @include dark-mode {
         --koi-btn-background-hover: #{fill($color, 8, $alpha: 0.2)};
@@ -377,9 +411,9 @@ $selectors: selector.parse(
   --koi-btn-foreground-active: #{fill(contrast, 9)};
 
   @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
-  @include focus(fill(contrast, 9));
+  @include focus-ring(fill(contrast, 9));
 
-  border-width: var(--koi-btn-border-width, 2px);
+  border-width: var(--koi-btn-border-width, $border-width);
 
   @include hover {
     @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
@@ -392,7 +426,7 @@ $selectors: selector.parse(
     --koi-btn-foreground-hover: #{accent(8)};
     --koi-btn-foreground-active: #{accent(8)};
 
-    @include focus(accent(7));
+    @include focus-ring(accent(6));
 
     @include dark-mode {
       --koi-btn-foreground: #{accent(5)};
@@ -407,7 +441,7 @@ $selectors: selector.parse(
       --koi-btn-foreground-hover: #{fill($color, 8)};
       --koi-btn-foreground-active: #{fill($color, 8)};
 
-      @include focus(fill($color, 7));
+      @include focus-ring(fill($color, 6));
 
       @include dark-mode {
         --koi-btn-foreground: #{fill($color, 5)};
@@ -420,8 +454,29 @@ $selectors: selector.parse(
 
 // ---- Modifiers ----
 
-// @mixin compact {
-// }
+@mixin circle {
+  border-radius: radius(full);
+  height: var(--koi-btn-height, $height);
+  padding: 0;
+  width: var(--koi-btn-height, $height);
+
+  @include variant(compact) {
+    height: var(--koi-btn-height-compact, $height-compact);
+    width: var(--koi-btn-height-compact, $height-compact);
+  }
+}
+
+@mixin square {
+  border-radius: var(--koi-btn-border-radius, $border-radius);
+  height: var(--koi-btn-height, $height);
+  padding: 0;
+  width: var(--koi-btn-height, $height);
+
+  @include variant(compact) {
+    height: var(--koi-btn-height-compact, $height-compact);
+    width: var(--koi-btn-height-compact, $height-compact);
+  }
+}
 
 // Makes the button full width
 @mixin wide {
@@ -429,13 +484,75 @@ $selectors: selector.parse(
   width: 100%;
 }
 
+@mixin compact {
+  font-size: var(--koi-btn-font-size-compact, font(sm));
+  height: var(--koi-btn-height-compact, $height-compact);
+  line-height: var(--koi-btn-leading-compact, text-leading(sm));
+  padding: 0 var(--koi-btn-padding-x-compact, $padding-x-compact);
+}
+
+@mixin icon {
+  flex-shrink: 0;
+  height: size(20);
+  width: size(20);
+
+  &--compact {
+    height: size(16);
+    width: size(16);
+  }
+}
+
+// <span class="relative z-0 inline-flex shadow-sm rounded-md">
+//   <button type="button" class=" inline-flex itrelativeems-center px-4 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500">Years</button>
+//   <button type="button" class="-ml-px relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500">Months</button>
+//   <button type="button" class="-ml-px relative inline-flex items-center px-4 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500">Days</button>
+// </span>
+
+@mixin group {
+  display: inline-flex;
+  position: relative;
+
+  #{$selectors} {
+    flex: 1 0 auto;
+    margin: 0;
+
+    @include focus {
+
+      @include focus-ring(accent(6), $offset: 0);
+      z-index: 10;
+    }
+
+    &:first-child:not(:last-child) {
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+    &:last-child:not(:first-child) {
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+      margin-left: -1px;
+    }
+
+    &:not(:first-child):not(:last-child) {
+      border-radius: 0;
+      margin-left: -1px;
+    }
+  }
+
+  &--wide {
+    display: flex;
+
+    #{$selectors} {
+      flex: 1 0;
+    }
+  }
+}
+
 // --------------------------------
 //   Styles
 // --------------------------------
 
 @mixin styles {
-  #{$class},
-  a#{$class},
   button,
   [type='button'],
   [type='submit'],
@@ -446,6 +563,7 @@ $selectors: selector.parse(
   }
 
   #{$selectors} {
+    @include reset;
     @include default;
 
     &--solid {
@@ -471,5 +589,28 @@ $selectors: selector.parse(
     &--wide {
       @include wide;
     }
+
+    &--compact {
+      @include compact;
+    }
+
+    &--circle {
+      @include circle;
+    }
+
+    &--square {
+      @include square;
+    }
+  }
+
+  // Button Icon
+  #{$class}-icon {
+    @include icon;
+  }
+
+  // Button Group
+
+  #{$class}-group {
+    @include group;
   }
 }

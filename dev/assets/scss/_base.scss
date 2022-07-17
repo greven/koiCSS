@@ -13,11 +13,12 @@
 
 body {
   // --koi-btn-text-case: capitalize;
-  // --koi-btn-border-radius: var(--radius-full);
+  // --koi-btn-border-radius: #{koi.radius(xl)};
   // --koi-btn-padding-x: #{koi.spacing(32)};
-  // --koi-btn-padding-y: #{koi.spacing(sm)};
+  // --koi-btn-padding-y: #{koi.spacing(12)};
+  // --koi-btn-font-weight: bold;
   // --koi-btn-text-transform: uppercase;
-
+  // --koi-btn-animation-scale: 2px;
   @include koi.container($from: md, $padding: true, $center: true, $max-width: lg);
 }
 
@@ -29,6 +30,7 @@ body {
 .buttons {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 8px;
 }
 
