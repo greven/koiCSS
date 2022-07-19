@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>koiCSS Development</title>
+  <link rel="stylesheet" href="assets/css/main.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body class="accent-primary">
+  <div class="mx-auto xl:container p-32">
+    <h3 class="mt-16">Default</h3>
+    <div class="stack">
+      <button>Button</button>
+      <button class="btn">
+        <svg class="btn-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path
+            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+          </path>
+        </svg>
+        <span>Button</span>
+      </button>
+      <button class="btn btn--inverted">Inverted</button>
+      <button disabled>Disabled</button>
+      <button class="btn--compact">Button</button>
+    </div>
+
+    <button class="mt-8 btn--wide">Button Wide</button>
+    <button class="mt-8 btn--block btn--inverted">Button Block</button>
+
+    <h3 class="mt-16">Solid</h3>
+    <div class="stack">
+      <button class="btn btn--solid">
+        <svg class="btn-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path
+            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+          </path>
+        </svg>
+        <span>Button</span></button>
+      <button class="btn btn--solid btn--primary">Button</button>
+      <button class="btn btn--solid btn--secondary">Button</button>
+      <button class="btn btn--solid btn--info">Button</button>
+      <button class="btn btn--solid btn--success">Button</button>
+      <button class="btn btn--solid btn--warning">Button</button>
+      <button class="btn btn--solid btn--danger">Button</button>
+      <button class="btn btn--solid btn--accent">Button</button>
+      <button class="btn btn--solid" disabled>Disabled</button>
+      <button class="btn btn--solid btn--compact">Compact</button>
+      <button class="btn btn--solid btn--danger btn--compact">Compact</button>
+    </div>
+
+    <h3 class="mt-16">Outline</h3>
+    <div class="stack">
+      <button class="btn btn--outline">
+        <svg class="btn-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path
+            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+          </path>
+        </svg>
+        <span>Button</span>
+      </button>
+      <button class="btn btn--outline btn--primary">Button</button>
+      <button class="btn btn--outline btn--secondary">Button</button>
+      <button class="btn btn--outline btn--info">Button</button>
+      <button class="btn btn--outline btn--success">Button</button>
+      <button class="btn btn--outline btn--warning">Button</button>
+      <button class="btn btn--outline btn--danger">Button</button>
+      <button class="btn btn--outline btn--accent">Button</button>
+      <button class="btn btn--outline" disabled>Disabled</button>
+      <button class="btn btn--outline btn--compact">Compact</button>
+      <button class="btn btn--outline btn--danger btn--compact">Compact</button>
+    </div>
+
+    <h3 class="mt-16">Faded</h3>
+    <div class="stack">
+      <button class="btn btn--faded">Button</button>
+      <button class="btn btn--faded btn--primary">Button</button>
+      <button class="btn btn--faded btn--secondary">Button</button>
+      <button class="btn btn--faded btn--info">Button</button>
+      <button class="btn btn--faded btn--success">Button</button>
+      <button class="btn btn--faded btn--warning">Button</button>
+      <button class="btn btn--faded btn--danger">Button</button>
+      <button class="btn btn--faded btn--accent">Button</button>
+      <button class="btn btn--faded" disabled>Disabled</button>
+      <button class="btn btn--faded btn--compact">Compact</button>
+      <button class="btn btn--faded btn--danger btn--compact">Compact</button>
+    </div>
+
+    <h3 class="mt-16">Ghost</h3>
+    <div class="stack">
+      <button class="btn btn--ghost">Button</button>
+      <button class="btn btn--ghost btn--primary">Button</button>
+      <button class="btn btn--ghost btn--secondary">Button</button>
+      <button class="btn btn--ghost btn--info">Button</button>
+      <button class="btn btn--ghost btn--success">Button</button>
+      <button class="btn btn--ghost btn--warning">Button</button>
+      <button class="btn btn--ghost btn--danger">Button</button>
+      <button class="btn btn--ghost btn--accent">Button</button>
+      <button class="btn btn--ghost" disabled>Disabled</button>
+      <button class="btn btn--ghost btn--compact">Compact</button>
+      <button class="btn btn--ghost btn--danger btn--compact">Compact</button>
+    </div>
+
+    <h3 class="mt-16">Link</h3>
+    <div class="stack">
+      <button class="btn btn--link">Button</button>
+      <button class="btn btn--link btn--primary">Button</button>
+      <button class="btn btn--link btn--secondary">Button</button>
+      <button class="btn btn--link btn--info">Button</button>
+      <button class="btn btn--link btn--success">Button</button>
+      <button class="btn btn--link btn--warning">Button</button>
+      <button class="btn btn--link btn--danger">Button</button>
+      <button class="btn btn--link btn--accent">Button</button>
+      <button class="btn btn--link" disabled>Disabled</button>
+      <button class="btn btn--link btn--compact">Compact</button>
+      <button class="btn btn--link btn--danger btn--compact">Compact</button>
+    </div>
+
+    <h3 class="mt-16">Variations</h3>
+    <div class="stack">
+      <button class="btn btn--circle">
+        <svg class="h-20 w-20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+      <button class="btn btn--circle btn--solid">
+        <svg class="h-20 w-20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+
+      <button class="btn btn--circle btn--solid btn--accent"> <svg class="h-20 w-20" xmlns="http://www.w3.org/2000/svg"
+          fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+
+      <button class="btn btn--circle btn--ghost btn--danger">
+        <svg class="h-20 w-20" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="3 6 5 6 21 6"></polyline>
+          <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+        </svg>
+      </button>
+
+      <button class="btn btn--circle btn--solid btn--info"> <svg class="h-20 w-20" xmlns="http://www.w3.org/2000/svg"
+          fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+
+      <button class="btn btn--circle btn--outline btn--danger"> <svg xmlns="http://www.w3.org/2000/svg"
+          class="h-20 w-20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+
+      <button class="btn btn--circle btn--ghost"> <svg class="h-20 w-20" xmlns="http://www.w3.org/2000/svg" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+
+      <button class="btn btn--circle btn--compact">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+
+      <button class="btn btn--circle btn--solid btn--compact">
+        <svg xmlns="http://www.w3.org/2000/svg" class="btn-icon btn-icon--compact" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+
+      <button class="btn btn--square">
+        <svg class="h-20 w-20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+
+      <button class="btn btn--square btn--compact">
+        <svg xmlns="http://www.w3.org/2000/svg" class="btn-icon btn-icon--compact" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+
+    <h3 class="mt-16">Button Groups</h3>
+    <div>
+      <div class="btn-group">
+        <button class="btn btn--solid">One</button>
+        <button class="btn btn--solid">Two</button>
+        <button class="btn btn--solid">Three</button>
+      </div>
+
+      <div class="mt-8 btn-group btn-group--block">
+        <button class="btn">One</button>
+        <button class="btn">Two</button>
+        <button class="btn">Three</button>
+      </div>
+
+      <div class="mt-8 btn-group">
+        <button class="btn">
+          <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+            aria-hidden="true">
+            <path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z" />
+          </svg>
+          <span>Bookmark</span>
+        </button>
+        <button class="btn">12k</button>
+      </div>
+    </div>
+
+
+  </div>
+</body>
+
+</html>

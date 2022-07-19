@@ -27,11 +27,11 @@ body {
   @include koi.fluid-padding-block(md, 4xl);
 }
 
-.buttons {
+.stack {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
 }
 
 .even-columns {

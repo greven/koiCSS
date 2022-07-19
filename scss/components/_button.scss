@@ -134,11 +134,11 @@ $shadow: shadow(sm);
   @include active {
     @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
 
-    background-color: var(--koi-btn-background-active, fill(surface, 1));
-    color: var(--koi-btn-foreground-active, fill(text, 2));
-
     @if config.$use-button-animation {
       transform: translateY(var(--koi-btn-animation-scale, 1px));
+    } @else {
+      background-color: var(--koi-btn-background-active, fill(surface, 1));
+      color: var(--koi-btn-foreground-active, fill(text, 2));
     }
   }
 
@@ -523,10 +523,10 @@ $shadow: shadow(sm);
   position: relative;
 
   #{$selectors} {
-
-    @include focus-ring(accent(6), $offset: 0);
     flex: 1 0 auto;
     margin: 0;
+
+    @include focus-ring(accent(6));
 
     @include focus {
       z-index: 10;

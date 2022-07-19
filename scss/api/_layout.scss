@@ -130,17 +130,23 @@
   }
 }
 
-@mixin stack($direction: row, $spacer: md, $reverse: false) {
+// Compose elements in a horizontal (row) or vertical (column) flex container
+@mixin stack($direction: row, $spacer: md, $justify: flex-start, $align: null, $reverse: false) {
   $direction: if($reverse, #{$direction}-reverse, $direction);
   $spacer: if(theme-has-key(spacing, $spacer), spacing($spacer), $spacer);
 
   display: flex;
   flex-direction: $direction;
-  justify-content: flex-start;
-  @if $direction == row {
-    align-items: center;
+  justify-content: $justify;
+
+  @if $align {
+    align-items: $align;
   } @else {
-    align-items: initial;
+    @if $direction == row {
+      align-items: center;
+    } @else {
+      align-items: initial;
+    }
   }
 
   * {
