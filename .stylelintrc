@@ -4,18 +4,17 @@
     "stylelint-config-prettier"
   ],
   "rules": {
-    "function-parentheses-space-inside": "never-single-line",
     "max-nesting-depth": 4,
-    "selector-no-vendor-prefix": [
-      true,
+    "color-function-notation": "modern",
+    "color-named": [
+      "never",
       {
-        "ignoreSelectors": [
-          "/-moz-.*/",
-          "/-ms-.*/",
-          "/-webkit-.*/"
+        "ignore": [
+          "inside-function"
         ]
       }
     ],
+    "function-parentheses-space-inside": "never-single-line",
     "selector-no-qualifying-type": [
       true,
       {
@@ -32,17 +31,22 @@
         ]
       }
     ],
-    "color-function-notation": "modern",
-    "color-named": [
-      "never",
-      {
-        "ignore": [
-          "inside-function"
-        ]
-      }
+    "order/order": [
+      "custom-properties",
+      "declarations"
     ],
     "scss/dollar-variable-pattern": "^[-_]?([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
     "scss/at-function-pattern": "^[-_]?([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
-    "scss/at-mixin-pattern": "^[-_]?([a-z][a-z0-9]*)(-[a-z0-9]+)*$"
+    "scss/at-mixin-pattern": "^[-_]?([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
+    "selector-no-vendor-prefix": [
+      true,
+      {
+        "ignoreSelectors": [
+          "/-moz-.*/",
+          "/-ms-.*/",
+          "/-webkit-.*/"
+        ]
+      }
+    ]
   }
 }
