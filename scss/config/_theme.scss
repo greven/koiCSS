@@ -32,7 +32,7 @@ $default-theme: (
   color-schemes: colors.$schemes,
 );
 
-$variant-colors: primary secondary info success warning danger !default;
+$color-variants: primary secondary neutral info success warning danger !default;
 
 $theme: () !default;
 $theme: map.deep-merge($default-theme, $theme);

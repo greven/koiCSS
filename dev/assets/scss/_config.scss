@@ -5,7 +5,7 @@
 @use 'koi' with (
   $color-schemes: light dark dim,
   $use-button-animation: false,
-  $variant-colors: primary secondary info success warning danger,
+  // $color-variants: primary secondary info success warning danger,
   // $theme: (
   //   colors: (
   //     primary: (

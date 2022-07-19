@@ -22,19 +22,22 @@ $border-radius: radius(full);
 $border-width: 1px;
 
 $padding-x: 11px;
+$padding-x-wide: spacing(24);
 
 // --------------------------------
 //   Mixins
 // --------------------------------
 
 @mixin default {
+  @include transition((color, background-color, border-color, transform), duration(fast));
+
   align-items: center;
   background-color: var(--koi-badge-background, fill(contrast, 1));
   border-color: var(--koi-badge-border-color, transparent);
   border-radius: var(--koi-badge-border-radius, $border-radius);
   border-style: var(--koi-badge-border-style, solid);
   border-width: var(--koi-badge-border-width, $border-width);
-  color: var(--koi-badge-foreground, fill(contrast, 9));
+  color: var(--koi-badge-foreground, fill(contrast, 6));
   display: inline-flex;
   flex-grow: 0;
   font-size: var(--koi-badge-font-size, $font-size);
@@ -48,32 +51,96 @@ $padding-x: 11px;
   text-decoration: none;
   text-overflow: ellipsis;
   text-transform: var(--koi-badge-text-transform, uppercase);
+
+  @include dark-mode {
+    --koi-badge-background: #{fill(contrast, 2)};
+  }
 }
 
 // ---- Variants ----
 
+// Color variant selector
+@mixin color-variant($color) {
+  &#{$class}--#{$color} {
+    @content;
+  }
+}
+
 @mixin solid {
   --koi-badge-background: #{fill(contrast, 9)};
-  --koi-badge-background-hover: #{fill(contrast, 7)};
-  --koi-badge-background-active: #{fill(contrast, 9)};
   --koi-badge-border-color: transparent;
-  --koi-badge-foreground: #{fill(contrast, 0)};
-  --koi-badge-foreground-hover: #{fill(contrast, 1)};
-  --koi-badge-foreground-active: #{fill(contrast, 0)};
+  --koi-badge-foreground: #{fill(contrast, 1)};
+
+  @include dark-mode {
+    --koi-badge-background: #{fill(contrast, 9)};
+  }
+
+  // Color variants
+  @include color-variant(accent) {
+    --koi-badge-background: #{accent(6)};
+    --koi-badge-foreground: #{fill(white)};
+  }
+
+  @each $color in config.$color-variants {
+    @include color-variant($color) {
+      --koi-badge-background: #{fill($color, 6)};
+      --koi-badge-foreground: #{fill(white)};
+    }
+  }
 }
 
 @mixin outline {
   --koi-badge-background: transparent;
-  --koi-badge-background-hover: #{fill(contrast, 1)};
-  --koi-badge-background-active: transparent;
-  --koi-badge-border-color: #{fill(contrast, 9)};
-  --koi-badge-border-color-hover: #{fill(contrast, 7)};
-  --koi-badge-foreground: #{fill(contrast, 9)};
-  --koi-badge-foreground-hover: #{fill(contrast, 7)};
-  --koi-badge-foreground-active: #{fill(contrast, 9)};
+  --koi-badge-border-color: #{fill(contrast, 6)};
+  --koi-badge-foreground: #{fill(contrast, 8)};
+
+  @include dark-mode {
+    --koi-badge-background: transparent;
+  }
+
+  // Color variants
+  // @include color-variant(accent) {
+  // }
+
+  // @each $color in config.$color-variants {
+  //   @include color-variant($color) {
+  //   }
+  // }
 }
 
-// @mixin dot {}
+@mixin dot {
+  --koi-badge-background: transparent;
+  --koi-badge-border-color: #{fill(contrast, 2)};
+  --koi-badge-foreground: #{fill(contrast, 8)};
+
+  @include dark-mode {
+    --koi-badge-background: transparent;
+    --koi-badge-border-color: #{fill(contrast, 3)};
+  }
+
+  &::before {
+    background-color: fill(contrast, 5);
+    border-radius: 6px;
+    content: '';
+    display: block;
+    height: 6px;
+    margin-right: 6px;
+    width: 6px;
+  }
+}
+
+// ---- Modifiers ----
+
+// Makes the badge wider (more horizontal padding)
+@mixin wide {
+  padding: 0 var(--koi-badge-padding-x-wide, $padding-x-wide);
+}
+
+// Makes the badge full width
+@mixin block {
+  justify-content: center;
+  width: 100%;
+}
 
 // --------------------------------
 //   Styles
@@ -91,8 +158,16 @@ $padding-x: 11px;
       @include outline;
     }
 
-    // &--dot {
-    //   @include dot;
-    // }
+    &--dot {
+      @include dot;
+    }
+
+    &--wide {
+      @include wide;
+    }
+
+    &--block {
+      @include block;
+    }
   }
 }
