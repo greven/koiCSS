@@ -77,8 +77,8 @@ $shadow: shadow(sm);
 }
 
 // Variant selector
-@mixin variant($variant) {
-  &#{$class}--#{$variant} {
+@mixin variant-color($color) {
+  &#{$class}--#{$color} {
     @content;
   }
 }
@@ -150,7 +150,7 @@ $shadow: shadow(sm);
     cursor: not-allowed;
   }
 
-  @include variant(inverted) {
+  @include variant-color(inverted) {
     --koi-btn-background: #{fill(contrast, 9)};
     --koi-btn-background-hover: #{fill(contrast, 7)};
     --koi-btn-background-active: #{fill(contrast, 9)};
@@ -177,7 +177,7 @@ $shadow: shadow(sm);
   border-width: var(--koi-btn-border-width, $border-width);
 
   // Variant colors
-  @include variant(accent) {
+  @include variant-color(accent) {
     --koi-btn-background: #{accent(6)};
     --koi-btn-background-hover: #{accent(7)};
     --koi-btn-background-active: #{accent(6)};
@@ -189,7 +189,7 @@ $shadow: shadow(sm);
   }
 
   @each $color in config.$variant-colors {
-    @include variant($color) {
+    @include variant-color($color) {
       --koi-btn-background: #{fill($color, 6)};
       --koi-btn-background-hover: #{fill($color, 7)};
       --koi-btn-background-active: #{fill($color, 6)};
@@ -227,7 +227,7 @@ $shadow: shadow(sm);
   }
 
   // Variant colors
-  @include variant(accent) {
+  @include variant-color(accent) {
     --koi-btn-background-hover: #{accent(0)};
     --koi-btn-background-active: transparent;
     --koi-btn-border-color: #{accent(6)};
@@ -252,7 +252,7 @@ $shadow: shadow(sm);
   }
 
   @each $color in config.$variant-colors {
-    @include variant($color) {
+    @include variant-color($color) {
       --koi-btn-background-hover: #{fill($color, 0)};
       --koi-btn-background-active: transparent;
       --koi-btn-border-color: #{fill($color, 6)};
@@ -304,7 +304,7 @@ $shadow: shadow(sm);
   }
 
   // Variant colors
-  @include variant(accent) {
+  @include variant-color(accent) {
     --koi-btn-background: #{accent(1)};
     --koi-btn-background-hover: #{accent(2)};
     --koi-btn-background-active: #{accent(1)};
@@ -325,7 +325,7 @@ $shadow: shadow(sm);
   }
 
   @each $color in config.$variant-colors {
-    @include variant($color) {
+    @include variant-color($color) {
       --koi-btn-background: #{fill($color, 1)};
       --koi-btn-background-hover: #{fill($color, 2)};
       --koi-btn-background-active: #{fill($color, 1)};
@@ -372,7 +372,7 @@ $shadow: shadow(sm);
   }
 
   // Variant colors
-  @include variant(accent) {
+  @include variant-color(accent) {
     --koi-btn-background-hover: #{accent(1)};
     --koi-btn-background-active: #{accent(1, $alpha: 0.5)};
     --koi-btn-foreground: #{accent(7)};
@@ -391,7 +391,7 @@ $shadow: shadow(sm);
   }
 
   @each $color in config.$variant-colors {
-    @include variant($color) {
+    @include variant-color($color) {
       --koi-btn-background-hover: #{fill($color, 1)};
       --koi-btn-background-active: #{fill($color, 1, $alpha: 0.5)};
       --koi-btn-foreground: #{fill($color, 7)};
@@ -432,7 +432,7 @@ $shadow: shadow(sm);
   }
 
   // Variant colors
-  @include variant(accent) {
+  @include variant-color(accent) {
     --koi-btn-foreground: #{accent(7)};
     --koi-btn-foreground-hover: #{accent(8)};
     --koi-btn-foreground-active: #{accent(7)};
@@ -447,7 +447,7 @@ $shadow: shadow(sm);
   }
 
   @each $color in config.$variant-colors {
-    @include variant($color) {
+    @include variant-color($color) {
       --koi-btn-foreground: #{fill($color, 7)};
       --koi-btn-foreground-hover: #{fill($color, 8)};
       --koi-btn-foreground-active: #{fill($color, 7)};
@@ -471,7 +471,7 @@ $shadow: shadow(sm);
   padding: 0;
   width: var(--koi-btn-height, $height);
 
-  @include variant(compact) {
+  @include variant-color(compact) {
     height: var(--koi-btn-height-compact, $height-compact);
     width: var(--koi-btn-height-compact, $height-compact);
   }
@@ -483,7 +483,7 @@ $shadow: shadow(sm);
   padding: 0;
   width: var(--koi-btn-height, $height);
 
-  @include variant(compact) {
+  @include variant-color(compact) {
     height: var(--koi-btn-height-compact, $height-compact);
     width: var(--koi-btn-height-compact, $height-compact);
   }

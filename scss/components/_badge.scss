@@ -1,0 +1,98 @@
+// --------------------------------
+//   Badge Component
+// --------------------------------
+
+@use '../config';
+@use '../api' as *;
+
+// --------------------------------
+//   Vars
+// --------------------------------
+
+$class: '.badge';
+
+// Defaults
+$height: 20px;
+
+$font-size: font(xs);
+$leading: text-leading(xs);
+$tracking: tracking(wide);
+
+$border-radius: radius(full);
+$border-width: 1px;
+
+$padding-x: 11px;
+
+// --------------------------------
+//   Mixins
+// --------------------------------
+
+@mixin default {
+  align-items: center;
+  background-color: var(--koi-badge-background, fill(contrast, 1));
+  border-color: var(--koi-badge-border-color, transparent);
+  border-radius: var(--koi-badge-border-radius, $border-radius);
+  border-style: var(--koi-badge-border-style, solid);
+  border-width: var(--koi-badge-border-width, $border-width);
+  color: var(--koi-badge-foreground, fill(contrast, 9));
+  display: inline-flex;
+  flex-grow: 0;
+  font-size: var(--koi-badge-font-size, $font-size);
+  font-weight: var(--koi-badge-font-weight, font(semibold));
+  height: var(--koi-badge-height, $height);
+  justify-content: center;
+  letter-spacing: var(--koi-badge-leading, $leading);
+  letter-spacing: var(--koi-badge-tracking, $tracking);
+  overflow: hidden;
+  padding: 0 var(--koi-badge-padding-x, $padding-x);
+  text-decoration: none;
+  text-overflow: ellipsis;
+  text-transform: var(--koi-badge-text-transform, uppercase);
+}
+
+// ---- Variants ----
+
+@mixin solid {
+  --koi-badge-background: #{fill(contrast, 9)};
+  --koi-badge-background-hover: #{fill(contrast, 7)};
+  --koi-badge-background-active: #{fill(contrast, 9)};
+  --koi-badge-border-color: transparent;
+  --koi-badge-foreground: #{fill(contrast, 0)};
+  --koi-badge-foreground-hover: #{fill(contrast, 1)};
+  --koi-badge-foreground-active: #{fill(contrast, 0)};
+}
+
+@mixin outline {
+  --koi-badge-background: transparent;
+  --koi-badge-background-hover: #{fill(contrast, 1)};
+  --koi-badge-background-active: transparent;
+  --koi-badge-border-color: #{fill(contrast, 9)};
+  --koi-badge-border-color-hover: #{fill(contrast, 7)};
+  --koi-badge-foreground: #{fill(contrast, 9)};
+  --koi-badge-foreground-hover: #{fill(contrast, 7)};
+  --koi-badge-foreground-active: #{fill(contrast, 9)};
+}
+
+// @mixin dot {}
+
+// --------------------------------
+//   Styles
+// --------------------------------
+
+@mixin styles {
+  #{$class} {
+    @include default;
+
+    &--solid {
+      @include solid;
+    }
+
+    &--outline {
+      @include outline;
+    }
+
+    // &--dot {
+    //   @include dot;
+    // }
+  }
+}
