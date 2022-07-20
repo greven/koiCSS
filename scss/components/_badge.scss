@@ -218,15 +218,15 @@ $padding-x-large: spacing(14);
     }
   }
 
-  // & > *:last-child.btn {
-  //   margin-left: 4px;
-  //   margin-right: -$padding-x + $gap;
-  // }
+  *:last-child.btn {
+    margin-left: 4px;
+    margin-right: -$padding-x + $gap;
+  }
 
-  // & > *:first-child.btn {
-  //   margin-left: -$padding-x + $gap;
-  //   margin-right: 4px;
-  // }
+  *:first-child.btn {
+    margin-left: -$padding-x + $gap;
+    margin-right: 4px;
+  }
 }
 
 // ---- Modifiers ----
