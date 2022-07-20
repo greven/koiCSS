@@ -53,8 +53,8 @@ $_default-style: solid;
   --koi-ring-offset-shadow: var(--koi-ring-inset, #{$inset}) 0 0 0 var(--koi-ring-offset, #{$offset})
     var(--koi-ring-offset-color, #{$offset-color});
 
-  --koi-ring-shadow: var(--koi-ring-inset, #{$inset}) 0 0 0 calc(#{$width} + var(--koi-ring-offset, #{$offset}))
-    var(--koi-ring-color, #{$color});
+  --koi-ring-shadow: var(--koi-ring-inset, #{$inset}) 0 0 0
+    calc(var(--koi-ring-width, #{$width}) + var(--koi-ring-offset, #{$offset})) var(--koi-ring-color, #{$color});
 
   box-shadow: var(--koi-ring-offset-shadow), var(--koi-ring-shadow), var(--koi-shadow, 0 0 #0000);
 

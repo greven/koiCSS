@@ -4,6 +4,7 @@
 
 @use '../config';
 @use '../api' as *;
+@use 'button';
 
 // --------------------------------
 //   Vars
@@ -13,16 +14,19 @@ $class: '.badge';
 
 // Defaults
 $height: 20px;
+$height-large: 24px;
 
 $font-size: font(xs);
+$font-size-large: font(sm);
 $leading: text-leading(xs);
+$leading-large: text-leading(sm);
 $tracking: tracking(wide);
 
 $border-radius: radius(full);
 $border-width: 1px;
 
 $padding-x: 11px;
-$padding-x-wide: spacing(24);
+$padding-x-large: spacing(14);
 
 // --------------------------------
 //   Mixins
@@ -44,8 +48,8 @@ $padding-x-wide: spacing(24);
   font-weight: var(--koi-badge-font-weight, font(semibold));
   height: var(--koi-badge-height, $height);
   justify-content: center;
-  letter-spacing: var(--koi-badge-leading, $leading);
   letter-spacing: var(--koi-badge-tracking, $tracking);
+  line-height: var(--koi-badge-leading, $leading);
   overflow: hidden;
   padding: 0 var(--koi-badge-padding-x, $padding-x);
   text-decoration: none;
@@ -54,6 +58,29 @@ $padding-x-wide: spacing(24);
 
   @include dark-mode {
     --koi-badge-background: #{fill(contrast, 2)};
+  }
+
+  // Color variants
+  @include color-variant(accent) {
+    --koi-badge-background: #{accent(1)};
+    --koi-badge-foreground: #{accent(8)};
+
+    @include dark-mode {
+      --koi-badge-background: #{accent(8, $alpha: 0.2)};
+      --koi-badge-foreground: #{accent(5)};
+    }
+  }
+
+  @each $color in config.$color-variants {
+    @include color-variant($color) {
+      --koi-badge-background: #{fill($color, 1)};
+      --koi-badge-foreground: #{fill($color, 8)};
+
+      @include dark-mode {
+        --koi-badge-background: #{fill($color, 8, $alpha: 0.2)};
+        --koi-badge-foreground: #{fill($color, 5)};
+      }
+    }
   }
 }
 
@@ -99,13 +126,27 @@ $padding-x-wide: spacing(24);
   }
 
   // Color variants
-  // @include color-variant(accent) {
-  // }
+  @include color-variant(accent) {
+    --koi-badge-background: transparent;
+    --koi-badge-border-color: #{accent(6)};
+    --koi-badge-foreground: #{accent(7)};
 
-  // @each $color in config.$color-variants {
-  //   @include color-variant($color) {
-  //   }
-  // }
+    @include dark-mode {
+      --koi-badge-background: transparent;
+    }
+  }
+
+  @each $color in config.$color-variants {
+    @include color-variant($color) {
+      --koi-badge-background: transparent;
+      --koi-badge-border-color: #{fill($color, 6)};
+      --koi-badge-foreground: #{fill($color, 7)};
+
+      @include dark-mode {
+        --koi-badge-background: transparent;
+      }
+    }
+  }
 }
 
 @mixin dot {
@@ -115,7 +156,6 @@ $padding-x-wide: spacing(24);
 
   @include dark-mode {
     --koi-badge-background: transparent;
-    --koi-badge-border-color: #{fill(contrast, 3)};
   }
 
   &::before {
@@ -127,13 +167,75 @@ $padding-x-wide: spacing(24);
     margin-right: 6px;
     width: 6px;
   }
+
+  // Color variants
+  @include color-variant(accent) {
+    --koi-badge-background: transparent;
+    --koi-badge-foreground: #{fill(text, 1)};
+
+    &::before {
+      background-color: accent(5);
+    }
+
+    @include dark-mode {
+      --koi-badge-background: transparent;
+    }
+  }
+
+  @each $color in config.$color-variants {
+    @include color-variant($color) {
+      --koi-badge-background: transparent;
+      --koi-badge-foreground: #{fill(text, 1)};
+
+      &::before {
+        background-color: fill($color, 5);
+      }
+
+      @include dark-mode {
+        --koi-badge-background: transparent;
+      }
+    }
+  }
+}
+
+// TODO: How to deal with focus in buttons?
+@mixin group {
+  $gap: 2px;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+
+  position: relative;
+
+  #{button.$class} {
+    box-shadow: none;
+    height: spacing(16);
+    width: spacing(16);
+
+    &:hover,
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  // & > *:last-child.btn {
+  //   margin-left: 4px;
+  //   margin-right: -$padding-x + $gap;
+  // }
+
+  // & > *:first-child.btn {
+  //   margin-left: -$padding-x + $gap;
+  //   margin-right: 4px;
+  // }
 }
 
 // ---- Modifiers ----
 
-// Makes the badge wider (more horizontal padding)
-@mixin wide {
-  padding: 0 var(--koi-badge-padding-x-wide, $padding-x-wide);
+@mixin large {
+  font-size: var(--koi-badge-font-size-large, $font-size-large);
+  height: var(--koi-badge-height-large, $height-large);
+  line-height: var(--koi-badge-leading-large, $leading-large);
+  padding: 0 var(--koi-badge-padding-x-large, $padding-x-large);
 }
 
 // Makes the badge full width
@@ -162,12 +264,17 @@ $padding-x-wide: spacing(24);
       @include dot;
     }
 
-    &--wide {
-      @include wide;
+    &--large {
+      @include large;
     }
 
     &--block {
       @include block;
+    }
+
+    // Badge Group
+    &#{$class}--group {
+      @include group;
     }
   }
 }

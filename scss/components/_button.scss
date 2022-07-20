@@ -569,11 +569,9 @@ $shadow: shadow(sm);
   [type='reset'],
   [type='file'] {
     @include reset;
-    @include default;
   }
 
   #{$selectors} {
-    @include reset;
     @include default;
 
     &--solid {
@@ -623,7 +621,6 @@ $shadow: shadow(sm);
   }
 
   // Button Group
-
   #{$class}-group {
     @include group;
   }
