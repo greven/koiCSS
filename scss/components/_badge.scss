@@ -198,9 +198,9 @@ $padding-x-large: spacing(14);
   }
 }
 
-// TODO: How to deal with focus in buttons?
 @mixin group {
   $gap: 2px;
+
   align-items: center;
   display: inline-flex;
   justify-content: center;
