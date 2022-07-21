@@ -1,10 +1,136 @@
-// TODO: Add a (.breakout maybe??) responsive class that pierces containers: https://css-irl.info/breaking-out-of-a-central-wrapper/
-// .breakout {
-//   position: relative;
-//   right: 50%;
-//   left: 50%;
-//   margin-left: -50vw;
-//   margin-right: -50vw;
-//   max-width: 100vw;
-//   width: 100vw;
-// }
+// ------------------------------------------------
+//   Layout Utilities
+// ------------------------------------------------
+
+@use 'sass:map';
+@use 'sass:list';
+
+@use '../tokens/spacing';
+@use '../config';
+@use '../api' as *;
+
+// --------------------------------
+//   Vars
+// --------------------------------
+
+$layers: theme(layer);
+
+$spacers: list.append(map.keys(spacing.$spacers), 0);
+
+// --------------------------------
+//   Utilities
+// --------------------------------
+
+$utilities: (
+  columns: (
+    property: column-count,
+    class: columns,
+    responsive: true,
+    values: 1 2 3 4 5 6 7 8 9 10 11 12,
+  ),
+  display: (
+    property: display,
+    class: null,
+    responsive: true,
+    values: (
+      inline: inline,
+      inline-block: inline-block,
+      block: block,
+      grid: grid,
+      flex: flex,
+      inline-flex: inline-flex,
+      table: table,
+      table-row: table-row,
+      table-cell: table-cell,
+      hidden: none,
+    ),
+  ),
+  overflow: (
+    property: overflow,
+    class: overflow,
+    responsive: true,
+    values: auto hidden visible scroll,
+  ),
+  overflow-x: (
+    property: overflow,
+    class: overflow-x,
+    responsive: true,
+    values: auto hidden visible scroll,
+  ),
+  overflow-y: (
+    property: overflow,
+    class: overflow-y,
+    responsive: true,
+    values: auto hidden visible scroll,
+  ),
+  position: (
+    property: position,
+    class: null,
+    responsive: true,
+    values: static relative absolute fixed sticky,
+  ),
+  visibility: (
+    property: visibility,
+    class: null,
+    responsive: true,
+    values: (
+      visible: visible,
+      invisible: hidden,
+    ),
+  ),
+  z-index: (
+    property: z-index,
+    class: layer,
+    responsive: true,
+    values: $layers,
+  ),
+);
+
+@mixin utility-extensions {
+  @include create-responsive-utility(container) {
+    @include container(0px);
+  }
+
+  // Centered content using grid place-content
+  @include create-responsive-utility(centered) {
+    display: grid;
+    place-content: center;
+  }
+
+  // Breakout from a container making the element full width
+  @include create-responsive-utility(breakout) {
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+  }
+
+  @each $key in $spacers {
+    $spacer-value: if(theme-has-key(spacing, $key), spacing($key), $key);
+
+    @include create-responsive-utility(space-x-#{$key}) {
+      & > :not([hidden]) ~ :not([hidden]) {
+        margin-right: calc($spacer-value * var(--koi-space-x-reverse, 0));
+        margin-left: calc($spacer-value * calc(1 - var(--koi-space-x-reverse, 0)));
+      }
+    }
+
+    @include create-responsive-utility(space-y-#{$key}) {
+      & > :not([hidden]) ~ :not([hidden]) {
+        margin-top: calc($spacer-value * calc(1 - var(--koi-space-y-reverse, 0)));
+        margin-bottom: calc($spacer-value * var(--koi-space-y-reverse, 0));
+      }
+    }
+  }
+
+  @include create-responsive-utility(space-x-reverse) {
+    --koi-space-x-reverse: 1;
+  }
+
+  @include create-responsive-utility(space-y-reverse) {
+    --koi-space-y-reverse: 1;
+  }
+}

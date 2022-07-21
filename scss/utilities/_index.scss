@@ -3,12 +3,22 @@
 @use '../internal' as *;
 @use 'effects';
 @use 'filters';
+@use 'layout';
 @use 'size';
 @use 'spacing';
 
 $utilities: () !default;
-$utilities: map-deep-merge(effects.$utilities, filters.$utilities, size.$utilities, spacing.$utilities);
+$utilities: map-deep-merge(
+  effects.$utilities,
+  filters.$utilities,
+  layout.$utilities,
+  size.$utilities,
+  spacing.$utilities
+);
 
 @mixin utilities {
   @include generate-utilities($utilities);
+
+  // Utility Extensions
+  @include layout.utility-extensions();
 }

@@ -68,6 +68,7 @@ $_standard-pseudo-utils: ();
 $_responsive-class-utils: ();
 $_responsive-pseudo-utils: ();
 
+// TODO: Default value generation
 @mixin _create-utility-maps($utilities) {
   $util-glue: config.$utility-glue;
   $prefix: config.$prefix;
@@ -79,7 +80,6 @@ $_responsive-pseudo-utils: ();
     $pseudos: if(map.has-key($utility-map, pseudos), map.get($utility-map, pseudos), ());
     $local-vars: map.get($utility-map, local-vars);
     $responsive: map.get($utility-map, responsive);
-    // TODO: Default value generation
     // $default-value: if(map.has-key($utility-map, default), map.get($utility-map, default), null);
 
     // If the values are a list or string, convert it into a map
