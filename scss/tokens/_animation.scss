@@ -1,3 +1,43 @@
+// --------------------------------
+//   Animation Tokens
+// --------------------------------
+
+@use 'sass:map';
+
+@use './timing' as *;
+
+$_linear: map.get($timing, linear);
+$_ease: map.get($timing, ease);
+$_ease-out: map.get($timing, ease-out);
+$_ease-in-out: map.get($timing, ease-in-out);
+
+// --------------------------------
+//   Animation
+// --------------------------------
+
+$animations: (
+  blink: blink 1s $_ease infinite,
+  bounce: bounce 2s $_ease infinite,
+  fade-in: fade-in 0.5s $_ease,
+  fade-out: fade-out 0.5s $_ease,
+  float: float 3s $_ease-in-out infinite,
+  ping: ping 3s $_ease-out infinite,
+  pulse: pulse 2s $_ease-out infinite,
+  spin: spin 2s $_linear infinite,
+  scale-up: scale-up 0.5s $_ease,
+  scale-down: scale-down 0.5s $_ease,
+  slide-out-up: slide-out-up 0.5s $_ease,
+  slide-out-down: slide-out-down 0.5s $_ease,
+  slide-out-right: slide-out-right 0.5s $_ease,
+  slide-out-left: slide-out-left 0.5s $_ease,
+  slide-in-up: slide-in-up 0.5s $_ease,
+  slide-in-down: slide-in-down 0.5s $_ease,
+  slide-in-right: slide-in-right 0.5s $_ease,
+  slide-in-left: slide-in-left 0.5s $_ease,
+  shake-x: shake-x 0.75s $_ease-out,
+  shake-y: shake-y 0.75s $_ease-out,
+);
+
 // ----------------------------------
 //   Keyframes
 // ----------------------------------

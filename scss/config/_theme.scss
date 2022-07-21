@@ -9,6 +9,7 @@
 @use 'theme/typography';
 
 $default-theme: (
+  animations: tokens.$animations,
   aspect: tokens.$aspect,
   blur: tokens.$blur,
   radius: tokens.$radius,

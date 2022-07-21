@@ -4,13 +4,12 @@
 
 @use '../config';
 @use '../api' as *;
-@use '../base/animation';
 
 // --------------------------------
 //   Vars
 // --------------------------------
 
-$animations: animation.$animations;
+$animations: theme(animations);
 
 // --------------------------------
 //   Utilities
