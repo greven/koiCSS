@@ -133,4 +133,12 @@ $utilities: (
   @include create-responsive-utility(space-y-reverse) {
     --koi-space-y-reverse: 1;
   }
+
+  @include create-responsive-utility(sr-only) {
+    @include visually-hidden;
+  }
+
+  @include create-responsive-utility(not-sr-only) {
+    @include not-visually-hidden;
+  }
 }

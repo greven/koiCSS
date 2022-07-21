@@ -28450,3 +28450,149 @@
   }
 }
 /*! purgecss end ignore */
+/*! purgecss start ignore */
+.sr-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:sr-only {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:sr-only {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:sr-only {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:sr-only {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:sr-only {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+}
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.not-sr-only {
+  clip: unset;
+  height: auto;
+  margin: unset;
+  overflow: unset;
+  position: static;
+  white-space: unset;
+  width: auto;
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:not-sr-only {
+    clip: unset;
+    height: auto;
+    margin: unset;
+    overflow: unset;
+    position: static;
+    white-space: unset;
+    width: auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:not-sr-only {
+    clip: unset;
+    height: auto;
+    margin: unset;
+    overflow: unset;
+    position: static;
+    white-space: unset;
+    width: auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:not-sr-only {
+    clip: unset;
+    height: auto;
+    margin: unset;
+    overflow: unset;
+    position: static;
+    white-space: unset;
+    width: auto;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:not-sr-only {
+    clip: unset;
+    height: auto;
+    margin: unset;
+    overflow: unset;
+    position: static;
+    white-space: unset;
+    width: auto;
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:not-sr-only {
+    clip: unset;
+    height: auto;
+    margin: unset;
+    overflow: unset;
+    position: static;
+    white-space: unset;
+    width: auto;
+  }
+}
+/*! purgecss end ignore */
