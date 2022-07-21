@@ -20,5 +20,5 @@ $utilities: map-deep-merge(
   @include generate-utilities($utilities);
 
   // Utility Extensions
-  @include layout.utility-extensions();
+  @include layout.utility-extensions;
 }
