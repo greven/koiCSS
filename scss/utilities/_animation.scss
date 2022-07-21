@@ -4,13 +4,23 @@
 
 @use '../config';
 @use '../api' as *;
+@use '../base/animation';
 
 // --------------------------------
 //   Vars
 // --------------------------------
 
+$animations: animation.$animations;
+
 // --------------------------------
 //   Utilities
 // --------------------------------
 
-$utilities: ();
+$utilities: (
+  animations: (
+    property: animation,
+    class: animation,
+    responsive: false,
+    values: $animations,
+  ),
+);

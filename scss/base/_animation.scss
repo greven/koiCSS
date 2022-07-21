@@ -2,9 +2,38 @@
 //   Animation and Transition Styles
 // ----------------------------------
 
+@use 'sass:map';
+
 @use '../config/internal' as *;
 @use '../internal' as *;
 @use '../api' as *;
+
+// --------------------------------
+//   Vars
+// --------------------------------
+
+$animations: (
+  blink: blink 1s timing(ease) infinite,
+  bounce: bounce 2s timing(ease) infinite,
+  fade-in: fade-in 0.5s timing(ease),
+  fade-out: fade-out 0.5s timing(ease),
+  float: float 3s timing(ease-in-out) infinite,
+  ping: ping 3s timing(ease-out) infinite,
+  pulse: pulse 2s timing(ease-out) infinite,
+  spin: spin 2s timing(linear) infinite,
+  scale-up: scale-up 0.5s timing(ease),
+  scale-down: scale-down 0.5s timing(ease),
+  slide-out-up: slide-out-up 0.5s timing(ease),
+  slide-out-down: slide-out-down 0.5s timing(ease),
+  slide-out-right: slide-out-right 0.5s timing(ease),
+  slide-out-left: slide-out-left 0.5s timing(ease),
+  slide-in-up: slide-in-up 0.5s timing(ease),
+  slide-in-down: slide-in-down 0.5s timing(ease),
+  slide-in-right: slide-in-right 0.5s timing(ease),
+  slide-in-left: slide-in-left 0.5s timing(ease),
+  shake-x: shake-x 0.75s timing(ease-out),
+  shake-y: shake-y 0.75s timing(ease-out),
+);
 
 // --------------------------------
 //   Mixins
@@ -219,26 +248,9 @@
 
 @mixin vars {
   // --------ANIMATIONS--------
-  @include custom-prop($animation-prefix, blink, (blink 1s timing(ease) infinite));
-  @include custom-prop($animation-prefix, bounce, (bounce 2s timing(ease) infinite));
-  @include custom-prop($animation-prefix, fade-in, (fade-in 0.5s timing(ease)));
-  @include custom-prop($animation-prefix, fade-out, (fade-out 0.5s timing(ease)));
-  @include custom-prop($animation-prefix, float, (float 3s timing(ease-in-out) infinite));
-  @include custom-prop($animation-prefix, ping, (ping 3s timing(ease-out) infinite));
-  @include custom-prop($animation-prefix, pulse, (pulse 2s timing(ease-out) infinite));
-  @include custom-prop($animation-prefix, spin, (spin 2s timing(linear) infinite));
-  @include custom-prop($animation-prefix, scale-up, (scale-up 0.5s timing(ease)));
-  @include custom-prop($animation-prefix, scale-down, (scale-down 0.5s timing(ease)));
-  @include custom-prop($animation-prefix, slide-out-up, (slide-out-up 0.5s timing(ease)));
-  @include custom-prop($animation-prefix, slide-out-down, (slide-out-down 0.5s timing(ease)));
-  @include custom-prop($animation-prefix, slide-out-right, (slide-out-right 0.5s timing(ease)));
-  @include custom-prop($animation-prefix, slide-out-left, (slide-out-left 0.5s timing(ease)));
-  @include custom-prop($animation-prefix, slide-in-up, (slide-in-up 0.5s timing(ease)));
-  @include custom-prop($animation-prefix, slide-in-down, (slide-in-down 0.5s timing(ease)));
-  @include custom-prop($animation-prefix, slide-in-right, (slide-in-right 0.5s timing(ease)));
-  @include custom-prop($animation-prefix, slide-in-left, (slide-in-left 0.5s timing(ease)));
-  @include custom-prop($animation-prefix, shake-x, (shake-x 0.75s timing(ease-out)));
-  @include custom-prop($animation-prefix, shake-y, (shake-y 0.75s timing(ease-out)));
+  @each $animation, $value in $animations {
+    @include custom-prop($animation-prefix, $animation, $value);
+  }
 
   // --------TIMING-FUNCTIONS--------
   @include generate-css-vars(theme(timing));

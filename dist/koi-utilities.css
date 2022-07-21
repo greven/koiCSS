@@ -2,6 +2,86 @@
 /* stylelint-enable */
 /* stylelint-disable */
 /* stylelint-enable */
+.animation-blink {
+  animation: blink 1s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+}
+
+.animation-bounce {
+  animation: bounce 2s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+}
+
+.animation-fade-in {
+  animation: fade-in 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.animation-fade-out {
+  animation: fade-out 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.animation-float {
+  animation: float 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.animation-ping {
+  animation: ping 3s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.animation-pulse {
+  animation: pulse 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.animation-spin {
+  animation: spin 2s linear infinite;
+}
+
+.animation-scale-up {
+  animation: scale-up 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.animation-scale-down {
+  animation: scale-down 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.animation-slide-out-up {
+  animation: slide-out-up 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.animation-slide-out-down {
+  animation: slide-out-down 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.animation-slide-out-right {
+  animation: slide-out-right 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.animation-slide-out-left {
+  animation: slide-out-left 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.animation-slide-in-up {
+  animation: slide-in-up 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.animation-slide-in-down {
+  animation: slide-in-down 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.animation-slide-in-right {
+  animation: slide-in-right 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.animation-slide-in-left {
+  animation: slide-in-left 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.animation-shake-x {
+  animation: shake-x 0.75s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.animation-shake-y {
+  animation: shake-y 0.75s cubic-bezier(0, 0, 0.2, 1);
+}
+
 .shadow-xs, .focus\:shadow-xs:focus, .hover\:shadow-xs:hover {
   box-shadow: 0 1px 2px 0 rgba(var(--koi-shadow-color, 0 0 0) / 0.05);
 }
