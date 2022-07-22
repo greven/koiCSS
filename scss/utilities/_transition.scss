@@ -1,0 +1,66 @@
+// --------------------------------
+//   Transition Utilities
+// --------------------------------
+
+@use '../config';
+@use '../api' as *;
+
+// --------------------------------
+//   Vars
+// --------------------------------
+
+$_durations: theme(duration);
+$_timing: theme(timing);
+$_delay: theme(delay);
+
+// --------------------------------
+//   Utilities
+// --------------------------------
+
+$utilities: (
+  transition-duration: (
+    property: transition-duration,
+    class: duration,
+    values: $_durations,
+  ),
+  transition-timing: (
+    property: transition-timing-function,
+    class: '',
+    values: $_timing,
+  ),
+  transition-delay: (
+    property: transition-delay,
+    class: delay,
+    values: $_delay,
+  ),
+);
+
+// --------------------------------
+//   Utility Mixins
+// --------------------------------
+
+@mixin extensions {
+  @include create-utility(transition-none) {
+    transition-property: none;
+  }
+
+  @include create-utility(transition) {
+    @include transition;
+  }
+
+  @include create-utility(transition-colors) {
+    @include transition-colors;
+  }
+
+  @include create-utility(transition-opacity) {
+    @include transition-opacity;
+  }
+
+  @include create-utility(transition-shadow) {
+    @include transition-shadow;
+  }
+
+  @include create-utility(transition-transform) {
+    @include transition-transform;
+  }
+}

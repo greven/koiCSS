@@ -11,6 +11,7 @@
 @use 'layout';
 @use 'size';
 @use 'spacing';
+@use 'transition';
 @use 'typography';
 
 $utilities: () !default;
@@ -25,13 +26,14 @@ $utilities: map-deep-merge(
   layout.$utilities,
   size.$utilities,
   spacing.$utilities,
+  transition.$utilities,
   typography.$utilities
 );
 
 @mixin utilities {
   @include generate-utilities($utilities);
 
-  // Utility Extensions
-  @include layout.utility-extensions;
-  @include typography.utility-extensions;
+  @include layout.extensions;
+  @include transition.extensions;
+  @include typography.extensions;
 }

@@ -249,26 +249,3 @@ $_responsive-pseudo-utils: ();
   }
 }
 /* stylelint-enable */
-
-// Create a single responsive utility
-@mixin create-responsive-utility($class) {
-  $util-glue: config.$utility-glue;
-  $screens: map.get(config.$theme, screens);
-  $class: str-escape($class);
-
-  // Create standard utility first
-  .#{$class} {
-    @content;
-  }
-
-  // Create responsive class modifiers
-  @each $screen, $breakpoint in $screens {
-    $infix: str-escape(#{'' + $screen + $util-glue});
-
-    @media screen and (min-width: $breakpoint) {
-      .#{$infix + $class} {
-        @content;
-      }
-    }
-  }
-}

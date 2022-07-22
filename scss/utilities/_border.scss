@@ -11,8 +11,8 @@
 //   Vars
 // --------------------------------
 
-$_default-radius: map.get(config.$defaults, radius);
-$_default-border-width: map.get(config.$defaults, border-width);
+$_default-radius: config.default(radius);
+$_default-border-width: config.default(border-width);
 
 $_radius: theme(radius);
 

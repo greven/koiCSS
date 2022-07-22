@@ -177,6 +177,13 @@ $_type-base-index: list.index($_type-steps, 'md');
   }
 }
 
+// Truncate text overflow
+@mixin truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 // --------------------------------
 //   Generators
 // --------------------------------

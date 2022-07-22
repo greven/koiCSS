@@ -34,7 +34,7 @@ $_default-properties: (
 // --------------------------------
 
 @mixin transition(
-  $property: transform,
+  $property: $_default-properties,
   $duration: $_default-duration,
   $timing-function: $_default-timing-function,
   $delay: 0

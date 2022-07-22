@@ -63,17 +63,115 @@ $utilities: (
     property: text-align,
     class: text,
     responsive: true,
-    values: left right center justify,
+    values: left right center justify start end,
+  ),
+  text-transform: (
+    property: text-transform,
+    class: '',
+    pseudos: hover focus,
+    values: (
+      uppercase: uppercase,
+      lowercase: lowercase,
+      capitalize: capitalize,
+      normal-case: none,
+    ),
+  ),
+  text-decoration: (
+    property: text-decoration-line,
+    class: '',
+    pseudos: hover focus,
+    values: (
+      underline: underline,
+      overline: overline,
+      line-through: line-through,
+      no-underline: none,
+    ),
+  ),
+  text-decoration-style: (
+    property: text-decoration-style,
+    class: decoration,
+    pseudos: hover focus,
+    values: solid double dotted dashed wavy,
+  ),
+  text-decoration-thickness: (
+    property: text-decoration-thickness,
+    class: decoration,
+    pseudos: hover focus,
+    values: (
+      auto: auto,
+      from-font: from-font,
+      0: 0px,
+      1: 1px,
+      2: 2px,
+      4: 4px,
+      8: 8px,
+    ),
+  ),
+  text-decoration-color: (
+    property: text-decoration-color,
+    class: decoration,
+    pseudos: hover focus,
+    values: $_colors,
+  ),
+  text-underline-offset: (
+    property: text-underline-offset,
+    class: underline-offset,
+    pseudos: hover,
+    values: (
+      auto: auto,
+      0: 0px,
+      1: 1px,
+      2: 2px,
+      4: 4px,
+      8: 8px,
+    ),
+  ),
+  text-overflow: (
+    property: text-overflow,
+    class: text,
+    values: ellipsis clip,
+  ),
+  vertical-align: (
+    property: vertical-align,
+    class: align,
+    responsive: true,
+    values: baseline top middle bottom text-top text-bottom sub super,
+  ),
+  list-style: (
+    property: list-style-type,
+    class: list,
+    values: none disc decimal,
+  ),
+  list-position: (
+    property: list-style-position,
+    class: list,
+    values: inside outside,
   ),
 );
 
-@mixin utility-extensions {
-  // Font-size with corresponding line-height
+// --------------------------------
+//   Utility Mixins
+// --------------------------------
+
+// Font-size with corresponding line-height
+@mixin create-text-size-utility {
   $_font-sizes: map.keys(theme(font-size));
 
   @each $key in $_font-sizes {
     @include create-responsive-utility(text-#{$key}) {
       @include text-size($key);
     }
+  }
+}
+
+// --------------------------------
+
+@mixin extensions {
+  @include create-text-size-utility;
+
+  @include create-utility(truncate) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 }
