@@ -3,47 +3,22 @@
 // ------------------------------------------------
 
 @use 'sass:map';
-@use 'sass:meta';
 
+@use '../internal/color' as *;
 @use '../config';
 @use '../api' as *;
-@use '../helpers' as *;
 
 // --------------------------------
 //   Vars
 // --------------------------------
 
-$_base-colors: ();
-$_scheme-colors: ();
-
-@each $color-name, $color in theme(colors) {
-  @if meta.type-of($color) == 'color' {
-    $_base-colors: map.set($_base-colors, #{$color-name}, fill($color-name, $color));
-  } @else {
-    @each $shade, $_value in $color {
-      $_base-colors: map.set($_base-colors, #{$color-name}-#{$shade}, fill($color-name, $shade));
-    }
-  }
-}
-
-@each $color-name, $color in theme(color-schemes, light) {
-  @if meta.type-of($color) == 'color' {
-    $_scheme-colors: map.set($_scheme-colors, #{$color-name}, fill($color-name, $color));
-  } @else {
-    @each $shade, $_value in $color {
-      $_scheme-colors: map.set($_scheme-colors, #{$color-name}-#{$shade}, fill($color-name, $shade));
-    }
-  }
-}
-
-$_colors: map-merge(
+$_colors: map.merge(
+  $merged-colors,
   (
     current: currentColor,
     inherit: inherit,
     transparent: transparent,
-  ),
-  $_base-colors,
-  $_scheme-colors
+  )
 );
 
 // --------------------------------

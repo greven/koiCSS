@@ -1,23 +1,31 @@
 @use '../helpers' as *;
-
 @use '../internal' as *;
+
 @use 'animation';
 @use 'background';
+@use 'border';
 @use 'effects';
 @use 'filters';
+@use 'flex';
+@use 'grid';
 @use 'layout';
 @use 'size';
 @use 'spacing';
+@use 'typography';
 
 $utilities: () !default;
 $utilities: map-deep-merge(
   animation.$utilities,
   background.$utilities,
+  border.$utilities,
   effects.$utilities,
   filters.$utilities,
+  flex.$utilities,
+  grid.$utilities,
   layout.$utilities,
   size.$utilities,
-  spacing.$utilities
+  spacing.$utilities,
+  typography.$utilities
 );
 
 @mixin utilities {
