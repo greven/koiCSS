@@ -1,10 +1,15 @@
 @use 'sass:list';
+@use 'sass:map';
 @use 'sass:meta';
 
 @use '../config';
 @use '../internal' as *;
 @use '../helpers' as *;
 @use 'theme' as *;
+
+// --------------------------------
+//   Vars
+// --------------------------------
 
 $_default-shade: config.default(color-shade);
 
@@ -115,3 +120,32 @@ $_default-shade: config.default(color-shade);
 
   @return null;
 }
+
+// --------------------------------
+//   Support Vars
+// --------------------------------
+
+$_base-colors: ();
+$_scheme-colors: ();
+
+@each $color-name, $color in theme(colors) {
+  @if meta.type-of($color) == 'color' {
+    $_base-colors: map.set($_base-colors, #{$color-name}, fill($color-name, $color));
+  } @else {
+    @each $shade, $_value in $color {
+      $_base-colors: map.set($_base-colors, #{$color-name}-#{$shade}, fill($color-name, $shade));
+    }
+  }
+}
+
+@each $color-name, $color in theme(color-schemes, light) {
+  @if meta.type-of($color) == 'color' {
+    $_scheme-colors: map.set($_scheme-colors, #{$color-name}, fill($color-name, $color));
+  } @else {
+    @each $shade, $_value in $color {
+      $_scheme-colors: map.set($_scheme-colors, #{$color-name}-#{$shade}, fill($color-name, $shade));
+    }
+  }
+}
+
+$merged-colors: map.merge($_base-colors, $_scheme_colors);
