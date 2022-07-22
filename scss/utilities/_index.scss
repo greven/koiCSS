@@ -33,4 +33,5 @@ $utilities: map-deep-merge(
 
   // Utility Extensions
   @include layout.utility-extensions;
+  @include typography.utility-extensions;
 }

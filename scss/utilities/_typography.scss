@@ -2,6 +2,8 @@
 //   Typography Utilities
 // ------------------------------------------------
 
+@use 'sass:map';
+
 @use '../config';
 @use '../api' as *;
 
@@ -9,8 +11,69 @@
 //   Vars
 // --------------------------------
 
+$_colors: map.merge(
+  $merged-colors,
+  (
+    current: currentColor,
+    inherit: inherit,
+    transparent: transparent,
+  )
+);
+
+$_leading: theme(leading);
+$_tracking: theme(tracking);
+$_font-weights: theme(font-weight);
+
 // --------------------------------
 //   Utilities
 // --------------------------------
 
-$utilities: ();
+$utilities: (
+  color: (
+    property: color,
+    class: text,
+    pseudos: hover focus,
+    values: $_colors,
+  ),
+  font-style: (
+    property: font-style,
+    class: null,
+    values: (
+      italic: italic,
+      not-italic: normal,
+    ),
+  ),
+  font-weight: (
+    property: font-weight,
+    class: font,
+    values: $_font-weights,
+  ),
+  line-height: (
+    property: line-height,
+    class: leading,
+    responsive: true,
+    values: $_leading,
+  ),
+  letter-spacing: (
+    property: letter-spacing,
+    class: tracking,
+    values: $_tracking,
+  ),
+  text-align: (
+    property: text-align,
+    class: text,
+    responsive: true,
+    values: left right center justify,
+  ),
+);
+
+@mixin utility-extensions {
+  // Font-size with corresponding line-height
+  $_font-sizes: map.keys(theme(font-size));
+
+  @each $key in $_font-sizes {
+    @include create-responsive-utility(text-#{$key}) {
+      @include text-size($key);
+    }
+  }
+}
