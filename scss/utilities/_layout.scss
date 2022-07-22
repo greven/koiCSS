@@ -13,9 +13,9 @@
 //   Vars
 // --------------------------------
 
-$layers: theme(layer);
+$_layers: theme(layer);
 
-$spacers: list.append(map.keys(spacing.$spacers), 0);
+$_spacers: list.append(map.keys(spacing.$spacers), 0);
 
 // --------------------------------
 //   Utilities
@@ -82,7 +82,7 @@ $utilities: (
     property: z-index,
     class: layer,
     responsive: true,
-    values: $layers,
+    values: $_layers,
   ),
 );
 
@@ -108,7 +108,7 @@ $utilities: (
     right: 50%;
   }
 
-  @each $key in $spacers {
+  @each $key in $_spacers {
     $spacer-value: if(theme-has-key(spacing, $key), spacing($key), $key);
 
     @include create-responsive-utility(space-x-#{$key}) {

@@ -9,8 +9,8 @@
 //   Vars
 // --------------------------------
 
-$shadows: theme(shadow);
-$opacities: theme(opacity);
+$_shadows: theme(shadow);
+$_opacities: theme(opacity);
 
 // --------------------------------
 //   Utilities
@@ -22,11 +22,11 @@ $utilities: (
     class: shadow,
     pseudos: hover focus,
     default: config.default(shadow),
-    values: $shadows,
+    values: $_shadows,
   ),
   opacity: (
     property: opacity,
     pseudos: hover focus,
-    values: $opacities,
+    values: $_opacities,
   ),
 );

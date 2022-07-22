@@ -10,10 +10,10 @@
 //   Vars
 // --------------------------------
 
-$spacing: theme(spacing);
+$_spacing: theme(spacing);
 
-$margin-spacing: map.merge(
-  $spacing,
+$_margin-spacing: map.merge(
+  $_spacing,
   (
     auto: auto,
   )
@@ -28,47 +28,47 @@ $utilities: (
     property: margin,
     class: m,
     responsive: true,
-    values: $margin-spacing,
+    values: $_margin-spacing,
   ),
   'margin-x': (
     property: margin-right margin-left,
     class: mx,
     responsive: true,
-    values: $margin-spacing,
+    values: $_margin-spacing,
   ),
   'margin-y': (
     property: margin-top margin-bottom,
     class: my,
     responsive: true,
-    values: $margin-spacing,
+    values: $_margin-spacing,
   ),
   'margin-top': (
     property: margin-top,
     class: mt,
     pseudos: first last,
     responsive: true,
-    values: $margin-spacing,
+    values: $_margin-spacing,
   ),
   'margin-right': (
     property: margin-right,
     class: mr,
     pseudos: first last,
     responsive: true,
-    values: $margin-spacing,
+    values: $_margin-spacing,
   ),
   'margin-bottom': (
     property: margin-bottom,
     class: mb,
     pseudos: first last,
     responsive: true,
-    values: $margin-spacing,
+    values: $_margin-spacing,
   ),
   'margin-left': (
     property: margin-left,
     class: ml,
     pseudos: first last,
     responsive: true,
-    values: $margin-spacing,
+    values: $_margin-spacing,
   ),
   '-margin': (
     property: margin,
@@ -120,64 +120,64 @@ $utilities: (
     property: padding,
     class: p,
     responsive: true,
-    values: $spacing,
+    values: $_spacing,
   ),
   'padding-x': (
     property: padding-right padding-left,
     class: px,
     responsive: true,
-    values: $spacing,
+    values: $_spacing,
   ),
   'padding-y': (
     property: padding-top padding-bottom,
     class: py,
     responsive: true,
-    values: $spacing,
+    values: $_spacing,
   ),
   'padding-top': (
     property: padding-top,
     class: pt,
     pseudos: first last,
     responsive: true,
-    values: $spacing,
+    values: $_spacing,
   ),
   'padding-right': (
     property: padding-right,
     class: pr,
     pseudos: first last,
     responsive: true,
-    values: $spacing,
+    values: $_spacing,
   ),
   'padding-bottom': (
     property: padding-bottom,
     class: pb,
     pseudos: first last,
     responsive: true,
-    values: $spacing,
+    values: $_spacing,
   ),
   'padding-left': (
     property: padding-left,
     class: pl,
     pseudos: first last,
     responsive: true,
-    values: $spacing,
+    values: $_spacing,
   ),
   'gap': (
     property: gap,
     class: gap,
     responsive: true,
-    values: $spacing,
+    values: $_spacing,
   ),
   'gap-x': (
     property: column-gap,
     class: gap-x,
     responsive: true,
-    values: $spacing,
+    values: $_spacing,
   ),
   'gap-y': (
     property: row-gap,
     class: gap-y,
     responsive: true,
-    values: $spacing,
+    values: $_spacing,
   ),
 );

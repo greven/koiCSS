@@ -2,6 +2,7 @@
 
 @use '../internal' as *;
 @use 'animation';
+@use 'background';
 @use 'effects';
 @use 'filters';
 @use 'layout';
@@ -11,6 +12,7 @@
 $utilities: () !default;
 $utilities: map-deep-merge(
   animation.$utilities,
+  background.$utilities,
   effects.$utilities,
   filters.$utilities,
   layout.$utilities,

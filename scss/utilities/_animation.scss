@@ -9,7 +9,7 @@
 //   Vars
 // --------------------------------
 
-$animations: theme(animations);
+$_animations: theme(animations);
 
 // --------------------------------
 //   Utilities
@@ -20,6 +20,6 @@ $utilities: (
     property: animation,
     class: animation,
     responsive: false,
-    values: $animations,
+    values: $_animations,
   ),
 );

@@ -11,11 +11,11 @@
 //   Vars
 // --------------------------------
 
-$sizes: theme(sizes);
-$screens: theme(screens);
+$_sizes: theme(sizes);
+$_screens: theme(screens);
 
-$width-values: map.merge(
-  $sizes,
+$_width-values: map.merge(
+  $_sizes,
   (
     auto: auto,
     screen: 100vw,
@@ -25,8 +25,8 @@ $width-values: map.merge(
   )
 );
 
-$max-width-values: map.merge(
-  $screens,
+$_max-width-values: map.merge(
+  $_screens,
   (
     0: 0,
     none: none,
@@ -37,8 +37,8 @@ $max-width-values: map.merge(
   )
 );
 
-$height-values: map.merge(
-  $sizes,
+$_height-values: map.merge(
+  $_sizes,
   (
     auto: auto,
     screen: 100vh,
@@ -48,7 +48,7 @@ $height-values: map.merge(
   )
 );
 
-$max-height-values: map.merge(
+$_max-height-values: map.merge(
   $spacing-scale,
   (
     0: 0,
@@ -69,7 +69,7 @@ $utilities: (
     property: width,
     class: w,
     responsive: true,
-    values: $width-values,
+    values: $_width-values,
   ),
   'min-width': (
     property: min-width,
@@ -87,13 +87,13 @@ $utilities: (
     property: max-width,
     class: max-w,
     responsive: true,
-    values: $max-width-values,
+    values: $_max-width-values,
   ),
   'height': (
     property: height,
     class: h,
     responsive: true,
-    values: $height-values,
+    values: $_height-values,
   ),
   'min-height': (
     property: min-height,
@@ -112,6 +112,6 @@ $utilities: (
     property: max-height,
     class: max-h,
     responsive: true,
-    values: $max-height-values,
+    values: $_max-height-values,
   ),
 );

@@ -11,10 +11,10 @@
 //   Vars
 // --------------------------------
 
-$blurs: ();
+$_blurs: ();
 
 @each $key, $value in theme(blur) {
-  $blurs: map.set($blurs, $key, blur($value));
+  $_blurs: map.set($_blurs, $key, blur($value));
 }
 
 // --------------------------------
@@ -27,6 +27,6 @@ $utilities: (
     class: blur,
     pseudos: hover focus,
     default: config.default(blur),
-    values: $blurs,
+    values: $_blurs,
   ),
 );
