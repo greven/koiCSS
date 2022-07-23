@@ -34,6 +34,10 @@ body {
   gap: 12px;
 }
 
+.loader {
+  @include koi.loader-3(20px, $thickness: 2px);
+}
+
 .even-columns {
   // display: block;
   @include koi.even-columns(250px);

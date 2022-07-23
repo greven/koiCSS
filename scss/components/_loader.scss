@@ -1,0 +1,307 @@
+// --------------------------------
+//   Loaders / Spinners
+// --------------------------------
+// Source: https://github.com/vineethtrv/css-loader
+
+@use '../api' as *;
+
+// --------------------------------
+//   Mixins
+// --------------------------------
+
+@mixin loader-1($size: 48px, $color: #fff, $thickness: 4px, $duration: 0.5s) {
+  animation: loader-1-rotate $duration linear infinite;
+  border: $thickness solid $color;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  height: $size;
+  width: $size;
+
+  @keyframes loader-1-rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+@mixin loader-2($size: 48px, $color: #fff, $accent: accent(6), $thickness: 4px, $duration: 1s) {
+  animation: loader-2-rotate $duration linear infinite;
+  border: $thickness solid $color;
+  border-bottom-color: $accent;
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: inline-block;
+  height: $size;
+  width: $size;
+
+  @keyframes loader-2-rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+@mixin loader-3($size: 48px, $color: #fff, $accent: accent(6), $thickness: 4px, $duration: 1s) {
+  animation: loader-3-rotate $duration linear infinite;
+  border-radius: 50%;
+  height: $size;
+  position: relative;
+  width: $size;
+
+  &::before,
+  &::after {
+    animation: loader-3-prixClipFix (2 * $duration) linear infinite;
+    border: $thickness solid $color;
+    border-radius: 50%;
+    box-sizing: border-box;
+    content: '';
+    inset: 0;
+    position: absolute;
+  }
+
+  &::after {
+    border-color: $accent;
+    transform: rotate3d(90, 90, 0, 180deg);
+  }
+
+  @keyframes loader-3-rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes loader-3-prixClipFix {
+    0% {
+      clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+    }
+
+    50% {
+      clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+    }
+
+    75%,
+    100% {
+      clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
+    }
+  }
+}
+
+@mixin loader-4($size: 48px, $color: #fff, $accent: accent(6), $thickness: 3px, $duration: 1s) {
+  animation: loader-4-rotate $duration linear infinite;
+  border: $thickness solid $color;
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: inline-block;
+  height: $size;
+  position: relative;
+  width: $size;
+
+  &::after {
+    border: $thickness solid transparent;
+    border-bottom-color: $accent;
+    border-radius: 50%;
+    box-sizing: border-box;
+    content: '';
+    height: $size - 8px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: $size - 8px;
+  }
+
+  @keyframes loader-4-rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+@mixin loader-5($size: 48px, $color: #fff, $accent: accent(6), $thickness: 3px, $duration: 1s) {
+  animation: loader-5-rotate $duration linear infinite;
+  border: $thickness solid $color;
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: inline-block;
+  height: $size;
+  position: relative;
+  width: $size;
+
+  &::after {
+    border: $thickness solid transparent;
+    border-bottom-color: $accent;
+    border-radius: 50%;
+    box-sizing: border-box;
+    content: '';
+    height: $size + 8px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: $size + 8px;
+  }
+
+  @keyframes loader-5-rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+@mixin loader-6($size: 48px, $color: #fff, $accent: accent(6), $thickness: 3px, $duration: 1s) {
+  animation: loader-6-rotate $duration linear infinite;
+  border: $thickness solid $color;
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: inline-block;
+  height: $size;
+  position: relative;
+  width: $size;
+
+  &::after {
+    border: $thickness solid transparent;
+    border-color: $accent transparent;
+    border-radius: 50%;
+    box-sizing: border-box;
+    content: '';
+    height: $size - 8px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: $size - 8px;
+  }
+
+  @keyframes loader-6-rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+@mixin loader-7($size: 48px, $color: #fff, $accent: accent(6), $thickness: 3px, $duration: 1s) {
+  animation: loader-7-rotate $duration linear infinite;
+  border: $thickness solid $color;
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: inline-block;
+  height: $size;
+  position: relative;
+  width: $size;
+
+  &::after {
+    border: $thickness solid transparent;
+    border-color: $accent transparent;
+    border-radius: 50%;
+    box-sizing: border-box;
+    content: '';
+    height: $size + 8px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: $size + 8px;
+  }
+
+  @keyframes loader-7-rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+@mixin loader-8($size: 48px, $color: #fff, $thickness: 2px, $duration: 2s) {
+  display: inline-block;
+  height: $size;
+  position: relative;
+  width: $size;
+
+  &::after,
+  &::before {
+    animation: loader-8-anim $duration linear infinite;
+    border: $thickness solid $color;
+    border-radius: 50%;
+    box-sizing: border-box;
+    content: '';
+    height: $size;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: $size;
+  }
+
+  &::after {
+    animation-delay: 1s;
+  }
+
+  @keyframes loader-8-anim {
+    0% {
+      opacity: 1;
+      transform: scale(0);
+    }
+
+    100% {
+      opacity: 0;
+      transform: scale(1);
+    }
+  }
+}
+
+@mixin loader-9($color: #fff, $size: 10px, $amplitude: 6px, $duration: 1s) {
+  animation: loader-9-anim $duration linear infinite alternate;
+  border-radius: 50%;
+  box-sizing: border-box;
+  color: $color;
+  display: block;
+  height: $size;
+  margin: $size auto;
+  position: relative;
+  width: $size;
+
+  @keyframes loader-9-anim {
+    0% {
+      box-shadow: (-$size * 3) (-($amplitude)), (-$size) $amplitude, $size (-($amplitude));
+    }
+
+    33% {
+      box-shadow: (-$size * 3) $amplitude, (-$size) (-($amplitude)), $size $amplitude;
+    }
+
+    66% {
+      box-shadow: (-$size * 3) (-($amplitude)), (-$size) $amplitude, $size (-($amplitude));
+    }
+
+    100% {
+      box-shadow: (-$size * 3) $amplitude, (-$size) (-($amplitude)), $size $amplitude;
+    }
+  }
+}
