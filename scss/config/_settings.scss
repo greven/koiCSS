@@ -24,8 +24,8 @@ $use-button-animation: false !default;
 $defaults: () !default;
 $defaults: map.deep-merge(
   (
-    border-width: 1,
     blur: md,
+    border-width: 1,
     color-accent: primary,
     color-shade: 6,
     duration: normal,

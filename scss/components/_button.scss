@@ -70,7 +70,7 @@ $shadow: shadow(sm);
 }
 
 // Button focus mixin to had a focus ring
-@mixin focus-ring($color: fill(contrast, 9), $width: 2px, $offset-color: fill(surface, 1), $offset: 2px) {
+@mixin focus-ring($color: fill(cnt, 9), $width: 2px, $offset-color: fill(srf, 1), $offset: 2px) {
   &:focus-visible {
     @include ring($color: $color, $width: $width, $offset-color: $offset-color, $offset: $offset);
   }
@@ -105,13 +105,13 @@ $shadow: shadow(sm);
   @include transition((color, background-color, border-color, transform), duration(fast));
 
   align-items: var(--koi-btn-align-items, center);
-  background-color: var(--koi-btn-background, fill(surface, 2));
-  border-color: var(--koi-btn-border-color, fill(border, 2));
+  background-color: var(--koi-btn-background, fill(srf, 2));
+  border-color: var(--koi-btn-border-color, fill(brd, 2));
   border-radius: var(--koi-btn-border-radius, $border-radius);
   border-style: var(--koi-btn-border-style, solid);
   border-width: var(--koi-btn-border-width, 1px);
   box-shadow: var(--koi-btn-shadow, $shadow);
-  color: var(--koi-btn-foreground, fill(text, 2));
+  color: var(--koi-btn-foreground, fill(txt, 2));
   display: var(--koi-btn-display, inline-flex);
   font-size: var(--koi-btn-font-size, $font-size);
   font-weight: var(--koi-btn-font-weight, font(semibold));
@@ -127,8 +127,8 @@ $shadow: shadow(sm);
   @include hover {
     @include shadow(var(--koi-btn-shadow-hover, $shadow));
 
-    background-color: var(--koi-btn-background-hover, fill(surface, 3));
-    color: var(--koi-btn-foreground-hover, fill(text, 1));
+    background-color: var(--koi-btn-background-hover, fill(srf, 3));
+    color: var(--koi-btn-foreground-hover, fill(txt, 1));
   }
 
   @include active {
@@ -137,42 +137,42 @@ $shadow: shadow(sm);
     @if config.$use-button-animation {
       transform: translateY(var(--koi-btn-animation-scale, 1px));
     } @else {
-      background-color: var(--koi-btn-background-active, fill(surface, 1));
-      color: var(--koi-btn-foreground-active, fill(text, 2));
+      background-color: var(--koi-btn-background-active, fill(srf, 1));
+      color: var(--koi-btn-foreground-active, fill(txt, 2));
     }
   }
 
   @include disabled {
-    background-color: var(--koi-btn-background-disabled, fill(surface, 4));
+    background-color: var(--koi-btn-background-disabled, fill(srf, 4));
     border-color: var(--koi-btn-border-color-disabled, transparent);
     box-shadow: none;
-    color: var(--koi-btn-foreground-disabled, fill(text, 3));
+    color: var(--koi-btn-foreground-disabled, fill(txt, 3));
     cursor: not-allowed;
   }
 
   @include color-variant(inverted) {
-    --koi-btn-background: #{fill(contrast, 9)};
-    --koi-btn-background-hover: #{fill(contrast, 7)};
-    --koi-btn-background-active: #{fill(contrast, 9)};
+    --koi-btn-background: #{fill(cnt, 9)};
+    --koi-btn-background-hover: #{fill(cnt, 7)};
+    --koi-btn-background-active: #{fill(cnt, 9)};
     --koi-btn-border-color: transparent;
-    --koi-btn-foreground: #{fill(contrast, 0)};
-    --koi-btn-foreground-hover: #{fill(contrast, 1)};
-    --koi-btn-foreground-active: #{fill(contrast, 0)};
+    --koi-btn-foreground: #{fill(cnt, 0)};
+    --koi-btn-foreground-hover: #{fill(cnt, 1)};
+    --koi-btn-foreground-active: #{fill(cnt, 0)};
   }
 }
 
 // ---- Variants ----
 
 @mixin solid {
-  --koi-btn-background: #{fill(contrast, 9)};
-  --koi-btn-background-hover: #{fill(contrast, 7)};
-  --koi-btn-background-active: #{fill(contrast, 9)};
+  --koi-btn-background: #{fill(cnt, 9)};
+  --koi-btn-background-hover: #{fill(cnt, 7)};
+  --koi-btn-background-active: #{fill(cnt, 9)};
   --koi-btn-border-color: transparent;
-  --koi-btn-foreground: #{fill(contrast, 0)};
-  --koi-btn-foreground-hover: #{fill(contrast, 1)};
-  --koi-btn-foreground-active: #{fill(contrast, 0)};
+  --koi-btn-foreground: #{fill(cnt, 0)};
+  --koi-btn-foreground-hover: #{fill(cnt, 1)};
+  --koi-btn-foreground-active: #{fill(cnt, 0)};
 
-  @include focus-ring(fill(contrast, 9));
+  @include focus-ring(fill(cnt, 9));
 
   border-width: var(--koi-btn-border-width, $border-width);
 
@@ -204,16 +204,16 @@ $shadow: shadow(sm);
 
 @mixin outline {
   --koi-btn-background: transparent;
-  --koi-btn-background-hover: #{fill(contrast, 1)};
+  --koi-btn-background-hover: #{fill(cnt, 1)};
   --koi-btn-background-active: transparent;
-  --koi-btn-border-color: #{fill(contrast, 9)};
-  --koi-btn-border-color-hover: #{fill(contrast, 7)};
-  --koi-btn-foreground: #{fill(contrast, 9)};
-  --koi-btn-foreground-hover: #{fill(contrast, 7)};
-  --koi-btn-foreground-active: #{fill(contrast, 9)};
+  --koi-btn-border-color: #{fill(cnt, 9)};
+  --koi-btn-border-color-hover: #{fill(cnt, 7)};
+  --koi-btn-foreground: #{fill(cnt, 9)};
+  --koi-btn-foreground-hover: #{fill(cnt, 7)};
+  --koi-btn-foreground-active: #{fill(cnt, 9)};
 
   @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
-  @include focus-ring(fill(contrast, 9));
+  @include focus-ring(fill(cnt, 9));
 
   border-width: var(--koi-btn-border-width, $border-width);
 
@@ -222,8 +222,8 @@ $shadow: shadow(sm);
   }
 
   @include dark-mode {
-    --koi-btn-background-hover: #{fill(contrast, 2)};
-    --koi-btn-background-active: #{fill(contrast, 1)};
+    --koi-btn-background-hover: #{fill(cnt, 2)};
+    --koi-btn-background-active: #{fill(cnt, 1)};
   }
 
   // Color variants
@@ -279,17 +279,17 @@ $shadow: shadow(sm);
 }
 
 @mixin faded {
-  --koi-btn-background: #{fill(contrast, 1)};
-  --koi-btn-background-hover: #{fill(contrast, 2)};
-  --koi-btn-background-active: #{fill(contrast, 1)};
+  --koi-btn-background: #{fill(cnt, 1)};
+  --koi-btn-background-hover: #{fill(cnt, 2)};
+  --koi-btn-background-active: #{fill(cnt, 1)};
   --koi-btn-border-color: transparent;
   --koi-btn-border-color-hover: transparent;
-  --koi-btn-foreground: #{fill(contrast, 8)};
-  --koi-btn-foreground-hover: #{fill(contrast, 9)};
-  --koi-btn-foreground-active: #{fill(contrast, 8)};
+  --koi-btn-foreground: #{fill(cnt, 8)};
+  --koi-btn-foreground-hover: #{fill(cnt, 9)};
+  --koi-btn-foreground-active: #{fill(cnt, 8)};
 
   @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
-  @include focus-ring(fill(contrast, 9));
+  @include focus-ring(fill(cnt, 9));
 
   border-width: var(--koi-btn-border-width, $border-width);
 
@@ -298,9 +298,9 @@ $shadow: shadow(sm);
   }
 
   @include dark-mode {
-    --koi-btn-background: #{fill(contrast, 2)};
-    --koi-btn-background-hover: #{fill(contrast, 3, $alpha: 0.5)};
-    --koi-btn-background-active: #{fill(contrast, 2, $alpha: 0.5)};
+    --koi-btn-background: #{fill(cnt, 2)};
+    --koi-btn-background-hover: #{fill(cnt, 3, $alpha: 0.5)};
+    --koi-btn-background-active: #{fill(cnt, 2, $alpha: 0.5)};
   }
 
   // Color variants
@@ -349,16 +349,16 @@ $shadow: shadow(sm);
 
 @mixin ghost {
   --koi-btn-background: transparent;
-  --koi-btn-background-hover: #{fill(contrast, 1)};
-  --koi-btn-background-active: #{fill(contrast, 1, $alpha: 0.5)};
+  --koi-btn-background-hover: #{fill(cnt, 1)};
+  --koi-btn-background-active: #{fill(cnt, 1, $alpha: 0.5)};
   --koi-btn-border-color: transparent;
   --koi-btn-border-color-hover: transparent;
-  --koi-btn-foreground: #{fill(contrast, 8)};
-  --koi-btn-foreground-hover: #{fill(contrast, 9)};
-  --koi-btn-foreground-active: #{fill(contrast, 8)};
+  --koi-btn-foreground: #{fill(cnt, 8)};
+  --koi-btn-foreground-hover: #{fill(cnt, 9)};
+  --koi-btn-foreground-active: #{fill(cnt, 8)};
 
   @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
-  @include focus-ring(fill(contrast, 9));
+  @include focus-ring(fill(cnt, 9));
 
   border-width: var(--koi-btn-border-width, $border-width);
 
@@ -367,8 +367,8 @@ $shadow: shadow(sm);
   }
 
   @include dark-mode {
-    --koi-btn-background-hover: #{fill(contrast, 2, $alpha: 0.75)};
-    --koi-btn-background-active: #{fill(contrast, 2, $alpha: 0.5)};
+    --koi-btn-background-hover: #{fill(cnt, 2, $alpha: 0.75)};
+    --koi-btn-background-active: #{fill(cnt, 2, $alpha: 0.5)};
   }
 
   // Color variants
@@ -417,12 +417,12 @@ $shadow: shadow(sm);
   --koi-btn-background-active: transparent;
   --koi-btn-border-color: transparent;
   --koi-btn-border-color-hover: transparent;
-  --koi-btn-foreground: #{fill(contrast, 8)};
-  --koi-btn-foreground-hover: #{fill(contrast, 9)};
-  --koi-btn-foreground-active: #{fill(contrast, 8)};
+  --koi-btn-foreground: #{fill(cnt, 8)};
+  --koi-btn-foreground-hover: #{fill(cnt, 9)};
+  --koi-btn-foreground-active: #{fill(cnt, 8)};
 
   @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
-  @include focus-ring(fill(contrast, 9));
+  @include focus-ring(fill(cnt, 9));
 
   border-width: var(--koi-btn-border-width, $border-width);
 

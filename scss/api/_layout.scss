@@ -21,8 +21,8 @@
 // Based on https://smolcss.dev/#smol-unbreakable-boxes */
 @mixin box(
   $max-width: 100%,
-  $color: fill(text, 1),
-  $bg-color: fill(surface, 2),
+  $color: fill(txt, 1),
+  $bg-color: fill(srf, 2),
   $padding: null,
   $rounded: null,
   $shadow: null

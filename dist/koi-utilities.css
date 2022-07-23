@@ -4,6 +4,1781 @@
 /* stylelint-enable */
 /* stylelint-disable */
 /* stylelint-enable */
+/*! purgecss start ignore */
+.space-x-2xs > :not([hidden]) ~ :not([hidden]) {
+  margin-right: calc(0.125rem * var(--koi-space-x-reverse, 0));
+  margin-left: calc(0.125rem * (1 - var(--koi-space-x-reverse, 0)));
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:space-x-2xs > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(0.125rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(0.125rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:space-x-2xs > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(0.125rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(0.125rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:space-x-2xs > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(0.125rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(0.125rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:space-x-2xs > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(0.125rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(0.125rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:space-x-2xs > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(0.125rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(0.125rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.space-y-2xs > :not([hidden]) ~ :not([hidden]) {
+  margin-top: calc(0.125rem * (1 - var(--koi-space-y-reverse, 0)));
+  margin-bottom: calc(0.125rem * var(--koi-space-y-reverse, 0));
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:space-y-2xs > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(0.125rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(0.125rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:space-y-2xs > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(0.125rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(0.125rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:space-y-2xs > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(0.125rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(0.125rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:space-y-2xs > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(0.125rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(0.125rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:space-y-2xs > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(0.125rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(0.125rem * var(--koi-space-y-reverse, 0));
+  }
+}
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.space-x-xs > :not([hidden]) ~ :not([hidden]) {
+  margin-right: calc(0.25rem * var(--koi-space-x-reverse, 0));
+  margin-left: calc(0.25rem * (1 - var(--koi-space-x-reverse, 0)));
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:space-x-xs > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(0.25rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(0.25rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:space-x-xs > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(0.25rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(0.25rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:space-x-xs > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(0.25rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(0.25rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:space-x-xs > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(0.25rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(0.25rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:space-x-xs > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(0.25rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(0.25rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.space-y-xs > :not([hidden]) ~ :not([hidden]) {
+  margin-top: calc(0.25rem * (1 - var(--koi-space-y-reverse, 0)));
+  margin-bottom: calc(0.25rem * var(--koi-space-y-reverse, 0));
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:space-y-xs > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(0.25rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(0.25rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:space-y-xs > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(0.25rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(0.25rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:space-y-xs > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(0.25rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(0.25rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:space-y-xs > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(0.25rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(0.25rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:space-y-xs > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(0.25rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(0.25rem * var(--koi-space-y-reverse, 0));
+  }
+}
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.space-x-sm > :not([hidden]) ~ :not([hidden]) {
+  margin-right: calc(0.5rem * var(--koi-space-x-reverse, 0));
+  margin-left: calc(0.5rem * (1 - var(--koi-space-x-reverse, 0)));
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:space-x-sm > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(0.5rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(0.5rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:space-x-sm > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(0.5rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(0.5rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:space-x-sm > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(0.5rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(0.5rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:space-x-sm > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(0.5rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(0.5rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:space-x-sm > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(0.5rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(0.5rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.space-y-sm > :not([hidden]) ~ :not([hidden]) {
+  margin-top: calc(0.5rem * (1 - var(--koi-space-y-reverse, 0)));
+  margin-bottom: calc(0.5rem * var(--koi-space-y-reverse, 0));
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:space-y-sm > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(0.5rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(0.5rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:space-y-sm > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(0.5rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(0.5rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:space-y-sm > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(0.5rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(0.5rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:space-y-sm > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(0.5rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(0.5rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:space-y-sm > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(0.5rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(0.5rem * var(--koi-space-y-reverse, 0));
+  }
+}
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.space-x-md > :not([hidden]) ~ :not([hidden]) {
+  margin-right: calc(1rem * var(--koi-space-x-reverse, 0));
+  margin-left: calc(1rem * (1 - var(--koi-space-x-reverse, 0)));
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:space-x-md > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(1rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(1rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:space-x-md > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(1rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(1rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:space-x-md > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(1rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(1rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:space-x-md > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(1rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(1rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:space-x-md > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(1rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(1rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.space-y-md > :not([hidden]) ~ :not([hidden]) {
+  margin-top: calc(1rem * (1 - var(--koi-space-y-reverse, 0)));
+  margin-bottom: calc(1rem * var(--koi-space-y-reverse, 0));
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:space-y-md > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(1rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(1rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:space-y-md > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(1rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(1rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:space-y-md > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(1rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(1rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:space-y-md > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(1rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(1rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:space-y-md > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(1rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(1rem * var(--koi-space-y-reverse, 0));
+  }
+}
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.space-x-lg > :not([hidden]) ~ :not([hidden]) {
+  margin-right: calc(1.5rem * var(--koi-space-x-reverse, 0));
+  margin-left: calc(1.5rem * (1 - var(--koi-space-x-reverse, 0)));
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:space-x-lg > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(1.5rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(1.5rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:space-x-lg > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(1.5rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(1.5rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:space-x-lg > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(1.5rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(1.5rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:space-x-lg > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(1.5rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(1.5rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:space-x-lg > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(1.5rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(1.5rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.space-y-lg > :not([hidden]) ~ :not([hidden]) {
+  margin-top: calc(1.5rem * (1 - var(--koi-space-y-reverse, 0)));
+  margin-bottom: calc(1.5rem * var(--koi-space-y-reverse, 0));
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:space-y-lg > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(1.5rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(1.5rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:space-y-lg > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(1.5rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(1.5rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:space-y-lg > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(1.5rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(1.5rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:space-y-lg > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(1.5rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(1.5rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:space-y-lg > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(1.5rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(1.5rem * var(--koi-space-y-reverse, 0));
+  }
+}
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.space-x-xl > :not([hidden]) ~ :not([hidden]) {
+  margin-right: calc(3rem * var(--koi-space-x-reverse, 0));
+  margin-left: calc(3rem * (1 - var(--koi-space-x-reverse, 0)));
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:space-x-xl > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(3rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(3rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:space-x-xl > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(3rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(3rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:space-x-xl > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(3rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(3rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:space-x-xl > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(3rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(3rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:space-x-xl > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(3rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(3rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.space-y-xl > :not([hidden]) ~ :not([hidden]) {
+  margin-top: calc(3rem * (1 - var(--koi-space-y-reverse, 0)));
+  margin-bottom: calc(3rem * var(--koi-space-y-reverse, 0));
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:space-y-xl > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(3rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(3rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:space-y-xl > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(3rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(3rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:space-y-xl > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(3rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(3rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:space-y-xl > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(3rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(3rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:space-y-xl > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(3rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(3rem * var(--koi-space-y-reverse, 0));
+  }
+}
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.space-x-2xl > :not([hidden]) ~ :not([hidden]) {
+  margin-right: calc(4rem * var(--koi-space-x-reverse, 0));
+  margin-left: calc(4rem * (1 - var(--koi-space-x-reverse, 0)));
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:space-x-2xl > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(4rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(4rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:space-x-2xl > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(4rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(4rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:space-x-2xl > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(4rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(4rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:space-x-2xl > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(4rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(4rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:space-x-2xl > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(4rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(4rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.space-y-2xl > :not([hidden]) ~ :not([hidden]) {
+  margin-top: calc(4rem * (1 - var(--koi-space-y-reverse, 0)));
+  margin-bottom: calc(4rem * var(--koi-space-y-reverse, 0));
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:space-y-2xl > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(4rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(4rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:space-y-2xl > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(4rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(4rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:space-y-2xl > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(4rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(4rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:space-y-2xl > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(4rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(4rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:space-y-2xl > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(4rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(4rem * var(--koi-space-y-reverse, 0));
+  }
+}
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.space-x-3xl > :not([hidden]) ~ :not([hidden]) {
+  margin-right: calc(5rem * var(--koi-space-x-reverse, 0));
+  margin-left: calc(5rem * (1 - var(--koi-space-x-reverse, 0)));
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:space-x-3xl > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(5rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(5rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:space-x-3xl > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(5rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(5rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:space-x-3xl > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(5rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(5rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:space-x-3xl > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(5rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(5rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:space-x-3xl > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(5rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(5rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.space-y-3xl > :not([hidden]) ~ :not([hidden]) {
+  margin-top: calc(5rem * (1 - var(--koi-space-y-reverse, 0)));
+  margin-bottom: calc(5rem * var(--koi-space-y-reverse, 0));
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:space-y-3xl > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(5rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(5rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:space-y-3xl > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(5rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(5rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:space-y-3xl > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(5rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(5rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:space-y-3xl > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(5rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(5rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:space-y-3xl > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(5rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(5rem * var(--koi-space-y-reverse, 0));
+  }
+}
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.space-x-4xl > :not([hidden]) ~ :not([hidden]) {
+  margin-right: calc(10rem * var(--koi-space-x-reverse, 0));
+  margin-left: calc(10rem * (1 - var(--koi-space-x-reverse, 0)));
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:space-x-4xl > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(10rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(10rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:space-x-4xl > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(10rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(10rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:space-x-4xl > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(10rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(10rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:space-x-4xl > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(10rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(10rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:space-x-4xl > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(10rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(10rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.space-y-4xl > :not([hidden]) ~ :not([hidden]) {
+  margin-top: calc(10rem * (1 - var(--koi-space-y-reverse, 0)));
+  margin-bottom: calc(10rem * var(--koi-space-y-reverse, 0));
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:space-y-4xl > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(10rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(10rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:space-y-4xl > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(10rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(10rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:space-y-4xl > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(10rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(10rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:space-y-4xl > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(10rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(10rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:space-y-4xl > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(10rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(10rem * var(--koi-space-y-reverse, 0));
+  }
+}
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.space-x-0 > :not([hidden]) ~ :not([hidden]) {
+  margin-right: calc(0 * var(--koi-space-x-reverse, 0));
+  margin-left: calc(0 * (1 - var(--koi-space-x-reverse, 0)));
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:space-x-0 > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(0 * var(--koi-space-x-reverse, 0));
+    margin-left: calc(0 * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:space-x-0 > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(0 * var(--koi-space-x-reverse, 0));
+    margin-left: calc(0 * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:space-x-0 > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(0 * var(--koi-space-x-reverse, 0));
+    margin-left: calc(0 * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:space-x-0 > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(0 * var(--koi-space-x-reverse, 0));
+    margin-left: calc(0 * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:space-x-0 > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(0 * var(--koi-space-x-reverse, 0));
+    margin-left: calc(0 * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.space-y-0 > :not([hidden]) ~ :not([hidden]) {
+  margin-top: calc(0 * (1 - var(--koi-space-y-reverse, 0)));
+  margin-bottom: calc(0 * var(--koi-space-y-reverse, 0));
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(0 * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(0 * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(0 * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(0 * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(0 * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(0 * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(0 * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(0 * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(0 * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(0 * var(--koi-space-y-reverse, 0));
+  }
+}
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.space-x-reverse {
+  --koi-space-x-reverse: 1;
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:space-x-reverse {
+    --koi-space-x-reverse: 1;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:space-x-reverse {
+    --koi-space-x-reverse: 1;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:space-x-reverse {
+    --koi-space-x-reverse: 1;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:space-x-reverse {
+    --koi-space-x-reverse: 1;
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:space-x-reverse {
+    --koi-space-x-reverse: 1;
+  }
+}
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.space-y-reverse {
+  --koi-space-y-reverse: 1;
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:space-y-reverse {
+    --koi-space-y-reverse: 1;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:space-y-reverse {
+    --koi-space-y-reverse: 1;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:space-y-reverse {
+    --koi-space-y-reverse: 1;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:space-y-reverse {
+    --koi-space-y-reverse: 1;
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:space-y-reverse {
+    --koi-space-y-reverse: 1;
+  }
+}
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.stack {
+  align-items: flex-end;
+  display: inline-grid;
+  place-items: center;
+}
+.stack > * {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  opacity: 0.6;
+  transform: translateY(1rem) scale(0.9);
+  width: 100%;
+  z-index: 1;
+}
+.stack > *:nth-child(1) {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  z-index: 3;
+}
+.stack > *:nth-child(2) {
+  opacity: 0.8;
+  transform: translateY(0.5rem) scale(0.95);
+  z-index: 2;
+}
+
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.container {
+  width: 100%;
+  /* Center the element */
+}
+@media screen and (min-width: 0px) and (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+@media screen and (min-width: 0px) and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 0px) and (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+@media screen and (min-width: 0px) and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+@media screen and (min-width: 0px) and (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:container {
+    width: 100%;
+    /* Center the element */
+  }
+}
+@media screen and (min-width: 640px) and (min-width: 0px) and (min-width: 640px) {
+  .sm\:container {
+    max-width: 640px;
+  }
+}
+@media screen and (min-width: 640px) and (min-width: 0px) and (min-width: 768px) {
+  .sm\:container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 640px) and (min-width: 0px) and (min-width: 1024px) {
+  .sm\:container {
+    max-width: 1024px;
+  }
+}
+@media screen and (min-width: 640px) and (min-width: 0px) and (min-width: 1280px) {
+  .sm\:container {
+    max-width: 1280px;
+  }
+}
+@media screen and (min-width: 640px) and (min-width: 0px) and (min-width: 1536px) {
+  .sm\:container {
+    max-width: 1536px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:container {
+    width: 100%;
+    /* Center the element */
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 0px) and (min-width: 640px) {
+  .md\:container {
+    max-width: 640px;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 0px) and (min-width: 768px) {
+  .md\:container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 0px) and (min-width: 1024px) {
+  .md\:container {
+    max-width: 1024px;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 0px) and (min-width: 1280px) {
+  .md\:container {
+    max-width: 1280px;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 0px) and (min-width: 1536px) {
+  .md\:container {
+    max-width: 1536px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:container {
+    width: 100%;
+    /* Center the element */
+  }
+}
+@media screen and (min-width: 1024px) and (min-width: 0px) and (min-width: 640px) {
+  .lg\:container {
+    max-width: 640px;
+  }
+}
+@media screen and (min-width: 1024px) and (min-width: 0px) and (min-width: 768px) {
+  .lg\:container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1024px) and (min-width: 0px) and (min-width: 1024px) {
+  .lg\:container {
+    max-width: 1024px;
+  }
+}
+@media screen and (min-width: 1024px) and (min-width: 0px) and (min-width: 1280px) {
+  .lg\:container {
+    max-width: 1280px;
+  }
+}
+@media screen and (min-width: 1024px) and (min-width: 0px) and (min-width: 1536px) {
+  .lg\:container {
+    max-width: 1536px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:container {
+    width: 100%;
+    /* Center the element */
+  }
+}
+@media screen and (min-width: 1280px) and (min-width: 0px) and (min-width: 640px) {
+  .xl\:container {
+    max-width: 640px;
+  }
+}
+@media screen and (min-width: 1280px) and (min-width: 0px) and (min-width: 768px) {
+  .xl\:container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1280px) and (min-width: 0px) and (min-width: 1024px) {
+  .xl\:container {
+    max-width: 1024px;
+  }
+}
+@media screen and (min-width: 1280px) and (min-width: 0px) and (min-width: 1280px) {
+  .xl\:container {
+    max-width: 1280px;
+  }
+}
+@media screen and (min-width: 1280px) and (min-width: 0px) and (min-width: 1536px) {
+  .xl\:container {
+    max-width: 1536px;
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:container {
+    width: 100%;
+    /* Center the element */
+  }
+}
+@media screen and (min-width: 1536px) and (min-width: 0px) and (min-width: 640px) {
+  .\32 xl\:container {
+    max-width: 640px;
+  }
+}
+@media screen and (min-width: 1536px) and (min-width: 0px) and (min-width: 768px) {
+  .\32 xl\:container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1536px) and (min-width: 0px) and (min-width: 1024px) {
+  .\32 xl\:container {
+    max-width: 1024px;
+  }
+}
+@media screen and (min-width: 1536px) and (min-width: 0px) and (min-width: 1280px) {
+  .\32 xl\:container {
+    max-width: 1280px;
+  }
+}
+@media screen and (min-width: 1536px) and (min-width: 0px) and (min-width: 1536px) {
+  .\32 xl\:container {
+    max-width: 1536px;
+  }
+}
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.centered {
+  display: grid;
+  place-content: center;
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:centered {
+    display: grid;
+    place-content: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:centered {
+    display: grid;
+    place-content: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:centered {
+    display: grid;
+    place-content: center;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:centered {
+    display: grid;
+    place-content: center;
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:centered {
+    display: grid;
+    place-content: center;
+  }
+}
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.sr-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:sr-only {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:sr-only {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:sr-only {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:sr-only {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:sr-only {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+}
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.not-sr-only {
+  clip: unset;
+  height: auto;
+  margin: unset;
+  overflow: unset;
+  position: static;
+  white-space: unset;
+  width: auto;
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:not-sr-only {
+    clip: unset;
+    height: auto;
+    margin: unset;
+    overflow: unset;
+    position: static;
+    white-space: unset;
+    width: auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:not-sr-only {
+    clip: unset;
+    height: auto;
+    margin: unset;
+    overflow: unset;
+    position: static;
+    white-space: unset;
+    width: auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:not-sr-only {
+    clip: unset;
+    height: auto;
+    margin: unset;
+    overflow: unset;
+    position: static;
+    white-space: unset;
+    width: auto;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:not-sr-only {
+    clip: unset;
+    height: auto;
+    margin: unset;
+    overflow: unset;
+    position: static;
+    white-space: unset;
+    width: auto;
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:not-sr-only {
+    clip: unset;
+    height: auto;
+    margin: unset;
+    overflow: unset;
+    position: static;
+    white-space: unset;
+    width: auto;
+  }
+}
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.transition-none {
+  transition-property: none;
+}
+
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.transition {
+  transition-delay: var(--koi-transition-delay, 0);
+  transition-duration: var(--koi-transition-duration, 200ms);
+  transition-property: var(--koi-transition-property, background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter);
+  transition-timing-function: var(--koi-transition-timing-function, cubic-bezier(0.25, 0.1, 0.25, 1));
+}
+
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.transition-colors {
+  transition-delay: var(--koi-transition-delay, );
+  transition-duration: var(--koi-transition-duration, 200ms);
+  transition-property: var(--koi-transition-property, background-color, border-color, color, fill, stroke);
+  transition-timing-function: var(--koi-transition-timing-function, cubic-bezier(0.25, 0.1, 0.25, 1));
+}
+
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.transition-opacity {
+  transition-delay: var(--koi-transition-delay, );
+  transition-duration: var(--koi-transition-duration, 200ms);
+  transition-property: var(--koi-transition-property, opacity);
+  transition-timing-function: var(--koi-transition-timing-function, cubic-bezier(0.25, 0.1, 0.25, 1));
+}
+
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.transition-shadow {
+  transition-delay: var(--koi-transition-delay, );
+  transition-duration: var(--koi-transition-duration, 200ms);
+  transition-property: var(--koi-transition-property, box-shadow);
+  transition-timing-function: var(--koi-transition-timing-function, cubic-bezier(0.25, 0.1, 0.25, 1));
+}
+
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.transition-transform {
+  transition-delay: var(--koi-transition-delay, );
+  transition-duration: var(--koi-transition-duration, 200ms);
+  transition-property: var(--koi-transition-property, transform);
+  transition-timing-function: var(--koi-transition-timing-function, cubic-bezier(0.25, 0.1, 0.25, 1));
+}
+
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.text-2xs {
+  font-size: 0.625rem;
+  line-height: 0.75rem;
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:text-2xs {
+    font-size: 0.625rem;
+    line-height: 0.75rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:text-2xs {
+    font-size: 0.625rem;
+    line-height: 0.75rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:text-2xs {
+    font-size: 0.625rem;
+    line-height: 0.75rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:text-2xs {
+    font-size: 0.625rem;
+    line-height: 0.75rem;
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:text-2xs {
+    font-size: 0.625rem;
+    line-height: 0.75rem;
+  }
+}
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.text-md {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:text-md {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:text-md {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:text-md {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:text-md {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:text-md {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+}
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.text-7xl {
+  font-size: 4.5rem;
+  line-height: 1;
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+}
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.text-8xl {
+  font-size: 6rem;
+  line-height: 1;
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:text-8xl {
+    font-size: 6rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:text-8xl {
+    font-size: 6rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:text-8xl {
+    font-size: 6rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:text-8xl {
+    font-size: 6rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:text-8xl {
+    font-size: 6rem;
+    line-height: 1;
+  }
+}
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.text-9xl {
+  font-size: 8rem;
+  line-height: 1;
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:text-9xl {
+    font-size: 8rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:text-9xl {
+    font-size: 8rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:text-9xl {
+    font-size: 8rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:text-9xl {
+    font-size: 8rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:text-9xl {
+    font-size: 8rem;
+    line-height: 1;
+  }
+}
+/*! purgecss end ignore */
+/*! purgecss start ignore */
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/*! purgecss end ignore */
 .animation-blink {
   animation: blink 1s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
 }
@@ -412,84 +2187,84 @@
   background-color: hsl(var(--color-neutral-9-h), var(--color-neutral-9-s), var(--color-neutral-9-l), 1);
 }
 
-.bg-contrast-0, .focus\:bg-contrast-0:focus, .hover\:bg-contrast-0:hover {
-  background-color: hsl(var(--color-contrast-0-h), var(--color-contrast-0-s), var(--color-contrast-0-l), 1);
+.bg-cnt-0, .focus\:bg-cnt-0:focus, .hover\:bg-cnt-0:hover {
+  background-color: hsl(var(--color-cnt-0-h), var(--color-cnt-0-s), var(--color-cnt-0-l), 1);
 }
 
-.bg-contrast-1, .focus\:bg-contrast-1:focus, .hover\:bg-contrast-1:hover {
-  background-color: hsl(var(--color-contrast-1-h), var(--color-contrast-1-s), var(--color-contrast-1-l), 1);
+.bg-cnt-1, .focus\:bg-cnt-1:focus, .hover\:bg-cnt-1:hover {
+  background-color: hsl(var(--color-cnt-1-h), var(--color-cnt-1-s), var(--color-cnt-1-l), 1);
 }
 
-.bg-contrast-2, .focus\:bg-contrast-2:focus, .hover\:bg-contrast-2:hover {
-  background-color: hsl(var(--color-contrast-2-h), var(--color-contrast-2-s), var(--color-contrast-2-l), 1);
+.bg-cnt-2, .focus\:bg-cnt-2:focus, .hover\:bg-cnt-2:hover {
+  background-color: hsl(var(--color-cnt-2-h), var(--color-cnt-2-s), var(--color-cnt-2-l), 1);
 }
 
-.bg-contrast-3, .focus\:bg-contrast-3:focus, .hover\:bg-contrast-3:hover {
-  background-color: hsl(var(--color-contrast-3-h), var(--color-contrast-3-s), var(--color-contrast-3-l), 1);
+.bg-cnt-3, .focus\:bg-cnt-3:focus, .hover\:bg-cnt-3:hover {
+  background-color: hsl(var(--color-cnt-3-h), var(--color-cnt-3-s), var(--color-cnt-3-l), 1);
 }
 
-.bg-contrast-4, .focus\:bg-contrast-4:focus, .hover\:bg-contrast-4:hover {
-  background-color: hsl(var(--color-contrast-4-h), var(--color-contrast-4-s), var(--color-contrast-4-l), 1);
+.bg-cnt-4, .focus\:bg-cnt-4:focus, .hover\:bg-cnt-4:hover {
+  background-color: hsl(var(--color-cnt-4-h), var(--color-cnt-4-s), var(--color-cnt-4-l), 1);
 }
 
-.bg-contrast-5, .focus\:bg-contrast-5:focus, .hover\:bg-contrast-5:hover {
-  background-color: hsl(var(--color-contrast-5-h), var(--color-contrast-5-s), var(--color-contrast-5-l), 1);
+.bg-cnt-5, .focus\:bg-cnt-5:focus, .hover\:bg-cnt-5:hover {
+  background-color: hsl(var(--color-cnt-5-h), var(--color-cnt-5-s), var(--color-cnt-5-l), 1);
 }
 
-.bg-contrast-6, .focus\:bg-contrast-6:focus, .hover\:bg-contrast-6:hover {
-  background-color: hsl(var(--color-contrast-6-h), var(--color-contrast-6-s), var(--color-contrast-6-l), 1);
+.bg-cnt-6, .focus\:bg-cnt-6:focus, .hover\:bg-cnt-6:hover {
+  background-color: hsl(var(--color-cnt-6-h), var(--color-cnt-6-s), var(--color-cnt-6-l), 1);
 }
 
-.bg-contrast-7, .focus\:bg-contrast-7:focus, .hover\:bg-contrast-7:hover {
-  background-color: hsl(var(--color-contrast-7-h), var(--color-contrast-7-s), var(--color-contrast-7-l), 1);
+.bg-cnt-7, .focus\:bg-cnt-7:focus, .hover\:bg-cnt-7:hover {
+  background-color: hsl(var(--color-cnt-7-h), var(--color-cnt-7-s), var(--color-cnt-7-l), 1);
 }
 
-.bg-contrast-8, .focus\:bg-contrast-8:focus, .hover\:bg-contrast-8:hover {
-  background-color: hsl(var(--color-contrast-8-h), var(--color-contrast-8-s), var(--color-contrast-8-l), 1);
+.bg-cnt-8, .focus\:bg-cnt-8:focus, .hover\:bg-cnt-8:hover {
+  background-color: hsl(var(--color-cnt-8-h), var(--color-cnt-8-s), var(--color-cnt-8-l), 1);
 }
 
-.bg-contrast-9, .focus\:bg-contrast-9:focus, .hover\:bg-contrast-9:hover {
-  background-color: hsl(var(--color-contrast-9-h), var(--color-contrast-9-s), var(--color-contrast-9-l), 1);
+.bg-cnt-9, .focus\:bg-cnt-9:focus, .hover\:bg-cnt-9:hover {
+  background-color: hsl(var(--color-cnt-9-h), var(--color-cnt-9-s), var(--color-cnt-9-l), 1);
 }
 
-.bg-surface-1, .focus\:bg-surface-1:focus, .hover\:bg-surface-1:hover {
-  background-color: hsl(var(--color-surface-1-h), var(--color-surface-1-s), var(--color-surface-1-l), 1);
+.bg-srf-1, .focus\:bg-srf-1:focus, .hover\:bg-srf-1:hover {
+  background-color: hsl(var(--color-srf-1-h), var(--color-srf-1-s), var(--color-srf-1-l), 1);
 }
 
-.bg-surface-2, .focus\:bg-surface-2:focus, .hover\:bg-surface-2:hover {
-  background-color: hsl(var(--color-surface-2-h), var(--color-surface-2-s), var(--color-surface-2-l), 1);
+.bg-srf-2, .focus\:bg-srf-2:focus, .hover\:bg-srf-2:hover {
+  background-color: hsl(var(--color-srf-2-h), var(--color-srf-2-s), var(--color-srf-2-l), 1);
 }
 
-.bg-surface-3, .focus\:bg-surface-3:focus, .hover\:bg-surface-3:hover {
-  background-color: hsl(var(--color-surface-3-h), var(--color-surface-3-s), var(--color-surface-3-l), 1);
+.bg-srf-3, .focus\:bg-srf-3:focus, .hover\:bg-srf-3:hover {
+  background-color: hsl(var(--color-srf-3-h), var(--color-srf-3-s), var(--color-srf-3-l), 1);
 }
 
-.bg-surface-4, .focus\:bg-surface-4:focus, .hover\:bg-surface-4:hover {
-  background-color: hsl(var(--color-surface-4-h), var(--color-surface-4-s), var(--color-surface-4-l), 1);
+.bg-srf-4, .focus\:bg-srf-4:focus, .hover\:bg-srf-4:hover {
+  background-color: hsl(var(--color-srf-4-h), var(--color-srf-4-s), var(--color-srf-4-l), 1);
 }
 
-.bg-border-1, .focus\:bg-border-1:focus, .hover\:bg-border-1:hover {
-  background-color: hsl(var(--color-border-1-h), var(--color-border-1-s), var(--color-border-1-l), 1);
+.bg-brd-1, .focus\:bg-brd-1:focus, .hover\:bg-brd-1:hover {
+  background-color: hsl(var(--color-brd-1-h), var(--color-brd-1-s), var(--color-brd-1-l), 1);
 }
 
-.bg-border-2, .focus\:bg-border-2:focus, .hover\:bg-border-2:hover {
-  background-color: hsl(var(--color-border-2-h), var(--color-border-2-s), var(--color-border-2-l), 1);
+.bg-brd-2, .focus\:bg-brd-2:focus, .hover\:bg-brd-2:hover {
+  background-color: hsl(var(--color-brd-2-h), var(--color-brd-2-s), var(--color-brd-2-l), 1);
 }
 
-.bg-text-1, .focus\:bg-text-1:focus, .hover\:bg-text-1:hover {
-  background-color: hsl(var(--color-text-1-h), var(--color-text-1-s), var(--color-text-1-l), 1);
+.bg-txt-1, .focus\:bg-txt-1:focus, .hover\:bg-txt-1:hover {
+  background-color: hsl(var(--color-txt-1-h), var(--color-txt-1-s), var(--color-txt-1-l), 1);
 }
 
-.bg-text-2, .focus\:bg-text-2:focus, .hover\:bg-text-2:hover {
-  background-color: hsl(var(--color-text-2-h), var(--color-text-2-s), var(--color-text-2-l), 1);
+.bg-txt-2, .focus\:bg-txt-2:focus, .hover\:bg-txt-2:hover {
+  background-color: hsl(var(--color-txt-2-h), var(--color-txt-2-s), var(--color-txt-2-l), 1);
 }
 
-.bg-text-3, .focus\:bg-text-3:focus, .hover\:bg-text-3:hover {
-  background-color: hsl(var(--color-text-3-h), var(--color-text-3-s), var(--color-text-3-l), 1);
+.bg-txt-3, .focus\:bg-txt-3:focus, .hover\:bg-txt-3:hover {
+  background-color: hsl(var(--color-txt-3-h), var(--color-txt-3-s), var(--color-txt-3-l), 1);
 }
 
-.bg-text-4, .focus\:bg-text-4:focus, .hover\:bg-text-4:hover {
-  background-color: hsl(var(--color-text-4-h), var(--color-text-4-s), var(--color-text-4-l), 1);
+.bg-txt-4, .focus\:bg-txt-4:focus, .hover\:bg-txt-4:hover {
+  background-color: hsl(var(--color-txt-4-h), var(--color-txt-4-s), var(--color-txt-4-l), 1);
 }
 
 .bg-current, .focus\:bg-current:focus, .hover\:bg-current:hover {
@@ -513,6 +2288,10 @@
 }
 
 .rounded-md {
+  border-radius: 4px;
+}
+
+.rounded {
   border-radius: 4px;
 }
 
@@ -551,6 +2330,11 @@
 }
 
 .rounded-t-md {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.rounded-t {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
@@ -600,6 +2384,11 @@
   border-bottom-right-radius: 4px;
 }
 
+.rounded-r {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
 .rounded-r-lg {
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
@@ -641,6 +2430,11 @@
 }
 
 .rounded-b-md {
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.rounded-b {
   border-bottom-right-radius: 4px;
   border-bottom-left-radius: 4px;
 }
@@ -690,6 +2484,11 @@
   border-top-left-radius: 4px;
 }
 
+.rounded-l {
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+}
+
 .rounded-l-lg {
   border-bottom-left-radius: 6px;
   border-top-left-radius: 6px;
@@ -724,7 +2523,11 @@
   border-width: 0px;
 }
 
-.border-1, .focus\:border-1:focus, .hover\:border-1:hover {
+.border-1, .focus\:border-1:focus, .hover\:border-1:hover, .focus\:border, .hover\:border {
+  border-width: 1px;
+}
+
+.border {
   border-width: 1px;
 }
 
@@ -1092,84 +2895,84 @@
   border-color: hsl(var(--color-neutral-9-h), var(--color-neutral-9-s), var(--color-neutral-9-l), 1);
 }
 
-.border-contrast-0, .focus\:border-contrast-0:focus, .hover\:border-contrast-0:hover {
-  border-color: hsl(var(--color-contrast-0-h), var(--color-contrast-0-s), var(--color-contrast-0-l), 1);
+.border-cnt-0, .focus\:border-cnt-0:focus, .hover\:border-cnt-0:hover {
+  border-color: hsl(var(--color-cnt-0-h), var(--color-cnt-0-s), var(--color-cnt-0-l), 1);
 }
 
-.border-contrast-1, .focus\:border-contrast-1:focus, .hover\:border-contrast-1:hover {
-  border-color: hsl(var(--color-contrast-1-h), var(--color-contrast-1-s), var(--color-contrast-1-l), 1);
+.border-cnt-1, .focus\:border-cnt-1:focus, .hover\:border-cnt-1:hover {
+  border-color: hsl(var(--color-cnt-1-h), var(--color-cnt-1-s), var(--color-cnt-1-l), 1);
 }
 
-.border-contrast-2, .focus\:border-contrast-2:focus, .hover\:border-contrast-2:hover {
-  border-color: hsl(var(--color-contrast-2-h), var(--color-contrast-2-s), var(--color-contrast-2-l), 1);
+.border-cnt-2, .focus\:border-cnt-2:focus, .hover\:border-cnt-2:hover {
+  border-color: hsl(var(--color-cnt-2-h), var(--color-cnt-2-s), var(--color-cnt-2-l), 1);
 }
 
-.border-contrast-3, .focus\:border-contrast-3:focus, .hover\:border-contrast-3:hover {
-  border-color: hsl(var(--color-contrast-3-h), var(--color-contrast-3-s), var(--color-contrast-3-l), 1);
+.border-cnt-3, .focus\:border-cnt-3:focus, .hover\:border-cnt-3:hover {
+  border-color: hsl(var(--color-cnt-3-h), var(--color-cnt-3-s), var(--color-cnt-3-l), 1);
 }
 
-.border-contrast-4, .focus\:border-contrast-4:focus, .hover\:border-contrast-4:hover {
-  border-color: hsl(var(--color-contrast-4-h), var(--color-contrast-4-s), var(--color-contrast-4-l), 1);
+.border-cnt-4, .focus\:border-cnt-4:focus, .hover\:border-cnt-4:hover {
+  border-color: hsl(var(--color-cnt-4-h), var(--color-cnt-4-s), var(--color-cnt-4-l), 1);
 }
 
-.border-contrast-5, .focus\:border-contrast-5:focus, .hover\:border-contrast-5:hover {
-  border-color: hsl(var(--color-contrast-5-h), var(--color-contrast-5-s), var(--color-contrast-5-l), 1);
+.border-cnt-5, .focus\:border-cnt-5:focus, .hover\:border-cnt-5:hover {
+  border-color: hsl(var(--color-cnt-5-h), var(--color-cnt-5-s), var(--color-cnt-5-l), 1);
 }
 
-.border-contrast-6, .focus\:border-contrast-6:focus, .hover\:border-contrast-6:hover {
-  border-color: hsl(var(--color-contrast-6-h), var(--color-contrast-6-s), var(--color-contrast-6-l), 1);
+.border-cnt-6, .focus\:border-cnt-6:focus, .hover\:border-cnt-6:hover {
+  border-color: hsl(var(--color-cnt-6-h), var(--color-cnt-6-s), var(--color-cnt-6-l), 1);
 }
 
-.border-contrast-7, .focus\:border-contrast-7:focus, .hover\:border-contrast-7:hover {
-  border-color: hsl(var(--color-contrast-7-h), var(--color-contrast-7-s), var(--color-contrast-7-l), 1);
+.border-cnt-7, .focus\:border-cnt-7:focus, .hover\:border-cnt-7:hover {
+  border-color: hsl(var(--color-cnt-7-h), var(--color-cnt-7-s), var(--color-cnt-7-l), 1);
 }
 
-.border-contrast-8, .focus\:border-contrast-8:focus, .hover\:border-contrast-8:hover {
-  border-color: hsl(var(--color-contrast-8-h), var(--color-contrast-8-s), var(--color-contrast-8-l), 1);
+.border-cnt-8, .focus\:border-cnt-8:focus, .hover\:border-cnt-8:hover {
+  border-color: hsl(var(--color-cnt-8-h), var(--color-cnt-8-s), var(--color-cnt-8-l), 1);
 }
 
-.border-contrast-9, .focus\:border-contrast-9:focus, .hover\:border-contrast-9:hover {
-  border-color: hsl(var(--color-contrast-9-h), var(--color-contrast-9-s), var(--color-contrast-9-l), 1);
+.border-cnt-9, .focus\:border-cnt-9:focus, .hover\:border-cnt-9:hover {
+  border-color: hsl(var(--color-cnt-9-h), var(--color-cnt-9-s), var(--color-cnt-9-l), 1);
 }
 
-.border-surface-1, .focus\:border-surface-1:focus, .hover\:border-surface-1:hover {
-  border-color: hsl(var(--color-surface-1-h), var(--color-surface-1-s), var(--color-surface-1-l), 1);
+.border-srf-1, .focus\:border-srf-1:focus, .hover\:border-srf-1:hover {
+  border-color: hsl(var(--color-srf-1-h), var(--color-srf-1-s), var(--color-srf-1-l), 1);
 }
 
-.border-surface-2, .focus\:border-surface-2:focus, .hover\:border-surface-2:hover {
-  border-color: hsl(var(--color-surface-2-h), var(--color-surface-2-s), var(--color-surface-2-l), 1);
+.border-srf-2, .focus\:border-srf-2:focus, .hover\:border-srf-2:hover {
+  border-color: hsl(var(--color-srf-2-h), var(--color-srf-2-s), var(--color-srf-2-l), 1);
 }
 
-.border-surface-3, .focus\:border-surface-3:focus, .hover\:border-surface-3:hover {
-  border-color: hsl(var(--color-surface-3-h), var(--color-surface-3-s), var(--color-surface-3-l), 1);
+.border-srf-3, .focus\:border-srf-3:focus, .hover\:border-srf-3:hover {
+  border-color: hsl(var(--color-srf-3-h), var(--color-srf-3-s), var(--color-srf-3-l), 1);
 }
 
-.border-surface-4, .focus\:border-surface-4:focus, .hover\:border-surface-4:hover {
-  border-color: hsl(var(--color-surface-4-h), var(--color-surface-4-s), var(--color-surface-4-l), 1);
+.border-srf-4, .focus\:border-srf-4:focus, .hover\:border-srf-4:hover {
+  border-color: hsl(var(--color-srf-4-h), var(--color-srf-4-s), var(--color-srf-4-l), 1);
 }
 
-.border-border-1, .focus\:border-border-1:focus, .hover\:border-border-1:hover {
-  border-color: hsl(var(--color-border-1-h), var(--color-border-1-s), var(--color-border-1-l), 1);
+.border-brd-1, .focus\:border-brd-1:focus, .hover\:border-brd-1:hover {
+  border-color: hsl(var(--color-brd-1-h), var(--color-brd-1-s), var(--color-brd-1-l), 1);
 }
 
-.border-border-2, .focus\:border-border-2:focus, .hover\:border-border-2:hover {
-  border-color: hsl(var(--color-border-2-h), var(--color-border-2-s), var(--color-border-2-l), 1);
+.border-brd-2, .focus\:border-brd-2:focus, .hover\:border-brd-2:hover {
+  border-color: hsl(var(--color-brd-2-h), var(--color-brd-2-s), var(--color-brd-2-l), 1);
 }
 
-.border-text-1, .focus\:border-text-1:focus, .hover\:border-text-1:hover {
-  border-color: hsl(var(--color-text-1-h), var(--color-text-1-s), var(--color-text-1-l), 1);
+.border-txt-1, .focus\:border-txt-1:focus, .hover\:border-txt-1:hover {
+  border-color: hsl(var(--color-txt-1-h), var(--color-txt-1-s), var(--color-txt-1-l), 1);
 }
 
-.border-text-2, .focus\:border-text-2:focus, .hover\:border-text-2:hover {
-  border-color: hsl(var(--color-text-2-h), var(--color-text-2-s), var(--color-text-2-l), 1);
+.border-txt-2, .focus\:border-txt-2:focus, .hover\:border-txt-2:hover {
+  border-color: hsl(var(--color-txt-2-h), var(--color-txt-2-s), var(--color-txt-2-l), 1);
 }
 
-.border-text-3, .focus\:border-text-3:focus, .hover\:border-text-3:hover {
-  border-color: hsl(var(--color-text-3-h), var(--color-text-3-s), var(--color-text-3-l), 1);
+.border-txt-3, .focus\:border-txt-3:focus, .hover\:border-txt-3:hover {
+  border-color: hsl(var(--color-txt-3-h), var(--color-txt-3-s), var(--color-txt-3-l), 1);
 }
 
-.border-text-4, .focus\:border-text-4:focus, .hover\:border-text-4:hover {
-  border-color: hsl(var(--color-text-4-h), var(--color-text-4-s), var(--color-text-4-l), 1);
+.border-txt-4, .focus\:border-txt-4:focus, .hover\:border-txt-4:hover {
+  border-color: hsl(var(--color-txt-4-h), var(--color-txt-4-s), var(--color-txt-4-l), 1);
 }
 
 .border-current, .focus\:border-current:focus, .hover\:border-current:hover {
@@ -1192,7 +2995,11 @@
   box-shadow: 0 1px 3px 0 rgb(var(--koi-shadow-color, 0 0 0) / 0.1), 0 1px 2px -1px rgb(var(--koi-shadow-color, 0 0 0) / 0.1);
 }
 
-.shadow-md, .focus\:shadow-md:focus, .hover\:shadow-md:hover {
+.shadow-md, .focus\:shadow-md:focus, .hover\:shadow-md:hover, .focus\:shadow, .hover\:shadow {
+  box-shadow: 0 4px 6px -1px rgba(var(--koi-shadow-color, 0 0 0) / 0.1), 0 2px 4px -1px rgba(var(--koi-shadow-color, 0 0 0) / 0.06);
+}
+
+.shadow {
   box-shadow: 0 4px 6px -1px rgba(var(--koi-shadow-color, 0 0 0) / 0.1), 0 2px 4px -1px rgba(var(--koi-shadow-color, 0 0 0) / 0.06);
 }
 
@@ -1288,7 +3095,11 @@
   filter: blur(12px);
 }
 
-.blur-md, .focus\:blur-md:focus, .hover\:blur-md:hover {
+.blur-md, .focus\:blur-md:focus, .hover\:blur-md:hover, .focus\:blur, .hover\:blur {
+  filter: blur(16px);
+}
+
+.blur {
   filter: blur(16px);
 }
 
@@ -1890,6 +3701,42 @@
 
 .auto-rows-fr {
   grid-auto-rows: minmax(0, 1fr);
+}
+
+.aspect-box {
+  aspect-ratio: 1;
+}
+
+.aspect-landscape {
+  aspect-ratio: 1.3333333333;
+}
+
+.aspect-portrait {
+  aspect-ratio: 0.75;
+}
+
+.aspect-widescreen {
+  aspect-ratio: 1.7777777778;
+}
+
+.aspect-ultrawide {
+  aspect-ratio: 3.6;
+}
+
+.aspect-golden {
+  aspect-ratio: 1.618;
+}
+
+.aspect-auto {
+  aspect-ratio: auto;
+}
+
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
+
+.aspect-video {
+  aspect-ratio: 16 / 9;
 }
 
 .columns-1 {
@@ -8040,84 +9887,84 @@
   color: hsl(var(--color-neutral-9-h), var(--color-neutral-9-s), var(--color-neutral-9-l), 1);
 }
 
-.color-contrast-0, .focus\:color-contrast-0:focus, .hover\:color-contrast-0:hover {
-  color: hsl(var(--color-contrast-0-h), var(--color-contrast-0-s), var(--color-contrast-0-l), 1);
+.color-cnt-0, .focus\:color-cnt-0:focus, .hover\:color-cnt-0:hover {
+  color: hsl(var(--color-cnt-0-h), var(--color-cnt-0-s), var(--color-cnt-0-l), 1);
 }
 
-.color-contrast-1, .focus\:color-contrast-1:focus, .hover\:color-contrast-1:hover {
-  color: hsl(var(--color-contrast-1-h), var(--color-contrast-1-s), var(--color-contrast-1-l), 1);
+.color-cnt-1, .focus\:color-cnt-1:focus, .hover\:color-cnt-1:hover {
+  color: hsl(var(--color-cnt-1-h), var(--color-cnt-1-s), var(--color-cnt-1-l), 1);
 }
 
-.color-contrast-2, .focus\:color-contrast-2:focus, .hover\:color-contrast-2:hover {
-  color: hsl(var(--color-contrast-2-h), var(--color-contrast-2-s), var(--color-contrast-2-l), 1);
+.color-cnt-2, .focus\:color-cnt-2:focus, .hover\:color-cnt-2:hover {
+  color: hsl(var(--color-cnt-2-h), var(--color-cnt-2-s), var(--color-cnt-2-l), 1);
 }
 
-.color-contrast-3, .focus\:color-contrast-3:focus, .hover\:color-contrast-3:hover {
-  color: hsl(var(--color-contrast-3-h), var(--color-contrast-3-s), var(--color-contrast-3-l), 1);
+.color-cnt-3, .focus\:color-cnt-3:focus, .hover\:color-cnt-3:hover {
+  color: hsl(var(--color-cnt-3-h), var(--color-cnt-3-s), var(--color-cnt-3-l), 1);
 }
 
-.color-contrast-4, .focus\:color-contrast-4:focus, .hover\:color-contrast-4:hover {
-  color: hsl(var(--color-contrast-4-h), var(--color-contrast-4-s), var(--color-contrast-4-l), 1);
+.color-cnt-4, .focus\:color-cnt-4:focus, .hover\:color-cnt-4:hover {
+  color: hsl(var(--color-cnt-4-h), var(--color-cnt-4-s), var(--color-cnt-4-l), 1);
 }
 
-.color-contrast-5, .focus\:color-contrast-5:focus, .hover\:color-contrast-5:hover {
-  color: hsl(var(--color-contrast-5-h), var(--color-contrast-5-s), var(--color-contrast-5-l), 1);
+.color-cnt-5, .focus\:color-cnt-5:focus, .hover\:color-cnt-5:hover {
+  color: hsl(var(--color-cnt-5-h), var(--color-cnt-5-s), var(--color-cnt-5-l), 1);
 }
 
-.color-contrast-6, .focus\:color-contrast-6:focus, .hover\:color-contrast-6:hover {
-  color: hsl(var(--color-contrast-6-h), var(--color-contrast-6-s), var(--color-contrast-6-l), 1);
+.color-cnt-6, .focus\:color-cnt-6:focus, .hover\:color-cnt-6:hover {
+  color: hsl(var(--color-cnt-6-h), var(--color-cnt-6-s), var(--color-cnt-6-l), 1);
 }
 
-.color-contrast-7, .focus\:color-contrast-7:focus, .hover\:color-contrast-7:hover {
-  color: hsl(var(--color-contrast-7-h), var(--color-contrast-7-s), var(--color-contrast-7-l), 1);
+.color-cnt-7, .focus\:color-cnt-7:focus, .hover\:color-cnt-7:hover {
+  color: hsl(var(--color-cnt-7-h), var(--color-cnt-7-s), var(--color-cnt-7-l), 1);
 }
 
-.color-contrast-8, .focus\:color-contrast-8:focus, .hover\:color-contrast-8:hover {
-  color: hsl(var(--color-contrast-8-h), var(--color-contrast-8-s), var(--color-contrast-8-l), 1);
+.color-cnt-8, .focus\:color-cnt-8:focus, .hover\:color-cnt-8:hover {
+  color: hsl(var(--color-cnt-8-h), var(--color-cnt-8-s), var(--color-cnt-8-l), 1);
 }
 
-.color-contrast-9, .focus\:color-contrast-9:focus, .hover\:color-contrast-9:hover {
-  color: hsl(var(--color-contrast-9-h), var(--color-contrast-9-s), var(--color-contrast-9-l), 1);
+.color-cnt-9, .focus\:color-cnt-9:focus, .hover\:color-cnt-9:hover {
+  color: hsl(var(--color-cnt-9-h), var(--color-cnt-9-s), var(--color-cnt-9-l), 1);
 }
 
-.color-surface-1, .focus\:color-surface-1:focus, .hover\:color-surface-1:hover {
-  color: hsl(var(--color-surface-1-h), var(--color-surface-1-s), var(--color-surface-1-l), 1);
+.color-srf-1, .focus\:color-srf-1:focus, .hover\:color-srf-1:hover {
+  color: hsl(var(--color-srf-1-h), var(--color-srf-1-s), var(--color-srf-1-l), 1);
 }
 
-.color-surface-2, .focus\:color-surface-2:focus, .hover\:color-surface-2:hover {
-  color: hsl(var(--color-surface-2-h), var(--color-surface-2-s), var(--color-surface-2-l), 1);
+.color-srf-2, .focus\:color-srf-2:focus, .hover\:color-srf-2:hover {
+  color: hsl(var(--color-srf-2-h), var(--color-srf-2-s), var(--color-srf-2-l), 1);
 }
 
-.color-surface-3, .focus\:color-surface-3:focus, .hover\:color-surface-3:hover {
-  color: hsl(var(--color-surface-3-h), var(--color-surface-3-s), var(--color-surface-3-l), 1);
+.color-srf-3, .focus\:color-srf-3:focus, .hover\:color-srf-3:hover {
+  color: hsl(var(--color-srf-3-h), var(--color-srf-3-s), var(--color-srf-3-l), 1);
 }
 
-.color-surface-4, .focus\:color-surface-4:focus, .hover\:color-surface-4:hover {
-  color: hsl(var(--color-surface-4-h), var(--color-surface-4-s), var(--color-surface-4-l), 1);
+.color-srf-4, .focus\:color-srf-4:focus, .hover\:color-srf-4:hover {
+  color: hsl(var(--color-srf-4-h), var(--color-srf-4-s), var(--color-srf-4-l), 1);
 }
 
-.color-border-1, .focus\:color-border-1:focus, .hover\:color-border-1:hover {
-  color: hsl(var(--color-border-1-h), var(--color-border-1-s), var(--color-border-1-l), 1);
+.color-brd-1, .focus\:color-brd-1:focus, .hover\:color-brd-1:hover {
+  color: hsl(var(--color-brd-1-h), var(--color-brd-1-s), var(--color-brd-1-l), 1);
 }
 
-.color-border-2, .focus\:color-border-2:focus, .hover\:color-border-2:hover {
-  color: hsl(var(--color-border-2-h), var(--color-border-2-s), var(--color-border-2-l), 1);
+.color-brd-2, .focus\:color-brd-2:focus, .hover\:color-brd-2:hover {
+  color: hsl(var(--color-brd-2-h), var(--color-brd-2-s), var(--color-brd-2-l), 1);
 }
 
-.color-text-1, .focus\:color-text-1:focus, .hover\:color-text-1:hover {
-  color: hsl(var(--color-text-1-h), var(--color-text-1-s), var(--color-text-1-l), 1);
+.color-txt-1, .focus\:color-txt-1:focus, .hover\:color-txt-1:hover {
+  color: hsl(var(--color-txt-1-h), var(--color-txt-1-s), var(--color-txt-1-l), 1);
 }
 
-.color-text-2, .focus\:color-text-2:focus, .hover\:color-text-2:hover {
-  color: hsl(var(--color-text-2-h), var(--color-text-2-s), var(--color-text-2-l), 1);
+.color-txt-2, .focus\:color-txt-2:focus, .hover\:color-txt-2:hover {
+  color: hsl(var(--color-txt-2-h), var(--color-txt-2-s), var(--color-txt-2-l), 1);
 }
 
-.color-text-3, .focus\:color-text-3:focus, .hover\:color-text-3:hover {
-  color: hsl(var(--color-text-3-h), var(--color-text-3-s), var(--color-text-3-l), 1);
+.color-txt-3, .focus\:color-txt-3:focus, .hover\:color-txt-3:hover {
+  color: hsl(var(--color-txt-3-h), var(--color-txt-3-s), var(--color-txt-3-l), 1);
 }
 
-.color-text-4, .focus\:color-text-4:focus, .hover\:color-text-4:hover {
-  color: hsl(var(--color-text-4-h), var(--color-text-4-s), var(--color-text-4-l), 1);
+.color-txt-4, .focus\:color-txt-4:focus, .hover\:color-txt-4:hover {
+  color: hsl(var(--color-txt-4-h), var(--color-txt-4-s), var(--color-txt-4-l), 1);
 }
 
 .color-current, .focus\:color-current:focus, .hover\:color-current:hover {
@@ -8700,84 +10547,84 @@
   text-decoration-color: hsl(var(--color-neutral-9-h), var(--color-neutral-9-s), var(--color-neutral-9-l), 1);
 }
 
-.decoration-contrast-0, .focus\:decoration-contrast-0:focus, .hover\:decoration-contrast-0:hover {
-  text-decoration-color: hsl(var(--color-contrast-0-h), var(--color-contrast-0-s), var(--color-contrast-0-l), 1);
+.decoration-cnt-0, .focus\:decoration-cnt-0:focus, .hover\:decoration-cnt-0:hover {
+  text-decoration-color: hsl(var(--color-cnt-0-h), var(--color-cnt-0-s), var(--color-cnt-0-l), 1);
 }
 
-.decoration-contrast-1, .focus\:decoration-contrast-1:focus, .hover\:decoration-contrast-1:hover {
-  text-decoration-color: hsl(var(--color-contrast-1-h), var(--color-contrast-1-s), var(--color-contrast-1-l), 1);
+.decoration-cnt-1, .focus\:decoration-cnt-1:focus, .hover\:decoration-cnt-1:hover {
+  text-decoration-color: hsl(var(--color-cnt-1-h), var(--color-cnt-1-s), var(--color-cnt-1-l), 1);
 }
 
-.decoration-contrast-2, .focus\:decoration-contrast-2:focus, .hover\:decoration-contrast-2:hover {
-  text-decoration-color: hsl(var(--color-contrast-2-h), var(--color-contrast-2-s), var(--color-contrast-2-l), 1);
+.decoration-cnt-2, .focus\:decoration-cnt-2:focus, .hover\:decoration-cnt-2:hover {
+  text-decoration-color: hsl(var(--color-cnt-2-h), var(--color-cnt-2-s), var(--color-cnt-2-l), 1);
 }
 
-.decoration-contrast-3, .focus\:decoration-contrast-3:focus, .hover\:decoration-contrast-3:hover {
-  text-decoration-color: hsl(var(--color-contrast-3-h), var(--color-contrast-3-s), var(--color-contrast-3-l), 1);
+.decoration-cnt-3, .focus\:decoration-cnt-3:focus, .hover\:decoration-cnt-3:hover {
+  text-decoration-color: hsl(var(--color-cnt-3-h), var(--color-cnt-3-s), var(--color-cnt-3-l), 1);
 }
 
-.decoration-contrast-4, .focus\:decoration-contrast-4:focus, .hover\:decoration-contrast-4:hover {
-  text-decoration-color: hsl(var(--color-contrast-4-h), var(--color-contrast-4-s), var(--color-contrast-4-l), 1);
+.decoration-cnt-4, .focus\:decoration-cnt-4:focus, .hover\:decoration-cnt-4:hover {
+  text-decoration-color: hsl(var(--color-cnt-4-h), var(--color-cnt-4-s), var(--color-cnt-4-l), 1);
 }
 
-.decoration-contrast-5, .focus\:decoration-contrast-5:focus, .hover\:decoration-contrast-5:hover {
-  text-decoration-color: hsl(var(--color-contrast-5-h), var(--color-contrast-5-s), var(--color-contrast-5-l), 1);
+.decoration-cnt-5, .focus\:decoration-cnt-5:focus, .hover\:decoration-cnt-5:hover {
+  text-decoration-color: hsl(var(--color-cnt-5-h), var(--color-cnt-5-s), var(--color-cnt-5-l), 1);
 }
 
-.decoration-contrast-6, .focus\:decoration-contrast-6:focus, .hover\:decoration-contrast-6:hover {
-  text-decoration-color: hsl(var(--color-contrast-6-h), var(--color-contrast-6-s), var(--color-contrast-6-l), 1);
+.decoration-cnt-6, .focus\:decoration-cnt-6:focus, .hover\:decoration-cnt-6:hover {
+  text-decoration-color: hsl(var(--color-cnt-6-h), var(--color-cnt-6-s), var(--color-cnt-6-l), 1);
 }
 
-.decoration-contrast-7, .focus\:decoration-contrast-7:focus, .hover\:decoration-contrast-7:hover {
-  text-decoration-color: hsl(var(--color-contrast-7-h), var(--color-contrast-7-s), var(--color-contrast-7-l), 1);
+.decoration-cnt-7, .focus\:decoration-cnt-7:focus, .hover\:decoration-cnt-7:hover {
+  text-decoration-color: hsl(var(--color-cnt-7-h), var(--color-cnt-7-s), var(--color-cnt-7-l), 1);
 }
 
-.decoration-contrast-8, .focus\:decoration-contrast-8:focus, .hover\:decoration-contrast-8:hover {
-  text-decoration-color: hsl(var(--color-contrast-8-h), var(--color-contrast-8-s), var(--color-contrast-8-l), 1);
+.decoration-cnt-8, .focus\:decoration-cnt-8:focus, .hover\:decoration-cnt-8:hover {
+  text-decoration-color: hsl(var(--color-cnt-8-h), var(--color-cnt-8-s), var(--color-cnt-8-l), 1);
 }
 
-.decoration-contrast-9, .focus\:decoration-contrast-9:focus, .hover\:decoration-contrast-9:hover {
-  text-decoration-color: hsl(var(--color-contrast-9-h), var(--color-contrast-9-s), var(--color-contrast-9-l), 1);
+.decoration-cnt-9, .focus\:decoration-cnt-9:focus, .hover\:decoration-cnt-9:hover {
+  text-decoration-color: hsl(var(--color-cnt-9-h), var(--color-cnt-9-s), var(--color-cnt-9-l), 1);
 }
 
-.decoration-surface-1, .focus\:decoration-surface-1:focus, .hover\:decoration-surface-1:hover {
-  text-decoration-color: hsl(var(--color-surface-1-h), var(--color-surface-1-s), var(--color-surface-1-l), 1);
+.decoration-srf-1, .focus\:decoration-srf-1:focus, .hover\:decoration-srf-1:hover {
+  text-decoration-color: hsl(var(--color-srf-1-h), var(--color-srf-1-s), var(--color-srf-1-l), 1);
 }
 
-.decoration-surface-2, .focus\:decoration-surface-2:focus, .hover\:decoration-surface-2:hover {
-  text-decoration-color: hsl(var(--color-surface-2-h), var(--color-surface-2-s), var(--color-surface-2-l), 1);
+.decoration-srf-2, .focus\:decoration-srf-2:focus, .hover\:decoration-srf-2:hover {
+  text-decoration-color: hsl(var(--color-srf-2-h), var(--color-srf-2-s), var(--color-srf-2-l), 1);
 }
 
-.decoration-surface-3, .focus\:decoration-surface-3:focus, .hover\:decoration-surface-3:hover {
-  text-decoration-color: hsl(var(--color-surface-3-h), var(--color-surface-3-s), var(--color-surface-3-l), 1);
+.decoration-srf-3, .focus\:decoration-srf-3:focus, .hover\:decoration-srf-3:hover {
+  text-decoration-color: hsl(var(--color-srf-3-h), var(--color-srf-3-s), var(--color-srf-3-l), 1);
 }
 
-.decoration-surface-4, .focus\:decoration-surface-4:focus, .hover\:decoration-surface-4:hover {
-  text-decoration-color: hsl(var(--color-surface-4-h), var(--color-surface-4-s), var(--color-surface-4-l), 1);
+.decoration-srf-4, .focus\:decoration-srf-4:focus, .hover\:decoration-srf-4:hover {
+  text-decoration-color: hsl(var(--color-srf-4-h), var(--color-srf-4-s), var(--color-srf-4-l), 1);
 }
 
-.decoration-border-1, .focus\:decoration-border-1:focus, .hover\:decoration-border-1:hover {
-  text-decoration-color: hsl(var(--color-border-1-h), var(--color-border-1-s), var(--color-border-1-l), 1);
+.decoration-brd-1, .focus\:decoration-brd-1:focus, .hover\:decoration-brd-1:hover {
+  text-decoration-color: hsl(var(--color-brd-1-h), var(--color-brd-1-s), var(--color-brd-1-l), 1);
 }
 
-.decoration-border-2, .focus\:decoration-border-2:focus, .hover\:decoration-border-2:hover {
-  text-decoration-color: hsl(var(--color-border-2-h), var(--color-border-2-s), var(--color-border-2-l), 1);
+.decoration-brd-2, .focus\:decoration-brd-2:focus, .hover\:decoration-brd-2:hover {
+  text-decoration-color: hsl(var(--color-brd-2-h), var(--color-brd-2-s), var(--color-brd-2-l), 1);
 }
 
-.decoration-text-1, .focus\:decoration-text-1:focus, .hover\:decoration-text-1:hover {
-  text-decoration-color: hsl(var(--color-text-1-h), var(--color-text-1-s), var(--color-text-1-l), 1);
+.decoration-txt-1, .focus\:decoration-txt-1:focus, .hover\:decoration-txt-1:hover {
+  text-decoration-color: hsl(var(--color-txt-1-h), var(--color-txt-1-s), var(--color-txt-1-l), 1);
 }
 
-.decoration-text-2, .focus\:decoration-text-2:focus, .hover\:decoration-text-2:hover {
-  text-decoration-color: hsl(var(--color-text-2-h), var(--color-text-2-s), var(--color-text-2-l), 1);
+.decoration-txt-2, .focus\:decoration-txt-2:focus, .hover\:decoration-txt-2:hover {
+  text-decoration-color: hsl(var(--color-txt-2-h), var(--color-txt-2-s), var(--color-txt-2-l), 1);
 }
 
-.decoration-text-3, .focus\:decoration-text-3:focus, .hover\:decoration-text-3:hover {
-  text-decoration-color: hsl(var(--color-text-3-h), var(--color-text-3-s), var(--color-text-3-l), 1);
+.decoration-txt-3, .focus\:decoration-txt-3:focus, .hover\:decoration-txt-3:hover {
+  text-decoration-color: hsl(var(--color-txt-3-h), var(--color-txt-3-s), var(--color-txt-3-l), 1);
 }
 
-.decoration-text-4, .focus\:decoration-text-4:focus, .hover\:decoration-text-4:hover {
-  text-decoration-color: hsl(var(--color-text-4-h), var(--color-text-4-s), var(--color-text-4-l), 1);
+.decoration-txt-4, .focus\:decoration-txt-4:focus, .hover\:decoration-txt-4:hover {
+  text-decoration-color: hsl(var(--color-txt-4-h), var(--color-txt-4-s), var(--color-txt-4-l), 1);
 }
 
 .decoration-current, .focus\:decoration-current:focus, .hover\:decoration-current:hover {
@@ -9317,6 +11164,33 @@
   }
   .sm\:auto-rows-fr {
     grid-auto-rows: minmax(0, 1fr);
+  }
+  .sm\:aspect-box {
+    aspect-ratio: 1;
+  }
+  .sm\:aspect-landscape {
+    aspect-ratio: 1.3333333333;
+  }
+  .sm\:aspect-portrait {
+    aspect-ratio: 0.75;
+  }
+  .sm\:aspect-widescreen {
+    aspect-ratio: 1.7777777778;
+  }
+  .sm\:aspect-ultrawide {
+    aspect-ratio: 3.6;
+  }
+  .sm\:aspect-golden {
+    aspect-ratio: 1.618;
+  }
+  .sm\:aspect-auto {
+    aspect-ratio: auto;
+  }
+  .sm\:aspect-square {
+    aspect-ratio: 1 / 1;
+  }
+  .sm\:aspect-video {
+    aspect-ratio: 16 / 9;
   }
   .sm\:columns-1 {
     column-count: 1;
@@ -14164,6 +16038,33 @@
   .md\:auto-rows-fr {
     grid-auto-rows: minmax(0, 1fr);
   }
+  .md\:aspect-box {
+    aspect-ratio: 1;
+  }
+  .md\:aspect-landscape {
+    aspect-ratio: 1.3333333333;
+  }
+  .md\:aspect-portrait {
+    aspect-ratio: 0.75;
+  }
+  .md\:aspect-widescreen {
+    aspect-ratio: 1.7777777778;
+  }
+  .md\:aspect-ultrawide {
+    aspect-ratio: 3.6;
+  }
+  .md\:aspect-golden {
+    aspect-ratio: 1.618;
+  }
+  .md\:aspect-auto {
+    aspect-ratio: auto;
+  }
+  .md\:aspect-square {
+    aspect-ratio: 1 / 1;
+  }
+  .md\:aspect-video {
+    aspect-ratio: 16 / 9;
+  }
   .md\:columns-1 {
     column-count: 1;
   }
@@ -19009,6 +20910,33 @@
   }
   .lg\:auto-rows-fr {
     grid-auto-rows: minmax(0, 1fr);
+  }
+  .lg\:aspect-box {
+    aspect-ratio: 1;
+  }
+  .lg\:aspect-landscape {
+    aspect-ratio: 1.3333333333;
+  }
+  .lg\:aspect-portrait {
+    aspect-ratio: 0.75;
+  }
+  .lg\:aspect-widescreen {
+    aspect-ratio: 1.7777777778;
+  }
+  .lg\:aspect-ultrawide {
+    aspect-ratio: 3.6;
+  }
+  .lg\:aspect-golden {
+    aspect-ratio: 1.618;
+  }
+  .lg\:aspect-auto {
+    aspect-ratio: auto;
+  }
+  .lg\:aspect-square {
+    aspect-ratio: 1 / 1;
+  }
+  .lg\:aspect-video {
+    aspect-ratio: 16 / 9;
   }
   .lg\:columns-1 {
     column-count: 1;
@@ -23856,6 +25784,33 @@
   .xl\:auto-rows-fr {
     grid-auto-rows: minmax(0, 1fr);
   }
+  .xl\:aspect-box {
+    aspect-ratio: 1;
+  }
+  .xl\:aspect-landscape {
+    aspect-ratio: 1.3333333333;
+  }
+  .xl\:aspect-portrait {
+    aspect-ratio: 0.75;
+  }
+  .xl\:aspect-widescreen {
+    aspect-ratio: 1.7777777778;
+  }
+  .xl\:aspect-ultrawide {
+    aspect-ratio: 3.6;
+  }
+  .xl\:aspect-golden {
+    aspect-ratio: 1.618;
+  }
+  .xl\:aspect-auto {
+    aspect-ratio: auto;
+  }
+  .xl\:aspect-square {
+    aspect-ratio: 1 / 1;
+  }
+  .xl\:aspect-video {
+    aspect-ratio: 16 / 9;
+  }
   .xl\:columns-1 {
     column-count: 1;
   }
@@ -28702,6 +30657,33 @@
   .\32 xl\:auto-rows-fr {
     grid-auto-rows: minmax(0, 1fr);
   }
+  .\32 xl\:aspect-box {
+    aspect-ratio: 1;
+  }
+  .\32 xl\:aspect-landscape {
+    aspect-ratio: 1.3333333333;
+  }
+  .\32 xl\:aspect-portrait {
+    aspect-ratio: 0.75;
+  }
+  .\32 xl\:aspect-widescreen {
+    aspect-ratio: 1.7777777778;
+  }
+  .\32 xl\:aspect-ultrawide {
+    aspect-ratio: 3.6;
+  }
+  .\32 xl\:aspect-golden {
+    aspect-ratio: 1.618;
+  }
+  .\32 xl\:aspect-auto {
+    aspect-ratio: auto;
+  }
+  .\32 xl\:aspect-square {
+    aspect-ratio: 1 / 1;
+  }
+  .\32 xl\:aspect-video {
+    aspect-ratio: 16 / 9;
+  }
   .\32 xl\:columns-1 {
     column-count: 1;
   }
@@ -33106,1778 +35088,3 @@
     vertical-align: super;
   }
 }
-/*! purgecss start ignore */
-.space-x-2xs > :not([hidden]) ~ :not([hidden]) {
-  margin-right: calc(0.125rem * var(--koi-space-x-reverse, 0));
-  margin-left: calc(0.125rem * (1 - var(--koi-space-x-reverse, 0)));
-}
-
-@media screen and (min-width: 640px) {
-  .sm\:space-x-2xs > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(0.125rem * var(--koi-space-x-reverse, 0));
-    margin-left: calc(0.125rem * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-@media screen and (min-width: 768px) {
-  .md\:space-x-2xs > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(0.125rem * var(--koi-space-x-reverse, 0));
-    margin-left: calc(0.125rem * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-@media screen and (min-width: 1024px) {
-  .lg\:space-x-2xs > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(0.125rem * var(--koi-space-x-reverse, 0));
-    margin-left: calc(0.125rem * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-@media screen and (min-width: 1280px) {
-  .xl\:space-x-2xs > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(0.125rem * var(--koi-space-x-reverse, 0));
-    margin-left: calc(0.125rem * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-@media screen and (min-width: 1536px) {
-  .\32 xl\:space-x-2xs > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(0.125rem * var(--koi-space-x-reverse, 0));
-    margin-left: calc(0.125rem * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-/*! purgecss end ignore */
-/*! purgecss start ignore */
-.space-y-2xs > :not([hidden]) ~ :not([hidden]) {
-  margin-top: calc(0.125rem * (1 - var(--koi-space-y-reverse, 0)));
-  margin-bottom: calc(0.125rem * var(--koi-space-y-reverse, 0));
-}
-
-@media screen and (min-width: 640px) {
-  .sm\:space-y-2xs > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(0.125rem * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(0.125rem * var(--koi-space-y-reverse, 0));
-  }
-}
-@media screen and (min-width: 768px) {
-  .md\:space-y-2xs > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(0.125rem * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(0.125rem * var(--koi-space-y-reverse, 0));
-  }
-}
-@media screen and (min-width: 1024px) {
-  .lg\:space-y-2xs > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(0.125rem * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(0.125rem * var(--koi-space-y-reverse, 0));
-  }
-}
-@media screen and (min-width: 1280px) {
-  .xl\:space-y-2xs > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(0.125rem * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(0.125rem * var(--koi-space-y-reverse, 0));
-  }
-}
-@media screen and (min-width: 1536px) {
-  .\32 xl\:space-y-2xs > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(0.125rem * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(0.125rem * var(--koi-space-y-reverse, 0));
-  }
-}
-/*! purgecss end ignore */
-/*! purgecss start ignore */
-.space-x-xs > :not([hidden]) ~ :not([hidden]) {
-  margin-right: calc(0.25rem * var(--koi-space-x-reverse, 0));
-  margin-left: calc(0.25rem * (1 - var(--koi-space-x-reverse, 0)));
-}
-
-@media screen and (min-width: 640px) {
-  .sm\:space-x-xs > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(0.25rem * var(--koi-space-x-reverse, 0));
-    margin-left: calc(0.25rem * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-@media screen and (min-width: 768px) {
-  .md\:space-x-xs > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(0.25rem * var(--koi-space-x-reverse, 0));
-    margin-left: calc(0.25rem * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-@media screen and (min-width: 1024px) {
-  .lg\:space-x-xs > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(0.25rem * var(--koi-space-x-reverse, 0));
-    margin-left: calc(0.25rem * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-@media screen and (min-width: 1280px) {
-  .xl\:space-x-xs > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(0.25rem * var(--koi-space-x-reverse, 0));
-    margin-left: calc(0.25rem * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-@media screen and (min-width: 1536px) {
-  .\32 xl\:space-x-xs > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(0.25rem * var(--koi-space-x-reverse, 0));
-    margin-left: calc(0.25rem * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-/*! purgecss end ignore */
-/*! purgecss start ignore */
-.space-y-xs > :not([hidden]) ~ :not([hidden]) {
-  margin-top: calc(0.25rem * (1 - var(--koi-space-y-reverse, 0)));
-  margin-bottom: calc(0.25rem * var(--koi-space-y-reverse, 0));
-}
-
-@media screen and (min-width: 640px) {
-  .sm\:space-y-xs > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(0.25rem * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(0.25rem * var(--koi-space-y-reverse, 0));
-  }
-}
-@media screen and (min-width: 768px) {
-  .md\:space-y-xs > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(0.25rem * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(0.25rem * var(--koi-space-y-reverse, 0));
-  }
-}
-@media screen and (min-width: 1024px) {
-  .lg\:space-y-xs > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(0.25rem * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(0.25rem * var(--koi-space-y-reverse, 0));
-  }
-}
-@media screen and (min-width: 1280px) {
-  .xl\:space-y-xs > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(0.25rem * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(0.25rem * var(--koi-space-y-reverse, 0));
-  }
-}
-@media screen and (min-width: 1536px) {
-  .\32 xl\:space-y-xs > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(0.25rem * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(0.25rem * var(--koi-space-y-reverse, 0));
-  }
-}
-/*! purgecss end ignore */
-/*! purgecss start ignore */
-.space-x-sm > :not([hidden]) ~ :not([hidden]) {
-  margin-right: calc(0.5rem * var(--koi-space-x-reverse, 0));
-  margin-left: calc(0.5rem * (1 - var(--koi-space-x-reverse, 0)));
-}
-
-@media screen and (min-width: 640px) {
-  .sm\:space-x-sm > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(0.5rem * var(--koi-space-x-reverse, 0));
-    margin-left: calc(0.5rem * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-@media screen and (min-width: 768px) {
-  .md\:space-x-sm > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(0.5rem * var(--koi-space-x-reverse, 0));
-    margin-left: calc(0.5rem * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-@media screen and (min-width: 1024px) {
-  .lg\:space-x-sm > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(0.5rem * var(--koi-space-x-reverse, 0));
-    margin-left: calc(0.5rem * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-@media screen and (min-width: 1280px) {
-  .xl\:space-x-sm > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(0.5rem * var(--koi-space-x-reverse, 0));
-    margin-left: calc(0.5rem * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-@media screen and (min-width: 1536px) {
-  .\32 xl\:space-x-sm > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(0.5rem * var(--koi-space-x-reverse, 0));
-    margin-left: calc(0.5rem * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-/*! purgecss end ignore */
-/*! purgecss start ignore */
-.space-y-sm > :not([hidden]) ~ :not([hidden]) {
-  margin-top: calc(0.5rem * (1 - var(--koi-space-y-reverse, 0)));
-  margin-bottom: calc(0.5rem * var(--koi-space-y-reverse, 0));
-}
-
-@media screen and (min-width: 640px) {
-  .sm\:space-y-sm > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(0.5rem * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(0.5rem * var(--koi-space-y-reverse, 0));
-  }
-}
-@media screen and (min-width: 768px) {
-  .md\:space-y-sm > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(0.5rem * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(0.5rem * var(--koi-space-y-reverse, 0));
-  }
-}
-@media screen and (min-width: 1024px) {
-  .lg\:space-y-sm > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(0.5rem * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(0.5rem * var(--koi-space-y-reverse, 0));
-  }
-}
-@media screen and (min-width: 1280px) {
-  .xl\:space-y-sm > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(0.5rem * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(0.5rem * var(--koi-space-y-reverse, 0));
-  }
-}
-@media screen and (min-width: 1536px) {
-  .\32 xl\:space-y-sm > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(0.5rem * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(0.5rem * var(--koi-space-y-reverse, 0));
-  }
-}
-/*! purgecss end ignore */
-/*! purgecss start ignore */
-.space-x-md > :not([hidden]) ~ :not([hidden]) {
-  margin-right: calc(1rem * var(--koi-space-x-reverse, 0));
-  margin-left: calc(1rem * (1 - var(--koi-space-x-reverse, 0)));
-}
-
-@media screen and (min-width: 640px) {
-  .sm\:space-x-md > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(1rem * var(--koi-space-x-reverse, 0));
-    margin-left: calc(1rem * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-@media screen and (min-width: 768px) {
-  .md\:space-x-md > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(1rem * var(--koi-space-x-reverse, 0));
-    margin-left: calc(1rem * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-@media screen and (min-width: 1024px) {
-  .lg\:space-x-md > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(1rem * var(--koi-space-x-reverse, 0));
-    margin-left: calc(1rem * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-@media screen and (min-width: 1280px) {
-  .xl\:space-x-md > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(1rem * var(--koi-space-x-reverse, 0));
-    margin-left: calc(1rem * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-@media screen and (min-width: 1536px) {
-  .\32 xl\:space-x-md > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(1rem * var(--koi-space-x-reverse, 0));
-    margin-left: calc(1rem * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-/*! purgecss end ignore */
-/*! purgecss start ignore */
-.space-y-md > :not([hidden]) ~ :not([hidden]) {
-  margin-top: calc(1rem * (1 - var(--koi-space-y-reverse, 0)));
-  margin-bottom: calc(1rem * var(--koi-space-y-reverse, 0));
-}
-
-@media screen and (min-width: 640px) {
-  .sm\:space-y-md > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(1rem * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(1rem * var(--koi-space-y-reverse, 0));
-  }
-}
-@media screen and (min-width: 768px) {
-  .md\:space-y-md > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(1rem * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(1rem * var(--koi-space-y-reverse, 0));
-  }
-}
-@media screen and (min-width: 1024px) {
-  .lg\:space-y-md > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(1rem * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(1rem * var(--koi-space-y-reverse, 0));
-  }
-}
-@media screen and (min-width: 1280px) {
-  .xl\:space-y-md > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(1rem * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(1rem * var(--koi-space-y-reverse, 0));
-  }
-}
-@media screen and (min-width: 1536px) {
-  .\32 xl\:space-y-md > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(1rem * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(1rem * var(--koi-space-y-reverse, 0));
-  }
-}
-/*! purgecss end ignore */
-/*! purgecss start ignore */
-.space-x-lg > :not([hidden]) ~ :not([hidden]) {
-  margin-right: calc(1.5rem * var(--koi-space-x-reverse, 0));
-  margin-left: calc(1.5rem * (1 - var(--koi-space-x-reverse, 0)));
-}
-
-@media screen and (min-width: 640px) {
-  .sm\:space-x-lg > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(1.5rem * var(--koi-space-x-reverse, 0));
-    margin-left: calc(1.5rem * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-@media screen and (min-width: 768px) {
-  .md\:space-x-lg > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(1.5rem * var(--koi-space-x-reverse, 0));
-    margin-left: calc(1.5rem * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-@media screen and (min-width: 1024px) {
-  .lg\:space-x-lg > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(1.5rem * var(--koi-space-x-reverse, 0));
-    margin-left: calc(1.5rem * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-@media screen and (min-width: 1280px) {
-  .xl\:space-x-lg > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(1.5rem * var(--koi-space-x-reverse, 0));
-    margin-left: calc(1.5rem * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-@media screen and (min-width: 1536px) {
-  .\32 xl\:space-x-lg > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(1.5rem * var(--koi-space-x-reverse, 0));
-    margin-left: calc(1.5rem * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-/*! purgecss end ignore */
-/*! purgecss start ignore */
-.space-y-lg > :not([hidden]) ~ :not([hidden]) {
-  margin-top: calc(1.5rem * (1 - var(--koi-space-y-reverse, 0)));
-  margin-bottom: calc(1.5rem * var(--koi-space-y-reverse, 0));
-}
-
-@media screen and (min-width: 640px) {
-  .sm\:space-y-lg > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(1.5rem * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(1.5rem * var(--koi-space-y-reverse, 0));
-  }
-}
-@media screen and (min-width: 768px) {
-  .md\:space-y-lg > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(1.5rem * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(1.5rem * var(--koi-space-y-reverse, 0));
-  }
-}
-@media screen and (min-width: 1024px) {
-  .lg\:space-y-lg > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(1.5rem * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(1.5rem * var(--koi-space-y-reverse, 0));
-  }
-}
-@media screen and (min-width: 1280px) {
-  .xl\:space-y-lg > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(1.5rem * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(1.5rem * var(--koi-space-y-reverse, 0));
-  }
-}
-@media screen and (min-width: 1536px) {
-  .\32 xl\:space-y-lg > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(1.5rem * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(1.5rem * var(--koi-space-y-reverse, 0));
-  }
-}
-/*! purgecss end ignore */
-/*! purgecss start ignore */
-.space-x-xl > :not([hidden]) ~ :not([hidden]) {
-  margin-right: calc(3rem * var(--koi-space-x-reverse, 0));
-  margin-left: calc(3rem * (1 - var(--koi-space-x-reverse, 0)));
-}
-
-@media screen and (min-width: 640px) {
-  .sm\:space-x-xl > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(3rem * var(--koi-space-x-reverse, 0));
-    margin-left: calc(3rem * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-@media screen and (min-width: 768px) {
-  .md\:space-x-xl > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(3rem * var(--koi-space-x-reverse, 0));
-    margin-left: calc(3rem * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-@media screen and (min-width: 1024px) {
-  .lg\:space-x-xl > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(3rem * var(--koi-space-x-reverse, 0));
-    margin-left: calc(3rem * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-@media screen and (min-width: 1280px) {
-  .xl\:space-x-xl > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(3rem * var(--koi-space-x-reverse, 0));
-    margin-left: calc(3rem * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-@media screen and (min-width: 1536px) {
-  .\32 xl\:space-x-xl > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(3rem * var(--koi-space-x-reverse, 0));
-    margin-left: calc(3rem * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-/*! purgecss end ignore */
-/*! purgecss start ignore */
-.space-y-xl > :not([hidden]) ~ :not([hidden]) {
-  margin-top: calc(3rem * (1 - var(--koi-space-y-reverse, 0)));
-  margin-bottom: calc(3rem * var(--koi-space-y-reverse, 0));
-}
-
-@media screen and (min-width: 640px) {
-  .sm\:space-y-xl > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(3rem * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(3rem * var(--koi-space-y-reverse, 0));
-  }
-}
-@media screen and (min-width: 768px) {
-  .md\:space-y-xl > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(3rem * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(3rem * var(--koi-space-y-reverse, 0));
-  }
-}
-@media screen and (min-width: 1024px) {
-  .lg\:space-y-xl > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(3rem * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(3rem * var(--koi-space-y-reverse, 0));
-  }
-}
-@media screen and (min-width: 1280px) {
-  .xl\:space-y-xl > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(3rem * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(3rem * var(--koi-space-y-reverse, 0));
-  }
-}
-@media screen and (min-width: 1536px) {
-  .\32 xl\:space-y-xl > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(3rem * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(3rem * var(--koi-space-y-reverse, 0));
-  }
-}
-/*! purgecss end ignore */
-/*! purgecss start ignore */
-.space-x-2xl > :not([hidden]) ~ :not([hidden]) {
-  margin-right: calc(4rem * var(--koi-space-x-reverse, 0));
-  margin-left: calc(4rem * (1 - var(--koi-space-x-reverse, 0)));
-}
-
-@media screen and (min-width: 640px) {
-  .sm\:space-x-2xl > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(4rem * var(--koi-space-x-reverse, 0));
-    margin-left: calc(4rem * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-@media screen and (min-width: 768px) {
-  .md\:space-x-2xl > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(4rem * var(--koi-space-x-reverse, 0));
-    margin-left: calc(4rem * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-@media screen and (min-width: 1024px) {
-  .lg\:space-x-2xl > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(4rem * var(--koi-space-x-reverse, 0));
-    margin-left: calc(4rem * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-@media screen and (min-width: 1280px) {
-  .xl\:space-x-2xl > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(4rem * var(--koi-space-x-reverse, 0));
-    margin-left: calc(4rem * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-@media screen and (min-width: 1536px) {
-  .\32 xl\:space-x-2xl > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(4rem * var(--koi-space-x-reverse, 0));
-    margin-left: calc(4rem * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-/*! purgecss end ignore */
-/*! purgecss start ignore */
-.space-y-2xl > :not([hidden]) ~ :not([hidden]) {
-  margin-top: calc(4rem * (1 - var(--koi-space-y-reverse, 0)));
-  margin-bottom: calc(4rem * var(--koi-space-y-reverse, 0));
-}
-
-@media screen and (min-width: 640px) {
-  .sm\:space-y-2xl > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(4rem * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(4rem * var(--koi-space-y-reverse, 0));
-  }
-}
-@media screen and (min-width: 768px) {
-  .md\:space-y-2xl > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(4rem * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(4rem * var(--koi-space-y-reverse, 0));
-  }
-}
-@media screen and (min-width: 1024px) {
-  .lg\:space-y-2xl > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(4rem * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(4rem * var(--koi-space-y-reverse, 0));
-  }
-}
-@media screen and (min-width: 1280px) {
-  .xl\:space-y-2xl > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(4rem * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(4rem * var(--koi-space-y-reverse, 0));
-  }
-}
-@media screen and (min-width: 1536px) {
-  .\32 xl\:space-y-2xl > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(4rem * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(4rem * var(--koi-space-y-reverse, 0));
-  }
-}
-/*! purgecss end ignore */
-/*! purgecss start ignore */
-.space-x-3xl > :not([hidden]) ~ :not([hidden]) {
-  margin-right: calc(5rem * var(--koi-space-x-reverse, 0));
-  margin-left: calc(5rem * (1 - var(--koi-space-x-reverse, 0)));
-}
-
-@media screen and (min-width: 640px) {
-  .sm\:space-x-3xl > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(5rem * var(--koi-space-x-reverse, 0));
-    margin-left: calc(5rem * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-@media screen and (min-width: 768px) {
-  .md\:space-x-3xl > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(5rem * var(--koi-space-x-reverse, 0));
-    margin-left: calc(5rem * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-@media screen and (min-width: 1024px) {
-  .lg\:space-x-3xl > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(5rem * var(--koi-space-x-reverse, 0));
-    margin-left: calc(5rem * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-@media screen and (min-width: 1280px) {
-  .xl\:space-x-3xl > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(5rem * var(--koi-space-x-reverse, 0));
-    margin-left: calc(5rem * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-@media screen and (min-width: 1536px) {
-  .\32 xl\:space-x-3xl > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(5rem * var(--koi-space-x-reverse, 0));
-    margin-left: calc(5rem * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-/*! purgecss end ignore */
-/*! purgecss start ignore */
-.space-y-3xl > :not([hidden]) ~ :not([hidden]) {
-  margin-top: calc(5rem * (1 - var(--koi-space-y-reverse, 0)));
-  margin-bottom: calc(5rem * var(--koi-space-y-reverse, 0));
-}
-
-@media screen and (min-width: 640px) {
-  .sm\:space-y-3xl > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(5rem * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(5rem * var(--koi-space-y-reverse, 0));
-  }
-}
-@media screen and (min-width: 768px) {
-  .md\:space-y-3xl > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(5rem * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(5rem * var(--koi-space-y-reverse, 0));
-  }
-}
-@media screen and (min-width: 1024px) {
-  .lg\:space-y-3xl > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(5rem * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(5rem * var(--koi-space-y-reverse, 0));
-  }
-}
-@media screen and (min-width: 1280px) {
-  .xl\:space-y-3xl > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(5rem * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(5rem * var(--koi-space-y-reverse, 0));
-  }
-}
-@media screen and (min-width: 1536px) {
-  .\32 xl\:space-y-3xl > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(5rem * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(5rem * var(--koi-space-y-reverse, 0));
-  }
-}
-/*! purgecss end ignore */
-/*! purgecss start ignore */
-.space-x-4xl > :not([hidden]) ~ :not([hidden]) {
-  margin-right: calc(10rem * var(--koi-space-x-reverse, 0));
-  margin-left: calc(10rem * (1 - var(--koi-space-x-reverse, 0)));
-}
-
-@media screen and (min-width: 640px) {
-  .sm\:space-x-4xl > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(10rem * var(--koi-space-x-reverse, 0));
-    margin-left: calc(10rem * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-@media screen and (min-width: 768px) {
-  .md\:space-x-4xl > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(10rem * var(--koi-space-x-reverse, 0));
-    margin-left: calc(10rem * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-@media screen and (min-width: 1024px) {
-  .lg\:space-x-4xl > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(10rem * var(--koi-space-x-reverse, 0));
-    margin-left: calc(10rem * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-@media screen and (min-width: 1280px) {
-  .xl\:space-x-4xl > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(10rem * var(--koi-space-x-reverse, 0));
-    margin-left: calc(10rem * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-@media screen and (min-width: 1536px) {
-  .\32 xl\:space-x-4xl > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(10rem * var(--koi-space-x-reverse, 0));
-    margin-left: calc(10rem * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-/*! purgecss end ignore */
-/*! purgecss start ignore */
-.space-y-4xl > :not([hidden]) ~ :not([hidden]) {
-  margin-top: calc(10rem * (1 - var(--koi-space-y-reverse, 0)));
-  margin-bottom: calc(10rem * var(--koi-space-y-reverse, 0));
-}
-
-@media screen and (min-width: 640px) {
-  .sm\:space-y-4xl > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(10rem * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(10rem * var(--koi-space-y-reverse, 0));
-  }
-}
-@media screen and (min-width: 768px) {
-  .md\:space-y-4xl > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(10rem * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(10rem * var(--koi-space-y-reverse, 0));
-  }
-}
-@media screen and (min-width: 1024px) {
-  .lg\:space-y-4xl > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(10rem * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(10rem * var(--koi-space-y-reverse, 0));
-  }
-}
-@media screen and (min-width: 1280px) {
-  .xl\:space-y-4xl > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(10rem * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(10rem * var(--koi-space-y-reverse, 0));
-  }
-}
-@media screen and (min-width: 1536px) {
-  .\32 xl\:space-y-4xl > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(10rem * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(10rem * var(--koi-space-y-reverse, 0));
-  }
-}
-/*! purgecss end ignore */
-/*! purgecss start ignore */
-.space-x-0 > :not([hidden]) ~ :not([hidden]) {
-  margin-right: calc(0 * var(--koi-space-x-reverse, 0));
-  margin-left: calc(0 * (1 - var(--koi-space-x-reverse, 0)));
-}
-
-@media screen and (min-width: 640px) {
-  .sm\:space-x-0 > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(0 * var(--koi-space-x-reverse, 0));
-    margin-left: calc(0 * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-@media screen and (min-width: 768px) {
-  .md\:space-x-0 > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(0 * var(--koi-space-x-reverse, 0));
-    margin-left: calc(0 * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-@media screen and (min-width: 1024px) {
-  .lg\:space-x-0 > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(0 * var(--koi-space-x-reverse, 0));
-    margin-left: calc(0 * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-@media screen and (min-width: 1280px) {
-  .xl\:space-x-0 > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(0 * var(--koi-space-x-reverse, 0));
-    margin-left: calc(0 * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-@media screen and (min-width: 1536px) {
-  .\32 xl\:space-x-0 > :not([hidden]) ~ :not([hidden]) {
-    margin-right: calc(0 * var(--koi-space-x-reverse, 0));
-    margin-left: calc(0 * (1 - var(--koi-space-x-reverse, 0)));
-  }
-}
-/*! purgecss end ignore */
-/*! purgecss start ignore */
-.space-y-0 > :not([hidden]) ~ :not([hidden]) {
-  margin-top: calc(0 * (1 - var(--koi-space-y-reverse, 0)));
-  margin-bottom: calc(0 * var(--koi-space-y-reverse, 0));
-}
-
-@media screen and (min-width: 640px) {
-  .sm\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(0 * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(0 * var(--koi-space-y-reverse, 0));
-  }
-}
-@media screen and (min-width: 768px) {
-  .md\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(0 * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(0 * var(--koi-space-y-reverse, 0));
-  }
-}
-@media screen and (min-width: 1024px) {
-  .lg\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(0 * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(0 * var(--koi-space-y-reverse, 0));
-  }
-}
-@media screen and (min-width: 1280px) {
-  .xl\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(0 * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(0 * var(--koi-space-y-reverse, 0));
-  }
-}
-@media screen and (min-width: 1536px) {
-  .\32 xl\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
-    margin-top: calc(0 * (1 - var(--koi-space-y-reverse, 0)));
-    margin-bottom: calc(0 * var(--koi-space-y-reverse, 0));
-  }
-}
-/*! purgecss end ignore */
-/*! purgecss start ignore */
-.space-x-reverse {
-  --koi-space-x-reverse: 1;
-}
-
-@media screen and (min-width: 640px) {
-  .sm\:space-x-reverse {
-    --koi-space-x-reverse: 1;
-  }
-}
-@media screen and (min-width: 768px) {
-  .md\:space-x-reverse {
-    --koi-space-x-reverse: 1;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .lg\:space-x-reverse {
-    --koi-space-x-reverse: 1;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .xl\:space-x-reverse {
-    --koi-space-x-reverse: 1;
-  }
-}
-@media screen and (min-width: 1536px) {
-  .\32 xl\:space-x-reverse {
-    --koi-space-x-reverse: 1;
-  }
-}
-/*! purgecss end ignore */
-/*! purgecss start ignore */
-.space-y-reverse {
-  --koi-space-y-reverse: 1;
-}
-
-@media screen and (min-width: 640px) {
-  .sm\:space-y-reverse {
-    --koi-space-y-reverse: 1;
-  }
-}
-@media screen and (min-width: 768px) {
-  .md\:space-y-reverse {
-    --koi-space-y-reverse: 1;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .lg\:space-y-reverse {
-    --koi-space-y-reverse: 1;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .xl\:space-y-reverse {
-    --koi-space-y-reverse: 1;
-  }
-}
-@media screen and (min-width: 1536px) {
-  .\32 xl\:space-y-reverse {
-    --koi-space-y-reverse: 1;
-  }
-}
-/*! purgecss end ignore */
-/*! purgecss start ignore */
-.stack {
-  align-items: flex-end;
-  display: inline-grid;
-  place-items: center;
-}
-.stack > * {
-  grid-column-start: 1;
-  grid-row-start: 1;
-  opacity: 0.6;
-  transform: translateY(1rem) scale(0.9);
-  width: 100%;
-  z-index: 1;
-}
-.stack > *:nth-child(1) {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-  z-index: 3;
-}
-.stack > *:nth-child(2) {
-  opacity: 0.8;
-  transform: translateY(0.5rem) scale(0.95);
-  z-index: 2;
-}
-
-/*! purgecss end ignore */
-/*! purgecss start ignore */
-.container {
-  width: 100%;
-  /* Center the element */
-}
-@media screen and (min-width: 0px) and (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
-}
-@media screen and (min-width: 0px) and (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-@media screen and (min-width: 0px) and (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-@media screen and (min-width: 0px) and (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-@media screen and (min-width: 0px) and (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
-  }
-}
-
-@media screen and (min-width: 640px) {
-  .sm\:container {
-    width: 100%;
-    /* Center the element */
-  }
-}
-@media screen and (min-width: 640px) and (min-width: 0px) and (min-width: 640px) {
-  .sm\:container {
-    max-width: 640px;
-  }
-}
-@media screen and (min-width: 640px) and (min-width: 0px) and (min-width: 768px) {
-  .sm\:container {
-    max-width: 768px;
-  }
-}
-@media screen and (min-width: 640px) and (min-width: 0px) and (min-width: 1024px) {
-  .sm\:container {
-    max-width: 1024px;
-  }
-}
-@media screen and (min-width: 640px) and (min-width: 0px) and (min-width: 1280px) {
-  .sm\:container {
-    max-width: 1280px;
-  }
-}
-@media screen and (min-width: 640px) and (min-width: 0px) and (min-width: 1536px) {
-  .sm\:container {
-    max-width: 1536px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .md\:container {
-    width: 100%;
-    /* Center the element */
-  }
-}
-@media screen and (min-width: 768px) and (min-width: 0px) and (min-width: 640px) {
-  .md\:container {
-    max-width: 640px;
-  }
-}
-@media screen and (min-width: 768px) and (min-width: 0px) and (min-width: 768px) {
-  .md\:container {
-    max-width: 768px;
-  }
-}
-@media screen and (min-width: 768px) and (min-width: 0px) and (min-width: 1024px) {
-  .md\:container {
-    max-width: 1024px;
-  }
-}
-@media screen and (min-width: 768px) and (min-width: 0px) and (min-width: 1280px) {
-  .md\:container {
-    max-width: 1280px;
-  }
-}
-@media screen and (min-width: 768px) and (min-width: 0px) and (min-width: 1536px) {
-  .md\:container {
-    max-width: 1536px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .lg\:container {
-    width: 100%;
-    /* Center the element */
-  }
-}
-@media screen and (min-width: 1024px) and (min-width: 0px) and (min-width: 640px) {
-  .lg\:container {
-    max-width: 640px;
-  }
-}
-@media screen and (min-width: 1024px) and (min-width: 0px) and (min-width: 768px) {
-  .lg\:container {
-    max-width: 768px;
-  }
-}
-@media screen and (min-width: 1024px) and (min-width: 0px) and (min-width: 1024px) {
-  .lg\:container {
-    max-width: 1024px;
-  }
-}
-@media screen and (min-width: 1024px) and (min-width: 0px) and (min-width: 1280px) {
-  .lg\:container {
-    max-width: 1280px;
-  }
-}
-@media screen and (min-width: 1024px) and (min-width: 0px) and (min-width: 1536px) {
-  .lg\:container {
-    max-width: 1536px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .xl\:container {
-    width: 100%;
-    /* Center the element */
-  }
-}
-@media screen and (min-width: 1280px) and (min-width: 0px) and (min-width: 640px) {
-  .xl\:container {
-    max-width: 640px;
-  }
-}
-@media screen and (min-width: 1280px) and (min-width: 0px) and (min-width: 768px) {
-  .xl\:container {
-    max-width: 768px;
-  }
-}
-@media screen and (min-width: 1280px) and (min-width: 0px) and (min-width: 1024px) {
-  .xl\:container {
-    max-width: 1024px;
-  }
-}
-@media screen and (min-width: 1280px) and (min-width: 0px) and (min-width: 1280px) {
-  .xl\:container {
-    max-width: 1280px;
-  }
-}
-@media screen and (min-width: 1280px) and (min-width: 0px) and (min-width: 1536px) {
-  .xl\:container {
-    max-width: 1536px;
-  }
-}
-@media screen and (min-width: 1536px) {
-  .\32 xl\:container {
-    width: 100%;
-    /* Center the element */
-  }
-}
-@media screen and (min-width: 1536px) and (min-width: 0px) and (min-width: 640px) {
-  .\32 xl\:container {
-    max-width: 640px;
-  }
-}
-@media screen and (min-width: 1536px) and (min-width: 0px) and (min-width: 768px) {
-  .\32 xl\:container {
-    max-width: 768px;
-  }
-}
-@media screen and (min-width: 1536px) and (min-width: 0px) and (min-width: 1024px) {
-  .\32 xl\:container {
-    max-width: 1024px;
-  }
-}
-@media screen and (min-width: 1536px) and (min-width: 0px) and (min-width: 1280px) {
-  .\32 xl\:container {
-    max-width: 1280px;
-  }
-}
-@media screen and (min-width: 1536px) and (min-width: 0px) and (min-width: 1536px) {
-  .\32 xl\:container {
-    max-width: 1536px;
-  }
-}
-/*! purgecss end ignore */
-/*! purgecss start ignore */
-.centered {
-  display: grid;
-  place-content: center;
-}
-
-@media screen and (min-width: 640px) {
-  .sm\:centered {
-    display: grid;
-    place-content: center;
-  }
-}
-@media screen and (min-width: 768px) {
-  .md\:centered {
-    display: grid;
-    place-content: center;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .lg\:centered {
-    display: grid;
-    place-content: center;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .xl\:centered {
-    display: grid;
-    place-content: center;
-  }
-}
-@media screen and (min-width: 1536px) {
-  .\32 xl\:centered {
-    display: grid;
-    place-content: center;
-  }
-}
-/*! purgecss end ignore */
-/*! purgecss start ignore */
-.sr-only {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
-@media screen and (min-width: 640px) {
-  .sm\:sr-only {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .md\:sr-only {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .lg\:sr-only {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .xl\:sr-only {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-  }
-}
-@media screen and (min-width: 1536px) {
-  .\32 xl\:sr-only {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-  }
-}
-/*! purgecss end ignore */
-/*! purgecss start ignore */
-.not-sr-only {
-  clip: unset;
-  height: auto;
-  margin: unset;
-  overflow: unset;
-  position: static;
-  white-space: unset;
-  width: auto;
-}
-
-@media screen and (min-width: 640px) {
-  .sm\:not-sr-only {
-    clip: unset;
-    height: auto;
-    margin: unset;
-    overflow: unset;
-    position: static;
-    white-space: unset;
-    width: auto;
-  }
-}
-@media screen and (min-width: 768px) {
-  .md\:not-sr-only {
-    clip: unset;
-    height: auto;
-    margin: unset;
-    overflow: unset;
-    position: static;
-    white-space: unset;
-    width: auto;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .lg\:not-sr-only {
-    clip: unset;
-    height: auto;
-    margin: unset;
-    overflow: unset;
-    position: static;
-    white-space: unset;
-    width: auto;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .xl\:not-sr-only {
-    clip: unset;
-    height: auto;
-    margin: unset;
-    overflow: unset;
-    position: static;
-    white-space: unset;
-    width: auto;
-  }
-}
-@media screen and (min-width: 1536px) {
-  .\32 xl\:not-sr-only {
-    clip: unset;
-    height: auto;
-    margin: unset;
-    overflow: unset;
-    position: static;
-    white-space: unset;
-    width: auto;
-  }
-}
-/*! purgecss end ignore */
-/*! purgecss start ignore */
-.transition-none {
-  transition-property: none;
-}
-
-/*! purgecss end ignore */
-/*! purgecss start ignore */
-.transition {
-  transition-delay: var(--koi-transition-delay, 0);
-  transition-duration: var(--koi-transition-duration, 200ms);
-  transition-property: var(--koi-transition-property, background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter);
-  transition-timing-function: var(--koi-transition-timing-function, cubic-bezier(0.25, 0.1, 0.25, 1));
-}
-
-/*! purgecss end ignore */
-/*! purgecss start ignore */
-.transition-colors {
-  transition-delay: var(--koi-transition-delay, );
-  transition-duration: var(--koi-transition-duration, 200ms);
-  transition-property: var(--koi-transition-property, background-color, border-color, color, fill, stroke);
-  transition-timing-function: var(--koi-transition-timing-function, cubic-bezier(0.25, 0.1, 0.25, 1));
-}
-
-/*! purgecss end ignore */
-/*! purgecss start ignore */
-.transition-opacity {
-  transition-delay: var(--koi-transition-delay, );
-  transition-duration: var(--koi-transition-duration, 200ms);
-  transition-property: var(--koi-transition-property, opacity);
-  transition-timing-function: var(--koi-transition-timing-function, cubic-bezier(0.25, 0.1, 0.25, 1));
-}
-
-/*! purgecss end ignore */
-/*! purgecss start ignore */
-.transition-shadow {
-  transition-delay: var(--koi-transition-delay, );
-  transition-duration: var(--koi-transition-duration, 200ms);
-  transition-property: var(--koi-transition-property, box-shadow);
-  transition-timing-function: var(--koi-transition-timing-function, cubic-bezier(0.25, 0.1, 0.25, 1));
-}
-
-/*! purgecss end ignore */
-/*! purgecss start ignore */
-.transition-transform {
-  transition-delay: var(--koi-transition-delay, );
-  transition-duration: var(--koi-transition-duration, 200ms);
-  transition-property: var(--koi-transition-property, transform);
-  transition-timing-function: var(--koi-transition-timing-function, cubic-bezier(0.25, 0.1, 0.25, 1));
-}
-
-/*! purgecss end ignore */
-/*! purgecss start ignore */
-.text-2xs {
-  font-size: 0.625rem;
-  line-height: 0.75rem;
-}
-
-@media screen and (min-width: 640px) {
-  .sm\:text-2xs {
-    font-size: 0.625rem;
-    line-height: 0.75rem;
-  }
-}
-@media screen and (min-width: 768px) {
-  .md\:text-2xs {
-    font-size: 0.625rem;
-    line-height: 0.75rem;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .lg\:text-2xs {
-    font-size: 0.625rem;
-    line-height: 0.75rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .xl\:text-2xs {
-    font-size: 0.625rem;
-    line-height: 0.75rem;
-  }
-}
-@media screen and (min-width: 1536px) {
-  .\32 xl\:text-2xs {
-    font-size: 0.625rem;
-    line-height: 0.75rem;
-  }
-}
-/*! purgecss end ignore */
-/*! purgecss start ignore */
-.text-xs {
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-
-@media screen and (min-width: 640px) {
-  .sm\:text-xs {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-@media screen and (min-width: 768px) {
-  .md\:text-xs {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .lg\:text-xs {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .xl\:text-xs {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-@media screen and (min-width: 1536px) {
-  .\32 xl\:text-xs {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-/*! purgecss end ignore */
-/*! purgecss start ignore */
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
-@media screen and (min-width: 640px) {
-  .sm\:text-sm {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-}
-@media screen and (min-width: 768px) {
-  .md\:text-sm {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .lg\:text-sm {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .xl\:text-sm {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-}
-@media screen and (min-width: 1536px) {
-  .\32 xl\:text-sm {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-}
-/*! purgecss end ignore */
-/*! purgecss start ignore */
-.text-md {
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-
-@media screen and (min-width: 640px) {
-  .sm\:text-md {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-@media screen and (min-width: 768px) {
-  .md\:text-md {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .lg\:text-md {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .xl\:text-md {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-@media screen and (min-width: 1536px) {
-  .\32 xl\:text-md {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-/*! purgecss end ignore */
-/*! purgecss start ignore */
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
-@media screen and (min-width: 640px) {
-  .sm\:text-lg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
-}
-@media screen and (min-width: 768px) {
-  .md\:text-lg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .lg\:text-lg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .xl\:text-lg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
-}
-@media screen and (min-width: 1536px) {
-  .\32 xl\:text-lg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
-}
-/*! purgecss end ignore */
-/*! purgecss start ignore */
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
-@media screen and (min-width: 640px) {
-  .sm\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-}
-@media screen and (min-width: 768px) {
-  .md\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .lg\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .xl\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-}
-@media screen and (min-width: 1536px) {
-  .\32 xl\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-}
-/*! purgecss end ignore */
-/*! purgecss start ignore */
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
-@media screen and (min-width: 640px) {
-  .sm\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-}
-@media screen and (min-width: 768px) {
-  .md\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .lg\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .xl\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-}
-@media screen and (min-width: 1536px) {
-  .\32 xl\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-}
-/*! purgecss end ignore */
-/*! purgecss start ignore */
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
-@media screen and (min-width: 640px) {
-  .sm\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
-}
-@media screen and (min-width: 768px) {
-  .md\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .lg\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .xl\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
-}
-@media screen and (min-width: 1536px) {
-  .\32 xl\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
-}
-/*! purgecss end ignore */
-/*! purgecss start ignore */
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
-@media screen and (min-width: 640px) {
-  .sm\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
-}
-@media screen and (min-width: 768px) {
-  .md\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .lg\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .xl\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
-}
-@media screen and (min-width: 1536px) {
-  .\32 xl\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
-}
-/*! purgecss end ignore */
-/*! purgecss start ignore */
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
-}
-
-@media screen and (min-width: 640px) {
-  .sm\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
-  }
-}
-@media screen and (min-width: 768px) {
-  .md\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .lg\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .xl\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
-  }
-}
-@media screen and (min-width: 1536px) {
-  .\32 xl\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
-  }
-}
-/*! purgecss end ignore */
-/*! purgecss start ignore */
-.text-6xl {
-  font-size: 3.75rem;
-  line-height: 1;
-}
-
-@media screen and (min-width: 640px) {
-  .sm\:text-6xl {
-    font-size: 3.75rem;
-    line-height: 1;
-  }
-}
-@media screen and (min-width: 768px) {
-  .md\:text-6xl {
-    font-size: 3.75rem;
-    line-height: 1;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .lg\:text-6xl {
-    font-size: 3.75rem;
-    line-height: 1;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .xl\:text-6xl {
-    font-size: 3.75rem;
-    line-height: 1;
-  }
-}
-@media screen and (min-width: 1536px) {
-  .\32 xl\:text-6xl {
-    font-size: 3.75rem;
-    line-height: 1;
-  }
-}
-/*! purgecss end ignore */
-/*! purgecss start ignore */
-.text-7xl {
-  font-size: 4.5rem;
-  line-height: 1;
-}
-
-@media screen and (min-width: 640px) {
-  .sm\:text-7xl {
-    font-size: 4.5rem;
-    line-height: 1;
-  }
-}
-@media screen and (min-width: 768px) {
-  .md\:text-7xl {
-    font-size: 4.5rem;
-    line-height: 1;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .lg\:text-7xl {
-    font-size: 4.5rem;
-    line-height: 1;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .xl\:text-7xl {
-    font-size: 4.5rem;
-    line-height: 1;
-  }
-}
-@media screen and (min-width: 1536px) {
-  .\32 xl\:text-7xl {
-    font-size: 4.5rem;
-    line-height: 1;
-  }
-}
-/*! purgecss end ignore */
-/*! purgecss start ignore */
-.text-8xl {
-  font-size: 6rem;
-  line-height: 1;
-}
-
-@media screen and (min-width: 640px) {
-  .sm\:text-8xl {
-    font-size: 6rem;
-    line-height: 1;
-  }
-}
-@media screen and (min-width: 768px) {
-  .md\:text-8xl {
-    font-size: 6rem;
-    line-height: 1;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .lg\:text-8xl {
-    font-size: 6rem;
-    line-height: 1;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .xl\:text-8xl {
-    font-size: 6rem;
-    line-height: 1;
-  }
-}
-@media screen and (min-width: 1536px) {
-  .\32 xl\:text-8xl {
-    font-size: 6rem;
-    line-height: 1;
-  }
-}
-/*! purgecss end ignore */
-/*! purgecss start ignore */
-.text-9xl {
-  font-size: 8rem;
-  line-height: 1;
-}
-
-@media screen and (min-width: 640px) {
-  .sm\:text-9xl {
-    font-size: 8rem;
-    line-height: 1;
-  }
-}
-@media screen and (min-width: 768px) {
-  .md\:text-9xl {
-    font-size: 8rem;
-    line-height: 1;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .lg\:text-9xl {
-    font-size: 8rem;
-    line-height: 1;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .xl\:text-9xl {
-    font-size: 8rem;
-    line-height: 1;
-  }
-}
-@media screen and (min-width: 1536px) {
-  .\32 xl\:text-9xl {
-    font-size: 8rem;
-    line-height: 1;
-  }
-}
-/*! purgecss end ignore */
-/*! purgecss start ignore */
-.truncate {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-/*! purgecss end ignore */

@@ -19,12 +19,12 @@
   *,
   ::after,
   ::before {
-    border: 0 solid fill(border, 1);
+    border: 0 solid fill(brd, 1);
   }
 
   body {
-    background-color: var(--koi-body-background, fill(surface, 1));
-    color: var(--koi-body-foreground, fill(text, 1));
+    background-color: var(--koi-body-background, fill(srf, 1));
+    color: var(--koi-body-foreground, fill(txt, 1));
     font-family: font(base);
     font-size: font(md);
     font-weight: font(normal);
@@ -79,7 +79,7 @@
   }
 
   code::before {
-    color: fill(text, 4);
+    color: fill(txt, 4);
     content: attr(data-lang);
     font-size: font(xs);
     position: absolute;
@@ -88,11 +88,11 @@
   }
 
   blockquote {
-    background-color: var(--koi-quote-background, fill(surface, 2));
+    background-color: var(--koi-quote-background, fill(srf, 2));
     border-left-color: var(--koi-quote-border-color, accent(5));
     border-left-width: var(--koi-quote-border-with, 0.25rem);
     border-radius: var(--koi-quote-border-radius, 3px);
-    color: var(--koi-quote-foreground, fill(text, 1));
+    color: var(--koi-quote-foreground, fill(txt, 1));
     font-style: italic;
     font-weight: font(medium);
     margin-bottom: 1.6em;
@@ -117,7 +117,7 @@
   }
 
   cite {
-    color: var(--koi-cite-foreground, fill(text, 2));
+    color: var(--koi-cite-foreground, fill(txt, 2));
     display: block;
     font-size: font(sm);
     overflow: hidden;
@@ -131,10 +131,10 @@
 
   figure > blockquote + figcaption {
     @include rounded-bottom(var(--koi-quote-border-radius, 3px));
-    background-color: var(--koi-quote-background, fill(surface, 2));
+    background-color: var(--koi-quote-background, fill(srf, 2));
     border-left-color: var(--koi-quote-border-color, accent(5));
     border-left-width: var(--koi-quote-border-with, 0.25rem);
-    color: var(--koi-quote-foreground, fill(text, 1));
+    color: var(--koi-quote-foreground, fill(txt, 1));
     margin-top: -0.5em;
     padding: 0 2em 1.5em;
     text-align: left;
@@ -156,7 +156,7 @@
   a {
     background: var(--koi-link-background, transparent);
     border-bottom: var(--koi-link-border, 1px solid accent(5));
-    color: var(--koi-link-foreground, fill(text, 1));
+    color: var(--koi-link-foreground, fill(txt, 1));
     font-weight: var(--koi-link-font-weight, font(medium));
     text-decoration: none;
     transition: all 50ms linear;

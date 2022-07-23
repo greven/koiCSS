@@ -13,6 +13,15 @@
 //   Vars
 // --------------------------------
 
+$_aspect: map.merge(
+  theme(aspect),
+  (
+    auto: auto,
+    square: '1 / 1',
+    video: '16 / 9',
+  )
+);
+
 $_layers: theme(layer);
 $_spacers: list.append(map.keys(spacing.$spacers), 0);
 
@@ -21,6 +30,12 @@ $_spacers: list.append(map.keys(spacing.$spacers), 0);
 // --------------------------------
 
 $utilities: (
+  aspect-ratio: (
+    property: aspect-ratio,
+    class: aspect,
+    responsive: true,
+    values: $_aspect,
+  ),
   columns: (
     property: column-count,
     class: columns,
@@ -67,6 +82,18 @@ $utilities: (
     class: null,
     responsive: true,
     values: static relative absolute fixed sticky,
+  ),
+  float: (
+    property: float,
+    class: float,
+    responsive: true,
+    values: left right none,
+  ),
+  clear: (
+    property: clear,
+    class: clear,
+    responsive: true,
+    values: left right both none,
   ),
   visibility: (
     property: visibility,

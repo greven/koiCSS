@@ -31,9 +31,9 @@ $utilities: map-deep-merge(
 );
 
 @mixin utilities {
-  @include generate-utilities($utilities);
-
   @include layout.extensions;
   @include transition.extensions;
   @include typography.extensions;
+
+  @include generate-utilities($utilities);
 }

@@ -36,12 +36,12 @@ $padding-x-large: spacing(14);
   @include transition((color, background-color, border-color, transform), duration(fast));
 
   align-items: center;
-  background-color: var(--koi-badge-background, fill(contrast, 1));
+  background-color: var(--koi-badge-background, fill(cnt, 1));
   border-color: var(--koi-badge-border-color, transparent);
   border-radius: var(--koi-badge-border-radius, $border-radius);
   border-style: var(--koi-badge-border-style, solid);
   border-width: var(--koi-badge-border-width, $border-width);
-  color: var(--koi-badge-foreground, fill(contrast, 6));
+  color: var(--koi-badge-foreground, fill(cnt, 6));
   display: inline-flex;
   flex-grow: 0;
   font-size: var(--koi-badge-font-size, $font-size);
@@ -57,7 +57,7 @@ $padding-x-large: spacing(14);
   text-transform: var(--koi-badge-text-transform, uppercase);
 
   @include dark-mode {
-    --koi-badge-background: #{fill(contrast, 2)};
+    --koi-badge-background: #{fill(cnt, 2)};
   }
 
   // Color variants
@@ -94,12 +94,12 @@ $padding-x-large: spacing(14);
 }
 
 @mixin solid {
-  --koi-badge-background: #{fill(contrast, 9)};
+  --koi-badge-background: #{fill(cnt, 9)};
   --koi-badge-border-color: transparent;
-  --koi-badge-foreground: #{fill(contrast, 1)};
+  --koi-badge-foreground: #{fill(cnt, 1)};
 
   @include dark-mode {
-    --koi-badge-background: #{fill(contrast, 9)};
+    --koi-badge-background: #{fill(cnt, 9)};
   }
 
   // Color variants
@@ -118,8 +118,8 @@ $padding-x-large: spacing(14);
 
 @mixin outline {
   --koi-badge-background: transparent;
-  --koi-badge-border-color: #{fill(contrast, 6)};
-  --koi-badge-foreground: #{fill(contrast, 8)};
+  --koi-badge-border-color: #{fill(cnt, 6)};
+  --koi-badge-foreground: #{fill(cnt, 8)};
 
   @include dark-mode {
     --koi-badge-background: transparent;
@@ -151,15 +151,15 @@ $padding-x-large: spacing(14);
 
 @mixin dot {
   --koi-badge-background: transparent;
-  --koi-badge-border-color: #{fill(contrast, 2)};
-  --koi-badge-foreground: #{fill(contrast, 8)};
+  --koi-badge-border-color: #{fill(cnt, 2)};
+  --koi-badge-foreground: #{fill(cnt, 8)};
 
   @include dark-mode {
     --koi-badge-background: transparent;
   }
 
   &::before {
-    background-color: fill(contrast, 5);
+    background-color: fill(cnt, 5);
     border-radius: 6px;
     content: '';
     display: block;
@@ -171,7 +171,7 @@ $padding-x-large: spacing(14);
   // Color variants
   @include color-variant(accent) {
     --koi-badge-background: transparent;
-    --koi-badge-foreground: #{fill(text, 1)};
+    --koi-badge-foreground: #{fill(txt, 1)};
 
     &::before {
       background-color: accent(5);
@@ -185,7 +185,7 @@ $padding-x-large: spacing(14);
   @each $color in config.$enabled-color-variants {
     @include color-variant($color) {
       --koi-badge-background: transparent;
-      --koi-badge-foreground: #{fill(text, 1)};
+      --koi-badge-foreground: #{fill(txt, 1)};
 
       &::before {
         background-color: fill($color, 5);

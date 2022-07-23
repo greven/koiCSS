@@ -115,7 +115,7 @@ $_type-base-index: list.index($_type-steps, 'md');
 @mixin lists {
   dl {
     dt {
-      color: fill(text, 1);
+      color: fill(txt, 1);
       font-weight: font(bold);
     }
 

@@ -22,7 +22,7 @@ $class: '.kbd';
   background-color: var(--koi-key-bg, fill(white));
   box-shadow: 0 calc($key-height + 1px) 0 -2px var(--koi-key-border-1, fill(grey, 1)),
     0 $key-height 0 0 var(--koi-key-border-2, fill(grey, 2)), shadow();
-  color: var(--koi-key-text, fill(text, 2));
+  color: var(--koi-key-text, fill(txt, 2));
   display: inline-flex;
   font-family: font(mono);
   font-size: 0.875em;

@@ -11,9 +11,6 @@
 //   Vars
 // --------------------------------
 
-$_default-radius: config.default(radius);
-$_default-border-width: config.default(border-width);
-
 $_radius: theme(radius);
 
 $_colors: map.merge(
@@ -33,34 +30,38 @@ $utilities: (
   rounded: (
     property: border-radius,
     class: rounded,
-    default: $_default-radius,
+    default: config.default(radius),
     values: $_radius,
   ),
   rounded-top: (
     property: border-top-left-radius border-top-right-radius,
     class: rounded-t,
+    default: config.default(radius),
     values: $_radius,
   ),
   rounded-right: (
     property: border-top-right-radius border-bottom-right-radius,
     class: rounded-r,
+    default: config.default(radius),
     values: $_radius,
   ),
   rounded-bottom: (
     property: border-bottom-right-radius border-bottom-left-radius,
     class: rounded-b,
+    default: config.default(radius),
     values: $_radius,
   ),
   rounded-left: (
     property: border-bottom-left-radius border-top-left-radius,
     class: rounded-l,
+    default: config.default(radius),
     values: $_radius,
   ),
   border-width: (
     property: border-width,
     class: border,
     pseudos: hover focus,
-    default: $_default-border-width,
+    default: config.default(border-width),
     values: (
       0: 0px,
       1: 1px,
