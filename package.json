@@ -24,6 +24,7 @@
     "build:styles:min": "sass -I node_modules -s compressed --no-source-map scss/koi-styles.scss:dist/koi.min.css scss/koi-utilities.scss:dist/koi-utilities.min.css",
     "build": "npm run clean && concurrently npm:build:styles npm:build:styles:min && concurrently npm:postcss:prod*",
     "clean": "rm -rf ./css",
+    "compress": "tar -czvf dist/koi.min.css.tar.gz dist/koi.min.css & tar -czvf dist/koi-utilities.min.css.tar.gz dist/koi-utilities.min.css",
     "dev": "npm run build:utilities && concurrently npm:watch:dev npm:serve",
     "lint:fix": "stylelint scss/**/*.scss --fix",
     "lint": "stylelint scss/**/*.scss",
