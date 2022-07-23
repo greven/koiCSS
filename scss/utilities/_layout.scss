@@ -89,7 +89,7 @@ $utilities: (
 //   Utility Mixins
 // --------------------------------
 
-@mixin create-stack-utility {
+@mixin create-space-utility {
   @each $key in $_spacers {
     $spacer-value: if(theme-has-key(spacing, $key), spacing($key), $key);
 
@@ -120,6 +120,8 @@ $utilities: (
 // --------------------------------
 
 @mixin extensions {
+  @include create-space-utility;
+
   @include create-responsive-utility(container) {
     @include container(0px);
   }
@@ -129,19 +131,6 @@ $utilities: (
     display: grid;
     place-content: center;
   }
-
-  // Breakout from a container making the element full width
-  @include create-responsive-utility(breakout) {
-    width: 100vw;
-    max-width: 100vw;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-  }
-
-  @include create-stack-utility;
 
   @include create-responsive-utility(sr-only) {
     @include visually-hidden;

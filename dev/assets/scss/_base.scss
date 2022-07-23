@@ -22,91 +22,10 @@ body {
   @include koi.container($from: md, $padding: true, $center: true, $max-width: lg);
 }
 
-.wrapper {
-  @include koi.rounded(md);
-  @include koi.fluid-padding-block(md, 4xl);
-}
-
 .stack {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 12px;
+  @include koi.stack;
 }
 
-.loader {
-  @include koi.loader-3(20px, $thickness: 2px);
-}
-
-.even-columns {
-  // display: block;
-  @include koi.even-columns(250px);
-}
-
-.keys-2 {
-  font-size: koi.font(3xl);
-}
-
-.my-box-1,
-.my-box-2,
-.my-box-3 {
-  @include koi.box($padding: true, $shadow: md);
-  @include koi.border(koi.fill(grey, 5), $radius: koi.radius(lg));
-  @include koi.transition-shadow();
-
-  &:hover {
-    @include koi.shadow(xl);
-  }
-}
-
-.my-box-1 {
-  background: var(--gradient-10);
-  color: koi.fill(black);
-  // @include koi.animation(shake-x, 1s);
-  // animation: var(--animation-shake-x);
-
-  @include koi.dark-mode {
-    background-color: koi.fill(danger, 9, 0.25);
-  }
-}
-
-.my-box-2 {
-  // --koi-gradient-direction: 100deg;
-  background: koi.gradient(9);
-  color: koi.fill(black);
-  // animation: var(--animation-shake-x);
-
-  @include koi.dark-mode {
-    background-color: koi.fill(primary, 9, 0.25);
-  }
-}
-
-.my-box-3 {
-  // --koi-gradient-direction: 100deg;
-  background: koi.gradient(5);
-  color: koi.fill(black);
-  // animation: var(--animation-shake-x);
-
-  @include koi.dark-mode {
-    background-color: koi.fill(primary, 9, 0.25);
-  }
-}
-
-.box-s2 {
-  @include koi.box($padding: true, $rounded: true, $bg-color: koi.fill(surface, 2));
-  @include koi.border();
-  @include koi.shadow(sm);
-}
-
-.box-s3 {
-  --koi-shadow-color: 255 0 0;
-  @include koi.box($padding: true, $rounded: true, $bg-color: koi.fill(surface, 3));
-  @include koi.border();
-  @include koi.shadow(md, koi.color-channels(black));
-}
-
-.box-s4 {
-  @include koi.box($padding: true, $rounded: true, $bg-color: koi.fill(surface, 4));
-  @include koi.border();
-  @include koi.shadow(lg);
+.spacer {
+  @include koi.spacer;
 }

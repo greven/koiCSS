@@ -4,14 +4,20 @@
 @forward 'keyboard' as keyboard-*;
 @forward 'loader';
 @forward 'navbar' as navbar-*;
+@forward 'tooltip' as tooltip-*;
 
 @use 'badge';
 @use 'button';
 @use 'card';
 @use 'keyboard';
+@use 'navbar';
+@use 'tooltip';
 
 @mixin components {
   @include badge.styles();
   @include button.styles();
+  // @include card.styles();
   @include keyboard.styles();
+  // @include navbar.styles();
+  // @include tooltip.styles();
 }

@@ -131,7 +131,7 @@ $_type-base-index: list.index($_type-steps, 'md');
   .prose {
     ul,
     ol {
-      @include stack(column, sm);
+      @include spacer(column, sm);
       margin: spacing(md, 0, md, md);
       padding-left: spacing(sm);
 
