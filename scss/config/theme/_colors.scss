@@ -5,10 +5,24 @@
 @use 'sass:map';
 
 @use '../../tokens' as *;
+@use '../../helpers' as *;
 
-// ---- Base Colors ----
+// ---- Semantic Colors ----
 
 $base: (
+  white: map.get($colors, white),
+  black: map.get($colors, black),
+  grey: map.get($colors, grey),
+);
+
+$semantic: (
+  success: map.get($colors, green),
+  info: map.get($colors, blue),
+  warning: map.get($colors, yellow),
+  danger: map.get($colors, red),
+);
+
+$brand: (
   primary: (
     0: #f0fdfa,
     1: #ccfbf1,
@@ -45,13 +59,13 @@ $base: (
     8: #262626,
     9: #171717,
   ),
-  white: map.get($colors, white),
-  black: map.get($colors, black),
-  grey: map.get($colors, grey),
-  success: map.get($colors, green),
-  info: map.get($colors, blue),
-  warning: map.get($colors, yellow),
-  danger: map.get($colors, red),
+);
+
+$extended: (
+  red: map.get($colors, red),
+  yellow: map.get($colors, yellow),
+  green: map.get($colors, green),
+  blue: map.get($colors, blue),
 );
 
 // ---- Colors Schemes ----

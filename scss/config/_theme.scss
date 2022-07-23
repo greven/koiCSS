@@ -5,8 +5,46 @@
 @use 'sass:map';
 
 @use '../tokens';
+@use '../helpers' as *;
+
 @use 'theme/colors';
 @use 'theme/typography';
+
+// --------------------------------
+//   Config
+// --------------------------------
+
+$enabled-brand-colors: primary secondary neutral !default;
+$enabled-extended-colors: () !default;
+$enabled-color-variants: primary secondary neutral info success warning danger !default;
+
+// --------------------------------
+//   Colors
+// --------------------------------
+
+$colors: map-merge(colors.$base, colors.$semantic);
+@each $color in $enabled-brand-colors {
+  $values: map.get(colors.$brand, $color);
+  $colors: map.merge(
+    $colors,
+    (
+      $color: $values,
+    )
+  );
+}
+@each $color in $enabled-extended-colors {
+  $values: map.get(colors.$extended, $color);
+  $colors: map.merge(
+    $colors,
+    (
+      $color: $values,
+    )
+  );
+}
+
+// --------------------------------
+//   Theme
+// --------------------------------
 
 $default-theme: (
   animations: tokens.$animations,
@@ -28,12 +66,10 @@ $default-theme: (
   font-weight: tokens.$font-weight,
   leading: tokens.$leading,
   tracking: tokens.$tracking,
-  colors: colors.$base,
+  colors: $colors,
   gradients: tokens.$gradients,
   color-schemes: colors.$schemes,
 );
-
-$color-variants: primary secondary neutral info success warning danger !default;
 
 $theme: () !default;
 $theme: map.deep-merge($default-theme, $theme);

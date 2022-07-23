@@ -71,7 +71,7 @@ $padding-x-large: spacing(14);
     }
   }
 
-  @each $color in config.$color-variants {
+  @each $color in config.$enabled-color-variants {
     @include color-variant($color) {
       --koi-badge-background: #{fill($color, 1)};
       --koi-badge-foreground: #{fill($color, 8)};
@@ -108,7 +108,7 @@ $padding-x-large: spacing(14);
     --koi-badge-foreground: #{fill(white)};
   }
 
-  @each $color in config.$color-variants {
+  @each $color in config.$enabled-color-variants {
     @include color-variant($color) {
       --koi-badge-background: #{fill($color, 6)};
       --koi-badge-foreground: #{fill(white)};
@@ -136,7 +136,7 @@ $padding-x-large: spacing(14);
     }
   }
 
-  @each $color in config.$color-variants {
+  @each $color in config.$enabled-color-variants {
     @include color-variant($color) {
       --koi-badge-background: transparent;
       --koi-badge-border-color: #{fill($color, 6)};
@@ -182,7 +182,7 @@ $padding-x-large: spacing(14);
     }
   }
 
-  @each $color in config.$color-variants {
+  @each $color in config.$enabled-color-variants {
     @include color-variant($color) {
       --koi-badge-background: transparent;
       --koi-badge-foreground: #{fill(text, 1)};

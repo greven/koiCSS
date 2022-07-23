@@ -188,7 +188,7 @@ $shadow: shadow(sm);
     @include focus-ring(accent(6));
   }
 
-  @each $color in config.$color-variants {
+  @each $color in config.$enabled-color-variants {
     @include color-variant($color) {
       --koi-btn-background: #{fill($color, 6)};
       --koi-btn-background-hover: #{fill($color, 7)};
@@ -251,7 +251,7 @@ $shadow: shadow(sm);
     }
   }
 
-  @each $color in config.$color-variants {
+  @each $color in config.$enabled-color-variants {
     @include color-variant($color) {
       --koi-btn-background-hover: #{fill($color, 0)};
       --koi-btn-background-active: transparent;
@@ -324,7 +324,7 @@ $shadow: shadow(sm);
     }
   }
 
-  @each $color in config.$color-variants {
+  @each $color in config.$enabled-color-variants {
     @include color-variant($color) {
       --koi-btn-background: #{fill($color, 1)};
       --koi-btn-background-hover: #{fill($color, 2)};
@@ -390,7 +390,7 @@ $shadow: shadow(sm);
     }
   }
 
-  @each $color in config.$color-variants {
+  @each $color in config.$enabled-color-variants {
     @include color-variant($color) {
       --koi-btn-background-hover: #{fill($color, 1)};
       --koi-btn-background-active: #{fill($color, 1, $alpha: 0.5)};
@@ -446,7 +446,7 @@ $shadow: shadow(sm);
     }
   }
 
-  @each $color in config.$color-variants {
+  @each $color in config.$enabled-color-variants {
     @include color-variant($color) {
       --koi-btn-foreground: #{fill($color, 7)};
       --koi-btn-foreground-hover: #{fill($color, 8)};
