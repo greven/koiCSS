@@ -16,6 +16,12 @@
     color: var(--koi-selection-foreground, fill(black));
   }
 
+  *,
+  ::after,
+  ::before {
+    border: 0 solid fill(border, 1);
+  }
+
   body {
     background-color: var(--koi-body-background, fill(surface, 1));
     color: var(--koi-body-foreground, fill(text, 1));
