@@ -3895,6 +3895,34 @@
   position: sticky;
 }
 
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.float-none {
+  float: none;
+}
+
+.clear-left {
+  clear: left;
+}
+
+.clear-right {
+  clear: right;
+}
+
+.clear-both {
+  clear: both;
+}
+
+.clear-none {
+  clear: none;
+}
+
 .visible {
   visibility: visible;
 }
@@ -11309,6 +11337,27 @@
   .sm\:sticky {
     position: sticky;
   }
+  .sm\:float-left {
+    float: left;
+  }
+  .sm\:float-right {
+    float: right;
+  }
+  .sm\:float-none {
+    float: none;
+  }
+  .sm\:clear-left {
+    clear: left;
+  }
+  .sm\:clear-right {
+    clear: right;
+  }
+  .sm\:clear-both {
+    clear: both;
+  }
+  .sm\:clear-none {
+    clear: none;
+  }
   .sm\:visible {
     visibility: visible;
   }
@@ -16181,6 +16230,27 @@
   }
   .md\:sticky {
     position: sticky;
+  }
+  .md\:float-left {
+    float: left;
+  }
+  .md\:float-right {
+    float: right;
+  }
+  .md\:float-none {
+    float: none;
+  }
+  .md\:clear-left {
+    clear: left;
+  }
+  .md\:clear-right {
+    clear: right;
+  }
+  .md\:clear-both {
+    clear: both;
+  }
+  .md\:clear-none {
+    clear: none;
   }
   .md\:visible {
     visibility: visible;
@@ -21055,6 +21125,27 @@
   .lg\:sticky {
     position: sticky;
   }
+  .lg\:float-left {
+    float: left;
+  }
+  .lg\:float-right {
+    float: right;
+  }
+  .lg\:float-none {
+    float: none;
+  }
+  .lg\:clear-left {
+    clear: left;
+  }
+  .lg\:clear-right {
+    clear: right;
+  }
+  .lg\:clear-both {
+    clear: both;
+  }
+  .lg\:clear-none {
+    clear: none;
+  }
   .lg\:visible {
     visibility: visible;
   }
@@ -25928,6 +26019,27 @@
   .xl\:sticky {
     position: sticky;
   }
+  .xl\:float-left {
+    float: left;
+  }
+  .xl\:float-right {
+    float: right;
+  }
+  .xl\:float-none {
+    float: none;
+  }
+  .xl\:clear-left {
+    clear: left;
+  }
+  .xl\:clear-right {
+    clear: right;
+  }
+  .xl\:clear-both {
+    clear: both;
+  }
+  .xl\:clear-none {
+    clear: none;
+  }
   .xl\:visible {
     visibility: visible;
   }
@@ -30800,6 +30912,27 @@
   }
   .\32 xl\:sticky {
     position: sticky;
+  }
+  .\32 xl\:float-left {
+    float: left;
+  }
+  .\32 xl\:float-right {
+    float: right;
+  }
+  .\32 xl\:float-none {
+    float: none;
+  }
+  .\32 xl\:clear-left {
+    clear: left;
+  }
+  .\32 xl\:clear-right {
+    clear: right;
+  }
+  .\32 xl\:clear-both {
+    clear: both;
+  }
+  .\32 xl\:clear-none {
+    clear: none;
   }
   .\32 xl\:visible {
     visibility: visible;
