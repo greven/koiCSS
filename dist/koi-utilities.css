@@ -33907,6 +33907,32 @@
 }
 /*! purgecss end ignore */
 /*! purgecss start ignore */
+.stack {
+  align-items: flex-end;
+  display: inline-grid;
+  place-items: center;
+}
+.stack > * {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  opacity: 0.6;
+  transform: translateY(1rem) scale(0.9);
+  width: 100%;
+  z-index: 1;
+}
+.stack > *:nth-child(1) {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  z-index: 3;
+}
+.stack > *:nth-child(2) {
+  opacity: 0.8;
+  transform: translateY(0.5rem) scale(0.95);
+  z-index: 2;
+}
+
+/*! purgecss end ignore */
+/*! purgecss start ignore */
 .container {
   width: 100%;
   /* Center the element */

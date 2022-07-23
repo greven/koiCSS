@@ -31,7 +31,7 @@ $_font-weights: theme(font-weight);
 $utilities: (
   color: (
     property: color,
-    class: text,
+    class: color,
     pseudos: hover focus,
     values: $_colors,
   ),

@@ -22,10 +22,14 @@ body {
   @include koi.container($from: md, $padding: true, $center: true, $max-width: lg);
 }
 
-.stack {
-  @include koi.stack;
-}
+// .stack {
+//   @include koi.stack;
+// }
 
 .spacer {
   @include koi.spacer;
+}
+
+.text-alert {
+  color: red;
 }

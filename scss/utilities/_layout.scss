@@ -122,6 +122,10 @@ $utilities: (
 @mixin extensions {
   @include create-space-utility;
 
+  @include create-utility(stack) {
+    @include stack;
+  }
+
   @include create-responsive-utility(container) {
     @include container(0px);
   }
