@@ -134,3 +134,4 @@ out
 # Project
 _dev.scss
 dev/**/*.css
+dev/**/*.tar.gz
