@@ -25,10 +25,31 @@ $_colors: map.merge(
 // --------------------------------
 
 $utilities: (
-  'background-color': (
+  background-color: (
     property: background-color,
     class: bg,
     pseudos: hover focus,
     values: $_colors,
+  ),
+  background-size: (
+    property: background-size,
+    class: bg,
+    values: auto cover contain,
+  ),
+  background-clip: (
+    property: background-clip,
+    class: bg-clip,
+    pseudos: hover focus,
+    values: (
+      border: border-box,
+      padding: padding-box,
+      content: content-box,
+      text: text,
+    ),
+    background-attachment: (
+      property: background-attachment,
+      class: bg,
+      values: fixed local scroll,
+    ),
   ),
 );

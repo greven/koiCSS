@@ -9,7 +9,7 @@
 @use 'theme' as *;
 
 // --------------------------------
-//   FUNCTIONS
+//   Functions
 // --------------------------------
 
 /// Return a breakpoint value from the theme
@@ -42,7 +42,7 @@
 }
 
 // --------------------------------
-//   MIXINS
+//   Mixins
 // --------------------------------
 
 @mixin query($query, $type: screen) {

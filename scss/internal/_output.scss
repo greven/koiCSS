@@ -49,3 +49,12 @@
   $value: if(meta.type-of($value) == 'string', string.unquote($value), $value);
   #{css-var-name($property, $key)}: $value;
 }
+
+/// Mixin to vendor prefix a property
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+  // Output standard non-prefixed declaration
+  #{$property}: $value;
+}

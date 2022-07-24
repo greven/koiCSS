@@ -9,6 +9,7 @@
 @use 'flex';
 @use 'grid';
 @use 'layout';
+@use 'mask';
 @use 'size';
 @use 'spacing';
 @use 'transition';
@@ -32,6 +33,7 @@ $utilities: map-deep-merge(
 
 @mixin utilities {
   @include layout.extensions;
+  @include mask.extensions;
   @include transition.extensions;
   @include typography.extensions;
 

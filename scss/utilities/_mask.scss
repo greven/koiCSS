@@ -1,0 +1,76 @@
+// --------------------------------
+//   Masking Utilities
+// --------------------------------
+
+@use 'sass:map';
+
+@use '../config';
+@use '../api' as *;
+
+// --------------------------------
+//   Utility Mixins
+// --------------------------------
+
+@mixin extensions {
+  @include create-utility(mask) {
+    @include mask;
+
+    &-squircle {
+      @include mask-squircle;
+    }
+    &-decagon {
+      @include mask-decagon;
+    }
+    &-diamond {
+      @include mask-diamond;
+    }
+    &-heart {
+      @include mask-heart;
+    }
+    &-hexagon {
+      @include mask-hexagon;
+    }
+    &-hexagon-2 {
+      @include mask-hexagon-2;
+    }
+    &-circle {
+      @include mask-circle;
+    }
+    &-parallelogram {
+      @include mask-parallelogram;
+    }
+    &-parallelogram-2 {
+      @include mask-parallelogram-2;
+    }
+    &-parallelogram-3 {
+      @include mask-parallelogram-3;
+    }
+    &-parallelogram-4 {
+      @include mask-parallelogram-4;
+    }
+    &-pentagon {
+      @include mask-pentagon;
+    }
+    &-square {
+      @include mask-square;
+    }
+    &-star {
+      @include mask-star;
+    }
+    &-star-2 {
+      @include mask-star-2;
+    }
+    &-triangle {
+      @include mask-triangle;
+    }
+    &-triangle-2 {
+      @include mask-triangle-2;
+    }
+    &-triangle-3 {
+      @include mask-triangle-3;
+    }
+    &-triangle-4 {
+      @include mask-triangle-4;
+    }
+  }
+}

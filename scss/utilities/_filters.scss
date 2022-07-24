@@ -12,7 +12,6 @@
 // --------------------------------
 
 $_blurs: ();
-
 @each $key, $value in theme(blur) {
   $_blurs: map.set($_blurs, $key, blur($value));
 }
@@ -28,5 +27,49 @@ $utilities: (
     pseudos: hover focus,
     default: config.default(blur),
     values: $_blurs,
+  ),
+  brightness: (
+    property: filter,
+    class: brightness,
+    pseudos: hover focus,
+    values: (
+      0: brightness(0),
+      50: brightness(0.5),
+      75: brightness(0.75),
+      90: brightness(0.9),
+      95: brightness(0.95),
+      100: brightness(1),
+      105: brightness(1.05),
+      110: brightness(1.1),
+      125: brightness(1.25),
+      150: brightness(1.5),
+      200: brightness(2),
+    ),
+  ),
+  contrast: (
+    property: filter,
+    class: contrast,
+    pseudos: hover focus,
+    values: (
+      0: contrast(0),
+      50: contrast(0.5),
+      75: contrast(0.75),
+      100: contrast(1),
+      125: contrast(1.25),
+      150: contrast(1.5),
+      200: contrast(2),
+    ),
+  ),
+  saturate: (
+    property: filter,
+    class: saturate,
+    pseudos: hover focus,
+    values: (
+      0: saturate(0),
+      50: saturate(0.5),
+      100: saturate(1),
+      150: saturate(1.5),
+      200: saturate(2),
+    ),
   ),
 );

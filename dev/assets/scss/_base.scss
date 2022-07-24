@@ -21,15 +21,3 @@ body {
   // --koi-btn-animation-scale: 2px;
   @include koi.container($from: md, $padding: true, $center: true, $max-width: lg);
 }
-
-// .stack {
-//   @include koi.stack;
-// }
-
-.spacer {
-  @include koi.spacer;
-}
-
-.text-alert {
-  color: red;
-}
