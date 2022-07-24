@@ -195,7 +195,6 @@ $animations: theme(animations);
 
 /* stylelint-disable */
 @mixin generate-keyframes() {
-  /*! purgecss start ignore */
   @each $keyframe-key, $keyframe-value in theme(keyframes) {
     :root {
       @keyframes #{$keyframe-key} {
@@ -209,7 +208,6 @@ $animations: theme(animations);
       }
     }
   }
-  /*! purgecss end ignore */
 }
 /* stylelint-enable */
 

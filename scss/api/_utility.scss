@@ -13,19 +13,16 @@
 
 // Create a single utility
 @mixin create-utility($class) {
-  /*! purgecss start ignore */
   $class: str-escape($class);
 
   // Create standard utility first
   .#{$class} {
     @content;
   }
-  /*! purgecss end ignore */
 }
 
 // Create a single responsive utility
 @mixin create-responsive-utility($class) {
-  /*! purgecss start ignore */
   $util-glue: config.$utility-glue;
   $screens: map.get(config.$theme, screens);
   $class: str-escape($class);
@@ -45,5 +42,4 @@
       }
     }
   }
-  /*! purgecss end ignore */
 }

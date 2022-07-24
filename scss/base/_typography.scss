@@ -190,17 +190,14 @@ $_type-base-index: list.index($_type-steps, 'md');
 
 // Output font-sizes as CSS Custom properties
 @mixin generate-font-sizes-css-vars($prefix) {
-  /*! purgecss start ignore */
   @for $i from 1 through length($_type-steps) {
     $size: list.nth($_type-steps, $i);
     @include custom-prop($prefix, $size, font-size($size));
   }
-  /*! purgecss end ignore */
 }
 
 // Output fluid font-sizes as CSS Custom properties
 @mixin generate-fluid-font-sizes-css-vars($prefix) {
-  /*! purgecss start ignore */
   @for $i from 1 through length($_type-steps) {
     $size: list.nth($_type-steps, $i);
     $min: config.$base-font-size * math.pow(config.$fluid-type-scale, $i - $_type-base-index);
@@ -208,7 +205,6 @@ $_type-base-index: list.index($_type-steps, 'md');
 
     @include custom-prop($prefix, $size, #{fluid-font-size($min, $max)});
   }
-  /*! purgecss end ignore */
 }
 
 // --------------------------------

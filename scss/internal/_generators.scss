@@ -30,17 +30,13 @@ $_default-accent: config.default(color-accent);
 // Generate CSS custom properties (vars) from theme property map.
 // Example:  @include generate-css-vars(theme(shadow), shadow);
 @mixin generate-css-vars($map: (), $property: null) {
-  /*! purgecss start ignore */
   @each $key, $value in $map {
     @include custom-prop($property, $key, $value);
   }
-  /*! purgecss end ignore */
 }
 
 // Output a colors map as CSS custom properties
 @mixin generate-css-theme-color-vars($colors-map: (), $property: null, $suffix: null) {
-  /*! purgecss start ignore */
-
   // Default accent
   $default-accent-map: map.get($colors-map, $_default-accent);
   @include color-custom-prop($color-prefix, accent, $default-accent-map, $suffix);
@@ -55,8 +51,6 @@ $_default-accent: config.default(color-accent);
       }
     }
   }
-
-  /*! purgecss end ignore */
 }
 
 // --------------------------------
