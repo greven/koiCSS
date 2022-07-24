@@ -4,7 +4,6 @@
 /* stylelint-enable */
 /* stylelint-disable */
 /* stylelint-enable */
-/*! purgecss start ignore */
 .space-x-2xs > :not([hidden]) ~ :not([hidden]) {
   margin-right: calc(0.125rem * var(--koi-space-x-reverse, 0));
   margin-left: calc(0.125rem * (1 - var(--koi-space-x-reverse, 0)));
@@ -40,8 +39,6 @@
     margin-left: calc(0.125rem * (1 - var(--koi-space-x-reverse, 0)));
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .space-y-2xs > :not([hidden]) ~ :not([hidden]) {
   margin-top: calc(0.125rem * (1 - var(--koi-space-y-reverse, 0)));
   margin-bottom: calc(0.125rem * var(--koi-space-y-reverse, 0));
@@ -77,8 +74,6 @@
     margin-bottom: calc(0.125rem * var(--koi-space-y-reverse, 0));
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .space-x-xs > :not([hidden]) ~ :not([hidden]) {
   margin-right: calc(0.25rem * var(--koi-space-x-reverse, 0));
   margin-left: calc(0.25rem * (1 - var(--koi-space-x-reverse, 0)));
@@ -114,8 +109,6 @@
     margin-left: calc(0.25rem * (1 - var(--koi-space-x-reverse, 0)));
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .space-y-xs > :not([hidden]) ~ :not([hidden]) {
   margin-top: calc(0.25rem * (1 - var(--koi-space-y-reverse, 0)));
   margin-bottom: calc(0.25rem * var(--koi-space-y-reverse, 0));
@@ -151,8 +144,6 @@
     margin-bottom: calc(0.25rem * var(--koi-space-y-reverse, 0));
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .space-x-sm > :not([hidden]) ~ :not([hidden]) {
   margin-right: calc(0.5rem * var(--koi-space-x-reverse, 0));
   margin-left: calc(0.5rem * (1 - var(--koi-space-x-reverse, 0)));
@@ -188,8 +179,6 @@
     margin-left: calc(0.5rem * (1 - var(--koi-space-x-reverse, 0)));
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .space-y-sm > :not([hidden]) ~ :not([hidden]) {
   margin-top: calc(0.5rem * (1 - var(--koi-space-y-reverse, 0)));
   margin-bottom: calc(0.5rem * var(--koi-space-y-reverse, 0));
@@ -225,8 +214,6 @@
     margin-bottom: calc(0.5rem * var(--koi-space-y-reverse, 0));
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .space-x-md > :not([hidden]) ~ :not([hidden]) {
   margin-right: calc(1rem * var(--koi-space-x-reverse, 0));
   margin-left: calc(1rem * (1 - var(--koi-space-x-reverse, 0)));
@@ -262,8 +249,6 @@
     margin-left: calc(1rem * (1 - var(--koi-space-x-reverse, 0)));
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .space-y-md > :not([hidden]) ~ :not([hidden]) {
   margin-top: calc(1rem * (1 - var(--koi-space-y-reverse, 0)));
   margin-bottom: calc(1rem * var(--koi-space-y-reverse, 0));
@@ -299,8 +284,6 @@
     margin-bottom: calc(1rem * var(--koi-space-y-reverse, 0));
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .space-x-lg > :not([hidden]) ~ :not([hidden]) {
   margin-right: calc(1.5rem * var(--koi-space-x-reverse, 0));
   margin-left: calc(1.5rem * (1 - var(--koi-space-x-reverse, 0)));
@@ -336,8 +319,6 @@
     margin-left: calc(1.5rem * (1 - var(--koi-space-x-reverse, 0)));
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .space-y-lg > :not([hidden]) ~ :not([hidden]) {
   margin-top: calc(1.5rem * (1 - var(--koi-space-y-reverse, 0)));
   margin-bottom: calc(1.5rem * var(--koi-space-y-reverse, 0));
@@ -373,8 +354,6 @@
     margin-bottom: calc(1.5rem * var(--koi-space-y-reverse, 0));
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .space-x-xl > :not([hidden]) ~ :not([hidden]) {
   margin-right: calc(3rem * var(--koi-space-x-reverse, 0));
   margin-left: calc(3rem * (1 - var(--koi-space-x-reverse, 0)));
@@ -410,8 +389,6 @@
     margin-left: calc(3rem * (1 - var(--koi-space-x-reverse, 0)));
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .space-y-xl > :not([hidden]) ~ :not([hidden]) {
   margin-top: calc(3rem * (1 - var(--koi-space-y-reverse, 0)));
   margin-bottom: calc(3rem * var(--koi-space-y-reverse, 0));
@@ -447,8 +424,6 @@
     margin-bottom: calc(3rem * var(--koi-space-y-reverse, 0));
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .space-x-2xl > :not([hidden]) ~ :not([hidden]) {
   margin-right: calc(4rem * var(--koi-space-x-reverse, 0));
   margin-left: calc(4rem * (1 - var(--koi-space-x-reverse, 0)));
@@ -484,8 +459,6 @@
     margin-left: calc(4rem * (1 - var(--koi-space-x-reverse, 0)));
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .space-y-2xl > :not([hidden]) ~ :not([hidden]) {
   margin-top: calc(4rem * (1 - var(--koi-space-y-reverse, 0)));
   margin-bottom: calc(4rem * var(--koi-space-y-reverse, 0));
@@ -521,8 +494,6 @@
     margin-bottom: calc(4rem * var(--koi-space-y-reverse, 0));
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .space-x-3xl > :not([hidden]) ~ :not([hidden]) {
   margin-right: calc(5rem * var(--koi-space-x-reverse, 0));
   margin-left: calc(5rem * (1 - var(--koi-space-x-reverse, 0)));
@@ -558,8 +529,6 @@
     margin-left: calc(5rem * (1 - var(--koi-space-x-reverse, 0)));
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .space-y-3xl > :not([hidden]) ~ :not([hidden]) {
   margin-top: calc(5rem * (1 - var(--koi-space-y-reverse, 0)));
   margin-bottom: calc(5rem * var(--koi-space-y-reverse, 0));
@@ -595,8 +564,6 @@
     margin-bottom: calc(5rem * var(--koi-space-y-reverse, 0));
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .space-x-4xl > :not([hidden]) ~ :not([hidden]) {
   margin-right: calc(10rem * var(--koi-space-x-reverse, 0));
   margin-left: calc(10rem * (1 - var(--koi-space-x-reverse, 0)));
@@ -632,8 +599,6 @@
     margin-left: calc(10rem * (1 - var(--koi-space-x-reverse, 0)));
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .space-y-4xl > :not([hidden]) ~ :not([hidden]) {
   margin-top: calc(10rem * (1 - var(--koi-space-y-reverse, 0)));
   margin-bottom: calc(10rem * var(--koi-space-y-reverse, 0));
@@ -669,8 +634,6 @@
     margin-bottom: calc(10rem * var(--koi-space-y-reverse, 0));
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .space-x-0 > :not([hidden]) ~ :not([hidden]) {
   margin-right: calc(0 * var(--koi-space-x-reverse, 0));
   margin-left: calc(0 * (1 - var(--koi-space-x-reverse, 0)));
@@ -706,8 +669,6 @@
     margin-left: calc(0 * (1 - var(--koi-space-x-reverse, 0)));
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .space-y-0 > :not([hidden]) ~ :not([hidden]) {
   margin-top: calc(0 * (1 - var(--koi-space-y-reverse, 0)));
   margin-bottom: calc(0 * var(--koi-space-y-reverse, 0));
@@ -743,8 +704,6 @@
     margin-bottom: calc(0 * var(--koi-space-y-reverse, 0));
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .space-x-reverse {
   --koi-space-x-reverse: 1;
 }
@@ -774,8 +733,6 @@
     --koi-space-x-reverse: 1;
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .space-y-reverse {
   --koi-space-y-reverse: 1;
 }
@@ -805,8 +762,6 @@
     --koi-space-y-reverse: 1;
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .stack {
   align-items: flex-end;
   display: inline-grid;
@@ -831,8 +786,6 @@
   z-index: 2;
 }
 
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .container {
   width: 100%;
   /* Center the element */
@@ -1018,8 +971,6 @@
     max-width: 1536px;
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .centered {
   display: grid;
   place-content: center;
@@ -1055,8 +1006,6 @@
     place-content: center;
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .sr-only {
   border: 0;
   clip: rect(0 0 0 0);
@@ -1134,8 +1083,6 @@
     width: 1px;
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .not-sr-only {
   clip: unset;
   height: auto;
@@ -1201,8 +1148,6 @@
     width: auto;
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .mask {
   mask-position: center;
   mask-repeat: no-repeat;
@@ -1266,14 +1211,10 @@
   mask-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTUwcHgiIGhlaWdodD0iMTc0cHgiIHZpZXdCb3g9IjAgMCAxNTAgMTc0IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCA2MC4xICg4ODEzMykgLSBodHRwczovL3NrZXRjaC5jb20gLS0+CiAgICA8dGl0bGU+dHJpYW5nbGUtcmlnaHQ8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8cG9seWdvbiBpZD0idHJpYW5nbGUtcmlnaHQiIGZpbGw9IiMwMDAwMDAiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUwLjAwMDAwMCwgODcuMTA3MTQzKSByb3RhdGUoLTI3MC4wMDAwMDApIHRyYW5zbGF0ZSgtNTAuMDAwMDAwLCAtODcuMTA3MTQzKSAiIHBvaW50cz0iNTAgMTM2LjQ3NjE3NyAtMzYuNjAyNTQwNCAxMzYuNjYwNzE0IDYuODU5OTgzNzQgNjIuNDIyNjI1OSA1MCAtMTIgOTMuMTQwMDE2MyA2Mi40MjI2MjU5IDEzNi42MDI1NCAxMzYuNjYwNzE0Ij48L3BvbHlnb24+CiAgICA8L2c+Cjwvc3ZnPg==");
 }
 
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .transition-none {
   transition-property: none;
 }
 
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .transition {
   transition-delay: var(--koi-transition-delay, 0);
   transition-duration: var(--koi-transition-duration, 200ms);
@@ -1281,8 +1222,6 @@
   transition-timing-function: var(--koi-transition-timing-function, cubic-bezier(0.25, 0.1, 0.25, 1));
 }
 
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .transition-colors {
   transition-delay: var(--koi-transition-delay, );
   transition-duration: var(--koi-transition-duration, 200ms);
@@ -1290,8 +1229,6 @@
   transition-timing-function: var(--koi-transition-timing-function, cubic-bezier(0.25, 0.1, 0.25, 1));
 }
 
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .transition-opacity {
   transition-delay: var(--koi-transition-delay, );
   transition-duration: var(--koi-transition-duration, 200ms);
@@ -1299,8 +1236,6 @@
   transition-timing-function: var(--koi-transition-timing-function, cubic-bezier(0.25, 0.1, 0.25, 1));
 }
 
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .transition-shadow {
   transition-delay: var(--koi-transition-delay, );
   transition-duration: var(--koi-transition-duration, 200ms);
@@ -1308,8 +1243,6 @@
   transition-timing-function: var(--koi-transition-timing-function, cubic-bezier(0.25, 0.1, 0.25, 1));
 }
 
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .transition-transform {
   transition-delay: var(--koi-transition-delay, );
   transition-duration: var(--koi-transition-duration, 200ms);
@@ -1317,8 +1250,6 @@
   transition-timing-function: var(--koi-transition-timing-function, cubic-bezier(0.25, 0.1, 0.25, 1));
 }
 
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .text-2xs {
   font-size: 0.625rem;
   line-height: 0.75rem;
@@ -1354,8 +1285,6 @@
     line-height: 0.75rem;
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
@@ -1391,8 +1320,6 @@
     line-height: 1rem;
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -1428,8 +1355,6 @@
     line-height: 1.25rem;
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .text-md {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -1465,8 +1390,6 @@
     line-height: 1.5rem;
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -1502,8 +1425,6 @@
     line-height: 1.75rem;
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -1539,8 +1460,6 @@
     line-height: 1.75rem;
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -1576,8 +1495,6 @@
     line-height: 2rem;
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -1613,8 +1530,6 @@
     line-height: 2.25rem;
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
@@ -1650,8 +1565,6 @@
     line-height: 2.5rem;
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
@@ -1687,8 +1600,6 @@
     line-height: 1;
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .text-6xl {
   font-size: 3.75rem;
   line-height: 1;
@@ -1724,8 +1635,6 @@
     line-height: 1;
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .text-7xl {
   font-size: 4.5rem;
   line-height: 1;
@@ -1761,8 +1670,6 @@
     line-height: 1;
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .text-8xl {
   font-size: 6rem;
   line-height: 1;
@@ -1798,8 +1705,6 @@
     line-height: 1;
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .text-9xl {
   font-size: 8rem;
   line-height: 1;
@@ -1835,15 +1740,12 @@
     line-height: 1;
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .truncate {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-/*! purgecss end ignore */
 .animation-blink {
   animation: blink 1s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
 }

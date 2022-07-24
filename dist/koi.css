@@ -431,15 +431,12 @@ select {
   --animation-slide-in-left: slide-in-left 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
   --animation-shake-x: shake-x 0.75s cubic-bezier(0, 0, 0.2, 1);
   --animation-shake-y: shake-y 0.75s cubic-bezier(0, 0, 0.2, 1);
-  /*! purgecss start ignore */
   --linear: linear;
   --ease: cubic-bezier(0.25, 0.1, 0.25, 1);
   --ease-in: cubic-bezier(0.4, 0, 1, 1);
   --ease-out: cubic-bezier(0, 0, 0.2, 1);
   --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
   --ease-elastic: cubic-bezier(0.5, 1, 0.75, 1.25);
-  /*! purgecss end ignore */
-  /*! purgecss start ignore */
   --duration-ultra-fast: 25ms;
   --duration-super-fast: 50ms;
   --duration-fastest: 75ms;
@@ -466,8 +463,6 @@ select {
   --duration-500: 500ms;
   --duration-700: 700ms;
   --duration-1000: 1000ms;
-  /*! purgecss end ignore */
-  /*! purgecss start ignore */
   --delay-75: 75ms;
   --delay-100: 100ms;
   --delay-150: 150ms;
@@ -476,8 +471,6 @@ select {
   --delay-500: 500ms;
   --delay-700: 700ms;
   --delay-1000: 1000ms;
-  /*! purgecss end ignore */
-  /*! purgecss start ignore */
   --radius-xs: 2px;
   --radius-sm: 3px;
   --radius-md: 4px;
@@ -487,8 +480,6 @@ select {
   --radius-3xl: 16px;
   --radius-4xl: 24px;
   --radius-full: 9999px;
-  /*! purgecss end ignore */
-  /*! purgecss start ignore */
   --color-accent-0: hsl(151.7647058824deg, 80.9523809524%, 95.8823529412%);
   --color-accent-0-h: 151.7647058824deg;
   --color-accent-0-s: 80.9523809524%;
@@ -1133,8 +1124,6 @@ select {
   --color-neutral-9-r: 23;
   --color-neutral-9-g: 23;
   --color-neutral-9-b: 23;
-  /*! purgecss end ignore */
-  /*! purgecss start ignore */
   --gradient-1: linear-gradient(var(--koi-gradient-direction, to right), #43cea2, #185a9d);
   --gradient-2: linear-gradient(var(--koi-gradient-direction, 225deg), #fe047c 10%, #ffae02 100%);
   --gradient-3: linear-gradient(var(--koi-gradient-direction, 45deg), #fbda61 0%, #ff5acd 100%);
@@ -1150,8 +1139,6 @@ select {
   --gradient-13: linear-gradient(var(--koi-gradient-direction, to bottom right), #00f5a0, #00d9f5);
   --gradient-14: linear-gradient(var(--koi-gradient-direction, 43deg), #4158d0 0%, #c850c0 46%, #ffcc70 100%);
   --gradient-15: linear-gradient(var(--koi-gradient-direction, 90deg), #fad961 0%, #f76b1c 100%);
-  /*! purgecss end ignore */
-  /*! purgecss start ignore */
   --z-hidden: -100;
   --z-lower: -2;
   --z-below: -1;
@@ -1166,15 +1153,11 @@ select {
   --z-popover: 600;
   --z-tooltip: 700;
   --z-uber: 4815162342;
-  /*! purgecss end ignore */
-  /*! purgecss start ignore */
   --screen-sm: 640px;
   --screen-md: 768px;
   --screen-lg: 1024px;
   --screen-xl: 1280px;
   --screen-2xl: 1536px;
-  /*! purgecss end ignore */
-  /*! purgecss start ignore */
   --shadow-xs: 0 1px 2px 0 rgba(var(--koi-shadow-color, 0 0 0) / 0.05);
   --shadow-sm: 0 1px 3px 0 rgb(var(--koi-shadow-color, 0 0 0) / 0.1), 0 1px 2px -1px rgb(var(--koi-shadow-color, 0 0 0) / 0.1);
   --shadow-md: 0 4px 6px -1px rgba(var(--koi-shadow-color, 0 0 0) / 0.1), 0 2px 4px -1px rgba(var(--koi-shadow-color, 0 0 0) / 0.06);
@@ -1185,8 +1168,6 @@ select {
   --shadow-outline: var(--koi-shadow-color, 0 0 0) 3px rgba(66 153 225 / 0.5);
   --shadow-solid: var(--koi-shadow-color, 0 0 0) 2px currentColor;
   --shadow-none: 0 0 #0000;
-  /*! purgecss end ignore */
-  /*! purgecss start ignore */
   --size-0: 0;
   --size-1: 0.0625rem;
   --size-2: 0.125rem;
@@ -1232,15 +1213,11 @@ select {
   --size-2xl: 4rem;
   --size-3xl: 5rem;
   --size-4xl: 10rem;
-  /*! purgecss end ignore */
-  /*! purgecss start ignore */
   --font-base: "Open Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-headings: "Montserrat", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  /*! purgecss end ignore */
-  /*! purgecss start ignore */
   --font-size-2xs: 0.625rem;
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
@@ -1255,8 +1232,6 @@ select {
   --font-size-7xl: 4.5rem;
   --font-size-8xl: 6rem;
   --font-size-9xl: 8rem;
-  /*! purgecss end ignore */
-  /*! purgecss start ignore */
   --fluid-font-size-2xs: clamp(0.58rem, 0.21vw + 0.5rem, 0.69rem);
   --fluid-font-size-xs: clamp(0.69rem, 0.25vw + 0.6rem, 0.83rem);
   --fluid-font-size-sm: clamp(0.83rem, 0.3vw + 0.71rem, 1rem);
@@ -1271,8 +1246,6 @@ select {
   --fluid-font-size-7xl: clamp(4.3rem, 1.54vw + 3.69rem, 5.16rem);
   --fluid-font-size-8xl: clamp(5.16rem, 1.84vw + 4.42rem, 6.19rem);
   --fluid-font-size-9xl: clamp(6.19rem, 2.21vw + 5.31rem, 7.43rem);
-  /*! purgecss end ignore */
-  /*! purgecss start ignore */
   --font-thin: 100;
   --font-extralight: 200;
   --font-light: 300;
@@ -1282,8 +1255,6 @@ select {
   --font-bold: 700;
   --font-extrabold: 800;
   --font-black: 900;
-  /*! purgecss end ignore */
-  /*! purgecss start ignore */
   --leading-1: 0.5rem;
   --leading-2: 0.625rem;
   --leading-3: 0.75rem;
@@ -1300,8 +1271,6 @@ select {
   --leading-normal: 1.5;
   --leading-relaxed: 1.625;
   --leading-loose: 2;
-  /*! purgecss end ignore */
-  /*! purgecss start ignore */
   --tracking-tightest: -0.08em;
   --tracking-tighter: -0.05em;
   --tracking-tight: -0.025em;
@@ -1309,7 +1278,6 @@ select {
   --tracking-wide: 0.025em;
   --tracking-wider: 0.05em;
   --tracking-widest: 0.1em;
-  /*! purgecss end ignore */
 }
 :root .accent-grey {
   --color-accent-0: hsl(210deg, 20%, 98.0392156863%);
@@ -2617,7 +2585,6 @@ html {
   color-scheme: dark;
 }
 
-/*! purgecss start ignore */
 @-webkit-keyframes blink {
   0%, 100% {
     opacity: 1;
@@ -2626,6 +2593,7 @@ html {
     opacity: 0.5;
   }
 }
+
 @keyframes blink {
   0%, 100% {
     opacity: 1;
@@ -2991,7 +2959,6 @@ html {
   }
 }
 
-/*! purgecss end ignore */
 p,
 li,
 h1,
@@ -5549,7 +5516,6 @@ kbd {
   vertical-align: middle;
 }
 
-/*! purgecss start ignore */
 .space-x-2xs > :not([hidden]) ~ :not([hidden]) {
   margin-right: calc(0.125rem * var(--koi-space-x-reverse, 0));
   margin-left: calc(0.125rem * (1 - var(--koi-space-x-reverse, 0)));
@@ -5585,8 +5551,6 @@ kbd {
     margin-left: calc(0.125rem * (1 - var(--koi-space-x-reverse, 0)));
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .space-y-2xs > :not([hidden]) ~ :not([hidden]) {
   margin-top: calc(0.125rem * (1 - var(--koi-space-y-reverse, 0)));
   margin-bottom: calc(0.125rem * var(--koi-space-y-reverse, 0));
@@ -5622,8 +5586,6 @@ kbd {
     margin-bottom: calc(0.125rem * var(--koi-space-y-reverse, 0));
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .space-x-xs > :not([hidden]) ~ :not([hidden]) {
   margin-right: calc(0.25rem * var(--koi-space-x-reverse, 0));
   margin-left: calc(0.25rem * (1 - var(--koi-space-x-reverse, 0)));
@@ -5659,8 +5621,6 @@ kbd {
     margin-left: calc(0.25rem * (1 - var(--koi-space-x-reverse, 0)));
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .space-y-xs > :not([hidden]) ~ :not([hidden]) {
   margin-top: calc(0.25rem * (1 - var(--koi-space-y-reverse, 0)));
   margin-bottom: calc(0.25rem * var(--koi-space-y-reverse, 0));
@@ -5696,8 +5656,6 @@ kbd {
     margin-bottom: calc(0.25rem * var(--koi-space-y-reverse, 0));
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .space-x-sm > :not([hidden]) ~ :not([hidden]) {
   margin-right: calc(0.5rem * var(--koi-space-x-reverse, 0));
   margin-left: calc(0.5rem * (1 - var(--koi-space-x-reverse, 0)));
@@ -5733,8 +5691,6 @@ kbd {
     margin-left: calc(0.5rem * (1 - var(--koi-space-x-reverse, 0)));
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .space-y-sm > :not([hidden]) ~ :not([hidden]) {
   margin-top: calc(0.5rem * (1 - var(--koi-space-y-reverse, 0)));
   margin-bottom: calc(0.5rem * var(--koi-space-y-reverse, 0));
@@ -5770,8 +5726,6 @@ kbd {
     margin-bottom: calc(0.5rem * var(--koi-space-y-reverse, 0));
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .space-x-md > :not([hidden]) ~ :not([hidden]) {
   margin-right: calc(1rem * var(--koi-space-x-reverse, 0));
   margin-left: calc(1rem * (1 - var(--koi-space-x-reverse, 0)));
@@ -5807,8 +5761,6 @@ kbd {
     margin-left: calc(1rem * (1 - var(--koi-space-x-reverse, 0)));
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .space-y-md > :not([hidden]) ~ :not([hidden]) {
   margin-top: calc(1rem * (1 - var(--koi-space-y-reverse, 0)));
   margin-bottom: calc(1rem * var(--koi-space-y-reverse, 0));
@@ -5844,8 +5796,6 @@ kbd {
     margin-bottom: calc(1rem * var(--koi-space-y-reverse, 0));
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .space-x-lg > :not([hidden]) ~ :not([hidden]) {
   margin-right: calc(1.5rem * var(--koi-space-x-reverse, 0));
   margin-left: calc(1.5rem * (1 - var(--koi-space-x-reverse, 0)));
@@ -5881,8 +5831,6 @@ kbd {
     margin-left: calc(1.5rem * (1 - var(--koi-space-x-reverse, 0)));
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .space-y-lg > :not([hidden]) ~ :not([hidden]) {
   margin-top: calc(1.5rem * (1 - var(--koi-space-y-reverse, 0)));
   margin-bottom: calc(1.5rem * var(--koi-space-y-reverse, 0));
@@ -5918,8 +5866,6 @@ kbd {
     margin-bottom: calc(1.5rem * var(--koi-space-y-reverse, 0));
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .space-x-xl > :not([hidden]) ~ :not([hidden]) {
   margin-right: calc(3rem * var(--koi-space-x-reverse, 0));
   margin-left: calc(3rem * (1 - var(--koi-space-x-reverse, 0)));
@@ -5955,8 +5901,6 @@ kbd {
     margin-left: calc(3rem * (1 - var(--koi-space-x-reverse, 0)));
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .space-y-xl > :not([hidden]) ~ :not([hidden]) {
   margin-top: calc(3rem * (1 - var(--koi-space-y-reverse, 0)));
   margin-bottom: calc(3rem * var(--koi-space-y-reverse, 0));
@@ -5992,8 +5936,6 @@ kbd {
     margin-bottom: calc(3rem * var(--koi-space-y-reverse, 0));
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .space-x-2xl > :not([hidden]) ~ :not([hidden]) {
   margin-right: calc(4rem * var(--koi-space-x-reverse, 0));
   margin-left: calc(4rem * (1 - var(--koi-space-x-reverse, 0)));
@@ -6029,8 +5971,6 @@ kbd {
     margin-left: calc(4rem * (1 - var(--koi-space-x-reverse, 0)));
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .space-y-2xl > :not([hidden]) ~ :not([hidden]) {
   margin-top: calc(4rem * (1 - var(--koi-space-y-reverse, 0)));
   margin-bottom: calc(4rem * var(--koi-space-y-reverse, 0));
@@ -6066,8 +6006,6 @@ kbd {
     margin-bottom: calc(4rem * var(--koi-space-y-reverse, 0));
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .space-x-3xl > :not([hidden]) ~ :not([hidden]) {
   margin-right: calc(5rem * var(--koi-space-x-reverse, 0));
   margin-left: calc(5rem * (1 - var(--koi-space-x-reverse, 0)));
@@ -6103,8 +6041,6 @@ kbd {
     margin-left: calc(5rem * (1 - var(--koi-space-x-reverse, 0)));
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .space-y-3xl > :not([hidden]) ~ :not([hidden]) {
   margin-top: calc(5rem * (1 - var(--koi-space-y-reverse, 0)));
   margin-bottom: calc(5rem * var(--koi-space-y-reverse, 0));
@@ -6140,8 +6076,6 @@ kbd {
     margin-bottom: calc(5rem * var(--koi-space-y-reverse, 0));
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .space-x-4xl > :not([hidden]) ~ :not([hidden]) {
   margin-right: calc(10rem * var(--koi-space-x-reverse, 0));
   margin-left: calc(10rem * (1 - var(--koi-space-x-reverse, 0)));
@@ -6177,8 +6111,6 @@ kbd {
     margin-left: calc(10rem * (1 - var(--koi-space-x-reverse, 0)));
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .space-y-4xl > :not([hidden]) ~ :not([hidden]) {
   margin-top: calc(10rem * (1 - var(--koi-space-y-reverse, 0)));
   margin-bottom: calc(10rem * var(--koi-space-y-reverse, 0));
@@ -6214,8 +6146,6 @@ kbd {
     margin-bottom: calc(10rem * var(--koi-space-y-reverse, 0));
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .space-x-0 > :not([hidden]) ~ :not([hidden]) {
   margin-right: calc(0 * var(--koi-space-x-reverse, 0));
   margin-left: calc(0 * (1 - var(--koi-space-x-reverse, 0)));
@@ -6251,8 +6181,6 @@ kbd {
     margin-left: calc(0 * (1 - var(--koi-space-x-reverse, 0)));
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .space-y-0 > :not([hidden]) ~ :not([hidden]) {
   margin-top: calc(0 * (1 - var(--koi-space-y-reverse, 0)));
   margin-bottom: calc(0 * var(--koi-space-y-reverse, 0));
@@ -6288,8 +6216,6 @@ kbd {
     margin-bottom: calc(0 * var(--koi-space-y-reverse, 0));
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .space-x-reverse {
   --koi-space-x-reverse: 1;
 }
@@ -6319,8 +6245,6 @@ kbd {
     --koi-space-x-reverse: 1;
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .space-y-reverse {
   --koi-space-y-reverse: 1;
 }
@@ -6350,8 +6274,6 @@ kbd {
     --koi-space-y-reverse: 1;
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .stack {
   align-items: flex-end;
   display: inline-grid;
@@ -6379,8 +6301,6 @@ kbd {
   z-index: 2;
 }
 
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .container {
   width: 100%;
   /* Center the element */
@@ -6566,8 +6486,6 @@ kbd {
     max-width: 1536px;
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .centered {
   display: grid;
   place-content: center;
@@ -6603,8 +6521,6 @@ kbd {
     place-content: center;
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .sr-only {
   border: 0;
   clip: rect(0 0 0 0);
@@ -6682,8 +6598,6 @@ kbd {
     width: 1px;
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .not-sr-only {
   clip: unset;
   height: auto;
@@ -6749,8 +6663,6 @@ kbd {
     width: auto;
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .mask {
   -webkit-mask-position: center;
           mask-position: center;
@@ -6836,14 +6748,10 @@ kbd {
           mask-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTUwcHgiIGhlaWdodD0iMTc0cHgiIHZpZXdCb3g9IjAgMCAxNTAgMTc0IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCA2MC4xICg4ODEzMykgLSBodHRwczovL3NrZXRjaC5jb20gLS0+CiAgICA8dGl0bGU+dHJpYW5nbGUtcmlnaHQ8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8cG9seWdvbiBpZD0idHJpYW5nbGUtcmlnaHQiIGZpbGw9IiMwMDAwMDAiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUwLjAwMDAwMCwgODcuMTA3MTQzKSByb3RhdGUoLTI3MC4wMDAwMDApIHRyYW5zbGF0ZSgtNTAuMDAwMDAwLCAtODcuMTA3MTQzKSAiIHBvaW50cz0iNTAgMTM2LjQ3NjE3NyAtMzYuNjAyNTQwNCAxMzYuNjYwNzE0IDYuODU5OTgzNzQgNjIuNDIyNjI1OSA1MCAtMTIgOTMuMTQwMDE2MyA2Mi40MjI2MjU5IDEzNi42MDI1NCAxMzYuNjYwNzE0Ij48L3BvbHlnb24+CiAgICA8L2c+Cjwvc3ZnPg==");
 }
 
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .transition-none {
   transition-property: none;
 }
 
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .transition {
   transition-delay: var(--koi-transition-delay, 0);
   transition-duration: var(--koi-transition-duration, 200ms);
@@ -6851,8 +6759,6 @@ kbd {
   transition-timing-function: var(--koi-transition-timing-function, cubic-bezier(0.25, 0.1, 0.25, 1));
 }
 
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .transition-colors {
   transition-delay: var(--koi-transition-delay, );
   transition-duration: var(--koi-transition-duration, 200ms);
@@ -6860,8 +6766,6 @@ kbd {
   transition-timing-function: var(--koi-transition-timing-function, cubic-bezier(0.25, 0.1, 0.25, 1));
 }
 
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .transition-opacity {
   transition-delay: var(--koi-transition-delay, );
   transition-duration: var(--koi-transition-duration, 200ms);
@@ -6869,8 +6773,6 @@ kbd {
   transition-timing-function: var(--koi-transition-timing-function, cubic-bezier(0.25, 0.1, 0.25, 1));
 }
 
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .transition-shadow {
   transition-delay: var(--koi-transition-delay, );
   transition-duration: var(--koi-transition-duration, 200ms);
@@ -6878,8 +6780,6 @@ kbd {
   transition-timing-function: var(--koi-transition-timing-function, cubic-bezier(0.25, 0.1, 0.25, 1));
 }
 
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .transition-transform {
   transition-delay: var(--koi-transition-delay, );
   transition-duration: var(--koi-transition-duration, 200ms);
@@ -6887,8 +6787,6 @@ kbd {
   transition-timing-function: var(--koi-transition-timing-function, cubic-bezier(0.25, 0.1, 0.25, 1));
 }
 
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .text-2xs {
   font-size: 0.625rem;
   line-height: 0.75rem;
@@ -6924,8 +6822,6 @@ kbd {
     line-height: 0.75rem;
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
@@ -6961,8 +6857,6 @@ kbd {
     line-height: 1rem;
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -6998,8 +6892,6 @@ kbd {
     line-height: 1.25rem;
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .text-md {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -7035,8 +6927,6 @@ kbd {
     line-height: 1.5rem;
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -7072,8 +6962,6 @@ kbd {
     line-height: 1.75rem;
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -7109,8 +6997,6 @@ kbd {
     line-height: 1.75rem;
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -7146,8 +7032,6 @@ kbd {
     line-height: 2rem;
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -7183,8 +7067,6 @@ kbd {
     line-height: 2.25rem;
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
@@ -7220,8 +7102,6 @@ kbd {
     line-height: 2.5rem;
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
@@ -7257,8 +7137,6 @@ kbd {
     line-height: 1;
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .text-6xl {
   font-size: 3.75rem;
   line-height: 1;
@@ -7294,8 +7172,6 @@ kbd {
     line-height: 1;
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .text-7xl {
   font-size: 4.5rem;
   line-height: 1;
@@ -7331,8 +7207,6 @@ kbd {
     line-height: 1;
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .text-8xl {
   font-size: 6rem;
   line-height: 1;
@@ -7368,8 +7242,6 @@ kbd {
     line-height: 1;
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .text-9xl {
   font-size: 8rem;
   line-height: 1;
@@ -7405,15 +7277,12 @@ kbd {
     line-height: 1;
   }
 }
-/*! purgecss end ignore */
-/*! purgecss start ignore */
 .truncate {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-/*! purgecss end ignore */
 .animation-blink {
   -webkit-animation: blink 1s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
           animation: blink 1s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
