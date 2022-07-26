@@ -13,6 +13,16 @@
   mask-size: contain;
 }
 
+@mixin mask-half-1 {
+  mask-position: left;
+  mask-size: 200%;
+}
+
+@mixin mask-half-2 {
+  mask-position: right;
+  mask-size: 200%;
+}
+
 @mixin mask-squircle {
   mask-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KCiAgPHBhdGggZD0iTSAxMDAgMCBDIDIwIDAgMCAyMCAwIDEwMCBDIDAgMTgwIDIwIDIwMCAxMDAgMjAwIEMgMTgwIDIwMCAyMDAgMTgwIDIwMCAxMDAgQyAyMDAgMjAgMTgwIDAgMTAwIDAgWiIvPgoKPC9zdmc+');
 }

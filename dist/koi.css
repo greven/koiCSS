@@ -6671,6 +6671,18 @@ kbd {
   -webkit-mask-size: contain;
           mask-size: contain;
 }
+.mask-half-1 {
+  -webkit-mask-position: left;
+          mask-position: left;
+  -webkit-mask-size: 200%;
+          mask-size: 200%;
+}
+.mask-half-2 {
+  -webkit-mask-position: right;
+          mask-position: right;
+  -webkit-mask-size: 200%;
+          mask-size: 200%;
+}
 .mask-squircle {
   -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KCiAgPHBhdGggZD0iTSAxMDAgMCBDIDIwIDAgMCAyMCAwIDEwMCBDIDAgMTgwIDIwIDIwMCAxMDAgMjAwIEMgMTgwIDIwMCAyMDAgMTgwIDIwMCAxMDAgQyAyMDAgMjAgMTgwIDAgMTAwIDAgWiIvPgoKPC9zdmc+");
           mask-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KCiAgPHBhdGggZD0iTSAxMDAgMCBDIDIwIDAgMCAyMCAwIDEwMCBDIDAgMTgwIDIwIDIwMCAxMDAgMjAwIEMgMTgwIDIwMCAyMDAgMTgwIDIwMCAxMDAgQyAyMDAgMjAgMTgwIDAgMTAwIDAgWiIvPgoKPC9zdmc+");
@@ -7813,6 +7825,30 @@ kbd {
 
 .bg-contain {
   background-size: contain;
+}
+
+.bg-repeat {
+  background-repeat: repeat;
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat;
+}
+
+.bg-repeat-x {
+  background-repeat: repeat-x;
+}
+
+.bg-repeat-y {
+  background-repeat: repeat-y;
+}
+
+.bg-repeat-round {
+  background-repeat: round;
+}
+
+.bg-repeat-space {
+  background-repeat: space;
 }
 
 .bg-clip-border, .focus\:bg-clip-border:focus, .hover\:bg-clip-border:hover {

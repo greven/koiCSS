@@ -15,6 +15,14 @@
   @include create-utility(mask) {
     @include mask;
 
+    &-half-1 {
+      @include mask-half-1;
+    }
+
+    &-half-2 {
+      @include mask-half-2;
+    }
+
     &-squircle {
       @include mask-squircle;
     }

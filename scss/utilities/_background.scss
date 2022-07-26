@@ -36,6 +36,18 @@ $utilities: (
     class: bg,
     values: auto cover contain,
   ),
+  background-repeat: (
+    property: background-repeat,
+    class: bg,
+    values: (
+      repeat: repeat,
+      no-repeat: no-repeat,
+      repeat-x: repeat-x,
+      repeat-y: repeat-y,
+      repeat-round: round,
+      repeat-space: space,
+    ),
+  ),
   background-clip: (
     property: background-clip,
     class: bg-clip,
