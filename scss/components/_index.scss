@@ -1,6 +1,7 @@
 @forward 'badge' as badge-*;
 @forward 'button' as button-*;
 @forward 'card' as card-*;
+@forward 'indicator' as indicator-*;
 @forward 'keyboard' as keyboard-*;
 @forward 'loader' as loader-*;
 @forward 'navbar' as navbar-*;
@@ -9,6 +10,7 @@
 @use 'badge';
 @use 'button';
 @use 'card';
+@use 'indicator';
 @use 'keyboard';
 @use 'navbar';
 @use 'tooltip';
@@ -17,6 +19,7 @@
   @include badge.styles();
   @include button.styles();
   // @include card.styles();
+  @include indicator.styles();
   @include keyboard.styles();
   // @include navbar.styles();
   // @include tooltip.styles();

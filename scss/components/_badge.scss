@@ -15,6 +15,7 @@ $class: '.badge';
 // Defaults
 $height: 20px;
 $height-large: 24px;
+$height-dot: 16px;
 
 $font-size: font(xs);
 $font-size-large: font(sm);
@@ -149,7 +150,7 @@ $padding-x-large: spacing(14);
   }
 }
 
-@mixin dot {
+@mixin status {
   --koi-badge-background: transparent;
   --koi-badge-border-color: #{fill(cnt, 2)};
   --koi-badge-foreground: #{fill(cnt, 8)};
@@ -196,6 +197,13 @@ $padding-x-large: spacing(14);
       }
     }
   }
+}
+
+@mixin dot {
+  border-radius: radius(full);
+  height: var(--koi-badge-height, $height-dot);
+  padding: 0;
+  width: var(--koi-badge-height, $height-dot);
 }
 
 @mixin group {
@@ -258,6 +266,10 @@ $padding-x-large: spacing(14);
 
     &--outline {
       @include outline;
+    }
+
+    &--status {
+      @include status;
     }
 
     &--dot {

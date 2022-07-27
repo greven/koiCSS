@@ -3095,517 +3095,6 @@ dl dd + dt {
           padding-inline-start: 1.5rem;
 }
 
-.badge {
-  transition-delay: var(--koi-transition-delay, 0);
-  transition-duration: var(--koi-transition-duration, 150ms);
-  transition-property: var(--koi-transition-property, color, background-color, border-color, transform);
-  transition-timing-function: var(--koi-transition-timing-function, cubic-bezier(0.25, 0.1, 0.25, 1));
-  align-items: center;
-  background-color: var(--koi-badge-background, hsl(var(--color-cnt-1-h), var(--color-cnt-1-s), var(--color-cnt-1-l), 1));
-  border-color: var(--koi-badge-border-color, transparent);
-  border-radius: var(--koi-badge-border-radius, 9999px);
-  border-style: var(--koi-badge-border-style, solid);
-  border-width: var(--koi-badge-border-width, 1px);
-  color: var(--koi-badge-foreground, hsl(var(--color-cnt-6-h), var(--color-cnt-6-s), var(--color-cnt-6-l), 1));
-  display: inline-flex;
-  flex-grow: 0;
-  font-size: var(--koi-badge-font-size, 0.75rem);
-  font-weight: var(--koi-badge-font-weight, 600);
-  height: var(--koi-badge-height, 20px);
-  justify-content: center;
-  letter-spacing: var(--koi-badge-tracking, 0.025em);
-  line-height: var(--koi-badge-leading, 1rem);
-  overflow: hidden;
-  padding: 0 var(--koi-badge-padding-x, 11px);
-  text-decoration: none;
-  text-overflow: ellipsis;
-  text-transform: var(--koi-badge-text-transform, uppercase);
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .badge {
-    --koi-badge-background: hsl(var(--color-cnt-2-h), var(--color-cnt-2-s), var(--color-cnt-2-l), 1);
-  }
-}
-:root[data-theme=dark] .badge, :root[color-scheme=dark] .badge {
-  --koi-badge-background: hsl(var(--color-cnt-2-h), var(--color-cnt-2-s), var(--color-cnt-2-l), 1);
-}
-
-.badge.badge--accent {
-  --koi-badge-background: hsl(var(--color-accent-1-h), var(--color-accent-1-s), var(--color-accent-1-l), 1);
-  --koi-badge-foreground: hsl(var(--color-accent-8-h), var(--color-accent-8-s), var(--color-accent-8-l), 1);
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .badge.badge--accent {
-    --koi-badge-background: hsl(var(--color-accent-8-h), var(--color-accent-8-s), var(--color-accent-8-l), 0.2);
-    --koi-badge-foreground: hsl(var(--color-accent-5-h), var(--color-accent-5-s), var(--color-accent-5-l), 1);
-  }
-}
-:root[data-theme=dark] .badge.badge--accent, :root[color-scheme=dark] .badge.badge--accent {
-  --koi-badge-background: hsl(var(--color-accent-8-h), var(--color-accent-8-s), var(--color-accent-8-l), 0.2);
-  --koi-badge-foreground: hsl(var(--color-accent-5-h), var(--color-accent-5-s), var(--color-accent-5-l), 1);
-}
-
-.badge.badge--primary {
-  --koi-badge-background: hsl(var(--color-primary-1-h), var(--color-primary-1-s), var(--color-primary-1-l), 1);
-  --koi-badge-foreground: hsl(var(--color-primary-8-h), var(--color-primary-8-s), var(--color-primary-8-l), 1);
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .badge.badge--primary {
-    --koi-badge-background: hsl(var(--color-primary-8-h), var(--color-primary-8-s), var(--color-primary-8-l), 0.2);
-    --koi-badge-foreground: hsl(var(--color-primary-5-h), var(--color-primary-5-s), var(--color-primary-5-l), 1);
-  }
-}
-:root[data-theme=dark] .badge.badge--primary, :root[color-scheme=dark] .badge.badge--primary {
-  --koi-badge-background: hsl(var(--color-primary-8-h), var(--color-primary-8-s), var(--color-primary-8-l), 0.2);
-  --koi-badge-foreground: hsl(var(--color-primary-5-h), var(--color-primary-5-s), var(--color-primary-5-l), 1);
-}
-
-.badge.badge--secondary {
-  --koi-badge-background: hsl(var(--color-secondary-1-h), var(--color-secondary-1-s), var(--color-secondary-1-l), 1);
-  --koi-badge-foreground: hsl(var(--color-secondary-8-h), var(--color-secondary-8-s), var(--color-secondary-8-l), 1);
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .badge.badge--secondary {
-    --koi-badge-background: hsl(var(--color-secondary-8-h), var(--color-secondary-8-s), var(--color-secondary-8-l), 0.2);
-    --koi-badge-foreground: hsl(var(--color-secondary-5-h), var(--color-secondary-5-s), var(--color-secondary-5-l), 1);
-  }
-}
-:root[data-theme=dark] .badge.badge--secondary, :root[color-scheme=dark] .badge.badge--secondary {
-  --koi-badge-background: hsl(var(--color-secondary-8-h), var(--color-secondary-8-s), var(--color-secondary-8-l), 0.2);
-  --koi-badge-foreground: hsl(var(--color-secondary-5-h), var(--color-secondary-5-s), var(--color-secondary-5-l), 1);
-}
-
-.badge.badge--neutral {
-  --koi-badge-background: hsl(var(--color-neutral-1-h), var(--color-neutral-1-s), var(--color-neutral-1-l), 1);
-  --koi-badge-foreground: hsl(var(--color-neutral-8-h), var(--color-neutral-8-s), var(--color-neutral-8-l), 1);
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .badge.badge--neutral {
-    --koi-badge-background: hsl(var(--color-neutral-8-h), var(--color-neutral-8-s), var(--color-neutral-8-l), 0.2);
-    --koi-badge-foreground: hsl(var(--color-neutral-5-h), var(--color-neutral-5-s), var(--color-neutral-5-l), 1);
-  }
-}
-:root[data-theme=dark] .badge.badge--neutral, :root[color-scheme=dark] .badge.badge--neutral {
-  --koi-badge-background: hsl(var(--color-neutral-8-h), var(--color-neutral-8-s), var(--color-neutral-8-l), 0.2);
-  --koi-badge-foreground: hsl(var(--color-neutral-5-h), var(--color-neutral-5-s), var(--color-neutral-5-l), 1);
-}
-
-.badge.badge--info {
-  --koi-badge-background: hsl(var(--color-info-1-h), var(--color-info-1-s), var(--color-info-1-l), 1);
-  --koi-badge-foreground: hsl(var(--color-info-8-h), var(--color-info-8-s), var(--color-info-8-l), 1);
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .badge.badge--info {
-    --koi-badge-background: hsl(var(--color-info-8-h), var(--color-info-8-s), var(--color-info-8-l), 0.2);
-    --koi-badge-foreground: hsl(var(--color-info-5-h), var(--color-info-5-s), var(--color-info-5-l), 1);
-  }
-}
-:root[data-theme=dark] .badge.badge--info, :root[color-scheme=dark] .badge.badge--info {
-  --koi-badge-background: hsl(var(--color-info-8-h), var(--color-info-8-s), var(--color-info-8-l), 0.2);
-  --koi-badge-foreground: hsl(var(--color-info-5-h), var(--color-info-5-s), var(--color-info-5-l), 1);
-}
-
-.badge.badge--success {
-  --koi-badge-background: hsl(var(--color-success-1-h), var(--color-success-1-s), var(--color-success-1-l), 1);
-  --koi-badge-foreground: hsl(var(--color-success-8-h), var(--color-success-8-s), var(--color-success-8-l), 1);
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .badge.badge--success {
-    --koi-badge-background: hsl(var(--color-success-8-h), var(--color-success-8-s), var(--color-success-8-l), 0.2);
-    --koi-badge-foreground: hsl(var(--color-success-5-h), var(--color-success-5-s), var(--color-success-5-l), 1);
-  }
-}
-:root[data-theme=dark] .badge.badge--success, :root[color-scheme=dark] .badge.badge--success {
-  --koi-badge-background: hsl(var(--color-success-8-h), var(--color-success-8-s), var(--color-success-8-l), 0.2);
-  --koi-badge-foreground: hsl(var(--color-success-5-h), var(--color-success-5-s), var(--color-success-5-l), 1);
-}
-
-.badge.badge--warning {
-  --koi-badge-background: hsl(var(--color-warning-1-h), var(--color-warning-1-s), var(--color-warning-1-l), 1);
-  --koi-badge-foreground: hsl(var(--color-warning-8-h), var(--color-warning-8-s), var(--color-warning-8-l), 1);
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .badge.badge--warning {
-    --koi-badge-background: hsl(var(--color-warning-8-h), var(--color-warning-8-s), var(--color-warning-8-l), 0.2);
-    --koi-badge-foreground: hsl(var(--color-warning-5-h), var(--color-warning-5-s), var(--color-warning-5-l), 1);
-  }
-}
-:root[data-theme=dark] .badge.badge--warning, :root[color-scheme=dark] .badge.badge--warning {
-  --koi-badge-background: hsl(var(--color-warning-8-h), var(--color-warning-8-s), var(--color-warning-8-l), 0.2);
-  --koi-badge-foreground: hsl(var(--color-warning-5-h), var(--color-warning-5-s), var(--color-warning-5-l), 1);
-}
-
-.badge.badge--danger {
-  --koi-badge-background: hsl(var(--color-danger-1-h), var(--color-danger-1-s), var(--color-danger-1-l), 1);
-  --koi-badge-foreground: hsl(var(--color-danger-8-h), var(--color-danger-8-s), var(--color-danger-8-l), 1);
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .badge.badge--danger {
-    --koi-badge-background: hsl(var(--color-danger-8-h), var(--color-danger-8-s), var(--color-danger-8-l), 0.2);
-    --koi-badge-foreground: hsl(var(--color-danger-5-h), var(--color-danger-5-s), var(--color-danger-5-l), 1);
-  }
-}
-:root[data-theme=dark] .badge.badge--danger, :root[color-scheme=dark] .badge.badge--danger {
-  --koi-badge-background: hsl(var(--color-danger-8-h), var(--color-danger-8-s), var(--color-danger-8-l), 0.2);
-  --koi-badge-foreground: hsl(var(--color-danger-5-h), var(--color-danger-5-s), var(--color-danger-5-l), 1);
-}
-
-.badge--solid {
-  --koi-badge-background: hsl(var(--color-cnt-9-h), var(--color-cnt-9-s), var(--color-cnt-9-l), 1);
-  --koi-badge-border-color: transparent;
-  --koi-badge-foreground: hsl(var(--color-cnt-1-h), var(--color-cnt-1-s), var(--color-cnt-1-l), 1);
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .badge--solid {
-    --koi-badge-background: hsl(var(--color-cnt-9-h), var(--color-cnt-9-s), var(--color-cnt-9-l), 1);
-  }
-}
-:root[data-theme=dark] .badge--solid, :root[color-scheme=dark] .badge--solid {
-  --koi-badge-background: hsl(var(--color-cnt-9-h), var(--color-cnt-9-s), var(--color-cnt-9-l), 1);
-}
-
-.badge--solid.badge--accent {
-  --koi-badge-background: hsl(var(--color-accent-6-h), var(--color-accent-6-s), var(--color-accent-6-l), 1);
-  --koi-badge-foreground: hsl(var(--color-white-h), var(--color-white-s), var(--color-white-l), 1);
-}
-.badge--solid.badge--primary {
-  --koi-badge-background: hsl(var(--color-primary-6-h), var(--color-primary-6-s), var(--color-primary-6-l), 1);
-  --koi-badge-foreground: hsl(var(--color-white-h), var(--color-white-s), var(--color-white-l), 1);
-}
-.badge--solid.badge--secondary {
-  --koi-badge-background: hsl(var(--color-secondary-6-h), var(--color-secondary-6-s), var(--color-secondary-6-l), 1);
-  --koi-badge-foreground: hsl(var(--color-white-h), var(--color-white-s), var(--color-white-l), 1);
-}
-.badge--solid.badge--neutral {
-  --koi-badge-background: hsl(var(--color-neutral-6-h), var(--color-neutral-6-s), var(--color-neutral-6-l), 1);
-  --koi-badge-foreground: hsl(var(--color-white-h), var(--color-white-s), var(--color-white-l), 1);
-}
-.badge--solid.badge--info {
-  --koi-badge-background: hsl(var(--color-info-6-h), var(--color-info-6-s), var(--color-info-6-l), 1);
-  --koi-badge-foreground: hsl(var(--color-white-h), var(--color-white-s), var(--color-white-l), 1);
-}
-.badge--solid.badge--success {
-  --koi-badge-background: hsl(var(--color-success-6-h), var(--color-success-6-s), var(--color-success-6-l), 1);
-  --koi-badge-foreground: hsl(var(--color-white-h), var(--color-white-s), var(--color-white-l), 1);
-}
-.badge--solid.badge--warning {
-  --koi-badge-background: hsl(var(--color-warning-6-h), var(--color-warning-6-s), var(--color-warning-6-l), 1);
-  --koi-badge-foreground: hsl(var(--color-white-h), var(--color-white-s), var(--color-white-l), 1);
-}
-.badge--solid.badge--danger {
-  --koi-badge-background: hsl(var(--color-danger-6-h), var(--color-danger-6-s), var(--color-danger-6-l), 1);
-  --koi-badge-foreground: hsl(var(--color-white-h), var(--color-white-s), var(--color-white-l), 1);
-}
-.badge--outline {
-  --koi-badge-background: transparent;
-  --koi-badge-border-color: hsl(var(--color-cnt-6-h), var(--color-cnt-6-s), var(--color-cnt-6-l), 1);
-  --koi-badge-foreground: hsl(var(--color-cnt-8-h), var(--color-cnt-8-s), var(--color-cnt-8-l), 1);
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .badge--outline {
-    --koi-badge-background: transparent;
-  }
-}
-:root[data-theme=dark] .badge--outline, :root[color-scheme=dark] .badge--outline {
-  --koi-badge-background: transparent;
-}
-
-.badge--outline.badge--accent {
-  --koi-badge-background: transparent;
-  --koi-badge-border-color: hsl(var(--color-accent-6-h), var(--color-accent-6-s), var(--color-accent-6-l), 1);
-  --koi-badge-foreground: hsl(var(--color-accent-7-h), var(--color-accent-7-s), var(--color-accent-7-l), 1);
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .badge--outline.badge--accent {
-    --koi-badge-background: transparent;
-  }
-}
-:root[data-theme=dark] .badge--outline.badge--accent, :root[color-scheme=dark] .badge--outline.badge--accent {
-  --koi-badge-background: transparent;
-}
-
-.badge--outline.badge--primary {
-  --koi-badge-background: transparent;
-  --koi-badge-border-color: hsl(var(--color-primary-6-h), var(--color-primary-6-s), var(--color-primary-6-l), 1);
-  --koi-badge-foreground: hsl(var(--color-primary-7-h), var(--color-primary-7-s), var(--color-primary-7-l), 1);
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .badge--outline.badge--primary {
-    --koi-badge-background: transparent;
-  }
-}
-:root[data-theme=dark] .badge--outline.badge--primary, :root[color-scheme=dark] .badge--outline.badge--primary {
-  --koi-badge-background: transparent;
-}
-
-.badge--outline.badge--secondary {
-  --koi-badge-background: transparent;
-  --koi-badge-border-color: hsl(var(--color-secondary-6-h), var(--color-secondary-6-s), var(--color-secondary-6-l), 1);
-  --koi-badge-foreground: hsl(var(--color-secondary-7-h), var(--color-secondary-7-s), var(--color-secondary-7-l), 1);
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .badge--outline.badge--secondary {
-    --koi-badge-background: transparent;
-  }
-}
-:root[data-theme=dark] .badge--outline.badge--secondary, :root[color-scheme=dark] .badge--outline.badge--secondary {
-  --koi-badge-background: transparent;
-}
-
-.badge--outline.badge--neutral {
-  --koi-badge-background: transparent;
-  --koi-badge-border-color: hsl(var(--color-neutral-6-h), var(--color-neutral-6-s), var(--color-neutral-6-l), 1);
-  --koi-badge-foreground: hsl(var(--color-neutral-7-h), var(--color-neutral-7-s), var(--color-neutral-7-l), 1);
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .badge--outline.badge--neutral {
-    --koi-badge-background: transparent;
-  }
-}
-:root[data-theme=dark] .badge--outline.badge--neutral, :root[color-scheme=dark] .badge--outline.badge--neutral {
-  --koi-badge-background: transparent;
-}
-
-.badge--outline.badge--info {
-  --koi-badge-background: transparent;
-  --koi-badge-border-color: hsl(var(--color-info-6-h), var(--color-info-6-s), var(--color-info-6-l), 1);
-  --koi-badge-foreground: hsl(var(--color-info-7-h), var(--color-info-7-s), var(--color-info-7-l), 1);
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .badge--outline.badge--info {
-    --koi-badge-background: transparent;
-  }
-}
-:root[data-theme=dark] .badge--outline.badge--info, :root[color-scheme=dark] .badge--outline.badge--info {
-  --koi-badge-background: transparent;
-}
-
-.badge--outline.badge--success {
-  --koi-badge-background: transparent;
-  --koi-badge-border-color: hsl(var(--color-success-6-h), var(--color-success-6-s), var(--color-success-6-l), 1);
-  --koi-badge-foreground: hsl(var(--color-success-7-h), var(--color-success-7-s), var(--color-success-7-l), 1);
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .badge--outline.badge--success {
-    --koi-badge-background: transparent;
-  }
-}
-:root[data-theme=dark] .badge--outline.badge--success, :root[color-scheme=dark] .badge--outline.badge--success {
-  --koi-badge-background: transparent;
-}
-
-.badge--outline.badge--warning {
-  --koi-badge-background: transparent;
-  --koi-badge-border-color: hsl(var(--color-warning-6-h), var(--color-warning-6-s), var(--color-warning-6-l), 1);
-  --koi-badge-foreground: hsl(var(--color-warning-7-h), var(--color-warning-7-s), var(--color-warning-7-l), 1);
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .badge--outline.badge--warning {
-    --koi-badge-background: transparent;
-  }
-}
-:root[data-theme=dark] .badge--outline.badge--warning, :root[color-scheme=dark] .badge--outline.badge--warning {
-  --koi-badge-background: transparent;
-}
-
-.badge--outline.badge--danger {
-  --koi-badge-background: transparent;
-  --koi-badge-border-color: hsl(var(--color-danger-6-h), var(--color-danger-6-s), var(--color-danger-6-l), 1);
-  --koi-badge-foreground: hsl(var(--color-danger-7-h), var(--color-danger-7-s), var(--color-danger-7-l), 1);
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .badge--outline.badge--danger {
-    --koi-badge-background: transparent;
-  }
-}
-:root[data-theme=dark] .badge--outline.badge--danger, :root[color-scheme=dark] .badge--outline.badge--danger {
-  --koi-badge-background: transparent;
-}
-
-.badge--dot {
-  --koi-badge-background: transparent;
-  --koi-badge-border-color: hsl(var(--color-cnt-2-h), var(--color-cnt-2-s), var(--color-cnt-2-l), 1);
-  --koi-badge-foreground: hsl(var(--color-cnt-8-h), var(--color-cnt-8-s), var(--color-cnt-8-l), 1);
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .badge--dot {
-    --koi-badge-background: transparent;
-  }
-}
-:root[data-theme=dark] .badge--dot, :root[color-scheme=dark] .badge--dot {
-  --koi-badge-background: transparent;
-}
-
-.badge--dot::before {
-  background-color: hsl(var(--color-cnt-5-h), var(--color-cnt-5-s), var(--color-cnt-5-l), 1);
-  border-radius: 6px;
-  content: "";
-  display: block;
-  height: 6px;
-  margin-right: 6px;
-  width: 6px;
-}
-.badge--dot.badge--accent {
-  --koi-badge-background: transparent;
-  --koi-badge-foreground: hsl(var(--color-txt-1-h), var(--color-txt-1-s), var(--color-txt-1-l), 1);
-}
-.badge--dot.badge--accent::before {
-  background-color: hsl(var(--color-accent-5-h), var(--color-accent-5-s), var(--color-accent-5-l), 1);
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .badge--dot.badge--accent {
-    --koi-badge-background: transparent;
-  }
-}
-:root[data-theme=dark] .badge--dot.badge--accent, :root[color-scheme=dark] .badge--dot.badge--accent {
-  --koi-badge-background: transparent;
-}
-
-.badge--dot.badge--primary {
-  --koi-badge-background: transparent;
-  --koi-badge-foreground: hsl(var(--color-txt-1-h), var(--color-txt-1-s), var(--color-txt-1-l), 1);
-}
-.badge--dot.badge--primary::before {
-  background-color: hsl(var(--color-primary-5-h), var(--color-primary-5-s), var(--color-primary-5-l), 1);
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .badge--dot.badge--primary {
-    --koi-badge-background: transparent;
-  }
-}
-:root[data-theme=dark] .badge--dot.badge--primary, :root[color-scheme=dark] .badge--dot.badge--primary {
-  --koi-badge-background: transparent;
-}
-
-.badge--dot.badge--secondary {
-  --koi-badge-background: transparent;
-  --koi-badge-foreground: hsl(var(--color-txt-1-h), var(--color-txt-1-s), var(--color-txt-1-l), 1);
-}
-.badge--dot.badge--secondary::before {
-  background-color: hsl(var(--color-secondary-5-h), var(--color-secondary-5-s), var(--color-secondary-5-l), 1);
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .badge--dot.badge--secondary {
-    --koi-badge-background: transparent;
-  }
-}
-:root[data-theme=dark] .badge--dot.badge--secondary, :root[color-scheme=dark] .badge--dot.badge--secondary {
-  --koi-badge-background: transparent;
-}
-
-.badge--dot.badge--neutral {
-  --koi-badge-background: transparent;
-  --koi-badge-foreground: hsl(var(--color-txt-1-h), var(--color-txt-1-s), var(--color-txt-1-l), 1);
-}
-.badge--dot.badge--neutral::before {
-  background-color: hsl(var(--color-neutral-5-h), var(--color-neutral-5-s), var(--color-neutral-5-l), 1);
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .badge--dot.badge--neutral {
-    --koi-badge-background: transparent;
-  }
-}
-:root[data-theme=dark] .badge--dot.badge--neutral, :root[color-scheme=dark] .badge--dot.badge--neutral {
-  --koi-badge-background: transparent;
-}
-
-.badge--dot.badge--info {
-  --koi-badge-background: transparent;
-  --koi-badge-foreground: hsl(var(--color-txt-1-h), var(--color-txt-1-s), var(--color-txt-1-l), 1);
-}
-.badge--dot.badge--info::before {
-  background-color: hsl(var(--color-info-5-h), var(--color-info-5-s), var(--color-info-5-l), 1);
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .badge--dot.badge--info {
-    --koi-badge-background: transparent;
-  }
-}
-:root[data-theme=dark] .badge--dot.badge--info, :root[color-scheme=dark] .badge--dot.badge--info {
-  --koi-badge-background: transparent;
-}
-
-.badge--dot.badge--success {
-  --koi-badge-background: transparent;
-  --koi-badge-foreground: hsl(var(--color-txt-1-h), var(--color-txt-1-s), var(--color-txt-1-l), 1);
-}
-.badge--dot.badge--success::before {
-  background-color: hsl(var(--color-success-5-h), var(--color-success-5-s), var(--color-success-5-l), 1);
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .badge--dot.badge--success {
-    --koi-badge-background: transparent;
-  }
-}
-:root[data-theme=dark] .badge--dot.badge--success, :root[color-scheme=dark] .badge--dot.badge--success {
-  --koi-badge-background: transparent;
-}
-
-.badge--dot.badge--warning {
-  --koi-badge-background: transparent;
-  --koi-badge-foreground: hsl(var(--color-txt-1-h), var(--color-txt-1-s), var(--color-txt-1-l), 1);
-}
-.badge--dot.badge--warning::before {
-  background-color: hsl(var(--color-warning-5-h), var(--color-warning-5-s), var(--color-warning-5-l), 1);
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .badge--dot.badge--warning {
-    --koi-badge-background: transparent;
-  }
-}
-:root[data-theme=dark] .badge--dot.badge--warning, :root[color-scheme=dark] .badge--dot.badge--warning {
-  --koi-badge-background: transparent;
-}
-
-.badge--dot.badge--danger {
-  --koi-badge-background: transparent;
-  --koi-badge-foreground: hsl(var(--color-txt-1-h), var(--color-txt-1-s), var(--color-txt-1-l), 1);
-}
-.badge--dot.badge--danger::before {
-  background-color: hsl(var(--color-danger-5-h), var(--color-danger-5-s), var(--color-danger-5-l), 1);
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .badge--dot.badge--danger {
-    --koi-badge-background: transparent;
-  }
-}
-:root[data-theme=dark] .badge--dot.badge--danger, :root[color-scheme=dark] .badge--dot.badge--danger {
-  --koi-badge-background: transparent;
-}
-
-.badge--large {
-  font-size: var(--koi-badge-font-size-large, 0.875rem);
-  height: var(--koi-badge-height-large, 24px);
-  line-height: var(--koi-badge-leading-large, 1.25rem);
-  padding: 0 var(--koi-badge-padding-x-large, 0.875rem);
-}
-.badge--block {
-  justify-content: center;
-  width: 100%;
-}
-.badge.badge--group {
-  align-items: center;
-  display: inline-flex;
-  justify-content: center;
-  position: relative;
-}
-.badge.badge--group .btn {
-  box-shadow: none;
-  height: 1rem;
-  width: 1rem;
-}
-.badge.badge--group .btn:hover, .badge.badge--group .btn:focus {
-  box-shadow: none;
-}
-.badge.badge--group *:last-child.btn {
-  margin-left: 4px;
-  margin-right: -9px;
-}
-.badge.badge--group *:first-child.btn {
-  margin-left: -9px;
-  margin-right: 4px;
-}
-
 button,
 [type=button],
 [type=submit],
@@ -5514,6 +5003,517 @@ kbd {
   max-width: 1em;
   min-width: 1em;
   vertical-align: middle;
+}
+
+.tag {
+  transition-delay: var(--koi-transition-delay, 0);
+  transition-duration: var(--koi-transition-duration, 150ms);
+  transition-property: var(--koi-transition-property, color, background-color, border-color, transform);
+  transition-timing-function: var(--koi-transition-timing-function, cubic-bezier(0.25, 0.1, 0.25, 1));
+  align-items: center;
+  background-color: var(--koi-tag-background, hsl(var(--color-cnt-1-h), var(--color-cnt-1-s), var(--color-cnt-1-l), 1));
+  border-color: var(--koi-tag-border-color, transparent);
+  border-radius: var(--koi-tag-border-radius, 9999px);
+  border-style: var(--koi-tag-border-style, solid);
+  border-width: var(--koi-tag-border-width, 1px);
+  color: var(--koi-tag-foreground, hsl(var(--color-cnt-6-h), var(--color-cnt-6-s), var(--color-cnt-6-l), 1));
+  display: inline-flex;
+  flex-grow: 0;
+  font-size: var(--koi-tag-font-size, 0.75rem);
+  font-weight: var(--koi-tag-font-weight, 600);
+  height: var(--koi-tag-height, 20px);
+  justify-content: center;
+  letter-spacing: var(--koi-tag-tracking, 0.025em);
+  line-height: var(--koi-tag-leading, 1rem);
+  overflow: hidden;
+  padding: 0 var(--koi-tag-padding-x, 11px);
+  text-decoration: none;
+  text-overflow: ellipsis;
+  text-transform: var(--koi-tag-text-transform, uppercase);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .tag {
+    --koi-tag-background: hsl(var(--color-cnt-2-h), var(--color-cnt-2-s), var(--color-cnt-2-l), 1);
+  }
+}
+:root[data-theme=dark] .tag, :root[color-scheme=dark] .tag {
+  --koi-tag-background: hsl(var(--color-cnt-2-h), var(--color-cnt-2-s), var(--color-cnt-2-l), 1);
+}
+
+.tag.tag--accent {
+  --koi-tag-background: hsl(var(--color-accent-1-h), var(--color-accent-1-s), var(--color-accent-1-l), 1);
+  --koi-tag-foreground: hsl(var(--color-accent-8-h), var(--color-accent-8-s), var(--color-accent-8-l), 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .tag.tag--accent {
+    --koi-tag-background: hsl(var(--color-accent-8-h), var(--color-accent-8-s), var(--color-accent-8-l), 0.2);
+    --koi-tag-foreground: hsl(var(--color-accent-5-h), var(--color-accent-5-s), var(--color-accent-5-l), 1);
+  }
+}
+:root[data-theme=dark] .tag.tag--accent, :root[color-scheme=dark] .tag.tag--accent {
+  --koi-tag-background: hsl(var(--color-accent-8-h), var(--color-accent-8-s), var(--color-accent-8-l), 0.2);
+  --koi-tag-foreground: hsl(var(--color-accent-5-h), var(--color-accent-5-s), var(--color-accent-5-l), 1);
+}
+
+.tag.tag--primary {
+  --koi-tag-background: hsl(var(--color-primary-1-h), var(--color-primary-1-s), var(--color-primary-1-l), 1);
+  --koi-tag-foreground: hsl(var(--color-primary-8-h), var(--color-primary-8-s), var(--color-primary-8-l), 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .tag.tag--primary {
+    --koi-tag-background: hsl(var(--color-primary-8-h), var(--color-primary-8-s), var(--color-primary-8-l), 0.2);
+    --koi-tag-foreground: hsl(var(--color-primary-5-h), var(--color-primary-5-s), var(--color-primary-5-l), 1);
+  }
+}
+:root[data-theme=dark] .tag.tag--primary, :root[color-scheme=dark] .tag.tag--primary {
+  --koi-tag-background: hsl(var(--color-primary-8-h), var(--color-primary-8-s), var(--color-primary-8-l), 0.2);
+  --koi-tag-foreground: hsl(var(--color-primary-5-h), var(--color-primary-5-s), var(--color-primary-5-l), 1);
+}
+
+.tag.tag--secondary {
+  --koi-tag-background: hsl(var(--color-secondary-1-h), var(--color-secondary-1-s), var(--color-secondary-1-l), 1);
+  --koi-tag-foreground: hsl(var(--color-secondary-8-h), var(--color-secondary-8-s), var(--color-secondary-8-l), 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .tag.tag--secondary {
+    --koi-tag-background: hsl(var(--color-secondary-8-h), var(--color-secondary-8-s), var(--color-secondary-8-l), 0.2);
+    --koi-tag-foreground: hsl(var(--color-secondary-5-h), var(--color-secondary-5-s), var(--color-secondary-5-l), 1);
+  }
+}
+:root[data-theme=dark] .tag.tag--secondary, :root[color-scheme=dark] .tag.tag--secondary {
+  --koi-tag-background: hsl(var(--color-secondary-8-h), var(--color-secondary-8-s), var(--color-secondary-8-l), 0.2);
+  --koi-tag-foreground: hsl(var(--color-secondary-5-h), var(--color-secondary-5-s), var(--color-secondary-5-l), 1);
+}
+
+.tag.tag--neutral {
+  --koi-tag-background: hsl(var(--color-neutral-1-h), var(--color-neutral-1-s), var(--color-neutral-1-l), 1);
+  --koi-tag-foreground: hsl(var(--color-neutral-8-h), var(--color-neutral-8-s), var(--color-neutral-8-l), 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .tag.tag--neutral {
+    --koi-tag-background: hsl(var(--color-neutral-8-h), var(--color-neutral-8-s), var(--color-neutral-8-l), 0.2);
+    --koi-tag-foreground: hsl(var(--color-neutral-5-h), var(--color-neutral-5-s), var(--color-neutral-5-l), 1);
+  }
+}
+:root[data-theme=dark] .tag.tag--neutral, :root[color-scheme=dark] .tag.tag--neutral {
+  --koi-tag-background: hsl(var(--color-neutral-8-h), var(--color-neutral-8-s), var(--color-neutral-8-l), 0.2);
+  --koi-tag-foreground: hsl(var(--color-neutral-5-h), var(--color-neutral-5-s), var(--color-neutral-5-l), 1);
+}
+
+.tag.tag--info {
+  --koi-tag-background: hsl(var(--color-info-1-h), var(--color-info-1-s), var(--color-info-1-l), 1);
+  --koi-tag-foreground: hsl(var(--color-info-8-h), var(--color-info-8-s), var(--color-info-8-l), 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .tag.tag--info {
+    --koi-tag-background: hsl(var(--color-info-8-h), var(--color-info-8-s), var(--color-info-8-l), 0.2);
+    --koi-tag-foreground: hsl(var(--color-info-5-h), var(--color-info-5-s), var(--color-info-5-l), 1);
+  }
+}
+:root[data-theme=dark] .tag.tag--info, :root[color-scheme=dark] .tag.tag--info {
+  --koi-tag-background: hsl(var(--color-info-8-h), var(--color-info-8-s), var(--color-info-8-l), 0.2);
+  --koi-tag-foreground: hsl(var(--color-info-5-h), var(--color-info-5-s), var(--color-info-5-l), 1);
+}
+
+.tag.tag--success {
+  --koi-tag-background: hsl(var(--color-success-1-h), var(--color-success-1-s), var(--color-success-1-l), 1);
+  --koi-tag-foreground: hsl(var(--color-success-8-h), var(--color-success-8-s), var(--color-success-8-l), 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .tag.tag--success {
+    --koi-tag-background: hsl(var(--color-success-8-h), var(--color-success-8-s), var(--color-success-8-l), 0.2);
+    --koi-tag-foreground: hsl(var(--color-success-5-h), var(--color-success-5-s), var(--color-success-5-l), 1);
+  }
+}
+:root[data-theme=dark] .tag.tag--success, :root[color-scheme=dark] .tag.tag--success {
+  --koi-tag-background: hsl(var(--color-success-8-h), var(--color-success-8-s), var(--color-success-8-l), 0.2);
+  --koi-tag-foreground: hsl(var(--color-success-5-h), var(--color-success-5-s), var(--color-success-5-l), 1);
+}
+
+.tag.tag--warning {
+  --koi-tag-background: hsl(var(--color-warning-1-h), var(--color-warning-1-s), var(--color-warning-1-l), 1);
+  --koi-tag-foreground: hsl(var(--color-warning-8-h), var(--color-warning-8-s), var(--color-warning-8-l), 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .tag.tag--warning {
+    --koi-tag-background: hsl(var(--color-warning-8-h), var(--color-warning-8-s), var(--color-warning-8-l), 0.2);
+    --koi-tag-foreground: hsl(var(--color-warning-5-h), var(--color-warning-5-s), var(--color-warning-5-l), 1);
+  }
+}
+:root[data-theme=dark] .tag.tag--warning, :root[color-scheme=dark] .tag.tag--warning {
+  --koi-tag-background: hsl(var(--color-warning-8-h), var(--color-warning-8-s), var(--color-warning-8-l), 0.2);
+  --koi-tag-foreground: hsl(var(--color-warning-5-h), var(--color-warning-5-s), var(--color-warning-5-l), 1);
+}
+
+.tag.tag--danger {
+  --koi-tag-background: hsl(var(--color-danger-1-h), var(--color-danger-1-s), var(--color-danger-1-l), 1);
+  --koi-tag-foreground: hsl(var(--color-danger-8-h), var(--color-danger-8-s), var(--color-danger-8-l), 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .tag.tag--danger {
+    --koi-tag-background: hsl(var(--color-danger-8-h), var(--color-danger-8-s), var(--color-danger-8-l), 0.2);
+    --koi-tag-foreground: hsl(var(--color-danger-5-h), var(--color-danger-5-s), var(--color-danger-5-l), 1);
+  }
+}
+:root[data-theme=dark] .tag.tag--danger, :root[color-scheme=dark] .tag.tag--danger {
+  --koi-tag-background: hsl(var(--color-danger-8-h), var(--color-danger-8-s), var(--color-danger-8-l), 0.2);
+  --koi-tag-foreground: hsl(var(--color-danger-5-h), var(--color-danger-5-s), var(--color-danger-5-l), 1);
+}
+
+.tag--solid {
+  --koi-tag-background: hsl(var(--color-cnt-9-h), var(--color-cnt-9-s), var(--color-cnt-9-l), 1);
+  --koi-tag-border-color: transparent;
+  --koi-tag-foreground: hsl(var(--color-cnt-1-h), var(--color-cnt-1-s), var(--color-cnt-1-l), 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .tag--solid {
+    --koi-tag-background: hsl(var(--color-cnt-9-h), var(--color-cnt-9-s), var(--color-cnt-9-l), 1);
+  }
+}
+:root[data-theme=dark] .tag--solid, :root[color-scheme=dark] .tag--solid {
+  --koi-tag-background: hsl(var(--color-cnt-9-h), var(--color-cnt-9-s), var(--color-cnt-9-l), 1);
+}
+
+.tag--solid.tag--accent {
+  --koi-tag-background: hsl(var(--color-accent-6-h), var(--color-accent-6-s), var(--color-accent-6-l), 1);
+  --koi-tag-foreground: hsl(var(--color-white-h), var(--color-white-s), var(--color-white-l), 1);
+}
+.tag--solid.tag--primary {
+  --koi-tag-background: hsl(var(--color-primary-6-h), var(--color-primary-6-s), var(--color-primary-6-l), 1);
+  --koi-tag-foreground: hsl(var(--color-white-h), var(--color-white-s), var(--color-white-l), 1);
+}
+.tag--solid.tag--secondary {
+  --koi-tag-background: hsl(var(--color-secondary-6-h), var(--color-secondary-6-s), var(--color-secondary-6-l), 1);
+  --koi-tag-foreground: hsl(var(--color-white-h), var(--color-white-s), var(--color-white-l), 1);
+}
+.tag--solid.tag--neutral {
+  --koi-tag-background: hsl(var(--color-neutral-6-h), var(--color-neutral-6-s), var(--color-neutral-6-l), 1);
+  --koi-tag-foreground: hsl(var(--color-white-h), var(--color-white-s), var(--color-white-l), 1);
+}
+.tag--solid.tag--info {
+  --koi-tag-background: hsl(var(--color-info-6-h), var(--color-info-6-s), var(--color-info-6-l), 1);
+  --koi-tag-foreground: hsl(var(--color-white-h), var(--color-white-s), var(--color-white-l), 1);
+}
+.tag--solid.tag--success {
+  --koi-tag-background: hsl(var(--color-success-6-h), var(--color-success-6-s), var(--color-success-6-l), 1);
+  --koi-tag-foreground: hsl(var(--color-white-h), var(--color-white-s), var(--color-white-l), 1);
+}
+.tag--solid.tag--warning {
+  --koi-tag-background: hsl(var(--color-warning-6-h), var(--color-warning-6-s), var(--color-warning-6-l), 1);
+  --koi-tag-foreground: hsl(var(--color-white-h), var(--color-white-s), var(--color-white-l), 1);
+}
+.tag--solid.tag--danger {
+  --koi-tag-background: hsl(var(--color-danger-6-h), var(--color-danger-6-s), var(--color-danger-6-l), 1);
+  --koi-tag-foreground: hsl(var(--color-white-h), var(--color-white-s), var(--color-white-l), 1);
+}
+.tag--outline {
+  --koi-tag-background: transparent;
+  --koi-tag-border-color: hsl(var(--color-cnt-6-h), var(--color-cnt-6-s), var(--color-cnt-6-l), 1);
+  --koi-tag-foreground: hsl(var(--color-cnt-8-h), var(--color-cnt-8-s), var(--color-cnt-8-l), 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .tag--outline {
+    --koi-tag-background: transparent;
+  }
+}
+:root[data-theme=dark] .tag--outline, :root[color-scheme=dark] .tag--outline {
+  --koi-tag-background: transparent;
+}
+
+.tag--outline.tag--accent {
+  --koi-tag-background: transparent;
+  --koi-tag-border-color: hsl(var(--color-accent-6-h), var(--color-accent-6-s), var(--color-accent-6-l), 1);
+  --koi-tag-foreground: hsl(var(--color-accent-7-h), var(--color-accent-7-s), var(--color-accent-7-l), 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .tag--outline.tag--accent {
+    --koi-tag-background: transparent;
+  }
+}
+:root[data-theme=dark] .tag--outline.tag--accent, :root[color-scheme=dark] .tag--outline.tag--accent {
+  --koi-tag-background: transparent;
+}
+
+.tag--outline.tag--primary {
+  --koi-tag-background: transparent;
+  --koi-tag-border-color: hsl(var(--color-primary-6-h), var(--color-primary-6-s), var(--color-primary-6-l), 1);
+  --koi-tag-foreground: hsl(var(--color-primary-7-h), var(--color-primary-7-s), var(--color-primary-7-l), 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .tag--outline.tag--primary {
+    --koi-tag-background: transparent;
+  }
+}
+:root[data-theme=dark] .tag--outline.tag--primary, :root[color-scheme=dark] .tag--outline.tag--primary {
+  --koi-tag-background: transparent;
+}
+
+.tag--outline.tag--secondary {
+  --koi-tag-background: transparent;
+  --koi-tag-border-color: hsl(var(--color-secondary-6-h), var(--color-secondary-6-s), var(--color-secondary-6-l), 1);
+  --koi-tag-foreground: hsl(var(--color-secondary-7-h), var(--color-secondary-7-s), var(--color-secondary-7-l), 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .tag--outline.tag--secondary {
+    --koi-tag-background: transparent;
+  }
+}
+:root[data-theme=dark] .tag--outline.tag--secondary, :root[color-scheme=dark] .tag--outline.tag--secondary {
+  --koi-tag-background: transparent;
+}
+
+.tag--outline.tag--neutral {
+  --koi-tag-background: transparent;
+  --koi-tag-border-color: hsl(var(--color-neutral-6-h), var(--color-neutral-6-s), var(--color-neutral-6-l), 1);
+  --koi-tag-foreground: hsl(var(--color-neutral-7-h), var(--color-neutral-7-s), var(--color-neutral-7-l), 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .tag--outline.tag--neutral {
+    --koi-tag-background: transparent;
+  }
+}
+:root[data-theme=dark] .tag--outline.tag--neutral, :root[color-scheme=dark] .tag--outline.tag--neutral {
+  --koi-tag-background: transparent;
+}
+
+.tag--outline.tag--info {
+  --koi-tag-background: transparent;
+  --koi-tag-border-color: hsl(var(--color-info-6-h), var(--color-info-6-s), var(--color-info-6-l), 1);
+  --koi-tag-foreground: hsl(var(--color-info-7-h), var(--color-info-7-s), var(--color-info-7-l), 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .tag--outline.tag--info {
+    --koi-tag-background: transparent;
+  }
+}
+:root[data-theme=dark] .tag--outline.tag--info, :root[color-scheme=dark] .tag--outline.tag--info {
+  --koi-tag-background: transparent;
+}
+
+.tag--outline.tag--success {
+  --koi-tag-background: transparent;
+  --koi-tag-border-color: hsl(var(--color-success-6-h), var(--color-success-6-s), var(--color-success-6-l), 1);
+  --koi-tag-foreground: hsl(var(--color-success-7-h), var(--color-success-7-s), var(--color-success-7-l), 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .tag--outline.tag--success {
+    --koi-tag-background: transparent;
+  }
+}
+:root[data-theme=dark] .tag--outline.tag--success, :root[color-scheme=dark] .tag--outline.tag--success {
+  --koi-tag-background: transparent;
+}
+
+.tag--outline.tag--warning {
+  --koi-tag-background: transparent;
+  --koi-tag-border-color: hsl(var(--color-warning-6-h), var(--color-warning-6-s), var(--color-warning-6-l), 1);
+  --koi-tag-foreground: hsl(var(--color-warning-7-h), var(--color-warning-7-s), var(--color-warning-7-l), 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .tag--outline.tag--warning {
+    --koi-tag-background: transparent;
+  }
+}
+:root[data-theme=dark] .tag--outline.tag--warning, :root[color-scheme=dark] .tag--outline.tag--warning {
+  --koi-tag-background: transparent;
+}
+
+.tag--outline.tag--danger {
+  --koi-tag-background: transparent;
+  --koi-tag-border-color: hsl(var(--color-danger-6-h), var(--color-danger-6-s), var(--color-danger-6-l), 1);
+  --koi-tag-foreground: hsl(var(--color-danger-7-h), var(--color-danger-7-s), var(--color-danger-7-l), 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .tag--outline.tag--danger {
+    --koi-tag-background: transparent;
+  }
+}
+:root[data-theme=dark] .tag--outline.tag--danger, :root[color-scheme=dark] .tag--outline.tag--danger {
+  --koi-tag-background: transparent;
+}
+
+.tag--dot {
+  --koi-tag-background: transparent;
+  --koi-tag-border-color: hsl(var(--color-cnt-2-h), var(--color-cnt-2-s), var(--color-cnt-2-l), 1);
+  --koi-tag-foreground: hsl(var(--color-cnt-8-h), var(--color-cnt-8-s), var(--color-cnt-8-l), 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .tag--dot {
+    --koi-tag-background: transparent;
+  }
+}
+:root[data-theme=dark] .tag--dot, :root[color-scheme=dark] .tag--dot {
+  --koi-tag-background: transparent;
+}
+
+.tag--dot::before {
+  background-color: hsl(var(--color-cnt-5-h), var(--color-cnt-5-s), var(--color-cnt-5-l), 1);
+  border-radius: 6px;
+  content: "";
+  display: block;
+  height: 6px;
+  margin-right: 6px;
+  width: 6px;
+}
+.tag--dot.tag--accent {
+  --koi-tag-background: transparent;
+  --koi-tag-foreground: hsl(var(--color-txt-1-h), var(--color-txt-1-s), var(--color-txt-1-l), 1);
+}
+.tag--dot.tag--accent::before {
+  background-color: hsl(var(--color-accent-5-h), var(--color-accent-5-s), var(--color-accent-5-l), 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .tag--dot.tag--accent {
+    --koi-tag-background: transparent;
+  }
+}
+:root[data-theme=dark] .tag--dot.tag--accent, :root[color-scheme=dark] .tag--dot.tag--accent {
+  --koi-tag-background: transparent;
+}
+
+.tag--dot.tag--primary {
+  --koi-tag-background: transparent;
+  --koi-tag-foreground: hsl(var(--color-txt-1-h), var(--color-txt-1-s), var(--color-txt-1-l), 1);
+}
+.tag--dot.tag--primary::before {
+  background-color: hsl(var(--color-primary-5-h), var(--color-primary-5-s), var(--color-primary-5-l), 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .tag--dot.tag--primary {
+    --koi-tag-background: transparent;
+  }
+}
+:root[data-theme=dark] .tag--dot.tag--primary, :root[color-scheme=dark] .tag--dot.tag--primary {
+  --koi-tag-background: transparent;
+}
+
+.tag--dot.tag--secondary {
+  --koi-tag-background: transparent;
+  --koi-tag-foreground: hsl(var(--color-txt-1-h), var(--color-txt-1-s), var(--color-txt-1-l), 1);
+}
+.tag--dot.tag--secondary::before {
+  background-color: hsl(var(--color-secondary-5-h), var(--color-secondary-5-s), var(--color-secondary-5-l), 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .tag--dot.tag--secondary {
+    --koi-tag-background: transparent;
+  }
+}
+:root[data-theme=dark] .tag--dot.tag--secondary, :root[color-scheme=dark] .tag--dot.tag--secondary {
+  --koi-tag-background: transparent;
+}
+
+.tag--dot.tag--neutral {
+  --koi-tag-background: transparent;
+  --koi-tag-foreground: hsl(var(--color-txt-1-h), var(--color-txt-1-s), var(--color-txt-1-l), 1);
+}
+.tag--dot.tag--neutral::before {
+  background-color: hsl(var(--color-neutral-5-h), var(--color-neutral-5-s), var(--color-neutral-5-l), 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .tag--dot.tag--neutral {
+    --koi-tag-background: transparent;
+  }
+}
+:root[data-theme=dark] .tag--dot.tag--neutral, :root[color-scheme=dark] .tag--dot.tag--neutral {
+  --koi-tag-background: transparent;
+}
+
+.tag--dot.tag--info {
+  --koi-tag-background: transparent;
+  --koi-tag-foreground: hsl(var(--color-txt-1-h), var(--color-txt-1-s), var(--color-txt-1-l), 1);
+}
+.tag--dot.tag--info::before {
+  background-color: hsl(var(--color-info-5-h), var(--color-info-5-s), var(--color-info-5-l), 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .tag--dot.tag--info {
+    --koi-tag-background: transparent;
+  }
+}
+:root[data-theme=dark] .tag--dot.tag--info, :root[color-scheme=dark] .tag--dot.tag--info {
+  --koi-tag-background: transparent;
+}
+
+.tag--dot.tag--success {
+  --koi-tag-background: transparent;
+  --koi-tag-foreground: hsl(var(--color-txt-1-h), var(--color-txt-1-s), var(--color-txt-1-l), 1);
+}
+.tag--dot.tag--success::before {
+  background-color: hsl(var(--color-success-5-h), var(--color-success-5-s), var(--color-success-5-l), 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .tag--dot.tag--success {
+    --koi-tag-background: transparent;
+  }
+}
+:root[data-theme=dark] .tag--dot.tag--success, :root[color-scheme=dark] .tag--dot.tag--success {
+  --koi-tag-background: transparent;
+}
+
+.tag--dot.tag--warning {
+  --koi-tag-background: transparent;
+  --koi-tag-foreground: hsl(var(--color-txt-1-h), var(--color-txt-1-s), var(--color-txt-1-l), 1);
+}
+.tag--dot.tag--warning::before {
+  background-color: hsl(var(--color-warning-5-h), var(--color-warning-5-s), var(--color-warning-5-l), 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .tag--dot.tag--warning {
+    --koi-tag-background: transparent;
+  }
+}
+:root[data-theme=dark] .tag--dot.tag--warning, :root[color-scheme=dark] .tag--dot.tag--warning {
+  --koi-tag-background: transparent;
+}
+
+.tag--dot.tag--danger {
+  --koi-tag-background: transparent;
+  --koi-tag-foreground: hsl(var(--color-txt-1-h), var(--color-txt-1-s), var(--color-txt-1-l), 1);
+}
+.tag--dot.tag--danger::before {
+  background-color: hsl(var(--color-danger-5-h), var(--color-danger-5-s), var(--color-danger-5-l), 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([color-scheme=light]):not([color-scheme=dark]):not([data-theme=dark]) .tag--dot.tag--danger {
+    --koi-tag-background: transparent;
+  }
+}
+:root[data-theme=dark] .tag--dot.tag--danger, :root[color-scheme=dark] .tag--dot.tag--danger {
+  --koi-tag-background: transparent;
+}
+
+.tag--large {
+  font-size: var(--koi-tag-font-size-large, 0.875rem);
+  height: var(--koi-tag-height-large, 24px);
+  line-height: var(--koi-tag-leading-large, 1.25rem);
+  padding: 0 var(--koi-tag-padding-x-large, 0.875rem);
+}
+.tag--block {
+  justify-content: center;
+  width: 100%;
+}
+.tag.tag--group {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  position: relative;
+}
+.tag.tag--group .btn {
+  box-shadow: none;
+  height: 1rem;
+  width: 1rem;
+}
+.tag.tag--group .btn:hover, .tag.tag--group .btn:focus {
+  box-shadow: none;
+}
+.tag.tag--group *:last-child.btn {
+  margin-left: 4px;
+  margin-right: -9px;
+}
+.tag.tag--group *:first-child.btn {
+  margin-left: -9px;
+  margin-right: 4px;
 }
 
 .space-x-2xs > :not([hidden]) ~ :not([hidden]) {
