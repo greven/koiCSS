@@ -16,23 +16,43 @@
 </head>
 
 <body class="accent-primary mt-32">
-  <div class="my-32 flex space-x-xl">
+  <div class="my-32 flex flex-wrap gap-16">
     <div class="avatar">
       <div class="avatar__content">
         <img class="mask mask-circle" src="https://placeimg.com/64/64/arch" />
       </div>
     </div>
 
-    <div class="avatar">
-      <div class="avatar__placeholder">NM</div>
+    <div class="avatar avatar--online">
+      <div class="avatar__content">
+        <img class="mask mask-circle" src="https://placeimg.com/64/64/arch" />
+      </div>
+    </div>
+
+    <div class="avatar avatar--offline">
+      <div class="avatar__content">
+        <img class="mask mask-circle" src="https://placeimg.com/64/64/arch" />
+      </div>
     </div>
 
     <div class="avatar">
-      <div class="avatar__placeholder bg-success-2 color-success-7">NM</div>
+      <div class="avatar__content avatar--placeholder">NM</div>
     </div>
 
     <div class="avatar">
-      <div class="avatar__placeholder bg-danger-2 color-danger-7">NM</div>
+      <div class="avatar__content avatar--placeholder">NM</div>
+    </div>
+
+    <div class="avatar avatar--online">
+      <div class="avatar__content avatar--placeholder">NM</div>
+    </div>
+
+    <div class="avatar">
+      <div class="avatar__content avatar--placeholder bg-success-2 color-success-7">NM</div>
+    </div>
+
+    <div class="avatar">
+      <div class="avatar__content avatar--placeholder bg-danger-2 color-danger-7">NM</div>
     </div>
 
     <div class="avatar-group">
@@ -71,7 +91,7 @@
       </div>
 
       <div class="avatar">
-        <div class="avatar__placeholder text-md">+69</div>
+        <div class="avatar__content avatar--placeholder text-md">+69</div>
       </div>
     </div>
   </div>
@@ -85,7 +105,7 @@
   <div class="my-32 space-x-xl">
     <div class="indicator">
       <span
-        class="indicator__item indicator--start badge badge--solid badge--info badge--dot border-2 border-srf-1"></span>
+        class="indicator__item indicator--middle badge badge--solid badge--info badge--dot border-2 border-srf-1"></span>
       <img class="rounded-xl shadow" src="https://placeimg.com/64/64/arch" />
     </div>
 

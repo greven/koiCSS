@@ -23,31 +23,53 @@ $size: 64px;
 @mixin avatar {
   border-color: var(--koi-avatar-border-color, transparent);
   border-width: var(--koi-avatar-border-width, 2px);
-  height: var(--koi-avatar-size, $size);
   position: relative;
-  width: var(--koi-avatar-size, $size);
 
   &__content {
     align-items: center;
     border-radius: radius(full);
     display: flex;
-    height: 100%;
+    height: var(--koi-avatar-size, $size);
     justify-content: center;
-    width: 100%;
+    width: var(--koi-avatar-size, $size);
   }
+}
 
-  &__placeholder {
-    align-items: center;
-    background-color: fill(cnt, 8);
-    border-radius: radius(full);
-    color: fill(cnt, 0);
-    display: flex;
-    font-size: font(xl);
-    font-weight: font(semibold);
-    height: 100%;
-    justify-content: center;
-    opacity: 0.95;
-    width: 100%;
+@mixin placeholder {
+  align-items: center;
+  background-color: fill(cnt, 8);
+  border-radius: radius(full);
+  color: fill(cnt, 0);
+  display: flex;
+  font-size: font(xl);
+  font-weight: font(semibold);
+  justify-content: center;
+  opacity: 0.95;
+}
+
+@mixin status {
+  @include position-variants($class, 7%, true);
+  @include outline-shadow(fill(srf, 1));
+  background-color: fill(srf, 4);
+  border-radius: radius(full);
+  content: '';
+  display: block;
+  height: 15%;
+  position: absolute;
+  width: 15%;
+  z-index: layer(above);
+}
+
+@mixin offline {
+  &::before {
+    @include status;
+  }
+}
+
+@mixin online {
+  &::before {
+    @include status;
+    background-color: fill(success, 5);
   }
 }
 
@@ -57,7 +79,7 @@ $size: 64px;
   overflow: hidden;
 
   #{$class} {
-    --koi-avatar-border-color: #{fill(srf, 2)};
+    --koi-avatar-border-color: #{fill(srf, 1)};
 
     border-radius: radius(full);
     overflow: hidden;
@@ -71,6 +93,14 @@ $size: 64px;
 @mixin styles {
   #{$class} {
     @include avatar;
+
+    &--placeholder {
+      @include placeholder;
+    }
+
+    &--online {
+      @include online;
+    }
   }
 
   // Avatar Group

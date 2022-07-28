@@ -23,55 +23,9 @@ $class: '.indicator';
   width: max-content;
 
   &__item {
-    bottom: auto;
-    left: auto;
+    @include position-variants($class);
     position: absolute;
-    right: 0;
-    top: 0;
-    transform: translate(var(--koi-translate-x, 50%), var(--koi-translate-y, -50%)) rotate(var(--koi-rotate, 0))
-      skew(var(--koi-skew-x, 0)) skewY(var(--koi-skew-y, 0)) scaleX(var(--koi-scale-x, 1)) scaleY(var(--koi-scale-y, 1));
     z-index: 1;
-  }
-
-  &--top {
-    --koi-translate-y: -50%;
-
-    bottom: auto;
-    top: 0;
-  }
-
-  &--middle {
-    --koi-translate-y: -50%;
-    bottom: 50%;
-    top: 50%;
-  }
-
-  &--bottom {
-    --koi-translate-y: 50%;
-
-    bottom: 0;
-    top: auto;
-  }
-
-  &--start {
-    --koi-translate-x: -50%;
-
-    left: 0;
-    right: auto;
-  }
-
-  &--center {
-    --koi-translate-x: -50%;
-
-    left: 50%;
-    right: 50%;
-  }
-
-  &--end {
-    --koi-translate-x: 50%;
-
-    left: auto;
-    right: 0;
   }
 }
 
