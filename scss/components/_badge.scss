@@ -14,12 +14,14 @@ $class: '.badge';
 
 // Defaults
 $height: 20px;
+$height-small: 16px;
 $height-large: 24px;
-$height-dot: 16px;
 
 $font-size: font(xs);
+$font-size-small: font(2xs);
 $font-size-large: font(sm);
 $leading: text-leading(xs);
+$leading-small: text-leading(2xs);
 $leading-large: text-leading(sm);
 $tracking: tracking(wide);
 
@@ -27,6 +29,7 @@ $border-radius: radius(full);
 $border-width: 1px;
 
 $padding-x: 11px;
+$padding-x-small: spacing(8);
 $padding-x-large: spacing(14);
 
 // --------------------------------
@@ -34,7 +37,7 @@ $padding-x-large: spacing(14);
 // --------------------------------
 
 @mixin default {
-  @include transition((color, background-color, border-color, transform), duration(fast));
+  @include transition((color, background-color, border-color, transform));
 
   align-items: center;
   background-color: var(--koi-badge-background, fill(cnt, 1));
@@ -109,8 +112,8 @@ $padding-x-large: spacing(14);
     --koi-badge-foreground: #{fill(white)};
 
     @include dark-mode {
-      --koi-badge-background: #{accent(6, $lightness: -25%)};
-      --koi-badge-foreground: #{accent(0)};
+      --koi-badge-background: #{accent(6)};
+      --koi-badge-foreground: #{fill(white)};
     }
   }
 
@@ -120,8 +123,8 @@ $padding-x-large: spacing(14);
       --koi-badge-foreground: #{fill(white)};
 
       @include dark-mode {
-        --koi-badge-background: #{fill($color, 6, $lightness: -25%)};
-        --koi-badge-foreground: #{fill($color, 0)};
+        --koi-badge-background: #{fill($color, 6)};
+        --koi-badge-foreground: #{fill(white)};
       }
     }
   }
@@ -211,9 +214,9 @@ $padding-x-large: spacing(14);
 
 @mixin dot {
   border-radius: radius(full);
-  height: var(--koi-badge-height, $height-dot);
+  height: var(--koi-badge-height, $height-small);
   padding: 0;
-  width: var(--koi-badge-height, $height-dot);
+  width: var(--koi-badge-height, $height-small);
 }
 
 @mixin group {
@@ -248,6 +251,13 @@ $padding-x-large: spacing(14);
 }
 
 // ---- Modifiers ----
+
+@mixin small {
+  font-size: var(--koi-badge-font-size-small, $font-size-small);
+  height: var(--koi-badge-height-small, $height-small);
+  line-height: var(--koi-badge-leading-small, $leading-small);
+  padding: 0 var(--koi-badge-padding-x-small, $padding-x-small);
+}
 
 @mixin large {
   font-size: var(--koi-badge-font-size-large, $font-size-large);
@@ -284,6 +294,10 @@ $padding-x-large: spacing(14);
 
     &--dot {
       @include dot;
+    }
+
+    &--small {
+      @include small;
     }
 
     &--large {

@@ -102,7 +102,7 @@ $shadow: shadow(sm);
 
 @mixin default {
   @include focus-ring;
-  @include transition((color, background-color, border-color, transform), duration(fast));
+  @include transition((color, background-color, border-color, transform));
 
   align-items: var(--koi-btn-align-items, center);
   background-color: var(--koi-btn-background, fill(srf, 2));
