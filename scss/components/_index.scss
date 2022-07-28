@@ -1,3 +1,4 @@
+@forward 'avatar' as avatar-*;
 @forward 'badge' as badge-*;
 @forward 'button' as button-*;
 @forward 'card' as card-*;
@@ -7,6 +8,7 @@
 @forward 'navbar' as navbar-*;
 @forward 'tooltip' as tooltip-*;
 
+@use 'avatar';
 @use 'badge';
 @use 'button';
 @use 'card';
@@ -16,6 +18,7 @@
 @use 'tooltip';
 
 @mixin components {
+  @include avatar.styles();
   @include badge.styles();
   @include button.styles();
   // @include card.styles();

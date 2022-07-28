@@ -133,6 +133,20 @@ $utilities: (
         margin-bottom: calc($spacer-value * var(--koi-space-y-reverse, 0));
       }
     }
+
+    @include create-responsive-utility(-space-x-#{$key}) {
+      & > :not([hidden]) ~ :not([hidden]) {
+        margin-right: calc(-1 * $spacer-value * var(--koi-space-x-reverse, 0));
+        margin-left: calc(-1 * $spacer-value * calc(1 - var(--koi-space-x-reverse, 0)));
+      }
+    }
+
+    @include create-responsive-utility(-space-y-#{$key}) {
+      & > :not([hidden]) ~ :not([hidden]) {
+        margin-top: calc(-1 * $spacer-value * calc(1 - var(--koi-space-y-reverse, 0)));
+        margin-bottom: calc(-1 * $spacer-value * var(--koi-space-y-reverse, 0));
+      }
+    }
   }
 
   @include create-responsive-utility(space-x-reverse) {

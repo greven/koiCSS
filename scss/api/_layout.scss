@@ -144,7 +144,7 @@
 // Space elements in a horizontal (row) or vertical (column) flex container
 @mixin spacer($direction: row, $spacer: md, $justify: flex-start, $align: null, $reverse: false) {
   $direction: if($reverse, #{$direction}-reverse, $direction);
-  $spacer: if(theme-has-key(spacing, $spacer), spacing($spacer), $spacer);
+  $spacer: if(is-spacing($spacer), spacing($spacer), $spacer);
 
   display: flex;
   flex-direction: $direction;

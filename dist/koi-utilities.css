@@ -74,6 +74,76 @@
     margin-bottom: calc(0.125rem * var(--koi-space-y-reverse, 0));
   }
 }
+.-space-x-2xs > :not([hidden]) ~ :not([hidden]) {
+  margin-right: calc(-0.125rem * var(--koi-space-x-reverse, 0));
+  margin-left: calc(-0.125rem * (1 - var(--koi-space-x-reverse, 0)));
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:-space-x-2xs > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(-0.125rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(-0.125rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:-space-x-2xs > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(-0.125rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(-0.125rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:-space-x-2xs > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(-0.125rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(-0.125rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:-space-x-2xs > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(-0.125rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(-0.125rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:-space-x-2xs > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(-0.125rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(-0.125rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+.-space-y-2xs > :not([hidden]) ~ :not([hidden]) {
+  margin-top: calc(-0.125rem * (1 - var(--koi-space-y-reverse, 0)));
+  margin-bottom: calc(-0.125rem * var(--koi-space-y-reverse, 0));
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:-space-y-2xs > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(-0.125rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(-0.125rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:-space-y-2xs > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(-0.125rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(-0.125rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:-space-y-2xs > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(-0.125rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(-0.125rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:-space-y-2xs > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(-0.125rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(-0.125rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:-space-y-2xs > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(-0.125rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(-0.125rem * var(--koi-space-y-reverse, 0));
+  }
+}
 .space-x-xs > :not([hidden]) ~ :not([hidden]) {
   margin-right: calc(0.25rem * var(--koi-space-x-reverse, 0));
   margin-left: calc(0.25rem * (1 - var(--koi-space-x-reverse, 0)));
@@ -142,6 +212,76 @@
   .\32 xl\:space-y-xs > :not([hidden]) ~ :not([hidden]) {
     margin-top: calc(0.25rem * (1 - var(--koi-space-y-reverse, 0)));
     margin-bottom: calc(0.25rem * var(--koi-space-y-reverse, 0));
+  }
+}
+.-space-x-xs > :not([hidden]) ~ :not([hidden]) {
+  margin-right: calc(-0.25rem * var(--koi-space-x-reverse, 0));
+  margin-left: calc(-0.25rem * (1 - var(--koi-space-x-reverse, 0)));
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:-space-x-xs > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(-0.25rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(-0.25rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:-space-x-xs > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(-0.25rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(-0.25rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:-space-x-xs > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(-0.25rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(-0.25rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:-space-x-xs > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(-0.25rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(-0.25rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:-space-x-xs > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(-0.25rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(-0.25rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+.-space-y-xs > :not([hidden]) ~ :not([hidden]) {
+  margin-top: calc(-0.25rem * (1 - var(--koi-space-y-reverse, 0)));
+  margin-bottom: calc(-0.25rem * var(--koi-space-y-reverse, 0));
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:-space-y-xs > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(-0.25rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(-0.25rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:-space-y-xs > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(-0.25rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(-0.25rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:-space-y-xs > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(-0.25rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(-0.25rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:-space-y-xs > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(-0.25rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(-0.25rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:-space-y-xs > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(-0.25rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(-0.25rem * var(--koi-space-y-reverse, 0));
   }
 }
 .space-x-sm > :not([hidden]) ~ :not([hidden]) {
@@ -214,6 +354,76 @@
     margin-bottom: calc(0.5rem * var(--koi-space-y-reverse, 0));
   }
 }
+.-space-x-sm > :not([hidden]) ~ :not([hidden]) {
+  margin-right: calc(-0.5rem * var(--koi-space-x-reverse, 0));
+  margin-left: calc(-0.5rem * (1 - var(--koi-space-x-reverse, 0)));
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:-space-x-sm > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(-0.5rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(-0.5rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:-space-x-sm > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(-0.5rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(-0.5rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:-space-x-sm > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(-0.5rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(-0.5rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:-space-x-sm > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(-0.5rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(-0.5rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:-space-x-sm > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(-0.5rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(-0.5rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+.-space-y-sm > :not([hidden]) ~ :not([hidden]) {
+  margin-top: calc(-0.5rem * (1 - var(--koi-space-y-reverse, 0)));
+  margin-bottom: calc(-0.5rem * var(--koi-space-y-reverse, 0));
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:-space-y-sm > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(-0.5rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(-0.5rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:-space-y-sm > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(-0.5rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(-0.5rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:-space-y-sm > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(-0.5rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(-0.5rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:-space-y-sm > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(-0.5rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(-0.5rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:-space-y-sm > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(-0.5rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(-0.5rem * var(--koi-space-y-reverse, 0));
+  }
+}
 .space-x-md > :not([hidden]) ~ :not([hidden]) {
   margin-right: calc(1rem * var(--koi-space-x-reverse, 0));
   margin-left: calc(1rem * (1 - var(--koi-space-x-reverse, 0)));
@@ -282,6 +492,76 @@
   .\32 xl\:space-y-md > :not([hidden]) ~ :not([hidden]) {
     margin-top: calc(1rem * (1 - var(--koi-space-y-reverse, 0)));
     margin-bottom: calc(1rem * var(--koi-space-y-reverse, 0));
+  }
+}
+.-space-x-md > :not([hidden]) ~ :not([hidden]) {
+  margin-right: calc(-1rem * var(--koi-space-x-reverse, 0));
+  margin-left: calc(-1rem * (1 - var(--koi-space-x-reverse, 0)));
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:-space-x-md > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(-1rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(-1rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:-space-x-md > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(-1rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(-1rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:-space-x-md > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(-1rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(-1rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:-space-x-md > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(-1rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(-1rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:-space-x-md > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(-1rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(-1rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+.-space-y-md > :not([hidden]) ~ :not([hidden]) {
+  margin-top: calc(-1rem * (1 - var(--koi-space-y-reverse, 0)));
+  margin-bottom: calc(-1rem * var(--koi-space-y-reverse, 0));
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:-space-y-md > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(-1rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(-1rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:-space-y-md > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(-1rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(-1rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:-space-y-md > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(-1rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(-1rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:-space-y-md > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(-1rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(-1rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:-space-y-md > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(-1rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(-1rem * var(--koi-space-y-reverse, 0));
   }
 }
 .space-x-lg > :not([hidden]) ~ :not([hidden]) {
@@ -354,6 +634,76 @@
     margin-bottom: calc(1.5rem * var(--koi-space-y-reverse, 0));
   }
 }
+.-space-x-lg > :not([hidden]) ~ :not([hidden]) {
+  margin-right: calc(-1.5rem * var(--koi-space-x-reverse, 0));
+  margin-left: calc(-1.5rem * (1 - var(--koi-space-x-reverse, 0)));
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:-space-x-lg > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(-1.5rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(-1.5rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:-space-x-lg > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(-1.5rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(-1.5rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:-space-x-lg > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(-1.5rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(-1.5rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:-space-x-lg > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(-1.5rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(-1.5rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:-space-x-lg > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(-1.5rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(-1.5rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+.-space-y-lg > :not([hidden]) ~ :not([hidden]) {
+  margin-top: calc(-1.5rem * (1 - var(--koi-space-y-reverse, 0)));
+  margin-bottom: calc(-1.5rem * var(--koi-space-y-reverse, 0));
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:-space-y-lg > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(-1.5rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(-1.5rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:-space-y-lg > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(-1.5rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(-1.5rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:-space-y-lg > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(-1.5rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(-1.5rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:-space-y-lg > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(-1.5rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(-1.5rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:-space-y-lg > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(-1.5rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(-1.5rem * var(--koi-space-y-reverse, 0));
+  }
+}
 .space-x-xl > :not([hidden]) ~ :not([hidden]) {
   margin-right: calc(3rem * var(--koi-space-x-reverse, 0));
   margin-left: calc(3rem * (1 - var(--koi-space-x-reverse, 0)));
@@ -422,6 +772,76 @@
   .\32 xl\:space-y-xl > :not([hidden]) ~ :not([hidden]) {
     margin-top: calc(3rem * (1 - var(--koi-space-y-reverse, 0)));
     margin-bottom: calc(3rem * var(--koi-space-y-reverse, 0));
+  }
+}
+.-space-x-xl > :not([hidden]) ~ :not([hidden]) {
+  margin-right: calc(-3rem * var(--koi-space-x-reverse, 0));
+  margin-left: calc(-3rem * (1 - var(--koi-space-x-reverse, 0)));
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:-space-x-xl > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(-3rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(-3rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:-space-x-xl > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(-3rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(-3rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:-space-x-xl > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(-3rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(-3rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:-space-x-xl > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(-3rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(-3rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:-space-x-xl > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(-3rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(-3rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+.-space-y-xl > :not([hidden]) ~ :not([hidden]) {
+  margin-top: calc(-3rem * (1 - var(--koi-space-y-reverse, 0)));
+  margin-bottom: calc(-3rem * var(--koi-space-y-reverse, 0));
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:-space-y-xl > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(-3rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(-3rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:-space-y-xl > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(-3rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(-3rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:-space-y-xl > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(-3rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(-3rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:-space-y-xl > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(-3rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(-3rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:-space-y-xl > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(-3rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(-3rem * var(--koi-space-y-reverse, 0));
   }
 }
 .space-x-2xl > :not([hidden]) ~ :not([hidden]) {
@@ -494,6 +914,76 @@
     margin-bottom: calc(4rem * var(--koi-space-y-reverse, 0));
   }
 }
+.-space-x-2xl > :not([hidden]) ~ :not([hidden]) {
+  margin-right: calc(-4rem * var(--koi-space-x-reverse, 0));
+  margin-left: calc(-4rem * (1 - var(--koi-space-x-reverse, 0)));
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:-space-x-2xl > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(-4rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(-4rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:-space-x-2xl > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(-4rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(-4rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:-space-x-2xl > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(-4rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(-4rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:-space-x-2xl > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(-4rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(-4rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:-space-x-2xl > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(-4rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(-4rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+.-space-y-2xl > :not([hidden]) ~ :not([hidden]) {
+  margin-top: calc(-4rem * (1 - var(--koi-space-y-reverse, 0)));
+  margin-bottom: calc(-4rem * var(--koi-space-y-reverse, 0));
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:-space-y-2xl > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(-4rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(-4rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:-space-y-2xl > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(-4rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(-4rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:-space-y-2xl > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(-4rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(-4rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:-space-y-2xl > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(-4rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(-4rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:-space-y-2xl > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(-4rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(-4rem * var(--koi-space-y-reverse, 0));
+  }
+}
 .space-x-3xl > :not([hidden]) ~ :not([hidden]) {
   margin-right: calc(5rem * var(--koi-space-x-reverse, 0));
   margin-left: calc(5rem * (1 - var(--koi-space-x-reverse, 0)));
@@ -562,6 +1052,76 @@
   .\32 xl\:space-y-3xl > :not([hidden]) ~ :not([hidden]) {
     margin-top: calc(5rem * (1 - var(--koi-space-y-reverse, 0)));
     margin-bottom: calc(5rem * var(--koi-space-y-reverse, 0));
+  }
+}
+.-space-x-3xl > :not([hidden]) ~ :not([hidden]) {
+  margin-right: calc(-5rem * var(--koi-space-x-reverse, 0));
+  margin-left: calc(-5rem * (1 - var(--koi-space-x-reverse, 0)));
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:-space-x-3xl > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(-5rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(-5rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:-space-x-3xl > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(-5rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(-5rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:-space-x-3xl > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(-5rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(-5rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:-space-x-3xl > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(-5rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(-5rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:-space-x-3xl > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(-5rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(-5rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+.-space-y-3xl > :not([hidden]) ~ :not([hidden]) {
+  margin-top: calc(-5rem * (1 - var(--koi-space-y-reverse, 0)));
+  margin-bottom: calc(-5rem * var(--koi-space-y-reverse, 0));
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:-space-y-3xl > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(-5rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(-5rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:-space-y-3xl > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(-5rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(-5rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:-space-y-3xl > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(-5rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(-5rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:-space-y-3xl > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(-5rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(-5rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:-space-y-3xl > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(-5rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(-5rem * var(--koi-space-y-reverse, 0));
   }
 }
 .space-x-4xl > :not([hidden]) ~ :not([hidden]) {
@@ -634,6 +1194,76 @@
     margin-bottom: calc(10rem * var(--koi-space-y-reverse, 0));
   }
 }
+.-space-x-4xl > :not([hidden]) ~ :not([hidden]) {
+  margin-right: calc(-10rem * var(--koi-space-x-reverse, 0));
+  margin-left: calc(-10rem * (1 - var(--koi-space-x-reverse, 0)));
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:-space-x-4xl > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(-10rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(-10rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:-space-x-4xl > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(-10rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(-10rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:-space-x-4xl > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(-10rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(-10rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:-space-x-4xl > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(-10rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(-10rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:-space-x-4xl > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(-10rem * var(--koi-space-x-reverse, 0));
+    margin-left: calc(-10rem * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+.-space-y-4xl > :not([hidden]) ~ :not([hidden]) {
+  margin-top: calc(-10rem * (1 - var(--koi-space-y-reverse, 0)));
+  margin-bottom: calc(-10rem * var(--koi-space-y-reverse, 0));
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:-space-y-4xl > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(-10rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(-10rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:-space-y-4xl > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(-10rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(-10rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:-space-y-4xl > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(-10rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(-10rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:-space-y-4xl > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(-10rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(-10rem * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:-space-y-4xl > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(-10rem * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(-10rem * var(--koi-space-y-reverse, 0));
+  }
+}
 .space-x-0 > :not([hidden]) ~ :not([hidden]) {
   margin-right: calc(0 * var(--koi-space-x-reverse, 0));
   margin-left: calc(0 * (1 - var(--koi-space-x-reverse, 0)));
@@ -700,6 +1330,76 @@
 }
 @media screen and (min-width: 1536px) {
   .\32 xl\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(0 * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(0 * var(--koi-space-y-reverse, 0));
+  }
+}
+.-space-x-0 > :not([hidden]) ~ :not([hidden]) {
+  margin-right: calc(0 * var(--koi-space-x-reverse, 0));
+  margin-left: calc(0 * (1 - var(--koi-space-x-reverse, 0)));
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:-space-x-0 > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(0 * var(--koi-space-x-reverse, 0));
+    margin-left: calc(0 * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:-space-x-0 > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(0 * var(--koi-space-x-reverse, 0));
+    margin-left: calc(0 * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:-space-x-0 > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(0 * var(--koi-space-x-reverse, 0));
+    margin-left: calc(0 * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:-space-x-0 > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(0 * var(--koi-space-x-reverse, 0));
+    margin-left: calc(0 * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:-space-x-0 > :not([hidden]) ~ :not([hidden]) {
+    margin-right: calc(0 * var(--koi-space-x-reverse, 0));
+    margin-left: calc(0 * (1 - var(--koi-space-x-reverse, 0)));
+  }
+}
+.-space-y-0 > :not([hidden]) ~ :not([hidden]) {
+  margin-top: calc(0 * (1 - var(--koi-space-y-reverse, 0)));
+  margin-bottom: calc(0 * var(--koi-space-y-reverse, 0));
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:-space-y-0 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(0 * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(0 * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:-space-y-0 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(0 * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(0 * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:-space-y-0 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(0 * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(0 * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:-space-y-0 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: calc(0 * (1 - var(--koi-space-y-reverse, 0)));
+    margin-bottom: calc(0 * var(--koi-space-y-reverse, 0));
+  }
+}
+@media screen and (min-width: 1536px) {
+  .\32 xl\:-space-y-0 > :not([hidden]) ~ :not([hidden]) {
     margin-top: calc(0 * (1 - var(--koi-space-y-reverse, 0)));
     margin-bottom: calc(0 * var(--koi-space-y-reverse, 0));
   }

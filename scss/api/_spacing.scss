@@ -33,6 +33,14 @@ $negative-spacing: () !default;
 //   Functions
 // --------------------------------
 
+// Check if the $key is a valid spacing value (including negative)
+@function is-spacing($key) {
+  @if theme-has-key(spacing, $key) or is-negative-spacing($key) {
+    @return true;
+  }
+  @return false;
+}
+
 // Check if the $key is a negative spacing value
 @function is-negative-spacing($key) {
   @if meta.type-of($key) == 'string' {

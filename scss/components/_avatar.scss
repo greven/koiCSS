@@ -1,0 +1,80 @@
+// --------------------------------
+//   Avatar Component
+// --------------------------------
+
+@use 'sass:math';
+
+@use '../config';
+@use '../api' as *;
+
+// --------------------------------
+//   Vars
+// --------------------------------
+
+$class: '.avatar';
+
+// Defaults
+$size: 64px;
+
+// --------------------------------
+//   Mixins
+// --------------------------------
+
+@mixin avatar {
+  border-color: var(--koi-avatar-border-color, transparent);
+  border-width: var(--koi-avatar-border-width, 2px);
+  height: var(--koi-avatar-size, $size);
+  position: relative;
+  width: var(--koi-avatar-size, $size);
+
+  &__content {
+    align-items: center;
+    border-radius: radius(full);
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &__placeholder {
+    align-items: center;
+    background-color: fill(cnt, 8);
+    border-radius: radius(full);
+    color: fill(cnt, 0);
+    display: flex;
+    font-size: font(xl);
+    font-weight: font(semibold);
+    height: 100%;
+    justify-content: center;
+    opacity: 0.95;
+    width: 100%;
+  }
+}
+
+@mixin group {
+  @include spacer($spacer: math.div($size, -2));
+  display: flex;
+  overflow: hidden;
+
+  #{$class} {
+    --koi-avatar-border-color: #{fill(srf, 2)};
+
+    border-radius: radius(full);
+    overflow: hidden;
+  }
+}
+
+// --------------------------------
+//   Styles
+// --------------------------------
+
+@mixin styles {
+  #{$class} {
+    @include avatar;
+  }
+
+  // Avatar Group
+  #{$class}-group {
+    @include group;
+  }
+}
