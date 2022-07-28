@@ -1,17 +1,77 @@
 // --------------------------------
-//   Card
+//   Card Component
 // --------------------------------
 
-// TODO: WIP!
-// https://smolcss.dev/#smol-card-component
-@mixin card {
-  .card {
-    --koi-img-ratio: 3/2;
+@use '../config';
+@use '../api' as *;
 
-    //     display: flex;
-    //     flex-direction: column;
-    //     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.35);
-    //     border-radius: 0.5rem;
+// --------------------------------
+//   Vars
+// --------------------------------
+
+$class: '.card';
+
+// Defaults
+$aspect-ratio: '3/2';
+$spacing: spacing(lg);
+
+$border-radius: radius(lg);
+
+$font-size: md;
+$body-foreground: fill(txt, 2);
+
+// --------------------------------
+//   Mixins
+// --------------------------------
+
+@mixin card {
+  --koi-img-aspect-ratio: '3/2';
+  --koi-card-spacing: #{$spacing};
+  --koi-card-body-foreground: #{$body-foreground};
+  --koi-card-font-size: #{font-size($font-size)};
+  --koi-card-leading: #{text-leading($font-size)};
+
+  @include box($rounded: $border-radius, $shadow: md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--koi-card-spacing);
+
+  img {
+    aspect-ratio: var(--koi-img-aspect-ratio);
+    object-fit: cover;
+    width: 100%;
+
+    &:first-child {
+      border-radius: $border-radius $border-radius 0 0;
+    }
+
+    &:last-child {
+      border-radius: 0 0 $border-radius $border-radius;
+      margin-top: auto;
+    }
+  }
+
+  :not(img) {
+    margin-left: var(--koi-card-spacing);
+    margin-right: var(--koi-card-spacing);
+  }
+
+  :not(img):first-child {
+    margin-top: var(--koi-card-spacing);
+  }
+
+  :last-of-type:not(img, h2, h3, h4) {
+    margin-bottom: var(--koi-card-spacing);
+  }
+
+  :not(h2, h3, h4, h5, h6) {
+    color: var(--koi-card-body-foreground);
+    font-size: var(--koi-card-font-size);
+    line-height: var(--koi-card-leading);
+  }
+
+  a {
+    align-self: start;
   }
 }
 
@@ -20,5 +80,7 @@
 // --------------------------------
 
 @mixin styles {
-  @include card;
+  #{$class} {
+    @include card;
+  }
 }

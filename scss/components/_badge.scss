@@ -61,7 +61,7 @@ $padding-x-large: spacing(14);
   text-transform: var(--koi-badge-text-transform, uppercase);
 
   @include dark-mode {
-    --koi-badge-background: #{fill(cnt, 2)};
+    --koi-badge-background: #{fill(cnt, 5, $alpha: 0.25, $lightness: -20%)};
   }
 
   // Color variants
@@ -70,7 +70,7 @@ $padding-x-large: spacing(14);
     --koi-badge-foreground: #{accent(8)};
 
     @include dark-mode {
-      --koi-badge-background: #{accent(8, $alpha: 0.5, $lightness: -50%)};
+      --koi-badge-background: #{accent(8, $alpha: 0.25, $lightness: -20%)};
       --koi-badge-foreground: #{accent(5)};
     }
   }
@@ -81,7 +81,7 @@ $padding-x-large: spacing(14);
       --koi-badge-foreground: #{fill($color, 8)};
 
       @include dark-mode {
-        --koi-badge-background: #{fill($color, 8, $alpha: 0.5, $lightness: -50%)};
+        --koi-badge-background: #{fill($color, 8, $alpha: 0.25, $lightness: -20%)};
         --koi-badge-foreground: #{fill($color, 5)};
       }
     }

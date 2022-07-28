@@ -16,6 +16,20 @@
 @use 'theme' as *;
 
 // -------------------------------------
+//   Functions
+// -------------------------------------
+
+/// Return a aspect ratio value from the theme
+///
+/// @param {string} $aspect-ratio
+///
+/// @return {any} `$aspect-ratio-value`.
+///
+@function aspect($aspect-ratio) {
+  @return theme(aspect, $aspect-ratio);
+}
+
+// -------------------------------------
 //   Mixins
 // -------------------------------------
 
