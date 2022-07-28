@@ -32,6 +32,10 @@ $size: 64px;
     height: var(--koi-avatar-size, $size);
     justify-content: center;
     width: var(--koi-avatar-size, $size);
+
+    &--placeholder {
+      @include placeholder;
+    }
   }
 }
 
@@ -48,28 +52,43 @@ $size: 64px;
 }
 
 @mixin status {
-  @include position-variants($class, 7%, true);
-  @include outline-shadow(fill(srf, 1));
-  background-color: fill(srf, 4);
-  border-radius: radius(full);
-  content: '';
-  display: block;
-  height: 15%;
-  position: absolute;
-  width: 15%;
-  z-index: layer(above);
-}
-
-@mixin offline {
   &::before {
-    @include status;
+    @include position-variants('#{$class}--status', $value: 7%, $is-circle: true, $suffix: '::before');
+    @include outline-shadow(fill(srf, 1));
+    background-color: fill(srf, 4);
+    border-radius: radius(full);
+    content: '';
+    display: block;
+    height: 15%;
+    position: absolute;
+    right: 7%;
+    top: 7%;
+    width: 15%;
+    z-index: layer(above);
   }
-}
 
-@mixin online {
-  &::before {
-    @include status;
-    background-color: fill(success, 5);
+  &--info {
+    &::before {
+      background-color: fill(info, 6);
+    }
+  }
+
+  &--success {
+    &::before {
+      background-color: fill(success, 5);
+    }
+  }
+
+  &--warning {
+    &::before {
+      background-color: fill(warning, 5);
+    }
+  }
+
+  &--danger {
+    &::before {
+      background-color: fill(danger, 5);
+    }
   }
 }
 
@@ -94,12 +113,8 @@ $size: 64px;
   #{$class} {
     @include avatar;
 
-    &--placeholder {
-      @include placeholder;
-    }
-
-    &--online {
-      @include online;
+    &--status {
+      @include status;
     }
   }
 

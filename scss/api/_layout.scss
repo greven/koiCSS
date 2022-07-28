@@ -4,6 +4,8 @@
 
 @use 'sass:math';
 @use 'sass:meta';
+@use 'sass:list';
+@use 'sass:selector';
 
 @use 'border' as *;
 @use 'color' as *;
@@ -229,6 +231,8 @@
   grid-template-columns: repeat(auto-fill, minmax(min($width, 100%), 1fr));
 }
 
+// ---- Inset ----
+
 @mixin inset($value) {
   bottom: $value;
   left: $value;
@@ -244,4 +248,74 @@
 @mixin inset-y($value) {
   bottom: $value;
   top: $value;
+}
+
+// ---- Position Variants ----
+
+@mixin _position-variant($parent, $variant, $suffix) {
+  @if $parent {
+    @at-root #{$parent} {
+      &--#{$variant}#{$suffix} {
+        @content;
+      }
+    }
+  } @else {
+    &--#{$variant}#{$suffix} {
+      @content;
+    }
+  }
+}
+
+// Add positioning support variants based on transforms (top, middle, bottom and start, center, end).
+@mixin position-variants($parent: null, $value: 50%, $is-circle: false, $suffix: '') {
+  $shift: if($is-circle, $value, 0);
+
+  bottom: auto;
+  left: auto;
+  right: $shift;
+  top: $shift;
+
+  transform: translate(var(--koi-translate-x, $value), var(--koi-translate-y, -#{$value})) rotate(var(--koi-rotate, 0))
+    skew(var(--koi-skew-x, 0)) skewY(var(--koi-skew-y, 0)) scaleX(var(--koi-scale-x, 1)) scaleY(var(--koi-scale-y, 1));
+
+  @include _position-variant($parent, top, $suffix) {
+    --koi-translate-y: -#{$value};
+
+    bottom: auto;
+    top: $shift;
+  }
+
+  @include _position-variant($parent, middle, $suffix) {
+    --koi-translate-y: -#{$value};
+    bottom: $value;
+    top: $value;
+  }
+
+  @include _position-variant($parent, bottom, $suffix) {
+    --koi-translate-y: #{$value};
+
+    bottom: $shift;
+    top: auto;
+  }
+
+  @include _position-variant($parent, start, $suffix) {
+    --koi-translate-x: -#{$value};
+
+    left: $shift;
+    right: auto;
+  }
+
+  @include _position-variant($parent, center, $suffix) {
+    --koi-translate-x: -#{$value};
+
+    left: $value;
+    right: $value;
+  }
+
+  @include _position-variant($parent, end, $suffix) {
+    --koi-translate-x: #{$value};
+
+    left: auto;
+    right: $shift;
+  }
 }

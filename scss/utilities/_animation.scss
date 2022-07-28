@@ -18,7 +18,7 @@ $_animations: theme(animations);
 $utilities: (
   animations: (
     property: animation,
-    class: animation,
+    class: animate,
     values: $_animations,
   ),
 );

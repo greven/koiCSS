@@ -2454,83 +2454,83 @@
   white-space: nowrap;
 }
 
-.animation-blink {
+.animate-blink {
   animation: blink 1s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
 }
 
-.animation-bounce {
+.animate-bounce {
   animation: bounce 2s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
 }
 
-.animation-fade-in {
+.animate-fade-in {
   animation: fade-in 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
-.animation-fade-out {
+.animate-fade-out {
   animation: fade-out 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
-.animation-float {
+.animate-float {
   animation: float 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
-.animation-ping {
+.animate-ping {
   animation: ping 3s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
 
-.animation-pulse {
+.animate-pulse {
   animation: pulse 2s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
 
-.animation-spin {
+.animate-spin {
   animation: spin 2s linear infinite;
 }
 
-.animation-scale-up {
+.animate-scale-up {
   animation: scale-up 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
-.animation-scale-down {
+.animate-scale-down {
   animation: scale-down 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
-.animation-slide-out-up {
+.animate-slide-out-up {
   animation: slide-out-up 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
-.animation-slide-out-down {
+.animate-slide-out-down {
   animation: slide-out-down 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
-.animation-slide-out-right {
+.animate-slide-out-right {
   animation: slide-out-right 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
-.animation-slide-out-left {
+.animate-slide-out-left {
   animation: slide-out-left 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
-.animation-slide-in-up {
+.animate-slide-in-up {
   animation: slide-in-up 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
-.animation-slide-in-down {
+.animate-slide-in-down {
   animation: slide-in-down 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
-.animation-slide-in-right {
+.animate-slide-in-right {
   animation: slide-in-right 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
-.animation-slide-in-left {
+.animate-slide-in-left {
   animation: slide-in-left 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
-.animation-shake-x {
+.animate-shake-x {
   animation: shake-x 0.75s cubic-bezier(0, 0, 0.2, 1);
 }
 
-.animation-shake-y {
+.animate-shake-y {
   animation: shake-y 0.75s cubic-bezier(0, 0, 0.2, 1);
 }
 

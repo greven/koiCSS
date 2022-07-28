@@ -23,7 +23,7 @@ $class: '.indicator';
   width: max-content;
 
   &__item {
-    @include position-variants($class);
+    @include position-variants;
     position: absolute;
     z-index: 1;
   }
