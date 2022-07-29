@@ -38,7 +38,7 @@
 @mixin box(
   $max-width: 100%,
   $color: fill(txt, 1),
-  $bg-color: fill(srf, 2),
+  $bg-color: fill(srf, 1),
   $padding: null,
   $rounded: null,
   $shadow: null

@@ -105,13 +105,13 @@ $shadow: shadow(sm);
   @include transition((color, background-color, border-color, transform));
 
   align-items: var(--koi-btn-align-items, center);
-  background-color: var(--koi-btn-background, fill(srf, 2));
-  border-color: var(--koi-btn-border-color, fill(brd, 2));
+  background-color: var(--koi-btn-background, fill(srf, 1));
+  border-color: var(--koi-btn-border-color, fill(brd, 1));
   border-radius: var(--koi-btn-border-radius, $border-radius);
   border-style: var(--koi-btn-border-style, solid);
   border-width: var(--koi-btn-border-width, 1px);
   box-shadow: var(--koi-btn-shadow, $shadow);
-  color: var(--koi-btn-foreground, fill(txt, 2));
+  color: var(--koi-btn-foreground, fill(txt, 1));
   display: var(--koi-btn-display, inline-flex);
   font-size: var(--koi-btn-font-size, $font-size);
   font-weight: var(--koi-btn-font-weight, font(semibold));
@@ -127,7 +127,7 @@ $shadow: shadow(sm);
   @include hover {
     @include shadow(var(--koi-btn-shadow-hover, $shadow));
 
-    background-color: var(--koi-btn-background-hover, fill(srf, 3));
+    background-color: var(--koi-btn-background-hover, fill(srf, 2));
     color: var(--koi-btn-foreground-hover, fill(txt, 1));
   }
 
@@ -138,12 +138,12 @@ $shadow: shadow(sm);
       transform: translateY(var(--koi-btn-animation-scale, 1px));
     } @else {
       background-color: var(--koi-btn-background-active, fill(srf, 1));
-      color: var(--koi-btn-foreground-active, fill(txt, 2));
+      color: var(--koi-btn-foreground-active, fill(txt, 1));
     }
   }
 
   @include disabled {
-    background-color: var(--koi-btn-background-disabled, fill(srf, 4));
+    background-color: var(--koi-btn-background-disabled, fill(srf, 3, $alpha: 0.4));
     border-color: var(--koi-btn-border-color-disabled, transparent);
     box-shadow: none;
     color: var(--koi-btn-foreground-disabled, fill(txt, 3));

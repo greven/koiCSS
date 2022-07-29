@@ -10,14 +10,18 @@
 // --------------------------------
 
 $class: '.card';
+$ignored-selectors: 'img, h2, h3, h4, h5, h6, #{$class}__section, #{$class}__header, #{$class}__footer, #{$class}__text';
 
 // Defaults
 $aspect-ratio: '3/2';
-$spacing: spacing(lg);
+$spacing-x: spacing(14);
+$spacing-y: spacing(16);
 
+$border-color: fill(brd, 1);
 $border-radius: radius(lg);
 
-$font-size: md;
+$font-size: sm;
+$body-background: fill(srf, 1);
 $body-foreground: fill(txt, 2);
 
 // --------------------------------
@@ -25,18 +29,56 @@ $body-foreground: fill(txt, 2);
 // --------------------------------
 
 @mixin card {
-  --koi-img-aspect-ratio: '3/2';
-  --koi-card-spacing: #{$spacing};
+  --koi-img-aspect-ratio: 3/2;
+  --koi-card-spacing-x: #{fluid-spacing($spacing-x)};
+  --koi-card-spacing-y: #{fluid-spacing($spacing-y)};
+  --koi-card-gap: #{$spacing-y};
+  --koi-card-border-color: #{$border-color};
+  --koi-card-border-width: 0;
+  --koi-card-inner-border-color: #{$border-color};
+  --koi-card-inner-border-width: 1px;
+  --koi-card-body-background: #{$body-background};
   --koi-card-body-foreground: #{$body-foreground};
   --koi-card-font-size: #{font-size($font-size)};
   --koi-card-leading: #{text-leading($font-size)};
 
-  @include box($rounded: $border-radius, $shadow: md);
+  @include box($color: var(--koi-card-body-background), $rounded: $border-radius, $shadow: md);
+  border-width: var(--koi-card-border-width);
   display: flex;
   flex-direction: column;
-  gap: var(--koi-card-spacing);
+  gap: var(--koi-card-gap);
 
-  img {
+  &__section,
+  &__header,
+  &__footer {
+    display: flex;
+
+    &--border {
+      border-color: var(--koi-card-inner-border-color);
+      border-top-width: var(--koi-card-inner-border-width);
+      padding-left: var(--koi-card-spacing-x);
+      padding-right: var(--koi-card-spacing-x);
+      padding-top: var(--koi-card-spacing-y);
+    }
+  }
+
+  &__header,
+  &__footer {
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__text {
+    color: var(--koi-card-body-foreground);
+    font-size: var(--koi-card-font-size);
+    line-height: var(--koi-card-leading);
+  }
+
+  > *:last-of-type:not(#{$ignored-selectors}) {
+    margin-bottom: var(--koi-card-spacing-y);
+  }
+
+  > img {
     aspect-ratio: var(--koi-img-aspect-ratio);
     object-fit: cover;
     width: 100%;
@@ -51,26 +93,16 @@ $body-foreground: fill(txt, 2);
     }
   }
 
-  :not(img) {
-    margin-left: var(--koi-card-spacing);
-    margin-right: var(--koi-card-spacing);
+  > *:not(img, #{$class}__section--border) {
+    margin-left: var(--koi-card-spacing-x);
+    margin-right: var(--koi-card-spacing-x);
   }
 
-  :not(img):first-child {
-    margin-top: var(--koi-card-spacing);
+  > *:not(img):first-child {
+    margin-top: var(--koi-card-spacing-y);
   }
 
-  :last-of-type:not(img, h2, h3, h4) {
-    margin-bottom: var(--koi-card-spacing);
-  }
-
-  :not(h2, h3, h4, h5, h6) {
-    color: var(--koi-card-body-foreground);
-    font-size: var(--koi-card-font-size);
-    line-height: var(--koi-card-leading);
-  }
-
-  a {
+  > a {
     align-self: start;
   }
 }

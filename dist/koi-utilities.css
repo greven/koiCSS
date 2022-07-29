@@ -2902,6 +2902,10 @@
   background-color: hsl(var(--color-cnt-9-h), var(--color-cnt-9-s), var(--color-cnt-9-l), 1);
 }
 
+.bg-srf-0, .focus\:bg-srf-0:focus, .hover\:bg-srf-0:hover {
+  background-color: hsl(var(--color-srf-0-h), var(--color-srf-0-s), var(--color-srf-0-l), 1);
+}
+
 .bg-srf-1, .focus\:bg-srf-1:focus, .hover\:bg-srf-1:hover {
   background-color: hsl(var(--color-srf-1-h), var(--color-srf-1-s), var(--color-srf-1-l), 1);
 }
@@ -2914,8 +2918,8 @@
   background-color: hsl(var(--color-srf-3-h), var(--color-srf-3-s), var(--color-srf-3-l), 1);
 }
 
-.bg-srf-4, .focus\:bg-srf-4:focus, .hover\:bg-srf-4:hover {
-  background-color: hsl(var(--color-srf-4-h), var(--color-srf-4-s), var(--color-srf-4-l), 1);
+.bg-brd-0, .focus\:bg-brd-0:focus, .hover\:bg-brd-0:hover {
+  background-color: hsl(var(--color-brd-0-h), var(--color-brd-0-s), var(--color-brd-0-l), 1);
 }
 
 .bg-brd-1, .focus\:bg-brd-1:focus, .hover\:bg-brd-1:hover {
@@ -2924,6 +2928,14 @@
 
 .bg-brd-2, .focus\:bg-brd-2:focus, .hover\:bg-brd-2:hover {
   background-color: hsl(var(--color-brd-2-h), var(--color-brd-2-s), var(--color-brd-2-l), 1);
+}
+
+.bg-brd-3, .focus\:bg-brd-3:focus, .hover\:bg-brd-3:hover {
+  background-color: hsl(var(--color-brd-3-h), var(--color-brd-3-s), var(--color-brd-3-l), 1);
+}
+
+.bg-txt-0, .focus\:bg-txt-0:focus, .hover\:bg-txt-0:hover {
+  background-color: hsl(var(--color-txt-0-h), var(--color-txt-0-s), var(--color-txt-0-l), 1);
 }
 
 .bg-txt-1, .focus\:bg-txt-1:focus, .hover\:bg-txt-1:hover {
@@ -2936,10 +2948,6 @@
 
 .bg-txt-3, .focus\:bg-txt-3:focus, .hover\:bg-txt-3:hover {
   background-color: hsl(var(--color-txt-3-h), var(--color-txt-3-s), var(--color-txt-3-l), 1);
-}
-
-.bg-txt-4, .focus\:bg-txt-4:focus, .hover\:bg-txt-4:hover {
-  background-color: hsl(var(--color-txt-4-h), var(--color-txt-4-s), var(--color-txt-4-l), 1);
 }
 
 .bg-current, .focus\:bg-current:focus, .hover\:bg-current:hover {
@@ -3662,6 +3670,10 @@
   border-color: hsl(var(--color-cnt-9-h), var(--color-cnt-9-s), var(--color-cnt-9-l), 1);
 }
 
+.border-srf-0, .focus\:border-srf-0:focus, .hover\:border-srf-0:hover {
+  border-color: hsl(var(--color-srf-0-h), var(--color-srf-0-s), var(--color-srf-0-l), 1);
+}
+
 .border-srf-1, .focus\:border-srf-1:focus, .hover\:border-srf-1:hover {
   border-color: hsl(var(--color-srf-1-h), var(--color-srf-1-s), var(--color-srf-1-l), 1);
 }
@@ -3674,8 +3686,8 @@
   border-color: hsl(var(--color-srf-3-h), var(--color-srf-3-s), var(--color-srf-3-l), 1);
 }
 
-.border-srf-4, .focus\:border-srf-4:focus, .hover\:border-srf-4:hover {
-  border-color: hsl(var(--color-srf-4-h), var(--color-srf-4-s), var(--color-srf-4-l), 1);
+.border-brd-0, .focus\:border-brd-0:focus, .hover\:border-brd-0:hover {
+  border-color: hsl(var(--color-brd-0-h), var(--color-brd-0-s), var(--color-brd-0-l), 1);
 }
 
 .border-brd-1, .focus\:border-brd-1:focus, .hover\:border-brd-1:hover {
@@ -3684,6 +3696,14 @@
 
 .border-brd-2, .focus\:border-brd-2:focus, .hover\:border-brd-2:hover {
   border-color: hsl(var(--color-brd-2-h), var(--color-brd-2-s), var(--color-brd-2-l), 1);
+}
+
+.border-brd-3, .focus\:border-brd-3:focus, .hover\:border-brd-3:hover {
+  border-color: hsl(var(--color-brd-3-h), var(--color-brd-3-s), var(--color-brd-3-l), 1);
+}
+
+.border-txt-0, .focus\:border-txt-0:focus, .hover\:border-txt-0:hover {
+  border-color: hsl(var(--color-txt-0-h), var(--color-txt-0-s), var(--color-txt-0-l), 1);
 }
 
 .border-txt-1, .focus\:border-txt-1:focus, .hover\:border-txt-1:hover {
@@ -3696,10 +3716,6 @@
 
 .border-txt-3, .focus\:border-txt-3:focus, .hover\:border-txt-3:hover {
   border-color: hsl(var(--color-txt-3-h), var(--color-txt-3-s), var(--color-txt-3-l), 1);
-}
-
-.border-txt-4, .focus\:border-txt-4:focus, .hover\:border-txt-4:hover {
-  border-color: hsl(var(--color-txt-4-h), var(--color-txt-4-s), var(--color-txt-4-l), 1);
 }
 
 .border-current, .focus\:border-current:focus, .hover\:border-current:hover {
@@ -10774,6 +10790,10 @@
   color: hsl(var(--color-cnt-9-h), var(--color-cnt-9-s), var(--color-cnt-9-l), 1);
 }
 
+.color-srf-0, .focus\:color-srf-0:focus, .hover\:color-srf-0:hover {
+  color: hsl(var(--color-srf-0-h), var(--color-srf-0-s), var(--color-srf-0-l), 1);
+}
+
 .color-srf-1, .focus\:color-srf-1:focus, .hover\:color-srf-1:hover {
   color: hsl(var(--color-srf-1-h), var(--color-srf-1-s), var(--color-srf-1-l), 1);
 }
@@ -10786,8 +10806,8 @@
   color: hsl(var(--color-srf-3-h), var(--color-srf-3-s), var(--color-srf-3-l), 1);
 }
 
-.color-srf-4, .focus\:color-srf-4:focus, .hover\:color-srf-4:hover {
-  color: hsl(var(--color-srf-4-h), var(--color-srf-4-s), var(--color-srf-4-l), 1);
+.color-brd-0, .focus\:color-brd-0:focus, .hover\:color-brd-0:hover {
+  color: hsl(var(--color-brd-0-h), var(--color-brd-0-s), var(--color-brd-0-l), 1);
 }
 
 .color-brd-1, .focus\:color-brd-1:focus, .hover\:color-brd-1:hover {
@@ -10796,6 +10816,14 @@
 
 .color-brd-2, .focus\:color-brd-2:focus, .hover\:color-brd-2:hover {
   color: hsl(var(--color-brd-2-h), var(--color-brd-2-s), var(--color-brd-2-l), 1);
+}
+
+.color-brd-3, .focus\:color-brd-3:focus, .hover\:color-brd-3:hover {
+  color: hsl(var(--color-brd-3-h), var(--color-brd-3-s), var(--color-brd-3-l), 1);
+}
+
+.color-txt-0, .focus\:color-txt-0:focus, .hover\:color-txt-0:hover {
+  color: hsl(var(--color-txt-0-h), var(--color-txt-0-s), var(--color-txt-0-l), 1);
 }
 
 .color-txt-1, .focus\:color-txt-1:focus, .hover\:color-txt-1:hover {
@@ -10808,10 +10836,6 @@
 
 .color-txt-3, .focus\:color-txt-3:focus, .hover\:color-txt-3:hover {
   color: hsl(var(--color-txt-3-h), var(--color-txt-3-s), var(--color-txt-3-l), 1);
-}
-
-.color-txt-4, .focus\:color-txt-4:focus, .hover\:color-txt-4:hover {
-  color: hsl(var(--color-txt-4-h), var(--color-txt-4-s), var(--color-txt-4-l), 1);
 }
 
 .color-current, .focus\:color-current:focus, .hover\:color-current:hover {
@@ -11434,6 +11458,10 @@
   text-decoration-color: hsl(var(--color-cnt-9-h), var(--color-cnt-9-s), var(--color-cnt-9-l), 1);
 }
 
+.decoration-srf-0, .focus\:decoration-srf-0:focus, .hover\:decoration-srf-0:hover {
+  text-decoration-color: hsl(var(--color-srf-0-h), var(--color-srf-0-s), var(--color-srf-0-l), 1);
+}
+
 .decoration-srf-1, .focus\:decoration-srf-1:focus, .hover\:decoration-srf-1:hover {
   text-decoration-color: hsl(var(--color-srf-1-h), var(--color-srf-1-s), var(--color-srf-1-l), 1);
 }
@@ -11446,8 +11474,8 @@
   text-decoration-color: hsl(var(--color-srf-3-h), var(--color-srf-3-s), var(--color-srf-3-l), 1);
 }
 
-.decoration-srf-4, .focus\:decoration-srf-4:focus, .hover\:decoration-srf-4:hover {
-  text-decoration-color: hsl(var(--color-srf-4-h), var(--color-srf-4-s), var(--color-srf-4-l), 1);
+.decoration-brd-0, .focus\:decoration-brd-0:focus, .hover\:decoration-brd-0:hover {
+  text-decoration-color: hsl(var(--color-brd-0-h), var(--color-brd-0-s), var(--color-brd-0-l), 1);
 }
 
 .decoration-brd-1, .focus\:decoration-brd-1:focus, .hover\:decoration-brd-1:hover {
@@ -11456,6 +11484,14 @@
 
 .decoration-brd-2, .focus\:decoration-brd-2:focus, .hover\:decoration-brd-2:hover {
   text-decoration-color: hsl(var(--color-brd-2-h), var(--color-brd-2-s), var(--color-brd-2-l), 1);
+}
+
+.decoration-brd-3, .focus\:decoration-brd-3:focus, .hover\:decoration-brd-3:hover {
+  text-decoration-color: hsl(var(--color-brd-3-h), var(--color-brd-3-s), var(--color-brd-3-l), 1);
+}
+
+.decoration-txt-0, .focus\:decoration-txt-0:focus, .hover\:decoration-txt-0:hover {
+  text-decoration-color: hsl(var(--color-txt-0-h), var(--color-txt-0-s), var(--color-txt-0-l), 1);
 }
 
 .decoration-txt-1, .focus\:decoration-txt-1:focus, .hover\:decoration-txt-1:hover {
@@ -11468,10 +11504,6 @@
 
 .decoration-txt-3, .focus\:decoration-txt-3:focus, .hover\:decoration-txt-3:hover {
   text-decoration-color: hsl(var(--color-txt-3-h), var(--color-txt-3-s), var(--color-txt-3-l), 1);
-}
-
-.decoration-txt-4, .focus\:decoration-txt-4:focus, .hover\:decoration-txt-4:hover {
-  text-decoration-color: hsl(var(--color-txt-4-h), var(--color-txt-4-s), var(--color-txt-4-l), 1);
 }
 
 .decoration-current, .focus\:decoration-current:focus, .hover\:decoration-current:hover {

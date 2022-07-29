@@ -23,7 +23,7 @@
   }
 
   body {
-    background-color: var(--koi-body-background, fill(srf, 1));
+    background-color: var(--koi-body-background, fill(srf, 0));
     color: var(--koi-body-foreground, fill(txt, 1));
     font-family: font(base);
     font-size: font(md);

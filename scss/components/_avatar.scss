@@ -55,7 +55,7 @@ $size: 64px;
   &::before {
     @include position-variants('#{$class}--status', $value: 7%, $is-circle: true, $suffix: '::before');
     @include outline-shadow(fill(srf, 1));
-    background-color: fill(srf, 4);
+    background-color: fill(srf, 3);
     border-radius: radius(full);
     content: '';
     display: block;
