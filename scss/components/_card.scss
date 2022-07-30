@@ -50,8 +50,12 @@ $body-foreground: fill(txt, 2);
 
   &__section,
   &__header,
+  &__content,
   &__footer {
     display: flex;
+    position: relative;
+    font-size: var(--koi-card-font-size);
+    line-height: var(--koi-card-leading);
 
     &--border {
       border-color: var(--koi-card-inner-border-color);
@@ -68,10 +72,8 @@ $body-foreground: fill(txt, 2);
     justify-content: space-between;
   }
 
-  &__text {
+  &__content {
     color: var(--koi-card-body-foreground);
-    font-size: var(--koi-card-font-size);
-    line-height: var(--koi-card-leading);
   }
 
   > *:last-of-type:not(#{$ignored-selectors}) {

@@ -32,7 +32,7 @@ $padding-x: 18px;
 $padding-x-compact: 10px;
 $padding-x-wide: spacing(80);
 
-$shadow: shadow(sm);
+$shadow: shadow(xs);
 
 // --------------------------------
 //   Mixins
@@ -171,6 +171,7 @@ $shadow: shadow(sm);
   --koi-btn-foreground: #{fill(cnt, 0)};
   --koi-btn-foreground-hover: #{fill(cnt, 1)};
   --koi-btn-foreground-active: #{fill(cnt, 0)};
+  --koi-btn-shadow: #{shadow(sm)};
 
   @include focus-ring(fill(cnt, 9));
 
