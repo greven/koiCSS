@@ -53,9 +53,9 @@ $body-foreground: fill(txt, 2);
   &__content,
   &__footer {
     display: flex;
-    position: relative;
     font-size: var(--koi-card-font-size);
     line-height: var(--koi-card-leading);
+    position: relative;
 
     &--border {
       border-color: var(--koi-card-inner-border-color);

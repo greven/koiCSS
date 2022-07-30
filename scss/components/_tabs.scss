@@ -11,6 +11,84 @@
 
 $class: '.tabs';
 
+// Defaults
+
 // --------------------------------
 //   Mixins
 // --------------------------------
+
+@mixin tab-with-border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  margin-bottom: -1px;
+
+  &:hover:not(#{$class}__item--active) {
+    border-bottom-color: fill(brd, 2);
+  }
+
+  &#{$class}__item--active {
+    border-bottom-color: accent(5);
+
+    &:hover {
+      border-bottom-color: accent(6);
+    }
+  }
+}
+
+@mixin tabs {
+  @include spacer($spacer: 2rem);
+
+  &__item {
+    @include transition;
+    align-items: center;
+    border: transparent;
+    color: fill(txt, 2);
+    cursor: pointer;
+    display: inline-flex;
+    flex-wrap: wrap;
+    font-size: font(sm);
+    font-weight: font(medium);
+    justify-content: center;
+    padding-bottom: 1rem;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    padding-top: 1rem;
+    position: relative;
+    text-align: center;
+    user-select: none;
+
+    &:hover:not(&--active) {
+      color: fill(txt, 0);
+    }
+
+    &--active {
+      color: accent(5);
+
+      &:hover {
+        color: accent(6);
+      }
+    }
+
+    &--bordered {
+      @include tab-with-border;
+    }
+  }
+}
+
+@mixin bordered {
+  border-bottom-width: 1px;
+}
+
+// --------------------------------
+//   Styles
+// --------------------------------
+
+@mixin styles {
+  #{$class} {
+    @include tabs;
+
+    &--bordered {
+      @include bordered;
+    }
+  }
+}

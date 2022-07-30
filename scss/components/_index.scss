@@ -6,6 +6,7 @@
 @forward 'keyboard' as keyboard-*;
 @forward 'loader' as loader-*;
 @forward 'navbar' as navbar-*;
+@forward 'tabs' as tabs-*;
 @forward 'tooltip' as tooltip-*;
 
 @use 'avatar';
@@ -15,6 +16,7 @@
 @use 'indicator';
 @use 'keyboard';
 @use 'navbar';
+@use 'tabs';
 @use 'tooltip';
 
 @mixin components {
@@ -25,5 +27,6 @@
   @include indicator.styles();
   @include keyboard.styles();
   // @include navbar.styles();
+  @include tabs.styles();
   // @include tooltip.styles();
 }
