@@ -41,20 +41,20 @@ $border-width: 2px;
 }
 
 @mixin tab-with-box {
-  padding: 0.5rem 1rem;
   border-radius: var(--koi-tabs-box-radius, radius());
+  padding: 0.5rem 1rem;
 
   &#{$class}__item--active {
-    color: accent(7);
     background-color: accent(1);
+    color: accent(7);
 
     &:hover {
       color: accent(8);
     }
 
     @include dark-mode {
-      color: accent(5);
       background-color: accent(8, $alpha: 0.25, $lightness: -20%);
+      color: accent(5);
 
       &:hover {
         color: accent(4);
