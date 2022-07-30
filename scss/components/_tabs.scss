@@ -12,6 +12,7 @@
 $class: '.tabs';
 
 // Defaults
+$border-width: 2px;
 
 // --------------------------------
 //   Mixins
@@ -19,18 +20,45 @@ $class: '.tabs';
 
 @mixin tab-with-border {
   border-bottom-style: solid;
-  border-bottom-width: 2px;
+  border-bottom-width: var(--koi-tabs-border-width, $border-width);
   margin-bottom: -1px;
 
   &:hover:not(#{$class}__item--active) {
-    border-bottom-color: fill(brd, 2);
+    border-bottom-color: var(--koi-tabs-border-bottom-color, fill(brd, 2));
   }
 
   &#{$class}__item--active {
-    border-bottom-color: accent(5);
+    border-bottom-color: var(--koi-tabs-border-active-color, accent(5));
 
     &:hover {
-      border-bottom-color: accent(6);
+      border-bottom-color: var(--koi-tabs-border-active-hover-color, accent(6));
+
+      @include dark-mode {
+        border-bottom-color: var(--koi-tabs-border-active-hover-dark-color, accent(4));
+      }
+    }
+  }
+}
+
+@mixin tab-with-box {
+  padding: 0.5rem 1rem;
+  border-radius: var(--koi-tabs-box-radius, radius());
+
+  &#{$class}__item--active {
+    color: accent(7);
+    background-color: accent(1);
+
+    &:hover {
+      color: accent(8);
+    }
+
+    @include dark-mode {
+      color: accent(5);
+      background-color: accent(8, $alpha: 0.25, $lightness: -20%);
+
+      &:hover {
+        color: accent(4);
+      }
     }
   }
 }
@@ -49,10 +77,10 @@ $class: '.tabs';
     font-size: font(sm);
     font-weight: font(medium);
     justify-content: center;
-    padding-bottom: 1rem;
-    padding-left: 0.25rem;
-    padding-right: 0.25rem;
-    padding-top: 1rem;
+    padding-bottom: var(--koi-tabs-padding-y, 1rem);
+    padding-left: var(--koi-tabs-padding-x, 0.25rem);
+    padding-right: var(--koi-tabs-padding-x, 0.25rem);
+    padding-top: var(--koi-tabs-padding-y, 1rem);
     position: relative;
     text-align: center;
     user-select: none;
@@ -66,17 +94,36 @@ $class: '.tabs';
 
       &:hover {
         color: accent(6);
+
+        @include dark-mode {
+          color: accent(4);
+        }
       }
     }
 
     &--bordered {
       @include tab-with-border;
     }
+
+    &--boxed {
+      @include tab-with-box;
+    }
   }
 }
 
 @mixin bordered {
   border-bottom-width: 1px;
+}
+
+// Makes the tabs full width
+@mixin block {
+  width: 100%;
+
+  #{$class}__item {
+    flex: 1;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 // --------------------------------
@@ -89,6 +136,10 @@ $class: '.tabs';
 
     &--bordered {
       @include bordered;
+    }
+
+    &--block {
+      @include block;
     }
   }
 }
