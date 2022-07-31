@@ -19,12 +19,8 @@ body {
 }
 
 .box {
-  --koi-shadow-color: #{koi.fill(danger, 5, 0.5, $complement: true)};
-
-  @include koi.shadow(xl);
-
   background-color: #fff;
-  // box-shadow: koi.shadow(xl);
+  box-shadow: koi.shadow();
 
   &:hover {
     @include koi.ring();
