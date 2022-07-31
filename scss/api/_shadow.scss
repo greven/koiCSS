@@ -38,7 +38,7 @@ $_default-shadow: config.default(shadow);
 
   --koi-shadow: #{shadow($shadow)};
 
-  box-shadow: var(--koi-ring-offset-shadow, 0 0 #0000), var(--koi-ring-shadow, 0 0 #0000), var(--koi-shadow);
+  box-shadow: var(--koi-ring-offset-shadow), var(--koi-ring-shadow), var(--koi-shadow);
 }
 
 // Apply an Outline shadow

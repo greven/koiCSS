@@ -101,8 +101,9 @@ $shadow: shadow(xs);
 }
 
 @mixin default {
-  @include focus-ring;
+  @include shadow(var(--koi-btn-shadow, $shadow));
   @include transition((color, background-color, border-color, transform));
+  @include focus-ring;
 
   align-items: var(--koi-btn-align-items, center);
   background-color: var(--koi-btn-background, fill(srf, 1));
@@ -110,7 +111,6 @@ $shadow: shadow(xs);
   border-radius: var(--koi-btn-border-radius, $border-radius);
   border-style: var(--koi-btn-border-style, solid);
   border-width: var(--koi-btn-border-width, 1px);
-  box-shadow: var(--koi-btn-shadow, $shadow);
   color: var(--koi-btn-foreground, fill(txt, 1));
   display: var(--koi-btn-display, inline-flex);
   font-size: var(--koi-btn-font-size, $font-size);

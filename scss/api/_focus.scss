@@ -56,7 +56,7 @@ $_default-offset-color: fill(srf, 1);
   --koi-ring-shadow: var(--koi-ring-inset, #{$inset}) 0 0 0
     calc(var(--koi-ring-width, #{$width}) + var(--koi-ring-offset, #{$offset})) var(--koi-ring-color, #{$color});
 
-  box-shadow: var(--koi-ring-offset-shadow), var(--koi-ring-shadow), var(--koi-shadow, 0 0 #0000);
+  box-shadow: var(--koi-ring-offset-shadow), var(--koi-ring-shadow), var(--koi-shadow);
 
   @if $transition {
     @include transition-shadow(faster);

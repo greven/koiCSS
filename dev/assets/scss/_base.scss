@@ -17,3 +17,16 @@ body {
 
   @include koi.container($from: md, $padding: true, $center: true, $max-width: lg);
 }
+
+.box {
+  --koi-shadow-color: #{koi.fill(danger, 5, 0.5, $complement: true)};
+
+  @include koi.shadow(xl);
+
+  background-color: #fff;
+  // box-shadow: koi.shadow(xl);
+
+  &:hover {
+    @include koi.ring();
+  }
+}
