@@ -1,0 +1,85 @@
+// --------------------------------
+//   Divider Component
+// --------------------------------
+
+@use '../config';
+@use '../api' as *;
+
+// --------------------------------
+//   Vars
+// --------------------------------
+
+$class: '.divider';
+
+// Defaults
+$divider-width: 1px;
+
+// --------------------------------
+//   Mixins
+// --------------------------------
+
+@mixin gap($gap) {
+  &:not(:empty) {
+    gap: $gap;
+  }
+}
+
+@mixin default {
+  @include gap(1rem);
+  align-items: center;
+  align-self: stretch;
+  color: fill(txt, 2);
+  display: flex;
+  flex-direction: row;
+  height: 1rem;
+  margin-bottom: var(--koi-divider-margin, 1rem);
+  margin-top: var(--koi-divider-margin, 1rem);
+  white-space: nowrap;
+
+  &::after,
+  &::before {
+    background-color: fill(brd, 2);
+    content: '';
+    flex-grow: 1;
+    height: var(--koi-divider-height, $divider-width);
+    width: 100%;
+  }
+}
+
+@mixin vertical {
+  flex-direction: column;
+  height: auto;
+  margin-bottom: 0;
+  margin-left: var(--koi-divider-margin, 1rem);
+  margin-right: var(--koi-divider-margin, 1rem);
+  margin-top: 0;
+  width: 1rem;
+
+  &::after,
+  &::before {
+    height: 100%;
+    width: var(--koi-divider-height, $divider-width);
+  }
+}
+
+@mixin no-gap {
+  @include gap(0);
+}
+
+// --------------------------------
+//   Styles
+// --------------------------------
+
+@mixin styles {
+  #{$class} {
+    @include default;
+
+    &--vertical {
+      @include vertical;
+    }
+
+    &--nogap {
+      @include no-gap;
+    }
+  }
+}

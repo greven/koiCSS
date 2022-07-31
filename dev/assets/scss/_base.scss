@@ -14,6 +14,7 @@
 body {
   // --koi-btn-text-transform: uppercase;
   // --koi-btn-border-radius: #{koi.radius(full)};
+  // --koi-divider-height: 1px;
 
   @include koi.container($from: md, $padding: true, $center: true, $max-width: lg);
 }

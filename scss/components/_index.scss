@@ -3,6 +3,7 @@
 @forward 'breadcrumbs' as breadcrumbs-*;
 @forward 'button' as button-*;
 @forward 'card' as card-*;
+@forward 'divider' as divider-*;
 @forward 'indicator' as indicator-*;
 @forward 'keyboard' as keyboard-*;
 @forward 'loader' as loader-*;
@@ -15,6 +16,7 @@
 @use 'breadcrumbs';
 @use 'button';
 @use 'card';
+@use 'divider';
 @use 'indicator';
 @use 'keyboard';
 @use 'navbar';
@@ -27,6 +29,7 @@
   @include breadcrumbs.styles();
   @include button.styles();
   @include card.styles();
+  @include divider.styles();
   @include indicator.styles();
   @include keyboard.styles();
   // @include navbar.styles();
