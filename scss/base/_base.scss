@@ -11,6 +11,7 @@
 @use 'border';
 @use 'color';
 @use 'layer';
+@use 'link';
 @use 'screens';
 @use 'shadow';
 @use 'spacing';
@@ -27,6 +28,8 @@
   }
 
   @if config.$use-css-variables {
+    @include default.vars;
+
     :root {
       @include animation.vars;
       @include border.vars;
@@ -44,5 +47,6 @@
   }
 
   @include animation.styles;
+  @include link.styles;
   @include typography.styles;
 }

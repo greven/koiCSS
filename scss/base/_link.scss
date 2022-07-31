@@ -1,0 +1,43 @@
+// --------------------------------
+//   Link Styles
+// --------------------------------
+
+@use '../api' as *;
+
+// --------------------------------
+//   Mixins
+// --------------------------------
+
+@mixin base {
+  background: var(--koi-link-background, transparent);
+  border-bottom: var(--koi-link-border, 1px solid accent(5));
+  color: var(--koi-link-foreground, fill(txt, 1));
+  font-weight: var(--koi-link-font-weight, font(medium));
+  text-decoration: none;
+  transition: all 50ms linear;
+
+  &:hover {
+    border-bottom-width: 2px;
+  }
+}
+
+// @mixin external {
+//   &::after {
+//     content: '↗️';
+//   }
+// }
+
+// --------------------------------
+//   Styles
+// --------------------------------
+
+@mixin styles {
+  .link,
+  .prose a {
+    @include base;
+  }
+
+  // .link--external {
+  //   @include external;
+  // }
+}

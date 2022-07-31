@@ -282,6 +282,9 @@
 
 // Add positioning support variants based on transforms (top, middle, bottom and start, center, end).
 @mixin position-variants($parent: null, $value: 50%, $is-circle: false, $suffix: '') {
+  --koi-translate-x: #{$value};
+  --koi-translate-y: -#{$value};
+
   $shift: if($is-circle, $value, 0);
 
   bottom: auto;
@@ -289,8 +292,8 @@
   right: $shift;
   top: $shift;
 
-  transform: translate(var(--koi-translate-x, $value), var(--koi-translate-y, -#{$value})) rotate(var(--koi-rotate, 0))
-    skew(var(--koi-skew-x, 0)) skewY(var(--koi-skew-y, 0)) scaleX(var(--koi-scale-x, 1)) scaleY(var(--koi-scale-y, 1));
+  transform: translate(var(--koi-translate-x), var(--koi-translate-y)) rotate(var(--koi-rotate)) skew(var(--koi-skew-x))
+    skewY(var(--koi-skew-y)) scaleX(var(--koi-scale-x)) scaleY(var(--koi-scale-y));
 
   @include _position-variant($parent, top, $suffix) {
     --koi-translate-y: -#{$value};

@@ -153,19 +153,6 @@
     padding: config.$inline-text-padding;
   }
 
-  a {
-    background: var(--koi-link-background, transparent);
-    border-bottom: var(--koi-link-border, 1px solid accent(5));
-    color: var(--koi-link-foreground, fill(txt, 1));
-    font-weight: var(--koi-link-font-weight, font(medium));
-    text-decoration: none;
-    transition: all 50ms linear;
-
-    &:hover {
-      border-bottom-width: 2px;
-    }
-  }
-
   img {
     height: auto;
     user-select: none;
@@ -248,4 +235,22 @@
     background-size: 16px 12px;
   }
   /*! purgecss end ignore */
+}
+
+// --------------------------------
+//   CSS Custom Properties
+// --------------------------------
+
+@mixin vars {
+  *,
+  :before,
+  :after {
+    --koi-translate-x: 0;
+    --koi-translate-y: 0;
+    --koi-rotate: 0;
+    --koi-skew-x: 0;
+    --koi-skew-y: 0;
+    --koi-scale-x: 1;
+    --koi-scale-y: 1;
+  }
 }
