@@ -243,8 +243,8 @@
 
 @mixin vars {
   *,
-  :before,
-  :after {
+  ::before,
+  ::after {
     --koi-translate-x: 0;
     --koi-translate-y: 0;
     --koi-rotate: 0;

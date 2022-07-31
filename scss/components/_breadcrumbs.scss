@@ -36,26 +36,34 @@ $class: '.breadcrumbs';
     }
 
     li + *::before {
-      --tw-rotate: 45deg;
+      --koi-rotate: 45deg;
 
-      content: '';
       background-color: transparent;
       border-right: 1px solid;
       border-top: 1px solid;
+      content: '';
       display: block;
       height: 0.375rem;
       margin-left: 0.5rem;
       margin-right: 0.75rem;
       opacity: 0.4;
-      width: 0.375rem;
       transform: translate(var(--koi-translate-x), var(--koi-translate-y)) rotate(var(--koi-rotate))
         skew(var(--koi-skew-x)) skewY(var(--koi-skew-y)) scaleX(var(--koi-scale-x)) scaleY(var(--koi-scale-y));
+      width: 0.375rem;
     }
 
     a {
       align-items: center;
       cursor: pointer;
       display: flex;
+      transition: color 200ms ease-in;
+
+      &:hover {
+        color: fill(txt, 0);
+        text-decoration-color: var(--koi-breadcrumbs-text-decoration-color, accent(6));
+        text-decoration-line: var(--koi-breadcrumbs-text-decoration, underline);
+        text-underline-offset: var(--koi-breadcrumbs-text-decoration-offset, 2px);
+      }
     }
   }
 }

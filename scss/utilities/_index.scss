@@ -12,6 +12,7 @@
 @use 'mask';
 @use 'size';
 @use 'spacing';
+@use 'svg';
 @use 'transition';
 @use 'typography';
 
@@ -27,6 +28,7 @@ $utilities: map-deep-merge(
   layout.$utilities,
   size.$utilities,
   spacing.$utilities,
+  svg.$utilities,
   transition.$utilities,
   typography.$utilities
 );

@@ -10262,6 +10262,874 @@
   row-gap: 10rem;
 }
 
+.fill-white, .focus\:fill-white:focus, .hover\:fill-white:hover {
+  fill: hsl(var(--color-white-h), var(--color-white-s), var(--color-white-l), 1);
+}
+
+.fill-black, .focus\:fill-black:focus, .hover\:fill-black:hover {
+  fill: hsl(var(--color-black-h), var(--color-black-s), var(--color-black-l), 1);
+}
+
+.fill-grey-0, .focus\:fill-grey-0:focus, .hover\:fill-grey-0:hover {
+  fill: hsl(var(--color-grey-0-h), var(--color-grey-0-s), var(--color-grey-0-l), 1);
+}
+
+.fill-grey-1, .focus\:fill-grey-1:focus, .hover\:fill-grey-1:hover {
+  fill: hsl(var(--color-grey-1-h), var(--color-grey-1-s), var(--color-grey-1-l), 1);
+}
+
+.fill-grey-2, .focus\:fill-grey-2:focus, .hover\:fill-grey-2:hover {
+  fill: hsl(var(--color-grey-2-h), var(--color-grey-2-s), var(--color-grey-2-l), 1);
+}
+
+.fill-grey-3, .focus\:fill-grey-3:focus, .hover\:fill-grey-3:hover {
+  fill: hsl(var(--color-grey-3-h), var(--color-grey-3-s), var(--color-grey-3-l), 1);
+}
+
+.fill-grey-4, .focus\:fill-grey-4:focus, .hover\:fill-grey-4:hover {
+  fill: hsl(var(--color-grey-4-h), var(--color-grey-4-s), var(--color-grey-4-l), 1);
+}
+
+.fill-grey-5, .focus\:fill-grey-5:focus, .hover\:fill-grey-5:hover {
+  fill: hsl(var(--color-grey-5-h), var(--color-grey-5-s), var(--color-grey-5-l), 1);
+}
+
+.fill-grey-6, .focus\:fill-grey-6:focus, .hover\:fill-grey-6:hover {
+  fill: hsl(var(--color-grey-6-h), var(--color-grey-6-s), var(--color-grey-6-l), 1);
+}
+
+.fill-grey-7, .focus\:fill-grey-7:focus, .hover\:fill-grey-7:hover {
+  fill: hsl(var(--color-grey-7-h), var(--color-grey-7-s), var(--color-grey-7-l), 1);
+}
+
+.fill-grey-8, .focus\:fill-grey-8:focus, .hover\:fill-grey-8:hover {
+  fill: hsl(var(--color-grey-8-h), var(--color-grey-8-s), var(--color-grey-8-l), 1);
+}
+
+.fill-grey-9, .focus\:fill-grey-9:focus, .hover\:fill-grey-9:hover {
+  fill: hsl(var(--color-grey-9-h), var(--color-grey-9-s), var(--color-grey-9-l), 1);
+}
+
+.fill-success-0, .focus\:fill-success-0:focus, .hover\:fill-success-0:hover {
+  fill: hsl(var(--color-success-0-h), var(--color-success-0-s), var(--color-success-0-l), 1);
+}
+
+.fill-success-1, .focus\:fill-success-1:focus, .hover\:fill-success-1:hover {
+  fill: hsl(var(--color-success-1-h), var(--color-success-1-s), var(--color-success-1-l), 1);
+}
+
+.fill-success-2, .focus\:fill-success-2:focus, .hover\:fill-success-2:hover {
+  fill: hsl(var(--color-success-2-h), var(--color-success-2-s), var(--color-success-2-l), 1);
+}
+
+.fill-success-3, .focus\:fill-success-3:focus, .hover\:fill-success-3:hover {
+  fill: hsl(var(--color-success-3-h), var(--color-success-3-s), var(--color-success-3-l), 1);
+}
+
+.fill-success-4, .focus\:fill-success-4:focus, .hover\:fill-success-4:hover {
+  fill: hsl(var(--color-success-4-h), var(--color-success-4-s), var(--color-success-4-l), 1);
+}
+
+.fill-success-5, .focus\:fill-success-5:focus, .hover\:fill-success-5:hover {
+  fill: hsl(var(--color-success-5-h), var(--color-success-5-s), var(--color-success-5-l), 1);
+}
+
+.fill-success-6, .focus\:fill-success-6:focus, .hover\:fill-success-6:hover {
+  fill: hsl(var(--color-success-6-h), var(--color-success-6-s), var(--color-success-6-l), 1);
+}
+
+.fill-success-7, .focus\:fill-success-7:focus, .hover\:fill-success-7:hover {
+  fill: hsl(var(--color-success-7-h), var(--color-success-7-s), var(--color-success-7-l), 1);
+}
+
+.fill-success-8, .focus\:fill-success-8:focus, .hover\:fill-success-8:hover {
+  fill: hsl(var(--color-success-8-h), var(--color-success-8-s), var(--color-success-8-l), 1);
+}
+
+.fill-success-9, .focus\:fill-success-9:focus, .hover\:fill-success-9:hover {
+  fill: hsl(var(--color-success-9-h), var(--color-success-9-s), var(--color-success-9-l), 1);
+}
+
+.fill-info-0, .focus\:fill-info-0:focus, .hover\:fill-info-0:hover {
+  fill: hsl(var(--color-info-0-h), var(--color-info-0-s), var(--color-info-0-l), 1);
+}
+
+.fill-info-1, .focus\:fill-info-1:focus, .hover\:fill-info-1:hover {
+  fill: hsl(var(--color-info-1-h), var(--color-info-1-s), var(--color-info-1-l), 1);
+}
+
+.fill-info-2, .focus\:fill-info-2:focus, .hover\:fill-info-2:hover {
+  fill: hsl(var(--color-info-2-h), var(--color-info-2-s), var(--color-info-2-l), 1);
+}
+
+.fill-info-3, .focus\:fill-info-3:focus, .hover\:fill-info-3:hover {
+  fill: hsl(var(--color-info-3-h), var(--color-info-3-s), var(--color-info-3-l), 1);
+}
+
+.fill-info-4, .focus\:fill-info-4:focus, .hover\:fill-info-4:hover {
+  fill: hsl(var(--color-info-4-h), var(--color-info-4-s), var(--color-info-4-l), 1);
+}
+
+.fill-info-5, .focus\:fill-info-5:focus, .hover\:fill-info-5:hover {
+  fill: hsl(var(--color-info-5-h), var(--color-info-5-s), var(--color-info-5-l), 1);
+}
+
+.fill-info-6, .focus\:fill-info-6:focus, .hover\:fill-info-6:hover {
+  fill: hsl(var(--color-info-6-h), var(--color-info-6-s), var(--color-info-6-l), 1);
+}
+
+.fill-info-7, .focus\:fill-info-7:focus, .hover\:fill-info-7:hover {
+  fill: hsl(var(--color-info-7-h), var(--color-info-7-s), var(--color-info-7-l), 1);
+}
+
+.fill-info-8, .focus\:fill-info-8:focus, .hover\:fill-info-8:hover {
+  fill: hsl(var(--color-info-8-h), var(--color-info-8-s), var(--color-info-8-l), 1);
+}
+
+.fill-info-9, .focus\:fill-info-9:focus, .hover\:fill-info-9:hover {
+  fill: hsl(var(--color-info-9-h), var(--color-info-9-s), var(--color-info-9-l), 1);
+}
+
+.fill-warning-0, .focus\:fill-warning-0:focus, .hover\:fill-warning-0:hover {
+  fill: hsl(var(--color-warning-0-h), var(--color-warning-0-s), var(--color-warning-0-l), 1);
+}
+
+.fill-warning-1, .focus\:fill-warning-1:focus, .hover\:fill-warning-1:hover {
+  fill: hsl(var(--color-warning-1-h), var(--color-warning-1-s), var(--color-warning-1-l), 1);
+}
+
+.fill-warning-2, .focus\:fill-warning-2:focus, .hover\:fill-warning-2:hover {
+  fill: hsl(var(--color-warning-2-h), var(--color-warning-2-s), var(--color-warning-2-l), 1);
+}
+
+.fill-warning-3, .focus\:fill-warning-3:focus, .hover\:fill-warning-3:hover {
+  fill: hsl(var(--color-warning-3-h), var(--color-warning-3-s), var(--color-warning-3-l), 1);
+}
+
+.fill-warning-4, .focus\:fill-warning-4:focus, .hover\:fill-warning-4:hover {
+  fill: hsl(var(--color-warning-4-h), var(--color-warning-4-s), var(--color-warning-4-l), 1);
+}
+
+.fill-warning-5, .focus\:fill-warning-5:focus, .hover\:fill-warning-5:hover {
+  fill: hsl(var(--color-warning-5-h), var(--color-warning-5-s), var(--color-warning-5-l), 1);
+}
+
+.fill-warning-6, .focus\:fill-warning-6:focus, .hover\:fill-warning-6:hover {
+  fill: hsl(var(--color-warning-6-h), var(--color-warning-6-s), var(--color-warning-6-l), 1);
+}
+
+.fill-warning-7, .focus\:fill-warning-7:focus, .hover\:fill-warning-7:hover {
+  fill: hsl(var(--color-warning-7-h), var(--color-warning-7-s), var(--color-warning-7-l), 1);
+}
+
+.fill-warning-8, .focus\:fill-warning-8:focus, .hover\:fill-warning-8:hover {
+  fill: hsl(var(--color-warning-8-h), var(--color-warning-8-s), var(--color-warning-8-l), 1);
+}
+
+.fill-warning-9, .focus\:fill-warning-9:focus, .hover\:fill-warning-9:hover {
+  fill: hsl(var(--color-warning-9-h), var(--color-warning-9-s), var(--color-warning-9-l), 1);
+}
+
+.fill-danger-0, .focus\:fill-danger-0:focus, .hover\:fill-danger-0:hover {
+  fill: hsl(var(--color-danger-0-h), var(--color-danger-0-s), var(--color-danger-0-l), 1);
+}
+
+.fill-danger-1, .focus\:fill-danger-1:focus, .hover\:fill-danger-1:hover {
+  fill: hsl(var(--color-danger-1-h), var(--color-danger-1-s), var(--color-danger-1-l), 1);
+}
+
+.fill-danger-2, .focus\:fill-danger-2:focus, .hover\:fill-danger-2:hover {
+  fill: hsl(var(--color-danger-2-h), var(--color-danger-2-s), var(--color-danger-2-l), 1);
+}
+
+.fill-danger-3, .focus\:fill-danger-3:focus, .hover\:fill-danger-3:hover {
+  fill: hsl(var(--color-danger-3-h), var(--color-danger-3-s), var(--color-danger-3-l), 1);
+}
+
+.fill-danger-4, .focus\:fill-danger-4:focus, .hover\:fill-danger-4:hover {
+  fill: hsl(var(--color-danger-4-h), var(--color-danger-4-s), var(--color-danger-4-l), 1);
+}
+
+.fill-danger-5, .focus\:fill-danger-5:focus, .hover\:fill-danger-5:hover {
+  fill: hsl(var(--color-danger-5-h), var(--color-danger-5-s), var(--color-danger-5-l), 1);
+}
+
+.fill-danger-6, .focus\:fill-danger-6:focus, .hover\:fill-danger-6:hover {
+  fill: hsl(var(--color-danger-6-h), var(--color-danger-6-s), var(--color-danger-6-l), 1);
+}
+
+.fill-danger-7, .focus\:fill-danger-7:focus, .hover\:fill-danger-7:hover {
+  fill: hsl(var(--color-danger-7-h), var(--color-danger-7-s), var(--color-danger-7-l), 1);
+}
+
+.fill-danger-8, .focus\:fill-danger-8:focus, .hover\:fill-danger-8:hover {
+  fill: hsl(var(--color-danger-8-h), var(--color-danger-8-s), var(--color-danger-8-l), 1);
+}
+
+.fill-danger-9, .focus\:fill-danger-9:focus, .hover\:fill-danger-9:hover {
+  fill: hsl(var(--color-danger-9-h), var(--color-danger-9-s), var(--color-danger-9-l), 1);
+}
+
+.fill-primary-0, .focus\:fill-primary-0:focus, .hover\:fill-primary-0:hover {
+  fill: hsl(var(--color-primary-0-h), var(--color-primary-0-s), var(--color-primary-0-l), 1);
+}
+
+.fill-primary-1, .focus\:fill-primary-1:focus, .hover\:fill-primary-1:hover {
+  fill: hsl(var(--color-primary-1-h), var(--color-primary-1-s), var(--color-primary-1-l), 1);
+}
+
+.fill-primary-2, .focus\:fill-primary-2:focus, .hover\:fill-primary-2:hover {
+  fill: hsl(var(--color-primary-2-h), var(--color-primary-2-s), var(--color-primary-2-l), 1);
+}
+
+.fill-primary-3, .focus\:fill-primary-3:focus, .hover\:fill-primary-3:hover {
+  fill: hsl(var(--color-primary-3-h), var(--color-primary-3-s), var(--color-primary-3-l), 1);
+}
+
+.fill-primary-4, .focus\:fill-primary-4:focus, .hover\:fill-primary-4:hover {
+  fill: hsl(var(--color-primary-4-h), var(--color-primary-4-s), var(--color-primary-4-l), 1);
+}
+
+.fill-primary-5, .focus\:fill-primary-5:focus, .hover\:fill-primary-5:hover {
+  fill: hsl(var(--color-primary-5-h), var(--color-primary-5-s), var(--color-primary-5-l), 1);
+}
+
+.fill-primary-6, .focus\:fill-primary-6:focus, .hover\:fill-primary-6:hover {
+  fill: hsl(var(--color-primary-6-h), var(--color-primary-6-s), var(--color-primary-6-l), 1);
+}
+
+.fill-primary-7, .focus\:fill-primary-7:focus, .hover\:fill-primary-7:hover {
+  fill: hsl(var(--color-primary-7-h), var(--color-primary-7-s), var(--color-primary-7-l), 1);
+}
+
+.fill-primary-8, .focus\:fill-primary-8:focus, .hover\:fill-primary-8:hover {
+  fill: hsl(var(--color-primary-8-h), var(--color-primary-8-s), var(--color-primary-8-l), 1);
+}
+
+.fill-primary-9, .focus\:fill-primary-9:focus, .hover\:fill-primary-9:hover {
+  fill: hsl(var(--color-primary-9-h), var(--color-primary-9-s), var(--color-primary-9-l), 1);
+}
+
+.fill-secondary-0, .focus\:fill-secondary-0:focus, .hover\:fill-secondary-0:hover {
+  fill: hsl(var(--color-secondary-0-h), var(--color-secondary-0-s), var(--color-secondary-0-l), 1);
+}
+
+.fill-secondary-1, .focus\:fill-secondary-1:focus, .hover\:fill-secondary-1:hover {
+  fill: hsl(var(--color-secondary-1-h), var(--color-secondary-1-s), var(--color-secondary-1-l), 1);
+}
+
+.fill-secondary-2, .focus\:fill-secondary-2:focus, .hover\:fill-secondary-2:hover {
+  fill: hsl(var(--color-secondary-2-h), var(--color-secondary-2-s), var(--color-secondary-2-l), 1);
+}
+
+.fill-secondary-3, .focus\:fill-secondary-3:focus, .hover\:fill-secondary-3:hover {
+  fill: hsl(var(--color-secondary-3-h), var(--color-secondary-3-s), var(--color-secondary-3-l), 1);
+}
+
+.fill-secondary-4, .focus\:fill-secondary-4:focus, .hover\:fill-secondary-4:hover {
+  fill: hsl(var(--color-secondary-4-h), var(--color-secondary-4-s), var(--color-secondary-4-l), 1);
+}
+
+.fill-secondary-5, .focus\:fill-secondary-5:focus, .hover\:fill-secondary-5:hover {
+  fill: hsl(var(--color-secondary-5-h), var(--color-secondary-5-s), var(--color-secondary-5-l), 1);
+}
+
+.fill-secondary-6, .focus\:fill-secondary-6:focus, .hover\:fill-secondary-6:hover {
+  fill: hsl(var(--color-secondary-6-h), var(--color-secondary-6-s), var(--color-secondary-6-l), 1);
+}
+
+.fill-secondary-7, .focus\:fill-secondary-7:focus, .hover\:fill-secondary-7:hover {
+  fill: hsl(var(--color-secondary-7-h), var(--color-secondary-7-s), var(--color-secondary-7-l), 1);
+}
+
+.fill-secondary-8, .focus\:fill-secondary-8:focus, .hover\:fill-secondary-8:hover {
+  fill: hsl(var(--color-secondary-8-h), var(--color-secondary-8-s), var(--color-secondary-8-l), 1);
+}
+
+.fill-secondary-9, .focus\:fill-secondary-9:focus, .hover\:fill-secondary-9:hover {
+  fill: hsl(var(--color-secondary-9-h), var(--color-secondary-9-s), var(--color-secondary-9-l), 1);
+}
+
+.fill-neutral-0, .focus\:fill-neutral-0:focus, .hover\:fill-neutral-0:hover {
+  fill: hsl(var(--color-neutral-0-h), var(--color-neutral-0-s), var(--color-neutral-0-l), 1);
+}
+
+.fill-neutral-1, .focus\:fill-neutral-1:focus, .hover\:fill-neutral-1:hover {
+  fill: hsl(var(--color-neutral-1-h), var(--color-neutral-1-s), var(--color-neutral-1-l), 1);
+}
+
+.fill-neutral-2, .focus\:fill-neutral-2:focus, .hover\:fill-neutral-2:hover {
+  fill: hsl(var(--color-neutral-2-h), var(--color-neutral-2-s), var(--color-neutral-2-l), 1);
+}
+
+.fill-neutral-3, .focus\:fill-neutral-3:focus, .hover\:fill-neutral-3:hover {
+  fill: hsl(var(--color-neutral-3-h), var(--color-neutral-3-s), var(--color-neutral-3-l), 1);
+}
+
+.fill-neutral-4, .focus\:fill-neutral-4:focus, .hover\:fill-neutral-4:hover {
+  fill: hsl(var(--color-neutral-4-h), var(--color-neutral-4-s), var(--color-neutral-4-l), 1);
+}
+
+.fill-neutral-5, .focus\:fill-neutral-5:focus, .hover\:fill-neutral-5:hover {
+  fill: hsl(var(--color-neutral-5-h), var(--color-neutral-5-s), var(--color-neutral-5-l), 1);
+}
+
+.fill-neutral-6, .focus\:fill-neutral-6:focus, .hover\:fill-neutral-6:hover {
+  fill: hsl(var(--color-neutral-6-h), var(--color-neutral-6-s), var(--color-neutral-6-l), 1);
+}
+
+.fill-neutral-7, .focus\:fill-neutral-7:focus, .hover\:fill-neutral-7:hover {
+  fill: hsl(var(--color-neutral-7-h), var(--color-neutral-7-s), var(--color-neutral-7-l), 1);
+}
+
+.fill-neutral-8, .focus\:fill-neutral-8:focus, .hover\:fill-neutral-8:hover {
+  fill: hsl(var(--color-neutral-8-h), var(--color-neutral-8-s), var(--color-neutral-8-l), 1);
+}
+
+.fill-neutral-9, .focus\:fill-neutral-9:focus, .hover\:fill-neutral-9:hover {
+  fill: hsl(var(--color-neutral-9-h), var(--color-neutral-9-s), var(--color-neutral-9-l), 1);
+}
+
+.fill-cnt-0, .focus\:fill-cnt-0:focus, .hover\:fill-cnt-0:hover {
+  fill: hsl(var(--color-cnt-0-h), var(--color-cnt-0-s), var(--color-cnt-0-l), 1);
+}
+
+.fill-cnt-1, .focus\:fill-cnt-1:focus, .hover\:fill-cnt-1:hover {
+  fill: hsl(var(--color-cnt-1-h), var(--color-cnt-1-s), var(--color-cnt-1-l), 1);
+}
+
+.fill-cnt-2, .focus\:fill-cnt-2:focus, .hover\:fill-cnt-2:hover {
+  fill: hsl(var(--color-cnt-2-h), var(--color-cnt-2-s), var(--color-cnt-2-l), 1);
+}
+
+.fill-cnt-3, .focus\:fill-cnt-3:focus, .hover\:fill-cnt-3:hover {
+  fill: hsl(var(--color-cnt-3-h), var(--color-cnt-3-s), var(--color-cnt-3-l), 1);
+}
+
+.fill-cnt-4, .focus\:fill-cnt-4:focus, .hover\:fill-cnt-4:hover {
+  fill: hsl(var(--color-cnt-4-h), var(--color-cnt-4-s), var(--color-cnt-4-l), 1);
+}
+
+.fill-cnt-5, .focus\:fill-cnt-5:focus, .hover\:fill-cnt-5:hover {
+  fill: hsl(var(--color-cnt-5-h), var(--color-cnt-5-s), var(--color-cnt-5-l), 1);
+}
+
+.fill-cnt-6, .focus\:fill-cnt-6:focus, .hover\:fill-cnt-6:hover {
+  fill: hsl(var(--color-cnt-6-h), var(--color-cnt-6-s), var(--color-cnt-6-l), 1);
+}
+
+.fill-cnt-7, .focus\:fill-cnt-7:focus, .hover\:fill-cnt-7:hover {
+  fill: hsl(var(--color-cnt-7-h), var(--color-cnt-7-s), var(--color-cnt-7-l), 1);
+}
+
+.fill-cnt-8, .focus\:fill-cnt-8:focus, .hover\:fill-cnt-8:hover {
+  fill: hsl(var(--color-cnt-8-h), var(--color-cnt-8-s), var(--color-cnt-8-l), 1);
+}
+
+.fill-cnt-9, .focus\:fill-cnt-9:focus, .hover\:fill-cnt-9:hover {
+  fill: hsl(var(--color-cnt-9-h), var(--color-cnt-9-s), var(--color-cnt-9-l), 1);
+}
+
+.fill-srf-0, .focus\:fill-srf-0:focus, .hover\:fill-srf-0:hover {
+  fill: hsl(var(--color-srf-0-h), var(--color-srf-0-s), var(--color-srf-0-l), 1);
+}
+
+.fill-srf-1, .focus\:fill-srf-1:focus, .hover\:fill-srf-1:hover {
+  fill: hsl(var(--color-srf-1-h), var(--color-srf-1-s), var(--color-srf-1-l), 1);
+}
+
+.fill-srf-2, .focus\:fill-srf-2:focus, .hover\:fill-srf-2:hover {
+  fill: hsl(var(--color-srf-2-h), var(--color-srf-2-s), var(--color-srf-2-l), 1);
+}
+
+.fill-srf-3, .focus\:fill-srf-3:focus, .hover\:fill-srf-3:hover {
+  fill: hsl(var(--color-srf-3-h), var(--color-srf-3-s), var(--color-srf-3-l), 1);
+}
+
+.fill-brd-0, .focus\:fill-brd-0:focus, .hover\:fill-brd-0:hover {
+  fill: hsl(var(--color-brd-0-h), var(--color-brd-0-s), var(--color-brd-0-l), 1);
+}
+
+.fill-brd-1, .focus\:fill-brd-1:focus, .hover\:fill-brd-1:hover {
+  fill: hsl(var(--color-brd-1-h), var(--color-brd-1-s), var(--color-brd-1-l), 1);
+}
+
+.fill-brd-2, .focus\:fill-brd-2:focus, .hover\:fill-brd-2:hover {
+  fill: hsl(var(--color-brd-2-h), var(--color-brd-2-s), var(--color-brd-2-l), 1);
+}
+
+.fill-brd-3, .focus\:fill-brd-3:focus, .hover\:fill-brd-3:hover {
+  fill: hsl(var(--color-brd-3-h), var(--color-brd-3-s), var(--color-brd-3-l), 1);
+}
+
+.fill-txt-0, .focus\:fill-txt-0:focus, .hover\:fill-txt-0:hover {
+  fill: hsl(var(--color-txt-0-h), var(--color-txt-0-s), var(--color-txt-0-l), 1);
+}
+
+.fill-txt-1, .focus\:fill-txt-1:focus, .hover\:fill-txt-1:hover {
+  fill: hsl(var(--color-txt-1-h), var(--color-txt-1-s), var(--color-txt-1-l), 1);
+}
+
+.fill-txt-2, .focus\:fill-txt-2:focus, .hover\:fill-txt-2:hover {
+  fill: hsl(var(--color-txt-2-h), var(--color-txt-2-s), var(--color-txt-2-l), 1);
+}
+
+.fill-txt-3, .focus\:fill-txt-3:focus, .hover\:fill-txt-3:hover {
+  fill: hsl(var(--color-txt-3-h), var(--color-txt-3-s), var(--color-txt-3-l), 1);
+}
+
+.fill-current, .focus\:fill-current:focus, .hover\:fill-current:hover {
+  fill: currentColor;
+}
+
+.fill-inherit, .focus\:fill-inherit:focus, .hover\:fill-inherit:hover {
+  fill: inherit;
+}
+
+.fill-transparent, .focus\:fill-transparent:focus, .hover\:fill-transparent:hover {
+  fill: transparent;
+}
+
+.stroke-white, .focus\:stroke-white:focus, .hover\:stroke-white:hover {
+  stroke: hsl(var(--color-white-h), var(--color-white-s), var(--color-white-l), 1);
+}
+
+.stroke-black, .focus\:stroke-black:focus, .hover\:stroke-black:hover {
+  stroke: hsl(var(--color-black-h), var(--color-black-s), var(--color-black-l), 1);
+}
+
+.stroke-grey-0, .focus\:stroke-grey-0:focus, .hover\:stroke-grey-0:hover {
+  stroke: hsl(var(--color-grey-0-h), var(--color-grey-0-s), var(--color-grey-0-l), 1);
+}
+
+.stroke-grey-1, .focus\:stroke-grey-1:focus, .hover\:stroke-grey-1:hover {
+  stroke: hsl(var(--color-grey-1-h), var(--color-grey-1-s), var(--color-grey-1-l), 1);
+}
+
+.stroke-grey-2, .focus\:stroke-grey-2:focus, .hover\:stroke-grey-2:hover {
+  stroke: hsl(var(--color-grey-2-h), var(--color-grey-2-s), var(--color-grey-2-l), 1);
+}
+
+.stroke-grey-3, .focus\:stroke-grey-3:focus, .hover\:stroke-grey-3:hover {
+  stroke: hsl(var(--color-grey-3-h), var(--color-grey-3-s), var(--color-grey-3-l), 1);
+}
+
+.stroke-grey-4, .focus\:stroke-grey-4:focus, .hover\:stroke-grey-4:hover {
+  stroke: hsl(var(--color-grey-4-h), var(--color-grey-4-s), var(--color-grey-4-l), 1);
+}
+
+.stroke-grey-5, .focus\:stroke-grey-5:focus, .hover\:stroke-grey-5:hover {
+  stroke: hsl(var(--color-grey-5-h), var(--color-grey-5-s), var(--color-grey-5-l), 1);
+}
+
+.stroke-grey-6, .focus\:stroke-grey-6:focus, .hover\:stroke-grey-6:hover {
+  stroke: hsl(var(--color-grey-6-h), var(--color-grey-6-s), var(--color-grey-6-l), 1);
+}
+
+.stroke-grey-7, .focus\:stroke-grey-7:focus, .hover\:stroke-grey-7:hover {
+  stroke: hsl(var(--color-grey-7-h), var(--color-grey-7-s), var(--color-grey-7-l), 1);
+}
+
+.stroke-grey-8, .focus\:stroke-grey-8:focus, .hover\:stroke-grey-8:hover {
+  stroke: hsl(var(--color-grey-8-h), var(--color-grey-8-s), var(--color-grey-8-l), 1);
+}
+
+.stroke-grey-9, .focus\:stroke-grey-9:focus, .hover\:stroke-grey-9:hover {
+  stroke: hsl(var(--color-grey-9-h), var(--color-grey-9-s), var(--color-grey-9-l), 1);
+}
+
+.stroke-success-0, .focus\:stroke-success-0:focus, .hover\:stroke-success-0:hover {
+  stroke: hsl(var(--color-success-0-h), var(--color-success-0-s), var(--color-success-0-l), 1);
+}
+
+.stroke-success-1, .focus\:stroke-success-1:focus, .hover\:stroke-success-1:hover {
+  stroke: hsl(var(--color-success-1-h), var(--color-success-1-s), var(--color-success-1-l), 1);
+}
+
+.stroke-success-2, .focus\:stroke-success-2:focus, .hover\:stroke-success-2:hover {
+  stroke: hsl(var(--color-success-2-h), var(--color-success-2-s), var(--color-success-2-l), 1);
+}
+
+.stroke-success-3, .focus\:stroke-success-3:focus, .hover\:stroke-success-3:hover {
+  stroke: hsl(var(--color-success-3-h), var(--color-success-3-s), var(--color-success-3-l), 1);
+}
+
+.stroke-success-4, .focus\:stroke-success-4:focus, .hover\:stroke-success-4:hover {
+  stroke: hsl(var(--color-success-4-h), var(--color-success-4-s), var(--color-success-4-l), 1);
+}
+
+.stroke-success-5, .focus\:stroke-success-5:focus, .hover\:stroke-success-5:hover {
+  stroke: hsl(var(--color-success-5-h), var(--color-success-5-s), var(--color-success-5-l), 1);
+}
+
+.stroke-success-6, .focus\:stroke-success-6:focus, .hover\:stroke-success-6:hover {
+  stroke: hsl(var(--color-success-6-h), var(--color-success-6-s), var(--color-success-6-l), 1);
+}
+
+.stroke-success-7, .focus\:stroke-success-7:focus, .hover\:stroke-success-7:hover {
+  stroke: hsl(var(--color-success-7-h), var(--color-success-7-s), var(--color-success-7-l), 1);
+}
+
+.stroke-success-8, .focus\:stroke-success-8:focus, .hover\:stroke-success-8:hover {
+  stroke: hsl(var(--color-success-8-h), var(--color-success-8-s), var(--color-success-8-l), 1);
+}
+
+.stroke-success-9, .focus\:stroke-success-9:focus, .hover\:stroke-success-9:hover {
+  stroke: hsl(var(--color-success-9-h), var(--color-success-9-s), var(--color-success-9-l), 1);
+}
+
+.stroke-info-0, .focus\:stroke-info-0:focus, .hover\:stroke-info-0:hover {
+  stroke: hsl(var(--color-info-0-h), var(--color-info-0-s), var(--color-info-0-l), 1);
+}
+
+.stroke-info-1, .focus\:stroke-info-1:focus, .hover\:stroke-info-1:hover {
+  stroke: hsl(var(--color-info-1-h), var(--color-info-1-s), var(--color-info-1-l), 1);
+}
+
+.stroke-info-2, .focus\:stroke-info-2:focus, .hover\:stroke-info-2:hover {
+  stroke: hsl(var(--color-info-2-h), var(--color-info-2-s), var(--color-info-2-l), 1);
+}
+
+.stroke-info-3, .focus\:stroke-info-3:focus, .hover\:stroke-info-3:hover {
+  stroke: hsl(var(--color-info-3-h), var(--color-info-3-s), var(--color-info-3-l), 1);
+}
+
+.stroke-info-4, .focus\:stroke-info-4:focus, .hover\:stroke-info-4:hover {
+  stroke: hsl(var(--color-info-4-h), var(--color-info-4-s), var(--color-info-4-l), 1);
+}
+
+.stroke-info-5, .focus\:stroke-info-5:focus, .hover\:stroke-info-5:hover {
+  stroke: hsl(var(--color-info-5-h), var(--color-info-5-s), var(--color-info-5-l), 1);
+}
+
+.stroke-info-6, .focus\:stroke-info-6:focus, .hover\:stroke-info-6:hover {
+  stroke: hsl(var(--color-info-6-h), var(--color-info-6-s), var(--color-info-6-l), 1);
+}
+
+.stroke-info-7, .focus\:stroke-info-7:focus, .hover\:stroke-info-7:hover {
+  stroke: hsl(var(--color-info-7-h), var(--color-info-7-s), var(--color-info-7-l), 1);
+}
+
+.stroke-info-8, .focus\:stroke-info-8:focus, .hover\:stroke-info-8:hover {
+  stroke: hsl(var(--color-info-8-h), var(--color-info-8-s), var(--color-info-8-l), 1);
+}
+
+.stroke-info-9, .focus\:stroke-info-9:focus, .hover\:stroke-info-9:hover {
+  stroke: hsl(var(--color-info-9-h), var(--color-info-9-s), var(--color-info-9-l), 1);
+}
+
+.stroke-warning-0, .focus\:stroke-warning-0:focus, .hover\:stroke-warning-0:hover {
+  stroke: hsl(var(--color-warning-0-h), var(--color-warning-0-s), var(--color-warning-0-l), 1);
+}
+
+.stroke-warning-1, .focus\:stroke-warning-1:focus, .hover\:stroke-warning-1:hover {
+  stroke: hsl(var(--color-warning-1-h), var(--color-warning-1-s), var(--color-warning-1-l), 1);
+}
+
+.stroke-warning-2, .focus\:stroke-warning-2:focus, .hover\:stroke-warning-2:hover {
+  stroke: hsl(var(--color-warning-2-h), var(--color-warning-2-s), var(--color-warning-2-l), 1);
+}
+
+.stroke-warning-3, .focus\:stroke-warning-3:focus, .hover\:stroke-warning-3:hover {
+  stroke: hsl(var(--color-warning-3-h), var(--color-warning-3-s), var(--color-warning-3-l), 1);
+}
+
+.stroke-warning-4, .focus\:stroke-warning-4:focus, .hover\:stroke-warning-4:hover {
+  stroke: hsl(var(--color-warning-4-h), var(--color-warning-4-s), var(--color-warning-4-l), 1);
+}
+
+.stroke-warning-5, .focus\:stroke-warning-5:focus, .hover\:stroke-warning-5:hover {
+  stroke: hsl(var(--color-warning-5-h), var(--color-warning-5-s), var(--color-warning-5-l), 1);
+}
+
+.stroke-warning-6, .focus\:stroke-warning-6:focus, .hover\:stroke-warning-6:hover {
+  stroke: hsl(var(--color-warning-6-h), var(--color-warning-6-s), var(--color-warning-6-l), 1);
+}
+
+.stroke-warning-7, .focus\:stroke-warning-7:focus, .hover\:stroke-warning-7:hover {
+  stroke: hsl(var(--color-warning-7-h), var(--color-warning-7-s), var(--color-warning-7-l), 1);
+}
+
+.stroke-warning-8, .focus\:stroke-warning-8:focus, .hover\:stroke-warning-8:hover {
+  stroke: hsl(var(--color-warning-8-h), var(--color-warning-8-s), var(--color-warning-8-l), 1);
+}
+
+.stroke-warning-9, .focus\:stroke-warning-9:focus, .hover\:stroke-warning-9:hover {
+  stroke: hsl(var(--color-warning-9-h), var(--color-warning-9-s), var(--color-warning-9-l), 1);
+}
+
+.stroke-danger-0, .focus\:stroke-danger-0:focus, .hover\:stroke-danger-0:hover {
+  stroke: hsl(var(--color-danger-0-h), var(--color-danger-0-s), var(--color-danger-0-l), 1);
+}
+
+.stroke-danger-1, .focus\:stroke-danger-1:focus, .hover\:stroke-danger-1:hover {
+  stroke: hsl(var(--color-danger-1-h), var(--color-danger-1-s), var(--color-danger-1-l), 1);
+}
+
+.stroke-danger-2, .focus\:stroke-danger-2:focus, .hover\:stroke-danger-2:hover {
+  stroke: hsl(var(--color-danger-2-h), var(--color-danger-2-s), var(--color-danger-2-l), 1);
+}
+
+.stroke-danger-3, .focus\:stroke-danger-3:focus, .hover\:stroke-danger-3:hover {
+  stroke: hsl(var(--color-danger-3-h), var(--color-danger-3-s), var(--color-danger-3-l), 1);
+}
+
+.stroke-danger-4, .focus\:stroke-danger-4:focus, .hover\:stroke-danger-4:hover {
+  stroke: hsl(var(--color-danger-4-h), var(--color-danger-4-s), var(--color-danger-4-l), 1);
+}
+
+.stroke-danger-5, .focus\:stroke-danger-5:focus, .hover\:stroke-danger-5:hover {
+  stroke: hsl(var(--color-danger-5-h), var(--color-danger-5-s), var(--color-danger-5-l), 1);
+}
+
+.stroke-danger-6, .focus\:stroke-danger-6:focus, .hover\:stroke-danger-6:hover {
+  stroke: hsl(var(--color-danger-6-h), var(--color-danger-6-s), var(--color-danger-6-l), 1);
+}
+
+.stroke-danger-7, .focus\:stroke-danger-7:focus, .hover\:stroke-danger-7:hover {
+  stroke: hsl(var(--color-danger-7-h), var(--color-danger-7-s), var(--color-danger-7-l), 1);
+}
+
+.stroke-danger-8, .focus\:stroke-danger-8:focus, .hover\:stroke-danger-8:hover {
+  stroke: hsl(var(--color-danger-8-h), var(--color-danger-8-s), var(--color-danger-8-l), 1);
+}
+
+.stroke-danger-9, .focus\:stroke-danger-9:focus, .hover\:stroke-danger-9:hover {
+  stroke: hsl(var(--color-danger-9-h), var(--color-danger-9-s), var(--color-danger-9-l), 1);
+}
+
+.stroke-primary-0, .focus\:stroke-primary-0:focus, .hover\:stroke-primary-0:hover {
+  stroke: hsl(var(--color-primary-0-h), var(--color-primary-0-s), var(--color-primary-0-l), 1);
+}
+
+.stroke-primary-1, .focus\:stroke-primary-1:focus, .hover\:stroke-primary-1:hover {
+  stroke: hsl(var(--color-primary-1-h), var(--color-primary-1-s), var(--color-primary-1-l), 1);
+}
+
+.stroke-primary-2, .focus\:stroke-primary-2:focus, .hover\:stroke-primary-2:hover {
+  stroke: hsl(var(--color-primary-2-h), var(--color-primary-2-s), var(--color-primary-2-l), 1);
+}
+
+.stroke-primary-3, .focus\:stroke-primary-3:focus, .hover\:stroke-primary-3:hover {
+  stroke: hsl(var(--color-primary-3-h), var(--color-primary-3-s), var(--color-primary-3-l), 1);
+}
+
+.stroke-primary-4, .focus\:stroke-primary-4:focus, .hover\:stroke-primary-4:hover {
+  stroke: hsl(var(--color-primary-4-h), var(--color-primary-4-s), var(--color-primary-4-l), 1);
+}
+
+.stroke-primary-5, .focus\:stroke-primary-5:focus, .hover\:stroke-primary-5:hover {
+  stroke: hsl(var(--color-primary-5-h), var(--color-primary-5-s), var(--color-primary-5-l), 1);
+}
+
+.stroke-primary-6, .focus\:stroke-primary-6:focus, .hover\:stroke-primary-6:hover {
+  stroke: hsl(var(--color-primary-6-h), var(--color-primary-6-s), var(--color-primary-6-l), 1);
+}
+
+.stroke-primary-7, .focus\:stroke-primary-7:focus, .hover\:stroke-primary-7:hover {
+  stroke: hsl(var(--color-primary-7-h), var(--color-primary-7-s), var(--color-primary-7-l), 1);
+}
+
+.stroke-primary-8, .focus\:stroke-primary-8:focus, .hover\:stroke-primary-8:hover {
+  stroke: hsl(var(--color-primary-8-h), var(--color-primary-8-s), var(--color-primary-8-l), 1);
+}
+
+.stroke-primary-9, .focus\:stroke-primary-9:focus, .hover\:stroke-primary-9:hover {
+  stroke: hsl(var(--color-primary-9-h), var(--color-primary-9-s), var(--color-primary-9-l), 1);
+}
+
+.stroke-secondary-0, .focus\:stroke-secondary-0:focus, .hover\:stroke-secondary-0:hover {
+  stroke: hsl(var(--color-secondary-0-h), var(--color-secondary-0-s), var(--color-secondary-0-l), 1);
+}
+
+.stroke-secondary-1, .focus\:stroke-secondary-1:focus, .hover\:stroke-secondary-1:hover {
+  stroke: hsl(var(--color-secondary-1-h), var(--color-secondary-1-s), var(--color-secondary-1-l), 1);
+}
+
+.stroke-secondary-2, .focus\:stroke-secondary-2:focus, .hover\:stroke-secondary-2:hover {
+  stroke: hsl(var(--color-secondary-2-h), var(--color-secondary-2-s), var(--color-secondary-2-l), 1);
+}
+
+.stroke-secondary-3, .focus\:stroke-secondary-3:focus, .hover\:stroke-secondary-3:hover {
+  stroke: hsl(var(--color-secondary-3-h), var(--color-secondary-3-s), var(--color-secondary-3-l), 1);
+}
+
+.stroke-secondary-4, .focus\:stroke-secondary-4:focus, .hover\:stroke-secondary-4:hover {
+  stroke: hsl(var(--color-secondary-4-h), var(--color-secondary-4-s), var(--color-secondary-4-l), 1);
+}
+
+.stroke-secondary-5, .focus\:stroke-secondary-5:focus, .hover\:stroke-secondary-5:hover {
+  stroke: hsl(var(--color-secondary-5-h), var(--color-secondary-5-s), var(--color-secondary-5-l), 1);
+}
+
+.stroke-secondary-6, .focus\:stroke-secondary-6:focus, .hover\:stroke-secondary-6:hover {
+  stroke: hsl(var(--color-secondary-6-h), var(--color-secondary-6-s), var(--color-secondary-6-l), 1);
+}
+
+.stroke-secondary-7, .focus\:stroke-secondary-7:focus, .hover\:stroke-secondary-7:hover {
+  stroke: hsl(var(--color-secondary-7-h), var(--color-secondary-7-s), var(--color-secondary-7-l), 1);
+}
+
+.stroke-secondary-8, .focus\:stroke-secondary-8:focus, .hover\:stroke-secondary-8:hover {
+  stroke: hsl(var(--color-secondary-8-h), var(--color-secondary-8-s), var(--color-secondary-8-l), 1);
+}
+
+.stroke-secondary-9, .focus\:stroke-secondary-9:focus, .hover\:stroke-secondary-9:hover {
+  stroke: hsl(var(--color-secondary-9-h), var(--color-secondary-9-s), var(--color-secondary-9-l), 1);
+}
+
+.stroke-neutral-0, .focus\:stroke-neutral-0:focus, .hover\:stroke-neutral-0:hover {
+  stroke: hsl(var(--color-neutral-0-h), var(--color-neutral-0-s), var(--color-neutral-0-l), 1);
+}
+
+.stroke-neutral-1, .focus\:stroke-neutral-1:focus, .hover\:stroke-neutral-1:hover {
+  stroke: hsl(var(--color-neutral-1-h), var(--color-neutral-1-s), var(--color-neutral-1-l), 1);
+}
+
+.stroke-neutral-2, .focus\:stroke-neutral-2:focus, .hover\:stroke-neutral-2:hover {
+  stroke: hsl(var(--color-neutral-2-h), var(--color-neutral-2-s), var(--color-neutral-2-l), 1);
+}
+
+.stroke-neutral-3, .focus\:stroke-neutral-3:focus, .hover\:stroke-neutral-3:hover {
+  stroke: hsl(var(--color-neutral-3-h), var(--color-neutral-3-s), var(--color-neutral-3-l), 1);
+}
+
+.stroke-neutral-4, .focus\:stroke-neutral-4:focus, .hover\:stroke-neutral-4:hover {
+  stroke: hsl(var(--color-neutral-4-h), var(--color-neutral-4-s), var(--color-neutral-4-l), 1);
+}
+
+.stroke-neutral-5, .focus\:stroke-neutral-5:focus, .hover\:stroke-neutral-5:hover {
+  stroke: hsl(var(--color-neutral-5-h), var(--color-neutral-5-s), var(--color-neutral-5-l), 1);
+}
+
+.stroke-neutral-6, .focus\:stroke-neutral-6:focus, .hover\:stroke-neutral-6:hover {
+  stroke: hsl(var(--color-neutral-6-h), var(--color-neutral-6-s), var(--color-neutral-6-l), 1);
+}
+
+.stroke-neutral-7, .focus\:stroke-neutral-7:focus, .hover\:stroke-neutral-7:hover {
+  stroke: hsl(var(--color-neutral-7-h), var(--color-neutral-7-s), var(--color-neutral-7-l), 1);
+}
+
+.stroke-neutral-8, .focus\:stroke-neutral-8:focus, .hover\:stroke-neutral-8:hover {
+  stroke: hsl(var(--color-neutral-8-h), var(--color-neutral-8-s), var(--color-neutral-8-l), 1);
+}
+
+.stroke-neutral-9, .focus\:stroke-neutral-9:focus, .hover\:stroke-neutral-9:hover {
+  stroke: hsl(var(--color-neutral-9-h), var(--color-neutral-9-s), var(--color-neutral-9-l), 1);
+}
+
+.stroke-cnt-0, .focus\:stroke-cnt-0:focus, .hover\:stroke-cnt-0:hover {
+  stroke: hsl(var(--color-cnt-0-h), var(--color-cnt-0-s), var(--color-cnt-0-l), 1);
+}
+
+.stroke-cnt-1, .focus\:stroke-cnt-1:focus, .hover\:stroke-cnt-1:hover {
+  stroke: hsl(var(--color-cnt-1-h), var(--color-cnt-1-s), var(--color-cnt-1-l), 1);
+}
+
+.stroke-cnt-2, .focus\:stroke-cnt-2:focus, .hover\:stroke-cnt-2:hover {
+  stroke: hsl(var(--color-cnt-2-h), var(--color-cnt-2-s), var(--color-cnt-2-l), 1);
+}
+
+.stroke-cnt-3, .focus\:stroke-cnt-3:focus, .hover\:stroke-cnt-3:hover {
+  stroke: hsl(var(--color-cnt-3-h), var(--color-cnt-3-s), var(--color-cnt-3-l), 1);
+}
+
+.stroke-cnt-4, .focus\:stroke-cnt-4:focus, .hover\:stroke-cnt-4:hover {
+  stroke: hsl(var(--color-cnt-4-h), var(--color-cnt-4-s), var(--color-cnt-4-l), 1);
+}
+
+.stroke-cnt-5, .focus\:stroke-cnt-5:focus, .hover\:stroke-cnt-5:hover {
+  stroke: hsl(var(--color-cnt-5-h), var(--color-cnt-5-s), var(--color-cnt-5-l), 1);
+}
+
+.stroke-cnt-6, .focus\:stroke-cnt-6:focus, .hover\:stroke-cnt-6:hover {
+  stroke: hsl(var(--color-cnt-6-h), var(--color-cnt-6-s), var(--color-cnt-6-l), 1);
+}
+
+.stroke-cnt-7, .focus\:stroke-cnt-7:focus, .hover\:stroke-cnt-7:hover {
+  stroke: hsl(var(--color-cnt-7-h), var(--color-cnt-7-s), var(--color-cnt-7-l), 1);
+}
+
+.stroke-cnt-8, .focus\:stroke-cnt-8:focus, .hover\:stroke-cnt-8:hover {
+  stroke: hsl(var(--color-cnt-8-h), var(--color-cnt-8-s), var(--color-cnt-8-l), 1);
+}
+
+.stroke-cnt-9, .focus\:stroke-cnt-9:focus, .hover\:stroke-cnt-9:hover {
+  stroke: hsl(var(--color-cnt-9-h), var(--color-cnt-9-s), var(--color-cnt-9-l), 1);
+}
+
+.stroke-srf-0, .focus\:stroke-srf-0:focus, .hover\:stroke-srf-0:hover {
+  stroke: hsl(var(--color-srf-0-h), var(--color-srf-0-s), var(--color-srf-0-l), 1);
+}
+
+.stroke-srf-1, .focus\:stroke-srf-1:focus, .hover\:stroke-srf-1:hover {
+  stroke: hsl(var(--color-srf-1-h), var(--color-srf-1-s), var(--color-srf-1-l), 1);
+}
+
+.stroke-srf-2, .focus\:stroke-srf-2:focus, .hover\:stroke-srf-2:hover {
+  stroke: hsl(var(--color-srf-2-h), var(--color-srf-2-s), var(--color-srf-2-l), 1);
+}
+
+.stroke-srf-3, .focus\:stroke-srf-3:focus, .hover\:stroke-srf-3:hover {
+  stroke: hsl(var(--color-srf-3-h), var(--color-srf-3-s), var(--color-srf-3-l), 1);
+}
+
+.stroke-brd-0, .focus\:stroke-brd-0:focus, .hover\:stroke-brd-0:hover {
+  stroke: hsl(var(--color-brd-0-h), var(--color-brd-0-s), var(--color-brd-0-l), 1);
+}
+
+.stroke-brd-1, .focus\:stroke-brd-1:focus, .hover\:stroke-brd-1:hover {
+  stroke: hsl(var(--color-brd-1-h), var(--color-brd-1-s), var(--color-brd-1-l), 1);
+}
+
+.stroke-brd-2, .focus\:stroke-brd-2:focus, .hover\:stroke-brd-2:hover {
+  stroke: hsl(var(--color-brd-2-h), var(--color-brd-2-s), var(--color-brd-2-l), 1);
+}
+
+.stroke-brd-3, .focus\:stroke-brd-3:focus, .hover\:stroke-brd-3:hover {
+  stroke: hsl(var(--color-brd-3-h), var(--color-brd-3-s), var(--color-brd-3-l), 1);
+}
+
+.stroke-txt-0, .focus\:stroke-txt-0:focus, .hover\:stroke-txt-0:hover {
+  stroke: hsl(var(--color-txt-0-h), var(--color-txt-0-s), var(--color-txt-0-l), 1);
+}
+
+.stroke-txt-1, .focus\:stroke-txt-1:focus, .hover\:stroke-txt-1:hover {
+  stroke: hsl(var(--color-txt-1-h), var(--color-txt-1-s), var(--color-txt-1-l), 1);
+}
+
+.stroke-txt-2, .focus\:stroke-txt-2:focus, .hover\:stroke-txt-2:hover {
+  stroke: hsl(var(--color-txt-2-h), var(--color-txt-2-s), var(--color-txt-2-l), 1);
+}
+
+.stroke-txt-3, .focus\:stroke-txt-3:focus, .hover\:stroke-txt-3:hover {
+  stroke: hsl(var(--color-txt-3-h), var(--color-txt-3-s), var(--color-txt-3-l), 1);
+}
+
+.stroke-current, .focus\:stroke-current:focus, .hover\:stroke-current:hover {
+  stroke: currentColor;
+}
+
+.stroke-inherit, .focus\:stroke-inherit:focus, .hover\:stroke-inherit:hover {
+  stroke: inherit;
+}
+
+.stroke-transparent, .focus\:stroke-transparent:focus, .hover\:stroke-transparent:hover {
+  stroke: transparent;
+}
+
+.stroke-0, .focus\:stroke-0:focus, .hover\:stroke-0:hover {
+  stroke-width: 0;
+}
+
+.stroke-1, .focus\:stroke-1:focus, .hover\:stroke-1:hover {
+  stroke-width: 1;
+}
+
+.stroke-2, .focus\:stroke-2:focus, .hover\:stroke-2:hover {
+  stroke-width: 2;
+}
+
 .duration-ultra-fast {
   transition-duration: 25ms;
 }

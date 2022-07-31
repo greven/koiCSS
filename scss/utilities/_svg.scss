@@ -1,0 +1,46 @@
+// --------------------------------
+//   SVG Utilities
+// --------------------------------
+
+@use 'sass:map';
+
+@use '../config';
+@use '../api' as *;
+
+// --------------------------------
+//   Vars
+// --------------------------------
+
+$_colors: map.merge(
+  $merged-colors,
+  (
+    current: currentColor,
+    inherit: inherit,
+    transparent: transparent,
+  )
+);
+
+// --------------------------------
+//   Utilities
+// --------------------------------
+
+$utilities: (
+  fill: (
+    property: fill,
+    class: fill,
+    pseudos: hover focus,
+    values: $_colors,
+  ),
+  stroke: (
+    property: stroke,
+    class: stroke,
+    pseudos: hover focus,
+    values: $_colors,
+  ),
+  stroke-width: (
+    property: stroke-width,
+    class: stroke,
+    pseudos: hover focus,
+    values: 0 1 2,
+  ),
+);
