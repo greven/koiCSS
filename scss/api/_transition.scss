@@ -39,10 +39,15 @@ $_default-properties: (
   $timing-function: $_default-timing-function,
   $delay: 0
 ) {
-  transition-delay: var(--koi-transition-delay, $delay);
-  transition-duration: var(--koi-transition-duration, duration($duration));
-  transition-property: var(--koi-transition-property, $property);
-  transition-timing-function: var(--koi-transition-timing-function, timing($timing-function));
+  --koi-transition-delay: #{$delay};
+  --koi-transition-duration: #{duration($duration)};
+  --koi-transition-property: #{$property};
+  --koi-transition-timing-function: #{timing($timing-function)};
+
+  transition-delay: var(--koi-transition-delay);
+  transition-duration: var(--koi-transition-duration);
+  transition-property: var(--koi-transition-property);
+  transition-timing-function: var(--koi-transition-timing-function);
 }
 
 @mixin transition-all($duration: $_default-duration, $timing-function: $_default-timing-function, $delay: null) {

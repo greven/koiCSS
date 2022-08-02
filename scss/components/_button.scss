@@ -2,8 +2,6 @@
 //   Button Components
 // --------------------------------
 
-@use 'sass:selector';
-
 @use '../config';
 @use '../api' as *;
 
@@ -12,10 +10,6 @@
 // --------------------------------
 
 $class: '.btn';
-
-$selectors: selector.parse(
-  "#{$class}, a#{$class}, [type='button']#{$class}, [type='submit']#{$class}, [type='reset']#{$class}"
-);
 
 // Defaults
 $height: 40px;
@@ -31,8 +25,6 @@ $border-width: 2px;
 $padding-x: 18px;
 $padding-x-compact: 10px;
 $padding-x-wide: spacing(80);
-
-$shadow: shadow(xs);
 
 // --------------------------------
 //   Mixins
@@ -70,9 +62,9 @@ $shadow: shadow(xs);
 }
 
 // Button focus mixin to had a focus ring
-@mixin focus-ring($color: fill(cnt, 9), $width: 2px, $offset-color: fill(srf, 1), $offset: 2px) {
+@mixin focus-ring($color: fill(cnt, 9)) {
   &:focus-visible {
-    @include ring($color: $color, $width: $width, $offset-color: $offset-color, $offset: $offset);
+    @include ring($color);
   }
 }
 
@@ -95,58 +87,84 @@ $shadow: shadow(xs);
   user-select: none;
   white-space: nowrap;
 
-  &:focus {
+  &:focus,
+  &:focus-visible {
     outline: none;
   }
 }
 
 @mixin default {
-  @include shadow(var(--koi-btn-shadow, $shadow));
-  @include transition((color, background-color, border-color, transform));
-  @include focus-ring;
+  --koi-btn-align-items: center;
+  --koi-btn-background: #{fill(srf, 1)};
+  --koi-btn-border-color: #{fill(brd, 1)};
+  --koi-btn-border-radius: #{$border-radius};
+  --koi-btn-border-style: solid;
+  --koi-btn-border-width: #{$border-width};
+  --koi-btn-foreground: #{fill(txt, 1)};
+  --koi-btn-display: inline-flex;
+  --koi-btn-font-size: #{$font-size};
+  --koi-btn-font-weight: #{font(semibold)};
+  --koi-btn-gap: 1ch;
+  --koi-btn-justify-content: center;
+  --koi-btn-tracking: #{$tracking};
+  --koi-btn-height: #{$height};
+  --koi-btn-leading: #{$leading};
+  --koi-btn-padding-x: #{$padding-x};
+  --koi-btn-text-align: center;
+  --koi-btn-text-transform: capitalize;
+  --koi-btn-animation-scale: 1px;
+  --koi-btn-background-hover: #{fill(srf, 2)};
+  --koi-btn-foreground-hover: #{fill(txt, 1)};
+  --koi-btn-background-active: #{fill(srf, 1)};
+  --koi-btn-foreground-active: #{fill(txt, 1)};
+  --koi-btn-background-disabled: #{fill(srf, 3, $alpha: 0.4)};
+  --koi-btn-foreground-disabled: #{fill(txt, 3)};
+  --koi-btn-border-color-disabled: transparent;
 
-  align-items: var(--koi-btn-align-items, center);
-  background-color: var(--koi-btn-background, fill(srf, 1));
-  border-color: var(--koi-btn-border-color, fill(brd, 1));
-  border-radius: var(--koi-btn-border-radius, $border-radius);
-  border-style: var(--koi-btn-border-style, solid);
-  border-width: var(--koi-btn-border-width, 1px);
-  color: var(--koi-btn-foreground, fill(txt, 1));
-  display: var(--koi-btn-display, inline-flex);
-  font-size: var(--koi-btn-font-size, $font-size);
-  font-weight: var(--koi-btn-font-weight, font(semibold));
-  gap: var(--koi-btn-gap, 1ch);
-  height: var(--koi-btn-height, $height);
-  justify-content: var(--koi-btn-justify-content, center);
-  letter-spacing: var(--koi-btn-tracking, $tracking);
-  line-height: var(--koi-btn-leading, $leading);
-  padding: 0 var(--koi-btn-padding-x, $padding-x);
-  text-align: var(--koi-btn-text-align, center);
-  text-transform: var(--koi-btn-text-transform, capitalize);
+  @include shadow(xs);
+  @include focus-ring;
+  @include transition((color, background-color, border-color, box-shadow, transform));
+
+  align-items: var(--koi-btn-align-items);
+  background-color: var(--koi-btn-background);
+  border-color: var(--koi-btn-border-color);
+  border-radius: var(--koi-btn-border-radius);
+  border-style: var(--koi-btn-border-style);
+  border-width: 1px;
+  color: var(--koi-btn-foreground);
+  display: var(--koi-btn-display);
+  font-size: var(--koi-btn-font-size);
+  font-weight: var(--koi-btn-font-weight);
+  gap: var(--koi-btn-gap);
+  height: var(--koi-btn-height);
+  justify-content: var(--koi-btn-justify-content);
+  letter-spacing: var(--koi-btn-tracking);
+  line-height: var(--koi-btn-leading);
+  padding: 0 var(--koi-btn-padding-x);
+  text-align: var(--koi-btn-text-align);
+  text-transform: var(--koi-btn-text-transform);
 
   @include hover {
-    @include shadow(var(--koi-btn-shadow-hover, $shadow));
-
-    background-color: var(--koi-btn-background-hover, fill(srf, 2));
-    color: var(--koi-btn-foreground-hover, fill(txt, 1));
+    background-color: var(--koi-btn-background-hover);
+    color: var(--koi-btn-foreground-hover);
   }
 
   @include active {
-    @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
+    @include shadow(none);
 
     @if config.$use-button-animation {
-      transform: translateY(var(--koi-btn-animation-scale, 1px));
+      transform: translateY(var(--koi-btn-animation-scale));
     } @else {
-      background-color: var(--koi-btn-background-active, fill(srf, 1));
-      color: var(--koi-btn-foreground-active, fill(txt, 1));
+      background-color: var(--koi-btn-background-active);
+      color: var(--koi-btn-foreground-active);
     }
   }
 
   @include disabled {
-    background-color: var(--koi-btn-background-disabled, fill(srf, 3, $alpha: 0.4));
-    border-color: var(--koi-btn-border-color-disabled, transparent);
+    background-color: var(--koi-btn-background-disabled);
+    border-color: var(--koi-btn-border-color-disabled);
     box-shadow: none;
-    color: var(--koi-btn-foreground-disabled, fill(txt, 3));
+    color: var(--koi-btn-foreground-disabled);
     cursor: not-allowed;
   }
 
@@ -171,11 +189,8 @@ $shadow: shadow(xs);
   --koi-btn-foreground: #{fill(cnt, 0)};
   --koi-btn-foreground-hover: #{fill(cnt, 1)};
   --koi-btn-foreground-active: #{fill(cnt, 0)};
-  --koi-btn-shadow: #{shadow(sm)};
 
-  @include focus-ring(fill(cnt, 9));
-
-  border-width: var(--koi-btn-border-width, $border-width);
+  border-width: var(--koi-btn-border-width);
 
   // Color variants
   @include color-variant(accent) {
@@ -212,15 +227,9 @@ $shadow: shadow(xs);
   --koi-btn-foreground: #{fill(cnt, 9)};
   --koi-btn-foreground-hover: #{fill(cnt, 7)};
   --koi-btn-foreground-active: #{fill(cnt, 9)};
+  --koi-shadow: #{shadow(none)};
 
-  @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
-  @include focus-ring(fill(cnt, 9));
-
-  border-width: var(--koi-btn-border-width, $border-width);
-
-  @include hover {
-    @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
-  }
+  border-width: var(--koi-btn-border-width);
 
   @include dark-mode {
     --koi-btn-background-hover: #{fill(cnt, 2)};
@@ -288,15 +297,9 @@ $shadow: shadow(xs);
   --koi-btn-foreground: #{fill(cnt, 8)};
   --koi-btn-foreground-hover: #{fill(cnt, 9)};
   --koi-btn-foreground-active: #{fill(cnt, 8)};
+  --koi-shadow: #{shadow(none)};
 
-  @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
-  @include focus-ring(fill(cnt, 9));
-
-  border-width: var(--koi-btn-border-width, $border-width);
-
-  @include hover {
-    @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
-  }
+  border-width: var(--koi-btn-border-width);
 
   @include dark-mode {
     --koi-btn-background: #{fill(cnt, 2)};
@@ -357,15 +360,9 @@ $shadow: shadow(xs);
   --koi-btn-foreground: #{fill(cnt, 8)};
   --koi-btn-foreground-hover: #{fill(cnt, 9)};
   --koi-btn-foreground-active: #{fill(cnt, 8)};
+  --koi-shadow: #{shadow(none)};
 
-  @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
-  @include focus-ring(fill(cnt, 9));
-
-  border-width: var(--koi-btn-border-width, $border-width);
-
-  @include hover {
-    @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
-  }
+  border-width: var(--koi-btn-border-width);
 
   @include dark-mode {
     --koi-btn-background-hover: #{fill(cnt, 2, $alpha: 0.75)};
@@ -421,14 +418,11 @@ $shadow: shadow(xs);
   --koi-btn-foreground: #{fill(cnt, 8)};
   --koi-btn-foreground-hover: #{fill(cnt, 9)};
   --koi-btn-foreground-active: #{fill(cnt, 8)};
+  --koi-shadow: #{shadow(none)};
 
-  @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
-  @include focus-ring(fill(cnt, 9));
-
-  border-width: var(--koi-btn-border-width, $border-width);
+  border-width: var(--koi-btn-border-width);
 
   @include hover {
-    @include shadow(var(--koi-btn-shadow-hover, shadow(none)));
     text-decoration: underline;
   }
 
@@ -523,7 +517,7 @@ $shadow: shadow(xs);
   display: inline-flex;
   position: relative;
 
-  #{$selectors} {
+  #{$class} {
     @include focus-ring(accent(6));
 
     flex: 1 0 auto;
@@ -553,7 +547,7 @@ $shadow: shadow(xs);
   &--block {
     display: flex;
 
-    #{$selectors} {
+    #{$class} {
       flex: 1 0;
     }
   }
@@ -572,7 +566,7 @@ $shadow: shadow(xs);
     @include reset;
   }
 
-  #{$selectors} {
+  #{$class} {
     @include default;
 
     &--solid {

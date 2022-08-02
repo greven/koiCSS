@@ -42,7 +42,7 @@ $body-foreground: fill(txt, 2);
   --koi-card-font-size: #{font-size($font-size)};
   --koi-card-leading: #{text-leading($font-size)};
 
-  @include box($color: var(--koi-card-body-foreground), $rounded: $border-radius, $shadow: md);
+  @include box($foreground: var(--koi-card-body-foreground), $rounded: $border-radius, $shadow: md);
   border-width: var(--koi-card-border-width);
   display: flex;
   flex-direction: column;

@@ -254,6 +254,11 @@
     --koi-scale-y: 1;
     --koi-shadow: 0 0 #0000;
     --koi-ring-shadow: 0 0 #0000;
+    --koi-ring-color: #{accent(5)};
+    --koi-ring-width: 2px;
     --koi-ring-offset-shadow: 0 0 #0000;
+    --koi-ring-offset-color: #{fill(srf, 1)};
+    --koi-ring-offset: 2px;
+    --koi-ring-inset: ;
   }
 }

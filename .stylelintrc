@@ -23,14 +23,6 @@
         ]
       }
     ],
-    "value-no-vendor-prefix": [
-      true,
-      {
-        "ignoreValues": [
-          "box"
-        ]
-      }
-    ],
     "order/order": [
       "custom-properties",
       "declarations"

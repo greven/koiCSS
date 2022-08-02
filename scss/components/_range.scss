@@ -1,0 +1,118 @@
+// --------------------------------
+//   Range Slider Component
+// --------------------------------
+
+@use 'sass:math';
+@use 'sass:selector';
+
+@use '../config';
+@use '../api' as *;
+
+// defaults
+$height: 20px;
+
+// --------------------------------
+//   Vars
+// --------------------------------
+
+$class: '.range';
+
+$selectors: selector.parse("#{$class}, input[type='range']");
+
+// --------------------------------
+//   Mixins
+// --------------------------------
+
+@mixin reset {
+  appearance: none;
+  appearance: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-webkit-slider-thumb {
+    appearance: none;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@mixin track {
+  background-color: var(--koi-track-color);
+  border-radius: var(--koi-track-radius);
+  height: var(--koi-track-height);
+  width: 100%;
+}
+
+@mixin thumb {
+  background-color: fill(white);
+  border-radius: var(--koi-thumb-radius);
+  border-style: none;
+  box-shadow: 0 0 0 math.div($height, 6) var(--koi-slider-color) inset, var(--koi-slider-focus, 0 0),
+    calc(var(--koi-thumb-filler-size) * -1 - var(--koi-thumb-filler-offset)) 0 0 var(--koi-thumb-filler-size);
+  color: accent(6);
+  height: var(--koi-slider-height);
+  position: relative;
+  width: var(--koi-slider-height);
+}
+
+@mixin default {
+  --koi-slider-height: #{$height};
+  --koi-slider-radius: #{radius(full)};
+  --koi-slider-color: #{accent(6)};
+  --koi-track-height: 0.5rem;
+  --koi-track-radius: #{radius(xl)};
+  --koi-track-color: #{fill(cnt, 9, $alpha: 0.1)};
+  --koi-thumb-color: #{fill(white)};
+  --koi-thumb-radius: #{radius(full)};
+  background: transparent;
+  border-radius: var(--koi-slider-radius);
+  cursor: pointer;
+  height: var(--koi-slider-height);
+  overflow: hidden;
+
+  width: 100%;
+
+  &::-webkit-slider-runnable-track {
+    @include track;
+  }
+
+  &::-moz-range-track {
+    @include track;
+  }
+
+  &::-webkit-slider-thumb {
+    --koi-thumb-filler-size: 100rem;
+    --koi-thumb-filler-offset: 0.7rem;
+
+    @include thumb;
+  }
+
+  &::-moz-range-thumb {
+    --koi-thumb-filler-size: 100rem;
+    --koi-thumb-filler-offset: 0.65rem;
+
+    @include thumb;
+  }
+
+  &:focus-visible::-webkit-slider-thumb,
+  &:focus-visible::-moz-range-thumb {
+    --koi-slider-focus: 0 0 0 #{math.div($height, 3)} var(--koi-thumb-color) inset,
+      0 0 0 2rem var(--koi-slider-color) inset;
+  }
+}
+
+// --------------------------------
+//   Styles
+// --------------------------------
+
+@mixin styles {
+  input[type='range'] {
+    @include reset;
+  }
+
+  #{$selectors} {
+    @include default;
+  }
+}

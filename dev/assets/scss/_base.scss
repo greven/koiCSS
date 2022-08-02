@@ -20,8 +20,9 @@ body {
 }
 
 .box {
-  background-color: #fff;
-  box-shadow: koi.shadow();
+  @include koi.box($background: koi.fill(srf, 3), $rounded: true, $shadow: true);
+  width: 128px;
+  aspect-ratio: 1/1;
 
   &:hover {
     @include koi.ring();

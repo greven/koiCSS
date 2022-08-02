@@ -4,7 +4,7 @@ module.exports = {
     require('postcss-preset-env')({ stage: 2 }),
     require('cssnano')({ preset: 'default' }),
     require('@fullhuman/postcss-purgecss')({
-      content: ['**/*.html', '**/*.njk', '**/*.liquid', '**/*.md'],
+      content: ['**/*.html', '**/*.md'],
     }),
   ],
 }

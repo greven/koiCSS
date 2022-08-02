@@ -36,15 +36,15 @@
 // Basic box element with theme defaults that can be composed with other utilities.
 // Based on https://smolcss.dev/#smol-unbreakable-boxes */
 @mixin box(
+  $background: fill(srf, 1),
+  $foreground: fill(txt, 1),
   $max-width: 100%,
-  $color: fill(txt, 1),
-  $bg-color: fill(srf, 1),
   $padding: null,
   $rounded: null,
   $shadow: null
 ) {
-  background-color: $bg-color;
-  color: $color;
+  background-color: $background;
+  color: $foreground;
   hyphens: auto;
   word-break: break-word;
 

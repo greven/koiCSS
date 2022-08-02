@@ -6,16 +6,6 @@
 @use 'transition' as *;
 
 // -------------------------------------
-//   Vars
-// -------------------------------------
-
-$_default-color: accent(5);
-$_default-width: 2px;
-$_default-style: solid;
-$_default-offset: 2px;
-$_default-offset-color: fill(srf, 1);
-
-// -------------------------------------
 //   Functions
 // -------------------------------------
 
@@ -35,30 +25,40 @@ $_default-offset-color: fill(srf, 1);
 // -------------------------------------
 
 // Apply focus using outline
-@mixin outline($color: $_default-color, $width: $_default-width, $offset: $_default-offset, $style: $_default-style) {
+@mixin outline($color: accent(5), $width: 2px, $offset: 2px, $style: solid) {
   outline-color: $color;
   outline-offset: $offset;
   outline-style: $style;
   outline-width: $width;
 }
 
-@mixin ring(
-  $color: $_default-color,
-  $width: $_default-width,
-  $offset: $_default-offset,
-  $offset-color: $_default-offset-color,
-  $inset: null,
-  $transition: true
-) {
-  --koi-ring-offset-shadow: var(--koi-ring-inset, #{$inset}) 0 0 0 var(--koi-ring-offset, #{$offset})
-    var(--koi-ring-offset-color, #{$offset-color});
-
-  --koi-ring-shadow: var(--koi-ring-inset, #{$inset}) 0 0 0
-    calc(var(--koi-ring-width, #{$width}) + var(--koi-ring-offset, #{$offset})) var(--koi-ring-color, #{$color});
-
-  box-shadow: var(--koi-ring-offset-shadow), var(--koi-ring-shadow), var(--koi-shadow);
-
-  @if $transition {
-    @include transition-shadow(faster);
+@mixin ring($color: null, $width: null, $offset: null, $offset-color: null, $inset: null) {
+  @if $color {
+    --koi-ring-color: #{$color};
   }
+
+  @if $width {
+    --koi-ring-width: #{$width};
+  }
+
+  @if $offset {
+    --koi-ring-offset: #{$offset};
+  }
+
+  @if $offset-color {
+    --koi-ring-offset-color: #{$offset-color};
+  }
+
+  @if $inset {
+    --koi-ring-inset: #{$inset};
+  }
+
+  --koi-ring-shadow: var(--koi-ring-inset) 0 0 0 calc(var(--koi-ring-width) + var(--koi-ring-offset))
+    var(--koi-ring-color);
+
+  --koi-ring-offset-shadow: var(--koi-ring-inset) 0 0 0 var(--koi-ring-offset) var(--koi-ring-offset-color);
+
+  $shadow: var(--koi-ring-offset-shadow), var(--koi-ring-shadow), var(--koi-shadow);
+
+  box-shadow: $shadow;
 }
