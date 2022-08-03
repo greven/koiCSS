@@ -8,6 +8,7 @@
 @forward 'keyboard' as keyboard-*;
 @forward 'loader' as loader-*;
 @forward 'navbar' as navbar-*;
+@forward 'progress' as progress-*;
 @forward 'range' as range-*;
 @forward 'tabs' as tabs-*;
 @forward 'tooltip' as tooltip-*;
@@ -21,6 +22,7 @@
 @use 'indicator';
 @use 'keyboard';
 @use 'navbar';
+@use 'progress';
 @use 'range';
 @use 'tabs';
 @use 'tooltip';
@@ -35,6 +37,7 @@
   @include indicator.styles();
   @include keyboard.styles();
   // @include navbar.styles();
+  @include progress.styles();
   @include range.styles();
   @include tabs.styles();
   // @include tooltip.styles();
