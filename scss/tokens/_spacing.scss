@@ -65,15 +65,13 @@ $spacing-scale: (
 ) !default;
 
 $spacers: (
-  2xs: $spacer * 0.125,
-  xs: $spacer * 0.25,
-  sm: $spacer * 0.5,
+  2xs: $spacer * 0.25,
+  xs: $spacer * 0.5,
+  sm: $spacer * 0.75,
   md: $spacer,
-  lg: $spacer * 1.5,
-  xl: $spacer * 3,
-  2xl: $spacer * 4,
-  3xl: $spacer * 5,
-  4xl: $spacer * 10,
+  lg: $spacer * 1.25,
+  xl: $spacer * 1.5,
+  2xl: $spacer * 2,
 );
 
 // Spacing (marging, padding)
