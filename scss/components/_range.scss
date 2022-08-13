@@ -9,97 +9,200 @@
 @use '../api' as *;
 
 // Defaults
-$height: 20px;
+$thumb-size: 20px;
 
 // --------------------------------
 //   Vars
 // --------------------------------
 
-$class: '.range';
-
-$selectors: selector.parse("#{$class}, input[type='range']");
+$class: '.range-slider';
 
 // --------------------------------
 //   Mixins
 // --------------------------------
 
+// @mixin track {
+//   background-color: var(--koi-track-color);
+//   border-radius: var(--koi-track-radius);
+//   height: var(--koi-track-height);
+//   width: 100%;
+// }
+
+// @mixin thumb {
+//   background-color: fill(white);
+//   border-radius: var(--koi-thumb-radius);
+//   border-style: none;
+//   // box-shadow: 0 0 0 math.div($height, 6) var(--koi-slider-color) inset, var(--koi-slider-focus, 0 0),
+//   //   calc(var(--koi-thumb-filler-size) * -1 - var(--koi-thumb-filler-offset)) 0 0 var(--koi-thumb-filler-size);
+//   color: accent(6);
+//   height: var(--koi-slider-height);
+//   position: relative;
+//   width: var(--koi-slider-height);
+// }
+
+// @mixin default {
+//   --koi-slider-height: #{$height};
+//   --koi-slider-radius: #{radius(full)};
+//   --koi-slider-color: #{accent(6)};
+//   --koi-track-height: 0.5rem;
+//   --koi-track-radius: #{radius(xl)};
+//   --koi-track-color: #{fill(cnt, 9, $alpha: 0.1)};
+//   --koi-thumb-color: #{fill(white)};
+//   --koi-thumb-radius: #{radius(full)};
+
+//   background: transparent;
+//   border-radius: var(--koi-slider-radius);
+//   cursor: pointer;
+//   height: var(--koi-slider-height);
+//   overflow: hidden;
+
+//   width: 100%;
+
+//   &::-webkit-slider-runnable-track {
+//     @include track;
+//   }
+
+//   &::-moz-range-track {
+//     @include track;
+//   }
+
+//   &::-webkit-slider-thumb {
+//     // --koi-thumb-filler-size: 100rem;
+//     // --koi-thumb-filler-offset: 0.7rem;
+
+//     @include thumb;
+//   }
+
+//   &::-moz-range-thumb {
+//     // --koi-thumb-filler-size: 100rem;
+//     // --koi-thumb-filler-offset: 0.65rem;
+
+//     @include thumb;
+//   }
+
+//   &:focus-visible::-webkit-slider-thumb,
+//   &:focus-visible::-moz-range-thumb {
+//     --koi-slider-focus: 0 0 0 #{math.div($height, 3)} var(--koi-thumb-color) inset,
+//       0 0 0 2rem var(--koi-slider-color) inset;
+//   }
+// }
+
 @mixin reset {
-  appearance: none;
-  appearance: none;
+  input {
+    appearance: none;
+  }
 
   &:focus {
     outline: none;
   }
 
-  &::-webkit-slider-thumb {
+  &::-webkit-slider-thumb,
+  &::-moz-range-thumb {
     appearance: none;
-    top: 50%;
-    transform: translateY(-50%);
+    border: 0;
   }
 }
 
-@mixin track {
-  background-color: var(--koi-track-color);
-  border-radius: var(--koi-track-radius);
-  height: var(--koi-track-height);
-  width: 100%;
-}
+// @mixin thumb {
+// }
 
-@mixin thumb {
-  background-color: fill(white);
-  border-radius: var(--koi-thumb-radius);
-  border-style: none;
-  box-shadow: 0 0 0 math.div($height, 6) var(--koi-slider-color) inset, var(--koi-slider-focus, 0 0),
-    calc(var(--koi-thumb-filler-size) * -1 - var(--koi-thumb-filler-offset)) 0 0 var(--koi-thumb-filler-size);
-  color: accent(6);
-  height: var(--koi-slider-height);
-  position: relative;
-  width: var(--koi-slider-height);
-}
-
-@mixin default {
-  --koi-slider-height: #{$height};
+@mixin slider {
+  --koi-slider-thumb-size: #{$thumb-size};
+  --koi-slider-track-height: calc(var(--koi-slider-thumb-size) / 2);
+  --koi-slider-progress-background: #{fill(cnt, 9, $alpha: 0.1)};
   --koi-slider-radius: #{radius(full)};
-  --koi-slider-color: #{accent(6)};
-  --koi-track-height: 0.5rem;
-  --koi-track-radius: #{radius(xl)};
-  --koi-track-color: #{fill(cnt, 9, $alpha: 0.1)};
-  --koi-thumb-color: #{fill(white)};
-  --koi-thumb-radius: #{radius(full)};
-  background: transparent;
-  border-radius: var(--koi-slider-radius);
-  cursor: pointer;
-  height: var(--koi-slider-height);
-  overflow: hidden;
+  --koi-slider-ticks-height: 5px;
+  --koi-slider-ticks-gap: var(--koi-slider-ticks-height, 0);
 
-  width: 100%;
+  --step: 1;
+  --ticks-count: (var(--max) - var(--min)) / var(--step);
+  --maxTicksAllowed: 30;
+  --too-many-ticks: min(1, max(var(--ticks-count) - var(--maxTicksAllowed), 0));
+  --x-step: max(var(--step), var(--too-many-ticks) * (var(--max) - var(--min)));
+  --tickIntervalPerc_1: calc((var(--max) - var(--min)) / var(--x-step));
+  --tickIntervalPerc: calc((100% - var(--thumb-size)) / var(--tickIntervalPerc_1) * var(--tickEvery, 1));
 
-  &::-webkit-slider-runnable-track {
-    @include track;
+  --value-a: clamp(var(--min), var(--value, 0), var(--max));
+  --value-b: var(--value, 0);
+  --text-value-a: var(--text-value, '');
+
+  --completed-a: calc((var(--value-a) - var(--min)) / (var(--max) - var(--min)) * 100);
+  --completed-b: calc((var(--value-b) - var(--min)) / (var(--max) - var(--min)) * 100);
+  --ca: min(var(--completed-a), var(--completed-b));
+  --cb: max(var(--completed-a), var(--completed-b));
+  --thumbs-too-close: clamp(-1, 1000 * (min(1, max(var(--cb) - var(--ca) - 5, -1)) + 0.001), 1);
+  --thumb-close-to-min: min(1, max(var(--ca) - 5, 0));
+  --thumb-close-to-max: min(1, max(95 - var(--cb), 0));
+
+  display: inline-block;
+  height: max(var(--koi-slider-track-height), var(--koi-slider-thumb-size));
+  position: relative;
+  z-index: 1;
+
+  &[data-ticks-position='top']{
+    --flip-y: 1;
   }
 
-  &::-moz-range-track {
-    @include track;
+  input {
+    background: none;
+    cursor: grab;
+    height: var(--koi-slider-thumb-size);
+    left: 0;
+    margin: 0;
+    outline: none;
+    position: absolute;
+    top: calc(50% - max(var(--koi-slider-track-height), var(--thumb-size)) / 2 + calc(var(--koi-slider-ticks-gap) / 2 * var(--flip-y, -1)));
+    width: 100%;
+  }
+
+  &__progress {
+    --start-end: calc(var(--koi-slider-thumb-size) / 2);
+    --clip-end: calc(100% - (var(--cb)) * 1%);
+    --clip-start: calc(var(--ca) * 1%);
+    --clip: inset(-20px var(--clip-end) -20px var(--clip-start));
+    background: var(--koi-slider-progress-background);
+    border-radius: var(--koi-slider-radius);
+    height: calc(var(--koi-slider-track-height));
+    left: var(--start-end);
+    pointer-events: none;
+
+    position: absolute;
+    right: var(--start-end);
+    top: calc(var(--koi-slider-ticks-gap) * var(--flip-y, 0) + var(--koi-slider-thumb-size) / 2 - var(--koi-slider-track-height) / 2);
+    z-index: -1;
+
+    // Fill area
+    &::before{
+      background: var(--koi-slider-fill-color, accent(6));
+      border-radius: inherit;
+      bottom: 0;
+      box-shadow: var(--koi-slider-progress-flll-shadow);
+      clip-path: var(--clip);
+      content: '';
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 1;
+    }
+
+    // Shadow
+    &::after{
+      border-radius: inherit; bottom:0;
+      box-shadow: var(--koi-slider-progress-flll-shadow);
+      content: ''; left:0;
+      pointer-events: none;
+      position: absolute; right:0;
+      top:0;
+    }
   }
 
   &::-webkit-slider-thumb {
-    --koi-thumb-filler-size: 100rem;
-    --koi-thumb-filler-offset: 0.7rem;
-
     @include thumb;
   }
 
   &::-moz-range-thumb {
-    --koi-thumb-filler-size: 100rem;
-    --koi-thumb-filler-offset: 0.65rem;
-
     @include thumb;
-  }
-
-  &:focus-visible::-webkit-slider-thumb,
-  &:focus-visible::-moz-range-thumb {
-    --koi-slider-focus: 0 0 0 #{math.div($height, 3)} var(--koi-thumb-color) inset,
-      0 0 0 2rem var(--koi-slider-color) inset;
   }
 }
 
@@ -112,7 +215,7 @@ $selectors: selector.parse("#{$class}, input[type='range']");
     @include reset;
   }
 
-  #{$selectors} {
-    @include default;
+  #{$class} {
+    @include slider;
   }
 }
