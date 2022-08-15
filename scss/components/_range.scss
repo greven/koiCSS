@@ -34,7 +34,7 @@ $class: '.range-slider';
   --koi-thumb-shadow: 0 0 0 99px var(--koi-thumb-color) inset, #{shadow()};
   --koi-thumb-shadow-hover: 0 0 0 99px var(--koi-thumb-color-hover) inset, #{shadow()};
   --koi-thumb-shadow-focus: 0 0 0 99px var(--koi-thumb-color-focus) inset, #{shadow()},
-    #{ring($width: var(--koi-track-height), $offset: 0, $color: accent($accent-shade, $alpha: 0.2))};
+    #{ring($width: var(--koi-track-height), $offset: 0px, $color: accent($accent-shade, $alpha: 0.2))};
 }
 
 @mixin reset {
@@ -68,11 +68,11 @@ $class: '.range-slider';
 
 @mixin thumb {
   @include transition((background-color border-color box-shadow));
+
   background-color: var(--koi-thumb-color);
   border-radius: var(--koi-thumb-radius);
   box-shadow: var(--koi-thumb-shadow);
   height: var(--koi-thumb-size);
-
   position: relative;
   width: var(--koi-thumb-size);
 }
