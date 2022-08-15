@@ -93,6 +93,7 @@
   }
 }
 
+/* stylelint-disable */
 @mixin container($from: xl, $padding: false, $center: false, $max-width: true) {
   $from-width: if(bp($from), bp($from), $from);
 
@@ -145,6 +146,7 @@
     }
   }
 }
+/* stylelint-enable */
 
 // Breakout from a container making the element full width
 @mixin breakout {
