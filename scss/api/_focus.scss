@@ -10,13 +10,7 @@
 // -------------------------------------
 
 // Get the value of the focus ring shadow
-@function ring(
-  $color: $_default-color,
-  $width: $_default-width,
-  $offset: $_default-offset,
-  $offset-color: $_default-offset-color,
-  $inset: null
-) {
+@function ring($color: accent(5), $width: 2px, $offset: 2px, $offset-color: fill(srf, 1), $inset: null) {
   @return $inset 0 0 0 $offset $offset-color, $inset 0 0 0 calc($width + $offset) $color;
 }
 

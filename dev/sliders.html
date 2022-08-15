@@ -15,15 +15,8 @@
 </head>
 
 <body class="mt-32 py-32 flex flex-col gap-64">
-  <div class="range-slider">
-    <input type="range" name="range" id="range-1">
-    <div class='range-slider__progress'></div>
-  </div>
-
-  <div class="range-slider accent-info">
-    <input type="range" name="range" id="range-1">
-    <div class='range-slider__progress'></div>
-  </div>
+  <input type="range" class="range-slider" min="0" max="100" step="1" value="50">
+  <input type="range" class="range-slider accent-danger" min="0" max="100" step="10" value="50">
 </body>
 
 </html>
