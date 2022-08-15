@@ -34,7 +34,7 @@ $class: '.range-slider';
   --koi-thumb-shadow: 0 0 0 99px var(--koi-thumb-color) inset, #{shadow()};
   --koi-thumb-shadow-hover: 0 0 0 99px var(--koi-thumb-color-hover) inset, #{shadow()};
   --koi-thumb-shadow-focus: 0 0 0 99px var(--koi-thumb-color-focus) inset, #{shadow()},
-    #{ring($width: var(--koi-track-height), $offset: 0px, $color: accent($accent-shade, $alpha: 0.2))};
+    #{ring($width: calc(var(--koi-thumb-size) / 3.25), $offset: 0px, $color: accent($accent-shade, $alpha: 0.2))};
 }
 
 @mixin reset {

@@ -5,6 +5,7 @@
   ],
   "rules": {
     "max-nesting-depth": 4,
+    "length-zero-no-unit": null,
     "color-function-notation": "modern",
     "color-named": [
       "never",
