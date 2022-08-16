@@ -4,6 +4,8 @@
 /* stylelint-enable */
 /* stylelint-disable */
 /* stylelint-enable */
+/* stylelint-disable */
+/* stylelint-enable */
 .space-x-2xs > :not([hidden]) ~ :not([hidden]) {
   margin-right: calc(0.25rem * var(--koi-space-x-reverse, 0));
   margin-left: calc(0.25rem * (1 - var(--koi-space-x-reverse, 0)));

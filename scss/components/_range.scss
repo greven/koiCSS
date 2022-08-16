@@ -8,34 +8,19 @@
 @use '../config';
 @use '../api' as *;
 
-// Defaults
-$thumb-size: 22px;
-$accent-shade: config.default(color-shade);
-
 // --------------------------------
 //   Vars
 // --------------------------------
 
-$class: '.range-slider';
+$accent-shade: config.default(color-shade);
+
+$thumb-size: 22px;
+$thumb-radius: radius(full);
+$thumb-shadow: shadow();
 
 // --------------------------------
 //   Mixins
 // --------------------------------
-
-@mixin vars {
-  --koi-track-height: calc(var(--koi-thumb-size) / 2.5);
-  --koi-track-radius: #{radius(xl)};
-
-  --koi-thumb-size: #{$thumb-size};
-  --koi-thumb-color: #{accent($accent-shade)};
-  --koi-thumb-color-hover: #{accent($accent-shade - 2)};
-  --koi-thumb-color-focus: #{accent($accent-shade - 2)};
-  --koi-thumb-radius: #{radius(full)};
-  --koi-thumb-shadow: 0 0 0 99px var(--koi-thumb-color) inset, #{shadow()};
-  --koi-thumb-shadow-hover: 0 0 0 99px var(--koi-thumb-color-hover) inset, #{shadow()};
-  --koi-thumb-shadow-focus: 0 0 0 99px var(--koi-thumb-color-focus) inset, #{shadow()},
-    #{ring($width: calc(var(--koi-thumb-size) / 3.25), $offset: 0px, $color: accent($accent-shade, $alpha: 0.2))};
-}
 
 @mixin reset {
   appearance: none;
@@ -60,25 +45,39 @@ $class: '.range-slider';
 }
 
 @mixin track {
-  background-color: var(--koi-track-color, fill(cnt, 9, $alpha: 0.1));
-  border-radius: var(--koi-track-radius);
-  height: var(--koi-track-height);
+  background: var(--koi-track-color, fill(cnt, 9, $alpha: 0.1));
+  border-radius: var(--koi-track-radius, radius(xl));
+  height: var(--koi-track-height, calc($thumb-size / 2.5));
   width: 100%;
 }
 
 @mixin thumb {
-  @include transition((background-color border-color box-shadow));
+  $thumb-color: var(--koi-thumb-color, accent($accent-shade));
+  $shadow: 0 0 0 99px $thumb-color inset, $thumb-shadow;
 
-  background-color: var(--koi-thumb-color);
-  border-radius: var(--koi-thumb-radius);
-  box-shadow: var(--koi-thumb-shadow);
-  height: var(--koi-thumb-size);
+  @include transition((background-color border-color box-shadow));
+  background-color: $thumb-color;
+  border-radius: var(--koi-thumb-radius, $thumb-radius);
+  box-shadow: var(--koi-thumb-shadow, $shadow);
+  height: var(--koi-thumb-size, $thumb-size);
   position: relative;
-  width: var(--koi-thumb-size);
+  width: var(--koi-thumb-size, $thumb-size);
 }
 
 @mixin input-range {
-  @include vars;
+  $thumb-color-hover: var(--koi-thumb-color-hover, accent($accent-shade - 2));
+  $thumb-color-focus: var(--koi-thumb-color-focus, accent($accent-shade - 2));
+  $focus-ring: var(
+    --koi-thumb-focus-ring,
+    ring(
+      $width: calc($thumb-size / 3.25),
+      $offset: 0px,
+      $color: accent($accent-shade, $alpha: 0.25),
+    )
+  );
+
+  $box-shadow-hover: 0 0 0 99px $thumb-color-hover inset, $thumb-shadow;
+  $box-shadow-focus: 0 0 0 99px $thumb-color-focus inset, $thumb-shadow, $focus-ring;
 
   &::-webkit-slider-runnable-track {
     @include track;
@@ -97,19 +96,19 @@ $class: '.range-slider';
   }
 
   &:hover::-webkit-slider-thumb {
-    box-shadow: var(--koi-thumb-shadow-hover, var(--koi-thumb-shadow));
+    box-shadow: var(--koi-thumb-shadow-hover, $box-shadow-hover);
   }
 
   &:focus::-webkit-slider-thumb {
-    box-shadow: var(--koi-thumb-shadow-focus, var(--koi-thumb-shadow));
+    box-shadow: var(--koi-thumb-shadow-focus, $box-shadow-focus);
   }
 
   &:hover::-moz-range-thumb {
-    box-shadow: var(--koi-thumb-shadow-hover, var(--koi-thumb-shadow));
+    box-shadow: var(--koi-thumb-shadow-hover, $box-shadow-hover);
   }
 
   &:focus::-moz-range-thumb {
-    box-shadow: var(--koi-thumb-shadow-focus, var(--koi-thumb-shadow));
+    box-shadow: var(--koi-thumb-shadow-focus, $box-shadow-focus);
   }
 }
 
@@ -120,9 +119,6 @@ $class: '.range-slider';
 @mixin styles {
   input[type='range'] {
     @include reset;
-  }
-
-  #{$class} {
     @include input-range;
   }
 }

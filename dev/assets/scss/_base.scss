@@ -28,3 +28,11 @@ body {
     @include koi.ring(koi.fill(cnt, 9));
   }
 }
+
+.my-slider {
+  --koi-thumb-color: rgb(25, 169, 25);
+  --koi-thumb-color-hover: rgb(144, 238, 144);
+  --koi-thumb-color-focus: rgb(144, 238, 144);
+  --koi-thumb-focus-ring: 0 0 0 8px rgb(144, 238, 144, 0.5);
+  --koi-track-color: #{koi.gradient(5)};
+}
