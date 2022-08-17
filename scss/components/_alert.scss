@@ -75,10 +75,10 @@ $icon-size: 20px;
   }
 
   &__header {
-    position: relative;
     color: var(--koi-alert-header-foreground, fill(cnt, 9));
     font-weight: font(bold);
     margin-bottom: spacing(8);
+    position: relative;
   }
 
   &__button {
