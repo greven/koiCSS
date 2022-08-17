@@ -247,6 +247,16 @@
   grid-template-columns: repeat(auto-fill, minmax(min($width, 100%), 1fr));
 }
 
+@mixin overlay($background: fill(black), $opacity: 0.5, $layer: overlay) {
+  @include inset(0);
+
+  background-color: $background;
+  border-radius: 0px;
+  opacity: $opacity;
+  position: absolute;
+  z-index: layer($layer);
+}
+
 // ---- Inset ----
 
 @mixin inset($value) {

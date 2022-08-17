@@ -21,13 +21,19 @@ body {
 }
 
 .box {
-  @include koi.box($background: koi.fill(srf, 3), $rounded: true, $shadow: true);
+  @include koi.box($background: koi.fill(srf, 1), $rounded: true, $shadow: true);
+
+  position: relative;
   width: 128px;
   aspect-ratio: 1/1;
 
   &:hover {
     @include koi.ring(koi.fill(cnt, 9));
   }
+}
+
+.overlay {
+  @include koi.overlay();
 }
 
 .my-custom-card {
