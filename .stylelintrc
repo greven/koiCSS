@@ -31,6 +31,7 @@
     "scss/dollar-variable-pattern": "^[-_]?([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
     "scss/at-function-pattern": "^[-_]?([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
     "scss/at-mixin-pattern": "^[-_]?([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
+    "scss/selector-no-redundant-nesting-selector": null,
     "selector-no-vendor-prefix": [
       true,
       {

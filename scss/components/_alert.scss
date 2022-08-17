@@ -1,0 +1,252 @@
+// --------------------------------
+//   Alert Component
+// --------------------------------
+
+@use '../config';
+@use '../api' as *;
+
+// --------------------------------
+//   Vars
+// --------------------------------
+
+$class: '.alert';
+$ignored-selectors: 'img, h2, h3, h4, h5, h6, #{$class}__header, #{$class}__footer';
+
+// Defaults
+$spacing-x: spacing(14);
+$spacing-y: spacing(16);
+
+$font-size: font-size(sm);
+$font-weight: font(normal);
+$text-leading: text-leading(sm);
+
+$border-width: 1px;
+$border-radius: radius(config.default(radius));
+
+// --------------------------------
+//   Mixins
+// --------------------------------
+
+@mixin default {
+  @include box(
+    $background: var(--koi-alert-background, fill(cnt, 0)),
+    $foreground: var(--koi-alert-foreground, fill(cnt, 7)),
+    $rounded: $border-radius
+  );
+  @include transition((color background-color border-color transform));
+
+  border-color: var(--koi-alert-border-color, transparent);
+  border-width: var(--koi-alert-border-width, $border-width);
+  box-shadow: var(--koi-alert-shadow, none);
+  display: flex;
+  font-size: var(--koi-alert-font-size, $font-size);
+  font-weight: var(--koi-alert-font-weight, $font-weight);
+  gap: var(--koi-alert-gap, $spacing-y);
+  justify-content: space-between;
+  line-height: var(--koi-alert-leading, $text-leading);
+  opacity: var(--koi-alert-opacity, 1);
+  padding: $spacing-y $spacing-x;
+  position: relative;
+
+  &__icon {
+    $icon-size: 20px;
+
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    height: $icon-size;
+    justify-content: flex-start;
+    margin-right: spacing(4);
+    margin-top: spacing(2);
+    width: $icon-size;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__header,
+  &__footer {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  &__header {
+    color: var(--koi-alert-header-foreground, fill(cnt, 9));
+    font-weight: font(bold);
+    margin-bottom: spacing(8);
+  }
+
+  @include dark-mode {
+    --koi-alert-background: #{fill(cnt, 2, $lightness: -10%)};
+  }
+
+  @include color-variant(accent) {
+    --koi-alert-background: #{accent(0)};
+    --koi-alert-header-foreground: #{accent(6)};
+
+    #{$class}__icon {
+      color: accent(6);
+    }
+
+    @include dark-mode {
+      --koi-alert-background: #{accent(8, $alpha: 0.25, $lightness: -15%)};
+      --koi-alert-header-foreground: #{accent(5)};
+
+      #{$class}__icon {
+        color: accent(5);
+      }
+    }
+  }
+
+  @each $color in config.$enabled-color-variants {
+    @include color-variant($color) {
+      --koi-alert-background: #{fill($color, 0)};
+      --koi-alert-header-foreground: #{fill($color, 6)};
+
+      #{$class}__icon {
+        color: fill($color, 6);
+      }
+
+      @include dark-mode {
+        --koi-alert-background: #{fill($color, 8, $alpha: 0.25, $lightness: -15%)};
+        --koi-alert-header-foreground: #{fill($color, 5)};
+
+        #{$class}__icon {
+          color: fill($color, 5);
+        }
+      }
+    }
+  }
+}
+
+// ---- Variants ----
+
+@mixin color-variant($color) {
+  &#{$class}--#{$color} {
+    @content;
+  }
+}
+
+@mixin solid {
+  --koi-alert-background: #{fill(cnt, 9)};
+  --koi-alert-foreground: #{fill(cnt, 0)};
+  --koi-alert-header-foreground: #{fill(cnt, 0)};
+
+  @include dark-mode {
+    --koi-alert-background: #{fill(cnt, 9)};
+    --koi-alert-foreground: #{fill(cnt, 0)};
+    --koi-alert-header-foreground: #{fill(cnt, 0)};
+  }
+
+  @include color-variant(accent) {
+    --koi-alert-background: #{accent(6)};
+    --koi-alert-header-foreground: #{fill(white)};
+
+    #{$class}__icon {
+      color: fill(white);
+    }
+
+    @include dark-mode {
+      --koi-alert-background: #{accent(6)};
+      --koi-alert-foreground: #{fill(white)};
+      --koi-alert-header-foreground: #{fill(white)};
+
+      #{$class}__icon {
+        color: fill(white);
+      }
+    }
+  }
+
+  @each $color in config.$enabled-color-variants {
+    @include color-variant($color) {
+      --koi-alert-background: #{fill($color, 6)};
+      --koi-alert-header-foreground: #{fill(white)};
+
+      #{$class}__icon {
+        color: fill(white);
+      }
+
+      @include dark-mode {
+        --koi-alert-background: #{fill($color, 6)};
+        --koi-alert-foreground: #{fill(white)};
+        --koi-alert-header-foreground: #{fill(white)};
+
+        #{$class}__icon {
+          color: fill(white);
+        }
+      }
+    }
+  }
+}
+
+@mixin outline {
+  --koi-alert-background: transparent;
+  --koi-alert-foreground: #{fill(cnt, 8)};
+  --koi-alert-header-foreground: #{fill(cnt, 8)};
+  --koi-alert-border-color: #{fill(cnt, 6)};
+
+  @include dark-mode {
+    --koi-alert-background: transparent;
+  }
+
+  @include color-variant(accent) {
+    --koi-alert-background: transparent;
+    --koi-alert-header-foreground: #{accent(6)};
+    --koi-alert-border-color: #{accent(6)};
+
+    #{$class}__icon {
+      color: accent(6);
+    }
+
+    @include dark-mode {
+      --koi-alert-background: transparent;
+      --koi-alert-header-foreground: #{accent(6)};
+      --koi-alert-border-color: #{accent(6)};
+    }
+  }
+
+  @each $color in config.$enabled-color-variants {
+    @include color-variant($color) {
+      --koi-alert-background: transparent;
+      --koi-alert-header-foreground: #{fill($color, 6)};
+      --koi-alert-border-color: #{fill($color, 6)};
+
+      #{$class}__icon {
+        color: fill($color, 6);
+      }
+
+      @include dark-mode {
+        --koi-alert-background: transparent;
+        --koi-alert-header-foreground: #{fill($color, 6)};
+        --koi-alert-border-color: #{fill($color, 6)};
+
+        #{$class}__icon {
+          color: fill($color, 6);
+        }
+      }
+    }
+  }
+}
+
+// --------------------------------
+//   Styles
+// --------------------------------
+
+@mixin styles {
+  #{$class} {
+    @include default;
+
+    &--solid {
+      @include solid;
+    }
+
+    &--outline {
+      @include outline;
+    }
+  }
+}

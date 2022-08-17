@@ -11,11 +11,12 @@
 
 // @include koi.font-face('Tobias Light', 'fonts/Tobias-Light', $family: Tobias, $weight: 300);
 
-body {
-  // --koi-btn-text-transform: uppercase;
-  // --koi-btn-border-radius: #{koi.radius(full)};
-  // --koi-divider-height: 1px;
+// html {
+// --koi-btn-text-transform: uppercase;
+// --koi-btn-border-radius: #{koi.radius(full)};
+// }
 
+body {
   @include koi.container($from: md, $padding: true, $center: true, $max-width: lg);
 }
 
@@ -29,10 +30,6 @@ body {
   }
 }
 
-.my-slider {
-  --koi-thumb-color: rgb(25, 169, 25);
-  --koi-thumb-color-hover: rgb(144, 238, 144);
-  --koi-thumb-color-focus: rgb(144, 238, 144);
-  --koi-thumb-focus-ring: 0 0 0 8px rgb(144, 238, 144, 0.5);
-  --koi-track-color: #{koi.gradient(5)};
+.my-custom-card {
+  --koi-card-border-width: 2px;
 }

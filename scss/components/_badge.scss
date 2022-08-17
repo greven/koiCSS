@@ -37,45 +37,31 @@ $padding-x-large: spacing(14);
 // --------------------------------
 
 @mixin default {
-  --koi-badge-background: #{fill(cnt, 1)};
-  --koi-badge-border-color: transparent;
-  --koi-badge-border-radius: #{$border-radius};
-  --koi-badge-border-style: solid;
-  --koi-badge-border-width: #{$border-width};
-  --koi-badge-foreground: #{fill(cnt, 6)};
-  --koi-badge-font-size: #{$font-size};
-  --koi-badge-font-weight: #{font(semibold)};
-  --koi-badge-height: #{$height};
-  --koi-badge-tracking: #{$tracking};
-  --koi-badge-leading: #{$leading};
-  --koi-badge-padding-x: #{$padding-x};
-  --koi-badge-text-transform: uppercase;
-
-  @include transition((color, background-color, border-color, transform));
+  @include transition((color background-color border-color transform));
 
   align-items: center;
-  background-color: var(--koi-badge-background);
-  border-color: var(--koi-badge-border-color);
-  border-radius: var(--koi-badge-border-radius);
-  border-style: var(--koi-badge-border-style);
-  border-width: var(--koi-badge-border-width);
-  color: var(--koi-badge-foreground);
+  background-color: var(--koi-badge-background, fill(cnt, 1));
+  border-color: var(--koi-badge-border-color, transparent);
+  border-radius: var(--koi-badge-border-radius, $border-radius);
+  border-style: var(--koi-badge-border-style, solid);
+  border-width: var(--koi-badge-border-width, $border-width);
+  color: var(--koi-badge-foreground, fill(cnt, 6));
   display: inline-flex;
   flex-grow: 0;
-  font-size: var(--koi-badge-font-size);
-  font-weight: var(--koi-badge-font-weight);
-  height: var(--koi-badge-height);
+  font-size: var(--koi-badge-font-size, $font-size);
+  font-weight: var(--koi-badge-font-weight, font(semibold));
+  height: var(--koi-badge-height, $height);
   justify-content: center;
-  letter-spacing: var(--koi-badge-tracking);
-  line-height: var(--koi-badge-leading);
+  letter-spacing: var(--koi-badge-tracking, $tracking);
+  line-height: var(--koi-badge-leading, $leading);
   overflow: hidden;
-  padding: 0 var(--koi-badge-padding-x);
+  padding: 0 var(--koi-badge-padding-x, $padding-x);
   text-decoration: none;
   text-overflow: ellipsis;
-  text-transform: var(--koi-badge-text-transform);
+  text-transform: var(--koi-badge-text-transform, uppercase);
 
   @include dark-mode {
-    --koi-badge-background: #{fill(cnt, 5, $alpha: 0.25, $lightness: -20%)};
+    --koi-badge-background: #{fill(cnt, 5, $alpha: 0.25, $lightness: -15%)};
   }
 
   // Color variants
@@ -84,7 +70,7 @@ $padding-x-large: spacing(14);
     --koi-badge-foreground: #{accent(8)};
 
     @include dark-mode {
-      --koi-badge-background: #{accent(8, $alpha: 0.25, $lightness: -20%)};
+      --koi-badge-background: #{accent(8, $alpha: 0.25, $lightness: -15%)};
       --koi-badge-foreground: #{accent(5)};
     }
   }
@@ -95,7 +81,7 @@ $padding-x-large: spacing(14);
       --koi-badge-foreground: #{fill($color, 8)};
 
       @include dark-mode {
-        --koi-badge-background: #{fill($color, 8, $alpha: 0.25, $lightness: -20%)};
+        --koi-badge-background: #{fill($color, 8, $alpha: 0.25, $lightness: -15%)};
         --koi-badge-foreground: #{fill($color, 5)};
       }
     }

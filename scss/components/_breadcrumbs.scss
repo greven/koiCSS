@@ -36,8 +36,6 @@ $class: '.breadcrumbs';
     }
 
     li + *::before {
-      --koi-rotate: 45deg;
-
       background-color: transparent;
       border-right: 1px solid;
       border-top: 1px solid;
@@ -47,7 +45,7 @@ $class: '.breadcrumbs';
       margin-left: 0.5rem;
       margin-right: 0.75rem;
       opacity: 0.4;
-      transform: translate(var(--koi-translate-x), var(--koi-translate-y)) rotate(var(--koi-rotate))
+      transform: translate(var(--koi-translate-x), var(--koi-translate-y)) rotate(var(--koi-rotate, 45deg))
         skew(var(--koi-skew-x)) skewY(var(--koi-skew-y)) scaleX(var(--koi-scale-x)) scaleY(var(--koi-scale-y));
       width: 0.375rem;
     }

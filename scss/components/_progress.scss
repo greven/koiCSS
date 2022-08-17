@@ -20,21 +20,21 @@ $height: 12px;
 
 @mixin progress-bar {
   &::-webkit-progress-bar {
-    background-color: var(--koi-progress-background);
-    border-radius: var(--koi-progress-radius);
+    background-color: var(--koi-progress-background, fill(cnt, 9, $alpha: 0.1));
+    border-radius: var(--koi-progress-radius, radius(full));
     box-shadow: inset shadow(sm);
   }
 
   &::-webkit-progress-value {
     background-color: accent(6);
-    border-radius: var(--koi-progress-radius);
+    border-radius: var(--koi-progress-radius, radius(full));
 
     // @include stripes;
   }
 
   &::-moz-progress-bar {
     background-color: accent(6);
-    border-radius: var(--koi-progress-radius);
+    border-radius: var(--koi-progress-radius, radius(full));
   }
 
   // &:indeterminate::after {
@@ -54,7 +54,7 @@ $height: 12px;
 }
 
 @mixin undetermined {
-  // background-color: var(--koi-progress-indeterminate-background);
+  // background-color: var(--koi-progress-indeterminate-background, fill(cnt, 9, $alpha: 0.25));
   background: #f44;
 }
 
@@ -79,13 +79,8 @@ $height: 12px;
 }
 
 @mixin base {
-  --koi-progress-height: #{$height};
-  --koi-progress-radius: #{radius(full)};
-  --koi-progress-background: #{fill(cnt, 9, $alpha: 0.1)};
-  --koi-progress-indeterminate-background: #{fill(cnt, 9, $alpha: 0.25)};
-
-  border-radius: var(--koi-progress-radius);
-  height: var(--koi-progress-height);
+  border-radius: var(--koi-progress-radius, radius(full));
+  height: var(--koi-progress-height, $height);
 
   // &[value] {
   // @include progress-bar;

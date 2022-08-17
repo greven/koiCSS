@@ -1,3 +1,4 @@
+@forward 'alert' as alert-*;
 @forward 'avatar' as avatar-*;
 @forward 'badge' as badge-*;
 @forward 'breadcrumbs' as breadcrumbs-*;
@@ -13,6 +14,7 @@
 @forward 'tabs' as tabs-*;
 @forward 'tooltip' as tooltip-*;
 
+@use 'alert';
 @use 'avatar';
 @use 'badge';
 @use 'breadcrumbs';
@@ -28,6 +30,7 @@
 @use 'tooltip';
 
 @mixin components {
+  @include alert.styles();
   @include avatar.styles();
   @include badge.styles();
   @include breadcrumbs.styles();
