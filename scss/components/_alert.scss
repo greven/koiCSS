@@ -23,6 +23,8 @@ $text-leading: text-leading(sm);
 $border-width: 1px;
 $border-radius: radius(config.default(radius));
 
+$icon-size: 20px;
+
 // --------------------------------
 //   Mixins
 // --------------------------------
@@ -49,14 +51,11 @@ $border-radius: radius(config.default(radius));
   position: relative;
 
   &__icon {
-    $icon-size: 20px;
-
     align-items: center;
     display: flex;
     flex-shrink: 0;
     height: $icon-size;
     justify-content: flex-start;
-    margin-right: spacing(4);
     margin-top: spacing(2);
     width: $icon-size;
   }
@@ -76,9 +75,20 @@ $border-radius: radius(config.default(radius));
   }
 
   &__header {
+    position: relative;
     color: var(--koi-alert-header-foreground, fill(cnt, 9));
     font-weight: font(bold);
     margin-bottom: spacing(8);
+  }
+
+  &__button {
+    position: absolute;
+    right: 0;
+
+    .btn {
+      height: $icon-size;
+      width: $icon-size;
+    }
   }
 
   @include dark-mode {
