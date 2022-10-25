@@ -27,6 +27,14 @@ $class: '.indicator';
     position: absolute;
     z-index: 1;
   }
+
+  &--circle {
+    #{$class}__item {
+      @include layout.position-variants($is-circle: true);
+      position: absolute;
+      z-index: 1;
+    }
+  }
 }
 
 // --------------------------------
