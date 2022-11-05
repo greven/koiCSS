@@ -30,7 +30,7 @@ $class: '.indicator';
 
   &--circle {
     #{$class}__item {
-      @include layout.position-variants($is-circle: true);
+      @include position-variants($is-circle: true);
       position: absolute;
       z-index: 1;
     }
