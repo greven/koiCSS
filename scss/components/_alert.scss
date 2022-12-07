@@ -56,7 +56,6 @@ $icon-size: 20px;
     flex-shrink: 0;
     height: $icon-size;
     justify-content: flex-start;
-    margin-top: spacing(2);
     width: $icon-size;
   }
 
@@ -77,17 +76,27 @@ $icon-size: 20px;
   &__header {
     color: var(--koi-alert-header-foreground, fill(cnt, 9));
     font-weight: font(bold);
+    padding-right: calc(1.5 * $spacing-x);
+  }
+
+  &__header:has(&__title) {
     margin-bottom: spacing(8);
-    position: relative;
   }
 
   &__button {
     position: absolute;
-    right: 0;
+    right: $spacing-x;
+    @include layer(above);
 
     .btn {
       height: $icon-size;
       width: $icon-size;
+    }
+  }
+
+  &:has(&__button) {
+    #{$class}__body {
+      padding-right: calc(2 * $spacing-x);
     }
   }
 
