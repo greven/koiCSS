@@ -33,31 +33,31 @@ $body-foreground: fill(txt, 2);
 
 @mixin card {
   @include box(
-    $background: var(--koi-card-body-background, $body-background),
-    $foreground: var(--koi-card-body-foreground, $body-foreground),
+    $background: var(--um-card-body-background, $body-background),
+    $foreground: var(--um-card-body-foreground, $body-foreground),
     $rounded: $border-radius,
     $shadow: md
   );
-  border-color: var(--koi-card-border-color, $border-color);
-  border-width: var(--koi-card-border-width, 0);
+  border-color: var(--um-card-border-color, $border-color);
+  border-width: var(--um-card-border-width, 0);
   display: flex;
   flex-direction: column;
-  gap: var(--koi-card-gap, $spacing-y);
+  gap: var(--um-card-gap, $spacing-y);
 
   &__section,
   &__header,
   &__footer {
     display: flex;
-    font-size: var(--koi-card-font-size, $font-size);
-    line-height: var(--koi-card-leading, $text-leading);
+    font-size: var(--um-card-font-size, $font-size);
+    line-height: var(--um-card-leading, $text-leading);
     position: relative;
 
     &--border {
-      border-color: var(--koi-card-inner-border-color, $border-color);
-      border-top-width: var(--koi-card-inner-border-width, 1px);
-      padding-left: var(--koi-card-spacing-x, $spacing-x);
-      padding-right: var(--koi-card-spacing-x, $spacing-x);
-      padding-top: var(--koi-card-spacing-y, $spacing-y);
+      border-color: var(--um-card-inner-border-color, $border-color);
+      border-top-width: var(--um-card-inner-border-width, 1px);
+      padding-left: var(--um-card-spacing-x, $spacing-x);
+      padding-right: var(--um-card-spacing-x, $spacing-x);
+      padding-top: var(--um-card-spacing-y, $spacing-y);
     }
   }
 
@@ -68,15 +68,15 @@ $body-foreground: fill(txt, 2);
   }
 
   &__content {
-    color: var(--koi-card-body-foreground, $body-foreground);
+    color: var(--um-card-body-foreground, $body-foreground);
   }
 
   & > *:last-of-type:not(#{$ignored-selectors}) {
-    margin-bottom: var(--koi-card-spacing-y, $spacing-y);
+    margin-bottom: var(--um-card-spacing-y, $spacing-y);
   }
 
   & > img {
-    aspect-ratio: var(--koi-img-aspect-ratio, 3/2);
+    aspect-ratio: var(--um-img-aspect-ratio, 3/2);
     object-fit: cover;
     width: 100%;
 
@@ -91,12 +91,12 @@ $body-foreground: fill(txt, 2);
   }
 
   & > *:not(img, #{$class}__section--border) {
-    margin-left: var(--koi-card-spacing-x, $spacing-x);
-    margin-right: var(--koi-card-spacing-x, $spacing-x);
+    margin-left: var(--um-card-spacing-x, $spacing-x);
+    margin-right: var(--um-card-spacing-x, $spacing-x);
   }
 
   & > *:not(img):first-child {
-    margin-top: var(--koi-card-spacing-y, $spacing-y);
+    margin-top: var(--um-card-spacing-y, $spacing-y);
   }
 
   & > a {

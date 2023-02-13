@@ -1,8 +1,8 @@
-// Your custom KoiCSS overwrites
+// Your custom umbraCSS overwrites
 
 @use 'sass:list';
 
-@use 'koi' with (
+@use 'umbra' with (
   $color-schemes: light dark dim,
   $use-button-animation: false
 );

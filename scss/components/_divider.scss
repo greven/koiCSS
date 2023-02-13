@@ -32,8 +32,8 @@ $divider-width: 1px;
   display: flex;
   flex-direction: row;
   height: 1rem;
-  margin-bottom: var(--koi-divider-margin, 1rem);
-  margin-top: var(--koi-divider-margin, 1rem);
+  margin-bottom: var(--um-divider-margin, 1rem);
+  margin-top: var(--um-divider-margin, 1rem);
   white-space: nowrap;
 
   &::after,
@@ -41,7 +41,7 @@ $divider-width: 1px;
     background-color: fill(brd, 2);
     content: '';
     flex-grow: 1;
-    height: var(--koi-divider-height, $divider-width);
+    height: var(--um-divider-height, $divider-width);
     width: 100%;
   }
 }
@@ -50,15 +50,15 @@ $divider-width: 1px;
   flex-direction: column;
   height: auto;
   margin-bottom: 0;
-  margin-left: var(--koi-divider-margin, 1rem);
-  margin-right: var(--koi-divider-margin, 1rem);
+  margin-left: var(--um-divider-margin, 1rem);
+  margin-right: var(--um-divider-margin, 1rem);
   margin-top: 0;
   width: 1rem;
 
   &::after,
   &::before {
     height: 100%;
-    width: var(--koi-divider-height, $divider-width);
+    width: var(--um-divider-height, $divider-width);
   }
 }
 

@@ -3,39 +3,39 @@
 @use 'sass:color';
 
 @forward 'config';
-@use 'koi';
+@use 'umbra';
 
-@include koi.base();
+@include umbra.base();
 
 // << Insert your base styles here >>
 
-// @include koi.font-face('Tobias Light', 'fonts/Tobias-Light', $family: Tobias, $weight: 300);
+// @include umbra.font-face('Tobias Light', 'fonts/Tobias-Light', $family: Tobias, $weight: 300);
 
 // html {
-// --koi-btn-text-transform: uppercase;
-// --koi-btn-border-radius: #{koi.radius(full)};
+// --um-btn-text-transform: uppercase;
+// --um-btn-border-radius: #{umbra.radius(full)};
 // }
 
 body {
-  @include koi.container($from: md, $padding: true, $center: true, $max-width: lg);
+  @include umbra.container($from: md, $padding: true, $center: true, $max-width: lg);
 }
 
 .box {
-  @include koi.box($background: koi.fill(srf, 1), $rounded: true, $shadow: true);
+  @include umbra.box($background: umbra.fill(srf, 1), $rounded: true, $shadow: true);
 
   position: relative;
   width: 128px;
   aspect-ratio: 1/1;
 
   &:hover {
-    @include koi.ring(koi.fill(cnt, 9));
+    @include umbra.ring(umbra.fill(cnt, 9));
   }
 }
 
 .overlay {
-  @include koi.overlay();
+  @include umbra.overlay();
 }
 
 .my-custom-card {
-  --koi-card-border-width: 2px;
+  --um-card-border-width: 2px;
 }

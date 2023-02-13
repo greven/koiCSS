@@ -20,28 +20,28 @@ $border-width: 2px;
 
 @mixin tab-with-border {
   border-bottom-style: solid;
-  border-bottom-width: var(--koi-tabs-border-width, $border-width);
+  border-bottom-width: var(--um-tabs-border-width, $border-width);
   margin-bottom: -1px;
 
   &:hover:not(#{$class}__item--active) {
-    border-bottom-color: var(--koi-tabs-border-bottom-color, fill(brd, 2));
+    border-bottom-color: var(--um-tabs-border-bottom-color, fill(brd, 2));
   }
 
   &#{$class}__item--active {
-    border-bottom-color: var(--koi-tabs-border-active-color, accent(5));
+    border-bottom-color: var(--um-tabs-border-active-color, accent(5));
 
     &:hover {
-      border-bottom-color: var(--koi-tabs-border-active-hover-color, accent(6));
+      border-bottom-color: var(--um-tabs-border-active-hover-color, accent(6));
 
       @include dark-mode {
-        border-bottom-color: var(--koi-tabs-border-active-hover-dark-color, accent(4));
+        border-bottom-color: var(--um-tabs-border-active-hover-dark-color, accent(4));
       }
     }
   }
 }
 
 @mixin tab-with-box {
-  border-radius: var(--koi-tabs-box-radius, radius());
+  border-radius: var(--um-tabs-box-radius, radius());
   padding: 0.5rem 1rem;
 
   &#{$class}__item--active {
@@ -77,10 +77,10 @@ $border-width: 2px;
     font-size: font(sm);
     font-weight: font(medium);
     justify-content: center;
-    padding-bottom: var(--koi-tabs-padding-y, 1rem);
-    padding-left: var(--koi-tabs-padding-x, 0.25rem);
-    padding-right: var(--koi-tabs-padding-x, 0.25rem);
-    padding-top: var(--koi-tabs-padding-y, 1rem);
+    padding-bottom: var(--um-tabs-padding-y, 1rem);
+    padding-left: var(--um-tabs-padding-x, 0.25rem);
+    padding-right: var(--um-tabs-padding-x, 0.25rem);
+    padding-top: var(--um-tabs-padding-y, 1rem);
     position: relative;
     text-align: center;
     user-select: none;

@@ -20,21 +20,21 @@ $height: 12px;
 
 @mixin progress-bar {
   &::-webkit-progress-bar {
-    background-color: var(--koi-progress-background, fill(cnt, 9, $alpha: 0.1));
-    border-radius: var(--koi-progress-radius, radius(full));
+    background-color: var(--um-progress-background, fill(cnt, 9, $alpha: 0.1));
+    border-radius: var(--um-progress-radius, radius(full));
     box-shadow: inset shadow(sm);
   }
 
   &::-webkit-progress-value {
     background-color: accent(6);
-    border-radius: var(--koi-progress-radius, radius(full));
+    border-radius: var(--um-progress-radius, radius(full));
 
     // @include stripes;
   }
 
   &::-moz-progress-bar {
     background-color: accent(6);
-    border-radius: var(--koi-progress-radius, radius(full));
+    border-radius: var(--um-progress-radius, radius(full));
   }
 
   // &:indeterminate::after {
@@ -54,7 +54,7 @@ $height: 12px;
 }
 
 @mixin undetermined {
-  // background-color: var(--koi-progress-indeterminate-background, fill(cnt, 9, $alpha: 0.25));
+  // background-color: var(--um-progress-indeterminate-background, fill(cnt, 9, $alpha: 0.25));
   background: #f44;
 }
 
@@ -79,8 +79,8 @@ $height: 12px;
 }
 
 @mixin base {
-  border-radius: var(--koi-progress-radius, radius(full));
-  height: var(--koi-progress-height, $height);
+  border-radius: var(--um-progress-radius, radius(full));
+  height: var(--um-progress-height, $height);
 
   // &[value] {
   // @include progress-bar;

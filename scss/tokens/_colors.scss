@@ -272,15 +272,15 @@ $colors: (
 ) !default;
 
 $gradients: (
-  1: linear-gradient(var(--koi-gradient-direction, to right), #43cea2, #185a9d),
-  2: linear-gradient(var(--koi-gradient-direction, 225deg), #fe047c 10%, #ffae02 100%),
-  3: linear-gradient(var(--koi-gradient-direction, 45deg), #fbda61 0%, #ff5acd 100%),
-  4: linear-gradient(var(--koi-gradient-direction, 19deg), #21d4fd 0%, #b721ff 100%),
-  5: linear-gradient(var(--koi-gradient-direction, 132deg), #f4d03f 0%, #16a085 100%),
-  6: linear-gradient(var(--koi-gradient-direction, 225deg), #ff3cac 0%, #784ba0 50%, #2b86c5 100%),
+  1: linear-gradient(var(--um-gradient-direction, to right), #43cea2, #185a9d),
+  2: linear-gradient(var(--um-gradient-direction, 225deg), #fe047c 10%, #ffae02 100%),
+  3: linear-gradient(var(--um-gradient-direction, 45deg), #fbda61 0%, #ff5acd 100%),
+  4: linear-gradient(var(--um-gradient-direction, 19deg), #21d4fd 0%, #b721ff 100%),
+  5: linear-gradient(var(--um-gradient-direction, 132deg), #f4d03f 0%, #16a085 100%),
+  6: linear-gradient(var(--um-gradient-direction, 225deg), #ff3cac 0%, #784ba0 50%, #2b86c5 100%),
   7:
     linear-gradient(
-      var(--koi-gradient-direction, to bottom right),
+      var(--um-gradient-direction, to bottom right),
       #1f005c,
       #5b0060,
       #870160,
@@ -290,12 +290,12 @@ $gradients: (
       #f39060,
       #ffb56b
     ),
-  8: linear-gradient(var(--koi-gradient-direction, 135deg), #f0ff00 10%, #58cffb 100%),
-  9: linear-gradient(var(--koi-gradient-direction, 135deg), #ffd3a5 10%, #fd6585 100%),
-  10: linear-gradient(var(--koi-gradient-direction, 45deg), #0093e9 0%, #80d0c7 100%),
-  11: linear-gradient(var(--koi-gradient-direction, to right), #89216b, #da4453),
-  12: linear-gradient(var(--koi-gradient-direction, to right), #8e2de2, #4a00e0),
-  13: linear-gradient(var(--koi-gradient-direction, to bottom right), #00f5a0, #00d9f5),
-  14: linear-gradient(var(--koi-gradient-direction, 43deg), #4158d0 0%, #c850c0 46%, #ffcc70 100%),
-  15: linear-gradient(var(--koi-gradient-direction, 90deg), #fad961 0%, #f76b1c 100%),
+  8: linear-gradient(var(--um-gradient-direction, 135deg), #f0ff00 10%, #58cffb 100%),
+  9: linear-gradient(var(--um-gradient-direction, 135deg), #ffd3a5 10%, #fd6585 100%),
+  10: linear-gradient(var(--um-gradient-direction, 45deg), #0093e9 0%, #80d0c7 100%),
+  11: linear-gradient(var(--um-gradient-direction, to right), #89216b, #da4453),
+  12: linear-gradient(var(--um-gradient-direction, to right), #8e2de2, #4a00e0),
+  13: linear-gradient(var(--um-gradient-direction, to bottom right), #00f5a0, #00d9f5),
+  14: linear-gradient(var(--um-gradient-direction, 43deg), #4158d0 0%, #c850c0 46%, #ffcc70 100%),
+  15: linear-gradient(var(--um-gradient-direction, 90deg), #fad961 0%, #f76b1c 100%),
 ) !default;

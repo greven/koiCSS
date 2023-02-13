@@ -45,8 +45,8 @@ $class: '.breadcrumbs';
       margin-left: 0.5rem;
       margin-right: 0.75rem;
       opacity: 0.4;
-      transform: translate(var(--koi-translate-x), var(--koi-translate-y)) rotate(var(--koi-rotate, 45deg))
-        skew(var(--koi-skew-x)) skewY(var(--koi-skew-y)) scaleX(var(--koi-scale-x)) scaleY(var(--koi-scale-y));
+      transform: translate(var(--um-translate-x), var(--um-translate-y)) rotate(var(--um-rotate, 45deg))
+        skew(var(--um-skew-x)) skewY(var(--um-skew-y)) scaleX(var(--um-scale-x)) scaleY(var(--um-scale-y));
       width: 0.375rem;
     }
 
@@ -58,9 +58,9 @@ $class: '.breadcrumbs';
 
       &:hover {
         color: fill(txt, 0);
-        text-decoration-color: var(--koi-breadcrumbs-text-decoration-color, accent(6));
-        text-decoration-line: var(--koi-breadcrumbs-text-decoration, underline);
-        text-underline-offset: var(--koi-breadcrumbs-text-decoration-offset, 2px);
+        text-decoration-color: var(--um-breadcrumbs-text-decoration-color, accent(6));
+        text-decoration-line: var(--um-breadcrumbs-text-decoration, underline);
+        text-underline-offset: var(--um-breadcrumbs-text-decoration-offset, 2px);
       }
     }
   }

@@ -19,10 +19,10 @@ $class: '.kbd';
 
   @include border($radius: 0.35em);
   align-items: center;
-  background-color: var(--koi-key-bg, fill(white));
-  box-shadow: 0 calc($key-height + 1px) 0 -2px var(--koi-key-border-1, fill(grey, 1)),
-    0 $key-height 0 0 var(--koi-key-border-2, fill(grey, 2)), shadow();
-  color: var(--koi-key-text, fill(txt, 2));
+  background-color: var(--um-key-bg, fill(white));
+  box-shadow: 0 calc($key-height + 1px) 0 -2px var(--um-key-border-1, fill(grey, 1)),
+    0 $key-height 0 0 var(--um-key-border-2, fill(grey, 2)), shadow();
+  color: var(--um-key-text, fill(txt, 2));
   display: inline-flex;
   font-family: font(mono);
   font-size: 0.875em;
@@ -35,10 +35,10 @@ $class: '.kbd';
   user-select: none;
 
   @include dark-mode {
-    --koi-key-bg: #{fill(grey, 9)};
-    --koi-key-text: #{fill(grey, 4)};
-    --koi-key-border-1: #{fill(grey, 8)};
-    --koi-key-border-2: #{fill(grey, 8)};
+    --um-key-bg: #{fill(grey, 9)};
+    --um-key-text: #{fill(grey, 4)};
+    --um-key-border-1: #{fill(grey, 8)};
+    --um-key-border-2: #{fill(grey, 8)};
   }
 }
 

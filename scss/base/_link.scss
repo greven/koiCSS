@@ -9,10 +9,10 @@
 // --------------------------------
 
 @mixin base {
-  background: var(--koi-link-background, transparent);
-  border-bottom: var(--koi-link-border, 1px solid accent(5));
-  color: var(--koi-link-foreground, fill(txt, 1));
-  font-weight: var(--koi-link-font-weight, font(medium));
+  background: var(--um-link-background, transparent);
+  border-bottom: var(--um-link-border, 1px solid accent(5));
+  color: var(--um-link-foreground, fill(txt, 1));
+  font-weight: var(--um-link-font-weight, font(medium));
   text-decoration: none;
   transition: all 50ms linear;
 

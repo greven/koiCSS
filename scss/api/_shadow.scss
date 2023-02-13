@@ -33,12 +33,12 @@ $_default-shadow: config.default(shadow);
 
 @mixin shadow($shadow: $_default-shadow, $color: null) {
   @if $color {
-    --koi-shadow-color: #{$color};
+    --um-shadow-color: #{$color};
   }
 
-  --koi-shadow: #{shadow($shadow)};
+  --um-shadow: #{shadow($shadow)};
 
-  box-shadow: var(--koi-ring-offset-shadow), var(--koi-ring-shadow), var(--koi-shadow);
+  box-shadow: var(--um-ring-offset-shadow), var(--um-ring-shadow), var(--um-shadow);
 }
 
 // Apply an Outline shadow

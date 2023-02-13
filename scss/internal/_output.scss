@@ -30,7 +30,7 @@
 }
 
 // A wrapper for var() that prefixes the custom property name if configured.
-// Example: css-var(--c-green-5) -> var(--koi-c-green-5)
+// Example: css-var(--c-green-5) -> var(--um-c-green-5)
 @function css-var($name, $fallback: null) {
   $name: replace($name, '--', '');
   $var-name: string.unquote(css-var-name($name));

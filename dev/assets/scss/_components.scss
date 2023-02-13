@@ -1,27 +1,27 @@
 // @forward 'config';
-@use 'koi';
+@use 'umbra';
 
-@include koi.components();
+@include umbra.components();
 // Alternatively instead of including all components you can include just the ones you want
-// @include koi.button-styles();
+// @include umbra.button-styles();
 
 // << Insert your components here >>
 
 // :root {
-//   --btn-border-radius: #{koi.radius(full)};
+//   --btn-border-radius: #{umbra.radius(full)};
 // }
 
-// #{koi.$button-selectors} {
-//   --btn-text-color: #{koi.fill(red, 9)};
-//   --btn-bg-color: #{koi.fill(red, 1)};
-//   --btn-bg-color-hover: #{koi.fill(red, 2)};
-//   --btn-border-color: #{koi.fill(red, 6)};
+// #{umbra.$button-selectors} {
+//   --btn-text-color: #{umbra.fill(red, 9)};
+//   --btn-bg-color: #{umbra.fill(red, 1)};
+//   --btn-bg-color-hover: #{umbra.fill(red, 2)};
+//   --btn-border-color: #{umbra.fill(red, 6)};
 // }
 
 // .loader-1 {
-//   @include koi.loader-1($size: 1rem, $color: #ccc, $thickness: 2px);
+//   @include umbra.loader-1($size: 1rem, $color: #ccc, $thickness: 2px);
 // }
 
 // .loader-2 {
-//   @include koi.loader-2();
+//   @include umbra.loader-2();
 // }

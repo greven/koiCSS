@@ -40,49 +40,49 @@ $padding-x-large: spacing(14);
   @include transition((color background-color border-color transform));
 
   align-items: center;
-  background-color: var(--koi-badge-background, fill(cnt, 1));
-  border-color: var(--koi-badge-border-color, transparent);
-  border-radius: var(--koi-badge-border-radius, $border-radius);
-  border-style: var(--koi-badge-border-style, solid);
-  border-width: var(--koi-badge-border-width, $border-width);
-  color: var(--koi-badge-foreground, fill(cnt, 6));
+  background-color: var(--um-badge-background, fill(cnt, 1));
+  border-color: var(--um-badge-border-color, transparent);
+  border-radius: var(--um-badge-border-radius, $border-radius);
+  border-style: var(--um-badge-border-style, solid);
+  border-width: var(--um-badge-border-width, $border-width);
+  color: var(--um-badge-foreground, fill(cnt, 6));
   display: inline-flex;
   flex-grow: 0;
-  font-size: var(--koi-badge-font-size, $font-size);
-  font-weight: var(--koi-badge-font-weight, font(semibold));
-  height: var(--koi-badge-height, $height);
+  font-size: var(--um-badge-font-size, $font-size);
+  font-weight: var(--um-badge-font-weight, font(semibold));
+  height: var(--um-badge-height, $height);
   justify-content: center;
-  letter-spacing: var(--koi-badge-tracking, $tracking);
-  line-height: var(--koi-badge-leading, $leading);
+  letter-spacing: var(--um-badge-tracking, $tracking);
+  line-height: var(--um-badge-leading, $leading);
   overflow: hidden;
-  padding: 0 var(--koi-badge-padding-x, $padding-x);
+  padding: 0 var(--um-badge-padding-x, $padding-x);
   text-decoration: none;
   text-overflow: ellipsis;
-  text-transform: var(--koi-badge-text-transform, uppercase);
+  text-transform: var(--um-badge-text-transform, uppercase);
 
   @include dark-mode {
-    --koi-badge-background: #{fill(cnt, 5, $alpha: 0.25, $lightness: -15%)};
+    --um-badge-background: #{fill(cnt, 5, $alpha: 0.25, $lightness: -15%)};
   }
 
   // Color variants
   @include color-variant(accent) {
-    --koi-badge-background: #{accent(1)};
-    --koi-badge-foreground: #{accent(8)};
+    --um-badge-background: #{accent(1)};
+    --um-badge-foreground: #{accent(8)};
 
     @include dark-mode {
-      --koi-badge-background: #{accent(8, $alpha: 0.25, $lightness: -15%)};
-      --koi-badge-foreground: #{accent(5)};
+      --um-badge-background: #{accent(8, $alpha: 0.25, $lightness: -15%)};
+      --um-badge-foreground: #{accent(5)};
     }
   }
 
   @each $color in config.$enabled-color-variants {
     @include color-variant($color) {
-      --koi-badge-background: #{fill($color, 1)};
-      --koi-badge-foreground: #{fill($color, 8)};
+      --um-badge-background: #{fill($color, 1)};
+      --um-badge-foreground: #{fill($color, 8)};
 
       @include dark-mode {
-        --koi-badge-background: #{fill($color, 8, $alpha: 0.25, $lightness: -15%)};
-        --koi-badge-foreground: #{fill($color, 5)};
+        --um-badge-background: #{fill($color, 8, $alpha: 0.25, $lightness: -15%)};
+        --um-badge-foreground: #{fill($color, 5)};
       }
     }
   }
@@ -98,78 +98,78 @@ $padding-x-large: spacing(14);
 }
 
 @mixin solid {
-  --koi-badge-background: #{fill(cnt, 9)};
-  --koi-badge-border-color: transparent;
-  --koi-badge-foreground: #{fill(cnt, 1)};
+  --um-badge-background: #{fill(cnt, 9)};
+  --um-badge-border-color: transparent;
+  --um-badge-foreground: #{fill(cnt, 1)};
 
   @include dark-mode {
-    --koi-badge-background: #{fill(cnt, 9)};
+    --um-badge-background: #{fill(cnt, 9)};
   }
 
   // Color variants
   @include color-variant(accent) {
-    --koi-badge-background: #{accent(6)};
-    --koi-badge-foreground: #{fill(white)};
+    --um-badge-background: #{accent(6)};
+    --um-badge-foreground: #{fill(white)};
 
     @include dark-mode {
-      --koi-badge-background: #{accent(6)};
-      --koi-badge-foreground: #{fill(white)};
+      --um-badge-background: #{accent(6)};
+      --um-badge-foreground: #{fill(white)};
     }
   }
 
   @each $color in config.$enabled-color-variants {
     @include color-variant($color) {
-      --koi-badge-background: #{fill($color, 6)};
-      --koi-badge-foreground: #{fill(white)};
+      --um-badge-background: #{fill($color, 6)};
+      --um-badge-foreground: #{fill(white)};
 
       @include dark-mode {
-        --koi-badge-background: #{fill($color, 6)};
-        --koi-badge-foreground: #{fill(white)};
+        --um-badge-background: #{fill($color, 6)};
+        --um-badge-foreground: #{fill(white)};
       }
     }
   }
 }
 
 @mixin outline {
-  --koi-badge-background: transparent;
-  --koi-badge-border-color: #{fill(cnt, 6)};
-  --koi-badge-foreground: #{fill(cnt, 8)};
+  --um-badge-background: transparent;
+  --um-badge-border-color: #{fill(cnt, 6)};
+  --um-badge-foreground: #{fill(cnt, 8)};
 
   @include dark-mode {
-    --koi-badge-background: transparent;
+    --um-badge-background: transparent;
   }
 
   // Color variants
   @include color-variant(accent) {
-    --koi-badge-background: transparent;
-    --koi-badge-border-color: #{accent(6)};
-    --koi-badge-foreground: #{accent(7)};
+    --um-badge-background: transparent;
+    --um-badge-border-color: #{accent(6)};
+    --um-badge-foreground: #{accent(7)};
 
     @include dark-mode {
-      --koi-badge-background: transparent;
+      --um-badge-background: transparent;
     }
   }
 
   @each $color in config.$enabled-color-variants {
     @include color-variant($color) {
-      --koi-badge-background: transparent;
-      --koi-badge-border-color: #{fill($color, 6)};
-      --koi-badge-foreground: #{fill($color, 7)};
+      --um-badge-background: transparent;
+      --um-badge-border-color: #{fill($color, 6)};
+      --um-badge-foreground: #{fill($color, 7)};
 
       @include dark-mode {
-        --koi-badge-background: transparent;
+        --um-badge-background: transparent;
       }
     }
   }
 }
 
 @mixin status {
-  --koi-badge-background: transparent;
-  --koi-badge-border-color: #{fill(cnt, 2)};
-  --koi-badge-foreground: #{fill(cnt, 8)};
+  --um-badge-background: transparent;
+  --um-badge-border-color: #{fill(cnt, 2)};
+  --um-badge-foreground: #{fill(cnt, 8)};
 
   @include dark-mode {
-    --koi-badge-background: transparent;
+    --um-badge-background: transparent;
   }
 
   &::before {
@@ -184,29 +184,29 @@ $padding-x-large: spacing(14);
 
   // Color variants
   @include color-variant(accent) {
-    --koi-badge-background: transparent;
-    --koi-badge-foreground: #{fill(txt, 1)};
+    --um-badge-background: transparent;
+    --um-badge-foreground: #{fill(txt, 1)};
 
     &::before {
       background-color: accent(5);
     }
 
     @include dark-mode {
-      --koi-badge-background: transparent;
+      --um-badge-background: transparent;
     }
   }
 
   @each $color in config.$enabled-color-variants {
     @include color-variant($color) {
-      --koi-badge-background: transparent;
-      --koi-badge-foreground: #{fill(txt, 1)};
+      --um-badge-background: transparent;
+      --um-badge-foreground: #{fill(txt, 1)};
 
       &::before {
         background-color: fill($color, 5);
       }
 
       @include dark-mode {
-        --koi-badge-background: transparent;
+        --um-badge-background: transparent;
       }
     }
   }
@@ -214,9 +214,9 @@ $padding-x-large: spacing(14);
 
 @mixin dot {
   border-radius: radius(full);
-  height: var(--koi-badge-height, $height-small);
+  height: var(--um-badge-height, $height-small);
   padding: 0;
-  width: var(--koi-badge-height, $height-small);
+  width: var(--um-badge-height, $height-small);
 }
 
 @mixin group {
@@ -253,17 +253,17 @@ $padding-x-large: spacing(14);
 // ---- Modifiers ----
 
 @mixin small {
-  font-size: var(--koi-badge-font-size-small, $font-size-small);
-  height: var(--koi-badge-height-small, $height-small);
-  line-height: var(--koi-badge-leading-small, $leading-small);
-  padding: 0 var(--koi-badge-padding-x-small, $padding-x-small);
+  font-size: var(--um-badge-font-size-small, $font-size-small);
+  height: var(--um-badge-height-small, $height-small);
+  line-height: var(--um-badge-leading-small, $leading-small);
+  padding: 0 var(--um-badge-padding-x-small, $padding-x-small);
 }
 
 @mixin large {
-  font-size: var(--koi-badge-font-size-large, $font-size-large);
-  height: var(--koi-badge-height-large, $height-large);
-  line-height: var(--koi-badge-leading-large, $leading-large);
-  padding: 0 var(--koi-badge-padding-x-large, $padding-x-large);
+  font-size: var(--um-badge-font-size-large, $font-size-large);
+  height: var(--um-badge-height-large, $height-large);
+  line-height: var(--um-badge-leading-large, $leading-large);
+  padding: 0 var(--um-badge-padding-x-large, $padding-x-large);
 }
 
 // Makes the badge full width

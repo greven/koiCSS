@@ -21,17 +21,17 @@ $size: 64px;
 // --------------------------------
 
 @mixin avatar {
-  border-color: var(--koi-avatar-border-color, transparent);
-  border-width: var(--koi-avatar-border-width, 2px);
+  border-color: var(--um-avatar-border-color, transparent);
+  border-width: var(--um-avatar-border-width, 2px);
   position: relative;
 
   &__content {
     align-items: center;
     border-radius: radius(full);
     display: flex;
-    height: var(--koi-avatar-size, $size);
+    height: var(--um-avatar-size, $size);
     justify-content: center;
-    width: var(--koi-avatar-size, $size);
+    width: var(--um-avatar-size, $size);
 
     &--placeholder {
       @include placeholder;
@@ -98,7 +98,7 @@ $size: 64px;
   overflow: hidden;
 
   #{$class} {
-    --koi-avatar-border-color: #{fill(srf, 1)};
+    --um-avatar-border-color: #{fill(srf, 1)};
 
     border-radius: radius(full);
     overflow: hidden;

@@ -136,10 +136,10 @@ $_type-base-index: list.index($_type-steps, 'md');
       padding-left: spacing(sm);
 
       li {
-        list-style-position: var(--koi-list-position, outside);
+        list-style-position: var(--um-list-position, outside);
 
         &::marker {
-          color: var(--koi-list-marker-color, accent(6));
+          color: var(--um-list-marker-color, accent(6));
         }
       }
     }

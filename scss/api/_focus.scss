@@ -28,31 +28,30 @@
 
 @mixin ring($color: null, $width: null, $offset: null, $offset-color: null, $inset: null) {
   @if $color {
-    --koi-ring-color: #{$color};
+    --um-ring-color: #{$color};
   }
 
   @if $width {
-    --koi-ring-width: #{$width};
+    --um-ring-width: #{$width};
   }
 
   @if $offset {
-    --koi-ring-offset: #{$offset};
+    --um-ring-offset: #{$offset};
   }
 
   @if $offset-color {
-    --koi-ring-offset-color: #{$offset-color};
+    --um-ring-offset-color: #{$offset-color};
   }
 
   @if $inset {
-    --koi-ring-inset: #{$inset};
+    --um-ring-inset: #{$inset};
   }
 
-  --koi-ring-shadow: var(--koi-ring-inset) 0 0 0 calc(var(--koi-ring-width) + var(--koi-ring-offset))
-    var(--koi-ring-color);
+  --um-ring-shadow: var(--um-ring-inset) 0 0 0 calc(var(--um-ring-width) + var(--um-ring-offset)) var(--um-ring-color);
 
-  --koi-ring-offset-shadow: var(--koi-ring-inset) 0 0 0 var(--koi-ring-offset) var(--koi-ring-offset-color);
+  --um-ring-offset-shadow: var(--um-ring-inset) 0 0 0 var(--um-ring-offset) var(--um-ring-offset-color);
 
-  $shadow: var(--koi-ring-offset-shadow), var(--koi-ring-shadow), var(--koi-shadow);
+  $shadow: var(--um-ring-offset-shadow), var(--um-ring-shadow), var(--um-shadow);
 
   box-shadow: $shadow;
 }

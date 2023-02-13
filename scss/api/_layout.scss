@@ -192,18 +192,18 @@
     @if $direction == row {
       @if $reverse {
         margin-left: 0;
-        margin-right: var(--koi-spacer, $spacer);
+        margin-right: var(--um-spacer, $spacer);
       } @else {
-        margin-left: var(--koi-spacer, $spacer);
+        margin-left: var(--um-spacer, $spacer);
         margin-right: 0;
       }
     } @else {
       @if $reverse {
-        margin-bottom: var(--koi-spacer, $spacer);
+        margin-bottom: var(--um-spacer, $spacer);
         margin-top: 0;
       } @else {
         margin-bottom: 0;
-        margin-top: var(--koi-spacer, $spacer);
+        margin-top: var(--um-spacer, $spacer);
       }
     }
   }
@@ -294,8 +294,8 @@
 
 // Add positioning support variants based on transforms (top, middle, bottom and start, center, end).
 @mixin position-variants($parent: null, $value: 50%, $is-circle: false, $suffix: '') {
-  --koi-translate-x: #{$value};
-  --koi-translate-y: -#{$value};
+  --um-translate-x: #{$value};
+  --um-translate-y: -#{$value};
 
   $shift: if($is-circle, $value, 0);
 
@@ -304,45 +304,45 @@
   right: $shift;
   top: $shift;
 
-  transform: translate(var(--koi-translate-x), var(--koi-translate-y)) rotate(var(--koi-rotate)) skew(var(--koi-skew-x))
-    skewY(var(--koi-skew-y)) scaleX(var(--koi-scale-x)) scaleY(var(--koi-scale-y));
+  transform: translate(var(--um-translate-x), var(--um-translate-y)) rotate(var(--um-rotate)) skew(var(--um-skew-x))
+    skewY(var(--um-skew-y)) scaleX(var(--um-scale-x)) scaleY(var(--um-scale-y));
 
   @include _position-variant($parent, top, $suffix) {
-    --koi-translate-y: -#{$value};
+    --um-translate-y: -#{$value};
 
     bottom: auto;
     top: $shift;
   }
 
   @include _position-variant($parent, middle, $suffix) {
-    --koi-translate-y: -#{$value};
+    --um-translate-y: -#{$value};
     bottom: $value;
     top: $value;
   }
 
   @include _position-variant($parent, bottom, $suffix) {
-    --koi-translate-y: #{$value};
+    --um-translate-y: #{$value};
 
     bottom: $shift;
     top: auto;
   }
 
   @include _position-variant($parent, start, $suffix) {
-    --koi-translate-x: -#{$value};
+    --um-translate-x: -#{$value};
 
     left: $shift;
     right: auto;
   }
 
   @include _position-variant($parent, center, $suffix) {
-    --koi-translate-x: -#{$value};
+    --um-translate-x: -#{$value};
 
     left: $value;
     right: $value;
   }
 
   @include _position-variant($parent, end, $suffix) {
-    --koi-translate-x: #{$value};
+    --um-translate-x: #{$value};
 
     left: auto;
     right: $shift;

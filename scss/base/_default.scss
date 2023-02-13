@@ -12,8 +12,8 @@
 @mixin styles {
   /*! purgecss start ignore */
   ::selection {
-    background-color: var(--koi-selection-background, accent(1));
-    color: var(--koi-selection-foreground, fill(black));
+    background-color: var(--um-selection-background, accent(1));
+    color: var(--um-selection-foreground, fill(black));
   }
 
   *,
@@ -23,8 +23,8 @@
   }
 
   body {
-    background-color: var(--koi-body-background, fill(srf, 0));
-    color: var(--koi-body-foreground, fill(txt, 1));
+    background-color: var(--um-body-background, fill(srf, 0));
+    color: var(--um-body-foreground, fill(txt, 1));
     font-family: font(base);
     font-size: font(md);
     font-weight: font(normal);
@@ -65,16 +65,16 @@
   pre {
     @include fluid-padding;
     @include rounded;
-    background-color: var(--koi-code-background, fill(black));
+    background-color: var(--um-code-background, fill(black));
     color: fill(grey, 0);
     overflow-x: auto;
     position: relative;
   }
 
   code {
-    background-color: var(--koi-code-background, fill(black));
+    background-color: var(--um-code-background, fill(black));
     border-radius: radius(config.$inline-text-border-radius);
-    color: var(--koi-code-foreground, fill(grey, 0));
+    color: var(--um-code-foreground, fill(grey, 0));
     padding: config.$inline-text-padding;
   }
 
@@ -88,11 +88,11 @@
   }
 
   blockquote {
-    background-color: var(--koi-quote-background, fill(srf, 2));
-    border-left-color: var(--koi-quote-border-color, accent(5));
-    border-left-width: var(--koi-quote-border-with, 0.25rem);
-    border-radius: var(--koi-quote-border-radius, 3px);
-    color: var(--koi-quote-foreground, fill(txt, 1));
+    background-color: var(--um-quote-background, fill(srf, 2));
+    border-left-color: var(--um-quote-border-color, accent(5));
+    border-left-width: var(--um-quote-border-with, 0.25rem);
+    border-radius: var(--um-quote-border-radius, 3px);
+    color: var(--um-quote-foreground, fill(txt, 1));
     font-style: italic;
     font-weight: font(medium);
     margin-bottom: 1.6em;
@@ -117,7 +117,7 @@
   }
 
   cite {
-    color: var(--koi-cite-foreground, fill(txt, 2));
+    color: var(--um-cite-foreground, fill(txt, 2));
     display: block;
     font-size: font(sm);
     overflow: hidden;
@@ -130,11 +130,11 @@
   }
 
   figure > blockquote + figcaption {
-    @include rounded-bottom(var(--koi-quote-border-radius, 3px));
-    background-color: var(--koi-quote-background, fill(srf, 2));
-    border-left-color: var(--koi-quote-border-color, accent(5));
-    border-left-width: var(--koi-quote-border-with, 0.25rem);
-    color: var(--koi-quote-foreground, fill(txt, 1));
+    @include rounded-bottom(var(--um-quote-border-radius, 3px));
+    background-color: var(--um-quote-background, fill(srf, 2));
+    border-left-color: var(--um-quote-border-color, accent(5));
+    border-left-width: var(--um-quote-border-with, 0.25rem);
+    color: var(--um-quote-foreground, fill(txt, 1));
     margin-top: -0.5em;
     padding: 0 2em 1.5em;
     text-align: left;
@@ -147,9 +147,9 @@
   }
 
   mark {
-    background: var(--koi-mark-background, hsl(50 100% 85%));
+    background: var(--um-mark-background, hsl(50 100% 85%));
     border-radius: radius(config.$inline-text-border-radius);
-    color: var(--koi-mark-foreground, fill(black));
+    color: var(--um-mark-foreground, fill(black));
     padding: config.$inline-text-padding;
   }
 
@@ -245,20 +245,20 @@
   *,
   ::before,
   ::after {
-    --koi-translate-x: 0;
-    --koi-translate-y: 0;
-    --koi-rotate: 0;
-    --koi-skew-x: 0;
-    --koi-skew-y: 0;
-    --koi-scale-x: 1;
-    --koi-scale-y: 1;
-    --koi-shadow: 0 0 #0000;
-    --koi-ring-shadow: 0 0 #0000;
-    --koi-ring-color: #{accent(5)};
-    --koi-ring-width: 2px;
-    --koi-ring-offset-shadow: 0 0 #0000;
-    --koi-ring-offset-color: #{fill(srf, 1)};
-    --koi-ring-offset: 2px;
-    --koi-ring-inset: ;
+    --um-translate-x: 0;
+    --um-translate-y: 0;
+    --um-rotate: 0;
+    --um-skew-x: 0;
+    --um-skew-y: 0;
+    --um-scale-x: 1;
+    --um-scale-y: 1;
+    --um-shadow: 0 0 #0000;
+    --um-ring-shadow: 0 0 #0000;
+    --um-ring-color: #{accent(5)};
+    --um-ring-width: 2px;
+    --um-ring-offset-shadow: 0 0 #0000;
+    --um-ring-offset-color: #{fill(srf, 1)};
+    --um-ring-offset: 2px;
+    --um-ring-inset: ;
   }
 }

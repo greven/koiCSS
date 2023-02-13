@@ -38,7 +38,7 @@ $pseudos: (
 
 // Create a map with the CSS custom properties for utilities
 @function map-utility-class-props($properties, $local-vars, $value) {
-  $local-var-prefix: 'koi-';
+  $local-var-prefix: 'um-';
   $use-important: config.$utility-use-important;
 
   $merged-props: ();

@@ -114,11 +114,7 @@ $negative-spacing: () !default;
   $min: if(theme-has-key(spacing, $min), spacing($min), $min);
   $max: if(theme-has-key(spacing, $max), spacing($max), $max);
 
-  @return clamp(
-    var(--koi-spacing-min, $min),
-    var(--koi-spacing-fluid-value, $fluid-value),
-    var(--koi-spacing-max, $max)
-  );
+  @return clamp(var(--um-spacing-min, $min), var(--um-spacing-fluid-value, $fluid-value), var(--um-spacing-max, $max));
 }
 
 // --------------------------------
